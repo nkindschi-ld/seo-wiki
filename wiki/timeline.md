@@ -303,6 +303,18 @@ target (see that playbook's Conflicting Evidence section).
 
 [[google-search-status-dashboard-history]]. Duration: 12 days, 4 hours.
 
+## 2026-03-31 — Amplifying publishes "Claude Code Hardcoded Vendor Analysis"
+
+[[amplifying-claude-code-hardcoded-vendors-2026]] · updated
+[[ai-coding-agent-tool-selection]] and
+[[optimizing-for-coding-agent-recommendations]]. Leaked-source analysis
+of Claude Code's TypeScript finds hardcoded, engineering-controlled
+vendor allowlists independent of any model's judgment: a 489-tool MCP
+output-rendering allowlist, 6 vendors with zero-config "claude.ai-hosted"
+OAuth connectors, and 89 WebFetch-preapproved hosts — a distinct
+visibility layer from every training-data/prompting-based mechanism
+studied elsewhere in the wiki.
+
 ## 2026-04-15 — Ahrefs publishes "Why ChatGPT Cites One Page Over Another"
 
 [[ahrefs-why-chatgpt-cites-pages-2026]] · updated
@@ -415,6 +427,18 @@ needed.
 Introduces a three-part AI bot taxonomy (training, search/indexing,
 user query/retrieval) and a server-log-vs-citation gap-analysis method
 for diagnosing why a frequently-crawled page isn't being cited.
+
+## 2026-07 — Amplifying publishes "What Fable Actually Chooses"
+
+[[amplifying-claude-code-picks-fable-2026]] · updated
+[[ai-coding-agent-tool-selection]] and
+[[optimizing-for-coding-agent-recommendations]]. Newer-model (Opus
+4.8/Fable 5) rerun of the 20-category tool-pick methodology: custom/DIY
+code share nearly doubled generation-over-generation (11%→21.4%), a
+new "deferred buy" pattern (32.5% of custom builds name their own
+vendor upgrade path in code comments), and PostHog beating dedicated
+competitor LaunchDarkly in Feature Flags (27% vs. 0% primary picks) via
+analytics bundling.
 
 ## 2026-07-06 — Growth Memo publishes "Why Most Original Data Never Gets Cited"
 

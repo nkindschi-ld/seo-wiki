@@ -988,3 +988,39 @@ efficient check itself, plus quantified stakes (~40% time cost from doc
 sprawl, 15+ min token-burning deliberation from unaddressed edge cases;
 ~40%/~75%/>80% improvement after fixes). No conflicts — complements the
 GitHub Blog source's framework with a single case study's numbers.
+
+## [2026-07-22] query | "checklist of best practices for optimizing GitHub repos for coding agents, with why explanations"
+
+Answered from [[agents-md-instruction-files]] and
+[[writing-effective-agents-md-files]] — no new synthesis filed, content
+already exists as that playbook's 11-item checklist.
+
+## [2026-07-22] ingest | What Fable Actually Chooses (Amplifying, Jul 2026)
+
+Created new source [[amplifying-claude-code-picks-fable-2026]]. Extends
+[[ai-coding-agent-tool-selection]] and
+[[optimizing-for-coding-agent-recommendations]]: custom/DIY code share
+nearly doubled generation-over-generation (11%→21.4%), a new "deferred
+buy" pattern (32.5% of custom builds name their own vendor upgrade path
+in code comments), a bundling-beats-dedicated-tool finding (PostHog
+27% share over LaunchDarkly's 0% in Feature Flags via analytics
+bundling — noted as directly relevant to this wiki's operator's own
+product category), and a provider-vs-technology distinction. No
+conflicts — sharpens and extends the existing build-over-buy/recency
+findings from [[amplifying-claude-code-picks-2026]] with a newer model
+generation.
+
+## [2026-07-22] ingest | Claude Code Hardcoded Vendor Analysis (Amplifying, Mar 2026)
+
+Created new source [[amplifying-claude-code-hardcoded-vendors-2026]]
+(leaked-source analysis of Claude Code's TypeScript, extracted from
+public npm source maps). Added a new "Hardcoded platform integration is
+a separate visibility layer from model picks" section to
+[[ai-coding-agent-tool-selection]] — a genuinely distinct mechanism
+(engineering-controlled allowlists: MCP output rendering for 489 tools,
+6 "claude.ai-hosted" OAuth connectors, 89 WebFetch-preapproved hosts)
+from every other source's training-data/prompting-based dynamic. Added
+a largely-non-actionable-but-track-worthy awareness tactic to
+[[optimizing-for-coding-agent-recommendations]]. No conflicts — new
+mechanism, first source on engineering-level (vs. model-level) vendor
+treatment.

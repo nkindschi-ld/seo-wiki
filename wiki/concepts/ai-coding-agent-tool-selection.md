@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-07-07
+updated: 2026-07-22
 ---
 
 # AI Coding Agent Tool Selection
@@ -15,9 +15,12 @@ product. For a tool/library vendor, "visibility" here means being the
 thing the agent actually reaches for — the audience is developers using
 AI coding agents, not searchers or chat users. Based on
 [[amplifying-claude-code-picks-2026]] (Claude Code, 2,430 prompts, 20
-categories, 3 models) and [[amplifying-codex-vs-claude-code-picks-2026]]
+categories, 3 models), [[amplifying-codex-vs-claude-code-picks-2026]]
 (Codex vs. Claude Code head-to-head, 1,452 picks, 12 contested
-categories).
+categories), [[amplifying-claude-code-picks-fable-2026]] (newer-model
+follow-up: Opus 4.8/Fable 5), and
+[[amplifying-claude-code-hardcoded-vendors-2026]] (leaked-source
+analysis of hardcoded vendor allowlists).
 
 ## Agents build rather than buy, often
 
@@ -76,6 +79,74 @@ clear agent-side consensus, so a vendor in one of these categories has
 more room to shift the outcome than a vendor competing against a
 near-monopoly incumbent.
 
+## Build-over-buy is accelerating across model generations
+
+[[amplifying-claude-code-picks-fable-2026]] reruns the same 20-category
+methodology on newer models (Opus 4.8, Fable 5) and finds Custom/DIY
+share nearly doubled from the earlier generation: 11% → 21.4% of all
+picks, with Opus 4.8 independently landing at 20.5% — evidence this is
+a generational trend, not one model's quirk. Caching went from 0% to
+57% custom code in a single generation.
+
+## The "deferred buy" pattern: DIY now, vendor named as the upgrade path
+
+The same source's sharpest new finding: 32.5% of custom
+implementations (53 of 163 builds studied) explicitly name an upgrade
+vendor inside code comments — e.g. a hand-rolled cache documenting
+"swap to Redis once multiple workers exist." The model isn't simply
+choosing DIY over a vendor; it's writing DIY code today while
+pre-authoring that vendor's eventual on-ramp. This reframes "known but
+unpicked" (below): being named as the deferred upgrade is a *stronger*
+position than being an unmentioned alternative, even at 0% primary
+picks.
+
+## Bundling can beat a dedicated best-in-category tool
+
+In the same study, PostHog reached 27% share in Feature Flags by
+bundling flags with analytics — beating dedicated competitor
+LaunchDarkly, which had 0% primary picks despite a 38% mention rate.
+This is a category-structure effect (does the agent see your feature as
+a package deal or a standalone tool it has to justify separately), not
+a pure quality or training-data-presence question.
+
+## Provider vs. technology is a distinct axis models track separately
+
+Models distinguish an underlying technology choice from a
+hosting/provider choice: PostgreSQL wins "which database technology,"
+while Neon, Supabase, and RDS appear only as deployment-time provider
+options rather than competitors to Postgres itself
+([[amplifying-claude-code-picks-fable-2026]]). A provider-tier vendor
+should benchmark against other providers, not against the underlying
+technology's adoption rate.
+
+## Hardcoded platform integration is a separate visibility layer from model picks
+
+Everything above concerns which tool a *model* recommends when
+generating code — a training-data/prompting dynamic. A different,
+engineering-controlled mechanism also determines vendor treatment:
+Claude Code's own source code hardcodes vendor-specific allowlists,
+independent of any model's judgment
+([[amplifying-claude-code-hardcoded-vendors-2026]], leaked-source
+analysis, Mar 2026):
+
+- **489 tools get compact MCP output rendering** via a hardcoded
+  allowlist (`SEARCH_TOOLS`/`READ_TOOLS`); everything else renders as
+  raw JSON.
+- **6 vendors get "claude.ai-hosted" OAuth connector status**
+  (zero-config onboarding) vs. manual local MCP setup for everyone
+  else.
+- **89 hosts are preapproved for unauthenticated WebFetch**, letting
+  Claude Code pull their docs without the user supplying a URL.
+- Only **one third-party vendor (Vercel)** gets a proactive plugin
+  install tip.
+
+This is a fundamentally different lever than everything else on this
+page: it's not about training data, prompting, or default-stack
+convergence — it's a direct engineering decision by Anthropic, and the
+source notes the allowlist is "entirely manual," meaning today's
+inclusions could harden into a de facto ranking that's much harder to
+contest later than a model-driven preference would be.
+
 ## Different agents pick differently — and it correlates with parent company
 
 Comparing Codex (OpenAI/GPT-5.3) against Claude Code (Anthropic/Opus
@@ -121,6 +192,11 @@ vendor-facing tactics.
 - [[amplifying-codex-vs-claude-code-picks-2026]] — the Codex-vs-Claude-
   Code cross-agent comparison underlying the parent-company/platform-
   affinity findings above.
+- [[amplifying-claude-code-picks-fable-2026]] — the newer-model
+  follow-up behind the accelerating-build-over-buy, deferred-buy, and
+  provider-vs-technology findings above.
+- [[amplifying-claude-code-hardcoded-vendors-2026]] — the leaked-source
+  analysis behind the hardcoded-allowlist findings above.
 - [[agentic-web-optimization]] — a sibling domain: general-purpose AI
   agents acting on marketing/ecommerce sites, rather than coding agents
   choosing tools/libraries.

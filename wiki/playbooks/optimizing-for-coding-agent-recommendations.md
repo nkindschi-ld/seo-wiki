@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [aeo]
-updated: 2026-07-07
+updated: 2026-07-22
 ---
 
 # Optimizing for Coding Agent Recommendations
@@ -12,7 +12,9 @@ the thing a developer actually gets when they ask an open-ended
 question like "add a database" or "how do I deploy this?" without
 naming your product. Based on [[ai-coding-agent-tool-selection]] /
 [[amplifying-claude-code-picks-2026]] /
-[[amplifying-codex-vs-claude-code-picks-2026]].
+[[amplifying-codex-vs-claude-code-picks-2026]] /
+[[amplifying-claude-code-picks-fable-2026]] /
+[[amplifying-claude-code-hardcoded-vendors-2026]].
 
 ## 1. Beat the "build it myself" default first
 
@@ -117,6 +119,43 @@ disagreement. Two implications:
   cross-agent data makes it sharper: "conversion differs much more than
   awareness does."
 
+## 8. Design your interface to be the obvious "deferred buy"
+
+Custom/DIY code is now naming vendors as upgrade paths inside its own
+comments 32.5% of the time (e.g. "swap to Redis once multiple workers
+exist") — a model builds the simple version now but pre-writes your
+on-ramp. Shape your API/interface to match the shape of the DIY code a
+model would write for the simple case, so switching from the hand-rolled
+version to yours is a near-drop-in replacement, not a rearchitecture.
+This matters most in categories with high and rising Custom/DIY rates
+(Caching, Observability, Auth, Feature Flags).
+
+## 9. If you compete against a bundled incumbent, bundle back or reframe the category
+
+PostHog beat dedicated feature-flag competitor LaunchDarkly (0% primary
+picks despite 38% mentions) by bundling flags with analytics — the
+model saw one tool solving two problems instead of two tools to justify
+separately. If your category is being won by a bundled adjacent
+product rather than a better dedicated tool, the fix is unlikely to be
+more training-data presence; consider whether your own product should
+bundle an adjacent capability, or lean into positioning that reframes
+the bundle as the wrong default for the user's actual case.
+
+## 10. Know your hardcoded-integration status, separately from your model-pick status
+
+Claude Code's own source hardcodes vendor treatment independent of any
+model's judgment: a ~489-tool MCP output-rendering allowlist, 6
+vendors with "claude.ai-hosted" zero-config OAuth connectors, 89
+WebFetch-preapproved hosts, and a single vendor (Vercel) with a
+proactive plugin-install tip. This isn't something you can train your
+way into — it's an engineering/business-development decision on
+Anthropic's side, and the source notes the allowlist is "entirely
+manual." It's still worth checking whether a same-category competitor
+already has better output rendering, OAuth onboarding, or doc-fetch
+access in Claude Code for reasons unrelated to model preference — that
+gap is a distinct, non-training-data disadvantage worth knowing about
+even if it's not directly actionable today.
+
 ## See also
 
 - [[ai-coding-agent-tool-selection]] — the underlying concept and study
@@ -127,6 +166,10 @@ disagreement. Two implications:
 - [[amplifying-codex-vs-claude-code-picks-2026]] — the cross-agent
   study behind the per-agent measurement and parent-company-affinity
   guidance in point 7.
+- [[amplifying-claude-code-picks-fable-2026]] — the newer-model study
+  behind the deferred-buy (point 8) and bundling (point 9) tactics.
+- [[amplifying-claude-code-hardcoded-vendors-2026]] — the leaked-source
+  analysis behind the hardcoded-integration awareness tactic (point 10).
 - [[writing-effective-agents-md-files]] — the sibling playbook for
   instructing an agent's behavior inside your own repo, rather than
   getting your product chosen by an agent working in someone else's.
