@@ -217,6 +217,15 @@ organic-visibility nuance, AI-content-creation adoption at scale
 (87% of marketers), and B2B buyer-journey context (10-11-stakeholder
 buying groups, 11.5-month cycles).
 
+## 2025-11-19 — GitHub Blog publishes "How to Write a Great agents.md" (updated 2025-11-25)
+
+[[github-blog-writing-great-agents-md]] · updated
+[[agents-md-instruction-files]] and [[writing-effective-agents-md-files]].
+Analysis of 2,500+ public `agents.md` files: the specificity divide
+between effective and ineffective agent instruction files, six
+essential coverage areas, a three-tier (always/ask-first/never)
+boundary framework, and a six-archetype specialist-agent taxonomy.
+
 ## 2025-12-10 — Google publishes "AI features and your website" guidance
 
 [[google-ai-features-appearance-guide]] · updated [[generative-engine-optimization]].

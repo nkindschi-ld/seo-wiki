@@ -124,3 +124,7 @@ vendor-facing tactics.
 - [[agentic-web-optimization]] — a sibling domain: general-purpose AI
   agents acting on marketing/ecommerce sites, rather than coding agents
   choosing tools/libraries.
+- [[agents-md-instruction-files]] — a different coding-agent layer:
+  how a repo owner instructs the agent's *behavior* inside their own
+  repo (commands, boundaries, style), rather than which third-party
+  tool/library the agent picks.

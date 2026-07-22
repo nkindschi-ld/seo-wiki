@@ -955,3 +955,20 @@ Fixed 2 missing cross-references: added [[image-seo-checklist]] and
 [[content-pruning-playbook]] to [[technical-seo-audit-checklist]]'s See
 also section; linked [[brand-entity-seo-strategy]] from
 [[enterprise-seo-strategy]]'s brand-reputation section.
+
+## [2026-07-21] ingest | How to Write a Great agents.md (GitHub Blog, Matt Nigh)
+
+Created new source [[github-blog-writing-great-agents-md]] (analysis of
+2,500+ public `agents.md` files). Off-topic relative to this wiki's core
+SEO/AEO scope by default — flagged to the user before filing; user
+directed ingest anyway on the basis that instructing coding agents is
+part of the AEO-adjacent scope. Created a new pairing distinct from the
+existing [[ai-coding-agent-tool-selection]] domain: new concept
+[[agents-md-instruction-files]] and new playbook
+[[writing-effective-agents-md-files]], covering how repo-owned
+instruction files shape a coding agent's *behavior* inside a repo
+(specificity divide, six coverage areas, three-tier boundaries,
+narrow-specialist-agent taxonomy) — a different layer than that existing
+domain's *which tool the agent recommends* focus. Cross-linked both
+directions between the two pairs. No conflicts — first source on this
+specific sub-topic.

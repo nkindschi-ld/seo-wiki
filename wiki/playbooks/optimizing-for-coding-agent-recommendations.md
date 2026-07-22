@@ -127,3 +127,6 @@ disagreement. Two implications:
 - [[amplifying-codex-vs-claude-code-picks-2026]] — the cross-agent
   study behind the per-agent measurement and parent-company-affinity
   guidance in point 7.
+- [[writing-effective-agents-md-files]] — the sibling playbook for
+  instructing an agent's behavior inside your own repo, rather than
+  getting your product chosen by an agent working in someone else's.
