@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [aeo]
-updated: 2026-07-21
+updated: 2026-07-22
 ---
 
 # Writing Effective agents.md Files
@@ -9,7 +9,9 @@ updated: 2026-07-21
 Why/when to use this: apply when setting up or revising an `agents.md`
 (or `CLAUDE.md` / `.github/copilot-instructions.md`) file so a coding
 agent operates reliably and safely inside your repository. Based on
-[[agents-md-instruction-files]] / [[github-blog-writing-great-agents-md]].
+[[agents-md-instruction-files]] /
+[[github-blog-writing-great-agents-md]] /
+[[aaron-gustafson-optimizing-codebase-for-ai-agents]].
 
 ## 1. Replace vague role descriptions with specifics
 
@@ -80,10 +82,28 @@ stating testing focus, directory restrictions, and modification
 boundaries in the prompt, then review and tighten the draft rather than
 starting from a blank file.
 
+## 9. Consolidate documentation to a single authoritative source
+
+Scattered instructions across workflow comments, READMEs, and
+task-specific guides create contradictions an agent has no way to
+resolve — it will burn time (one case study reported ~40%) just
+deciding which doc to trust. Pick one authoritative source and make
+deprecated docs redirect to it rather than leaving stale copies live.
+
+## 10. Give the agent purpose-built validation scripts, don't let it guess
+
+Left unguided, an agent will reach for the most obviously-available
+check even when it's overkill — e.g. running a full 30-60s production
+build to validate markdown formatting. Write narrow, task-specific
+validation scripts and tell the agent explicitly when to use each one,
+rather than trusting it to find the efficient path itself.
+
 ## See also
 
 - [[agents-md-instruction-files]] — the underlying concept and study
   data this playbook is built on.
+- [[aaron-gustafson-optimizing-codebase-for-ai-agents]] — case-study
+  source for points 9-10 and the quantified time/token-cost stakes.
 - [[optimizing-for-coding-agent-recommendations]] — the sibling
   playbook for the other coding-agent layer: getting *your product*
   chosen by a coding agent, rather than instructing an agent inside

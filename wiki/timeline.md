@@ -217,6 +217,16 @@ organic-visibility nuance, AI-content-creation adoption at scale
 (87% of marketers), and B2B buyer-journey context (10-11-stakeholder
 buying groups, 11.5-month cycles).
 
+## 2025-10-21 — Aaron Gustafson publishes "Optimizing Your Codebase for AI Coding Agents"
+
+[[aaron-gustafson-optimizing-codebase-for-ai-agents]] · updated
+[[agents-md-instruction-files]] and [[writing-effective-agents-md-files]].
+First-hand case study of GitHub Copilot's autonomous agent: documentation
+sprawl, expensive default validation, and unaddressed edge cases wasted
+40%+ of agent time; consolidating docs, adding purpose-built validation
+scripts, and documenting edge cases produced ~40% less processing time,
+~75% less token usage, and >80% less circular reasoning.
+
 ## 2025-11-19 — GitHub Blog publishes "How to Write a Great agents.md" (updated 2025-11-25)
 
 [[github-blog-writing-great-agents-md]] · updated

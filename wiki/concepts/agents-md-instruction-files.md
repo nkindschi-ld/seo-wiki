@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-07-21
+updated: 2026-07-22
 ---
 
 # agents.md Instruction Files
@@ -62,6 +62,35 @@ description, persona), then iterate — "the best agent files grow through
 iteration, not upfront planning." This contrasts with treating
 `agents.md` as a one-time comprehensive spec to get right on day one.
 
+## Getting it wrong has a quantified cost, not just a vague one
+
+[[aaron-gustafson-optimizing-codebase-for-ai-agents]], a first-hand case
+study of watching GitHub Copilot's autonomous agent work a real task,
+puts numbers behind the abstract "be specific" guidance above: scattered,
+inconsistent docs cost the agent ~40% of its time just deciding what to
+trust; unaddressed edge cases caused 15+ minutes of token-burning
+deliberation over a single ambiguous case. After consolidating docs and
+documenting edge cases, the reported deltas were ~40% less processing
+time, ~75% less token usage, and >80% less circular reasoning (early,
+single-case-study numbers — not a controlled study, but directionally
+consistent with the specificity-divide finding above).
+
+## Two tactics beyond specificity: one source of truth, and agent-proof validation
+
+The same source adds two mechanisms not covered by the specificity/
+boundaries/taxonomy framing above:
+
+- **Consolidate to one authoritative doc source.** Scattered
+  instructions across workflow comments, READMEs, and task-specific
+  guides create contradictions an agent can't resolve on its own;
+  deprecated docs should redirect rather than sit live alongside the
+  current version.
+- **Don't rely on the agent to pick an efficient validation step.**
+  Left to its own judgment, an agent may run an expensive full build to
+  check something trivial (e.g. markdown formatting). Purpose-built,
+  narrow validation scripts — with explicit instructions on when to use
+  them — avoid this.
+
 ## Practical relevance
 
 This is a repo-operations concern, not a citation/visibility dynamic —
@@ -76,4 +105,8 @@ closer to "how reliably does the agent edit my code the way I want" than
 - [[ai-coding-agent-tool-selection]] — the sibling concept for the
   *other* coding-agent layer: which third-party tool/library an agent
   recommends, rather than how it behaves inside your own repo.
-- [[github-blog-writing-great-agents-md]] — the underlying source.
+- [[github-blog-writing-great-agents-md]] — the underlying source for
+  the specificity/boundaries/taxonomy findings above.
+- [[aaron-gustafson-optimizing-codebase-for-ai-agents]] — the source for
+  the quantified-cost, doc-consolidation, and validation-tooling points
+  above.

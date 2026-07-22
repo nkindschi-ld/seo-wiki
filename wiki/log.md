@@ -972,3 +972,19 @@ narrow-specialist-agent taxonomy) — a different layer than that existing
 domain's *which tool the agent recommends* focus. Cross-linked both
 directions between the two pairs. No conflicts — first source on this
 specific sub-topic.
+
+## [2026-07-22] ingest | Optimizing Your Codebase for AI Coding Agents (Aaron Gustafson)
+
+Created new source [[aaron-gustafson-optimizing-codebase-for-ai-agents]]
+(first-hand case study of GitHub Copilot's autonomous agent). User
+clarified this sub-topic (coding-agent instruction/optimization) is a
+standing in-scope part of their role, not a one-off exception — no
+longer flagging it as off-topic on future ingests. Extends
+[[agents-md-instruction-files]] and [[writing-effective-agents-md-files]]
+with two new points beyond specificity/boundaries: consolidating to one
+authoritative doc source (vs. scattered/contradictory docs) and building
+narrow validation scripts rather than trusting the agent to pick an
+efficient check itself, plus quantified stakes (~40% time cost from doc
+sprawl, 15+ min token-burning deliberation from unaddressed edge cases;
+~40%/~75%/>80% improvement after fixes). No conflicts — complements the
+GitHub Blog source's framework with a single case study's numbers.
