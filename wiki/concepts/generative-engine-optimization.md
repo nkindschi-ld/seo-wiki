@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-07-11
+updated: 2026-07-22
 ---
 
 # Generative Engine Optimization (GEO / AEO)
@@ -59,10 +59,74 @@ categories relevant to optimization strategy:
    appear and update via web crawling. Optimization here resembles
    optimizing for the *underlying* search engine (e.g. Copilot
    visibility follows Bing rankings, not Google's) — check core queries
-   regularly, since visibility fluctuates like search rank.
+   regularly, since visibility fluctuates like search rank. Per
+   [[semrush-chatgpt-search]] — **ChatGPT Search itself retrieves from
+   three sources**: OpenAI's own crawled index (via `OAI-SearchBot`),
+   **Bing's search index via a Microsoft partnership** (pages crawled
+   by Bingbot), and direct data partnerships with news/data providers.
+   The Bing dependency means ChatGPT visibility may partially follow
+   Bing ranking signals too, not just OpenAI's own crawl/index — the
+   same mechanism already noted for Copilot above, now extended to
+   ChatGPT Search specifically. Per [[vercel-adapting-seo-for-llms]],
+   **Meta AI is reportedly also Bing-dependent** — a third product on
+   the same underlying index, while Google and Perplexity are described
+   as using a proprietary index and mixed sources respectively.
 3. **Reasoning models with search** (DeepSeek R1-R2, Gemini 2.5, OpenAI
    o1-o4) — "mixture of experts" niche-task networks that also crawl
    and cite live web content.
+
+## Retrievability: a fourth pipeline stage beyond crawl/index/rank
+
+Per [[sel-integrate-geo-with-seo]] (quoting Crystal Carter, Wix) — a
+named extension of the classic SEO pipeline: traditional SEO stops at
+**crawlability → indexability → rankability**; AI-driven search adds a
+fourth stage, **retrievability** — "how effectively AI can access,
+interpret, and prioritize information about your brand when forming
+responses." Rankings alone don't guarantee AI visibility, since LLMs
+build responses from contextual entity patterns rather than looking up a
+ranked index.
+
+This is a different framing of the same underlying pipeline as
+[[how-google-search-works]] (crawl → index → serve), not a competing
+technical claim — retrievability sits conceptually where this wiki's
+existing "retrieval rank as the primary citation gatekeeper" finding
+([[ai-citation-landscape]], from [[airops-fan-out-effect-2026]]) already
+lives, now with a named fourth-stage label to slot alongside the classic
+three.
+
+The source also proposes a **Presence / Recognition / Accessibility**
+three-pillar breakdown of retrievability (consistent brand mentions in
+AI training/retrieval sources; credibility via trusted-entity
+associations; on-site/web structuring for AI retrieval).
+**Naming-collision note**: "Presence" here is a different concept than
+[[sej-the-consensus-gap]]'s Presence/Portability/Concentration
+measurement framework (that Presence = % of prompts where a brand
+appears in *any* engine) — both terms are legitimate and both stay in
+the wiki, but don't conflate them when cross-referencing.
+
+## Three-layer AI search model (retrieval-speed taxonomy)
+
+Per [[superlines-geo-guide]] (vendor content, undisclosed methodology —
+treat directionally) — a different lens than the LLM-*product*
+taxonomy above: this one classifies **retrieval speed tiers**, which the
+same LLM product can move across depending on mode:
+
+1. **Training data (slowest)** — relies on pre-training/periodic
+   fine-tuning; takes months to reach base-model inclusion. Optimize by
+   building durable authority and keeping facts consistent across owned
+   and third-party sources — there's no way to accelerate this tier
+   directly.
+2. **High-volume AI search (speed depends on SEO)** — uses existing
+   search indexes (Google, Bing); powers free ChatGPT, AI Overviews.
+   Visibility speed here tracks classic SEO strength directly — the
+   same "ranking well is close to a prerequisite for AI citation"
+   pattern already established elsewhere in this wiki
+   (see [[ai-citation-landscape]]).
+3. **Agentic AI (fastest, near-real-time)** — Perplexity Pro, ChatGPT's
+   research/agent modes, Claude Desktop with MCP connections; scrapes
+   pages close to real time. Optimize with agent-friendly pages (clean
+   HTML/schema) and monitor bot traffic directly, since indexing lag
+   isn't the bottleneck here the way it is in tier 1-2.
 
 ## Why traditional SEO doesn't transfer
 
@@ -79,6 +143,16 @@ don't work:
 - What *does* work is qualitatively different: making content more
   citable, quotable, and evidence-backed — see
   [[geo-content-optimization-tactics]] for the ranked tactics.
+
+**Major caveat added 2026-07-22, see Conflicting Evidence below**: per
+[[c-seo-bench-2025]], a large-scale, multi-domain, multi-model re-test
+of these exact tactics using a *citation-rank* outcome metric (rather
+than word count) found most of them have no significant effect, and
+some are actively harmful — while a document's *position in the
+retrieval/context pipeline* (i.e., traditional SEO) produces far
+larger gains than any content tactic tested. This section's title claim
+("traditional SEO doesn't transfer") is directly challenged by that
+finding, at least for the citation-rank outcome specifically.
 
 ## Visibility is measured differently than SEO ranking
 
@@ -105,7 +179,11 @@ adding citations, while the **#1**-ranked site's visibility for the same
 treatment *dropped 30%*. Because the generative engine reads content
 directly rather than relying on backlink/domain-authority signals, small
 or under-ranked creators have a more level playing field inside AI
-answers than they do in classic SERPs.
+answers than they do in classic SERPs. Anecdotal, practitioner-level
+corroboration: per [[semrush-chatgpt-search]], a marketing consultant
+observed that "ChatGPT Search may rank smaller websites more fairly
+than Google" — consistent in direction with the measured finding above,
+though this specific observation isn't itself a study.
 
 ## Effectiveness is domain-specific
 
@@ -122,9 +200,11 @@ standard indexing/snippet eligibility — reinforcing
 "query fan-out" (issuing multiple related sub-queries) to build a
 response. AI-feature traffic is measurable: it shows up in Search
 Console's Performance report under the "Web" search type, and Google
-states AI-Overview clicks show higher-quality engagement. Site owners
-who want to *limit* rather than maximize inclusion have explicit
-controls — see [[controlling-ai-feature-inclusion]].
+states AI-Overview clicks show higher-quality engagement — a claim
+Google has made consistently since at least May 2025, per
+[[google-succeeding-in-ai-search-2025-05]], not a new or revised
+position. Site owners who want to *limit* rather than maximize
+inclusion have explicit controls — see [[controlling-ai-feature-inclusion]].
 
 ## Conflicting Evidence
 
@@ -161,6 +241,64 @@ controls — see [[controlling-ai-feature-inclusion]].
     respond to the GEO paper's citation-style tactics the same way the
     third-party generative engines tested in that paper (GPT-3.5-based,
     Perplexity.ai) did is untested as of this wiki's current sources.
+
+## Conflicting Evidence — do the Tier 1-3 content tactics actually move citation outcomes?
+
+- **Claim**: Content-level tactics (Quotation Addition, Statistics
+  Addition, Cite Sources, Fluency Optimization, etc.) meaningfully
+  improve a document's visibility/citation in generative-engine
+  answers, and traditional SEO tactics largely don't transfer to this
+  new surface (per the "Why traditional SEO doesn't transfer" section
+  above).
+  - Supported by: [[geo-generative-engine-optimization-aggarwal-2023]]
+    (2023-11), the wiki's founding GEO source, measuring a **word
+    count** outcome (how many words the generative engine spends
+    discussing a document) across 1k queries, 1 domain, single-actor
+    adoption.
+  - Contradicted by: [[c-seo-bench-2025]] (NeurIPS 2025), which
+    re-tests the *same* eight tactics plus two new ones across 6
+    domains, 4 LLMs (GPT-4o-mini, Claude 3.5 Haiku, o3, o4-mini), and
+    multi-actor competitive adoption, using **citation rank** (does the
+    document get cited earlier?) as the outcome. Result: only 3 of 54
+    method×domain significance tests were positive and significant: LLM
+    Guidance and Content Improvement, each only in 1-2 domains (Retail;
+    Retail+Video Games) on GPT-4o-mini specifically. Many tactics
+    (especially Statistics) were *significantly negative* in a majority
+    of tested settings, and **no tactic was significant at all for Claude
+    3.5 Haiku or for the question-answering task**. Meanwhile, moving a
+    document to position 1 in the LLM's context window (i.e.,
+    traditional retrieval-ranking/SEO) produced gains several times
+    larger than the best content tactic in every domain tested.
+- **Current best guess**: not a clean contradiction, but a genuine
+  **downweighting of confidence** in the original Tier 1-3 rankings,
+  for a specific reason the newer paper makes explicit: word count and
+  citation rank are different outcomes, and a document can be discussed
+  at length without being cited earlier — the more decision-relevant
+  outcome for actual GEO/AEO purposes (per this wiki's own framing of
+  the goal as "getting cited/mentioned") is citation rank, not word
+  count. The newer paper also notes that Aggarwal et al.'s own
+  *secondary* metric (position-adjusted word count) already showed a
+  general decrease under these tactics — so a careful re-read of the
+  original paper's own data doesn't actually establish a strong,
+  clean-cut win for these tactics either. **Not fully resolved**: the
+  two papers used different generative-engine setups (GPT-3.5/
+  Perplexity.ai vs. GPT-4o-mini/Claude 3.5 Haiku/o3/o4-mini) and
+  different domains, so some of the gap could still be model/domain
+  drift rather than purely a metric-choice artifact. Until further
+  replication, **treat the Tier 1-3 rankings in
+  [[geo-content-optimization-tactics]] as directional/exploratory
+  rather than validated for the citation-rank outcome**, and treat
+  retrieval-rank/traditional-SEO improvements as the better-evidenced
+  lever for that outcome specifically — independently consistent with
+  [[airops-fan-out-effect-2026]]'s retrieval-rank-as-gatekeeper finding
+  elsewhere in this wiki.
+- **New finding, not previously in this wiki**: [[c-seo-bench-2025]]
+  also shows the best-performing C-SEO tactics behave as a **congested,
+  zero-sum game** — gains shrink steadily as more competing documents
+  adopt the same tactic, converging toward zero near full adoption.
+  Prior white-hat GEO research (including Aggarwal et al. 2024) only
+  tested single-actor/unilateral adoption, so this competitive dynamic
+  was previously unquantified for white-hat tactics in this wiki.
 
 ## See also
 
@@ -202,15 +340,36 @@ controls — see [[controlling-ai-feature-inclusion]].
   page matter most where they overlap with Google's own AI features
   (which inherit Google's dominant search share) rather than in
   isolation.
+- [[sel-what-is-generative-engine-optimization-geo-2026]] — a general
+  GEO explainer that corroborates the definitions and tactics above;
+  its few new data points (citation-source volatility, absolute AI-tool
+  user counts) are filed on [[ai-citation-landscape]] and
+  [[ai-traffic-scale-vs-hype]] instead of here.
+- [[sel-integrate-geo-with-seo]] — the source for the retrievability
+  fourth-pipeline-stage framing and Presence/Recognition/Accessibility
+  breakdown above; also has GA4-regex and citation-monitoring-automation
+  tactics filed on [[geo-content-optimization-tactics]].
+- [[superlines-geo-guide]] — the source for the three-layer retrieval-
+  speed taxonomy above; also has a GEO KPI matrix filed on
+  [[geo-content-optimization-tactics]] and a citation-concentration
+  claim filed on [[ai-citation-landscape]].
+- [[c-seo-bench-2025]] — the NeurIPS 2025 re-test that significantly
+  downweights confidence in the Tier 1-3 tactics above and shows
+  retrieval-rank/traditional-SEO dominates content tactics for the
+  citation-rank outcome; see the Conflicting Evidence section above.
 
 ## Open questions
 
-- The GEO paper's tactics were tested on GPT-3.5-based generative engines
-  and Perplexity.ai. Whether those specific tactics (quotes, stats,
-  citations) move the needle the same way on ChatGPT, Claude, or Gemini
-  specifically is still untested — [[ai-citation-landscape]] shows these
-  three providers already behave very differently from each other in
-  citation composition, so tactic effectiveness may vary by provider too.
+- **Partially answered (2026-07-22)**: the GEO paper's tactics were
+  originally tested on GPT-3.5-based generative engines and
+  Perplexity.ai only; whether they hold up on other models was
+  previously an open question. [[c-seo-bench-2025]] now tests the same
+  tactics on GPT-4o-mini, Claude 3.5 Haiku, o3, and o4-mini across 6
+  domains — and finds most don't hold up when measured by citation rank
+  rather than word count (see Conflicting Evidence above). This
+  substantially answers the "does this generalize across models"
+  question, though with a metric change alongside the model change, so
+  it isn't a perfectly isolated test of model-generalization alone.
 - Whether Google's "don't rewrite specifically for AI" advice is in
   tension with citation-style optimization tactics, or whether those
   tactics are simply a subset of "helpful, people-first" writing, is

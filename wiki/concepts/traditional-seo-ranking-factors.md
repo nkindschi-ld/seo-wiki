@@ -91,3 +91,7 @@ widely live).
   study, useful for the classic-vs-AI comparison above.
 - [[e-e-a-t-and-page-quality]] — the qualitative framework this study's
   reviews/trust findings independently confirm.
+- [[bardas-white-hat-seo-llm-2025]] — a research-stage technique
+  targeting the same kind of classic ad hoc retrieval ranking functions
+  (LambdaMART, embedding cosine similarity) this page covers, using an
+  LLM as the document-editing tool rather than manual optimization.

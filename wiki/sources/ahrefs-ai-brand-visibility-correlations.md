@@ -43,6 +43,29 @@ https://ahrefs.com/blog/ai-brand-visibility-correlations/
   ChatGPT specifically since it shows the weakest correlation with
   pre-existing brand authority.
 
+## Predecessor article (2026-07-22 addendum)
+
+The Dec 2025 study above expanded an earlier, single-platform version
+of the same recurring Ahrefs study: Louise Linehan & Xibeijia Guan,
+"An Analysis of AI Overview Brand Visibility Factors (75K Brands
+Studied)," Ahrefs Blog, 2025-05-26.
+https://ahrefs.com/blog/ai-overview-brand-correlation/ — same
+methodology (75k brands, DR > 40, branded volume ≥ 800/mo, Spearman
+correlations via Ahrefs Brand Radar), but covering Google AI Overviews
+only (no ChatGPT/AI Mode, no YouTube-mentions factor). Its correlation
+figures are consistent with, and sit at the narrow end of, the ranges
+above (e.g., branded web mentions 0.664, branded anchors 0.527, branded
+search volume 0.392, Domain Rating 0.326).
+
+It adds a few data points not otherwise in this wiki, folded into
+[[ai-visibility-correlation-factors]]:
+
+- **Visibility cliff**: brands in the top 25% by web mentions averaged
+  169 AI Overview mentions — 10x the 50-75th percentile (14 mentions).
+- **26% of the 75,000 brands studied had zero AI Overview mentions.**
+- Three additional weak-correlate factors not listed above: referring
+  domains (0.295), URL Rating (0.18), site pages (0.17).
+
 ## What this updated in the wiki
 
 - Created [[ai-visibility-correlation-factors]] (concept) for the

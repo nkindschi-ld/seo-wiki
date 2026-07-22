@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-07-07
+updated: 2026-07-22
 ---
 
 # AIO Impact on Google CTR
@@ -34,6 +34,26 @@ Practical framing: citation tactics (see
 relative to not being cited, but they don't fully restore what a query
 would earn without an AI Overview present at all. This is the economic
 "why" behind [[generative-engine-optimization]]'s citation-focused
+tactics.
+
+**Lower-confidence supplementary figures**: per
+[[singlegrain-google-ai-overviews-ultimate-guide-2025]] (no disclosed
+methodology, sample size, or measurement window) — position #1 organic
+CTR is claimed to have declined 28%→19% and position #2 20.83%→12.60%
+on AIO-present queries, averaging a 17.92% decline across positions
+1-5. This is a *different* metric than this page's citation-status
+data above (SERP position vs. cited/not-cited), so it isn't directly
+comparable or contradicted — but given the lack of disclosed
+methodology, treat these specific numbers as unverified rather than
+corroborated.
+
+**Another undisclosed-methodology figure**: per
+[[vercel-adapting-seo-for-llms]], Google AI Overviews "may reduce clicks
+by up to 34.5%" relative to non-AI search results — no sourcing given.
+Directionally consistent with (roughly in the neighborhood of) this
+page's ~38%-below-no-AIO-baseline finding above, but too vague on
+methodology to treat as independent confirmation of that specific
+number.
 tactics.
 
 ## 2025 decline, then a 2026 reversal nobody predicted
@@ -222,6 +242,44 @@ read.
 only, excludes mobile/international; three verticals/named brand pairs,
 not a whole-web sample; explicitly correlational, not proven causal.
 
+## Platform-split visit lift and the precise attribution gap
+
+Per [[tryprofound-ai-mention-effect]] (2M+ AI conversations, Jan-Jun
+2026, double-opt-in US panel, ChatGPT/Gemini/Google AI Overviews) — a
+larger, more granular follow-on to the Similarweb downstream-impact
+finding above, using a forecasted backward-placebo design (comparing
+post-mention 7-day visit rates against three prior 7-day placebo
+windows per user) rather than a same-magnitude but undifferentiated
+2.5x figure:
+
+- **Visit-rate lift by platform**: following a brand mention, users
+  visit that brand's site at **1.5-2.5x** their forecasted baseline
+  rate over 7 days — the same order of magnitude as Similarweb's 2.5x,
+  now broken out per platform: Gemini +145% relative (largest relative
+  lift), Google AI Overviews +61% (largest absolute lift and exposure
+  volume), ChatGPT +48%.
+- **Industry variation**: Financial Services and Retail show the
+  largest lifts via Gemini (+132%, +140%); Software shows a large lift
+  via Google AI Overviews (+128%).
+- **Timing distribution** (new data point): 20.5% of first visits
+  happen within 1 hour of the mention, 42% within 24 hours; Google AI
+  Overviews is the fastest-converting platform (45.7% within 24 hours).
+- **Attribution gap, precisely quantified**: only **~2.5%** of
+  downstream visits carry trackable AI-referral parameters (UTM tags
+  etc.) — over 97% are untagged. This held even after ChatGPT's May
+  2026 update made links more clickable (lift moved only from +2.00pp
+  to +2.16pp, a modest improvement, not a step change). This sharpens
+  Similarweb's 55.9%-arrives-via-search finding above with a much more
+  precise number and a concrete before/after natural experiment,
+  reinforcing the same conclusion: referral-based measurement of AI's
+  traffic effect is structurally undercounted.
+
+**Caveats on this source** (stated by the authors): a site-visit study,
+not a conversion/purchase study; not a randomized experiment — the
+backward-placebo design controls for each user's own baseline but
+doesn't fully eliminate selection bias between exposed and non-exposed
+populations.
+
 ## Caveats
 
 The authors are explicit that: this is correlational, not causal
@@ -233,8 +291,68 @@ present, brand not cited" segment significantly (47% of impressions at a
 ~1.61%); and forecasts past February 2026 should be read as directional
 floors, not predictions.
 
+## Conflicting Evidence
+
+- **Claim**: AI Overviews now appear in 50%+ of all Google search
+  results (up from 25% in August 2024).
+  - Supported by: [[singlegrain-google-ai-overviews-ultimate-guide-2025]]
+    (2026-02), no methodology, sample size, or measurement window
+    disclosed.
+  - Contradicted by: [[semrush-ai-overviews-study-2025]] (10M+ keywords,
+    full 2025 calendar year), which measured AIO prevalence peaking at
+    24.61% (July 2025) then *settling back down* to 15.69% (November
+    2025) — roughly a third of SingleGrain's 50%+ figure, and trending
+    down rather than up at the point that dataset ends. Also
+    contradicted by [[sel-what-is-generative-engine-optimization-geo-2026]]
+    (2026-02, same rough timeframe), which independently put the figure
+    at "at least 16%."
+  - **Current best guess**: the 50%+ figure looks overstated. Two
+    independent, differently-sourced measurements from roughly the same
+    window (Nov 2025-Feb 2026) converge around 15-16%, while
+    SingleGrain's number is 3x higher with no disclosed methodology —
+    treat it as an unreliable outlier rather than evidence of a further
+    2025→2026 jump, unless a comparably rigorous source corroborates it.
+    Flagged as unresolved in the sense that AIO prevalence *is* still
+    rising in absolute terms (per [[semrush-ai-overviews-commercial-search-2026]]'s
+    later-window commercial-intent growth), so a jump to 50%+ isn't
+    impossible on its face — it just isn't substantiated by any source
+    in this wiki yet.
+  - **Further high-estimate data point (2026-07-22, still unverified)**:
+    [[rankability-where-seo-is-going-2026]] states "~48% of tracked
+    queries now show an AI Overview" with no inline source given for
+    that specific figure. It sits much closer to SingleGrain's 50%+
+    outlier than the 15-16% consensus, but since the report doesn't
+    disclose which of its own listed secondary sources backs this
+    number, it doesn't independently corroborate SingleGrain — it's a
+    second unverified voice on the high-estimate side, not confirmation.
+
+- **Claim**: Local queries show only ~7% AI Overview presence, an
+  under-optimized opportunity for local businesses.
+  - Supported by: [[singlegrain-google-ai-overviews-ultimate-guide-2025]]
+    (2026-02), no methodology disclosed.
+  - Contradicted by: this page's own query-format-prevalence data
+    (Seer Interactive, 25M impressions), where **"near me" queries
+    trigger AIOs 76.9% of the time** — over 10x SingleGrain's figure for
+    what is arguably the same query category (local intent). Partially
+    consistent with [[semrush-ai-overviews-study-2025]]'s finding that
+    Real Estate is among the *least* AIO-saturated categories (<3%), if
+    "local queries" is read as local-vertical categories rather than
+    "near me"-style local-intent query format specifically.
+  - **Current best guess**: this is likely a definitional mismatch
+    rather than a clean contradiction — "local queries" and "near me"
+    queries may not be the same measurement in each source, and
+    industry-vertical saturation (real estate, home services) is a
+    different axis than query-format intent. But taken at face value,
+    the two 7%-vs-76.9% figures cannot both describe "local intent
+    queries" in general. Weight the Seer figure more heavily (large
+    sample, disclosed methodology) until a source clarifies which
+    specific local-query definition SingleGrain measured. Flagged as
+    unresolved.
+
 ## See also
 
+- [[singlegrain-google-ai-overviews-ultimate-guide-2025]] — the source
+  of both conflicts above.
 - [[generative-engine-optimization]] — the content tactics this page
   provides economic justification for.
 - [[ai-citation-landscape]] — what actually gets cited, complementing
@@ -256,3 +374,9 @@ floors, not predictions.
   undercounting caveat above.
 - [[similarweb-downstream-impact-of-ai-visibility-2026]] — the
   AI-recommendation-to-visit study in the section above.
+- [[tryprofound-ai-mention-effect]] — the platform-split visit-lift,
+  timing-distribution, and precisely-quantified attribution-gap data
+  above.
+- [[rankability-where-seo-is-going-2026]] — source of the ~48%
+  AIO-prevalence data point added to the Conflicting Evidence section
+  above.

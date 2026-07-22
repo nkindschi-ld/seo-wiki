@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-07-11
+updated: 2026-07-22
 ---
 
 
@@ -18,6 +18,22 @@ are grounded in different correlation studies.
 Ranked by measured visibility improvement
 ([[geo-generative-engine-optimization-aggarwal-2023|source]]), from best
 to worst, tested against a no-optimization baseline:
+
+**Major caveat added 2026-07-22 — read before applying this tier
+list.** Per [[c-seo-bench-2025]] (NeurIPS 2025), a larger, multi-domain,
+multi-model re-test of these exact tactics using a *citation-rank*
+outcome (does the document get cited earlier?) instead of the original
+*word-count* outcome found most of these tactics have **no significant
+effect on citation rank, and some are actively harmful** — while
+improving a document's *retrieval/context position* (traditional SEO)
+produces far larger gains than any tactic below. See "C-SEO Bench: a
+large-scale re-test" further down this page for the full findings, and
+[[generative-engine-optimization]]'s Conflicting Evidence section for
+the reconciliation. **Practical implication: treat the tier rankings
+below as directional/exploratory rather than validated for actually
+winning an earlier citation, and prioritize retrieval-rank/technical-
+crawlability work (see this page's Technical crawlability checklist)
+over these content tactics when the two compete for effort.**
 
 ## Tier 1 — High performing (do these)
 
@@ -38,6 +54,29 @@ to worst, tested against a no-optimization baseline:
 **Best combination tested:** Fluency Optimization + Statistics Addition
 together outperformed any single tactic by 5.5%+. If you can only pick
 one pairing, use this one.
+
+## Claim frontier concepts before competitors do
+
+Per [[vercel-adapting-seo-for-llms]] (no disclosed evidence for the
+underlying mechanism, but a reasonable extension of this wiki's existing
+topical-authority guidance): "LLMs favor the first or clearest
+explanation of a concept. If you're early, your version may become the
+default." Practical application:
+
+- **Monitor emerging-question sources** (Twitter/X, Reddit, GitHub,
+  Discord, category-specific forums) for questions being asked before
+  any competitor has written a clear answer.
+- **Identify shallow or absent competitor coverage** on a topic
+  adjacent to your product/expertise, rather than competing head-on for
+  an already-well-covered concept.
+- **Publish the clearest, most original explanation first** — this is
+  the acquisition-stage counterpart to this page's existing
+  "concentrate in fewer, higher-authority placements" third-party-
+  authority guidance, applied to owned content and topic *timing*
+  rather than placement.
+- **Use a concrete depth test before publishing**: "Could a competitor
+  easily replicate this tomorrow?" If yes, add more original data,
+  metrics, or proprietary insight until the answer is no.
 
 ## Publish citation-ready primary research/benchmarks
 
@@ -149,6 +188,17 @@ playbook, which mostly concerns Google's AI-Overview/citation behavior.
   link source for pulling other pages into the LLM's citation set — an
   LLM-citation-specific variant of [[link-and-anchor-text-best-practices]]'s
   cornerstone-content linking guidance.
+- **Or edit an already-cited page directly**, rather than only linking
+  to it. Per [[gofishdigital-chatgpt-search-case-study]] (n=1 case
+  study): find an existing page/article a search-augmented LLM already
+  cites for a target query, add the specific information you want the
+  LLM to surface (structured as a clear bullet-list of key-value
+  pairs — a format chosen to match how AI extraction systems parse
+  content), and check back roughly a week later. In the cited example,
+  adding a "Notable Clients" section to an already-cited listicle caused
+  ChatGPT Search to start surfacing notable clients in that brand's
+  result listing within about a week — a single data point on GEO
+  edit-to-visibility latency, not a measured average.
 - **Manage the LLM crawl deliberately.** LLM crawlers exist to help the
   model understand content, not to rank it — they don't need access to
   navigation/pagination pages the way a ranking crawler might benefit
@@ -309,7 +359,17 @@ Per [[google-ai-optimization-guide]], Google explicitly says these do
 **not** help visibility in AI Overviews/AI Mode — don't spend effort on:
 
 - Creating `llms.txt` files or other special AI-only markup/text files —
-  Google Search doesn't use them.
+  Google Search doesn't use them. **Scope note**: this claim is specific
+  to Google's own AI Overviews/AI Mode. [[sel-ai-optimization-content-for-search-and-agents]]
+  recommends creating an `llms.txt` file for documentation/reference
+  content targeting the broader AI crawler/agent ecosystem (Andi,
+  Perplexity, documentation tools) — but cites no evidence that it
+  actually helps there either. Not logged as a resolved or unresolved
+  Conflicting Evidence entry (neither source tests the other's scope
+  directly), but until better evidence exists, treat Google's
+  explicit "doesn't help" as the stronger claim for anything
+  Google-AI-surface-related, and `llms.txt` elsewhere as a low-cost,
+  unverified bet rather than a proven tactic.
 - "Chunking" content into unnaturally small pieces for AI to parse.
 - Obsessing over structured data specifically for AI purposes (still fine
   to use for general SEO, just not an AI-visibility requirement).
@@ -318,6 +378,76 @@ Per [[google-ai-optimization-guide]], Google explicitly says these do
   people — write for people first (see
   [[generative-engine-optimization]]'s Conflicting Evidence section on
   how this squares with the tactics above).
+
+## C-SEO Bench: a large-scale re-test of the Tier 1-3 tactics above
+
+Per [[c-seo-bench-2025]] (NeurIPS 2025, Puerto et al.) — a 6-domain
+(Retail, Video Games, Books, Web, News, Debate), 4-model (GPT-4o-mini,
+Claude 3.5 Haiku, o3, o4-mini), 16.3k-document re-test of the exact
+Tier 1-3 tactics above plus two new methods, using **citation rank**
+(does the LLM cite this document earlier?) instead of the original
+word-count metric:
+
+- **Out of 54 method×domain significance tests on GPT-4o-mini, only 3
+  showed a significant positive effect**: Content Improvement (Retail
+  only) and LLM Guidance (Retail and Video Games only). No tactic was
+  significant for either question-answering domain, and **no tactic
+  was significant at all on Claude 3.5 Haiku**.
+- **Negative effects are common, not marginal**: the Statistics
+  tactic significantly *decreased* citation rank in 19 of 24 tested
+  settings. On Haiku 3.5, 26 of 30 product-recommendation settings
+  showed significant negative effects.
+- **Retrieval/context position dominates every content tactic tested.**
+  Moving a document to position 1 in the LLM's context window (i.e.,
+  improving traditional retrieval ranking) produced gains of +0.87 to
+  +2.77 rank positions depending on domain — several times larger than
+  the best content tactic's effect in every domain (e.g. Retail: +2.77
+  for position-1 vs. +0.36 for the best content tactic tested).
+  **Practical implication: if forced to choose, prioritize retrieval-
+  eligibility and ranking work (see this page's Technical crawlability
+  checklist and [[traditional-seo-ranking-factors]]) over the content
+  tactics above** — this is the same conclusion as
+  [[airops-fan-out-effect-2026]]'s retrieval-rank-as-gatekeeper finding,
+  now independently corroborated via a controlled experiment (randomly
+  assigned context position) rather than only observational data.
+- **Two new tactics tested, both among the only ones with any
+  significant effect**:
+  - **LLM Guidance**: generate an `llms.txt`-style markdown summary
+    (title, intro, sections) and prepend it to the document. The
+    best-performing tactic overall by AUC (average gain across
+    adoption rates 0-100%), though still small in absolute terms and
+    only significant in 2 of 6 domains.
+  - **Content Improvement**: a holistic combination of all eight
+    original tactics (fluency, authority, structure, bolding key
+    features) into one rewrite pass — the second-best by AUC.
+  - **Caution on `llms.txt`**: this finding is specific to third-party
+    conversational search engines built on GPT-4o-mini/Claude/o3/
+    o4-mini context windows, not Google's own AI Overviews — per
+    [[google-ai-optimization-guide]] elsewhere on this page, Google
+    explicitly states `llms.txt` files don't help its own AI features.
+    Treat LLM Guidance as a low-cost, modestly-evidenced bet for
+    third-party LLM chat surfaces specifically, not a general AI-
+    visibility fix.
+- **C-SEO is a congested, zero-sum game as adoption rises**: the
+  average gain per adopter shrinks steadily as more competing
+  documents adopt the same tactic (LLM Guidance or Content
+  Improvement), converging toward zero as adoption approaches 100% —
+  modeled as a non-cooperative multi-actor game. This is a genuinely
+  new dynamic for this wiki: prior white-hat GEO research (including
+  the Tier 1-3 source above) only tested single-actor/unilateral
+  adoption. Practical implication: an early-mover advantage from
+  adopting an effective content tactic is likely to erode as
+  competitors copy it — don't assume a one-time content investment
+  keeps paying off indefinitely if the tactic becomes common in your
+  category.
+- **Why this doesn't flatly contradict the Tier 1-3 source above**: the
+  original paper measured word count (how much the LLM discusses a
+  document), not citation rank (whether it's cited earlier) — a
+  document can be discussed at length without being cited first. See
+  [[generative-engine-optimization]]'s Conflicting Evidence section for
+  the full reconciliation. Net effect: **treat the Tier 1-3 rankings
+  above as exploratory rather than validated for winning an earlier
+  citation specifically**, until further replication narrows the gap.
 
 ## Provider-specific tactics
 
@@ -505,6 +635,39 @@ third-party citations/mentions:
   - [ ] Publish on LinkedIn for faster indexing/visibility alongside
         primary publication.
 
+## Organic citation seeding: channel list and the paid-vs-organic nuance
+
+Per [[vercel-adapting-seo-for-llms]] — extends the third-party
+authority-building guidance above with a specific, high-signal channel
+list and one new nuance: **paid links reportedly carry reduced weight in
+training data compared to organic references** — community mentions
+that read as organic (not sponsored) are more likely to shape how a
+model associates a brand with a concept.
+
+- **Seed presence across**: Reddit, GitHub, Hacker News, Twitter/X,
+  LinkedIn, Stack Overflow, changelogs, AMAs, product demos, and
+  open-source/referenceable examples — indexable, high-signal channels
+  where "community mentions associate brands with concepts" and models
+  tend to follow human citing patterns.
+- **Don't substitute paid placement for organic mentions** if AI
+  training-data influence (as opposed to live retrieval citation) is the
+  goal — this is a different mechanism than [[peec-ai-self-promotional-listicles-2026]]'s
+  live-retrieval citation-rate findings above, so treat this as an
+  additional, training-data-specific consideration rather than a
+  replacement for the existing self-promotional-content cautions.
+
+## Content refresh cadence: a concrete schedule
+
+Per [[vercel-adapting-seo-for-llms]] — a specific cadence extending this
+page's existing general "keep content fresh" guidance: review content on
+**30, 90, and 180-day intervals** — refresh stale material, expand
+high-performing pages, archive obsolete pages with 301 redirects, and
+close competitive gaps proactively. Also maintain basic freshness
+hygiene alongside the review cadence: fix 404s, keep sitemap `lastmod`
+timestamps accurate, and keep sitemaps clean — "models re-crawl the web
+regularly," so stale content compounds in disadvantage over time rather
+than just sitting flat.
+
 ## Target common query-fanout injection angles
 
 Per [[peec-ai-chatgpt-query-fanouts-2026]] (5M query fanouts,
@@ -522,7 +685,12 @@ target query:
   or category-equivalent) since ChatGPT actively searches review
   content even when the user didn't ask for it — this shapes brand
   description regardless of whether your own site ranks for the
-  literal query.
+  literal query. Per
+  [[firstpagesage-searchgpt-optimization-2025-guide]] (no disclosed
+  methodology, treat as directional rather than measured) — Clutch,
+  CNET, Capterra, TrustPilot, and the Better Business Bureau round out
+  this list for B2B/service categories where G2/Glassdoor coverage is
+  thin.
 - **Keep a current-year reference current** on pages likely to be
   fanned out with a year token (5.44% of ChatGPT prompts get one
   injected) — stale "2024" mentions on an otherwise-good page can
@@ -538,6 +706,35 @@ target query:
   content that surfaces across multiple fanout angles (e.g. both a
   "best X" list and an "X reviews" page) has a structural ranking
   advantage over content matching only one angle.
+
+## Awards, credentials, and directory placements as authority signals (lower confidence)
+
+Per [[firstpagesage-searchgpt-optimization-2025-guide]] — no disclosed
+methodology, sample size, or study behind this claim (a marketing
+agency's own model of "the algorithm," not a measured study); treat
+directionally rather than as verified fact, and as an addition to
+this wiki's authority-signal tactics rather than a replacement:
+
+- **Publicize awards and accreditations** — both consumer-facing
+  awards (from non-industry sources) and B2B industry awards from
+  professional associations are claimed to carry signal, distributed
+  via social/PR channels rather than just listed on-site.
+- **Pursue directory listings beyond Wikipedia** — Hoovers and
+  Bloomberg are named alongside Wikipedia as directories worth
+  submitting company information to, to increase crawler exposure.
+- **For newer brands without list placements yet**, lean on customer/
+  usage metrics (adoption rate, customer count, market share) as a
+  substitute authority signal until third-party list/review coverage
+  accumulates.
+- **Google ranking as a SearchGPT input**: this source claims
+  SearchGPT/ChatGPT references top Google results directly, so
+  improving classic Google rankings feeds AI visibility too. This
+  aligns with the "supported by" side of
+  [[ai-visibility-correlation-factors]]'s existing Conflicting
+  Evidence on domain/brand authority (Ahrefs, Growth Memo) rather than
+  the "contradicted by" side (AirOps' page-level null finding) — see
+  that page for the full unresolved picture; this source doesn't
+  resolve it, just adds another voice to one side.
 
 ## Optimize for search-index citation and semantic relevance (ChatGPT)
 
@@ -558,7 +755,26 @@ with source-type-specific data:
   with a direct relevance-score mechanism.
 - **Use natural-language URL slugs.** Search results with
   natural-language slugs were cited at 89.78% vs. 81.11% for
-  non-natural-language URLs — a small but measurable structural lever.
+  non-natural-language URLs — a small but measurable structural lever
+  for ChatGPT specifically. **Caveat**: a much larger 6-engine study,
+  [[otterly-url-ai-citations-study-2026]] (1.03M URLs), found URL
+  length, hyphen count, digit presence, and question-pattern wording
+  (how-to/what-is) all non-predictive of citation — don't over-invest
+  in URL micro-optimization beyond this one lever, and treat it as
+  possibly ChatGPT-specific rather than universal.
+- **Use clean, canonical URLs — avoid unnecessary query strings.**
+  Per [[otterly-url-ai-citations-study-2026]], URLs without query
+  strings averaged 24% more citations than parameterized URLs (2.1 vs.
+  1.6). A concrete, actionable lever: consolidate tracking-parameter
+  variants to a canonical URL rather than letting AI crawlers retrieve
+  and split citation credit across multiple parameterized versions of
+  the same page.
+- **Prioritize reference/guide content over transactional pages when
+  choosing what to build.** Per the same study, guide pages average
+  42% more citations than baseline, while product/service (-16%) and
+  pricing pages (-21%) underperform — independently corroborating this
+  page's existing content-type-portability findings above (guides
+  highest, product/homepage lowest).
 - **Don't expect Reddit presence to earn direct citation** — it's
   retrieved constantly (67.8% of all non-cited URLs) but rarely
   attributed. Treat Reddit presence as shaping ChatGPT's background
@@ -618,6 +834,44 @@ language around "self-proclaimed expert" sources. If you don't already
 have strong domain authority, skip self-ranked listicles entirely and
 invest in earning a mention in someone else's.
 
+## Structure content for ChatGPT-generated comparison grids (purchase-decision stage)
+
+Per [[ai-shortlist-effect]] (56-participant session study + 6,882-
+citation share-of-voice analysis) — a purchase-decision-stage tactic
+set distinct from the citation-stage tactics above, since it targets
+what happens *inside* the chat once a user is actively comparing
+options, not what gets cited on the open web:
+
+- **Getting lifted into ChatGPT's own comparison grid matters more than
+  raw mentions.** Comparison/feature grids held user attention in
+  35.9%/15% of tasks respectively, more than prose answers — the
+  source calls this "the AEO equivalent of owning a featured snippet."
+  Structure product/service information (named attributes, consistent
+  units, direct feature parity vs. competitors) so a model can render
+  it cleanly as a grid row, not just prose.
+- **Add a clear "best for X" label**, not just a feature list —
+  explicit positioning measurably outperformed an unlabeled comparison
+  in the study.
+- **Keep pricing current everywhere a model might source it.** Stale or
+  wrong pricing measurably hurt selection odds; this is an ongoing
+  accuracy-maintenance task (across your own site and any third-party
+  pages a model might cite), not a one-time content edit.
+- **Disclose downsides plainly instead of omitting or spinning them.**
+  Trade-offs stated directly increased user trust in the comparison and
+  correlated with being *selected*, not rejected — counterintuitive
+  relative to classic marketing instinct to downplay weaknesses.
+- **Don't assume unknown brands can't win a slot.** Participants
+  considered and picked brands they'd never heard of when positioning
+  was clear — familiarity is not a gating factor at the comparison-grid
+  stage, only clear framing is.
+- **Weight effort by category.** Visibility-to-selection correlation
+  ranged from 0.97 (grocery) to -0.98 (coaching, reversed) — in
+  commoditized categories, raising share of voice should reliably move
+  selection; in highly personal/trust-driven categories, generic
+  high-visibility framing may backfire relative to individually-matched
+  positioning. Check which kind of category you're in before assuming
+  visibility work will pay off here.
+
 ## Brand-level visibility factors (correlational, not causally tested)
 
 Per [[ai-visibility-correlation-factors]] — unlike the Tier 1-3 tactics
@@ -639,6 +893,138 @@ above, which were causally tested via controlled experiment, these are
 - Backlinks and Domain Rating still correlate, but are the *weakest*
   correlates measured (0.19–0.33) — don't expect classic link-building
   alone to move AI visibility much.
+
+## Brand-building LLMO tactics
+
+Per [[ahrefs-llm-optimization]] — brand-level tactics for shaping how
+LLMs associate a brand with topics, distinct from the page-level citation
+tactics above:
+
+- **Invest in PR aimed at specific topic associations, not just general
+  coverage.** LLMs map brand-topic associations via token embeddings and
+  cosine similarity in semantic space — a brand that accumulates PR
+  mentions tightly clustered around a target topic (the source's example:
+  Herman Miller earning 273 pages of "ergonomic" press mentions in a
+  year) becomes more likely to be recommended for that topic. Track share
+  of voice for target topics, monitor mentions/links, and test LLMs
+  directly with focus-topic questions as a measurement loop.
+- **Do entity research instead of keyword research.** Identify how LLMs
+  currently perceive your brand's entity relationships (via Google's
+  Natural Language API, Inlinks' Entity Analyzer, or Ahrefs' AI Content
+  Helper), find the gap between current and desired perception, then
+  create content specifically to build the missing associations.
+- **Claim a Wikipedia listing.** Every major LLM trains on Wikipedia,
+  often as its largest single data source. Four requirements gate
+  acceptance: **notability** (independent recognition via news/books/
+  academic papers), **verifiability** (claims backed by reliable
+  third-party sources), **neutral point of view**, and **avoiding
+  conflict of interest** (written by brand-impartial contributors, not
+  the brand itself) — build edit history and third-party credibility
+  before attempting a listing. Reinforces this playbook's existing
+  Wikipedia tactic for ChatGPT/Claude targeting above.
+- **Research brand-specific questions**, not just topic keywords: pull
+  branded "Questions" data (e.g. Ahrefs' Questions tab filtered to
+  Brand) and separately type "Is [brand name]..." into ChatGPT/Perplexity
+  to observe autocomplete — these prompts differ from Google's
+  autocomplete/PAA suggestions and represent a distinct optimization
+  target.
+- **Invest in genuine Reddit UGC** (community building, AMAs, influencer
+  partnerships) rather than link-spamming — Reddit's own S-1 filing
+  states its content is "foundational to how leading LLMs have been
+  trained," consistent with this wiki's existing Reddit-matters-for-
+  Gemini finding.
+- **Rate LLM responses (thumbs up/down) on brand-related answers.**
+  Corroborates the existing feedback-loop tactic above for static models —
+  this source adds that Gemini specifically may not train on prompts/
+  responses at all unless a user explicitly opts to share feedback.
+- **Don't expect schema markup to be a direct LLM-visibility lever.** The
+  source explicitly corrects an earlier claim: AI crawlers read rendered
+  HTML, not client-side-rendered content or structured data — schema
+  remains valuable for classic rich results and entity clarity, but isn't
+  itself read as an LLM-citation signal.
+
+**Corroborating data point**: a Seer Interactive study (10,000 finance/
+SaaS purchase-intent queries, GPT-4o-measured brand mentions vs. Google/
+Bing SERP rank) found organic ranking correlates with LLM brand mentions
+at ~0.65 strength, while **backlinks showed a surprisingly neutral
+impact** — consistent with [[airops-fan-out-effect-2026]]'s and
+[[ahrefs-why-chatgpt-cites-pages-2026]]'s findings that classic search
+ranking is close to a prerequisite for AI citation. See
+[[ai-visibility-correlation-factors]]'s Conflicting Evidence section for
+how this fits the wiki's unresolved authority-correlation picture.
+
+## Research note: LLM-guided editing using past-ranking context (not yet real-world applicable)
+
+Per [[bardas-white-hat-seo-llm-2025]] (Technion, arXiv 2025-02) — a
+different research tradition than the citation-visibility tactics
+above: this paper optimizes for classic ad hoc *retrieval* ranking
+(LambdaMART, E5 embedding cosine similarity), not LLM-citation
+inclusion, but is included here because the method itself is novel and
+adjacent. In lab "competitive search" conditions, prompting an LLM
+(GPT-4o) to edit a document using examples of **past rankings** for the
+same query — best via **Pairwise** (document pairs + which ranked
+higher) or **Listwise** (full ranked lists) context — outperformed both
+human competitors and a prior supervised feature-based baseline on rank
+promotion, while staying reasonably faithful to the original content.
+
+**Why this isn't an actionable tactic yet**: the method requires
+*observing past rankings* for your query — available in the paper's
+research-lab ranking competitions, not in real-world SEO/AEO, where
+competitor rankings and the ranking function are opaque. Per
+[[c-seo-bench-2025]], which cites this exact paper: "their method
+assumes knowing the user query beforehand, which limits its
+applicability to real scenarios, where user queries are unknown." Filed
+here as a research-stage signal that LLM-guided, feedback-informed
+editing *can* beat both human editors and supervised methods under lab
+conditions — worth revisiting if a real-world proxy for "past rankings"
+(e.g. your own historical rank-tracking data plus visible competitor
+positions) becomes practical to feed into a similar prompting approach.
+
+## Known adversarial risk: LLM recommendation manipulation
+
+Per [[ahrefs-llm-optimization]] (citing a Harvard study, "Manipulating
+Large Language Models to Increase Product Visibility") — awareness only,
+**not a recommended tactic**: attackers can shift which brand/product an
+LLM recommends via adversarial prompt injection embedded in web content
+or plugin documentation.
+
+**Correction (2026-07-22), verified against the primary source**: the
+original figures cited here ("shifted ranking in ~40% of evaluations";
+"raised recommendation rate from 34% to 59.4%") were sourced secondhand
+via Ahrefs. Having now ingested the primary paper directly
+([[kumar-lakkaraju-manipulating-llms-2024]]), the "34%→59.4%" figure
+does **not appear anywhere in it** — likely a misattribution or garbled
+restatement in the secondhand source. The verified findings from the
+primary paper (Kumar & Lakkaraju, Harvard, arXiv 2404.07981, tested on
+Llama-2 with a GCG-optimized "Strategic Text Sequence," fictitious
+10-product coffee-machine catalog):
+
+- A near-invisible product (almost never recommended due to high price)
+  went from **not appearing at all to the top recommendation within
+  ~100 optimization iterations**, and stayed there.
+- With a **fixed prompt order**, the attack gave a rank *advantage* in
+  only **~40%** of randomized-evaluation trials (~60% no change) — but
+  optimizing the attack sequence itself **against randomized product
+  order** raised the advantage rate to **~95%**, with disadvantage
+  negligible. **Order-robust optimization, not the base attack itself,
+  is what makes this reliable.**
+- For a product that already ranked competitively (usually 2nd without
+  intervention), a fixed-order attack sequence was *no better than
+  chance* under randomized order (~15% advantage vs. ~15% disadvantage,
+  "neutralizing its overall benefit") — order-robust optimization was
+  necessary to get any net benefit at all (~48% advantage).
+- **Requires gradient/white-box access** (or reliance on
+  cross-model transferability asserted by prior jailbreak literature,
+  not independently retested here on production black-box systems) —
+  a meaningfully higher technical bar than plain-text prompt injection.
+
+Practical implication unchanged: monitor how LLMs describe your brand
+relative to competitors on a recurring basis (see the
+sentiment-monitoring workflow below) — an unexplained shift in
+LLM-stated recommendations or sentiment toward a competitor may indicate
+this kind of manipulation rather than a genuine organic ranking change.
+See [[kumar-lakkaraju-manipulating-llms-2024]] for the full verified
+findings.
 
 ## Sentiment monitoring and correction
 
@@ -689,6 +1075,27 @@ Being cited within the AIO on these pages is worth **+120% more clicks**
 than not being cited (though still below a no-AIO baseline) — see
 [[aio-ctr-impact]] for the full economics.
 
+**Lower-confidence addition**: per
+[[singlegrain-google-ai-overviews-ultimate-guide-2025]] (no disclosed
+methodology or sample size) — queries of 8+ words are claimed to be 7x
+more likely to trigger an AI Overview than shorter queries. Directionally
+consistent with [[semrush-ai-overviews-study-2025]]'s finding that
+AIO-triggering keywords skew long-tail (~60% at ≤100 monthly searches),
+but that's a different axis (search volume, not word count) — treat
+this specific 7x figure as unverified rather than corroborated.
+
+## Direct-answer format for AI Overview capture
+
+Per [[singlegrain-google-ai-overviews-ultimate-guide-2025]] (no disclosed
+methodology) — lead the page with a **50-70 word direct answer**
+immediately after the H1, before any other content, phrased to stand
+alone as a self-contained answer to the target query. Consistent with
+this page's existing extractable-content/front-loading guidance
+elsewhere in the wiki (see [[generative-engine-optimization]]'s
+extractability principles), but the specific 50-70 word range isn't
+independently verified by any other source in this wiki — treat as a
+reasonable starting heuristic, not a measured optimum.
+
 ## Measurement checklist: don't panic on CTR alone
 
 Per [[aio-ctr-impact]], a falling CTR on AIO-cited queries can be a
@@ -701,6 +1108,51 @@ measurement artifact rather than a real problem:
       differently and one can look fine while the other looks alarming.
 - [ ] Treat single-brand/single-account CTR anomalies with suspicion —
       aggregate benchmarks can be skewed by one outlier account.
+
+## AI-referral traffic and citation-monitoring automation
+
+Per [[sel-integrate-geo-with-seo]] — concrete operational tactics for the
+measurement gap noted above (traditional rankings/CTR/traffic don't
+capture zero-click AI interactions):
+
+- **Set up a GA4 regex filter to isolate AI-tool referral traffic**
+  rather than relying on default channel groupings, which often miscount
+  or omit it: `(.*gpt.*|.*chatgpt.*|.*openai.*|.*neeva.*|.*writesonic.*|.*nimble.*|.*outrider.*|.*perplexity.*|.*google.*bard.*|.*bard.*|.*edgeservices.*|.*gemini.*google.*|.*copilot.*)`
+  — undisclosed methodology behind this exact pattern, but it's a
+  reasonable starting filter to adapt as new AI referrer domains emerge.
+- **Automate AI-citation/mention checks** rather than manually querying
+  each engine — a Google-Sheets-plus-LLM-API workflow (querying a fixed
+  prompt set on a schedule and logging whether/how the brand appears) is
+  a practical low-effort way to operationalize the presence-per-topic
+  tracking already recommended above.
+- **Watch branded search volume and direct/returning-visitor traffic as
+  a proxy for successful AI-driven discovery** — a brand initially
+  discovered via an AI answer often converts to a branded search or
+  direct visit rather than a trackable AI referral click, so a rise in
+  branded search alongside flat AI-referral numbers can still indicate
+  AI-driven awareness working.
+
+## Named GEO metrics (vendor-proposed benchmarks, unverified)
+
+Per [[superlines-geo-guide]] (vendor content-marketing, no disclosed
+methodology behind the specific benchmark numbers — use the metric
+*names/definitions* as a useful measurement vocabulary, not the
+benchmarks as validated targets):
+
+| Metric | Definition | Measurement | Starter benchmark (unverified) |
+|---|---|---|---|
+| Citation Frequency | How often AI cites your domain | Track across ChatGPT/Perplexity/Gemini/Mistral/Copilot | +10-20% monthly growth for priority prompts |
+| AI Brand Visibility | % of answers mentioning your brand | Mentions ÷ total answers × 100 | 15-30% in owned topics after 60-90 days |
+| Share of Voice (AI SOV) | Your brand's mentions vs. competitors' | Your mentions ÷ total competitor mentions | Top 3 within core clusters |
+| Context Accuracy | Whether AI summaries describe you correctly | Manual review + sentiment/fact checks | >95% accurate on top pages |
+| Prompt Coverage | % of tracked prompts where you appear | Appearing prompts ÷ total tracked | 50-70% in priority clusters |
+| Assisted Conversions | Revenue influenced by AI exposure | Correlate citation spikes with branded search/pipeline | Show lift vs. baseline |
+
+These overlap conceptually with this wiki's existing measurement
+guidance (presence/portability/concentration, citation gap tracking,
+AI-referred sessions) — use this table mainly to standardize naming
+across a team/report, not as a replacement for the more rigorously
+sourced benchmarks elsewhere on this page.
 
 ## Technical crawlability (retrieval-eligibility prerequisite)
 

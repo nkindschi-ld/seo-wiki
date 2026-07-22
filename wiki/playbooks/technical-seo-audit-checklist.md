@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-07-11
+updated: 2026-07-22
 ---
 
 ## Priority Framework
@@ -121,6 +121,19 @@ audit workflow). Quick-reference for this audit:
   SERP features. Common types: Organization, Product, Article, Event,
   Recipe, Review, FAQPage. Tools: a schema generator, Google's Rich
   Results Test, Schema.org documentation.
+- **Structured data must match visible content**, per
+  [[google-succeeding-in-ai-search-2025-05]] — everything in the markup
+  must also be visible on the page itself; validate markup rather than
+  assuming it's correct. Applies to AI Overviews/AI Mode eligibility as
+  much as classic rich results.
+- **Page experience for AI-referred visitors**, per
+  [[google-succeeding-in-ai-search-2025-05]] — cluttered layout,
+  difficulty distinguishing main content from surrounding page
+  elements, poor cross-device display, and high latency all degrade the
+  experience for visitors arriving from AI Overviews/AI Mode just as
+  much as from classic search results; audit for this specifically
+  rather than assuming AI-referred traffic is unaffected by page-
+  experience issues.
 - **On-page element priority calibration**, per
   [[ahrefs-site-audit-study-2023]] (1M+ domains) — these are among the
   most commonly-flagged issues in a site audit, but not equally
@@ -188,10 +201,37 @@ audit workflow). Quick-reference for this audit:
   - **JavaScript rendering**: Most LLMs don't render JavaScript, so
     mission-critical content that only appears after JS execution is
     invisible to AI crawlers. Test whether key content is visible in the
-    page source/HTML without running JS.
+    page source/HTML without running JS. Per
+    [[sel-ai-optimization-content-for-search-and-agents]] (undisclosed
+    methodology, treat directionally): of major AI crawlers, only
+    Gemini and AppleBot are reported to currently render JavaScript at
+    all — assume every other AI crawler needs plain HTML/markdown.
+    **Concrete remediation**, per [[vercel-adapting-seo-for-llms]]: use
+    Server-Side Rendering (SSR), Static Site Generation (SSG), or
+    Incremental Static Regeneration (ISR) so AI crawlers receive fully
+    rendered static HTML on first fetch rather than a JS shell — modern
+    frameworks (e.g. Next.js) support on-demand regeneration so this
+    doesn't require sacrificing content freshness for crawlability.
   - **Third-party blocking**: Cloudflare, Sucuri, and similar security
     services may block AI crawlers by default. Check your CDN/WAF
-    settings if you want AI visibility; whitelist AI bot IPs if needed.
+    settings if you want AI visibility; whitelist AI bot IPs if needed —
+    per [[sel-ai-optimization-content-for-search-and-agents]], allowing
+    major U.S. datacenter IP ranges is one practical mitigation if an
+    AWS WAF or similar service is blocking legitimate AI crawler traffic.
+  - **Speed/timeout constraints**: per the same source, AI systems apply
+    tight ~1-5 second content-retrieval timeouts and may truncate or drop
+    slow-loading content entirely — a stricter bar than typical
+    human-visitor performance budgets. Position key information near the
+    top of the HTML so it's captured even if a slow page gets cut off
+    mid-fetch.
+  - **AI crawler efficiency/error-rate benchmarks** (same source,
+    undisclosed sample — treat as directional): reports 34% of AI
+    crawler requests returning a 404 or other error, AI crawlers running
+    roughly 47x less efficiently than Googlebot, and AI crawler request
+    volume at ~28% of Googlebot's — useful context when interpreting
+    server-log AI-bot-activity data per the item above; a high AI-bot
+    error rate in your own logs may be consistent with this industry-wide
+    pattern rather than a site-specific problem, but still worth fixing.
   - **Hallucinated URLs**: AI systems sometimes cite non-existent URLs on
     your domain. Monitor Web Analytics for AI referral traffic and set up
     redirects from common 404s to relevant live pages (e.g.,
@@ -228,6 +268,11 @@ audit workflow). Quick-reference for this audit:
   (high-impact vs. medium-priority projects), four quick-win tactics, and
   AI search-specific technical risks (JS rendering, third-party blocking,
   hallucinated URLs, code fingerprints, AI content detection).
+- [[sel-ai-optimization-content-for-search-and-agents]] — sharpens the
+  JS-rendering and third-party-blocking risks above with a
+  which-crawlers-render-JS breakdown and an AWS-WAF mitigation, plus
+  speed/timeout constraints and AI-crawler efficiency/error-rate
+  benchmarks.
 - [[google-search-fundamentals-get-started]] — official Google guide to
   technical SEO fundamentals: robots.txt strategy, sitemaps, site
   migrations, canonicalization, crawlability, mobile-first indexing,

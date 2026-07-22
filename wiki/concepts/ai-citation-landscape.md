@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-07-08
+updated: 2026-07-22
 ---
 
 # AI Citation Landscape
@@ -72,6 +72,16 @@ absolute terms: guides/tutorials portability 2.3% (highest) > blogs
 Explanatory, utility-driven content travels best; brand-centric and
 transactional pages travel worst.
 
+**Independent corroboration, different metric**: per
+[[otterly-url-ai-citations-study-2026]] (1.03M URLs, 1.93M citations,
+6 engines), raw citation *frequency* by page type ranks in the same
+order — guides 2.7 average citations (+42% vs. baseline), blog/help
+pages 2.0 (+5%), news 1.7 (-11%), product/service 1.6 (-16%), pricing
+1.5 (-21%). Two differently-sourced studies, different engines,
+different metrics (cross-engine portability vs. raw citation count),
+same content-type ranking — reference/explanatory content consistently
+outperforms transactional content.
+
 ## Engines have distinct sourcing "personalities" (authority vs. UGC mix)
 
 [[brightedge-ai-search-same-brands-different-sources]] classifies every
@@ -106,6 +116,19 @@ ChatGPT (39%) than with either Google surface (27-34%).
 Brand sentiment is overwhelmingly positive across all five engines
 (78-96% positive, ≤2.1% negative) regardless of these sourcing
 differences.
+
+## Cited-source sets are volatile month to month
+
+Per [[sel-what-is-generative-engine-optimization-geo-2026]] — a
+different dimension than the composition/overlap data above: **40-60%
+of cited sources change from one month to the next.** The domain-level
+and source-type patterns above describe aggregate tendencies that hold
+reasonably stable, but which *specific* URLs/sources get cited for a
+given query churns substantially over short timeframes. Practical
+implication: track citation performance on a recurring cadence rather
+than treating a single snapshot as a durable result, and don't read too
+much into losing (or gaining) a citation in any single month without
+a trend across several.
 
 ## Same source-type layers everywhere, different weighting
 
@@ -200,7 +223,11 @@ site visit within 7 days than a non-recommended competitor — even
 though 55.9% of that resulting traffic arrives via a subsequent branded
 search rather than a direct AI referral link, meaning a mention's
 downstream effect is largely invisible to referral-based traffic
-attribution. See [[aio-ctr-impact]] for the full writeup.
+attribution. Per [[tryprofound-ai-mention-effect]] (2M+ AI
+conversations), this attribution gap is even starker than the 55.9%
+figure suggests: only ~2.5% of downstream visits carry any trackable
+AI-referral parameter at all. See [[aio-ctr-impact]] for the full
+writeup.
 
 **Different signals drive each**:
 - **Recommendation/mention signals**: frequent co-occurrence with the
@@ -213,6 +240,28 @@ attribution. See [[aio-ctr-impact]] for the full writeup.
   major retrieval weight in RAG systems), clear extractable structure
   (headers, bullets, schema), and co-citation (multiple independent
   sources pointing to the same brand as the answer).
+
+## Citation-slot concentration (unsourced, directional)
+
+Per [[superlines-geo-guide]] (vendor content, no disclosed methodology):
+LLM answers reportedly cite only **2-7 domains per response**, versus
+Google's traditional 10 blue links — a claim of fewer available
+"citation slots" than classic SERP ranking, making visibility more
+competitive. Directionally consistent with, but not independently
+confirmed by, this page's existing concentration findings (e.g.
+[[ahrefs-b2b-seo-statistics-2025]]'s 28.9%-of-AI-Overview-citations-
+to-top-50-brands figure) — treat the specific 2-7 range as unverified
+until a source with disclosed sampling confirms it.
+
+**Stronger, disclosed-methodology support for the general claim (2026-07-22)**:
+[[otterly-url-ai-citations-study-2026]] (1.03M URLs, 1.93M citation
+instances, 6 engines, Pearson-correlation methodology) independently
+finds a steep citation power law: median 1 citation per URL, but
+**15.8% of URLs generate 50% of all citations** (20% generate 54%), and
+one URL alone accumulated 965 citations. This doesn't confirm
+Superlines' specific "2-7 domains per response" figure, but it's a
+rigorously-sourced data point supporting the same underlying claim —
+AI citations concentrate heavily among a small minority of URLs.
 
 ## Retrieval rank as the primary citation gatekeeper
 
@@ -227,6 +276,17 @@ position 10 — a 4x gap. Even pages with strong heading-query relevance
 first get retrieved/ranked highly by the underlying search step, *then*
 compete on content signals — content quality cannot compensate for a
 poor retrieval rank.
+
+**Independently corroborated via a controlled experiment (2026-07-22)**:
+per [[c-seo-bench-2025]] (NeurIPS 2025), randomly assigning a document
+to position 1 in an LLM's context window produced citation-rank gains
+several times larger than any content-level tactic tested (across 6
+domains, 4 models) — the same conclusion as AirOps' observational
+finding above, now shown causally rather than only correlationally.
+See [[geo-content-optimization-tactics]]'s "C-SEO Bench" section and
+[[generative-engine-optimization]]'s Conflicting Evidence section for
+the fuller picture, including that most white-hat content tactics
+tested showed no significant citation-rank benefit at all.
 
 Citation distribution is **bimodal**, not a smooth curve: 58% of pages
 in the dataset were never cited, 25% always cited, only 17%
@@ -275,6 +335,21 @@ segmented by reference type rather than treated as one aggregate pool:
   surface-level prompt.
 - **Natural-language URL slugs correlate with higher citation**:
   89.78% vs. 81.11% for non-natural-language URLs.
+  **Nuance, not a clean contradiction (2026-07-22)**: a much larger,
+  6-engine study, [[otterly-url-ai-citations-study-2026]] (1.03M URLs,
+  n > 1M), found URL *structural* mechanics — length, hyphen count,
+  digit presence, path depth — all correlate with citation at
+  essentially zero (r = -0.007 to -0.025), and that *question-pattern*
+  wording (how-to/what-is) specifically is non-predictive. These aren't
+  necessarily incompatible: Ahrefs measured whether a slug *reads* as
+  natural language (ChatGPT only), while Otterly measured structural
+  proxies and specific keyword patterns (across 6 engines) — a slug
+  could be "natural-sounding" independent of its length or whether it
+  contains "how-to." But the two studies point in different directions
+  on how much URL wording matters overall, and Otterly's null result is
+  much more strongly powered. Treat URL-slug wording as a minor,
+  possibly ChatGPT-specific lever rather than a broadly reliable one
+  until reconciled further.
 
 ## Query fanout mechanics
 
@@ -355,6 +430,20 @@ above:
   above), which don't require the cited page to rank organically at
   all. Not logged as a formal conflict since it's a minority-share
   nuance on an already-probabilistic claim, not a direct contradiction.
+- **Unverified temporal-decline claim (2026-07-22)**: this "76%
+  top-10" figure describes a static snapshot. [[rankability-where-seo-is-going-2026]]
+  asserts the overlap between top-10 Google rankings and AI-answer
+  citations "collapsed from ~75% in mid-2025 to 17-38% by early 2026,"
+  which — if true — would mean this 76% figure and
+  [[ipullrank-optimize-for-sge]]'s "93.8% of AIO citations weren't in
+  top-10" figure are both compatible snapshots of a fast-moving trend
+  rather than a genuine contradiction. However, the Rankability report
+  gives **no inline source for this specific figure**, and its own
+  primary dataset (a keyword-demand panel) doesn't measure citation
+  composition at all — so this doesn't count as independent
+  verification. Flagged as an unverified claim worth watching for
+  corroboration, not treated as resolving the existing tension between
+  the 76%/93.8% figures.
 
 ## Topic-specific source trust
 
@@ -451,6 +540,8 @@ grounded in retrieval (RAG), not a static trained "understanding."
 
 ## See also
 
+- [[sel-what-is-generative-engine-optimization-geo-2026]] — the source
+  for the 40-60% month-to-month citation volatility figure above.
 - [[growth-memo-topics-matter-for-third-party-authority]] — the
   topic-vs-competitor-domain-share data point cited above, plus tiered
   authority-accumulation and named-author findings covered in
@@ -489,3 +580,8 @@ grounded in retrieval (RAG), not a static trained "understanding."
   Conflicting Evidence above.
 - [[ahrefs-b2b-seo-statistics-2025]] — the AI Overview citation-
   composition and citation-without-organic-visibility data above.
+- [[rankability-where-seo-is-going-2026]] — source of the unverified
+  75%→17-38% ranking/citation overlap decline claim above.
+- [[otterly-url-ai-citations-study-2026]] — the page-type citation-
+  frequency corroboration, power-law concentration data, and
+  URL-slug-wording nuance above.

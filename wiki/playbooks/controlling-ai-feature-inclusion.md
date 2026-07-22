@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-07-07
+updated: 2026-07-22
 ---
 
 # Controlling AI Feature Inclusion (Google Search)
@@ -13,8 +13,9 @@ inclusion. Relevant if you have content you don't want summarized/quoted
 directly in an AI-generated answer (e.g. to preserve click-through, or
 for licensing/legal reasons).
 
-Per [[google-ai-features-appearance-guide]], these are the available
-controls:
+Per [[google-ai-features-appearance-guide]] (and the earlier
+[[google-succeeding-in-ai-search-2025-05]], which states the same
+guidance), these are the available controls:
 
 ## Options, from most to least aggressive
 

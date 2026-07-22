@@ -1024,3 +1024,405 @@ a largely-non-actionable-but-track-worthy awareness tactic to
 [[optimizing-for-coding-agent-recommendations]]. No conflicts — new
 mechanism, first source on engineering-level (vs. model-level) vendor
 treatment.
+
+## [2026-07-22] ingest | "What Is Generative Engine Optimization (GEO)" (Search Engine Land, Leigh McKenzie)
+
+Created new source
+[[sel-what-is-generative-engine-optimization-geo-2026]]. A general GEO
+explainer that mostly corroborates existing wiki claims
+([[generative-engine-optimization]],
+[[geo-content-optimization-tactics]],
+[[wix-generative-engine-optimization]]) rather than extending them —
+filed as a supporting citation there. Contributed three genuinely new
+data points: a 40-60% month-to-month citation-source volatility figure
+added to [[ai-citation-landscape]]; absolute ChatGPT (800M+ weekly)/
+Gemini (750M+ monthly) user-base counts and a Tally-ChatGPT-#1-referral
+anecdote added to [[ai-traffic-scale-vs-hype]] as a companion to that
+page's existing relative-scale ("1/1,000th") framing. No conflicts.
+
+## [2026-07-22] ingest | "Google AI Overviews: The Ultimate Guide to Ranking in 2025" (Single Grain, Eric Siu)
+
+Created new source
+[[singlegrain-google-ai-overviews-ultimate-guide-2025]]. A marketing-
+agency round-up with no disclosed methodology for any of its stats;
+most of its 15 tactics restate existing [[geo-content-optimization-tactics]]
+guidance. Added two unverified/lower-confidence additions to
+[[geo-content-optimization-tactics]] (query-length AIO-trigger
+correlation, 50-70 word direct-answer heuristic). Also flagged as
+unverified a position-based CTR-decline stat added to
+[[aio-ctr-impact]].
+
+## [2026-07-22] conflict | AIO prevalence & local-query trigger rate — SingleGrain vs. Seer/Semrush
+
+[[aio-ctr-impact]]: SingleGrain claims 50%+ of all search results show
+an AI Overview and only ~7% of local queries trigger one. Both conflict
+with existing higher-rigor sources: [[semrush-ai-overviews-study-2025]]
+(10M+ keywords) shows prevalence settling at 15.69% (Nov 2025), and
+[[sel-what-is-generative-engine-optimization-geo-2026]] independently
+corroborates ~16%; separately, this wiki's existing Seer-sourced data
+(25M impressions) shows "near me" queries triggering AIOs 76.9% of the
+time, over 10x SingleGrain's local-query figure. Logged as unresolved
+Conflicting Evidence on [[aio-ctr-impact]] — current best guess favors
+the higher-rigor, disclosed-methodology sources on prevalence; the
+local-query gap is flagged as a likely definitional mismatch (local-
+vertical categories vs. "near me" query format) rather than resolved.
+
+## [2026-07-22] ingest | "Top ways to ensure your content performs well in Google's AI experiences on Search" (Google Search Central Blog, John Mueller, May 2025)
+
+Created new source [[google-succeeding-in-ai-search-2025-05]]. The
+earliest official Google guidance in this wiki on AI-search
+optimization — confirms existing claims already sourced to
+[[google-ai-features-appearance-guide]] and [[google-ai-optimization-guide]]
+(nosnippet/data-nosnippet/max-snippet/noindex controls, higher-quality
+AI Overview clicks, helpful/people-first content) were Google's
+position as early as May 2025, not new. Added two minor tips to
+[[technical-seo-audit-checklist]]: structured data must visibly match
+the page, and page-experience issues (clutter, latency, cross-device
+display) apply to AI-referred visitors specifically. No conflicts.
+
+## [2026-07-22] ingest | "SearchGPT Optimization: 2026 Guide" (First Page Sage, Evan Bailyn)
+
+Created new source
+[[firstpagesage-searchgpt-optimization-2025-guide]]. A marketing-
+agency guide with no disclosed methodology behind its five-factor
+"algorithm" model; most tactics restate existing
+[[geo-content-optimization-tactics]] guidance. Added a new lower-
+confidence "Awards, credentials, and directory placements" section,
+expanded the review-platform list (Clutch, CNET, TrustPilot, BBB), and
+added Hoovers/Bloomberg to the directory-placement tactic. Also added
+this source as a supporting citation on
+[[ai-visibility-correlation-factors]]'s existing unresolved domain-
+authority-vs-AI-citation Conflicting Evidence (doesn't resolve it —
+just adds another voice to the "authority matters" side).
+
+## [2026-07-22] ingest | "What Is ChatGPT Search & How Does It Work?" (Semrush, Rachel Handley)
+
+Created new source [[semrush-chatgpt-search]]. Higher rigor than the
+recent marketing-agency guides (named research-team byline); most
+tactics restate existing [[geo-content-optimization-tactics]] guidance.
+Added the ChatGPT-Search-retrieves-from-Bing-too detail (extends the
+existing Copilot-follows-Bing observation) and a smaller-sites-ranked-
+fairly anecdote to [[generative-engine-optimization]]; added an earlier
+(Nov 2024) 28x Google-vs-ChatGPT traffic baseline and a Gartner 2028
+organic-traffic-halving forecast to [[ai-traffic-scale-vs-hype]]; added
+SearchGPT prototype (2024-07-25) and ChatGPT Search integration
+(2024-10-31) launch dates to the timeline. No conflicts — the 28x
+figure is an earlier/narrower-scope data point, not a contradiction of
+the existing 345x/1,000x figures.
+
+## [2026-07-22] ingest | "LLMO: 10 Ways to Work Your Brand Into AI Answers" (Ahrefs, Louise Linehan)
+
+Created new source [[ahrefs-llm-optimization]]. Added a "Brand-building
+LLMO tactics" section to [[geo-content-optimization-tactics]] (semantic-
+proximity PR/entity-embedding mechanism, entity-research tools, the
+Wikipedia four-requirement checklist, Reddit UGC investment, brand-
+question research, and a schema-markup-isn't-an-LLM-signal correction)
+and a new "Known adversarial risk: LLM recommendation manipulation"
+awareness note (Harvard-study-sourced prompt-injection attack data —
+documented for defensive monitoring, not recommended as a tactic). Added
+a corroborating data point (organic rank ~0.65 correlated with LLM brand
+mentions; backlinks neutral, per a cited Seer Interactive study) to
+[[ai-visibility-correlation-factors]]'s existing unresolved authority-
+correlation Conflicting Evidence section. No conflicts — this source
+largely operationalizes and corroborates existing findings; the
+quotes/statistics/citations uplift table it cites reports the same
+tactic set as [[geo-generative-engine-optimization-aggarwal-2023]] with
+different exact figures (not confirmed whether same study cited
+differently or a separate replication — noted on the source page, not
+logged as a formal conflict since directionally identical).
+
+## [2026-07-22] ingest | "How To Integrate GEO With SEO" (Search Engine Land, Christina Adame)
+
+Created new source [[sel-integrate-geo-with-seo]] (no disclosed
+methodology — practitioner framework piece quoting Crystal Carter/Wix).
+Added a named "retrievability" fourth-pipeline-stage framing
+(crawlability→indexability→rankability→retrievability) and a
+Presence/Recognition/Accessibility breakdown to
+[[generative-engine-optimization]], with an explicit naming-collision
+note against [[sej-the-consensus-gap]]'s existing
+Presence/Portability/Concentration framework (same word "Presence,"
+different meaning — not a factual conflict). Added a GA4-regex
+AI-referral-traffic filter and a citation-monitoring-automation tactic to
+[[geo-content-optimization-tactics]]'s measurement section. Added a
+"ChatGPT reaches 400M weekly active users (Feb 2025)" milestone to
+`wiki/timeline.md`, chronologically placed between the existing
+2025-01-08 and 2025-03-13 entries — an earlier data point than
+[[ai-traffic-scale-vs-hype]]'s current 800M+ figure, not a contradiction.
+Most of the source's on-page/off-page/technical checklists restate
+existing [[geo-content-optimization-tactics]],
+[[entity-based-seo-implementation]], and [[brand-entity-seo-strategy]]
+content, so were not duplicated. No conflicts.
+
+## [2026-07-22] ingest | "AI Optimization: How to Optimize Your Content for AI Search and Agents" (Search Engine Land, Jed White)
+
+Created new source [[sel-ai-optimization-content-for-search-and-agents]]
+(author runs a competing AI search product, Andi; performance stats have
+no disclosed sample/methodology — treated as directional). Extended
+[[robots-txt-strategy]]'s per-LLM crawler table with new bot names
+(`GoogleOther`, `AndiBot`, `ExaBot`, `PhindBot`, `YouBot`,
+`FirecrawlAgent`, `CCBot`) and a concrete three-category allow/disallow
+robots.txt template (allow AI search/agent bots, disallow AI
+training-data bots, allow traditional search). Extended
+[[technical-seo-audit-checklist]]'s AI-specific technical risks section
+with a which-crawlers-render-JS breakdown (only Gemini/AppleBot),
+an AWS-WAF mitigation (allow major U.S. datacenter IP ranges), tight
+1-5-second retrieval-timeout constraints, and AI-crawler efficiency/
+error-rate benchmarks (34% error rate, 47x inefficiency vs. Googlebot,
+~28% of Googlebot's volume). Extended
+[[optimizing-for-the-agentic-web]]'s Layer 4 with "agent-responsive
+design"/ARIA-labeling guidance for computer-use agents and a
+lighter-weight programmatic-access (API/RSS) option. Added an inline
+scope-difference note (not a formal Conflicting Evidence entry) to
+[[geo-content-optimization-tactics]]'s existing "don't bother with
+llms.txt" guidance — this source recommends creating one for the
+broader AI-crawler ecosystem, while Google's existing guidance is scoped
+specifically to its own AI Overviews/AI Mode; neither source tests the
+other's scope directly. No formal conflicts logged.
+
+## [2026-07-22] ingest | "SEO Case Study: How We Influenced the ChatGPT Search Results" (Go Fish Digital, Chris Long)
+
+Created new source [[gofishdigital-chatgpt-search-case-study]] (n=1
+anecdote, single company/query, no disclosed measurement methodology).
+Added an "edit an already-cited page directly" tactic to
+[[geo-content-optimization-tactics]]'s LLM-chat-specific tactics section,
+alongside the existing cited-page-internal-linking tactic — extends it
+with a concrete example (adding a key-value-pair "Notable Clients"
+section to an already-ChatGPT-cited listicle surfaced results within
+~1 week) and a first (single-data-point) figure for GEO edit-to-
+visibility latency. Reinforces rather than conflicts with the existing
+ChatGPT-Search-retrieves-via-Bing finding from [[semrush-chatgpt-search]].
+No conflicts.
+
+## [2026-07-22] ingest | "The Complete 10-Step Guide to Generative Engine Optimization (GEO) in 2026" (Superlines, Jere Meriluoto)
+
+Created new source [[superlines-geo-guide]] — vendor content marketing
+(author's company sells GEO visibility-tracking software), undisclosed
+methodology throughout, several statistics attributed secondhand to
+third parties (Forrester, Adobe, a Kevin Indig LinkedIn analysis)
+without verifiable direct citation. Added a three-layer AI search model
+(Training Data/High-Volume AI Search/Agentic AI, a retrieval-speed
+taxonomy distinguished from the existing LLM-product taxonomy) to
+[[generative-engine-optimization]]. Added a named GEO KPI matrix
+(Citation Frequency, AI Brand Visibility, Share of Voice, Context
+Accuracy, Prompt Coverage, Assisted Conversions) to
+[[geo-content-optimization-tactics]]'s measurement section, with
+benchmarks explicitly flagged as vendor-sourced/unverified. Added an
+unsourced "2-7 domains cited per response" citation-concentration claim
+to [[ai-citation-landscape]], flagged as directional/unconfirmed.
+Deliberately did not propagate the source's budget/team-structure
+guidance or secondhand market-adoption statistics (2.5B daily prompts,
+71%/89%/87% figures, 2030 traffic-crossover prediction) — no disclosed
+basis and this wiki already has more directly-sourced data via
+[[ai-traffic-scale-vs-hype]]. No conflicts — the llms.txt recommendation
+adds a second voice to the already-flagged unresolved scope question on
+[[geo-content-optimization-tactics]] rather than a new conflict; most of
+the 10-step framework restates existing tactics under new naming.
+
+## [2026-07-22] ingest | "How we're adapting SEO for LLMs and AI Search" (Vercel, Kevin Corbett & Malte Ubl)
+
+Created new source [[vercel-adapting-seo-for-llms]] — engineering-team
+blog post with first-party company data, higher credibility than most
+GEO blog content ingested so far (though the specific 34.5%
+click-reduction and Tally ARR figures have no disclosed independent
+methodology beyond the companies' own reporting). Added a first-party
+ChatGPT-referral-signup growth case study (Vercel: 1%→4.8%→10% of new
+signups) and quantified Tally ARR figures ($2M→$3M in 4 months) to
+[[ai-traffic-scale-vs-hype]], extending the existing Tally "#1 referral
+source" anecdote. Added the 34.5% AI-Overview click-reduction figure to
+[[aio-ctr-impact]] as a lower-confidence corroborating data point
+(directionally consistent with, not independent confirmation of, the
+page's existing ~38%-below-baseline finding). Added "frontier concept
+identification" (first-mover topic ownership), a "could a competitor
+replicate this tomorrow" authorship depth test, an expanded organic-
+citation-seeding channel list with a paid-vs-organic training-data
+weighting nuance, and a 30/90/180-day content refresh cadence to
+[[geo-content-optimization-tactics]]. Added an SSR/SSG/ISR remediation
+for the JS-rendering-invisible-to-AI-crawlers risk to
+[[technical-seo-audit-checklist]]. Added Meta AI as a third
+Bing-dependent product to [[generative-engine-optimization]]'s
+search-augmented-LLM section. No conflicts — corroborates and extends
+existing findings throughout.
+
+## [2026-07-22] ingest | "The AI Mention Effect" (Profound, Nikolas Laskaris)
+
+Created new source [[tryprofound-ai-mention-effect]] — a 2M+-conversation,
+Jan-Jun 2026 backward-placebo study of AI-mention-to-downstream-visit
+lift across ChatGPT/Gemini/Google AI Overviews. Added a per-platform
+visit-lift breakdown (Gemini +145%, Google AI Overviews +61%, ChatGPT
++48%), industry variation, and a timing distribution (20.5% of visits
+within 1 hour, 42% within 24 hours) to [[aio-ctr-impact]], extending
+(not conflicting with) [[similarweb-downstream-impact-of-ai-visibility-2026]]'s
+existing 2.5x visit-rate multiplier. Added a precisely-quantified
+attribution gap (~2.5% of downstream visits carry any trackable
+AI-referral parameter, even after ChatGPT's May 2026 more-clickable-links
+update) to [[aio-ctr-impact]] and [[ai-citation-landscape]], sharpening
+the existing 55.9%-arrives-via-search finding. No conflicts.
+
+## [2026-07-22] ingest | "The Shortlist is the New Shelf" (Profound, Kevin Indig/Eric Van Buskirk/Jasman Singh)
+
+Created new source [[tryprofound-shortlist-is-the-new-shelf]] and new
+concept page [[ai-shortlist-effect]] — a 56-participant, 221-task
+session study (video/think-aloud) plus a 6,882-citation share-of-voice
+analysis, the first source in this wiki connecting AI *visibility*
+directly to an actual *purchase decision outcome*. Core finding: chosen
+brands had ~2x the share of voice of rejected brands in ChatGPT answers
+(24% vs. 11%), correlation 0.57, ranging from 0.97 (grocery) to -0.98
+(coaching, reversed) by category. Added a purchase-decision-stage
+tactic set ("Structure content for ChatGPT-generated comparison grids")
+to [[geo-content-optimization-tactics]]: grid inclusion, "best for X"
+labels, pricing accuracy, and disclosed downsides as four framing
+levers independent of raw visibility. Cross-linked from
+[[ai-visibility-correlation-factors]] (appearing vs. being chosen) and
+[[listicles-in-ai-search]] (third-party listicle citation vs. this
+source's live in-chat comparison grid, a related but distinct
+mechanism). No conflicts — extends existing zero-click and visibility-
+correlation findings with a new outcome variable.
+
+## [2026-07-22] ingest | "C-SEO Bench: Does Conversational SEO Work?" (Puerto et al., NeurIPS 2025)
+
+Created new source [[c-seo-bench-2025]] — a NeurIPS 2025 benchmark
+(6 domains, 4 LLMs, 16.3k documents, multi-actor competitive adoption)
+directly re-testing the exact tactics behind
+[[geo-generative-engine-optimization-aggarwal-2023]]'s Tier 1-3 GEO
+tactics, using a citation-rank metric instead of the original
+word-count metric. Result: only 3 of 54 method×domain tests showed a
+significant positive effect (LLM Guidance, Content Improvement, each in
+1-2 domains only), no tactic was significant for Claude 3.5 Haiku or
+for question-answering, several tactics (especially Statistics) were
+significantly negative in most tested settings, and moving a document
+to position 1 in the LLM's context (traditional SEO/retrieval rank)
+produced gains several times larger than any content tactic. Also
+introduces a new finding for this wiki: C-SEO behaves as a congested,
+zero-sum game under competitive multi-actor adoption.
+
+## [2026-07-22] conflict | GEO Tier 1-3 content tactics vs. citation-rank re-test
+
+[[c-seo-bench-2025]] directly challenges
+[[geo-generative-engine-optimization-aggarwal-2023]]'s Tier 1-3 tactic
+rankings in [[geo-content-optimization-tactics]] and the "traditional
+SEO doesn't transfer" framing in [[generative-engine-optimization]].
+Added Conflicting Evidence sections to both pages rather than
+overwriting the original tactic list: current best guess is that this
+reflects a genuine metric-choice difference (word count vs. citation
+rank) rather than a clean reversal, but citation rank is the more
+decision-relevant outcome for GEO/AEO purposes, so confidence in the
+Tier 1-3 rankings is significantly downweighted pending further
+replication. Independently corroborates (via a controlled experiment)
+[[airops-fan-out-effect-2026]]'s retrieval-rank-as-gatekeeper finding
+in [[ai-citation-landscape]] — cross-linked there too.
+
+## [2026-07-22] ingest | "White Hat Search Engine Optimization using Large Language Models" (Bardas et al., Technion, arXiv 2025)
+
+Created new source [[bardas-white-hat-seo-llm-2025]] — an academic
+competitive-search paper (a different tradition from the GEO/AEO
+citation studies elsewhere in this wiki) showing that prompting an LLM
+(GPT-4o) to edit a document using past-ranking context (Pairwise and
+Listwise context outperformed Pointwise and Temporal) beats both human
+editors and a supervised feature-based baseline on classic ad hoc
+retrieval rankers (LambdaMART, E5 cosine similarity), including in a
+live online competition against unaware human students. Added a
+research note to [[geo-content-optimization-tactics]] flagging this as
+not yet real-world-applicable, since the method requires observing past
+rankings — a limitation [[c-seo-bench-2025]] independently flags about
+this exact paper in its own related-work section, so both sources are
+now cross-linked. No conflicts — a genuinely new method not previously
+covered, filed with an explicit applicability caveat rather than as an
+actionable tactic.
+
+## [2026-07-22] ingest | "Manipulating Large Language Models to Increase Product Visibility" (Kumar & Lakkaraju, Harvard, arXiv 2024)
+
+Created new source [[kumar-lakkaraju-manipulating-llms-2024]] — the
+primary source behind a black-hat adversarial-risk note already in this
+wiki (previously cited only secondhand via [[ahrefs-llm-optimization]]).
+Verified findings: a GCG-optimized "Strategic Text Sequence" on Llama-2
+took a near-invisible fictitious product to the top recommendation
+within ~100 iterations; rank-advantage rate under randomized product
+order rose from ~40% (fixed-order-optimized attack) to ~95%
+(order-robust-optimized attack) for a low-visibility product, and from
+a net-neutral ~15%/~15% to ~48% for an already-competitive product —
+order-robust optimization is the key lever, not the base attack.
+
+## [2026-07-22] conflict | secondhand citation inaccuracy — "34% to 59.4%" figure not in the primary source
+
+Verified [[ahrefs-llm-optimization]]'s claim that the Kumar & Lakkaraju
+paper found a preference-manipulation attack "raised a fake product's
+recommendation rate from 34% to 59.4%" against the primary paper
+([[kumar-lakkaraju-manipulating-llms-2024]]) — that specific figure does
+not appear anywhere in it. Corrected [[geo-content-optimization-tactics]]'s
+"Known adversarial risk" section to the verified primary-source figures
+rather than deleting the original claim silently; added a correction
+note to [[ahrefs-llm-optimization]] pointing to the fix rather than
+editing what that source page records Ahrefs as having said. The
+underlying vulnerability's *existence* is confirmed by the primary
+source — only the specific numbers were inaccurate.
+
+## [2026-07-22] ingest | Search Results Diversification in Competitive Search (Mordo et al., 2025)
+
+Filed [[mordo-diversification-competitive-search-2025]]. Same
+competitive-search research tradition and overlapping authorship with
+[[bardas-white-hat-seo-llm-2025]], but studies the ranking-function
+side rather than the editing side: proves game-theoretically and shows
+empirically (40-student ranking competition) that adding search-results
+diversification (MMR) to a ranking function still yields a stable
+equilibrium while shifting publishers from "mimicking the winner" to
+differentiating for 2nd place, ameliorating the herding effect
+documented in prior work (Raifer et al. 2017, Goren et al. 2021). New
+research thread for this wiki — no conflict with existing claims. Filed
+a new concept page, [[competitive-search-herding-and-diversification]],
+to hold the herding/diversification mechanism and a flagged (untested)
+hypothesis about its relevance to AI-answer-engine citation
+diversification.
+
+## [2026-07-22] ingest | Where SEO Is Going: The 2026 State of AI Search (Rankability)
+
+Filed [[rankability-where-seo-is-going-2026]]. Two-tier source: primary
+Google Keyword Planner demand data (3,751 keywords, 48 months) is
+genuinely new to this wiki and filed as a new concept page,
+[[seo-aeo-geo-search-demand-trends]] — SEO interest's first sustained
+decline (-30% off its mid-2025 peak) while AI search demand keeps
+accelerating (3.6x since 2022), AEO/GEO's 0-to-named-to-plateau arc with
+a volume-vs-usage naming tension (GEO 2x AEO's volume, but AEO winning
+as the professional label), and AI agents' hype-to-deployment
+volatility. Two secondary, undisclosed-inline-sourcing claims intersect
+with existing conflicts and were added as unverified data points rather
+than resolutions: a ~48% AIO-prevalence figure (added to
+[[aio-ctr-impact]]'s existing 50%+-vs-15-16% Conflicting Evidence), and
+a 75%→17-38% ranking/citation-overlap-decline claim (added to
+[[ai-citation-landscape]]'s existing 76%-top-10-vs-93.8%-not-top-10
+tension). No conflict logged as resolved by this source.
+
+## [2026-07-22] ingest | The URL AI Citation Study 2026 (Otterly.ai)
+
+Filed [[otterly-url-ai-citations-study-2026]] (1.03M URLs, 1.93M
+citation instances, 6 engines, disclosed Pearson-correlation
+methodology). Two findings independently corroborate existing wiki
+claims using different metrics: page-type citation frequency (guide
++42%, pricing -21%) matches the existing content-type-portability
+ranking in [[ai-citation-landscape]]; and its power-law citation
+concentration (15.8% of URLs generate 50% of citations) gives disclosed-
+methodology support to a previously-unsourced Superlines concentration
+claim. One genuine nuance flagged (not a formal conflict): this study's
+near-zero correlation for URL structural mechanics (length, hyphens,
+digits, question-pattern wording) sits in tension with Ahrefs'
+ChatGPT-specific natural-language-URL-slug finding (89.78% vs. 81.11%)
+already in the wiki — noted inline rather than logged as a resolved or
+unresolved Conflicting Evidence entry, since the two studies measure
+overlapping but not identical things. Added a new actionable tactic
+(clean canonical URLs, +24% citations) to
+[[geo-content-optimization-tactics]].
+
+## [2026-07-22] ingest | An Analysis of AI Overview Brand Visibility Factors (Ahrefs, 2025-05-26)
+
+Identified this article as the earlier, single-platform (AI Overviews
+only) predecessor of the already-ingested Dec 2025 study,
+[[ahrefs-ai-brand-visibility-correlations]] — same authors and
+methodology, correlation figures consistent with the narrow end of the
+existing ranges. Rather than file a duplicate source page, added a
+"Predecessor article" note to the existing source page and folded its
+few new data points (a 10x visibility-cliff stat between the top and
+50-75th web-mention percentiles, a 26%-zero-AI-mentions figure, and
+three additional weak-correlate factors: referring domains, URL Rating,
+site pages) into [[ai-visibility-correlation-factors]]. No conflict
+with existing claims. Passed on a second candidate ingest this session
+(SEOmator's secondhand summary of a Profound/Brighton SEO 2025 talk) at
+the user's direction.

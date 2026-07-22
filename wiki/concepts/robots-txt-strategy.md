@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo]
-updated: 2026-07-11
+updated: 2026-07-22
 ---
 
 # Robots.txt Strategy: What It Is, What It Isn't
@@ -44,14 +44,63 @@ block a specific LLM's crawler (per
 |---|---|
 | ChatGPT | `OAI-SearchBot`, `ChatGPT-User`, `GPTBot` |
 | Copilot | `BingBot` |
-| Gemini | `Google-Extended` (inferred — Google hasn't explicitly confirmed this maps to Gemini) |
+| Gemini | `Google-Extended` (inferred — Google hasn't explicitly confirmed this maps to Gemini), `GoogleOther` |
 | Claude | `ClaudeBot` |
 | Perplexity | `PerplexityBot` |
+| Andi | `AndiBot` |
+| Exa | `ExaBot` |
+| Phind | `PhindBot` |
+| You.com | `YouBot` |
+| Firecrawl (agent framework) | `FirecrawlAgent` |
+| Common Crawl (training corpus used by many LLMs) | `CCBot` |
 
 These crawlers exist to help the LLM understand/summarize content
 rather than to rank it — they generally don't need access to
 navigation or pagination pages the way a ranking crawler benefits from;
 prioritize their access to brand/product/service content instead.
+
+**A three-category allow/disallow split**, per
+[[sel-ai-optimization-content-for-search-and-agents]], is a practical
+way to apply this distinction in an actual robots.txt file:
+
+```
+# Allow AI search/agent crawlers (real-time retrieval — help them cite you)
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: FirecrawlAgent
+User-agent: AndiBot
+User-agent: ExaBot
+User-agent: PhindBot
+User-agent: YouBot
+Allow: /
+
+# Disallow AI training-data collection bots, if you don't want your
+# content used to train a model (a separate decision from search visibility)
+User-agent: GPTBot
+User-agent: CCBot
+User-agent: Google-Extended
+Disallow: /
+
+# Traditional search indexing
+User-agent: Googlebot
+User-agent: Bingbot
+Allow: /
+
+User-agent: *
+Disallow: /admin/
+Disallow: /internal/
+Sitemap: https://www.domain.com/sitemap.xml
+```
+
+Also watch for **overly aggressive bot-protection services**
+(Cloudflare, AWS WAF) blocking AI crawlers/agents outright at the
+network layer, bypassing robots.txt entirely — allowing major U.S.
+datacenter IP ranges is one mitigation if a WAF is blocking legitimate
+AI crawlers. This is the same third-party-blocking risk already flagged
+in [[technical-seo-audit-checklist]] (via
+[[ahrefs-beginner-guide-technical-seo]]), extended here with a concrete
+fix.
 
 Example targeting a specific crawler:
 ```
@@ -157,3 +206,4 @@ Some SEO practitioners recommend using robots.txt as a "quick fix" for duplicate
 - [[how-google-search-works]] — Crawl stage and crawl budget allocation
 - [[google-robots-txt-intro]] — Official Google guidance on robots.txt purpose and limitations
 - [[ahrefs-robots-txt-guide]] — Practical implementation details, trailing-slash syntax gotchas, common mistakes
+- [[sel-ai-optimization-content-for-search-and-agents]] — the source for the extended AI-bot-name table and three-category allow/disallow template above

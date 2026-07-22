@@ -158,6 +158,11 @@ weak.
 
 [[google-search-status-dashboard-history]]. Duration: 7 days, 1 hour.
 
+## 2024-07-25 — OpenAI introduces the SearchGPT prototype
+
+[[semrush-chatgpt-search]]. The real-time-web-search prototype that
+was later integrated into ChatGPT as ChatGPT Search.
+
 ## 2024-08-15 — August 2024 core update
 
 [[google-search-status-dashboard-history]]. Duration: 19 days, 4 hours.
@@ -165,6 +170,13 @@ weak.
 ## 2024-08-15 — Ranking ongoing issue (incident)
 
 [[google-search-status-dashboard-history]]. Duration: 4 days, 11 hours.
+
+## 2024-10-31 — OpenAI integrates SearchGPT into ChatGPT as ChatGPT Search
+
+[[semrush-chatgpt-search]]. Retrieves from OpenAI's own crawled index,
+Bing's search index (via Microsoft partnership), and direct data
+partnerships — see [[generative-engine-optimization]] for the
+optimization implications of the Bing dependency.
 
 ## 2024-11-11 — November 2024 core update
 
@@ -178,9 +190,46 @@ weak.
 
 [[google-search-status-dashboard-history]]. Duration: 7 days, 2 hours.
 
+## 2025-01-08 — Semrush publishes "What Is ChatGPT Search & How Does It Work?"
+
+[[semrush-chatgpt-search]] · updated [[generative-engine-optimization]]
+and [[ai-traffic-scale-vs-hype]]. ChatGPT Search retrieval mechanics
+(OpenAI index + Bing index + data partnerships), an earlier Nov-2024
+28x Google-vs-ChatGPT traffic baseline, and a Gartner forecast that
+organic search traffic will halve by 2028.
+
+## 2025-01-08 — First Page Sage publishes "SearchGPT Optimization" guide
+
+[[firstpagesage-searchgpt-optimization-2025-guide]] · updated
+[[geo-content-optimization-tactics]] and
+[[ai-visibility-correlation-factors]]. Marketing-agency guide
+presenting an undisclosed-methodology "algorithm" model for
+SearchGPT/ChatGPT commercial recommendations; contributes an awards/
+credentials tactic and expanded review-platform names, and adds a
+supporting voice to the wiki's existing unresolved domain-authority-
+vs-AI-citation conflict. Last updated 2025-12-23.
+
+## 2025-02 — ChatGPT reaches 400 million weekly active users
+
+[[sel-integrate-geo-with-seo]]. Reported as having doubled in the prior
+six months. An earlier data point than [[ai-traffic-scale-vs-hype]]'s
+later 800M+-weekly-user figure — not a contradiction, a milestone on the
+same growth curve.
+
 ## 2025-03-13 — March 2025 core update
 
 [[google-search-status-dashboard-history]]. Duration: 13 days, 21 hours.
+
+## 2025-05-21 — Google publishes "Top ways to ensure your content performs well in Google's AI experiences on Search"
+
+[[google-succeeding-in-ai-search-2025-05]] · updated
+[[technical-seo-audit-checklist]]. John Mueller's blog post — the
+earliest official Google guidance in this wiki specifically on AI
+Overviews/AI Mode optimization; confirms the helpful-content,
+technical-crawlability, and preview-control (nosnippet/noindex)
+guidance later formalized in [[google-ai-features-appearance-guide]]
+(2025-12) and [[google-ai-optimization-guide]] (2026-06) was Google's
+position from at least this date.
 
 ## 2025-06-30 — June 2025 core update
 
@@ -275,6 +324,25 @@ newer tools (e.g. Prisma 79%→0%, Drizzle 21%→100%).
 ## 2026-02-05 — February 2026 Discover update
 
 [[google-search-status-dashboard-history]]. Duration: 21 days, 17 hours. Only Discover-specific update in the dashboard's history.
+
+## 2026-02-11 — Search Engine Land publishes "What Is Generative Engine Optimization (GEO)"
+
+[[sel-what-is-generative-engine-optimization-geo-2026]] · updated
+[[ai-citation-landscape]] and [[ai-traffic-scale-vs-hype]]. General GEO
+explainer (Leigh McKenzie) that mostly corroborates existing wiki
+tactics; contributes a 40-60% month-to-month citation-source volatility
+figure, absolute ChatGPT (800M+ weekly users)/Gemini (750M+ monthly
+users) user-base counts, and a Tally-names-ChatGPT-#1-referral-source
+anecdote.
+
+## 2026-02-16 — Single Grain publishes "Google AI Overviews: The Ultimate Guide to Ranking in 2025"
+
+[[singlegrain-google-ai-overviews-ultimate-guide-2025]] · flagged
+Conflicting Evidence on [[aio-ctr-impact]]; updated
+[[geo-content-optimization-tactics]]. Marketing-agency AIO guide with
+no disclosed methodology; claims (50%+ AIO prevalence, 7% local-query
+presence) conflict with this wiki's higher-rigor Seer/Semrush-sourced
+figures (~15-16% prevalence, 76.9% "near me" trigger rate).
 
 ## 2026-03 — Amplifying publishes "Codex vs Claude Code: AI Agent Tool Selection Study"
 
@@ -470,3 +538,91 @@ Wirecutter and Consumer Reports.
 6 platforms) finds ~11% of citations originate from self-promotional
 listicles with no algorithmic correction observed, and sharp platform
 divergence (ChatGPT ~3.6-4% vs. Google AI Mode/Perplexity ~10.3-10.4%).
+
+## 2026-07-01 — Profound publishes "The AI Mention Effect"
+
+[[tryprofound-ai-mention-effect]] · updated [[aio-ctr-impact]] and
+[[ai-citation-landscape]]. 2M+-conversation backward-placebo study
+(Jan-Jun 2026, ChatGPT/Gemini/Google AI Overviews) finds a 1.5-2.5x
+post-mention visit-rate lift over 7 days, split by platform (Gemini
++145%, Google AI Overviews +61%, ChatGPT +48%), a 20.5%-within-1-hour/
+42%-within-24-hour timing distribution, and only ~2.5% of downstream
+visits carrying a trackable AI-referral parameter.
+
+## 2026-07-14 — Profound publishes "The Shortlist is the New Shelf"
+
+[[tryprofound-shortlist-is-the-new-shelf]] · created
+[[ai-shortlist-effect]], updated [[geo-content-optimization-tactics]],
+[[ai-visibility-correlation-factors]], and [[listicles-in-ai-search]].
+56-participant, 221-task session study finds ChatGPT share of voice
+correlates 0.57 with actual purchase selection (0.97 grocery to -0.98
+coaching by category), 92.8% of purchase-decision tasks end with no web
+click, and identifies four framing levers (grid inclusion, "best for X"
+labels, pricing accuracy, disclosed downsides) that shape selection
+independent of raw visibility.
+
+## 2025-12 — NeurIPS 2025 publishes "C-SEO Bench: Does Conversational SEO Work?" (Puerto et al.)
+
+[[c-seo-bench-2025]] · updated [[geo-content-optimization-tactics]] and
+[[generative-engine-optimization]] (Conflicting Evidence), cross-linked
+from [[ai-citation-landscape]]. Date approximate (NeurIPS 2025
+conference month; exact publication date not disclosed in the source).
+Large-scale re-test of the wiki's founding Tier 1-3 GEO tactics using a
+citation-rank metric: most tactics show no significant effect or are
+actively harmful, retrieval/context position dominates by several
+multiples, and C-SEO behaves as a congested zero-sum game under
+competitive multi-actor adoption.
+
+## 2024-04-11 — Kumar & Lakkaraju (Harvard) publish "Manipulating Large Language Models to Increase Product Visibility"
+
+[[kumar-lakkaraju-manipulating-llms-2024]] · corrected
+[[geo-content-optimization-tactics]] and [[ahrefs-llm-optimization]].
+arXiv preprint (v2: 2024-09-02) demonstrating a GCG-optimized
+"Strategic Text Sequence" black-hat attack that took a near-invisible
+fictitious product to the top LLM recommendation within ~100
+optimization iterations on Llama-2; order-robust optimization raised
+the rank-advantage rate from ~40% to ~95% for a low-visibility product.
+Ingested to verify and correct a secondhand "34%→59.4%" figure
+previously repeated in this wiki via Ahrefs, which doesn't appear in
+this primary source.
+
+## 2025-02-23 — Bardas et al. (Technion) publish "White Hat Search Engine Optimization using Large Language Models"
+
+[[bardas-white-hat-seo-llm-2025]] · updated
+[[geo-content-optimization-tactics]] with a research note. arXiv
+preprint showing LLM-guided document editing using past-ranking context
+(Pairwise/Listwise) outperforms human editors and a supervised baseline
+on classic retrieval rankers (LambdaMART, E5), including in a live
+online competition — but requires observable past rankings unavailable
+in real-world SEO, a limitation independently noted by
+[[c-seo-bench-2025]] (published later, Dec 2025), which cites this
+exact paper.
+
+## 2025-01-24 — Mordo et al. (Technion) publish "Search Results Diversification in Competitive Search"
+
+[[mordo-diversification-competitive-search-2025]] · updated
+[[competitive-search-herding-and-diversification]] (new page). arXiv
+preprint proving game-theoretically, and confirming with a 40-student
+ranking-competition experiment, that adding MMR-style search-results
+diversification to a ranking function shifts publishers from
+"mimicking the winner" to differentiating for 2nd place — ameliorating
+the herding effect documented by Goren et al. (2021).
+
+## 2026-06-15 — Rankability publishes "Where SEO Is Going: The 2026 State of AI Search"
+
+[[rankability-where-seo-is-going-2026]] · new page
+[[seo-aeo-geo-search-demand-trends]]. 4-year Google Keyword Planner
+panel (3,751 keywords, Jun 2022-May 2026) documents SEO search
+interest's first sustained decline (-30% off a mid-2025 peak) alongside
+AI search demand's continued 3.6x acceleration, and AEO/GEO's
+0-to-named-discipline-to-plateau arc.
+
+## 2026-05-07 — Otterly.ai publishes "The URL AI Citation Study 2026"
+
+[[otterly-url-ai-citations-study-2026]] · updated
+[[ai-citation-landscape]] and [[geo-content-optimization-tactics]].
+1.03M-URL, 6-engine study finds URL structural mechanics (length,
+hyphens, digits) show near-zero citation correlation, page type is the
+strongest signal (guides +42%, pricing -21%), clean canonical URLs get
+24% more citations than parameterized ones, and citations follow a
+steep power law (15.8% of URLs generate 50% of all citations).

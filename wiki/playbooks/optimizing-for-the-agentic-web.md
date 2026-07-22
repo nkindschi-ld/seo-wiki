@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [aeo]
-updated: 2026-07-07
+updated: 2026-07-22
 ---
 
 # Optimizing for the Agentic Web
@@ -72,6 +72,26 @@ the layer that has no equivalent in citation-focused GEO:
 - **Keep signup/checkout flows simple and clearly labeled** end-to-end
   so an agent can confirm pricing and complete the flow without
   needing to interpret ambiguous UI.
+- **Practice "agent-responsive design" for computer-use agents**
+  (Browser Use, OpenAI Operator, and similar), per
+  [[sel-ai-optimization-content-for-search-and-agents]] — a step beyond
+  agents that just read/cite a page, for agents that directly operate a
+  browser on it:
+  - Use consistent navigation patterns across pages so an agent's
+    learned interaction model transfers page-to-page.
+  - Add standard **ARIA accessibility labels** to interactive elements —
+    the same markup that helps screen-reader users also gives a
+    computer-use agent a reliable, standards-based way to identify what
+    an element does, beyond visual inference.
+  - Regularly test the flow with an actual AI agent (not just human
+    QA) and iterate — the failure modes (ambiguous button labels,
+    non-standard overlays) often only surface under agent-driven
+    interaction.
+- **Consider lighter-weight programmatic access** — an API with an
+  OpenAPI spec, or an RSS feed for update-driven content — as a lower-
+  effort complement to full Layer 5 protocol integration (MCP/ACP/UCP)
+  below, especially for content/data access that doesn't need a full
+  action-oriented protocol.
 
 ## Layer 5: Consider the protocol layer (early-stage)
 
@@ -145,3 +165,6 @@ approximation, not a ground-truth measurement.
 - [[aio-ctr-impact]] — related AI-traffic economics (the citation
   premium on the search/citation side, vs. the 4.4x AI-visitor
   conversion-value stat here on the action side).
+- [[sel-ai-optimization-content-for-search-and-agents]] — source for the
+  "agent-responsive design"/ARIA-labeling guidance and the lighter-weight
+  programmatic-access (API/RSS) tactic above.

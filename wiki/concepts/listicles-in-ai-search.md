@@ -137,6 +137,10 @@ capture. Both can be true simultaneously over the same window.
 
 ## See also
 
+- [[ai-shortlist-effect]] — a related but distinct mechanism: this
+  page covers third-party listicle *content* getting cited, while that
+  page covers ChatGPT's own live-generated comparison grid as the
+  in-chat purchase-decision surface.
 - [[ai-citation-landscape]] — the broader citation-landscape patterns
   (engine personalities, fanout mechanics, source-type citation rates)
   this page's findings sit within.

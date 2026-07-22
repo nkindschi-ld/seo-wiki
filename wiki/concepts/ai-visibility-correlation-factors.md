@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-07-08
+updated: 2026-07-22
 ---
 
 # AI Visibility Correlation Factors
@@ -30,6 +30,15 @@ ChatGPT/AI Mode/AI Overviews:
 | Branded search volume | 0.352–0.466 |
 | Domain Rating | 0.266–0.326 |
 | Number of backlinks | 0.194–0.275 |
+
+Three weaker factors from an earlier, AI-Overviews-only version of this
+same study ([[ahrefs-ai-brand-visibility-correlations]]'s May 2025
+predecessor article): referring domains (0.295), URL Rating (0.18), and
+site pages (0.17). That earlier version also found a **visibility
+cliff**: brands in the top 25% by web mentions averaged 169 AI Overview
+mentions — 10x the 50-75th percentile (14 mentions) — and that **26% of
+the 75,000 brands studied had zero AI Overview mentions at all**,
+consistent with this page's winner-takes-all framing below.
 
 Notably, **content volume showed almost no correlation** with AI
 visibility — publishing more content is not, by itself, associated with
@@ -62,8 +71,12 @@ Lowest-quality penalty target, not just a non-factor.
   Score) positively correlate with AI-mention/citation visibility.
   - Supported by: this page's own Ahrefs data (Domain Rating,
     0.266–0.326 correlation with AI-mention visibility across 75,000
-    brands) and [[growth-memo-topics-matter-for-third-party-authority]]
-    (Authority Score, 0.65 Pearson correlation, 1,000-domain sample).
+    brands), [[growth-memo-topics-matter-for-third-party-authority]]
+    (Authority Score, 0.65 Pearson correlation, 1,000-domain sample),
+    and [[firstpagesage-searchgpt-optimization-2025-guide]] (no
+    disclosed methodology — claims SearchGPT/ChatGPT references top
+    Google results directly, so classic Google-ranking authority feeds
+    AI visibility).
   - Contradicted by: [[airops-fan-out-effect-2026]] (16,851 queries,
     353,799 pages, ChatGPT), which found domain authority and backlinks
     show **no positive correlation with citation, and are slightly
@@ -107,6 +120,16 @@ Lowest-quality penalty target, not just a non-factor.
     unit-of-analysis reconciliation above), though it measures
     recommendation filtering rather than citation correlation, so it
     narrows but doesn't resolve the conflict.
+  - **Additional page-level corroboration (2026-07-22)**: per
+    [[ahrefs-llm-optimization]] (citing a Seer Interactive study, 10,000
+    finance/SaaS purchase-intent queries, GPT-4o-measured brand mentions
+    vs. Google/Bing SERP rank), organic ranking correlates with LLM brand
+    mentions at ~0.65 strength while **backlinks show a surprisingly
+    neutral impact** — another data point on the AirOps-aligned side
+    (ranking/relevance drive citation more than backlink-based authority),
+    though it measures organic rank rather than Domain Rating/backlink
+    count directly, so it doesn't fully resolve the brand-vs-page-level
+    reconciliation above either.
   - **Practical implication until resolved**: don't treat authority-
     building (backlinks, DR/DA/Authority Score) as a reliable lever for
     winning a *specific* citation on a *specific* page — AirOps' larger,
@@ -173,6 +196,18 @@ either. Treat this as a second data point suggesting authority-type
 metrics matter, not as a direct refinement of the Domain Rating figure
 above.
 
+## From appearing to being chosen
+
+This page's correlations measure what makes a brand *appear* in AI
+answers at all. Per [[ai-shortlist-effect]] — a distinct, newer data
+type — appearing is not the finish line: share of voice also correlates
+with actually being *selected* once a user is comparing options inside
+ChatGPT (0.57 overall, ranging from 0.97 in grocery to -0.98 in
+coaching). See that page for the full purchase-decision-stage findings,
+including the four framing levers (grid inclusion, "best for X" labels,
+pricing accuracy, disclosed downsides) that shape selection independent
+of raw visibility.
+
 ## Practical implications
 
 See [[geo-content-optimization-tactics]] for the actionable version of
@@ -199,3 +234,6 @@ ChatGPT-targeting guidance for smaller/challenger brands).
   correlation finding that generated the unresolved Conflicting Evidence
   section above, plus the retrieval-rank-as-gatekeeper mechanism in
   [[ai-citation-landscape]].
+- [[ai-shortlist-effect]] — the downstream visibility-to-purchase-
+  selection correlation data (0.57 overall) and comparison-grid framing
+  levers that extend this page's appearance-only correlations.
