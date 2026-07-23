@@ -1411,6 +1411,27 @@ overlapping but not identical things. Added a new actionable tactic
 (clean canonical URLs, +24% citations) to
 [[geo-content-optimization-tactics]].
 
+## [2026-07-22] ingest | 1 in 8 Social Media AI Citations Point to LinkedIn (Otterly.ai)
+
+Filed [[otterly-linkedin-ai-citations-study-2026]] (2.06M citation
+records, 384K LinkedIn URLs, 6 engines, disclosed methodology, Jan-Jun
+2026) — same author/methodology family as
+[[otterly-url-ai-citations-study-2026]], narrowed to LinkedIn. Strongly
+corroborates and precisely quantifies an existing but vaguely-sourced
+claim in [[geo-content-optimization-tactics]] (named authors outperform
+brand pages: 91.7% vs. 8.3% citation share). Adds three genuinely new
+findings to [[ai-citation-landscape]]: engagement metrics (likes,
+comments, video/image presence) show near-zero correlation with AI
+citation — the first source in this wiki to test this directly; an even
+steeper LinkedIn-specific citation power law than the general-web study;
+and a correlational, cause-unexamined gender disparity in citation share
+(76.4% men / 23.5% women among identifiable individual authors),
+reported factually with an explicit caveat that the study doesn't
+establish whether this reflects underlying authorship demographics or
+engine-side bias. Added LinkedIn-specific tactics (Pulse articles over
+posts, engagement-metric warning, per-engine targeting) to
+[[geo-content-optimization-tactics]]. No conflicts logged.
+
 ## [2026-07-22] ingest | An Analysis of AI Overview Brand Visibility Factors (Ahrefs, 2025-05-26)
 
 Identified this article as the earlier, single-platform (AI Overviews
@@ -1426,3 +1447,45 @@ site pages) into [[ai-visibility-correlation-factors]]. No conflict
 with existing claims. Passed on a second candidate ingest this session
 (SEOmator's secondhand summary of a Profound/Brighton SEO 2025 talk) at
 the user's direction.
+
+## [2026-07-22] ingest | How to Optimize Content for AI Search: The Complete Guide (Otterly.ai, 2026)
+
+Filed [[otterly-how-to-optimize-content-for-ai-search-2026]]. Mostly a
+tactics guide restating content already covered in
+[[geo-content-optimization-tactics]] and [[robots-txt-strategy]] — not
+individually re-filed. Four genuinely new/notable additions: (1) a
+BrightEdge-sourced (no link given) counter-claim that top-10-organic/
+AI-citation overlap *grew* from 32.3% to 54.5%, added to
+[[ai-citation-landscape]] directly against
+[[rankability-where-seo-is-going-2026]]'s already-unverified claim that
+this same overlap *collapsed* — now two contradicting unverified voices
+rather than one, question left genuinely open; (2) a first-party
+OtterlyAI FAQ-schema experiment (+350% citations) added to
+[[geo-content-optimization-tactics]]; (3) a secondhand Monash freshness
+figure (26% fresher) added to the existing freshness Conflicting
+Evidence in [[ai-citation-landscape]]; (4) an undisclosed-source
+daily-query-volume-by-engine table added to [[ai-traffic-scale-vs-hype]].
+The article's headline "+40% visibility" GEO-paper stat was already in
+the wiki with fuller (skeptical) context from [[c-seo-bench-2025]] —
+no action needed there.
+
+## [2026-07-22] ingest | AI Keyword Research in 2026 (Otterly.ai)
+
+Filed [[otterly-ai-keyword-research-2026]] — same author, heavy overlap
+with the prior same-day Otterly ingest (identical query-volume, FAQ-lift,
+citation-breakdown, and referral-traffic figures; not re-filed). Two
+genuinely new additions: (1) OtterlyAI's own real-vs-estimated-prompt
+research (real prompts average 15.1 words vs. 8.8 estimated, 52%
+personal pronouns, 78.9% tool-finding intent vs. 62.5%) added as a new
+keyword-research tactic in [[geo-content-optimization-tactics]]; (2) a
+2025 OtterlyAI experiment finding llms.txt, author schema, and YouTube
+content all show no measurable citation lift, while Wikipedia,
+LinkedIn Pulse, FAQ-on-homepage, and digital PR do — added to
+[[geo-content-optimization-tactics]] (llms.txt/author-schema) and
+[[ai-visibility-correlation-factors]] (YouTube, flagged as a nuance
+against the existing YouTube-mentions-correlate-strongest finding
+rather than a contradiction, since mention-correlation and
+content-citation-lift are different mechanisms). Skipped two
+low-rigor, undisclosed-methodology stats (15%-of-traffic-from-AI-bots,
+granular Gemini/Perplexity referral-share figures) per the plan agreed
+with the user.

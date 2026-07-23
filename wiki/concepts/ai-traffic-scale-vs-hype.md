@@ -66,6 +66,20 @@ on this page, which describes traffic *as observed* at a point in
 time. Flagged as worth revisiting closer to 2028 rather than treated as
 established fact today.
 
+## Daily query volume by engine (another absolute-scale data point)
+
+Per [[otterly-how-to-optimize-content-for-ai-search-2026]] (January
+2026 figures, **no source disclosed** for this specific table — treat
+as directional): Google AI Overviews/AI Mode ~15 billion daily queries,
+ChatGPT ~2.5 billion, Gemini ~46 million, Microsoft Copilot ~33
+million, DeepSeek ~29 million, Perplexity ~26 million. The ~6x gap
+between Google's AI-surface query volume and ChatGPT's, and the further
+~1,000x gap down to the smaller standalone tools, is broadly consistent
+with this page's "Google-embedded AI is the bigger competitive stake,
+not standalone tools" argument below — though this specific table's
+sourcing isn't disclosed, so don't treat the precise multiples as
+verified.
+
 ## Absolute user-base scale is still large, even if small relative to search
 
 Per [[sel-what-is-generative-engine-optimization-geo-2026]] — a
@@ -166,3 +180,5 @@ search share rather than competing against it.
 - [[vercel-adapting-seo-for-llms]] — the source for the quantified
   Tally ARR figures and the Vercel-own ChatGPT-referral-signup growth
   case study above.
+- [[otterly-how-to-optimize-content-for-ai-search-2026]] — the
+  daily-query-volume-by-engine table above.

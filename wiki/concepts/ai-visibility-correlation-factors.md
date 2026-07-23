@@ -31,6 +31,21 @@ ChatGPT/AI Mode/AI Overviews:
 | Domain Rating | 0.266–0.326 |
 | Number of backlinks | 0.194–0.275 |
 
+**Nuance, not a contradiction, on YouTube specifically (2026-07-22)**:
+this YouTube-*mentions* correlation is brand-level and correlational —
+it measures whether a brand is discussed/mentioned on YouTube broadly,
+not whether publishing your own YouTube content gets that specific
+content cited. Per [[otterly-ai-keyword-research-2026]] (OtterlyAI's
+2025 experiment), publishing YouTube content showed **no measurable
+citation lift** at the page level. These aren't necessarily
+incompatible: a brand can benefit from being talked about on YouTube
+by others while a single company-published video still fails to get
+directly cited by an AI engine — brand-level mention-correlation and
+page-level citation-tactic-effectiveness are different questions. But
+they point in different directions on "should I invest in producing
+YouTube content," so don't treat the 0.737 correlation above as
+evidence that *publishing* video content is itself a citation tactic.
+
 Three weaker factors from an earlier, AI-Overviews-only version of this
 same study ([[ahrefs-ai-brand-visibility-correlations]]'s May 2025
 predecessor article): referring domains (0.295), URL Rating (0.18), and
@@ -237,3 +252,5 @@ ChatGPT-targeting guidance for smaller/challenger brands).
 - [[ai-shortlist-effect]] — the downstream visibility-to-purchase-
   selection correlation data (0.57 overall) and comparison-grid framing
   levers that extend this page's appearance-only correlations.
+- [[otterly-ai-keyword-research-2026]] — source of the YouTube-content-
+  no-lift nuance above.

@@ -236,6 +236,18 @@ Overviews' RAG pipeline retrieves and cites specific text chunks
   follow-up/related searches**, not just seed keywords — folds directly
   into [[keyword-mapping-and-cannibalization]]'s "expand keyword
   variations" step when the target is AI Overviews specifically.
+- **Mine real query logs and community language, not just
+  keyword-volume tools, for AI-search keyword research.** Per
+  [[otterly-ai-keyword-research-2026]] (OtterlyAI's own prompt
+  research, 2025), real user prompts run substantially longer and more
+  specific than what keyword-estimation tools typically surface:
+  average 15.1 words vs. 8.8 for tool-estimated prompts, personal
+  pronouns in 52% of real prompts, and 78.9% showing clear tool-finding
+  intent vs. 62.5% for estimated prompts. Practical implication: pull
+  actual question-phrased queries from Search Console, support
+  tickets, and community language (Reddit, forums) rather than relying
+  on estimated-search-volume keyword tools alone when building a
+  keyword list for AI-search targeting specifically.
 - **AI Overview content has three format types** — informational
   (paragraphs/lists/images/citations), local (+ maps/Business
   listings), and shopping (+ product cards) — match your optimization
@@ -370,6 +382,17 @@ Per [[google-ai-optimization-guide]], Google explicitly says these do
   explicit "doesn't help" as the stronger claim for anything
   Google-AI-surface-related, and `llms.txt` elsewhere as a low-cost,
   unverified bet rather than a proven tactic.
+  **Direct negative test (2026-07-22)**: per
+  [[otterly-ai-keyword-research-2026]], a 2025 OtterlyAI experiment
+  found `llms.txt` produced **no measurable citation lift** — the first
+  source in this wiki to report an actual negative test result for
+  `llms.txt` rather than just an absence of evidence for it. The same
+  experiment found **author schema** also produced no measurable lift
+  (new claim, nothing to compare it against yet), while Wikipedia
+  presence, LinkedIn Pulse posts, FAQ-on-homepage content, and digital
+  PR did show a lift. Treat `llms.txt` and author schema as
+  increasingly unlikely to be worth prioritizing, pending independent
+  replication.
 - "Chunking" content into unnaturally small pieces for AI to parse.
 - Obsessing over structured data specifically for AI purposes (still fine
   to use for general SEO, just not an AI-visibility requirement).
@@ -575,6 +598,14 @@ and cite):
 - [ ] Schema markup where relevant (FAQPage, HowTo, Article)
 - [ ] Explicit, consistent entity naming throughout
 
+**FAQ schema citation lift (concrete number)**: per
+[[otterly-how-to-optimize-content-for-ai-search-2026]] — a first-party
+OtterlyAI experiment, not a secondhand citation — implementing FAQ
+schema produced a 350% increase in AI citations (2,379 vs. 529) on the
+pages tested. One experiment, not independently replicated in this
+wiki yet, but a concrete number behind the generic "add FAQPage schema"
+advice already in the checklist above.
+
 ## Measuring AI visibility as sustained topical authority
 
 Per [[similarweb-how-to-be-the-brand-ai-recommends-2026]] (quoting
@@ -613,7 +644,12 @@ third-party citations/mentions:
 - **Use named, credentialed authors instead of brand-account bylines.**
   Fresh, expert-authored, clearly time-stamped content earned faster
   visibility than faceless brand-account publishing (per LinkedIn's
-  analysis, cited in the source).
+  analysis, cited in the source). **Quantified by a later, primary
+  source**: per [[otterly-linkedin-ai-citations-study-2026]] (384K
+  LinkedIn URLs, disclosed methodology), named individual authors draw
+  91.7% of citations vs. 8.3% for company/unattributed pages (8.5 vs.
+  5.5 average citations per URL) — a large, precisely-measured version
+  of the same claim.
 - **Prioritize targets with a two-factor score.** Per
   [[similarweb-how-to-win-the-race-for-gen-ai-search-2026]], once you've
   identified the domains and specific cited URLs AI relies on for a
@@ -655,6 +691,31 @@ model associates a brand with a concept.
   live-retrieval citation-rate findings above, so treat this as an
   additional, training-data-specific consideration rather than a
   replacement for the existing self-promotional-content cautions.
+
+## LinkedIn-specific tactics: format and authorship over engagement
+
+Per [[otterly-linkedin-ai-citations-study-2026]] (2.06M citation
+records, 6 engines) — sharpens the general LinkedIn-seeding guidance
+above into concrete, disclosed-methodology tactics:
+
+- **Publish long-form Pulse articles, not just short posts.** Pulse
+  articles draw 72.2% of LinkedIn AI citations from just 63.0% of URLs
+  (8.5 avg citations/URL), vs. posts (26.1% of citations, 5.9 avg) and
+  profiles (1.7% of citations, 3.0 avg). Pulse articles also run far
+  longer (median 1,021 words vs. 185 for posts) — length itself isn't
+  the driver (see below), but the format correlates strongly.
+- **Don't optimize for engagement — it doesn't predict citation.**
+  Likes, comments, emojis, and hashtags all show near-zero correlation
+  with citation (r = -0.02 to -0.06); posts with video or images
+  averaged *fewer* citations than posts without. Spend effort on
+  extractable, substantive content instead of engagement-bait
+  formatting.
+- **Target Perplexity and Google AI Overviews specifically for
+  LinkedIn content** — together they account for 65.5% of all LinkedIn
+  AI citations (43.3% and 22.2% respectively). If optimizing
+  specifically for Microsoft Copilot, prioritize Pulse articles almost
+  exclusively — 90.2% of Copilot's LinkedIn citations are articles, a
+  higher concentration than any other engine studied.
 
 ## Content refresh cadence: a concrete schedule
 

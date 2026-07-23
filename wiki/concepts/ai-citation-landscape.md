@@ -117,6 +117,21 @@ Brand sentiment is overwhelmingly positive across all five engines
 (78-96% positive, ≤2.1% negative) regardless of these sourcing
 differences.
 
+**A single-platform lens, LinkedIn (2026-07-22 addendum)**: per
+[[otterly-linkedin-ai-citations-study-2026]] (2.06M citation records,
+6 engines, Jan-Jun 2026), LinkedIn-specific citation share splits
+unevenly across engines — **Perplexity alone captures 43.3% of all
+LinkedIn citations**, followed by Google AI Overviews (22.2%), ChatGPT
+(18.7%), Google AI Mode (9.0%), Microsoft Copilot (6.8%), and Gemini
+(essentially zero — 38 citations total). Copilot leans hardest on
+long-form Pulse articles specifically (90.2% of its LinkedIn
+citations) vs. ~70-74% for the other major engines. This is a
+narrower, single-platform data point rather than a challenge to the
+broader authority/UGC-mix personalities above — LinkedIn Pulse
+articles read as professional long-form publishing rather than
+classic UGC, so Perplexity's heavy LinkedIn reliance doesn't
+contradict its "research librarian," low-UGC profile above.
+
 ## Cited-source sets are volatile month to month
 
 Per [[sel-what-is-generative-engine-optimization-geo-2026]] — a
@@ -262,6 +277,50 @@ one URL alone accumulated 965 citations. This doesn't confirm
 Superlines' specific "2-7 domains per response" figure, but it's a
 rigorously-sourced data point supporting the same underlying claim —
 AI citations concentrate heavily among a small minority of URLs.
+
+**An even steeper concentration on a single platform**: per
+[[otterly-linkedin-ai-citations-study-2026]] (same author/methodology
+family, LinkedIn-only), the power law is sharper within LinkedIn
+specifically — top 1% of URLs draw 30.2% of all citations, top 5% draw
+54.6%, top 25% draw 83.3%, and **87.4% of LinkedIn URLs are cited only
+once** across all six engines combined. Consistent direction, steeper
+slope than the general-web figure above — plausibly because LinkedIn's
+content pool is itself more skewed toward a small set of established
+thought-leadership authors than the open web is.
+
+## Engagement metrics don't predict AI citation
+
+Per [[otterly-linkedin-ai-citations-study-2026]] — the first source in
+this wiki to directly test surface engagement signals against AI
+citation likelihood (rather than volume, as in
+[[ai-visibility-correlation-factors]]'s existing "content volume shows
+almost no correlation" finding): likes (r = -0.06), comments (r =
+-0.04), emojis (r = -0.02), and hashtags (r = -0.02) all show near-zero
+correlation with citation count. Media presence shows *no* citation
+advantage either — posts with video averaged *fewer* citations than
+posts without (5.85 vs. 7.87); same pattern for images (7.14 vs. 8.23).
+The study's own framing: "what gets a post liked does not get it
+cited." Consistent with this wiki's broader pattern that AI citation
+selection tracks extractability/authority signals rather than
+popularity signals — see also [[airops-fan-out-effect-2026]]'s finding
+that domain authority doesn't positively correlate with ChatGPT
+citation either.
+
+## A correlational, cause-unexamined gender disparity in citation
+
+Per the same source: among LinkedIn authors it could identify as
+individuals (88.5% of URLs, gender inferred from names/pronouns/profile
+signals for a subset), **men received 76.4% of citations vs. 23.5% for
+women**, consistent (23-24% for women) across every major engine
+studied. The study does not test or establish a cause. A plausible
+confound it doesn't rule out: this could reflect the underlying gender
+composition of who publishes long-form Pulse articles/thought-leadership
+content on LinkedIn in the first place, rather than a citation-selection
+bias introduced by the AI engines themselves. Recorded here as a
+factual, correlational finding with an unexamined cause — not evidence
+of algorithmic bias one way or the other — because it's a concrete,
+disclosed-methodology number future sources on AI-citation demographics
+can be compared against.
 
 ## Retrieval rank as the primary citation gatekeeper
 
@@ -444,6 +503,19 @@ above:
   verification. Flagged as an unverified claim worth watching for
   corroboration, not treated as resolving the existing tension between
   the 76%/93.8% figures.
+  - **A contradicting unverified counter-claim (2026-07-22)**: per
+    [[otterly-how-to-optimize-content-for-ai-search-2026]], citing
+    BrightEdge with no link given, this same overlap reportedly *grew*
+    from 32.3% to 54.5% — the opposite trend from Rankability's claim
+    directly above. Like that figure, this one has no disclosed
+    methodology either, so it doesn't resolve anything — it's a second
+    unverified voice pointing the opposite direction from the first.
+    For what it's worth, 54.5% sits closer to the better-sourced
+    76%-top-10 figure from [[ahrefs-b2b-seo-statistics-2025]] than
+    Rankability's 17-38% range does, though none of these three
+    studies are directly comparable. Treat "is ranking/citation
+    overlap rising or falling over time" as genuinely open until a
+    disclosed-methodology source measures it directly.
 
 ## Topic-specific source trust
 
@@ -488,7 +560,12 @@ grounded in retrieval (RAG), not a static trained "understanding."
     [[muckrack-generative-pulse-ai-reading-may-2026]]'s recency finding
     (57% of journalism citations under 12 months old — though that's
     news-media-specific, consistent with the news-vertical carve-out
-    below).
+    below). A further, secondhand data point:
+    [[otterly-how-to-optimize-content-for-ai-search-2026]] cites Monash
+    University (no link given) for "sources cited in AI responses are
+    26% fresher than traditional search results" — undisclosed
+    methodology, so treat as directional support rather than
+    independent confirmation.
   - Contradicted by: [[ahrefs-why-chatgpt-cites-pages-2026]], which
     finds that within search-result retrieval sets specifically,
     older/established content (median ~500 days, some pages 2,700+
@@ -585,3 +662,9 @@ grounded in retrieval (RAG), not a static trained "understanding."
 - [[otterly-url-ai-citations-study-2026]] — the page-type citation-
   frequency corroboration, power-law concentration data, and
   URL-slug-wording nuance above.
+- [[otterly-linkedin-ai-citations-study-2026]] — the LinkedIn-specific
+  platform-split, steeper concentration, engagement-null-correlation,
+  and gender-disparity findings above.
+- [[otterly-how-to-optimize-content-for-ai-search-2026]] — the
+  contradicting overlap-growth counter-claim and freshness data point
+  above.

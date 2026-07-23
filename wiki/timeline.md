@@ -626,3 +626,32 @@ hyphens, digits) show near-zero citation correlation, page type is the
 strongest signal (guides +42%, pricing -21%), clean canonical URLs get
 24% more citations than parameterized ones, and citations follow a
 steep power law (15.8% of URLs generate 50% of all citations).
+
+## 2026-06-03 — Otterly.ai publishes "1 in 8 Social Media AI Citations Point to LinkedIn"
+
+[[otterly-linkedin-ai-citations-study-2026]] · updated
+[[ai-citation-landscape]] and [[geo-content-optimization-tactics]].
+2.06M-citation-record, 6-engine LinkedIn-specific study: Pulse articles
+draw 72.2% of citations vs. 26.1% for posts, named individual authors
+draw 91.7% vs. 8.3% for company pages, engagement metrics show
+near-zero citation correlation, and a correlational gender disparity in
+citation share (76.4% men / 23.5% women) with an unexamined cause.
+
+## 2026-02-16 — Otterly.ai publishes "How to Optimize Content for AI Search: The Complete Guide"
+
+[[otterly-how-to-optimize-content-for-ai-search-2026]] · updated
+[[ai-citation-landscape]], [[geo-content-optimization-tactics]], and
+[[ai-traffic-scale-vs-hype]]. Tactics guide mostly restating existing
+wiki content; adds a first-party FAQ-schema citation-lift experiment
+(+350%) and a BrightEdge-sourced counter-claim that top-10-organic/
+AI-citation overlap grew (32.3%→54.5%) — the opposite direction from
+Rankability's earlier unverified overlap-collapse claim.
+
+## 2026-04-01 — Otterly.ai publishes "AI Keyword Research in 2026"
+
+[[otterly-ai-keyword-research-2026]] · updated
+[[geo-content-optimization-tactics]] and
+[[ai-visibility-correlation-factors]]. Real-vs-estimated-prompt
+research (real prompts run longer and more action-oriented) and a 2025
+experiment finding llms.txt/author-schema/YouTube-content show no
+citation lift, while Wikipedia/LinkedIn-Pulse/FAQ/digital-PR do.
