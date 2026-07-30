@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-07-22
+updated: 2026-07-23
 ---
 
 # Generative Engine Optimization (GEO / AEO)
@@ -104,6 +104,20 @@ measurement framework (that Presence = % of prompts where a brand
 appears in *any* engine) — both terms are legitimate and both stay in
 the wiki, but don't conflate them when cross-referencing.
 
+**Technical grounding — what "retrievability" actually is at the
+architecture level**: per [[xiong-et-al-search-engines-meet-llms-2024]]
+(academic survey), the mechanism behind AI Overviews/AI Mode/LLM-chat
+citation is **Retrieval-Augmented Generation (RAG)** — search results
+are injected into the model's context window at inference time,
+addressing hallucination by grounding the response in current,
+retrieved content rather than relying only on frozen training data.
+"Retrievability" is, mechanically, whether your content makes it into
+that retrieved context set — which is exactly why traditional ranking
+signals matter but aren't sufficient alone (per the existing
+retrieval-rank-as-citation-gatekeeper finding in
+[[ai-citation-landscape]]): a page has to be both rankable *and*
+selected into the RAG context to be cited.
+
 ## Three-layer AI search model (retrieval-speed taxonomy)
 
 Per [[superlines-geo-guide]] (vendor content, undisclosed methodology —
@@ -170,6 +184,16 @@ lengths and positions in one block (rather than a linear list),
   amount of content used, likelihood the user clicks through, and
   diversity of material presented.
 
+  **Caveat on LLM-judged metrics generally**: per
+  [[vardasbi-et-al-as-it-was-llm-search-evaluation-2026]] (a Spotify
+  music-search paper, adjacent domain not web-AEO directly), "plain"
+  LLM judges using semantic reasoning alone measurably diverge from
+  real user preference, especially on ambiguous/long-tail queries —
+  grounding the judge in actual behavioral interaction data closed
+  part of that gap but didn't eliminate it. Treat Subjective Impression
+  (or any purely-LLM-judged visibility score) as directional, not
+  ground truth, absent a similar behavioral-grounding step.
+
 ## GEO disproportionately helps lower-ranked content
 
 A striking finding: content that ranks poorly in traditional search can
@@ -205,6 +229,13 @@ Google has made consistently since at least May 2025, per
 [[google-succeeding-in-ai-search-2025-05]], not a new or revised
 position. Site owners who want to *limit* rather than maximize
 inclusion have explicit controls — see [[controlling-ai-feature-inclusion]].
+
+**Update per [[google-generative-ai-performance-report]]**: Google
+Search Console now also offers a **dedicated "Generative AI Performance
+Report"** (separate from filtering the general Performance report by
+"Web" search type) purpose-built for AI Overviews/AI Mode impressions,
+sliceable by page, country, date, and device. Rollout is gradual and
+gated on sites having sufficient AI-feature impressions.
 
 ## Conflicting Evidence
 

@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-07-22
+updated: 2026-07-29
 ---
 
 
@@ -291,6 +291,73 @@ Overviews:
   with YouTube/Wikipedia/Investopedia dominating as linked sources for
   informational queries in those sectors.
 
+### YouTube-specific tactics (2026-07-23)
+
+Per [[otterly-youtube-ai-citation-study-2026]] (100M+ citation
+instances, 6 engines) — video-level tactics distinct from the
+brand-level "build a YouTube presence" correlation below:
+
+- **Make long-form the default, not Shorts.** 94% of AI citations go to
+  long-form video vs. 5.7% to Shorts. If YouTube is a citation channel
+  you're pursuing, don't put your GEO budget into short-form.
+- **Target Perplexity and Google surfaces specifically for YouTube
+  citations.** Perplexity (38.7% of its citations are YouTube) and
+  Google AI Overviews (36.6%) rely on YouTube far more than ChatGPT
+  (4.4%), Gemini (0.2%), or Copilot (0.5%) — a YouTube strategy is a
+  Perplexity/Google-AI-surfaces play, not a general one.
+- **Add chapters/timestamps if targeting Google AI Overviews or AI
+  Mode.** Timestamped citations are a Google-exclusive mechanism (73%
+  AI Overviews, 27% AI Mode, zero on the other four engines), and 78%
+  of timestamped videos get cited across 2-5 different chapters —
+  effectively multiplying one video's citation surface area. Skip this
+  effort if ChatGPT/Perplexity/Gemini are the actual target.
+- **Don't chase views, likes, or subscriber count.** All are
+  effectively uncorrelated with citation (r = -0.02 to -0.03) — 40.83%
+  of cited videos have under 1,000 views and 35% come from channels
+  under 10k subscribers. Small channels get cited as often as large
+  ones.
+- **Write descriptions as machine-readable metadata, not marketing
+  copy.** Description length (r = 0.31) and hashtags (r = 0.20) are the
+  strongest (still weak) correlates found — include a clear summary,
+  named entities, and properly formatted chapter markers.
+- **Favor the 10-20 minute range.** The largest citation cluster (32.1%)
+  falls in 10-20 minute videos; median cited-video duration is under 8
+  minutes — depth over both extremes (very short or 20+ minutes) skews
+  citation odds slightly, though duration itself is barely correlated
+  (r = 0.02).
+
+### Reddit community engagement tactics (2026-07-23)
+
+Per [[otterly-reddit-geo-ai-search-citations-2026]] (8,167 citations,
+60-day controlled experiment, 9x citation multiplier) — tactics for
+boosting Reddit's citation visibility as an active community strategy:
+
+- **Community engagement drives a 9x citation multiplier.** This is the
+  strongest platform-specific lever measured across all Otterly studies.
+  Active community management (replies, discussion) beats publishing
+  strategy alone.
+- **Prioritize comments/replies over upvotes or post length.** Replies
+  matter more than vote counts or word length for citation visibility —
+  encourage discussion and community responses rather than chasing
+  upvotes or writing lengthy posts.
+- **Focus on topic-specific, narrowly-focused communities** over broad
+  subreddits. Niche communities show higher citation rates when actively
+  managed.
+- **Subreddit size (subscribers) doesn't predict citations.** Small,
+  active communities get cited as frequently as large ones — don't skip
+  niche subreddits based on subscriber count.
+- **Maintain active community engagement.** ~30 minutes daily investment
+  yields the 9x multiplier; ~15 hours monthly to sustain the effect —
+  tractable for content teams as an ongoing community-building strategy.
+- **Engagement on Reddit also lifts traditional search rankings.** The
+  same engagement activity showed x18 SEO impact — Reddit participation
+  boosts both AI citations *and* organic Google rankings from the same
+  content.
+- **Spread discussion across multiple threads/posts.** Active communities
+  distribute citations more evenly across multiple posts rather than
+  concentrating on one winner — forum participation breadth signals
+  topic relevance to AI systems.
+
 ## Structural findings (word count, headings, schema, readability)
 
 Per [[airops-fan-out-effect-2026]]:
@@ -393,6 +460,20 @@ Per [[google-ai-optimization-guide]], Google explicitly says these do
   PR did show a lift. Treat `llms.txt` and author schema as
   increasingly unlikely to be worth prioritizing, pending independent
   replication.
+  **Direct traffic-side null result (2026-07-29)**: per
+  [[evilmartians-which-ai-reads-your-site-2026]], a first-party
+  server-log study found `llms.txt` is barely *fetched* at all — ~660
+  direct fetches over two months, only ~37 from named AI assistants
+  (the rest search crawlers and scanners), and its "referral" traffic
+  traced to a stale `Chrome/111.0` bot rather than a real AI client.
+  This is a step beyond the Otterly result: not just "no citation lift"
+  but evidence that AI clients don't request the file in the first
+  place. The same study tested a **hidden AI hint** (a `<link>` tag
+  pointing at a Markdown variant, tracked via a `?ref=hint` URL param)
+  and got **zero attributable fetches** across all 268K agent requests —
+  don't bother with decorative "point the AI here" markup either. The
+  mechanism that *did* deliver Markdown was HTTP content negotiation (see
+  [[technical-seo-audit-checklist]] §5), not any special file or hint.
 - "Chunking" content into unnaturally small pieces for AI to parse.
 - Obsessing over structured data specifically for AI purposes (still fine
   to use for general SEO, just not an AI-visibility requirement).
@@ -488,7 +569,14 @@ generic "generative engine":
 - **Targeting Claude specifically?** It cites far less often (55% of
   responses) but much more deeply (13 citations) when it does, and
   favors academic/reference sources like PubMed Central. It never cites
-  YouTube — don't rely on video content to reach Claude.
+  YouTube — don't rely on video content to reach Claude. **Additional
+  guidance (2026-07-23)** per [[otterly-claude-ai-citation-study-2026]]:
+  Claude cites almost exclusively first-party brand/company-owned content
+  (64% of citations), with long-tail distribution (top 10 domains = 9.5%).
+  Social media is immaterial (0.9%, almost entirely LinkedIn; Reddit 0%).
+  For Claude visibility, invest in official brand documentation, well-
+  structured reference content (not reviews/forums), and institutional
+  sources — the opposite strategy from ChatGPT/Gemini/Perplexity.
 - **Local/"best of" queries (hotels, restaurants, services)**: ChatGPT
   leans heavily on **Google Maps** results, not articles or reviews
   (188 citations per 1,000 such queries) — a current, accurate Google
@@ -502,6 +590,20 @@ generic "generative engine":
   citations, plausibly due to its concise, high-frequency format —
   worth testing as a content-format hypothesis, not just a content-style
   one.
+- **Targeting Microsoft Copilot/Bing AI?** Per
+  [[bing-ai-performance-report]], Microsoft's own guidance corroborates
+  (rather than adds new tactics beyond) what's already catalogued above:
+  align content with user intent, deepen subject-area coverage,
+  structure content with descriptive headings/tables/FAQs, back claims
+  with evidence, keep content fresh, and keep text/image/other-media
+  descriptions of the same entity consistent. The one genuinely new
+  angle is diagnostic rather than tactical: Bing Webmaster Tools'
+  **Intents** and **Topics** preview features let you check whether your
+  citations cluster in the query-intent category you're targeting (e.g.
+  Commercial/Comparison for e-commerce) and whether a topic generating
+  citation activity is under-covered on your site — see
+  [[ai-visibility-measurement-methodology]] for the full tool
+  breakdown.
 
 ## Measure presence, portability, and concentration separately
 
@@ -1079,6 +1181,22 @@ Llama-2 with a GCG-optimized "Strategic Text Sequence," fictitious
   not independently retested here on production black-box systems) —
   a meaningfully higher technical bar than plain-text prompt injection.
 
+**That "not independently retested on production black-box systems"
+gap is now closed**, per [[pfrommer-et-al-ranking-manipulation-conversational-search-2024]]
+(EMNLP 2024, UC Berkeley) — a different attack family (tree-of-attacks
+jailbreaking, not gradient-optimized strings) but the same underlying
+threat model. Attacks crafted against GPT-4 Turbo and hosted on real
+webpages transferred successfully to Perplexity's Sonar Large Online
+model (a surrogate for perplexity.ai, used since full API access
+wasn't available) — a mean ranking-score gain of 54.23% of the maximum
+possible gap, with **no white-box/gradient access to Perplexity's
+actual closed-source RAG pipeline required**. The same paper also finds
+that baseline (non-adversarial) LLM ranking behavior already varies
+significantly by model in how much weight it gives product name/brand
+vs. document content vs. context position — a reminder that "why did
+the LLM rank this product where it did" doesn't have one universal
+answer even before considering manipulation.
+
 Practical implication unchanged: monitor how LLMs describe your brand
 relative to competitors on a recurring basis (see the
 sentiment-monitoring workflow below) — an unexplained shift in
@@ -1181,6 +1299,15 @@ capture zero-click AI interactions):
   or omit it: `(.*gpt.*|.*chatgpt.*|.*openai.*|.*neeva.*|.*writesonic.*|.*nimble.*|.*outrider.*|.*perplexity.*|.*google.*bard.*|.*bard.*|.*edgeservices.*|.*gemini.*google.*|.*copilot.*)`
   — undisclosed methodology behind this exact pattern, but it's a
   reasonable starting filter to adapt as new AI referrer domains emerge.
+  Per [[seoclarity-track-ai-search-traffic]], the UI path to apply a
+  filter like this: Reports > Library > "Create Detail Report" off
+  Traffic Acquisition, add a Session Source/Medium column, set it as
+  default, then apply a "Matches Partial Regex" filter joining AI engine
+  names with `|` (that source names ChatGPT, Perplexity, Claude, and
+  Gemini but doesn't supply its own regex — use the pattern above).
+  Same source reports "some industries" saw AI-referral traffic spikes
+  over 700%, with no industry/timeframe specificity — anecdotal, not a
+  benchmark.
 - **Automate AI-citation/mention checks** rather than manually querying
   each engine — a Google-Sheets-plus-LLM-API workflow (querying a fixed
   prompt set on a schedule and logging whether/how the brand appears) is

@@ -1489,3 +1489,333 @@ content-citation-lift are different mechanisms). Skipped two
 low-rigor, undisclosed-methodology stats (15%-of-traffic-from-AI-bots,
 granular Gemini/Perplexity referral-share figures) per the plan agreed
 with the user.
+
+## [2026-07-23] ingest | The YouTube Citation Study 2026 (Otterly.ai)
+
+Filed [[otterly-youtube-ai-citation-study-2026]] — same author/
+methodology family as the prior Otterly URL and LinkedIn studies,
+100M+ citation instances, 6 engines, 30-day window, narrowed to
+YouTube. Updated [[ai-citation-landscape]]'s YouTube-by-provider section
+with a sharper per-engine breakdown (Perplexity 38.7%, Google AI
+Overviews 36.6% vs. ChatGPT 4.4%, Gemini 0.2%, Copilot 0.5%) and new
+video-structure findings (94% long-form vs. 5.7% Shorts; timestamped/
+chapter citations exclusive to Google AI Overviews/AI Mode; popularity
+signals uncorrelated with citation). Added YouTube-specific tactics to
+[[geo-content-optimization-tactics]] (long-form over Shorts, chapters
+for Google surfaces, description-as-metadata, ignore view/subscriber
+counts).
+
+## [2026-07-23] conflict | YouTube-per-provider-citation-share — Gemini figure
+
+The new study's Gemini figure (0.2% of Gemini's citations are YouTube)
+diverges sharply from an existing, vaguer estimate
+([[muckrack-generative-pulse-ai-reading-may-2026]] via
+[[ai-citation-landscape]]) that put YouTube at "~2% of citations for
+both ChatGPT and Gemini" — an order-of-magnitude gap on the Gemini side
+specifically, while the ChatGPT side (4.4% vs. ~2%) is directionally
+consistent. Flagged inline in [[ai-citation-landscape]] as an unresolved
+discrepancy rather than a resolved contradiction, since no source
+directly reconciles the two measurements.
+
+## [2026-07-23] query | "SEO/AEO visibility suggestions for launchdarkly.com/blog/observability-is-not-enough"
+
+Audited the LaunchDarkly blog post "Observability is not enough" against
+[[geo-content-optimization-tactics]], [[technical-seo-audit-checklist]],
+[[link-and-anchor-text-best-practices]], [[entity-based-seo-implementation]],
+[[saas-seo-strategy]], [[e-e-a-t-and-page-quality]], and
+[[search-intent-and-needs-met]]. Key gaps flagged: no FAQ schema (Otterly's
++350% citation-lift tactic), no TL;DR/short-answer block in the first 30% of
+the page, only 4 H2s with no sub-structure, no comparison table for the
+"observability vs. runtime control" framing despite it being the article's
+core thesis, and an author byline (Content Marketing Manager) that doesn't
+establish technical E-E-A-T on a reliability/YMYL-adjacent topic. Answer
+delivered in chat, not filed as a new wiki page (one-off page audit, not a
+durable claim/tactic).
+
+## [2026-07-23] ingest | Active Reddit Communities Get Cited x9 Times More (Otterly.ai)
+
+Filed [[otterly-reddit-geo-ai-search-citations-2026]] — controlled
+experiment (60 days, 8,167 citations, 126 subreddits, 5 engines) with
+causal (treatment vs. control) design, distinct from earlier Otterly
+correlational studies. Added Reddit-community-engagement subsection to
+[[ai-citation-landscape]] and Reddit engagement tactics to
+[[geo-content-optimization-tactics]]. Key finding: active community
+engagement (replies/discussion) drives a 9x citation multiplier on Reddit
+— the strongest platform-specific lever measured across all Otterly
+studies to date. Comments matter more than upvotes; community size
+doesn't predict citations. Bonus: Reddit engagement also boosts
+traditional search rankings (x18 SEO impact) from the same content.
+
+## [2026-07-23] ingest | Claude AI Citations Study: How to Get Cited in 2026 (Otterly.ai)
+
+Filed [[otterly-claude-ai-citation-study-2026]] — Claude-specific citation
+analysis (379K citations, June 2026), same author as earlier Otterly URL/
+YouTube/Reddit studies. Updated [[ai-citation-landscape]]'s "Providers are
+separate environments" and "Wikipedia, Reddit, YouTube" sections with
+Claude's extreme brand-content dominance (64% first-party, vs. ChatGPT/
+Gemini/Perplexity's mixed sources) and social-media immateriality (0.9%,
+Reddit literally 0 citations). Updated [[geo-content-optimization-tactics]]
+with Claude-specific tactics (invest in official docs and institutional
+sources, not forums/reviews/social; opposite of other-engine strategy).
+Top 10 domains = only 9.5% of citations (long-tail distribution, not
+power-law concentration).
+
+## [2026-07-23] ingest | Measuring Your AI Brand Footprint (Whole Whale, 2025)
+
+Filed [[wholewhale-ai-brand-footprint-measurement]]. Created new concept
+[[ai-visibility-measurement-methodology]] addressing the measurement gap
+in standard analytics tools (GSC/Bing don't expose AI impression counts).
+Key contribution: the reverse-engineered-impressions formula (AI-Sourced
+Traffic ÷ Estimated CTR, with a 2% baseline from Search Engine Land 2025)
+and a framework for identifying AI-sourced traffic manually. Added the
+proprietary AI Brand Footprint™ metric, tool landscape (Trakkr, Evertune),
+and Gen-Z consumer-behavior context (70%+ prefer AI assistants for
+research) to the new concept. Noted unresolved tensions: universal CTR
+baseline is likely context-dependent (by platform/format/intent), and
+reverse-engineered impressions are a proxy, not direct measurement. No
+conflicts with existing claims — fills a measurement-methodology gap not
+previously covered in the wiki's AEO guidance (which focused on tactics/
+correlation-factors but not how to measure baseline AI visibility).
+
+## [2026-07-23] ingest | Generative AI Performance Report (Google Search Console Help)
+
+Filed [[google-generative-ai-performance-report]]. Google Search
+Console now ships a dedicated report tracking impressions from AI
+Overviews and AI Mode specifically (by page, country, date, device),
+distinct from filtering the general Performance report by "Web" search
+type as previously documented ([[google-ai-features-appearance-guide]],
+2025-12-10). Treated as an update/refinement, not a conflict — updated
+[[generative-engine-optimization]] and [[controlling-ai-feature-inclusion]]
+to point to the new dedicated report as the more precise measurement
+tool, and updated [[ai-visibility-measurement-methodology]] to note the
+measurement gap is now partially closed for Google's own AI surfaces
+(third-party engines — ChatGPT, Claude, Gemini standalone, Perplexity —
+still have no native impression exposure, so the reverse-engineering
+approach there stands unchanged). No confirmed publish/rollout date
+recoverable from the source, so no timeline entry added.
+
+## [2026-07-23] ingest | AI Performance in Bing Webmaster Tools (Bing Help Documentation)
+
+Filed [[bing-ai-performance-report]] (content pasted directly by the
+user as HTML — an initial automated fetch of the URL returned no
+substantive body content, so treat provenance as user-supplied rather
+than independently re-verified). Bing Webmaster Tools ships a dedicated
+"AI Performance Report" for Copilot/Bing AI summaries/partner
+integrations, tracking **citations** (not impressions) by page and
+"grounding query," plus four preview features: Intents (query-intent
+classification), Topics (thematic query grouping), Citation Share
+(relative citation presence per query, competitor-blind), and Compare
+(period-over-period overlay).
+
+## [2026-07-23] conflict | ai-visibility-measurement-methodology — Bing native-tracking claim corrected
+
+The concept page's intro previously stated flatly that "Bing Webmaster
+Tools provide[s] no native AI-impression tracking." [[bing-ai-performance-report]]
+shows this is no longer true — Bing now has a dedicated citation-tracking
+report, paralleling [[google-generative-ai-performance-report]] for
+Google. Corrected the claim in place (not treated as a real evidentiary
+conflict between two sources — the old claim was simply time-bound and
+Bing shipped the feature since). Also flagged a genuine measurement-unit
+distinction going forward: Google's tool reports *impressions*, Bing's
+reports *citations* — not directly comparable numbers. Added a
+corroborating (not new) Bing/Copilot tactics note to
+[[geo-content-optimization-tactics]].
+
+## [2026-07-23] ingest | How to Track AI Search Traffic to Your Site in GA4 (seoClarity, Mark Traphagen, 2025-03-25)
+
+Filed [[seoclarity-track-ai-search-traffic]]. Agrees with and extends
+existing guidance — no conflicts. Added the article's GA4 UI walkthrough
+(Traffic Acquisition detail report + Session Source/Medium column +
+"Matches Partial Regex" filter) to
+[[geo-content-optimization-tactics]]'s existing AI-referral-traffic
+regex-filter tactic as a step-by-step complement, plus its anecdotal
+"700% spike in some industries" figure (no industry/timeframe given).
+Added seoClarity's vendor-described "AI Search Visibility" tool (part of
+"Clarity ArcAI") to [[ai-visibility-measurement-methodology]]'s Tool
+Landscape, alongside Trakkr/Evertune — flagged as vendor marketing
+content, not independently verified.
+
+## [2026-07-23] ingest | The Rise of the AI Crawler (Vercel, 2024-12-17)
+
+Filed [[vercel-rise-of-the-ai-crawler]]. First-party one-month
+traffic-log study across Vercel's hosting network — real data, not a
+vendor survey. Agrees with and strengthens existing claims — no
+conflicts. Key contribution: independently confirms the previously
+"undisclosed methodology, treat directionally" claim
+([[sel-ai-optimization-content-for-search-and-agents]]) that only
+Gemini/AppleBot render JavaScript among major AI crawlers, now
+corroborated by real traffic data. Added new findings to
+[[technical-seo-audit-checklist]] §5: AI-crawler request-volume
+comparison (28% of Googlebot's volume combined), a crawl-inefficiency
+finding (ChatGPT/Claude ~35% 404 rate + ChatGPT 14.36% redirect waste,
+vs. Googlebot's 8.22%/1.49%) as a new audit checklist item, and
+U.S.-only AI-crawler data-center geography as an IP-allowlisting note.
+Added a timeline entry (2024-12-17, real publish date).
+
+## [2026-07-23] ingest | AI Crawlers & Bots Directory (StackFox)
+
+Filed [[stackfox-ai-crawlers-directory]]. A living third-party
+directory, not a dated article — individual bot names/purposes sit
+behind an interactive accordion UI that automated fetching couldn't
+extract, so only organization-level bot counts were captured (~94+
+bots across ~28+ organizations). Treated as a reference pointer, not a
+citable finding: flagged a real coverage gap in [[robots-txt-strategy]]
+(the wiki's per-LLM user-agent table covers ChatGPT/Copilot/Gemini/
+Claude/Perplexity/Andi/Exa/Phind/You.com/Firecrawl/Common Crawl but not
+Meta, Amazon, xAI, ByteDance, Cohere, Mistral AI, DeepSeek, Allen
+Institute for AI, Zhipu AI, or Apple) and added a pointer to this
+directory rather than fabricating unverified user-agent strings. No
+conflicts. No timeline entry (no publish date — living tool).
+
+## [2026-07-23] ingest | When Search Engine Services Meet Large Language Models: Visions and Challenges (Xiong et al., arXiv, 2024-07)
+
+Filed [[xiong-et-al-search-engines-meet-llms-2024]]. Academic
+survey (Baidu-adjacent authorship — treat framing as industry-adjacent,
+not fully independent). Agrees with and provides technical/academic
+grounding for existing practitioner-level claims — no conflicts. Added
+a "Technical grounding" subsection to [[generative-engine-optimization]]
+under "Retrievability," naming RAG (Retrieval-Augmented Generation) as
+the actual mechanism behind AI-citation behavior — context injection at
+inference time, explaining why rankability alone doesn't guarantee
+citation. Added the survey's "explainability gap" framing to
+[[ai-visibility-measurement-methodology]] as a structural (not just
+tooling-lag) explanation for why native measurement tools report only
+sampled/aggregated activity rather than a full per-citation audit
+trail. Added a timeline entry (2024-07, approximate — arXiv gave month
+only).
+
+## [2026-07-23] ingest | As It Was: Aligning LLM Search Evaluation with Historical User Preferences (Vardasbi et al., Spotify, SIGIR '26, 2026-07-01)
+
+Filed [[vardasbi-et-al-as-it-was-llm-search-evaluation-2026]]. A
+Spotify music-search LLM-as-judge evaluation paper — adjacent domain,
+not web-AEO directly, included for a narrow methodological reason.
+Finding: "plain" semantic-only LLM judges measurably diverge from real
+user preference (especially ambiguous/long-tail queries); grounding
+the judge in historical behavioral interaction data (QRI cards, IPS-
+debiased) improves alignment (~5% Spearman correlation overall, +91% on
+disagreement cases) but leaves absolute online-preference alignment
+"moderate." Added as a caveat to [[generative-engine-optimization]]'s
+existing "Subjective Impression" (7-facet LLM-judged) visibility metric
+— not a conflict with any existing wiki claim, but a reason to treat
+purely-LLM-judged AI-visibility scores as directional rather than
+ground truth. Added a timeline entry (2026-07-01, real publish date).
+
+## [2026-07-23] ingest | AI Platform Citation Patterns (Profound, Nick Lafferty, 2025-06-05, updated 2025-08)
+
+Filed [[tryprofound-ai-platform-citation-patterns]]. 680M-citation,
+10-month (Aug 2024–Jun 2025) study of ChatGPT/Google AI Overviews/
+Perplexity citation sourcing. Mostly agrees with and adds a new
+data point to [[ai-citation-landscape]]'s existing per-provider
+sourcing findings (added as a new addendum subsection under
+"Wikipedia, Reddit, and YouTube diverge sharply by provider"), plus a
+new aggregate domain-TLD data point (.com 80.41%, .org 11.29%). Added
+a timeline entry (2025-06-05, real publish date).
+
+## [2026-07-23] conflict | ai-citation-landscape — two unresolved magnitude tensions vs. brightedge
+
+[[tryprofound-ai-platform-citation-patterns]] surfaces two magnitude
+discrepancies against [[brightedge-ai-search-same-brands-different-sources]]
+that don't resolve cleanly: (1) Perplexity's Reddit share here (6.6% of
+total, 46.7% of top 10 — a "community-driven" profile) is in tension
+with brightedge's "research librarian," low-UGC (1.5%) characterization
+of Perplexity; (2) Google AI Overviews' YouTube share here (1.9%) is an
+order of magnitude below brightedge's "single video platform = 10.6%
+of AI Overviews citations." Both are plausibly explained by different
+sampling windows or citation-counting methodology rather than a real
+behavior shift, but neither source reconciles the other — flagged in
+[[ai-citation-landscape]] as open discrepancies, not resolved in either
+direction. Current best guess: treat both studies' per-engine
+percentages as directional rather than precise, pending a source that
+explains the gap.
+
+## [2026-07-23] ingest | Ranking Manipulation for Conversational Search Engines (Pfrommer et al., UC Berkeley, EMNLP 2024)
+
+Filed [[pfrommer-et-al-ranking-manipulation-conversational-search-2024]].
+Peer-reviewed EMNLP 2024 paper. Agrees with and extends existing
+guidance — closes an explicitly flagged gap rather than conflicting:
+[[geo-content-optimization-tactics]]'s "Known adversarial risk" section
+(sourced from [[kumar-lakkaraju-manipulating-llms-2024]]) had noted that
+paper's gradient-based attack was "not independently retested... on
+production black-box systems." This paper supplies exactly that test
+for a different attack family (tree-of-attacks jailbreaking) on a
+different production system (Perplexity, via Sonar Large Online as a
+surrogate) and finds the vulnerability holds without white-box access.
+Updated [[geo-content-optimization-tactics]] accordingly. Added a
+timeline entry (2024-11-12, EMNLP conference date).
+
+## [2026-07-24] query | "Review the AgentControl 'Agent optimization' Confluence draft for traditional-search and LLM/AEO optimization — title, headings, formatting, keyword targeting"
+
+Reviewed a Confluence content draft (LaunchDarkly's AgentControl Agent
+Optimization feature explainer) against [[geo-content-optimization-tactics]],
+[[technical-seo-audit-checklist]], and [[keyword-mapping-and-cannibalization]],
+plus live Semrush keyword-volume data (`type=phrase_this`/`phrase_related`
+API calls, not an ingested source — no wiki/sources page created for this
+one-off pull). Findings delivered in chat, not filed as a new wiki page since
+the draft itself is an internal LD asset, not an external source: (1) title/H1
+should target category terms, not the near-zero-volume product-name term;
+(2) headings should shift from marketing phrasing to query-shaped H2s per the
+existing heading-query-match tactic; (3) draft has zero tables/lists/TL;DR
+despite content that maps well onto this wiki's benchmark-comparison and
+AI-reuse-formatting tactics; (4) flagged a page-hygiene issue outside SEO
+scope — the draft contains two near-duplicate stacked copies of the same
+content. Added one durable, generalizable lesson to
+[[keyword-mapping-and-cannibalization]] (see below) since it's a pattern
+likely to recur for other LD feature-launch content, not just this draft.
+
+## [2026-07-27] ingest | How to Audit Your AI Entity Footprint (Rich Sanger, Search Engine Land)
+
+Ingested Rich Sanger's "AI entity footprint audit" framework
+([[sel-ai-entity-footprint-audit]]) — same author as
+[[richsanger-ai-overview-patent-insights]]. Created a new playbook
+[[ai-entity-footprint-audit]] capturing the six audit dimensions (identity,
+differentiation, evidence, consistency, relationships, specialization), the
+four signal categories (owned/customer/third-party/ecosystem), the 0–5
+per-dimension scoring rubric, the 6-step audit process (starting with a "tell
+me everything you know about [Business]" multi-platform probe), and the
+industry-variation notes. No conflicts — the piece operationalizes and sits
+upstream of existing pages. Cross-linked it as a diagnostic layer from
+[[brand-entity-seo-strategy]] (which *builds* the entity signals this audit
+inspects; bumped its `updated` date) and distinguished it in
+[[ai-visibility-measurement-methodology]] (measures citation/traffic *outcomes*;
+this measures whether AI *understands* the brand — an upstream prerequisite).
+Grounded conceptually in [[entity-oriented-search-fundamentals]].
+
+## [2026-07-29] ingest | Which AI Actually Reads Your Site? Two Months of LLM Traffic, Measured (Evil Martians)
+
+First-party, two-month server-log study (268K agent vs. 107K human requests)
+— a direct companion to [[vercel-rise-of-the-ai-crawler]]. Created source page
+[[evilmartians-which-ai-reads-your-site-2026]]. Mostly corroborating/extending,
+no conflicts. Three genuinely new contributions filed: (1) **content
+negotiation** (`Accept: text/markdown`) is the mechanism that actually
+delivers Markdown to coding agents (Claude Code 76%), added as a new §5 item in
+[[technical-seo-audit-checklist]] with the caveat that ChatGPT-User (~73% of
+traffic, HTML-almost-exclusively) keeps rendered-HTML quality primary; (2) the
+most direct `llms.txt` null result yet — barely *fetched* (~37 named-assistant
+fetches / two months), plus a hidden `<link>` "AI hint" with zero attributable
+fetches — added to [[geo-content-optimization-tactics]]'s "don't bother"
+section, one step beyond [[otterly-ai-keyword-research-2026]]'s no-citation-lift
+result; (3) "segment user agents before analyzing" caution + versioned-slug /
+wrong-TLD URL-hallucination patterns, folded into the §5 server-log and
+hallucinated-URL items. Noted a scope caution: the study's "reads HTML" is a
+format-negotiation finding, not a JS-execution finding (distinct from Vercel's).
+
+## [2026-07-29] query | "outline for DevRel talk: why LD must show up in LLM/coding-agent responses + how"
+Guided the user (SEO/AEO Manager) through building a ~15-min educate/awareness
+talk outline for the DevRel team, grounded in the wiki
+([[ai-coding-agent-tool-selection]], [[optimizing-for-coding-agent-recommendations]],
+[[geo-content-optimization-tactics]], [[ai-shortlist-effect]],
+[[brand-entity-seo-strategy]]) and internal Glean docs (coding-agent optimization
+research report, GitHub/docs AEO audit, DevRel strategy). Anchored on the
+0%-primary-picks/38%-mention "known but rejected" LD finding and the PostHog
+bundling win. Filed the result as a working-draft playbook
+[[launchdarkly-ai-visibility-devrel-brief]] (owner will update); updated index.
+
+## [2026-07-29] update | [[launchdarkly-ai-visibility-devrel-brief]] v2 — reframed around current positioning
+Per owner request, simplified the [[ai-shortlist-effect]] line ("showing up in the
+AI's answer is most of what gets you picked") and rebuilt the brief around LD's
+May-2026 repositioning as "the runtime control layer for the AI era" (CodeControl +
+AgentControl; feature flags = foundation, not focus). Grounded in Glean: Platform
+Messaging Framework, AI deal deck, homepage, DevRel strategy. New spine: AI's mental
+model of LD is stale, so the reposition stalls in the channel where developers form
+first impressions; AgentControl is a young, unclaimed category to win early. Updated
+index entry.

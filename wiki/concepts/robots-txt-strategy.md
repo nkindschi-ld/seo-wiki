@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo]
-updated: 2026-07-22
+updated: 2026-07-23
 ---
 
 # Robots.txt Strategy: What It Is, What It Isn't
@@ -53,6 +53,16 @@ block a specific LLM's crawler (per
 | You.com | `YouBot` |
 | Firecrawl (agent framework) | `FirecrawlAgent` |
 | Common Crawl (training corpus used by many LLMs) | `CCBot` |
+
+**Coverage gap**: this table doesn't yet document bots from Meta,
+Amazon, xAI, ByteDance, Cohere, Mistral AI, DeepSeek, Allen Institute
+for AI, Zhipu AI, or Apple. Per [[stackfox-ai-crawlers-directory]], a
+living third-party directory tracks ~94+ AI/archive bots across ~28+
+organizations, including all of the above — useful as a reference to
+check the current fuller bot landscape, but verify exact user-agent
+strings against each vendor's own crawler documentation before adding
+them here (the directory's per-bot detail sits behind an interactive UI
+this wiki couldn't fully extract).
 
 These crawlers exist to help the LLM understand/summarize content
 rather than to rank it — they generally don't need access to

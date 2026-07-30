@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-07-22
+updated: 2026-07-29
 ---
 
 ## Priority Framework
@@ -184,6 +184,23 @@ audit workflow). Quick-reference for this audit:
   agents can map structure to meaning: `<header>` (logo/nav),
   `<h1>` (main heading), `<nav>` (navigation), `<main>` (primary
   content), `<h2>` (subheadings), `<footer>`.
+- **Serve Markdown via HTTP content negotiation, not via special
+  files.** Per [[evilmartians-which-ai-reads-your-site-2026]] (first-party
+  server-log study), the mechanism that actually delivered Markdown to
+  agents was responding to the `Accept: text/markdown` request header —
+  Claude Code, a coding agent, requested Markdown and received it on 76%
+  of its fetches. This beats every "decorative" alternative in the same
+  study: dedicated `.md` routes saw only modest adoption (~15% of agent
+  traffic, mostly coding agents), `llms.txt` was barely fetched (~660
+  fetches / two months, ~37 from named AI assistants), and a hidden
+  `<link>` "AI hint" got zero attributable fetches. **But don't
+  over-optimize for Markdown**: the dominant client by far — ChatGPT-User
+  at ~73% of all agent traffic — took HTML almost exclusively (0.1%
+  Markdown), so **rendered HTML quality is still the primary target** and
+  content negotiation is an additive win for the coding-agent slice, not
+  a replacement. (Format preference here is about which representation the
+  agent *requests*, distinct from whether it executes JavaScript — see the
+  JS-rendering item below.)
 - **Analyze server logs for AI bot activity**, per
   [[peec-ai-server-logs-ai-search-2026]] — confirm all three AI bot
   types (training, search/indexing, user-query/retrieval; see
@@ -195,6 +212,16 @@ audit workflow). Quick-reference for this audit:
   rejection (the LLM sees the page but chooses not to use it), or a
   gap in the citation-monitoring tool's prompt coverage. Rule out
   access problems before assuming a content-quality issue.
+  **Segment by named user agent before drawing conclusions**, per
+  [[evilmartians-which-ai-reads-your-site-2026]]: a coarse "AI traffic"
+  bucket hides opposite behaviors (in that study Claude Code fetched
+  Markdown 76% of the time while ChatGPT-User took HTML almost
+  exclusively), and the raw agent stream is polluted with scanners,
+  SQL-injection probes, and junk user-agent strings that a
+  classification step (`ai`/`browser`/`crawler`/`scanner`/`library`)
+  must filter out first. Also note that client-side JS analytics never
+  see non-rendering agents at all — server-side logging or an edge
+  Measurement-Protocol setup is required to count them.
 - **AI search-specific technical risks** (per
   [[ahrefs-beginner-guide-technical-seo]]) — distinct from traditional
   search crawlability:
@@ -206,12 +233,36 @@ audit workflow). Quick-reference for this audit:
     methodology, treat directionally): of major AI crawlers, only
     Gemini and AppleBot are reported to currently render JavaScript at
     all — assume every other AI crawler needs plain HTML/markdown.
+    **Independently confirmed with real traffic data** per
+    [[vercel-rise-of-the-ai-crawler]] (one month of Vercel-network
+    crawler logs): ChatGPT and Claude fetch JS files (11.50% and 23.84%
+    of requests) but never execute them; AppleBot and Gemini are
+    confirmed as the exceptions that do render JS. This corroboration
+    upgrades the earlier directional claim to two-source-confirmed.
     **Concrete remediation**, per [[vercel-adapting-seo-for-llms]]: use
     Server-Side Rendering (SSR), Static Site Generation (SSG), or
     Incremental Static Regeneration (ISR) so AI crawlers receive fully
     rendered static HTML on first fetch rather than a JS shell — modern
     frameworks (e.g. Next.js) support on-demand regeneration so this
     doesn't require sacrificing content freshness for crawlability.
+  - **Crawl efficiency/waste**: Per [[vercel-rise-of-the-ai-crawler]],
+    AI crawlers are markedly less efficient at navigating sites than
+    Googlebot — ChatGPT and Claude hit 404s on ~35% of requests
+    (34.82%/34.16%) and ChatGPT wastes 14.36% of requests following
+    redirects, vs. Googlebot's 8.22% 404 rate and 1.49% redirect rate.
+    When auditing server logs for AI bot activity (see below), check
+    404/redirect rates specifically for AI user agents — stale
+    sitemaps, broken internal links, or unmaintained redirect chains
+    waste a disproportionate share of an AI crawler's limited crawl
+    budget compared to Googlebot's.
+  - **Data-center geography**: Per [[vercel-rise-of-the-ai-crawler]],
+    AI crawlers currently operate from U.S. data centers only (ChatGPT:
+    Des Moines, Phoenix; Claude: Columbus) — vs. Google's seven-region
+    crawl infrastructure. Relevant if you're allowlisting by IP range
+    rather than user agent in a WAF/CDN (see
+    [[sel-ai-optimization-content-for-search-and-agents]]'s "whitelist
+    major U.S. datacenter IP ranges" mitigation below) — a
+    narrower/more concentrated range than Google's.
   - **Third-party blocking**: Cloudflare, Sucuri, and similar security
     services may block AI crawlers by default. Check your CDN/WAF
     settings if you want AI visibility; whitelist AI bot IPs if needed —
@@ -232,10 +283,18 @@ audit workflow). Quick-reference for this audit:
     server-log AI-bot-activity data per the item above; a high AI-bot
     error rate in your own logs may be consistent with this industry-wide
     pattern rather than a site-specific problem, but still worth fixing.
-  - **Hallucinated URLs**: AI systems sometimes cite non-existent URLs on
-    your domain. Monitor Web Analytics for AI referral traffic and set up
-    redirects from common 404s to relevant live pages (e.g.,
-    `/products/nonexistent-item` → `/products/` or search page).
+  - **Hallucinated URLs (and domains)**: AI systems sometimes request or
+    cite non-existent URLs on your domain. Monitor Web Analytics/server
+    logs for AI referral and agent traffic and set up redirects from
+    common 404s to relevant live pages (e.g., `/products/nonexistent-item`
+    → `/products/` or search page). Per
+    [[evilmartians-which-ai-reads-your-site-2026]], the guessing follows
+    recognizable patterns worth mining: **versioned slug variants**
+    (appending `-2025`/`-2026`), **invented `.md` slugs**, and
+    **hallucinated domains** — wrong TLDs (`.dev`/`.app`/`.io`) and bare
+    IP addresses. Treat recurring guessed slugs in your logs as
+    redirect-target signals, and consider owning obvious TLD variants of
+    your domain and redirecting them to recover that traffic.
   - **Code fingerprints**: AI tools may inject identifiable HTML into
     pages to track their presence. Review source code before publishing,
     especially if using third-party tools to generate or modify content.
@@ -273,6 +332,12 @@ audit workflow). Quick-reference for this audit:
   which-crawlers-render-JS breakdown and an AWS-WAF mitigation, plus
   speed/timeout constraints and AI-crawler efficiency/error-rate
   benchmarks.
+- [[evilmartians-which-ai-reads-your-site-2026]] — first-party server-log
+  study behind §5's content-negotiation item, the segment-user-agents
+  caution, and the versioned-slug/TLD hallucination patterns; also the most
+  direct evidence that AI clients barely fetch `llms.txt`.
+- [[vercel-rise-of-the-ai-crawler]] — companion first-party crawler-log
+  study (JS execution, 404/redirect waste, U.S.-only data centers).
 - [[google-search-fundamentals-get-started]] — official Google guide to
   technical SEO fundamentals: robots.txt strategy, sitemaps, site
   migrations, canonicalization, crawlability, mobile-first indexing,

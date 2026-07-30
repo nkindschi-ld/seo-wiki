@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-07-11
+updated: 2026-07-24
 ---
 
 Why / when to use this: before investing in content or internal linking,
@@ -82,6 +82,21 @@ same query (see [[link-and-anchor-text-best-practices]]).
   [[entity-based-seo-implementation]] addresses at the entity level:
   one authoritative page per entity/topic, not several splitting
   authority.
+
+## New-feature launch content: don't seed-keyword on the product name
+
+When mapping keywords for a new/branded feature-launch page (e.g. a
+product blog post or explainer for a just-launched capability), check
+actual search volume on the literal feature name before using it as the
+seed keyword — it's often near-zero for months or years after launch,
+consistent with [[seo-aeo-geo-search-demand-trends]]'s finding that
+newly-named disciplines start at ~zero volume. Map the page instead to
+the broader category terms buyers are already searching (e.g. a
+prompt/model optimization feature should target "prompt optimization,"
+"llm evals"/"llm as a judge," or "guardrails ai," not just its own
+product name) — keep the product name as an entity mentioned throughout
+the page, not the primary target keyword, and revisit the seed keyword
+once/if the feature name itself starts accruing volume.
 
 ## Tools referenced
 

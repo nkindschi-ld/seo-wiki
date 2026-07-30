@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-07-22
+updated: 2026-07-23
 ---
 
 # Controlling AI Feature Inclusion (Google Search)
@@ -49,6 +49,13 @@ in Search Console's Performance report under the **"Web"** search type —
 use this to check whether your control directives are having the
 intended effect, and to see baseline AI-feature click volume before
 applying any restriction.
+
+**Preferred tool as of [[google-generative-ai-performance-report]]**:
+Search Console's dedicated **Generative AI Performance Report** tracks
+AI Overviews/AI Mode impressions specifically (by page, country, date,
+device), giving a cleaner before/after read on a control directive's
+effect than filtering the general Performance report. Availability is
+gradual and gated on sufficient AI-feature impressions.
 
 ## See also
 

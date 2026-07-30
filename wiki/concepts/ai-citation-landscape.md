@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-07-22
+updated: 2026-07-23
 ---
 
 # AI Citation Landscape
@@ -33,7 +33,13 @@ and *how much*, and pull from largely non-overlapping sources:
 - **Gemini**: cites in 82% of responses, ~8 citations each.
 - **Claude**: cites in only 55% of responses (leans on training
   knowledge more), but averages **13** citations when it does go to the
-  web — more than twice ChatGPT's depth.
+  web — more than twice ChatGPT's depth. **Additional detail
+  (2026-07-23)** per [[otterly-claude-ai-citation-study-2026]] (379K
+  citations, June 2026): Claude's citations are dominated by first-party
+  brand/company-owned content (64% of all citations), news/media (14.9%),
+  and long-tail sources — sharply different from the ChatGPT/Gemini/
+  Perplexity mix dominated by third-party reviews/forums. Social media is
+  nearly absent (0.9%, almost entirely LinkedIn; Reddit 0%).
 
 Cross-provider overlap in top cited domains is minimal — Wikipedia is
 the only domain that appears near the top for all three. Among
@@ -169,11 +175,142 @@ list like .gov/.edu.
 - **Wikipedia** is a top-3 cited domain in 12/17 industries for ChatGPT,
   8/17 for Claude, but only 3/17 for Gemini. Investment in Wikipedia
   presence benefits ChatGPT and Claude visibility much more than Gemini.
+  **Note (2026-07-23)**: Wikipedia appears in 8/17 for Claude, but per
+  [[otterly-claude-ai-citation-study-2026]], Claude's citations are 64%
+  brand/company-owned first-party content; Wikipedia is an institutional
+  outlier in Claude's citation pattern, not representative of typical
+  Claude sourcing.
 - **Reddit** is Gemini's single most-cited domain (2.4% of all its
   citations) but essentially absent from ChatGPT (~0.003%) and Claude
-  (0%).
-- **YouTube**: Claude never cites it (0%); it's ~2% of citations for
-  both ChatGPT and Gemini.
+  (0%). **Quantified per (2026-07-23)** [[otterly-claude-ai-citation-study-2026]]:
+  Reddit was cited **0 times** across 379K Claude citations — not a rounding
+  artifact but a hard zero.
+- **YouTube**: Claude never cites it (0%); an earlier estimate put it at
+  ~2% of citations for both ChatGPT and Gemini. **Context (2026-07-23)**:
+  YouTube, Reddit, and other social platforms together represent only 0.9%
+  of Claude's citations, making them immaterial to Claude strategy.
+  **Sharper, larger-scale data (2026-07-23)**: per
+  [[otterly-youtube-ai-citation-study-2026]] (100M+ citation instances,
+  6 engines, 30-day window), YouTube's share of a platform's citations
+  is highly uneven and *not* symmetric across ChatGPT and Gemini as the
+  earlier "~2% for both" figure implied — ChatGPT 4.4% (same order of
+  magnitude as before), but Gemini only 0.2% (an order of magnitude
+  lower, not "roughly on par with ChatGPT"). Perplexity (38.7%) and
+  Google AI Overviews (36.6%) are by far the heaviest YouTube citers;
+  Google AI Mode 19.6%; Copilot 0.5%. **Unresolved discrepancy on the
+  Gemini figure specifically** — not logged as a full Conflicting
+  Evidence entry since the ChatGPT figure is directionally consistent
+  and only the Gemini number diverges sharply, but flagged here pending
+  a source that reconciles the two.
+
+### Profound's ChatGPT/Google AI Overviews/Perplexity citation breakdown (2026-07-23 addendum)
+
+Per [[tryprofound-ai-platform-citation-patterns]] (680M citations,
+Aug 2024–Jun 2025) — a different platform trio (ChatGPT, Google AI
+Overviews, Perplexity) than most of this section's Wikipedia/Reddit/
+YouTube data, but the same underlying pattern:
+
+- **ChatGPT**: Wikipedia leads at 7.8% of total citations (47.9% of its
+  top 10) — consistent with the "long-tail editorial engine," Wikipedia-
+  heavy characterization above. Reddit is a minor secondary source at
+  1.8% — same order of magnitude as [[ahrefs-why-chatgpt-cites-pages-2026]]'s
+  1.93% Reddit citation-rate figure below, via an independent
+  methodology.
+- **Perplexity**: Reddit leads at 6.6% of total citations (46.7% of its
+  top 10) — a **"community-driven information"** profile that reads as
+  in tension with brightedge's "research librarian," low-UGC (1.5%)
+  characterization of Perplexity above. Not logged as a full
+  Conflicting Evidence entry — different time periods and citation
+  definitions (aggregate share of 680M raw citations vs. a
+  source-type-classified sample) could both be locally accurate without
+  contradicting each other, but it's a real magnitude tension worth
+  tracking if a reconciling source appears.
+- **Google AI Overviews**: Reddit (2.2%) and YouTube (1.9%) lead, with
+  Quora (1.5%) and LinkedIn (1.3%) close behind — a "balanced
+  social-professional mix." This is directionally consistent with
+  brightedge's "UGC-first engine" characterization, but the magnitudes
+  diverge sharply: brightedge put a single video platform at 10.6% of
+  AI Overviews citations and a single forum at 2.9%, vs. Profound's
+  1.9%/2.2% here. **Unresolved discrepancy** — flagged rather than
+  reconciled, likely reflecting different sampling windows/methodology
+  rather than a real behavior change, but not confirmed either way.
+- **Domain TLD mix** (aggregate across all three platforms, not
+  broken out per-engine): .com 80.41%, .org 11.29%, country-specific
+  ccTLDs (.uk/.au/.br/.ca) ~3.5% combined, with .io/.ai tech TLDs
+  described as "growing" despite newer/smaller base rates. A coarser
+  lens than brightedge's per-engine .gov/.edu/.org shares above, but a
+  useful aggregate sanity check.
+- **Strategic framing**: explicitly argues "a one-size-fits-all
+  approach to AI visibility cannot succeed" given these platform-
+  specific sourcing preferences — the same practical conclusion this
+  wiki has already reached independently via brightedge's "sourcing
+  personalities" and the provider-specific tactics in
+  [[geo-content-optimization-tactics]].
+
+### YouTube citation structure (2026-07-23 addendum)
+
+Per the same source — video-level structural findings distinct from the
+per-provider share above:
+
+- **Long-form dominates overwhelmingly**: 94% of AI citations go to
+  long-form videos, only 5.7% to Shorts.
+- **Timestamps are a Google-exclusive citation mechanism**: timestamped/
+  chapter-level citations appear only in Google AI Overviews (73% of
+  timestamped citations) and Google AI Mode (27%) — zero in ChatGPT,
+  Gemini, Copilot, or Perplexity. Only 31% of cited videos carry
+  timestamp signals, but 78% of those get cited repeatedly across 2-5
+  different chapters, multiplying one video's effective citation
+  surface area on Google surfaces specifically.
+- **Popularity doesn't predict citation, same as elsewhere in this
+  wiki**: view count (r = -0.03), likes (r = -0.02), subscriber count
+  (r = -0.03), and channel total views (r = -0.03) are all
+  uncorrelated with citation frequency — 40.83% of cited videos have
+  under 1,000 views and 35% come from channels under 10k subscribers.
+  Consistent with [[otterly-linkedin-ai-citations-study-2026]]'s
+  near-zero engagement correlations on LinkedIn and
+  [[airops-fan-out-effect-2026]]'s no-authority-correlation finding —
+  a third platform showing the same pattern (structure/relevance beats
+  popularity/authority as a citation predictor).
+- **Weak positive correlates**: description length (r = 0.31) and
+  description hashtags (r = 0.20) — treat descriptions as
+  machine-readable metadata (summaries, entities, chapters) rather than
+  marketing copy.
+
+### Reddit community engagement (2026-07-23 addendum)
+
+Per [[otterly-reddit-geo-ai-search-citations-2026]] (8,167 citations,
+60-day controlled experiment, 126 subreddits, 5 engines) — a causal
+(experimental) finding on what drives Reddit citations, complementing
+the earlier observational finding that Reddit is "retrieved heavily but
+rarely cited" from [[ahrefs-why-chatgpt-cites-pages-2026]]:
+
+- **Active community engagement drives a 9x citation multiplier**:
+  subreddits with managed engagement (+10 replies, +20 upvotes per post)
+  received 9x more AI citations than identical posts in zero-engagement
+  control subreddits — the strongest platform-specific lever measured in
+  any Otterly study to date.
+- **Comments drive more citations than upvotes or post length**: replies
+  to a post matter more than vote count or word count. Distinct from
+  "engagement doesn't predict citation" findings on other platforms
+  ([[otterly-linkedin-ai-citations-study-2026]]) because this measures
+  *active discussion* (replies/comments as a signal of community interest
+  in the topic), not passive metrics (likes, emojis).
+- **Community size (subscribers) is not predictive**: larger subreddits
+  don't systematically get cited more — consistent with the
+  YouTube-channel-size and LinkedIn-brand-size null findings.
+- **Citation distribution smoothens across active communities**: engagement
+  activity spreads citations more evenly across multiple posts, rather
+  than concentrating on a few winner-take-all posts — suggesting
+  engagement signals that a community is actively discussing the topic
+  at breadth, not just spotlighting one piece.
+- **SEO bonus from Reddit activity**: the same engagement treatment
+  showed x18 impact on traditional search rankings — Reddit activity
+  improves both AI citations *and* Google organic ranking for the same
+  content, making Reddit participation a dual-channel lever.
+- **Maintenance is lightweight**: ~30 minutes daily engagement over 60
+  days achieves the multiplier; extrapolates to ~15 hours monthly to
+  sustain. This is tractable for content teams as an active-community
+  strategy.
 
 ## The Axios anomaly
 
@@ -668,3 +805,11 @@ grounded in retrieval (RAG), not a static trained "understanding."
 - [[otterly-how-to-optimize-content-for-ai-search-2026]] — the
   contradicting overlap-growth counter-claim and freshness data point
   above.
+- [[otterly-youtube-ai-citation-study-2026]] — the YouTube-by-provider
+  data update and video-structure findings above, plus the flagged
+  Gemini-figure discrepancy.
+- [[otterly-reddit-geo-ai-search-citations-2026]] — the Reddit-community-
+  engagement findings above (9x citation multiplier from active
+  engagement, comments > upvotes, community size not predictive).
+- [[otterly-claude-ai-citation-study-2026]] — the Claude-specific citation
+  mix above (64% brand-content dominance, 0.9% social media, Reddit 0%).

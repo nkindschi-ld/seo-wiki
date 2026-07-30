@@ -158,6 +158,14 @@ weak.
 
 [[google-search-status-dashboard-history]]. Duration: 7 days, 1 hour.
 
+## 2024-07-01 — Xiong et al. publish "When Search Engine Services Meet Large Language Models: Visions and Challenges"
+
+[[xiong-et-al-search-engines-meet-llms-2024]]. Academic survey framing
+the LLM-search relationship as bidirectional (Search4LLM/LLM4Search),
+naming RAG as the hallucination-mitigation mechanism and identifying an
+"explainability gap" in citation attribution at web scale. Date
+approximate — arXiv listed month only (July 2024), no specific day.
+
 ## 2024-07-25 — OpenAI introduces the SearchGPT prototype
 
 [[semrush-chatgpt-search]]. The real-time-web-search prototype that
@@ -178,6 +186,15 @@ Bing's search index (via Microsoft partnership), and direct data
 partnerships — see [[generative-engine-optimization]] for the
 optimization implications of the Bing dependency.
 
+## 2024-11-12 — Pfrommer et al. (UC Berkeley) publish "Ranking Manipulation for Conversational Search Engines" at EMNLP 2024
+
+[[pfrommer-et-al-ranking-manipulation-conversational-search-2024]].
+Peer-reviewed adversarial-ML paper: baseline LLM ranking varies
+significantly by model (product name/brand vs. document content vs.
+context position weighting), and a tree-of-attacks jailbreaking
+technique promoting low-ranked products transfers to production
+perplexity.ai without white-box/gradient access.
+
 ## 2024-11-11 — November 2024 core update
 
 [[google-search-status-dashboard-history]]. Duration: 23 days, 13 hours.
@@ -185,6 +202,16 @@ optimization implications of the Bing dependency.
 ## 2024-12-12 — December 2024 core update
 
 [[google-search-status-dashboard-history]]. Duration: 6 days, 4 hours.
+
+## 2024-12-17 — Vercel publishes "The Rise of the AI Crawler"
+
+[[vercel-rise-of-the-ai-crawler]]. First-party one-month traffic-log
+study across Vercel's hosting network: GPTBot 569M requests, Claude
+370M, AppleBot 314M, PerplexityBot 24.4M vs. Googlebot 4.5B (combined
+AI-crawler traffic ≈28% of Googlebot's). Confirms only Gemini/AppleBot
+render JavaScript; all measured AI crawlers operate from U.S.-only
+data centers; AI crawlers show far higher 404/redirect waste rates
+than Googlebot.
 
 ## 2024-12-19 — December 2024 spam update
 
@@ -230,6 +257,14 @@ technical-crawlability, and preview-control (nosnippet/noindex)
 guidance later formalized in [[google-ai-features-appearance-guide]]
 (2025-12) and [[google-ai-optimization-guide]] (2026-06) was Google's
 position from at least this date.
+
+## 2025-06-05 — Profound publishes "AI Platform Citation Patterns" (updated 2025-08)
+
+[[tryprofound-ai-platform-citation-patterns]]. 680M-citation, 10-month
+(Aug 2024–Jun 2025) study: ChatGPT is Wikipedia-led (7.8%), Perplexity
+is Reddit-led (6.6%), Google AI Overviews shows a balanced social-
+professional mix (Reddit 2.2%, YouTube 1.9%, Quora 1.5%, LinkedIn
+1.3%). Aggregate domain TLD mix: .com 80.41%, .org 11.29%.
 
 ## 2025-06-30 — June 2025 core update
 
@@ -655,3 +690,62 @@ Rankability's earlier unverified overlap-collapse claim.
 research (real prompts run longer and more action-oriented) and a 2025
 experiment finding llms.txt/author-schema/YouTube-content show no
 citation lift, while Wikipedia/LinkedIn-Pulse/FAQ/digital-PR do.
+
+## 2026-03-02 — Otterly.ai publishes "The YouTube Citation Study 2026"
+
+[[otterly-youtube-ai-citation-study-2026]] · updated
+[[ai-citation-landscape]] and [[geo-content-optimization-tactics]].
+100M+ YouTube AI citation instances across 6 engines: long-form
+dominates over Shorts (94% vs. 5.7%), timestamp/chapter citations are
+Google-exclusive, and popularity signals don't predict citation.
+
+## 2026-06-19 — Otterly.ai publishes "Active Reddit Communities Get Cited x9 Times More"
+
+[[otterly-reddit-geo-ai-search-citations-2026]] · updated
+[[ai-citation-landscape]] and [[geo-content-optimization-tactics]].
+60-day controlled experiment: active Reddit community engagement drives
+9x citation multiplier, comments > upvotes, and x18 traditional SEO
+boost from same content.
+
+## 2026-06-30 — Otterly.ai publishes "Claude AI Citations Study: How to Get Cited in 2026"
+
+[[otterly-claude-ai-citation-study-2026]] · updated
+[[ai-citation-landscape]] and [[geo-content-optimization-tactics]].
+Claude's citations: 64% brand/first-party content, social media <1%
+(Reddit 0), long-tail distribution (top 10 = 9.5%), opposite sourcing
+from other engines.
+
+## 2025-06 — Whole Whale publishes "Measuring Your AI Brand Footprint"
+
+[[wholewhale-ai-brand-footprint-measurement]] · created
+[[ai-visibility-measurement-methodology]]. Introduces the proprietary
+"AI Brand Footprint™" metric and a reverse-engineered-impressions
+measurement formula (AI-Sourced Traffic ÷ 2% CTR) addressing the
+measurement gap in standard analytics (GSC/Bing don't expose AI
+impression counts). Notes 70%+ Gen Z preference for AI assistants,
+3x conversion uplift claims, and a tools landscape (Trakkr, Evertune).
+Date approximate; exact publication date not disclosed.
+
+## 2026-07-01 — Vardasbi et al. (Spotify) publish "As It Was: Aligning LLM Search Evaluation with Historical User Preferences" (SIGIR '26)
+
+[[vardasbi-et-al-as-it-was-llm-search-evaluation-2026]]. Music-search
+LLM-as-judge paper: "plain" semantic LLM judges measurably diverge from
+real user preference; grounding the judge in historical interaction
+data (QRI cards) improves alignment but doesn't close the gap fully —
+adjacent-domain caveat for the wiki's LLM-judged AI-visibility metrics.
+
+## 2026-07-27 — Rich Sanger publishes "How to Audit Your AI Entity Footprint" (Search Engine Land)
+
+[[sel-ai-entity-footprint-audit]] · new playbook [[ai-entity-footprint-audit]],
+cross-linked to [[brand-entity-seo-strategy]] and
+[[ai-visibility-measurement-methodology]]. A six-dimension, 0–5-scored
+framework for auditing how well AI systems understand a brand from its
+collective public digital presence.
+
+## 2026-07-21 — Evil Martians publishes "Which AI actually reads your site? Two months of LLM traffic, measured"
+
+[[evilmartians-which-ai-reads-your-site-2026]] · extended
+[[technical-seo-audit-checklist]] (content-negotiation item, segment-user-agents
+caution, URL-hallucination patterns) and [[geo-content-optimization-tactics]]
+(`llms.txt`/hidden-hint null results). First-party server-log companion to
+[[vercel-rise-of-the-ai-crawler]].

@@ -1,8 +1,12 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-07-11
+updated: 2026-07-27
 ---
+
+> To *diagnose* how well AI already understands the brand this playbook builds
+> out — a six-dimension, 0–5-scored audit — see [[ai-entity-footprint-audit]].
+> Run the audit first to find gaps, then use the build steps below to fix them.
 
 Why / when to use this: use when the goal is brand-level visibility and
 recognition (not just ranking individual pages) — Google and AI systems
