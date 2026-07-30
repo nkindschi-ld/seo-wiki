@@ -33,6 +33,17 @@ coding agents and LLM chat/search, and where DevRel plugs in. Built on
   a ~38% mention rate** ([[ai-coding-agent-tool-selection]]). Agents know
   the *old* LD and still pass us over — the research calls this "**known
   but rejected**," *worse* than being invisible.
+- This isn't unique to us — it's the dominant pattern. A cross-vertical
+  study ([[victorious-q2-2026-quarterly-search-report]], 175 brands, 8
+  platforms) found **96% of brands are described accurately by AI but
+  89% never appear** in answers to category-research questions.
+  Recognition is near-universal; being *recommended* is the rare part.
+  The lever it identifies is off-site footprint (referring domains 0.49,
+  third-party mentions 0.45; brands with <2,000 pages mentioning them are
+  named just 3% of the time) — and **99.99% of category-research
+  citations point to third-party sites, not the brand's own** — which is
+  exactly why the four plays below lean on third-party seeding, not just
+  our own docs.
 - The bigger miss isn't the flags category — it's that our whole
   runtime-control and **AgentControl** story is **absent** from AI
   answers. We're being evaluated on a narrow, outdated identity.
@@ -146,6 +157,10 @@ and agents run on top of — a category where we define the terms
 
 - [[optimizing-for-coding-agent-recommendations]] — vendor-facing tactics
   behind Plays 1, 2, and the category reframe.
+- [[victorious-q2-2026-quarterly-search-report]] — external cross-vertical
+  data behind the "known but rejected" recognition-vs-mention gap.
+- [[topical-authority-in-ai-search]] — why most categories/brands are
+  unowned and how the mention moat works.
 - [[ai-coding-agent-tool-selection]] — study data behind the 0%/38% and
   bundling findings.
 - [[geo-content-optimization-tactics]] — content/citation tactics behind

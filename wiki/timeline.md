@@ -749,3 +749,19 @@ collective public digital presence.
 caution, URL-hallucination patterns) and [[geo-content-optimization-tactics]]
 (`llms.txt`/hidden-hint null results). First-party server-log companion to
 [[vercel-rise-of-the-ai-crawler]].
+
+## 2026-07-20 — Semrush × Growth Memo publish "The State of Topic Authority in ChatGPT"
+[[semrush-chatgpt-topic-authority-study]] · created [[topical-authority-in-ai-search]];
+updated [[ai-visibility-correlation-factors]], [[ai-citation-landscape]], and
+[[geo-content-optimization-tactics]]. 1,094 US ChatGPT categories tracked Jan–Jun 2026;
+most topics unowned (53.7% unsettled), SEO metrics barely predict topic winners, and
+mention share decouples from citation share (-0.229).
+
+## 2026-07-29 — Victorious publishes Q2 2026 Quarterly Search Report (AI recognition vs. mentions)
+[[victorious-q2-2026-quarterly-search-report]] · updated
+[[ai-visibility-correlation-factors]], [[topical-authority-in-ai-search]],
+[[ai-citation-landscape]], [[geo-content-optimization-tactics]], and
+[[launchdarkly-ai-visibility-devrel-brief]]. 175 brands across 5 verticals on 8 AI
+platforms: 96% described accurately but 89% never mentioned in category answers;
+mentions correlate with off-site footprint, and 99.99% of category-research citations
+point to third-party sites.

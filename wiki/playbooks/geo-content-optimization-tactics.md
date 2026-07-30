@@ -55,6 +55,35 @@ over these content tactics when the two compete for effort.**
 together outperformed any single tactic by 5.5%+. If you can only pick
 one pairing, use this one.
 
+## Pick winnable topics, then defend the 5-point moat
+
+Per [[semrush-chatgpt-topic-authority-study]] (1,094 ChatGPT categories,
+Jan–Jun 2026) — a portfolio-level prioritization layer above the
+page-level tactics here, and the strategic complement to "Focus over
+comprehensiveness" above:
+
+- **Most topics are unowned — treat it as a land grab.** Only 15.2% of
+  categories had a clear owner; 53.7% were unsettled. There is room to
+  own a topic outright in most categories.
+- **Prefer winnable lower-demand subtopics over contested head terms.**
+  The study found an inverse-demand paradox: only 11.3% of high-demand
+  topics had a clear owner vs. 19% of lower-demand ones. High-volume
+  topics fragment mention share across many brands; niches are easier to
+  own. (Same direction as the fan-out "focus beats comprehensiveness"
+  finding above.)
+- **Concentrate on 2–3 categories where you already have signal**, not a
+  broad spread — pushing one topic past the ownership threshold beats
+  thin presence across many.
+- **Aim for a ≥5-percentage-point mention-share margin.** Once a brand
+  becomes a clear owner it holds #1 in 90.4% of month-over-month checks;
+  held leads had a median 2.9-point margin, flipped leads only 1.3
+  points. Reaching the moat first is a compounding, defensible asset.
+- **Optimize for mention share, not just citation share.** They are
+  near-decoupled (only 21% of most-cited domains are also the
+  most-mentioned brand; correlation -0.229), and mention share is what
+  tracks to selection (74% of users pick the top-mentioned brand). See
+  [[topical-authority-in-ai-search]] and [[ai-shortlist-effect]].
+
 ## Claim frontier concepts before competitors do
 
 Per [[vercel-adapting-seo-for-llms]] (no disclosed evidence for the
@@ -730,6 +759,24 @@ the wiki's general "track presence per topic" guidance:
 Per [[growth-memo-topics-matter-for-third-party-authority]] — extends the
 three-layer source strategy above with tactics specifically for earning
 third-party citations/mentions:
+
+- **Stage-match your off-site strategy (2026-07-30).** Per
+  [[victorious-q2-2026-quarterly-search-report]] (175 brands, 8
+  platforms), brand *naming* is concentrated down-funnel: brands were
+  named in just 0.10% of *problem-awareness* answers but >12x as often in
+  *category-research* answers. So (a) publish educational,
+  problem-awareness content that AI will cite even though it usually
+  omits your name — it builds the third-party footprint that later
+  correlates with mentions (referring domains 0.49, third-party mentions
+  0.45; brands with <2,000 pages mentioning them were named just 3% of
+  the time); and (b) prioritize presence on the **directories and
+  comparison sites** AI leans on for category research, where mentions
+  actually happen. Don't chase self-citation: 99.99% of category-research
+  citations went to third-party domains, not the brand's own site.
+- **Tailor placements to the vertical's citation shape.** Legal-services
+  citations concentrate in a few prestige directories; SaaS citations
+  scatter across 10,000+ domains — a handful of authoritative placements
+  can own a legal topic, while SaaS needs broader distribution.
 
 - **Map trusted sources per topic, not per category.** Trusted-source mix
   can shift sharply even within one category depending on the specific

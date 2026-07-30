@@ -393,6 +393,35 @@ writeup.
   (headers, bullets, schema), and co-citation (multiple independent
   sources pointing to the same brand as the answer).
 
+**Empirical measurement of the decoupling (2026-07-30)**: this
+mention/citation split is not just conceptual — it is now measured at
+scale. Per [[semrush-chatgpt-topic-authority-study]] (Semrush × Kevin
+Indig, 1,094 ChatGPT categories, 600K+ citations), only **21%** of the
+most-*cited* domains in a category were also the most-*mentioned* brand,
+and the two correlate **slightly negatively (-0.229)**. The source
+ChatGPT quotes and the brand ChatGPT recommends are largely different
+entities. This matters for prioritization because mention share sits
+closest to selection: per Kevin Indig's earlier Growth Memo research,
+**74% of users chose the top-mentioned brand as their final pick** (see
+[[ai-shortlist-effect]] for the selection-stage data, and
+[[topical-authority-in-ai-search]] for the full topic-ownership study).
+
+**Citations almost never point to a brand's own domain (2026-07-30)**:
+per [[victorious-q2-2026-quarterly-search-report]] (175 brands, 8
+platforms, 49,391 citations), **99.99%** of category-research citations
+pointed to *third-party* websites rather than the brand's own site —
+only 4 of 150 brands earned a citation to their own domain. And the
+mention/citation split is stage-dependent: on *problem-awareness*
+prompts, brands were named in just **0.10%** of answers even though
+their educational content was being cited (the model uses your content
+but omits your name), rising **>12x** on down-funnel *category-research*
+prompts. Practical read: winning the *citation* (your content is the
+source) and winning the *mention* (you are the recommended brand) are
+distinct, and self-citation is a losing game — mentionability is earned
+through third-party footprint (see [[ai-visibility-correlation-factors]]
+and [[geo-content-optimization-tactics]]'s third-party-authority
+tactics).
+
 ## Citation-slot concentration (unsourced, directional)
 
 Per [[superlines-geo-guide]] (vendor content, no disclosed methodology):

@@ -1819,3 +1819,30 @@ Messaging Framework, AI deal deck, homepage, DevRel strategy. New spine: AI's me
 model of LD is stale, so the reposition stalls in the channel where developers form
 first impressions; AgentControl is a young, unclaimed category to win early. Updated
 index entry.
+
+## [2026-07-30] ingest | Semrush × Growth Memo — The State of Topic Authority in ChatGPT
+Semrush/Kevin Indig study of 1,094 US ChatGPT categories (Jan–Jun 2026; 220K+
+domains, 600K+ citations). Created concept [[topical-authority-in-ai-search]]
+(ownership distribution: 15.2% clear owner / 31.2% emerging / 53.7% unsettled;
+inverse-demand paradox; ~5-point mention-share stability moat, 90.4% MoM retention;
+mentions-vs-citations decoupling -0.229). Created source page
+[[semrush-chatgpt-topic-authority-study]]. Updated [[ai-visibility-correlation-factors]]
+(owner-vs-runner-up win-rates: branded search 55.7%, organic traffic 48.4%, Authority
+Score 52.5% — near-coin-flips; only branded search significant; folded into the
+Authority Score conflict thread with the Kevin-Indig-authored-both-studies wrinkle),
+[[ai-citation-landscape]] (empirical mention/citation decoupling), and
+[[geo-content-optimization-tactics]] (new "pick winnable topics, defend the 5-point
+moat" prioritization section). Cross-linked [[ai-shortlist-effect]]. Updated index.
+
+## [2026-07-30] ingest | Victorious Q2 2026 Quarterly Search Report (recognition vs. mentions)
+Michael Transon/Victorious cross-vertical study (175 brands, 8 platforms, 49,391
+citations; SEJ-published). Created source [[victorious-q2-2026-quarterly-search-report]].
+Headline recognition-vs-mention gap: 96% of brands described accurately but 89% never
+appeared in category-research answers. Updated [[ai-visibility-correlation-factors]]
+(referring-domains 0.49 / third-party-mentions 0.45 correlates, <2,000-pages→3% floor,
+99.99% third-party citation), [[topical-authority-in-ai-search]] (recognition-mention
+gap as "most brands unowned" corroboration), [[ai-citation-landscape]] (third-party
+citation dominance + 0.10%-naming-on-problem-prompts, >12x down-funnel lift),
+[[geo-content-optimization-tactics]] (stage-matched + vertical-specific off-site
+strategy), and [[launchdarkly-ai-visibility-devrel-brief]] (external backing for the
+"known but rejected" hook). Updated index.

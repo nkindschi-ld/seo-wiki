@@ -197,6 +197,47 @@ Lowest-quality penalty target, not just a non-factor.
     overlap even when underlying fragmentation is severe — both can be
     true simultaneously.
 
+  - **Additional topic-ownership evidence (2026-07-30)**: per
+    [[semrush-chatgpt-topic-authority-study]] (Semrush × Kevin Indig,
+    1,094 ChatGPT categories), when comparing category *owners* against
+    runners-up, traditional signals were near coin-flips — owners had
+    higher branded search volume in only 55.7% of pairs, higher organic
+    traffic in 48.4%, and a higher **Authority Score in 52.5%**. Only
+    branded search volume was statistically significant, and modestly.
+    These are directional win-rates, not correlation coefficients, and
+    they measure *topic ownership* (mention share within a five-prompt
+    cluster) rather than raw brand-mention presence — a different unit of
+    analysis again. The notable wrinkle: **Kevin Indig co-authored both
+    this study and the Growth Memo study below** that found Authority
+    Score the *strongest* AI-mention correlate (0.65 Pearson). Not a
+    contradiction — brand-level "does this brand get mentioned at all"
+    (Growth Memo, positive) and "does the authority-leader also *own* the
+    topic vs. a specific rival" (this study, near-coin-flip) are
+    different questions — but a useful caution against treating Authority
+    Score as a topic-ownership lever specifically. See
+    [[topical-authority-in-ai-search]] for the full topic-ownership
+    findings (distribution, inverse-demand paradox, 5-point stability
+    moat).
+  - **Additional off-site-footprint evidence (2026-07-30)**: per
+    [[victorious-q2-2026-quarterly-search-report]] (175 brands, 8
+    platforms, 49,391 citations), the correlates of being *mentioned* in
+    AI answers were **referring domains (0.49)** and **third-party web
+    mentions (0.45)** — with a hard floor: brands with **<2,000 indexed
+    pages mentioning them** were named just **3%** of the time. This lands
+    firmly on the "off-site presence drives visibility" side, and is
+    consistent with the brand-level correlations above (Ahrefs referring
+    domains 0.295, branded web mentions 0.656–0.709 — same direction,
+    Victorious's referring-domain figure somewhat higher). Notably,
+    Victorious found the *mention* correlates were off-site
+    (links/mentions), not owned content: **99.99%** of category-research
+    citations pointed to third-party domains, and only 4 of 150 brands
+    earned a self-citation — reinforcing that authority-building for AI
+    visibility is largely an *earned off-site* game, not an owned-content
+    one. Victorious also independently documents the recognition-vs-
+    mention gap (96% of brands accurately *described*, 89% never
+    *mentioned* in category answers) — see
+    [[topical-authority-in-ai-search]].
+
 ## Authority Score correlation (separate study, caveat on comparability)
 
 Per [[growth-memo-topics-matter-for-third-party-authority]], a separate
@@ -254,3 +295,9 @@ ChatGPT-targeting guidance for smaller/challenger brands).
   levers that extend this page's appearance-only correlations.
 - [[otterly-ai-keyword-research-2026]] — source of the YouTube-content-
   no-lift nuance above.
+- [[topical-authority-in-ai-search]] — the topic-ownership counterpart:
+  who *owns* a topic and how durably, and why SEO metrics barely predict
+  ChatGPT topic winners.
+- [[victorious-q2-2026-quarterly-search-report]] — referring-domains
+  (0.49) / third-party-mentions (0.45) correlates, the <2,000-pages →
+  3%-mention floor, and the 96%-recognized / 89%-never-mentioned gap.
