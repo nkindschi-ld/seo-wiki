@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo]
-updated: 2026-07-23
+updated: 2026-08-06
 ---
 
 # Robots.txt Strategy: What It Is, What It Isn't
@@ -63,6 +63,26 @@ check the current fuller bot landscape, but verify exact user-agent
 strings against each vendor's own crawler documentation before adding
 them here (the directory's per-bot detail sits behind an interactive UI
 this wiki couldn't fully extract).
+
+**OpenAI's three user agents, clarified first-party (2026-08-06):** per
+[[openai-publishers-developers-faq]], OpenAI's own docs split its agents
+by function — **`OAI-SearchBot`** indexes for ChatGPT search (allow it to
+be discoverable/cited/linked), **`GPTBot`** is for training (disallow it
+to opt out of training — respected even for content acquired via ChatGPT
+Atlas user interactions), and **`ChatGPT-User`** is live user-triggered
+fetching / agent action in Atlas. Two nuances worth noting:
+
+- **Blocking `OAI-SearchBot` does *not* guarantee your link stays out of
+  ChatGPT.** If OpenAI obtains a disallowed page's URL from a third-party
+  search provider or by crawling other pages and has relevance signals, it
+  may surface **just the link and page title** in ChatGPT Atlas. To
+  suppress even that, use a **`noindex` meta tag** — but the page must be
+  crawlable for OpenAI to read the tag (the same robots-blocks-the-noindex
+  trap described in "Critical misconception" below).
+- **Referral tracking:** ChatGPT appends **`utm_source=chatgpt.com`** to
+  referral URLs, so publishers allowing `OAI-SearchBot` can measure
+  ChatGPT-search referral traffic in analytics (cf.
+  [[seoclarity-track-ai-search-traffic]]).
 
 These crawlers exist to help the LLM understand/summarize content
 rather than to rank it — they generally don't need access to
@@ -217,3 +237,4 @@ Some SEO practitioners recommend using robots.txt as a "quick fix" for duplicate
 - [[google-robots-txt-intro]] — Official Google guidance on robots.txt purpose and limitations
 - [[ahrefs-robots-txt-guide]] — Practical implementation details, trailing-slash syntax gotchas, common mistakes
 - [[sel-ai-optimization-content-for-search-and-agents]] — the source for the extended AI-bot-name table and three-category allow/disallow template above
+- [[openai-publishers-developers-faq]] — OpenAI's first-party clarification of OAI-SearchBot vs GPTBot vs ChatGPT-User, the noindex/Atlas link-surfacing nuance, and the `utm_source=chatgpt.com` referral parameter

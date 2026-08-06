@@ -765,3 +765,66 @@ mention share decouples from citation share (-0.229).
 platforms: 96% described accurately but 89% never mentioned in category answers;
 mentions correlate with off-site footprint, and 99.99% of category-research citations
 point to third-party sites.
+
+## 2026-05-08 — NN/g publishes "UX Writing: FAQs from Practitioners" (Anna Kaley)
+[[nngroup-ux-writing-faqs-2026]] · light supporting citations added to
+[[geo-content-optimization-tactics]] and [[aio-ctr-impact]]. UX-writing practitioner
+Q&A; AEO-relevant points ("write for people first, structure for machines second,"
+traffic→engagement KPI shift, 20–28%-read scannability) mostly corroborate existing
+wiki guidance.
+
+## 2026-07-06 — DerivateX publishes "Two Googles, One Query" (AIO vs. SERP source overlap)
+[[derivatex-two-googles-one-query-aio-vs-serp-2026]] · updated [[ai-citation-landscape]],
+[[listicles-in-ai-search]], [[geo-content-optimization-tactics]], and
+[[richsanger-ai-overview-patent-insights]]. 100 B2B-software queries: Google AI Overview
+citations share only 35% of their sources with the top-10 SERP below them (65% AIO-
+exclusive), AIO cites YouTube 7.3× more than SERP ranks it, and category divergence tracks
+third-party-listicle-ecosystem maturity.
+
+## 2026-04-10 — DerivateX publishes the "Competitor Citation Steal" framework
+[[derivatex-competitor-citation-steal-prompt-2026]] · created playbook
+[[competitor-citation-displacement]]; cross-linked from [[ai-entity-footprint-audit]],
+[[brand-entity-seo-strategy]], and [[geo-content-optimization-tactics]]. A 7-step
+artifact-level method (+ LLM prompt) for diagnosing why AI cites a competitor and
+displacing them; original vendor tactical guidance operationalizing validated GEO tactics.
+
+## 2026-07-11 — DerivateX publishes "The 4 C's of Being Explainable to AI"
+[[derivatex-4cs-explainable-to-ai-2026]] · created playbook [[explainable-to-ai-4cs]];
+cross-linked from [[ai-entity-footprint-audit]] and [[brand-entity-seo-strategy]]; logged
+an unresolved Conflicting Evidence entry in [[ai-citation-landscape]] (G2/Capterra-zero /
+vendor-self-description vs. third-party-authority guidance). Positioning framework:
+"AI recommends the companies it can explain confidently" — legibility over likeability.
+
+## 2025-11-15 — JISEM publishes Aluri, "Enhancing Developer Productivity Through Intelligent Documentation Retrieval"
+[[aluri-mcp-documentation-retrieval-2025]] · anchored new concept [[docs-over-mcp]]. MCP-server-
+over-vector-DB architecture for serving internal component-library docs to AI coding assistants.
+⚠️ Low-rigor source (no quantitative results); logged for its design patterns, not its claims.
+
+## 2026-07-20 — SIGIR '26 publishes "MCP-Focus: Function-Oriented Document Enhancement for MCP Server Retrieval"
+[[mcp-focus-server-retrieval-2026]] · extended concept [[docs-over-mcp]] (MCP server
+discoverability section). Rigorous evidence that implementation-grounded MCP docs retrieve
+better than raw self-reported docs (3,763-server benchmark, multiple dense retrievers). Dates
+to the SIGIR '26 conference (Melbourne, Jul 20–24 2026).
+
+## 2026-06-09 — geoSurge publishes "Model memory predicts which brands get searched" (study period May 29–Jun 9 2026)
+[[geosurge-model-memory-predicts-search-2026]] · updated concepts [[ai-citation-landscape]]
+and [[topical-authority-in-ai-search]]. Finding: a brand in an AI model's top-10 training
+memory is live-searched 3.2× as often as a not-remembered brand (55.7% vs. 17.4%), graded by
+recall depth — training memory biases what the model retrieves at query time. Gemini 3.5 Flash;
+associational, vendor source. Date is the study-window end (no explicit publish date on page).
+
+## 2026-05-13 — Xu, Iqbal & Montgomery (WashU) publish "Measuring Google AI Overviews" (arXiv:2605.14021v1; study window Mar 13–Apr 21 2026)
+[[xu-measuring-google-ai-overviews-2026]] · updated concepts [[aio-ctr-impact]] and
+[[ai-citation-landscape]]. Large-scale academic audit of Google AI Overviews (55,393
+trending queries, 7,583 AIOs, 98,020 atomic claims): 13.7% overall activation (64.7% for
+question-form queries; politics suppressed at 7.5%); AIO sources more credible and
+lower-UGC than the SERP with 29.8% off-page; 11.0% of claims unsupported by cited sources
+(omission-dominant, independent of source quality); 50.63% of cited pages carry ads while
+Google's own ads persist — publisher-revenue asymmetry.
+
+## 2026-08-05 — Search Engine Land publishes "10 SEO use cases for auditing your accessibility tree for AI search" (John McAlpin)
+[[sel-accessibility-tree-seo-use-cases-2026]] · created playbook [[accessibility-tree-audit-for-ai-agents]],
+updated concept [[agentic-web-optimization]]. Frames the accessibility tree (ARIA roles/names/states) as
+foundational technical SEO for the AI-agent era — agents read that layer, not the visual rendering.
+Corroborated by OpenAI's first-party ChatGPT-Atlas-uses-ARIA guidance ([[openai-publishers-developers-faq]])
+and Microsoft's Playwright MCP ([[microsoft-playwright-mcp]]), both ingested the same day.

@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo, geo]
-updated: 2026-07-30
+updated: 2026-08-06
 ---
 
 # Topical Authority in AI Search
@@ -112,6 +112,24 @@ Memo study that found Authority Score the strongest AI-mention correlate
 (0.65 Pearson); they measure different things (topic ownership vs.
 brand-level mention presence) and don't actually contradict.
 
+## Memory is the upstream input to the funnel
+
+Ownership/mention share (this page) sits downstream of a more basic
+question: is the brand in the model's *training memory* at all? Per
+[[geosurge-model-memory-predicts-search-2026]] (geoSurge, Gemini 3.5
+Flash), a brand in the model's top-10 memory was **live-searched 3.2×**
+as often as a not-remembered brand (55.7% vs. 17.4%), graded by recall
+depth. This gives a retrieval-stage mechanism for why *recognition*
+(the model knowing who you are — 96% in
+[[victorious-q2-2026-quarterly-search-report]]) precedes *mention*: a
+remembered brand is far more likely to be searched for, and therefore
+retrieved, cited, and ultimately mentioned. It reinforces the "build
+category authority *before* query time" reading of the inverse-demand
+paradox and the winnable-subtopic strategy below — the payoff of durable
+authority is partly that it seeds model memory, which then biases live
+retrieval in your favor. Caveats apply (vendor source, associational,
+brand-prominence confound) — see the source page.
+
 ## What to do about it
 
 See [[geo-content-optimization-tactics]] and
@@ -139,3 +157,6 @@ push for a ≥5-point mention-share margin to reach the durable-owner moat.
   correlates across 8 platforms and 5 verticals.
 - [[launchdarkly-ai-visibility-devrel-brief]] — the "known but rejected"
   problem this study quantifies, applied to LaunchDarkly.
+- [[geosurge-model-memory-predicts-search-2026]] — the training-memory →
+  live-search mechanism upstream of mention/ownership (3.2× search-rate
+  gap for remembered brands).

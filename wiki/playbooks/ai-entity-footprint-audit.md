@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [aeo, seo]
-updated: 2026-07-27
+updated: 2026-08-03
 ---
 
 # AI Entity Footprint Audit
@@ -23,6 +23,11 @@ asset in isolation. The question is not "is this page optimized?" but "does
 everything together let AI explain who we are, what we do, and why we matter?"
 This is an entity-level view — see [[entity-oriented-search-fundamentals]] for
 why AI models a brand as an entity assembled from many signals.
+
+For the **competitor-facing** counterpart — diagnosing why AI cites a *rival*
+instead of you and how to displace them at the artifact level — see
+[[competitor-citation-displacement]]. This audit looks inward (does AI understand
+*us*?); that playbook looks outward (what does the *competitor* own that we don't?).
 
 ## The six dimensions
 
@@ -73,7 +78,9 @@ validation).
    [Business Name]" across multiple AI platforms (ChatGPT, Claude, Gemini,
    Perplexity, Google AI Mode). Capture how each describes identity,
    specialization, differentiation, and supporting evidence — and where they
-   go vague, wrong, or contradictory.
+   go vague, wrong, or contradictory. (For a faster, positioning-specific
+   variant scored on Category/Customer/Contrast/Consistency, see the
+   two-minute self-test in [[explainable-to-ai-4cs]].)
 2. **Website review.** Do the homepage, About page, service pages, and
    structured data clearly communicate identity and differentiation? (Cross-ref
    the `Organization`-schema and entity-home work in

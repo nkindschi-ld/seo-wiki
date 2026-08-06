@@ -25,6 +25,15 @@ Rich Sanger, "AI Overview Optimization: Insights from Google's Patent" (Rich San
   ([[how-google-search-works]], [[airops-fan-out-effect-2026]]): you
   cannot get into an AI Overview without first ranking well enough to
   be a retrieval candidate at all.
+  **Nuance, not contradiction (2026-08-03)**: [[derivatex-two-googles-one-query-aio-vs-serp-2026]]
+  found 65% of AIO citations don't appear in Google's *top-10* organic.
+  This doesn't overturn the "reuses pre-ranked results" claim — a page
+  can be a ranked retrieval candidate (e.g. position 20) without
+  cracking the visible top-10 — but it does bound it: "must be a
+  retrieval candidate" is not the same as "must rank top-10," and the
+  AIO clearly draws from a wider (and differently-weighted, e.g.
+  video-heavy) pool than the top-10 shown beneath it. See that source's
+  entry in [[ai-citation-landscape]]'s AIO↔SERP divergence section.
 - **Concrete positional-inclusion data**: ranking position 1 for the
   primary query → 53% link-inclusion rate in the AI Overview; position 2
   → ~50%; inclusion drops further down. This is a different, complementary

@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-07-23
+updated: 2026-08-06
 ---
 
 # AI Citation Landscape
@@ -364,6 +364,28 @@ topic over time) *or* live retrieval. This reframes
 citations with no corresponding search result) as, in this framing, a
 training-data-sourced mention rather than a true retrieval citation.
 
+**Training memory also drives *what the model searches for* (2026-08-06):**
+the two data sources aren't cleanly independent — per
+[[geosurge-model-memory-predicts-search-2026]] (geoSurge; 9 industries,
+66 buyer questions, 1,416 brand observations; memory measured on a
+separate model, search on Gemini 3.5 Flash), **a brand in the model's
+top-10 training memory was live-searched 55.7% of the time vs. 17.4% for
+a not-remembered brand — a 3.2× gap**, graded by recall depth (top-5
+67%, rest of top-10 39%, not-remembered 17%). And 69% of the model's
+fan-out queries were generic *category* searches; of the 31% that named
+a specific brand, 63% named a top-5 remembered brand. So training memory
+isn't just a *separate* mention pathway alongside retrieval — it biases
+which brands the model bothers to *retrieve* in the first place, making
+memory an upstream input to the citation pathway too, not only the
+mention pathway. Two category regimes emerged: *memory-led* (Automotive,
+Finance — searches track recalled brands tightly) vs. *search-led*
+(strong live content can surface unremembered brands). **Caveats:**
+vendor source, explicitly associational (brand prominence is an
+acknowledged confound — prominent brands are both more remembered *and*
+more searched), undisclosed proprietary memory metric, single search
+model, some per-industry figures rest on as few as 6 prompts. Treat as a
+directional mechanism, not a measured effect size.
+
 **Practical stakes**: citations drive traffic (per
 [[aio-ctr-impact]]'s citation-premium data); mentions build presence
 even when the user never clicks — relevant given most AI interactions
@@ -683,6 +705,93 @@ above:
     overlap rising or falling over time" as genuinely open until a
     disclosed-methodology source measures it directly.
 
+### AIO ↔ SERP divergence: a disclosed-methodology mid-range data point (2026-08-03)
+
+Per [[derivatex-two-googles-one-query-aio-vs-serp-2026]] (DerivateX,
+Apoorv Sharma; 100 B2B-software buyer-intent queries, 1,259 AIO
+citations vs. 1,000 top-10 SERP results, single-session captures
+June–July 2026; methodology fully disclosed, limitations acknowledged —
+B2B-software-only and non-deterministic, so treat as directional). This
+measures the same quantity as the disputed figures above — the share of
+AIO citations that also appear in Google's own top-10 — and lands
+**squarely in the middle of the existing spread at 35%** (vs.
+[[ahrefs-b2b-seo-statistics-2025]] 76%, [[ipullrank-optimize-for-sge]]
+6.2%, [[rankability-where-seo-is-going-2026]] 17–38%, and
+[[otterly-how-to-optimize-content-for-ai-search-2026]]'s 54.5%). It
+doesn't resolve the open question, but it's one of the better-documented
+points in it. New, distinctive contributions beyond the overlap number:
+
+- **65% of AIO citations are AIO-exclusive** (don't rank in Google's own
+  top-10), and the relationship is **asymmetric**: only 42% of Google's
+  top-10 domains get cited in the AIO shown above them. The two surfaces
+  behave as "separate discovery layers with separate content
+  preferences," not one ranked list feeding the other.
+- **Ranking is necessary-but-not-sufficient, and specifically top-5.**
+  When a source *does* appear on both surfaces, 72% rank in Google's
+  **top-5** (median position #4); only 2 of the shared instances came
+  from positions #9–10. Page-2 rankings essentially never cross over.
+  This refines [[richsanger-ai-overview-patent-insights]]'s position-1/2
+  inclusion-rate finding and the retrieval-rank-gatekeeper theme above:
+  ranking well concentrates presence in the shared corpus, but can't by
+  itself buy into the AIO-exclusive 65%.
+- **Product-recommendation overlap is even lower — 28%** (72% of
+  AIO-recommended products don't rank in SERP for the same query),
+  ranging 0% (32/100 queries) to 100% (5/100).
+- **Source-type mix diverges within Google itself:** AIO over-indexes on
+  third-party listicles (63.4% vs. 55.4% SERP) and video (9.0% vs. 2.3%)
+  and under-indexes on Reddit/forums (4.7% vs. 11.0%) and review sites
+  like G2/Gartner (5.0% vs. 9.9%). The **YouTube–Reddit inversion** is
+  the largest structural gap: AIO cites YouTube 7.3× more often than SERP
+  ranks it (51 vs. 7 of 100 queries), while SERP ranks Reddit 1.9× more
+  often than AIO cites it — corroborating the heavy Google-AIO YouTube
+  reliance in [[otterly-youtube-ai-citation-study-2026]] (36.6%) and the
+  "YouTube as first-class AIO source" finding, now *within* a direct
+  same-query AIO-vs-SERP comparison. See the YouTube/Reddit provider
+  section above.
+- **Category divergence tracks listicle-ecosystem maturity:** overlap
+  ranged from ~20% (help desk, project management) to 62% (QuickBooks
+  hosting, the one category strongly tracking Google). Categories with
+  mature third-party "best-of" listicle ecosystems diverge most from
+  Google rankings; thin-listicle categories converge on them.
+
+**Rigorous academic corroboration (2026-08-06):** per
+[[xu-measuring-google-ai-overviews-2026]] (Xu, Iqbal & Montgomery / WashU;
+55,393 trending queries, 7,583 AIOs, 61,212 references) — the most
+rigorously-sourced measurement of AIO↔SERP overlap in the wiki, and it
+lands in the same mid-range: only **41.4% of AIO-cited domains appear in
+the query's top-10 organic results** (25.0% at top-5), rising to 70.2%
+across the *full* first page — so **29.8% of AIO-cited domains are
+"off-page,"** absent from the first-page SERP entirely. The authors
+conclude AIO source selection is "a mechanism distinct from Google's
+ranking algorithm." Two further findings sharpen the picture: the
+off-page references are *higher* quality than the on-page ones (PC1
+credibility 0.758 vs 0.724, UGC 3.4% vs 18.5%), and AIO-cited domains
+overall are more credible than the co-displayed first-page results (PC1
+0.732 vs 0.645, p≪0.001) — Google's AIO doesn't just re-rank the SERP, it
+reaches for a distinct, higher-authority, lower-UGC source pool. This is
+independent academic confirmation of the "separate discovery layers"
+reading, at the top-10 level closest to DerivateX's 35% and Otterly's
+54.5% (and far from Ahrefs' 76%/iPullRank's 6.2% ends of the spread).
+
+**AIO suppresses UGC relative to the SERP — not a contradiction of
+"UGC-first engine."** The same source finds AIO's UGC share is **14.2%
+vs 41.4%** on the co-displayed first page (−27.25pp, p<0.001) — AIO cites
+*less* user-generated content than Google's own organic ranking does.
+This sits against BrightEdge's characterization of Google AI Overviews as
+the most UGC-heavy of the five engines ("UGC-first engine," ~17.5-18%
+UGC) — but the two use different baselines and aren't in conflict: AIO
+uses more UGC than *ChatGPT/Gemini/Perplexity* (BrightEdge's cross-engine
+comparison) while still using less UGC than *Google's own first-page
+SERP* (this paper's within-Google comparison). Both can be true. And the
+top-cited-domain data is consistent with the heavy-YouTube finding
+elsewhere on this page — youtube.com is AIO's single most-cited domain
+(5.49%) even as aggregate UGC is suppressed.
+
+**Practical implication (reinforces existing guidance):** track AIO
+citations and Google rankings as **separate KPIs** — don't use one as a
+proxy for the other — and pursue top-5 SERP rank *and* third-party
+listicle/YouTube presence as distinct pathways into the AIO.
+
 ## Topic-specific source trust
 
 Per [[growth-memo-topics-matter-for-third-party-authority]], trusted-source
@@ -712,6 +821,50 @@ fact (1962 Mets), while with citations enabled it correctly cited a more
 recent record-holder (2024 White Sox). This reinforces
 [[google-ai-optimization-guide]]'s framing of generative answers as
 grounded in retrieval (RAG), not a static trained "understanding."
+
+## Being cited ≠ being represented accurately (claim fidelity)
+
+A dimension the wiki hadn't measured until now: even when your content is
+cited, the AI may not represent it faithfully. Per
+[[xu-measuring-google-ai-overviews-2026]] (WashU academic audit; 98,020
+atomic claims decomposed from 7,491 Google AI Overviews, verified by a
+human-validated LLM pipeline at 95.6% accuracy), **11.0% of AIO claims
+are *not supported* by the pages they cite** (89.0% Consistent). The
+failure is dominated by **omission (7.0%)** — the AIO drops or overstates
+what the source actually says — rather than outright contradiction
+(Incorrect 2.66%, Ambiguous 1.39%); omission outweighs contradiction
+~2.6:1.
+
+Three findings matter for GEO strategy:
+
+- **Fidelity is independent of source quality** (r≈0.045). Being a
+  high-authority cited source does *not* protect you from being
+  misrepresented — curating better sources doesn't fix the unsupported-
+  claim rate. The authors call unsupported claims "inherent to generative
+  AI at its current state," with a ~5.3% residual floor even under the
+  most generous assumptions (counting all uncrawled-UGC-sourced claims as
+  supported).
+- **Fidelity is highest in YMYL categories** — Health 94.8%, Politics
+  93.7%, Science 91.8% — and lowest in Autos (80.7%), Sports (81.9%), and
+  Jobs & Education (76.9%). Consistent with Google applying more
+  guardrails where errors are most consequential (see
+  [[e-e-a-t-and-page-quality]]'s YMYL framing).
+- **Practical takeaway**: because omission is the dominant failure mode,
+  content that states its key facts *self-containedly and unambiguously*
+  (rather than relying on surrounding context the AIO won't carry over)
+  is less likely to be truncated into an unsupported claim — the same
+  extractability discipline behind [[geo-content-optimization-tactics]]'s
+  chunk-level ("Fraggle") and answer-first guidance, now with an accuracy
+  rationale on top of the citation-rate one. And it's a reason to
+  *monitor how AI surfaces paraphrase you*, not just whether they cite you
+  (see [[similarweb-how-to-win-the-race-for-gen-ai-search-2026]]'s
+  sentiment-monitoring/correction guidance).
+
+This is distinct from the "citation-without-recommendation" decoupling
+(being cited but not recommended) in [[listicles-in-ai-search]] and the
+citations-vs-mentions split above: here the citation *exists and points
+to you*, but the sentence it supports misstates or omits what your page
+said.
 
 ## Conflicting Evidence
 
@@ -750,6 +903,38 @@ grounded in retrieval (RAG), not a static trained "understanding."
   since neither source directly tests the other's segmentation; until
   resolved, treat freshness guidance as vertical/source-type-dependent
   rather than a single universal age curve.
+
+- **Claim**: do third-party review platforms (G2, Capterra) or a vendor's
+  own self-description drive AI *recommendations*?
+  - Supported by (third-party matters): the review-platform-presence
+    tactic in [[geo-content-optimization-tactics]]; [[peec-ai-chatgpt-query-fanouts-2026]]
+    (ChatGPT injects "reviews" and actively searches review content);
+    [[victorious-q2-2026-quarterly-search-report]] (99.99% of
+    category-research *citations* went to third-party domains; mentions
+    correlate with referring-domains 0.49 / third-party-mentions 0.45);
+    and [[derivatex-two-googles-one-query-aio-vs-serp-2026]] (review
+    sites 5.0% of AIO citations — low but nonzero).
+  - Contradicted by: [[derivatex-4cs-explainable-to-ai-2026]]'s
+    "Authority Inversion" study (233 ChatGPT recommendations, 40
+    categories) — 84% of citations came from vendor self-descriptions or
+    niche sites, and **G2 and Capterra were cited zero times**;
+    contradictory descriptions were "actively harmful" because models
+    built answers from single clear pages.
+  - **Current best guess**: likely a *recommendations-vs-citations* and
+    *engine/sample* difference rather than a true contradiction. The
+    DerivateX finding is ChatGPT-specific, small (n=233), measures which
+    source the *recommendation text* was built from (favoring one
+    legible page), and buckets "vendor self-description **or** niche
+    sites" together — whereas the third-party-authority evidence is about
+    what earns *mentions/citations* across engines at scale. The two are
+    compatible if a vendor's own legible page drives the recommendation
+    *wording* while third-party footprint drives whether the brand is
+    *surfaced/mentioned* at all. Flagged **unresolved**; practical
+    takeaway until resolved — do both: keep third-party/review-platform
+    presence (mention-side) *and* make your own primary pages maximally
+    legible per [[explainable-to-ai-4cs]] (recommendation-wording side).
+    Don't drop review-platform work on the strength of one small
+    ChatGPT-only study.
 
 ## Conflicting Evidence — resolved
 
@@ -842,3 +1027,11 @@ grounded in retrieval (RAG), not a static trained "understanding."
   engagement, comments > upvotes, community size not predictive).
 - [[otterly-claude-ai-citation-study-2026]] — the Claude-specific citation
   mix above (64% brand-content dominance, 0.9% social media, Reddit 0%).
+- [[geosurge-model-memory-predicts-search-2026]] — the training-memory-
+  drives-live-search finding above (3.2× search-rate gap), linking the
+  training-data and live-retrieval pathways rather than treating them as
+  independent.
+- [[xu-measuring-google-ai-overviews-2026]] — the WashU academic audit
+  behind the 29.8%-off-page AIO↔SERP-divergence corroboration, the
+  AIO-vs-SERP UGC-suppression finding, and the claim-fidelity section
+  above (11% of AIO claims unsupported, omission-dominant).

@@ -156,10 +156,23 @@ access in Claude Code for reasons unrelated to model preference — that
 gap is a distinct, non-training-data disadvantage worth knowing about
 even if it's not directly actionable today.
 
+## 11. Consider serving your docs over MCP
+
+Expose an MCP server that fronts your API/product docs so a coding agent
+pulls live, task-scoped, correct references inline instead of relying on
+its training cutoff or a stale crawl — directly attacking the
+hallucinated/outdated-code failure mode that costs you the pick. Treat
+it as a complement to clean public docs (only agents with your server
+installed benefit), and judge it by whether the agent can retrieve the
+*right chunk* and act on it immediately. See [[docs-over-mcp]] for the
+good/bad tradeoffs and build patterns.
+
 ## See also
 
 - [[ai-coding-agent-tool-selection]] — the underlying concept and study
   data this playbook is built on.
+- [[docs-over-mcp]] — serving documentation as an agent-callable tool
+  (expanded form of point 11).
 - [[generative-engine-optimization]] — the broader GEO/AEO discipline;
   this playbook is its coding-agent-specific, tool-vendor-facing
   counterpart to [[geo-content-optimization-tactics]].

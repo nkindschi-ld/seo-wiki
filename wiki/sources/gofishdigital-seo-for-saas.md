@@ -54,6 +54,14 @@ Chris Long, "SaaS SEO: The Ultimate Guide" (Go Fish Digital, 2023-09-10).
   in this wiki, are vendor/agency-reported rather than independently
   verified.
 
+## Related
+
+- [[sel-mofu-keywords-2025]] generalizes this guide's SaaS-specific
+  comparison/features/industries/alternatives page taxonomy into a
+  vertical-agnostic five-type MOFU keyword taxonomy (comparison, best-of,
+  feature-driven, industry-specific, pain-solution) — see the funnel-mapping
+  section in [[keyword-mapping-and-cannibalization]].
+
 ## Updated
 
 - [[saas-seo-strategy]] — added an "aggregator competition" section

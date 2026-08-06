@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-07-29
+updated: 2026-08-06
 ---
 
 ## Priority Framework
@@ -320,6 +320,16 @@ audit workflow). Quick-reference for this audit:
     the HTML/DOM itself — an agent needs the page's HTML to be a
     truthful record of current state, not just visually correct after
     client-side JS runs.
+- **Accessibility-tree legibility** — browsing/computer-use agents
+  (ChatGPT Atlas, Playwright-MCP-based tools) perceive and operate a page
+  through the **accessibility tree** (ARIA roles/names/states), not the
+  pixels — OpenAI confirms Atlas "uses ARIA tags … to interpret page
+  structure and interactive elements" ([[openai-publishers-developers-faq]]).
+  Controls without a role and accessible name are effectively invisible to
+  them, and content that only reaches the tree after client-side JS is
+  invisible too. Audit the tree on money pages, fix with native HTML
+  first, and gate regressions with CI ARIA snapshots — full workflow in
+  [[accessibility-tree-audit-for-ai-agents]].
 
 ## See also
 
@@ -366,6 +376,9 @@ audit workflow). Quick-reference for this audit:
 - [[optimizing-for-coding-agent-recommendations]] — a sibling
   "agent readiness" domain, but for coding agents choosing tools rather
   than shopping/browsing agents acting on a page.
+- [[accessibility-tree-audit-for-ai-agents]] — the accessibility-tree/
+  ARIA audit workflow behind §5's agent-readiness item (how agents
+  perceive and operate a page at the markup level).
 - [[optimizing-for-the-agentic-web]] — the layers 2-5 that build on top
   of this checklist's layer-1 technical foundations: agent-parseable
   content, off-site consistency, an operable action layer, and the

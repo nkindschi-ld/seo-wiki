@@ -1846,3 +1846,215 @@ citation dominance + 0.10%-naming-on-problem-prompts, >12x down-funnel lift),
 [[geo-content-optimization-tactics]] (stage-matched + vertical-specific off-site
 strategy), and [[launchdarkly-ai-visibility-devrel-brief]] (external backing for the
 "known but rejected" hook). Updated index.
+
+## [2026-07-31] query | "SEO/GEO/AEO on-page optimization for /blog/safe-innovation-generative-ai-financial-services/"
+Reviewed the LaunchDarkly GenAI-in-financial-services blog against
+[[link-and-anchor-text-best-practices]], [[geo-content-optimization-tactics]], and the
+seo-meta-tags skill specs. Grounded in the page's GSC export (90d: 775 impressions,
+avg pos 6.67, **0 clicks / 0% CTR**) and Semrush demand ("generative ai in financial
+services" 320 vol / KD 42; "ai in financial services" 1,300; "generative ai in banking"
+880). Scoped to title, meta description, H2/H3, keyword insertion, and internal linking —
+no new content/claims. Recommendations delivered in chat (not yet filed as a page).
+
+## [2026-08-03] ingest | NN/g — UX Writing: FAQs from Practitioners (Kaley, 2026)
+Anna Kaley/Nielsen Norman Group practitioner Q&A (published 2026-05-08). Primarily a
+UX-writing-craft article; ingested per user's "source page + light cross-links" scope
+decision for its narrow, mostly-corroborative AEO/GEO slice (no study of its own).
+Created source [[nngroup-ux-writing-faqs-2026]] and raw archive. Light supporting-
+citation notes added to [[geo-content-optimization-tactics]] ("write for people first,
+structure for machines second"; answer-first principles unchanged; NN/g 20–28%-read
+scannability rationale) and [[aio-ctr-impact]] (traffic→engagement KPI shift in the
+zero-click era). Flagged a non-conflict nuance in the source page: NN/g's human-
+comprehension 6th–8th-grade reading level is a different dependent variable from
+[[airops-fan-out-effect-2026]]'s college-level AI-citation correlation. Updated index.
+
+## [2026-08-03] ingest | DerivateX — "Two Googles, One Query" (Google AIO vs. SERP source overlap)
+Apoorv Sharma/DerivateX Research benchmark (published 2026-07-06; disclosed methodology,
+100 B2B-software buyer-intent queries, 1,259 AIO citations vs. 1,000 top-10 SERP results,
+single-session June–July 2026 — directional, B2B-only). Full ingest per user scope choice.
+Created source [[derivatex-two-googles-one-query-aio-vs-serp-2026]] and raw archive.
+Headline: AIO↔SERP source overlap only 35% (65% AIO-exclusive), 28% product overlap,
+shared sources concentrate top-5 (median #4), YouTube–Reddit inversion (AIO 7.3× more
+YouTube than SERP; SERP 1.9× more Reddit than AIO), source-type mix (AIO listicles 63.4% /
+video 9%), category divergence by listicle-ecosystem maturity (~20% help desk → 62%
+QuickBooks hosting). Updated [[ai-citation-landscape]] (new AIO↔SERP divergence subsection;
+35% placed as a disclosed-methodology mid-range point among the open Ahrefs-76%/iPullRank-
+6.2%/Rankability-17-38%/Otterly-54.5% spread), [[listicles-in-ai-search]] (63.4% AIO
+listicle share + maturity-divergence pattern), [[geo-content-optimization-tactics]]
+(top-5 necessary-not-sufficient + separate-KPI note in patent-mechanics section), and
+[[richsanger-ai-overview-patent-insights]] (nuance note: 65%-AIO-exclusive bounds but
+doesn't contradict "AIO reuses pre-ranked results" — retrieval candidate ≠ top-10). Updated
+index. No formal Conflicting Evidence entry logged — the overlap figure joins an
+already-flagged open question rather than creating a new contradiction.
+
+## [2026-08-03] ingest | DerivateX — "Competitor Citation Steal" framework (Sharma, 2026)
+Apoorv Sharma/DerivateX original tactical framework + LLM prompt (published 2026-04-10);
+tactical companion to [[derivatex-two-googles-one-query-aio-vs-serp-2026]]. Full ingest as
+a new playbook per user scope choice. Created source
+[[derivatex-competitor-citation-steal-prompt-2026]], raw archive, and new playbook
+[[competitor-citation-displacement]] (7-step method: Citation Mapping → Gap Autopsy →
+Steal Matrix → Artifact Blueprints → Entity Line Standardization → 30-day calendar →
+weekly diagnostic; the copy-paste prompt is paraphrased, not reproduced verbatim —
+proprietary/copyright). Method treated as original vendor guidance sound because it
+operationalizes independently-validated tactics; cited evidence (AirOps, SE Land, SE
+Ranking, Wix) mostly corroborates existing wiki sources; one new-but-secondhand stat
+(Stacker multi-publication +325%) logged as unverified; case studies (REsimpli, Gumlet
+20%-inbound-revenue) flagged as vendor claims, not evidence. Added inbound cross-links
+from [[ai-entity-footprint-audit]] (competitor-facing counterpart), [[brand-entity-seo-strategy]]
+(Entity Line Standardization ↔ consistent-definition step), and
+[[geo-content-optimization-tactics]] (third-party-authority section). Updated index.
+
+## [2026-08-03] ingest | DerivateX — "The 4 C's of Being Explainable to AI" (Sharma, 2026)
+Apoorv Sharma/DerivateX original positioning framework (published 2026-07-11); third
+DerivateX/Sharma source in the wiki. Full ingest as a new playbook per user scope choice.
+Created source [[derivatex-4cs-explainable-to-ai-2026]], raw archive, and new playbook
+[[explainable-to-ai-4cs]] (the 4 C's — Category/Customer/Contrast/Consistency — + a
+two-minute 4-engine self-test; "legible beats liked" thesis). Attached first-party data:
+50-company/1,400-prompt benchmark (half <50/100 AI presence despite high favorability —
+corroborates [[victorious-q2-2026-quarterly-search-report]] recognition-vs-mention gap and
+[[ai-shortlist-effect]]); and the n=233 "Authority Inversion" study. Inbound cross-links
+added from [[ai-entity-footprint-audit]] (fast positioning-specific self-test variant) and
+[[brand-entity-seo-strategy]] (messaging-legibility layer). Company scores (Clio 89,
+ServiceTitan 68 vs. Jobber 41) treated as illustrative, not validated. Updated index.
+
+## [2026-08-03] conflict | third-party review platforms vs. vendor self-description as the driver of AI recommendations
+[[derivatex-4cs-explainable-to-ai-2026]]'s "Authority Inversion" study (n=233 ChatGPT
+recommendations, 40 categories) found 84% of citations came from vendor self-descriptions/
+niche sites and **G2/Capterra cited zero times** — in tension with the wiki's
+third-party-authority/review-platform guidance ([[geo-content-optimization-tactics]]'s
+review-platform tactic; [[victorious-q2-2026-quarterly-search-report]]'s 99.99%
+third-party category-research citations + referring-domains/third-party-mention
+correlates; and DerivateX's own [[derivatex-two-googles-one-query-aio-vs-serp-2026]]
+5%-AIO-review-site figure). Logged as **unresolved** Conflicting Evidence in
+[[ai-citation-landscape]] with a recommendations-vs-citations / engine-and-sample
+reconciliation (ChatGPT-only, small n, "vendor self-description OR niche sites" combined
+bucket); caveat also added to the geo review-platform tactic. Not resolved — practical
+guidance: do both (mention-side third-party presence + recommendation-wording legibility).
+
+## [2026-08-03] ingest | Search Engine Land — MOFU Keywords Guide (Edwards, 2025)
+Katlyn Edwards/Search Engine Land classic-SEO guide (last updated 2025-11-27); no
+AI/AEO/GEO content, heavily overlapping the wiki's existing funnel/keyword-mapping/SaaS
+coverage. Source page + light cross-links per user scope choice. Created source
+[[sel-mofu-keywords-2025]] and raw archive. Added a "Map keywords to funnel stage
+(ToFu/MoFu/BoFu)" section to [[keyword-mapping-and-cannibalization]] capturing the three
+additive bits (vertical-agnostic five-type MOFU keyword taxonomy; funnel-stage internal
+linking; GA4 assisted-conversion + multi-touch attribution measurement) and generalizing
+the SaaS-specific comparison/features/industries taxonomy in [[gofishdigital-seo-for-saas]]
+to any vertical. Added a "Related" pointer in [[gofishdigital-seo-for-saas]]. No timeline
+entry (evergreen guide, not a dated real-world event). Updated index.
+
+## [2026-08-06] ingest | Aluri — Enhancing Developer Productivity Through Intelligent Documentation Retrieval (JISEM 2025)
+Ingested a query-prompted source: client asked how dev docs served over MCP shape the
+agentic experience, and what's good/bad about that format. Filed [[aluri-mcp-documentation-retrieval-2025]]
+with a prominent ⚠️ rigor caveat — it's an architecture/design article with ZERO quantitative
+results (no sample sizes, no measured values, low-tier JISEM special-issue venue,
+AI-generated-sounding prose, secondary references), so all "productivity/quality benefit"
+claims are logged as unsubstantiated. Salvageable part is the design patterns (MCP-server-as-
+middleware, code-aware chunking, hard/soft metadata filters with adaptive relaxation,
+per-collection similarity thresholds, context-window transformation/ranking, selective-
+disclosure security). Created concept [[docs-over-mcp]] (docs as an agent-callable tool vs.
+an HTML page an agent crawls; four-axis agentic-experience framework; good/bad tradeoffs;
+public-vs-internal use cases) — this fills a gap flagged in the preceding query. Cross-linked
+from [[agentic-web-optimization]] (see-also) and added point 11 + see-also to
+[[optimizing-for-coding-agent-recommendations]]. Updated index.
+
+## [2026-08-06] query | "how do we consider the agentic experience of content served over mcp? what's good/bad about that format?"
+Client question re: developer docs showing up in MCP. Answered from [[agentic-web-optimization]]
+and [[optimizing-for-coding-agent-recommendations]]; synthesized the docs-over-MCP framing
+(docs as a callable tool, four-axis eval, good/bad list). Flagged the missing concept page,
+then filled it via the ingest above ([[docs-over-mcp]]).
+
+## [2026-08-06] ingest | MCP-Focus — Function-Oriented Document Enhancement for MCP Server Retrieval (SIGIR '26)
+Ingested via URL (dl.acm.org/doi/10.1145/3805712.3809582). ACM PDF/landing returned HTTP 403
+to WebFetch — assembled citation, abstract summary, method, and benchmark from the SIGIR
+proceedings listing, web search, and the authors' public repo (github.com/JingWC/MCP-Focus);
+saved a metadata raw record at raw/studies/mcp-focus-server-retrieval-2026.md noting the
+paywall. High-rigor SIGIR paper: MCP *server retrieval* framed as its own IR problem; raw
+self-reported server docs (README + tool name/description/input-schema) are weak retrieval
+signals; MCP-Focus generates implementation-grounded docs via white-box code analysis
+(Tool Parser → tool-doc refinement → server-doc synthesis) that consistently beat raw-doc
+baselines across multiple dense retrievers on a 3,763-server benchmark (exact magnitudes not
+accessible behind paywall; direction corroborated by multiple public sources). Filed
+[[mcp-focus-server-retrieval-2026]]. Extended [[docs-over-mcp]] with an "MCP server
+discoverability / retrievability" section and upgraded its "tool descriptions are an
+optimization surface" claim from asserted → empirically supported. Annotated
+[[aluri-mcp-documentation-retrieval-2025]] with a corroboration note (its doc-quality premise
+is now rigorously supported, even though its outcome claims remain unmeasured). Updated index.
+
+## [2026-08-06] ingest | MCP-Focus (SIGIR '26) — verified against full PDF
+User supplied the full PDF (raw/studies/mcp-focus-server-retrieval-2026.pdf) after the ACM
+403 during the initial URL ingest. Verified all previously-filed claims against the paper:
+title/authors/venue/DOI/repo/benchmark-size (3,763 servers) all correct; direction of finding
+correct. Corrections/upgrades made: pipeline stage names fixed to Tool Extractor → Tool
+Document Refiner → Server Document Refiner (previously "Tool Parser / -Refinement"); removed
+the "paywalled / magnitudes unconfirmed" caveats across the raw record, source page, concept
+[[docs-over-mcp]], and index; added exact figures (BM25 r@10 ~0.48→~0.73; BGE best; 6
+retrievers; generalizes to MCP-Bench/MCP-Universe; beats RepoAgent same-LLM; Tool Document
+Refiner is the highest-impact stage in ablation). Benchmark detail added: 1,000 queries each
+for 1/2/3-function settings; Table 1 audit shows ~85% of popular servers have missing/poor
+tool-output docs. Now a fully-confirmed high-rigor source.
+
+## [2026-08-06] query | "Write a concise non-SEO-audience guide to writing meta tags (page titles & descriptions)"
+
+Answered and filed as a new playbook [[writing-meta-tags]]. Pulled
+LaunchDarkly's current positioning from Glean (Platform Messaging
+Framework, Mar 2026: "runtime control plane for features and agents,"
+tagline "Move at AI speed. Stay in control," Release/Observe/Iterate
+pillars) to ground the example titles/descriptions in current messaging
+rather than legacy feature-flag framing. Guide covers what meta tags
+are, why they matter, length/keyword/uniqueness rules, good-vs-bad
+examples, and per-content-type guidance (informational/product/solution/
+thought-leadership). Cross-links [[traditional-seo-ranking-factors]] and
+[[aio-ctr-impact]]; points to the `seo-meta-tags` skill for the strict
+formatting spec. Added to index under Playbooks.
+
+## [2026-08-06] query | "Any downside/upside to keeping the deprecated meta keywords tag? Do AI crawlers read it?" — filed as new concept [[meta-keywords-tag]], cross-linked from [[writing-meta-tags]]
+
+## [2026-08-06] ingest | geoSurge — "Model memory predicts which brands get searched"
+Vendor study (geoSurge; 9 industries, 66 buyer questions, ~4,000 responses,
+1,416 brand observations; memory measured on a separate model, search on
+Gemini 3.5 Flash; May 29–Jun 9 2026). Core finding: a brand in the model's
+top-10 training memory was live-searched 55.7% of the time vs. 17.4% for a
+not-remembered brand — a 3.2× gap, graded by recall depth (top-5 67% / rest
+of top-10 39% / not-remembered 17%). Adds a retrieval-stage mechanism: training
+memory biases *what the model searches for*, linking the training-data and
+live-retrieval pathways the wiki had treated as parallel. Filed source
+[[geosurge-model-memory-predicts-search-2026]]; updated concepts
+[[ai-citation-landscape]] (training/retrieval section) and
+[[topical-authority-in-ai-search]] (memory as upstream funnel input).
+Flagged rigor caveats: vendor source, explicitly associational (brand-prominence
+confound), undisclosed proprietary memory metric, single search model, some
+per-industry figures on as few as 6 prompts.
+
+## [2026-08-06] ingest | Xu, Iqbal & Montgomery — "Measuring Google AI Overviews" (arXiv:2605.14021v1)
+High-rigor WashU academic audit: 55,393 trending queries × 19 categories × 40 days
+(Mar 13–Apr 21 2026), 7,583 AIOs, 61,212 references, 98,020 atomic claims; disclosed
+methodology, human-validated LLM pipelines (extraction F1 90.1%, verification 95.6%).
+Four findings mapped across pages: (1) 13.7% overall activation / 64.7% question-form /
+7.5% politics-suppressed → added as a third low-side data point to the AIO-prevalence
+Conflicting Evidence in [[aio-ctr-impact]] with a trending-query sampling-frame caveat;
+(2) 29.8% of AIO-cited domains off-page (41.4% top-10 overlap) + AIO more credible /
+lower-UGC than SERP → corroborates and sharpens the AIO↔SERP-divergence section in
+[[ai-citation-landscape]], with a reconciliation against BrightEdge's "UGC-first engine"
+framing (different baselines, no conflict); (3) 11.0% of AIO claims unsupported by cited
+pages, omission-dominant, independent of source quality → NEW "claim fidelity" section in
+[[ai-citation-landscape]] (being cited ≠ being represented accurately); (4) 50.63% of
+AIO-cited pages carry ads while Google's ads persist → new publisher-economics section in
+[[aio-ctr-impact]], including independent corroboration of the ~38% organic-click-reduction
+figure (Agarwal & Sen 2026, cited within the paper). Saved raw PDF + extraction; filed
+source [[xu-measuring-google-ai-overviews-2026]]. No new Conflicting Evidence entries —
+findings extend/corroborate existing claims.
+
+## [2026-08-06] ingest | Accessibility-tree cluster (SEL McAlpin + OpenAI Publishers/Developers FAQ + microsoft/playwright-mcp)
+Three related sources ingested together around one thesis: AI browsing/computer-use agents
+perceive and operate web pages via the **accessibility tree** (ARIA roles/names/states), not
+pixels. (1) [[sel-accessibility-tree-seo-use-cases-2026]] — John McAlpin/Search Engine Land,
+10-use-case accessibility-tree SEO audit; (2) [[openai-publishers-developers-faq]] — OpenAI
+first-party: ChatGPT Atlas reads ARIA, plus the OAI-SearchBot/GPTBot/ChatGPT-User taxonomy and
+noindex/utm nuances; (3) [[microsoft-playwright-mcp]] — Microsoft's agent-browser MCP server
+that operates on accessibility snapshots ("not pixel-based input"). Created new playbook
+[[accessibility-tree-audit-for-ai-agents]]; added a "how agents perceive a page" section to
+concept [[agentic-web-optimization]]; extended [[optimizing-for-the-agentic-web]]'s ARIA bullet
+and [[technical-seo-audit-checklist]]'s §5 agent-readiness item; upgraded [[robots-txt-strategy]]
+with OpenAI's first-party crawler-function clarifications. No conflicts — the two primary/first-
+party sources corroborate the practitioner article's central mechanism.

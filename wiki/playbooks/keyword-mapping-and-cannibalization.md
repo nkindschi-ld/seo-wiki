@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-07-24
+updated: 2026-08-03
 ---
 
 Why / when to use this: before investing in content or internal linking,
@@ -97,6 +97,35 @@ prompt/model optimization feature should target "prompt optimization,"
 product name) — keep the product name as an entity mentioned throughout
 the page, not the primary target keyword, and revisit the seed keyword
 once/if the feature name itself starts accruing volume.
+
+## Map keywords to funnel stage (ToFu/MoFu/BoFu)
+
+Per [[sel-mofu-keywords-2025]] — a funnel-intent layer on top of the mapping
+process above. When assigning a query to a page, also tag its **funnel stage**,
+since intent-stage determines the content format and CTA, not just the target
+URL. Middle-of-funnel (evaluation-stage) keywords are the highest-leverage but
+most-neglected band: more volume than bottom-of-funnel branded terms, better
+conversion than top-of-funnel awareness terms, and typically lower CPC than BOFU
+(a CPC gap between two related terms is itself a useful MoFu-vs-BoFu signal).
+
+- **Five MOFU keyword patterns to look for** when clustering: comparison
+  ("X vs Y"), best-of lists ("best X for Y"), feature-driven ("CRM with WhatsApp
+  integration"), industry-specific ("accounting software for freelancers"), and
+  pain-solution ("how to reduce churn in SaaS"). This generalizes the
+  SaaS-specific comparison/features/industries/alternatives taxonomy in
+  [[gofishdigital-seo-for-saas]] and [[semrush-saas-seo]] to any vertical — the
+  same page types the wiki's listicle/comparison guidance already favors for AI
+  citation (see [[listicles-in-ai-search]]), now framed by buyer stage.
+- **Link across funnel stages deliberately**: from a MoFu page, link *down* to
+  BoFu product/pricing pages, *up* to ToFu educational content, and *laterally*
+  to related MoFu pages — a stage-aware application of the internal-linking
+  guidance in [[link-and-anchor-text-best-practices]].
+- **Measure MoFu on assisted conversions, not direct ones.** MoFu content rarely
+  converts on the same visit (evaluation runs days-to-months), so use GA4 Path
+  Exploration (enter MoFu page titles at Step +1 to see downstream conversion
+  paths) and a multi-touch attribution model (time-decay / position-based /
+  data-driven) rather than last-click. Expect higher time-on-page, lower bounce,
+  and deeper scroll than ToFu as the MoFu-health signal.
 
 ## Tools referenced
 

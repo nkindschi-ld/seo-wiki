@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-07-07
+updated: 2026-08-06
 ---
 
 # Agentic Web Optimization
@@ -68,6 +68,45 @@ purchasing only opened to U.S. users in February 2026. Treat this layer
 as an emerging bet, not yet a mainstream requirement — but one worth
 tracking given how recently all four standards appeared.
 
+## How agents perceive a page: the accessibility tree, not pixels
+
+The concrete mechanism beneath layers 2 and 4: browsing/computer-use
+agents read the **accessibility tree** — the semantic layer of ARIA
+roles, accessible names, and states that the browser builds from the DOM,
+long used by screen readers — rather than the visual rendering. This is
+now first-party confirmed and embodied in tooling, not just inferred:
+
+- **OpenAI (first-party):** per [[openai-publishers-developers-faq]],
+  "ChatGPT Atlas uses ARIA tags — the same labels and roles that support
+  screen readers — to interpret page structure and interactive elements,"
+  and "making your website more accessible helps ChatGPT Agent in Atlas
+  understand it better."
+- **Tooling:** per [[microsoft-playwright-mcp]], Microsoft's agent-browser
+  MCP server "uses Playwright's accessibility tree, not pixel-based input.
+  No vision models needed, operates purely on structured data" — agents
+  get hierarchical **accessibility snapshots** (role/name/state), not
+  screenshots (lower token cost, deterministic targeting).
+- **SEO framing:** per [[sel-accessibility-tree-seo-use-cases-2026]],
+  agents "ignore visual design, hero images, brand colors" and read only
+  what's in the tree; role/name/state decide whether an interaction is
+  even *discoverable*, and heading hierarchy drives content segmentation.
+
+**Consequences that reframe the stack:**
+- An element with no role or accessible name (an icon-only button, a
+  `div`-based control) is effectively invisible/inoperable to an agent,
+  no matter how it looks — this is what layer 4 ("clearly labeled buttons")
+  concretely means at the markup level.
+- Content that only reaches the tree *after* client-side JavaScript "is
+  invisible to any agent" — layer 1's JS-rendering concern
+  ([[technical-seo-audit-checklist]], [[vercel-rise-of-the-ai-crawler]]),
+  now expressed in accessibility-tree terms.
+- The fix is **native HTML first** (`<button>`, `<label>`), ARIA only as a
+  fallback — sloppy ARIA misleads both screen-reader users *and* agents.
+  Accessibility legibility and agent legibility are the same work.
+
+See [[accessibility-tree-audit-for-ai-agents]] for the audit playbook
+(10 use cases + tooling) built on this mechanism.
+
 ## Why this differs from citation-focused GEO
 
 [[generative-engine-optimization]] and [[ai-citation-landscape]] are
@@ -99,3 +138,14 @@ traffic.
   its own ecommerce/agentic-commerce readiness section.
 - [[optimizing-for-the-agentic-web]] — actionable tactics and
   measurement framework drawn from this concept.
+- [[docs-over-mcp]] — the docs-specific application of the protocol
+  layer (MCP): serving documentation as an agent-callable tool.
+- [[accessibility-tree-audit-for-ai-agents]] — the audit playbook for the
+  accessibility-tree perception mechanism (layers 2/4 at the markup level).
+- [[openai-publishers-developers-faq]] — OpenAI's first-party confirmation
+  that ChatGPT Atlas reads ARIA, plus its OAI-SearchBot/GPTBot/ChatGPT-User
+  crawler taxonomy.
+- [[microsoft-playwright-mcp]] — agent-browser tooling that operates on
+  accessibility snapshots, not pixels.
+- [[sel-accessibility-tree-seo-use-cases-2026]] — the SEO framing of the
+  accessibility tree as agent-perception layer.

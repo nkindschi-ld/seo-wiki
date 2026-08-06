@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-07-29
+updated: 2026-08-03
 ---
 
 
@@ -307,6 +307,15 @@ Overviews:
   53% link-inclusion rate at position 1, ~50% at position 2, dropping
   meaningfully further down — ranking top-2, not just top-10, is the
   target if the primary keyword is your inclusion pathway.
+  **Corroborating same-query overlap data (2026-08-03)**: per
+  [[derivatex-two-googles-one-query-aio-vs-serp-2026]] (100 B2B-software
+  queries), when a source appears in *both* the AIO and the SERP, 72% of
+  the time it ranks in Google's **top-5** (median #4) — page-2 rankings
+  almost never cross over. But ranking is necessary-not-sufficient: 65%
+  of AIO citations don't rank in Google's own top-10 at all, so top-5
+  rank buys into the shared corpus, not the AIO-exclusive majority.
+  **Track AIO citations and Google rankings as separate KPIs** — one is
+  not a proxy for the other.
 - **The related/reformulated-query pathway is the bigger lever**:
   targeting adjacent, less-competitive related queries raised link
   inclusion from 46% to over 67% in the cited research — often a more
@@ -510,7 +519,18 @@ Per [[google-ai-optimization-guide]], Google explicitly says these do
 - Rewriting content in a way that's specifically "for AI" rather than for
   people — write for people first (see
   [[generative-engine-optimization]]'s Conflicting Evidence section on
-  how this squares with the tactics above).
+  how this squares with the tactics above). Corroborated by
+  [[nngroup-ux-writing-faqs-2026]] (NN/g, qualitative practitioner
+  guidance, not a study): "Write for people first. Structure it for
+  machines second," with SEO/AEO/GEO principles held unchanged —
+  "clear structure, plain language, descriptive headings, direct answers
+  near the top" (the answer-first pattern). Its scannability data (NN/g
+  eyetracking: users read only 20–28% of page text; readers scan and
+  enter pages mid-way) is a human-readability rationale for the atomic-
+  structure/descriptive-heading tactics above. *Caveat:* NN/g's
+  6th–8th-grade reading-level advice targets human comprehension, a
+  different outcome from [[airops-fan-out-effect-2026]]'s college-
+  reading-level *AI-citation* correlation — don't conflate the two.
 
 ## C-SEO Bench: a large-scale re-test of the Tier 1-3 tactics above
 
@@ -756,6 +776,11 @@ the wiki's general "track presence per topic" guidance:
 
 ## Third-party authority building (topic-specific)
 
+> For a **competitor-displacement** framing of these same artifact +
+> off-site-seeding tactics — diagnosing which specific artifact earns a rival's
+> citation and building to take it — see the [[competitor-citation-displacement]]
+> playbook.
+
 Per [[growth-memo-topics-matter-for-third-party-authority]] — extends the
 three-layer source strategy above with tactics specifically for earning
 third-party citations/mentions:
@@ -895,7 +920,13 @@ target query:
   or category-equivalent) since ChatGPT actively searches review
   content even when the user didn't ask for it — this shapes brand
   description regardless of whether your own site ranks for the
-  literal query. Per
+  literal query. **Caveat (unresolved conflict)**: [[derivatex-4cs-explainable-to-ai-2026]]'s
+  small (n=233) ChatGPT-only "Authority Inversion" study found G2 and
+  Capterra cited *zero* times, with 84% of recommendation citations from
+  vendor self-descriptions/niche sites — see [[ai-citation-landscape]]'s
+  Conflicting Evidence section. Don't drop review-platform work on that
+  single study, but pair it with making your own primary pages maximally
+  legible (see [[explainable-to-ai-4cs]]). Per
   [[firstpagesage-searchgpt-optimization-2025-guide]] (no disclosed
   methodology, treat as directional rather than measured) — Clutch,
   CNET, Capterra, TrustPilot, and the Better Business Bureau round out

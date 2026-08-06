@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-07-27
+updated: 2026-08-03
 ---
 
 > To *diagnose* how well AI already understands the brand this playbook builds
@@ -16,7 +16,9 @@ machine-readable entity signals. Complements
 content) by treating the **brand itself** as the entity being built out,
 and complements [[geo-content-optimization-tactics]] (which optimizes
 *how* to write for AI citability) by deciding *what* to build and *why*
-for brand-recognition purposes specifically.
+for brand-recognition purposes specifically. For the *messaging-legibility*
+layer — stating one plain category, narrow customer, and single differentiator
+consistently so AI can explain you confidently — see [[explainable-to-ai-4cs]].
 
 ## What "brand" means to a machine
 
@@ -145,6 +147,10 @@ Content alone doesn't build brand-entity signals — distribution does:
 - The goal is a **virtuous flywheel**: amplification → mentions →
   co-citations → backlinks → stronger entity signals → more
   amplification.
+- When the amplification target is specifically *displacing a competitor's*
+  AI citations, the "Entity Line Standardization" step of
+  [[competitor-citation-displacement]] applies this same consistent-definition
+  discipline to the exact claims a rival currently owns.
 - **Worked examples**: Spotify Wrapped reliably produces a December
   spike in branded search; Games Workshop's YouTube product
   announcements (e.g. the 2024 Age of Sigmar launch) measurably drove

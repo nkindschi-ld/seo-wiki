@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-07-22
+updated: 2026-08-06
 ---
 
 # AIO Impact on Google CTR
@@ -77,6 +77,14 @@ existing conversions. **A falling CTR on cited queries is not
 automatically bad news** if it's driven by an impressions surge rather
 than a clicks decline. Always look at impressions and clicks separately
 before drawing conclusions from a CTR number alone.
+
+**KPI corollary (qualitative).** Per [[nngroup-ux-writing-faqs-2026]]
+(NN/g practitioner guidance, not a study), because AI surfaces intercept
+searches before the click, content-success measurement should shift from
+raw **traffic** toward **engagement, conversion, task-completion, and
+return visits**. A qualitative complement to this page's quantitative
+zero-click findings: the same click that no longer happens is why
+traffic alone is a shrinking proxy for content value.
 
 ## AIO prevalence depends heavily on query intent and format
 
@@ -205,6 +213,36 @@ mix:
   positions simultaneously — within the AI Overview summary, among its
   citation sources, in organic rankings, and in paid placements.
 
+## Publisher economics: the click leaves, the ad stays (academic audit)
+
+Per [[xu-measuring-google-ai-overviews-2026]] (Xu, Iqbal & Montgomery /
+WashU; arXiv, 55,393 trending queries, 40 days, Mar–Apr 2026) — an
+independent academic look at the *publisher-revenue* side of AIO
+economics that this page had only covered from the CTR direction:
+
+- **50.63% of AIO-cited pages carry visible display advertising** (30,994
+  of 61,212 references) — and that's a conservative floor, since social/
+  video references weren't crawled for ads. So for the majority of cited
+  pages, AIO click-suppression translates directly into lost ad revenue.
+  Ad-supported share is highest in Hobbies & Leisure (63.1%), Sports
+  (60.2%), and Food & Drink (57.9%); lowest in Health/Travel/Autos
+  (~27–28%).
+- **Google's own ads are largely undisturbed**: only 2.16% of AIO-bearing
+  SERPs carried a Google sponsored ad and none appeared *inside* the AIO
+  container — so the same SERP that suppresses the publisher's organic
+  click leaves Google's ad inventory intact. The authors frame this as an
+  economic **asymmetry** and a content-quality **feedback-loop risk**
+  (sustained traffic loss disincentivizes the very content AIOs synthesize).
+- **Independent corroboration of this page's ~38% figure**: the paper
+  imports (rather than independently measures) downstream click effects,
+  citing Agarwal & Sen (2026) that AIOs reduce organic clicks ~**38%** and
+  raise zero-click searches ~**33%**. The 38% click reduction lands right
+  on this page's own Seer-derived "-38% below a no-AIO baseline" finding
+  above — two unrelated methodologies converging on the same magnitude.
+  Also cited: Wikipedia traffic −~15% attributable to AIOs (Khosravi &
+  Yoganarasimhan 2026), and case losses (Stereogum −70% ad revenue, The
+  Planet D −90% traffic). Treat these as second-hand within this source.
+
 ## AI recommendation → downstream visit impact
 
 Per [[similarweb-downstream-impact-of-ai-visibility-2026]] (opted-in US
@@ -306,9 +344,20 @@ floors, not predictions.
     contradicted by [[sel-what-is-generative-engine-optimization-geo-2026]]
     (2026-02, same rough timeframe), which independently put the figure
     at "at least 16%."
-  - **Current best guess**: the 50%+ figure looks overstated. Two
+    A third independent data point on the low side (2026-08-06):
+    [[xu-measuring-google-ai-overviews-2026]] (WashU academic audit,
+    55,393 queries) measured **13.7% overall activation**. Caveat: its
+    sampling frame is *trending* Google Trends queries (news/entertainment-
+    skewed), a different frame than Semrush's keyword panel, so it isn't
+    strictly comparable — but it's the most rigorous single activation
+    number in the wiki and lands squarely in the 13-16% cluster, not near
+    50%. Note also its striking **query-format** dependence (question-form
+    queries 64.7% vs non-question 9.5%), which means a headline "overall"
+    prevalence figure is highly sensitive to the query mix sampled — part
+    of why these studies disagree.
+  - **Current best guess**: the 50%+ figure looks overstated. Three
     independent, differently-sourced measurements from roughly the same
-    window (Nov 2025-Feb 2026) converge around 15-16%, while
+    window (Nov 2025-Apr 2026) converge around 13-16%, while
     SingleGrain's number is 3x higher with no disclosed methodology —
     treat it as an unreliable outlier rather than evidence of a further
     2025→2026 jump, unless a comparably rigorous source corroborates it.
@@ -380,3 +429,6 @@ floors, not predictions.
 - [[rankability-where-seo-is-going-2026]] — source of the ~48%
   AIO-prevalence data point added to the Conflicting Evidence section
   above.
+- [[xu-measuring-google-ai-overviews-2026]] — the WashU academic audit
+  behind the publisher-ad/click-loss economics, the 38%-click-reduction
+  corroboration, and the 13.7% activation data point above.

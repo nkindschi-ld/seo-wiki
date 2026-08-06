@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-07-08
+updated: 2026-08-03
 ---
 
 # Listicles in AI Search
@@ -28,6 +28,18 @@ what the engine is actually searching for — the mechanism behind
 listicles' outsized share of AI answer results. (See
 [[ai-citation-landscape]]'s "Query fanout mechanics" section for the
 full fanout data.)
+
+Concrete share, Google AIO specifically: per
+[[derivatex-two-googles-one-query-aio-vs-serp-2026]] (100 B2B-software
+queries), third-party listicles are **63.4% of AIO citations** vs. 55.4%
+of the classic SERP results below — listicles dominate *both* Google
+surfaces but the AIO leans on them ~8 points harder, and the same study
+found listicle placement is effectively a prerequisite for AIO product
+recommendation. Categories with mature "best-of" listicle ecosystems
+also diverge most from Google rankings (AIO/SERP source overlap ~20% in
+help desk / project management vs. 62% in the thin-listicle QuickBooks
+hosting category) — see [[ai-citation-landscape]]'s AIO↔SERP divergence
+data.
 
 ## Listicle rank effect (third-party listicles)
 

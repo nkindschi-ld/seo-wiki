@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [aeo]
-updated: 2026-07-22
+updated: 2026-08-06
 ---
 
 # Optimizing for the Agentic Web
@@ -82,7 +82,15 @@ the layer that has no equivalent in citation-focused GEO:
   - Add standard **ARIA accessibility labels** to interactive elements —
     the same markup that helps screen-reader users also gives a
     computer-use agent a reliable, standards-based way to identify what
-    an element does, beyond visual inference.
+    an element does, beyond visual inference. This is now first-party
+    confirmed: per [[openai-publishers-developers-faq]], "ChatGPT Atlas
+    uses ARIA tags … to interpret page structure and interactive
+    elements," and agent-browser tooling like [[microsoft-playwright-mcp]]
+    "uses Playwright's accessibility tree, not pixel-based input." Agents
+    read the **accessibility tree**, not the pixels — an unnamed,
+    role-less control is invisible to them. For the full audit workflow
+    (10 use cases, native-HTML-first rule, CI ARIA-snapshot testing,
+    tooling), see [[accessibility-tree-audit-for-ai-agents]].
   - Regularly test the flow with an actual AI agent (not just human
     QA) and iterate — the failure modes (ambiguous button labels,
     non-standard overlays) often only surface under agent-driven
@@ -168,3 +176,6 @@ approximation, not a ground-truth measurement.
 - [[sel-ai-optimization-content-for-search-and-agents]] — source for the
   "agent-responsive design"/ARIA-labeling guidance and the lighter-weight
   programmatic-access (API/RSS) tactic above.
+- [[accessibility-tree-audit-for-ai-agents]] — the deep-dive audit
+  playbook for the accessibility-tree/ARIA layer (layer 4 at the markup
+  level), grounded in OpenAI's Atlas ARIA confirmation and Playwright MCP.
