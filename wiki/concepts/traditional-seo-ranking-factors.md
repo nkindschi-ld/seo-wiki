@@ -18,6 +18,9 @@ SGE/AI features.
 
 - **Text relevance** (topical coverage of the query and related
   subtopics): the single strongest correlate, ~90.6% average for top-10.
+  For the *scoring mechanics* beneath this finding — how term frequency,
+  rarity (IDF), saturation, and length normalization actually turn words
+  into a relevance score — see [[lexical-ranking-tf-idf-bm25]].
 - **Domain/Page Authority Score** (backlink-derived): correlates at 0.21
   / 0.19 — meaningful but far from dominant, with an acknowledged
   chicken-or-egg confound (ranking higher can itself generate more
@@ -95,3 +98,5 @@ widely live).
   targeting the same kind of classic ad hoc retrieval ranking functions
   (LambdaMART, embedding cosine similarity) this page covers, using an
   LLM as the document-editing tool rather than manual optimization.
+- [[lexical-ranking-tf-idf-bm25]] — the TF-IDF/BM25 scoring mechanics
+  underlying the text-relevance correlate.

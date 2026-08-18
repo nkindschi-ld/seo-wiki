@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-07-23
+updated: 2026-08-17
 ---
 
 # Generative Engine Optimization (GEO / AEO)
@@ -323,6 +323,27 @@ gated on sites having sufficient AI-feature impressions.
   lever for that outcome specifically — independently consistent with
   [[airops-fan-out-effect-2026]]'s retrieval-rank-as-gatekeeper finding
   elsewhere in this wiki.
+- **Mechanistic support added 2026-08-17**: [[peec-ai-rerankers-geo-aeo-2026]]
+  (published 2026-08-06) supplies a plausible *why* for C-SEO Bench's
+  otherwise puzzling null/negative results, without itself being a
+  competing empirical test. Per [[ai-search-reranking-pipeline]], the
+  stage that decides what gets cited is a **neural reranker** scoring
+  query-passage pairs for **answer-shape alignment** — does this passage
+  look like a direct answer to this question, at this granularity? On
+  that account, injecting quotes/statistics/citations into a page doesn't
+  change its answer shape, which is exactly the class of tactic C-SEO
+  Bench found ineffective; whereas retrieval/context position (the lever
+  that *did* dominate in C-SEO Bench, and in
+  [[airops-fan-out-effect-2026]]) determines whether a passage reaches
+  the reranker at all. This also predicts which content work *should*
+  still pay off — restructuring so the answer is self-contained at the
+  passage level and shaped to the query's intent, rather than decorating
+  the page — which is how [[geo-content-optimization-tactics]] now frames
+  its Fraggle/answer-shape guidance. **Caveat**: this is a
+  mechanism-level vendor explainer, not an experiment, and the production
+  rerankers in ChatGPT/Perplexity/AI Mode are undisclosed — so it
+  raises confidence in the "current best guess" above without resolving
+  the conflict empirically.
 - **New finding, not previously in this wiki**: [[c-seo-bench-2025]]
   also shows the best-performing C-SEO tactics behave as a **congested,
   zero-sum game** — gains shrink steadily as more competing documents
@@ -347,6 +368,10 @@ gated on sites having sufficient AI-feature impressions.
 - [[e-e-a-t-and-page-quality]] — the retrieval-eligibility foundation
   referenced in Conflicting Evidence above: the actual official framework
   behind "classic SEO fundamentals"/"helpful, people-first content."
+- [[ai-search-reranking-pipeline]] — the mechanism layer under the Tier
+  1-3 conflict above: the fanout → hybrid retrieval → **reranking** →
+  generation pipeline, and why answer-shape alignment (not page-level
+  decoration) is what the citation-deciding stage actually scores.
 - [[how-google-search-works]] — the technical crawl/index/serve pipeline
   underneath "technical crawlability": if a page isn't crawled, indexed,
   or served in the first place, it can never become a candidate source

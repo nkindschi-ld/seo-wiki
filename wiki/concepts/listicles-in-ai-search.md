@@ -29,6 +29,18 @@ listicles' outsized share of AI answer results. (See
 [[ai-citation-landscape]]'s "Query fanout mechanics" section for the
 full fanout data.)
 
+**A second, complementary mechanism — answer-shape alignment at the
+reranker.** Per [[peec-ai-rerankers-geo-aeo-2026]] (see
+[[ai-search-reranking-pipeline]]), listicles also win the *reranking*
+stage that sits between retrieval and answer generation: a listicle
+passage carries extractable answers, named entities, and coverage of
+multiple query variants — exactly the shape a reranker scores highly for
+a "best/selection" query. This is explicitly *not* a universal
+formatting preference; it's that the passage *shape* matches the answer
+the engine is assembling. Fanout explains why the engine searches for
+listicle-shaped sub-queries; the reranker explains why listicle-shaped
+passages then win the relevance score. Two stages, same outcome.
+
 Concrete share, Google AIO specifically: per
 [[derivatex-two-googles-one-query-aio-vs-serp-2026]] (100 B2B-software
 queries), third-party listicles are **63.4% of AIO citations** vs. 55.4%

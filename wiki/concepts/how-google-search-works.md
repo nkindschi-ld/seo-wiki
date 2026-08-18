@@ -110,3 +110,5 @@ can never become a candidate source for an AI-generated answer either.
   redirects, Core Web Vitals, Schema, and AI/agent crawler access.
 - [[peec-ai-server-logs-ai-search-2026]] — source for the AI bot-type
   taxonomy (training/indexing/retrieval) above.
+- [[lexical-ranking-tf-idf-bm25]] — the TF-IDF/BM25 scoring mechanics
+  that run inside the serving/retrieval stage of this pipeline.

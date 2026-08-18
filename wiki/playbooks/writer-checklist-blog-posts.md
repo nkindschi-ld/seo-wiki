@@ -78,7 +78,7 @@ proof, and make it easy to lift out.
   - *Description:* One or two sentences under 155 characters. Start with
     the main topic and end by telling the reader what they'll get.
   - *(A house format exists, so check the seo-meta-tags guidelines or ask
-    SEO if you're unsure.)*
+    SEO if you're unsure. Longer walkthrough: [[writing-meta-tags]].)*
 - **Set the URL once and don't change it later.** Keep it short, readable,
   and clearly describing the contents of the page
   (/blog/feature-flag-best-practices). *Why: Changing a URL after publish
@@ -92,3 +92,37 @@ proof, and make it easy to lift out.
 
 - **Don't stuff keywords.** Repeating a phrase unnaturally does nothing for
   AI visibility and can make results *worse*. Write for the reader.
+
+## Where these rules come from
+
+This is the plain-language, writer-facing distillation of
+[[geo-content-optimization-tactics]] — go there (or to the sources below)
+for the evidence, caveats, and the tactics that didn't make this list.
+
+- **Answer-first / 44%-of-citations-from-the-first-30%** —
+  [[growth-memo-why-proprietary-data-is-your-most-defensible-asset]]
+- **Named author over brand account (~92% vs. ~8%)** —
+  [[otterly-linkedin-ai-citations-study-2026]]
+- **500–2,000 words, original, educational, consistent cadence** —
+  [[semrush-linkedin-ai-visibility-study-2026]]
+- **Focus beats comprehensive coverage; retrieval rank dominates** —
+  [[airops-fan-out-effect-2026]]
+- **Your "one new thing" (information gain)** —
+  [[growth-memo-why-most-original-data-never-gets-cited]]
+- **FAQ sections / FAQ schema citation lift** —
+  [[otterly-how-to-optimize-content-for-ai-search-2026]]
+- **Question-form headings, answer-shape alignment** —
+  [[ai-search-reranking-pipeline]]
+- **Set the URL once; don't change it later** —
+  [[url-structure-best-practices]]
+- **Keyword stuffing doesn't work (term saturation)** —
+  [[lexical-ranking-tf-idf-bm25]]
+- **One post per question (avoid cannibalization)** —
+  [[keyword-mapping-and-cannibalization]]
+
+## See Also
+
+- [[writing-meta-tags]] — the companion writer-facing guide to titles and
+  meta descriptions
+- [[geo-content-optimization-tactics]] — the full, evidence-cited tactic
+  list this checklist simplifies

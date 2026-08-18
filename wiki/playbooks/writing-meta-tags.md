@@ -14,7 +14,9 @@ LaunchDarkly formatting spec (Title Case, `| LaunchDarkly` suffix,
 65/155-char limits, CTA rules) use the `seo-meta-tags` skill. See
 [[traditional-seo-ranking-factors]] and [[aio-ctr-impact]] for the
 underlying ranking/CTR evidence. For the deprecated
-`<meta name="keywords">` tag (skip it), see [[meta-keywords-tag]].
+`<meta name="keywords">` tag (skip it), see [[meta-keywords-tag]]. For the
+rest of the pre-publish checklist a writer needs (structure, sourcing,
+author bio, URL, refresh cadence), see [[writer-checklist-blog-posts]].
 
 ## What they are
 

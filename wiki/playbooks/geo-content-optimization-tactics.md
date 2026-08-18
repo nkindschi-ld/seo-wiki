@@ -284,6 +284,40 @@ Overviews' RAG pipeline retrieves and cites specific text chunks
   Graph/product-feed optimization only matters for shopping-format
   queries).
 
+### Answer shape by query intent, and the reranker's passage view
+
+Per [[peec-ai-rerankers-geo-aeo-2026]] (see concept
+[[ai-search-reranking-pipeline]] for the full mechanism) — the reranker
+between retrieval and generation scores **passages**, not pages, so the
+Fraggle guidance above sharpens into concrete shapes:
+
+- **Lead each query-targeting section with one direct-answer sentence in
+  the first two lines**, then evidence/context. This is the single
+  highest-leverage passage edit.
+- **Match the answer *shape* to the query intent** — this beats generic
+  "add a list":
+  - **Definition** → concise entity description with distinguishing facts.
+  - **Selection ("best X")** → named options with inclusion criteria and
+    trade-offs. (This — not formatting for its own sake — is *why*
+    listicles win at the reranker; see [[listicles-in-ai-search]].)
+  - **Comparison** → the same like-for-like criteria applied to every
+    option.
+  - **Procedure** → ordered steps with prerequisites and exceptions.
+- **Make passages locally self-contained** — comprehensible inside any
+  plausible retrieval window: use explicit names instead of pronouns, and
+  keep each answer adjacent to its supporting claim. A passage that needs
+  earlier context to parse loses the rerank.
+- **Don't trust a single tool's "relevance score."** Reranker families
+  disagree sharply on the same passage (one measured example: a shortlist
+  passage scored >99.9% on strict MS MARCO models but a descriptive
+  passage scored ~0.1% there and 99.9% on a ModernBERT-family model).
+  Validate across models; treat any one score as directional.
+- **Diagnose failures by pipeline stage** — *not retrieved* → indexing/
+  coverage/authority/freshness (see technical-crawlability below);
+  *retrieved but losing* → answer-shape/passage-relevance (this section);
+  *strong passage, no citation* → source quality/diversity or
+  generation-stage behavior.
+
 ## Patent-based selection mechanics (Google AI Overviews specifically)
 
 Per [[richsanger-ai-overview-patent-insights]] (analysis of Google
@@ -469,6 +503,22 @@ strategy rather than a lever for any one page's citation odds.
 9. **Keyword Stuffing** — the classic SEO tactic. **~0% or negative** on
    the benchmark, and measured **10% worse than baseline** when validated
    live on Perplexity.ai. Do not use this for AEO/GEO purposes.
+
+**Mechanistic why (retrieval layer).** The lexical-ranking math in
+[[lexical-ranking-tf-idf-bm25]] explains *why* stuffing is futile: BM25's
+term-saturation curve (`k₁`≈1.2) caps the payoff from repeated terms
+(1→baseline, 5→~1.8×, 100→~2.2×), so density percentages don't move the
+score — and spam detection sits on top. The same mechanics reframe two
+apparently-weak tactics above: "Technical Terms" and "Unique Words" look
+weak *for winning an earlier citation*, but distinctive high-IDF
+vocabulary (product model numbers, versions, specs, proper nouns) is
+exactly what carries the **retrieval/hybrid-retrieval** layer that
+[[c-seo-bench-2025]] says dominates — embeddings blur "iPhone 15 Pro Max
+256GB" into generic content, and lexical BM25 is what locates the exact
+spec. Practical read: use canonical terminology *consistently* (so TF
+accumulates on the term you want, not scattered synonyms) and include
+specific identifiers to be *retrievable*, but don't repeat for its own
+sake.
 
 ## Also don't bother (per Google's official guidance)
 
@@ -890,6 +940,36 @@ above into concrete, disclosed-methodology tactics:
   specifically for Microsoft Copilot, prioritize Pulse articles almost
   exclusively — 90.2% of Copilot's LinkedIn citations are articles, a
   higher concentration than any other engine studied.
+
+**Second-source corroboration + additional tactics** (per
+[[semrush-linkedin-ai-visibility-study-2026]], 89K LinkedIn URLs, 325K
+prompts, 3 engines — independently replicates the long-form-wins and
+engagement-doesn't-matter findings above on a different sample):
+
+- **Post consistently — cadence is itself a citation signal.** 75% of
+  cited authors posted 5+ times in four weeks. Build employee-advocacy /
+  SME-enablement programs so experts publish on a regular schedule, not
+  in one-off bursts.
+- **Publish original, educational content.** 95% of LinkedIn AI citations
+  are original (reshares only ~5%); 54–64% of cited posts share
+  knowledge/practical advice. Don't reshare — write.
+- **Hit the cited-length bands.** Articles **500–2,000 words**, posts
+  **50–299 words** are cited most.
+- **Structure answer-first and define your terms.** Lead with the direct
+  answer under a clear headline, then logical flow; explicitly define key
+  concepts and brand terms (LinkedIn content scored 0.57–0.60 semantic
+  similarity to AI answers, higher than Reddit/Quora — extractable,
+  well-defined content mirrors answers better).
+- **Ignore follower count.** Authors with <500 followers are cited
+  equally or more than those with 500+ — expertise/relevance beats reach,
+  consistent with the engagement null above.
+- *Caveat — Company Page vs. individual:* both studies agree individuals
+  dominate on ChatGPT and Google AI Mode, but Semrush found Perplexity
+  leaning to Company Pages (59%) against Otterly's individual-dominant
+  aggregate — an unresolved split logged under
+  [[ai-citation-landscape]]'s Conflicting Evidence. Default to
+  named-individual authorship; balance in a Company-Page presence rather
+  than betting everything on either.
 
 ## Content refresh cadence: a concrete schedule
 

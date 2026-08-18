@@ -138,6 +138,22 @@ articles read as professional long-form publishing rather than
 classic UGC, so Perplexity's heavy LinkedIn reliance doesn't
 contradict its "research librarian," low-UGC profile above.
 
+**Independently corroborated (2026-08-12 addendum)**: a second LinkedIn
+study, [[semrush-linkedin-ai-visibility-study-2026]] (89K LinkedIn URLs,
+325K prompts, 3 engines, Jan–Feb 2026), independently finds LinkedIn is
+~#2 source at **~11% of AI responses**, that **long-form original
+articles dominate** (95% of citations original; articles 50–66%), and
+that **engagement/follower count don't drive citation** (median cited
+post 15–25 reactions; <500-follower authors cited equally or more) —
+replicating the Otterly findings on a different sample and engine set. It
+adds a **posting-consistency** signal (75% of cited authors post 5+ times
+in four weeks). One divergence on company-vs-individual mix is logged
+under Conflicting Evidence below. (Note the two studies' per-engine
+percentages aren't directly comparable: Semrush's Perplexity 5.3% is *%
+of responses citing LinkedIn*, whereas Otterly's Perplexity 43.3% is
+*share of all LinkedIn citations captured by that engine* — different
+denominators, not a conflict.)
+
 ## Cited-source sets are volatile month to month
 
 Per [[sel-what-is-generative-engine-optimization-geo-2026]] — a
@@ -868,6 +884,30 @@ said.
 
 ## Conflicting Evidence
 
+- **Claim**: whether AI engines (Perplexity specifically) cite LinkedIn
+  *Company Pages* or *individual creators* more.
+  - Supported by (individuals dominate): [[otterly-linkedin-ai-citations-study-2026]]
+    (384K URLs, 6 engines, Jan–Jun 2026) — named individuals draw
+    **91.7%** of LinkedIn citations vs. 8.3% for company/unattributed,
+    aggregate across engines.
+  - Contradicted by (for Perplexity): [[semrush-linkedin-ai-visibility-study-2026]]
+    (89K URLs, 3 engines, Jan–Feb 2026) — **Perplexity cites 59% Company
+    Pages**, while ChatGPT (59% individual) and Google AI Mode (59%
+    individual) agree with Otterly. Because Otterly also found Perplexity
+    drives the largest single share of LinkedIn citations (43.3%), a
+    strong Perplexity company-tilt is hard to reconcile with a
+    91.7%-individual aggregate.
+  - **Current best guess**: individual/named-author content dominates on
+    ChatGPT and Google AI Mode (both studies agree). Perplexity's
+    company-vs-individual split is genuinely unresolved — most likely a
+    **definitional difference** (Semrush "Company Pages" vs. Otterly's
+    "company/unattributed" bucket; a Company-Page-published post vs. an
+    individual's Pulse article are classified differently) compounded by
+    different engine sets (3 vs. 6) and time windows (Jan–Feb vs.
+    Jan–Jun). Flagged as unresolved; doesn't change the wiki's
+    named-author tactic, which both studies support in aggregate. Otterly
+    is larger/more recent/more engines, so its aggregate individual-dominance
+    finding carries more weight where the two disagree.
 - **Claim**: optimal content age for AI citation.
   - Supported by: [[airops-fan-out-effect-2026]] (via
     [[geo-content-optimization-tactics]]'s "Freshness by vertical"

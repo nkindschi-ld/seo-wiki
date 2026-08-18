@@ -828,3 +828,32 @@ updated concept [[agentic-web-optimization]]. Frames the accessibility tree (ARI
 foundational technical SEO for the AI-agent era — agents read that layer, not the visual rendering.
 Corroborated by OpenAI's first-party ChatGPT-Atlas-uses-ARIA guidance ([[openai-publishers-developers-faq]])
 and Microsoft's Playwright MCP ([[microsoft-playwright-mcp]]), both ingested the same day.
+
+## 2026-08-06 — Visively publishes "How Search Engines Rank Content: Understanding TF-IDF and BM25" (Pedro Dias)
+[[visively-tf-idf-bm25-search-ranking-fundamentals]] · created concept [[lexical-ranking-tf-idf-bm25]].
+Foundational lexical-ranking explainer from an ex-Google Search author: TF-IDF/BM25 scoring math, term
+saturation (`k₁`≈1.2) as the mechanistic reason keyword stuffing fails, length normalization (`b`≈0.75),
+and hybrid retrieval (BM25 + embeddings) as why lexical precision still matters for AI/RAG search.
+
+## 2025-12-15 — Visively publishes "URL Structure Fundamentals: Architecture, Trailing Slashes, and Persistence" (Pedro Dias; updated 2026-02-15)
+[[visively-url-structure-fundamentals]] · created playbook [[url-structure-best-practices]].
+Foundational URL-architecture guidance from an ex-Google Search author: design for persistence,
+the flat-URL ranking myth, separate-but-equal trailing slashes, and eliminating internal redirects.
+
+## 1999-03-20 — Jakob Nielsen publishes "URL as UI" (Nielsen Norman Group)
+[[nngroup-url-as-ui-1999]] · primary-sourced the usability heuristics in [[url-structure-best-practices]].
+Foundational usability piece framing the URL as part of the UI: the six heuristics
+(memorable/short/typeable/structure-visualizing/hackable/persistent), all-lowercase, and no-linkrot
+persistence. (Earliest-dated source in the wiki.)
+
+## 2026-03-10 — Semrush publishes "We Analyzed 89K LinkedIn URLs Cited in AI Search" (Margarita Loktionova)
+[[semrush-linkedin-ai-visibility-study-2026]] · corroborated [[otterly-linkedin-ai-citations-study-2026]]
+and updated [[geo-content-optimization-tactics]] / [[ai-citation-landscape]]. Second LinkedIn-specific
+AI-citation study: LinkedIn ~#2 at ~11% of responses, original long-form + consistency win, engagement/
+follower count don't drive citation; diverges on Perplexity's company-vs-individual mix (logged conflict).
+
+## 2026-08-06 — Peec AI publishes "Rerankers for GEO/AEO: How AI search chooses passages and sources" (Metehan Yesilyurt)
+[[peec-ai-rerankers-geo-aeo-2026]] · created concept [[ai-search-reranking-pipeline]]. Mechanism-level
+account of the AI-search pipeline (fanout → hybrid retrieval + RRF → neural reranking → generation): the
+reranker between retrieval and generation, cross-family score disagreement, answer-shape alignment as why
+listicles win, and passage-level (not page-level) citation.

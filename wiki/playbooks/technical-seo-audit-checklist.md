@@ -34,7 +34,9 @@ citation (see [[how-google-search-works]] and
   www) with 301 redirects to a single preferred (HTTPS) version.
   Implement canonicalization (canonical tags) preventatively on pages
   where duplicates might naturally occur (session tracking, filter
-  parameters, syndication).
+  parameters, syndication). For the authoring-side complement — how to
+  design durable URLs and never link to internal redirects in the first
+  place — see [[url-structure-best-practices]].
 - **Audit robots.txt for crawl strategy, not indexing control** — per
   [[google-search-fundamentals-get-started]], robots.txt controls
   crawling (whether Google fetches the page), not indexing (whether it

@@ -115,3 +115,8 @@ profile signals for a subset of that group.
 - [[brightedge-ai-search-same-brands-different-sources]] — the 5-engine
   sourcing-personality profiles this study's platform-split data
   extends with LinkedIn-specific reliance.
+- [[semrush-linkedin-ai-visibility-study-2026]] — the independent
+  second LinkedIn AI-citation study that corroborates the long-form,
+  engagement-null, and ~11%-share findings here (and diverges on
+  Perplexity's company-vs-individual mix — see that page and
+  [[ai-citation-landscape]]'s Conflicting Evidence).

@@ -88,7 +88,7 @@ Understanding *why* to measure AI visibility:
 ## Related Measurement Frameworks
 
 - **Presence/Portability/Concentration** ([[ai-citation-landscape]]) — A three-layer measurement framework for understanding *sources* cited (presence = whether your domain gets cited; portability = citation frequency across engines; concentration = power-law distribution of citations across your pages)
-- **Traffic-to-Purchase Attribution** ([[tryprofound-downstream-impact-of-ai-visibility-2026]]) — A 2.5x visit-rate multiplier and 2x engagement (pages/time) for AI-influenced traffic, with a finding that 55.9% of AI-influenced traffic invisibly gets absorbed into search attribution, not counted separately
+- **Traffic-to-Purchase Attribution** ([[similarweb-downstream-impact-of-ai-visibility-2026]]) — A 2.5x visit-rate multiplier and 2x engagement (pages/time) for AI-influenced traffic, with a finding that 55.9% of AI-influenced traffic invisibly gets absorbed into search attribution, not counted separately
 - **Citation Economics** ([[aio-ctr-impact]]) — The traffic/CTR/conversion premium for being cited in Google AI Overviews specifically (citation premium quantified, query-format variation documented)
 
 ## See Also

@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo]
-updated: 2026-08-06
+updated: 2026-08-17
 ---
 
 # Robots.txt Strategy: What It Is, What It Isn't
@@ -227,7 +227,26 @@ Example: You block `/admin/` in robots.txt. Another site links to `/admin/user12
 
 ## Conflicting Evidence
 
-Some SEO practitioners recommend using robots.txt as a "quick fix" for duplicate content or low-quality pages. This is technically true for *crawl optimization* (saving budget for better pages) but **false** for *indexing control*. The wiki follows Google's official stance: use robots.txt for crawl management, use `noindex` for indexing control.
+- **Claim**: `Disallow`-ing a URL in robots.txt is a valid "quick fix" for
+  keeping duplicate, thin, or low-quality pages out of search results.
+  - Supported by: common practitioner advice (no named source in this
+    wiki) — and it *is* correct for the narrower goal of **crawl
+    optimization**: disallowing low-value paths does conserve crawl
+    budget for pages that matter.
+  - Contradicted by: [[google-robots-txt-intro]] (Google's official
+    guidance), which states robots.txt manages crawler traffic and is
+    explicitly **not** an indexing-control mechanism — a disallowed URL
+    can still be indexed and appear in results (without a description)
+    if it's linked externally, precisely because the crawler never
+    fetches the page and so never sees a `noindex`. Independently
+    corroborated by [[ahrefs-robots-txt-guide]].
+- **Current best guess**: not a real empirical dispute — a conflation of
+  two different goals. Use robots.txt for **crawl management**, and
+  `noindex` (meta tag or `X-Robots-Tag` header), password protection, or
+  removal for **indexing control**. Note the two are mutually exclusive
+  on the same URL: if you disallow it, the `noindex` can never be read,
+  so a page you want de-indexed must remain crawlable. Following Google's
+  official stance here.
 
 ## Related pages
 

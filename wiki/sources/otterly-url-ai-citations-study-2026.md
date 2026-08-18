@@ -99,3 +99,7 @@ URL variants competing for the same citation.
   URL-slug finding this study nuances.
 - [[superlines-geo-guide]] — source of the unsourced "2-7 domains per
   response" claim this study's power-law data indirectly strengthens.
+- [[url-structure-best-practices]] — the URL-architecture/persistence
+  design playbook ([[visively-url-structure-fundamentals]]) whose
+  "design, don't micro-optimize" guidance this study empirically
+  corroborates.

@@ -2058,3 +2058,81 @@ concept [[agentic-web-optimization]]; extended [[optimizing-for-the-agentic-web]
 and [[technical-seo-audit-checklist]]'s §5 agent-readiness item; upgraded [[robots-txt-strategy]]
 with OpenAI's first-party crawler-function clarifications. No conflicts — the two primary/first-
 party sources corroborate the practitioner article's central mechanism.
+
+## [2026-08-11] ingest | How Search Engines Rank Content: Understanding TF-IDF and BM25 (Pedro Dias / Visively)
+Ingested [[visively-tf-idf-bm25-search-ranking-fundamentals]], a high-rigor lexical-ranking explainer by
+Pedro Dias (ex-Google Search). Created concept [[lexical-ranking-tf-idf-bm25]] (TF/IDF/TF-IDF/BM25 mechanics,
+term saturation, length normalization, inverted index, hybrid retrieval). Added mechanistic cross-links:
+[[traditional-seo-ranking-factors]] (the "why" under the strongest text-relevance correlate),
+[[how-google-search-works]] (BM25 in the serving/retrieval stage), and [[geo-content-optimization-tactics]]
+(mechanistic why keyword stuffing/density fails + reframing "Technical Terms"/"Unique Words" as
+retrieval-layer, not citation-layer, signals). No conflicts — corroborates and grounds existing claims.
+
+## [2026-08-11] ingest | URL Structure Fundamentals: Architecture, Trailing Slashes, and Persistence (Pedro Dias / Visively)
+Ingested [[visively-url-structure-fundamentals]] (Pedro Dias, ex-Google Search). Created playbook
+[[url-structure-best-practices]] (design-for-persistence, flat-architecture myth, trailing slashes,
+eliminate-internal-redirects, flat-vs-hierarchical, slug guidance). Cross-linked
+[[technical-seo-audit-checklist]] (authoring-side complement to its server-side canonicalization) and
+[[otterly-url-ai-citations-study-2026]] (design-side complement to its AI-citation correlation study).
+No conflicts — corroborates the existing URL-citation null-result-on-micro-structure finding from the
+design/persistence angle.
+
+## [2026-08-12] ingest | URL as UI (Jakob Nielsen / NN/g, 1999)
+Ingested [[nngroup-url-as-ui-1999]], the primary source behind the "Nielsen usability heuristics"
+previously cited secondhand (via [[visively-url-structure-fundamentals]]) in
+[[url-structure-best-practices]]. Upgraded that playbook's heuristic citation from secondhand to
+primary and added two new specifics: the all-lowercase rule and a 2007 MS Research 24%-gaze-time-on-URL
+credibility data point (framed as the human-behavior antecedent to the clean-canonical-URL AI-citation
+lift in [[otterly-url-ai-citations-study-2026]]). No conflicts — foundational and corroborative.
+
+## [2026-08-12] ingest | We Analyzed 89K LinkedIn URLs Cited in AI Search (Semrush / Margarita Loktionova)
+Ingested [[semrush-linkedin-ai-visibility-study-2026]] (89K LinkedIn URLs, 325K prompts, 3 engines,
+Jan–Feb 2026) — the independent second LinkedIn AI-citation study, cross-checking
+[[otterly-linkedin-ai-citations-study-2026]]. Strongly corroborates on four axes (LinkedIn ~11% share,
+long-form/original content dominates, engagement doesn't predict citation, follower count irrelevant).
+Added new tactics to [[geo-content-optimization-tactics]] (posting consistency 75%/5+-per-4wks,
+originality/educational intent, 500–2,000-word article band, answer-first + define-terms) and a
+corroboration addendum to [[ai-citation-landscape]].
+
+## [2026-08-12] conflict | LinkedIn Company Pages vs. individual creators on Perplexity
+[[semrush-linkedin-ai-visibility-study-2026]] found Perplexity cites 59% Company Pages, against
+[[otterly-linkedin-ai-citations-study-2026]]'s 91.7%-individual aggregate (ChatGPT + Google AI Mode
+agree individuals dominate in both). Hard to reconcile since Otterly says Perplexity drives 43.3% of all
+LinkedIn citations. Logged as unresolved Conflicting Evidence on [[ai-citation-landscape]]; likely a
+definitional/engine-set/time-window difference. Named-author tactic unchanged (both agree in aggregate).
+
+## [2026-08-12] ingest | Rerankers for GEO/AEO: How AI Search Chooses Passages and Sources (Peec AI / Metehan Yesilyurt)
+Ingested [[peec-ai-rerankers-geo-aeo-2026]], a mechanism-level explainer of the AI-search retrieval
+pipeline and reranker stage. Created concept [[ai-search-reranking-pipeline]] (staged pipeline, bi/cross-
+encoder, reranker model families, cross-family score-disagreement, answer-shape-alignment, passage-vs-page,
+failure-stage diagnostic). Extended [[geo-content-optimization-tactics]] (answer-shape-by-intent + local
+self-containment + stage diagnostic, sharpening the existing Fraggle section) and added a complementary
+answer-shape mechanism note to [[listicles-in-ai-search]]. Cross-linked [[lexical-ranking-tf-idf-bm25]]
+(what happens after the BM25+vector merge). No conflicts — mechanistically unifies existing findings
+([[airops-fan-out-effect-2026]] retrieval-rank dominance, [[peec-ai-chatgpt-query-fanouts-2026]] fanout/RRF).
+
+## [2026-08-17] lint | Full-wiki lint pass — 4 fixes applied, 1 finding accepted as-is
+Mechanical pass over 175 pages (link graph, frontmatter schema, date ordering, link convention).
+Fixed: (1) broken wikilink in [[ai-visibility-measurement-methodology]] — `tryprofound-downstream-impact-
+of-ai-visibility-2026` corrected to [[similarweb-downstream-impact-of-ai-visibility-2026]] (wrong vendor
+prefix; verified the 2.5x/55.9% figures do belong to the Similarweb source). (2) Orphan page
+[[writer-checklist-blog-posts]] — a complete playbook that was never added to `wiki/index.md` and had zero
+inbound links; added an index entry, an inbound link from [[writing-meta-tags]], and a "Where these rules
+come from" section wikilinking its 10 underlying sources (it previously contained no wikilinks at all,
+against the link convention). (3) Stale conflict entry on [[generative-engine-optimization]] — the Tier 1-3-
+tactics-vs-[[c-seo-bench-2025]] conflict didn't cite [[peec-ai-rerankers-geo-aeo-2026]] /
+[[ai-search-reranking-pipeline]] (ingested 2026-08-12), which supplies a mechanistic *why* for C-SEO Bench's
+null/negative results (rerankers score answer-shape alignment, not page-level decoration); added as
+"Mechanistic support" raising confidence in the existing best guess without resolving it empirically, plus
+a See-also cross-link. (4) Reformatted the lone [[robots-txt-strategy]] Conflicting Evidence entry to the
+CLAUDE.md schema (Claim / Supported by / Contradicted by / Current best guess), citing
+[[google-robots-txt-intro]] and [[ahrefs-robots-txt-guide]], and added the mutual-exclusivity point (a
+disallowed URL can never have its `noindex` read).
+Accepted as-is: 3 source pages lack `date_published` ([[google-images-seo]],
+[[similarweb-how-to-be-the-brand-ai-recommends-2026]], [[similarweb-how-to-win-the-race-for-gen-ai-search-2026]])
+— checked the raw files; these are genuinely undated (evergreen doc / undated PDF), so there is no date to
+backfill. Clean: no other broken links, no orphans, no index-only pages, no relative-markdown links, no
+missing/empty tags, no type mismatches, no duplicate index entries. Also verified all `origin:` paths in
+wiki/sources/ resolve to real files in raw/. An audit of all 5 Conflicting Evidence sections against the
+full source list found the other 7 conflict entries still current, and no new unflagged numeric/directional
+contradictions across the wiki.
