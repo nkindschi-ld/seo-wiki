@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-08-06
+updated: 2026-08-20
 ---
 
 # AI Citation Landscape
@@ -540,6 +540,30 @@ first get retrieved/ranked highly by the underlying search step, *then*
 compete on content signals — content quality cannot compensate for a
 poor retrieval rank.
 
+**Unreconciled secondhand figure (2026-08-20)**: [[zyppy-fan-out-framework-2026]]
+attributes to AirOps a different number — "ChatGPT cited the #1-ranked
+page 43.2% of the time" — with no link or methodology given. This
+wiki's own ingest of the AirOps report contains no 43.2% figure; the
+only rank-1 citation rate on record is the 58.4% above (ChatGPT's
+*internal retrieval* rank). A plausible but unconfirmed reconciliation:
+Shepard's figure may describe *Google's organic rank 1* → ChatGPT
+citation likelihood, a different metric than AirOps's retrieval-rank
+framing — but the wiki's source ingest has no such breakdown to verify
+this against. Flagged as an unreconciled discrepancy, not adopted.
+
+**Another data point, milder magnitude (2026-08-20)**: per
+[[commoncrawl-web-graph-ai-ranking-signals-2026]] (secondhand,
+attributed to "Brie Moreau's analysis," 2M citations / 177M sources,
+undisclosed methodology — treat as directional), Google organic
+position 1 correlates with a 46-48% AI citation probability, dropping to
+~37% at position 2 and ~19-20% at position 10. Same direction as
+AirOps's 58.4%/14.2% rank-1/rank-10 figures above, but a gentler
+falloff — plausibly because this dataset isn't segmented by engine or
+reference type the way AirOps's ChatGPT-only, internal-retrieval-rank
+figures are (this one appears to measure *Google organic* rank, not
+internal AI-retrieval rank). Not logged as a conflict given the
+undisclosed methodology and likely metric difference.
+
 **Independently corroborated via a controlled experiment (2026-07-22)**:
 per [[c-seo-bench-2025]] (NeurIPS 2025), randomly assigning a document
 to position 1 in an LLM's context window produced citation-rank gains
@@ -652,6 +676,69 @@ framing structurally matches the dominant fanout injection pattern —
 offered as a mechanism explaining why listicle content dominates AI
 answer results. See [[listicles-in-ai-search]] for the full listicle
 picture built on this mechanism.
+
+### ChatGPT fan-out escalation and `site:` operator targeting (2026-08-20 addendum)
+
+Per [[lilyray-chatgpt-fanout-queries-2026]] (secondary aggregation of
+~7 independent researchers/tools, undisclosed methodology throughout —
+treat as directional) — a substantial escalation of the fan-out
+behavior above, apparently tied to a ChatGPT model update ("ChatGPT
+5.6," not independently confirmed):
+
+- **Fan-out volume jumped well past the April-2026 baseline**:
+  single-fan-out-query share dropped from 94.0% to 43.5%, average
+  retrieved sources roughly doubled (~12 → ~24 pages), and average
+  fan-out queries per prompt rose from 2.17 to 7.61 (Chris Long) —
+  more than 3x the 2.1/query ChatGPT figure recorded above, now closer
+  to Grok's 6.8/query "research brief" style than to ChatGPT's earlier
+  narrower fan-out pattern.
+- **`site:` operator usage in ChatGPT fan-outs rose from 0.3% to 23%**
+  of fan-outs — the trusted-domain site-targeting behavior previously
+  documented above as Grok-specific (18.3% of chats) appears to be
+  spreading into ChatGPT's own default retrieval behavior. Targeting is
+  query-type-dependent: opinions/reviews → Reddit/specific subreddits;
+  legal/health (YMYL) → `.gov` domains exclusively in some tests;
+  product specs/pricing → brand official domains (e.g.
+  `site:sephora.com`, `site:costco.com`).
+- **Retrieval and citation are diverging, not scaling together**: even
+  as retrieved-page volume roughly doubled, unique domains cited per
+  response *dropped* (19 → 15) — citations are concentrating on fewer
+  domains despite a wider retrieval net, sharpening this page's broader
+  concentration findings (see "Citation-slot concentration" above).
+- **"Decides before it searches," now quantified at the citation
+  level**: brands named in ChatGPT's initial fan-out query get cited
+  68.9% of the time, vs. 2.1% for brands whose pages were merely
+  fetched without being named in the query (Suganthan Mohanadasan);
+  initial queries contained brand names the user never mentioned in 21
+  of 27 product-category tests. This sharpens
+  [[geosurge-model-memory-predicts-search-2026]]'s training-memory-
+  predicts-search-frequency finding into a training-memory-predicts-
+  citation-outcome finding — being in the model's pre-retrieval
+  "shortlist" doesn't just make a brand more likely to be searched for,
+  it makes it far more likely to be cited once retrieval happens.
+- **Domain confusion is a live risk as `site:`-restricted retrieval
+  grows**: ChatGPT has constructed `site:` queries against the wrong
+  domain entirely — e.g. `site:census.com` for the startup Census,
+  which actually operates at `getcensus.com` (Malte Landwehr). A
+  security-adjacent variant of the same failure mode: Netcraft found
+  ~1/3 of brand login links generated by LLMs pointed to domains the
+  brand didn't own, and ~29% targeted unregistered/parked domains.
+  Practical implication: as more retrieval becomes `site:`-gated, a
+  wrong-domain association isn't just a mis-citation risk but a
+  full-channel invisibility risk for that brand.
+- **Reddit's retrieve-heavy/cite-rarely pattern, sharper number**: Dan
+  Petrovic reports ChatGPT discards Reddit retrievals ~99% of the time
+  — directionally consistent with, and starker than,
+  [[ahrefs-why-chatgpt-cites-pages-2026]]'s 1.93% Reddit citation-rate /
+  67.8%-of-non-cited-URLs-are-Reddit finding above. Not logged as a
+  conflict — same direction, undisclosed sample behind the newer
+  figure.
+- **Possible early counter-signal on listicles**: product pages now
+  comprise 16.39% of retrieved pages while listicles/how-to/comparison
+  pages are reportedly losing retrieval share — not yet a citation-rate
+  comparison, and not corroborated elsewhere in this wiki, so treat as
+  a watch item against [[listicles-in-ai-search]]'s listicle-dominance
+  findings rather than a contradiction of them.
 
 ## Listicles: rank effects, self-promotion, and the recommendation filter
 
@@ -807,6 +894,26 @@ elsewhere on this page — youtube.com is AIO's single most-cited domain
 citations and Google rankings as **separate KPIs** — don't use one as a
 proxy for the other — and pursue top-5 SERP rank *and* third-party
 listicle/YouTube presence as distinct pathways into the AIO.
+
+**Two more unverified secondhand data points (2026-08-20)**: per
+[[zyppy-fan-out-framework-2026]] (no links or methodology given for
+either figure) — "Ahrefs: 38% of AIO citations come from Google's
+top-10" and "Semrush: Perplexity showed 82% overlap with Google's
+top-10." The 38% figure sits at the upper edge of
+[[rankability-where-seo-is-going-2026]]'s already-logged 17-38% range
+for this same metric, but is attributed here to *Ahrefs*, which
+elsewhere in this wiki ([[ahrefs-b2b-seo-statistics-2025]]) is on record
+with a **76%** figure for the same top-10-overlap metric — the two
+can't both be Ahrefs' current number for the same thing. Rather than
+treat this as a fresh Ahrefs contradiction, it's logged as an
+additional unverified data point in the existing open spread (pending a
+source that either confirms 38% as a real, more recent Ahrefs figure or
+reveals it as a mislabeled citation of Rankability's number). The 82%
+Perplexity-vs-Google-top-10 figure is new to the wiki and measures a
+different pairing (a non-Google engine against Google's own SERP,
+rather than AIO against Google's own SERP) — added as an unverified,
+not-yet-corroborated data point rather than folded into the AIO-specific
+spread above.
 
 ## Topic-specific source trust
 
@@ -1075,3 +1182,19 @@ said.
   behind the 29.8%-off-page AIO↔SERP-divergence corroboration, the
   AIO-vs-SERP UGC-suppression finding, and the claim-fidelity section
   above (11% of AIO claims unsupported, omission-dominant).
+- [[lilyray-chatgpt-fanout-queries-2026]] — the ChatGPT fan-out
+  escalation and `site:` operator targeting addendum above (fan-out
+  volume jump, retrieval-vs-citation divergence, the quantified
+  decides-before-it-searches citation rate, and the domain-confusion/
+  phishing risk).
+- [[zyppy-fan-out-framework-2026]] — the two unverified secondhand
+  AIO/SERP-overlap data points above (Ahrefs 38%, Semrush Perplexity
+  82%) and the unreconciled AirOps 43.2%-vs-58.4% retrieval-rank
+  discrepancy; the fan-out discovery-and-optimization workflow itself
+  lives in [[geo-content-optimization-tactics]].
+- [[commoncrawl-web-graph-ai-ranking-signals-2026]] — the Google-
+  position-vs-citation-probability data point above (46-48%/37%/
+  19-20% at positions 1/2/10), plus the Common Crawl training-data-
+  provenance figures in [[how-google-search-works]] and the Harmonic
+  Centrality/PageRank domain-benchmarking tactic in
+  [[geo-content-optimization-tactics]].

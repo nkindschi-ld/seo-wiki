@@ -1028,6 +1028,156 @@ target query:
   "best X" list and an "X reviews" page) has a structural ranking
   advantage over content matching only one angle.
 
+## Fan-out discovery and optimization workflow (2026-08-20)
+
+Per [[zyppy-fan-out-framework-2026]] (Cyrus Shepard) — a named,
+repeatable 5-step process for operationalizing the fan-out-targeting
+tactics above (originally sourced from
+[[peec-ai-chatgpt-query-fanouts-2026]] and
+[[lilyray-chatgpt-fanout-queries-2026]]) into a concrete workflow with a
+defined discovery step:
+
+1. **Identify a ranking keyword** — pick a query where the page already
+   holds a top 10-20 Google position, since fan-out subquery discovery
+   works from an existing foothold, not a cold-start topic.
+2. **Discover fan-out queries** for that keyword using a dedicated tool:
+   QueryFan (API key required), Qforia (Google-specific, needs a Gemini
+   API key), queryfanout.ai or the "Query Fan Out Analysis" tool (no API
+   required), Bing Webmaster Tools' AI Performance Report (see
+   [[bing-ai-performance-report]]), or, per
+   [[zyppy-seo-strategies-for-ai-search-2026]], **AlsoAsked.com** as a
+   free proxy — "People Also Ask" question data correlates with the
+   kind of sub-questions AI engines fan out to, giving a no-API
+   discovery option.
+3. **Consolidate** the resulting sub-queries into a prioritized topic
+   list — use a clustering tool (Keyword Insights) or a keyword-research
+   tool (Ahrefs Keyword Explorer) to group overlapping fan-out subtopics
+   rather than treating each one as a separate target.
+4. **Optimize existing pages or create new ones** targeting the
+   consolidated topics — but **do not create a low-quality page per
+   fan-out subtopic discovered**; the source explicitly warns this
+   triggers Google's Scaled Content Abuse demotion (see
+   [[e-e-a-t-and-page-quality]]) rather than improving fan-out coverage.
+5. **Measure results** via webmaster tools (Bing AI Performance Report,
+   Google Search Console's Generative AI Features report) and/or a
+   premium AI-visibility tracker (Peek, Otterly, Profound, Gumshoe — see
+   [[ai-visibility-measurement-methodology]] for the fuller tool
+   landscape).
+
+**Caveat baked into the framework itself**: fan-out queries are
+"probabilistic and personalized, and vary greatly across AI models and
+even within user sessions" — treat any single discovery-tool snapshot as
+a sample of a moving target, not a fixed subtopic list, consistent with
+this wiki's existing cited-source-volatility findings (40-60%
+month-to-month churn per [[sel-what-is-generative-engine-optimization-geo-2026]]).
+
+## Email and personal-context signals (2026-08-20)
+
+Per [[ipullrank-google-personal-intelligence-experiment-2026]] (see
+[[personal-context-signals-in-ai-search]] for the full mechanism
+writeup) — a controlled experiment found Google AI Mode's opted-in
+"Personal Intelligence" feature lets Gmail/Photos content shift which
+brands get recommended to that specific user, independent of public
+web authority (seeded-brand appearance rose from 23.9% to 66.8%; email
+seeding alone reached 53.6%). Caveats first: small-sample, 16-day,
+opted-in-only experiment, not yet independently corroborated — treat
+the tactic below as a low-cost hedge, not a proven lever:
+
+- **Treat customer-communication email as a discovery channel, not
+  just a retention one**: order confirmations, receipts, product-
+  education emails, and recommendation emails are plausible candidates
+  for the kind of content that seeded brand recognition in this
+  experiment. No changes to email content are validated as effective
+  yet — this is a "worth monitoring/testing," not a "do this" tactic.
+- **Don't expect this to substitute for public web presence**: AI Mode
+  continued citing external sources even while personalizing, and the
+  effect was weakest in trust-heavy/considered categories (banking, B2B
+  services) — personal-context signals appear to shift *consideration*,
+  not replace the citation/authority requirements covered elsewhere in
+  this playbook.
+- **Category-dependent**: expect little effect in trust-heavy/YMYL-
+  adjacent categories and more in consumer-preference categories —
+  don't apply a blanket email-content strategy uniformly across
+  verticals.
+- **This is genuinely early evidence**: a single small experiment, no
+  replication yet, testing only *opted-in* Personal Intelligence rather
+  than default AI Mode. Worth watching, not worth over-investing in
+  until corroborated.
+
+## Benchmark domain standing via Common Crawl's Web Graph (2026-08-20)
+
+Per [[commoncrawl-web-graph-ai-ranking-signals-2026]] — Common Crawl's
+dataset trains a large share of LLMs (64% of analyzed models; over 80%
+of GPT-3's training tokens per Mozilla Foundation's 2024 report per
+[[how-google-search-works]]), so a domain's standing in Common Crawl's
+own **Web Graph** is a plausible, checkable proxy for how
+"overrepresented" it is in LLM training data specifically — distinct
+from, and a useful complement to, commercial Domain Rating/Authority
+Score metrics that reflect Google's index rather than LLM training
+corpora:
+
+- **Check Harmonic Centrality and PageRank** for your domain and
+  competitors via the free **CC Rank Checker** (webgraph.metehan.ai,
+  18M domains across five time periods 2023-2025) or Common Crawl's own
+  **Web Graph Statistics** (commoncrawl.github.io/cc-webgraph-statistics).
+- **Track changes over time** rather than a single snapshot — five
+  historical periods are available, letting you see whether a domain's
+  training-data-relevant standing is rising or falling independent of
+  its Google ranking.
+- **Weight link-building targets by web-graph position, not just
+  referring-domain count**: a link from a domain with high Harmonic
+  Centrality (a well-connected hub) plausibly carries more training-data
+  representation value than a link from an equally-authoritative but
+  more peripheral domain — untested as a direct causal claim, but a
+  reasonable prioritization heuristic given the mechanism.
+- **Treat this as directional, not a validated ranking factor**: the
+  underlying claim (web-graph centrality → AI citation likelihood) is
+  a plausible inference from Common Crawl's training-data role, not a
+  measured correlation tested in this source. Pair with, don't replace,
+  the citation-probability-by-organic-rank guidance above.
+
+## `site:` operator targeting and official-domain signaling (2026-08-20)
+
+Per [[lilyray-chatgpt-fanout-queries-2026]] (secondary aggregation,
+undisclosed methodology — treat as directional) — ChatGPT's `site:`
+operator usage in fan-out queries reportedly rose from 0.3% to 23% of
+fan-outs alongside a broader fan-out-volume jump (see
+[[ai-citation-landscape]]'s "ChatGPT fan-out escalation" addendum),
+increasingly restricting retrieval to specific trusted or brand-official
+domains rather than open web search:
+
+- **Monitor `site:` search impressions** in Google Search Console and
+  Bing Webmaster Tools — a concrete way to detect whether ChatGPT (via
+  Bing-index-backed retrieval) is issuing `site:`-restricted queries
+  against your domain at all, and whether it's targeting the *correct*
+  one.
+- **Clarify official-domain status** through title tag and meta
+  description language (e.g. explicitly stating "official site" /
+  the brand's canonical domain) as a countermeasure to the
+  domain-confusion risk below — a low-cost signal when the model's
+  `site:` targeting is query-constructed rather than looked up.
+- **Domain-confusion risk is real and can cause full-channel
+  invisibility, not just mis-citation**: ChatGPT has constructed
+  `site:` queries against the wrong domain entirely (e.g.
+  `site:census.com` instead of the startup's actual `getcensus.com`).
+  If the model has the wrong domain and retrieval for that query is
+  `site:`-gated, the correct domain never enters the retrieval set at
+  all. Brands with a domain name that diverges from their obvious
+  brand-name guess (non-`.com` TLDs, abbreviated/rebranded domains)
+  are at higher risk and should prioritize the title-tag/meta
+  clarification above.
+- **A related but distinct security risk**: Netcraft found ~1/3 of
+  brand login links generated by LLMs pointed to domains the brand
+  didn't own, and ~29% targeted unregistered/parked domains — this is
+  an LLM-answer-generation failure (hallucinated URL) rather than a
+  `site:`-search failure, but the same underlying fix (making the
+  official domain unambiguous and consistently signaled) helps both.
+- **Keep pricing/specs in crawlable HTML, not JS or images** — product
+  specs/pricing queries are one of the query types most likely to
+  trigger brand-official-domain `site:` targeting, so content that
+  isn't crawlable there is invisible to that specific retrieval path
+  even if the model targets the right domain.
+
 ## Awards, credentials, and directory placements as authority signals (lower confidence)
 
 Per [[firstpagesage-searchgpt-optimization-2025-guide]] — no disclosed
@@ -1214,6 +1364,20 @@ above, which were causally tested via controlled experiment, these are
 - Backlinks and Domain Rating still correlate, but are the *weakest*
   correlates measured (0.19–0.33) — don't expect classic link-building
   alone to move AI visibility much.
+
+## A one-sentence brand-positioning formula (2026-08-20)
+
+Per [[zyppy-seo-strategies-for-ai-search-2026]] — a compact positioning
+template for keeping brand facts consistent across owned properties:
+**"[Brand] is a [product] for [audience], especially [use case],
+because [differentiator]."** This is a shorter, single-sentence
+restatement of the same discipline as [[explainable-to-ai-4cs]]'s four
+C's (Category≈product, Customer≈audience, Contrast≈differentiator,
+plus Consistency as an explicit requirement in both frameworks) — use
+whichever phrasing is easier to enforce across a team; they aren't
+competing tactics, just two independently-arrived-at versions of "state
+your positioning in one unambiguous sentence and repeat it verbatim
+everywhere."
 
 ## Brand-building LLMO tactics
 
@@ -1520,6 +1684,19 @@ the layer beneath E-E-A-T:
       it's a relevance/quality issue (see E-E-A-T checklist below) or a
       `robots` meta rule blocking serving specifically — these are
       different problems with different fixes.
+
+**AI-crawler-specific version of this check (2026-08-20)**: per
+[[zyppy-seo-strategies-for-ai-search-2026]], the same JS-rendering-gap
+question needs a separate pass *for AI crawlers specifically*, since
+they don't all render JS the way Googlebot does (see
+[[vercel-rise-of-the-ai-crawler]]'s confirmed per-bot JS-rendering
+differences). The **AI Difference Engine** browser extension (Gray Dot
+Co) diffs what an AI crawler sees against what a human browser sees on
+the same page — a free, direct way to spot this gap rather than
+inferring it from server logs alone. Also audit CDN/firewall-level bot
+rules (Cloudflare and similar) separately from `robots.txt` — a
+CDN-level block can silently override a permissive `robots.txt` rule,
+and the two are commonly managed by different teams.
 
 ## E-E-A-T signal-building (retrieval-eligibility foundation)
 

@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-08-17
+updated: 2026-08-20
 ---
 
 # Generative Engine Optimization (GEO / AEO)
@@ -249,7 +249,13 @@ gated on sites having sufficient AI-feature impressions.
     official guidance, which states SEO fundamentals remain "the
     foundation" for AI Overviews/AI Mode and explicitly advises against
     building special AI-only infrastructure (`llms.txt`, chunking,
-    AI-specific rewriting).
+    AI-specific rewriting). **Corroborating practitioner voice
+    (2026-08-20)**: [[zyppy-seo-strategies-for-ai-search-2026]] argues
+    "good SEO is good GEO" and that most businesses can reach 90%+ of
+    AI-visibility goals via adapted SEO fundamentals plus targeted
+    AI-specific tweaks (fan-out targeting, third-party consensus) rather
+    than a separate GEO strategy — an unmeasured, asserted figure, not
+    an independent study, but a second voice on the "foundation" side.
 - **Current best guess**: these findings describe **different stages of
   the same funnel**, not a true contradiction:
   - **Retrieval eligibility** (will your content even be considered as a

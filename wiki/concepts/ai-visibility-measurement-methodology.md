@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-07-23
+updated: 2026-08-20
 ---
 
 # AI Visibility Measurement Methodology
@@ -62,6 +62,8 @@ Per [[wholewhale-ai-brand-footprint-measurement]], two commercial tools attempt 
 
 None is described in independent (non-vendor) detail in this wiki's sources; user experience reports would be valuable.
 
+**Additional named premium trackers (2026-08-20)**: per [[zyppy-fan-out-framework-2026]], **Peek** and **Gumshoe** join Otterly and Profound (both already covered extensively elsewhere in this wiki via their own studies) as premium AI-visibility measurement platforms — named only, no feature/methodology detail disclosed in this source.
+
 ## Consumer Behavior Context
 
 Understanding *why* to measure AI visibility:
@@ -87,6 +89,7 @@ Understanding *why* to measure AI visibility:
 
 ## Related Measurement Frameworks
 
+- **Personal context management** ([[personal-context-signals-in-ai-search]], 2026-08-20) — A proposed third measurement/strategy layer alongside public web presence and AI retrieval optimization: whether a brand appears in a *specific user's* personalized AI Mode results via opted-in Gmail/Photos signals. Standard citation-tracking tools (Trakkr, Evertune, etc.) can't see this layer at all, since it's private and per-user rather than a public, poolable citation. Single-source, early-evidence finding — not yet a validated measurement practice.
 - **Presence/Portability/Concentration** ([[ai-citation-landscape]]) — A three-layer measurement framework for understanding *sources* cited (presence = whether your domain gets cited; portability = citation frequency across engines; concentration = power-law distribution of citations across your pages)
 - **Traffic-to-Purchase Attribution** ([[similarweb-downstream-impact-of-ai-visibility-2026]]) — A 2.5x visit-rate multiplier and 2x engagement (pages/time) for AI-influenced traffic, with a finding that 55.9% of AI-influenced traffic invisibly gets absorbed into search attribution, not counted separately
 - **Citation Economics** ([[aio-ctr-impact]]) — The traffic/CTR/conversion premium for being cited in Google AI Overviews specifically (citation premium quantified, query-format variation documented)
@@ -95,6 +98,7 @@ Understanding *why* to measure AI visibility:
 
 - [[ai-visibility-correlation-factors]] — Which brand/SEO metrics correlate with being cited (not how to measure it)
 - [[ai-citation-landscape]] — Empirical patterns in what AI systems cite (sources, media types, freshness)
+- [[personal-context-signals-in-ai-search]] — the personal-context-management layer these standard measurement tools can't see
 - [[geo-content-optimization-tactics]] — Actionable tactics to improve AI visibility (once you can measure it)
 - [[wholewhale-ai-brand-footprint-measurement]] — The source introducing the AI Brand Footprint metric and reverse-engineering formula
 - [[google-generative-ai-performance-report]] — Google's own native impression-tracking tool for AI Overviews/AI Mode, partially closing the measurement gap for Google's AI surfaces

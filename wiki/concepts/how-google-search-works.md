@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-07-08
+updated: 2026-08-20
 ---
 
 # How Google Search Works
@@ -41,6 +41,18 @@ in server-log analysis:
   a model's baseline knowledge. Training data only refreshes at
   retraining time, so crawl access *now* shapes what a future model
   generation knows, not what the current one already knows.
+  **Scale, per [[commoncrawl-web-graph-ai-ranking-signals-2026]]**:
+  Common Crawl's dataset trains **64% of analyzed LLMs**, and per
+  Mozilla Foundation's 2024 report, **over 80% of GPT-3's training
+  tokens** came from filtered Common Crawl data — training-bot access
+  isn't a minor input, it's a dominant one for at least one frontier
+  model. Common Crawl also publishes two free, checkable domain-
+  authority metrics computed over its own crawl graph — **Harmonic
+  Centrality** (closeness to other domains via link hops, identifying
+  central web hubs) and **PageRank** (authority from high-authority
+  inlinks) — a plausible, if not directly tested, proxy for how
+  "overrepresented" a domain is in LLM training data specifically
+  (distinct from its standing in Google's own index/ranking).
 - **Search/indexing bots** (e.g. OAI-SearchBot) — build the retrieval
   pool for AI search/citation. A page unreachable to these bots is not
   eligible to be surfaced at all — the AI-search analogue of Google's

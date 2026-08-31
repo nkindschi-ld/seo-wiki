@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-08-03
+updated: 2026-08-20
 ---
 
 # Listicles in AI Search
@@ -52,6 +52,14 @@ also diverge most from Google rankings (AIO/SERP source overlap ~20% in
 help desk / project management vs. 62% in the thin-listicle QuickBooks
 hosting category) — see [[ai-citation-landscape]]'s AIO↔SERP divergence
 data.
+
+**A further, corroborating aggregate share (2026-08-20)**: per
+[[commoncrawl-web-graph-ai-ranking-signals-2026]] (secondhand, 2M
+citations / 177M sources, undisclosed methodology — directional only),
+comparative listicles account for **32.5% of AI citations** overall —
+broadly consistent with, though not directly comparable to, DerivateX's
+Google-AIO-specific 63.4% figure above (different engine scope,
+different sample).
 
 ## Listicle rank effect (third-party listicles)
 

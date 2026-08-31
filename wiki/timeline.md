@@ -846,14 +846,50 @@ Foundational usability piece framing the URL as part of the UI: the six heuristi
 (memorable/short/typeable/structure-visualizing/hackable/persistent), all-lowercase, and no-linkrot
 persistence. (Earliest-dated source in the wiki.)
 
+## 2026-01-19 — Common Crawl publishes "How SEOs Are Using Common Crawl's Web Graph Data for AI Ranking Signals" (Stephen Burns)
+[[commoncrawl-web-graph-ai-ranking-signals-2026]] · updated [[how-google-search-works]],
+[[ai-citation-landscape]], [[listicles-in-ai-search]], and [[geo-content-optimization-tactics]].
+First-party detail on Common Crawl's role in LLM training (64% of analyzed LLMs, 80%+ of GPT-3
+tokens) and its free Harmonic Centrality/PageRank web-graph metrics as an AI-training-data-
+representation proxy, plus a secondhand rank-vs-citation-probability dataset.
+
 ## 2026-03-10 — Semrush publishes "We Analyzed 89K LinkedIn URLs Cited in AI Search" (Margarita Loktionova)
 [[semrush-linkedin-ai-visibility-study-2026]] · corroborated [[otterly-linkedin-ai-citations-study-2026]]
 and updated [[geo-content-optimization-tactics]] / [[ai-citation-landscape]]. Second LinkedIn-specific
 AI-citation study: LinkedIn ~#2 at ~11% of responses, original long-form + consistency win, engagement/
 follower count don't drive citation; diverges on Perplexity's company-vs-individual mix (logged conflict).
 
+## 2026-06-25 — Cyrus Shepard/Zyppy publishes "Fan-out Framework: 5 Steps to Optimize for Fan-out Queries"
+[[zyppy-fan-out-framework-2026]] · updated [[geo-content-optimization-tactics]] and
+[[ai-visibility-measurement-methodology]]. A named 5-step fan-out discovery-and-optimization workflow
+(identify ranking keyword → discover fan-outs → consolidate topics → optimize/create pages → measure)
+with named tools (QueryFan, Qforia, queryfanout.ai, Keyword Insights, Peek, Gumshoe) and a
+scaled-content-abuse warning; also surfaced two unreconciled secondhand-citation discrepancies against
+existing Ahrefs/AirOps figures in [[ai-citation-landscape]].
+
+## 2026-05-21 — iPullRank publishes "Your Inbox Might Be the Next AI Search Signal" (Garrett Sussman)
+[[ipullrank-google-personal-intelligence-experiment-2026]] · created concept
+[[personal-context-signals-in-ai-search]]. Controlled experiment (study window 2026-03-30–04-15) finding
+Google AI Mode's opted-in "Personal Intelligence" feature lets Gmail/Photos content shift brand
+recommendations for that user (23.9%→66.8% seeded-brand appearance rate), with email far outweighing
+photo seeding — the first personal, per-user (not public-web) AI-visibility signal in this wiki.
+
 ## 2026-08-06 — Peec AI publishes "Rerankers for GEO/AEO: How AI search chooses passages and sources" (Metehan Yesilyurt)
 [[peec-ai-rerankers-geo-aeo-2026]] · created concept [[ai-search-reranking-pipeline]]. Mechanism-level
 account of the AI-search pipeline (fanout → hybrid retrieval + RRF → neural reranking → generation): the
 reranker between retrieval and generation, cross-family score disagreement, answer-shape alignment as why
 listicles win, and passage-level (not page-level) citation.
+
+## 2026-08-04 — Cyrus Shepard/Zyppy publishes "These SEO Strategies Drive 90% of Your AI Visibility"
+[[zyppy-seo-strategies-for-ai-search-2026]] · updated [[generative-engine-optimization]],
+[[geo-content-optimization-tactics]], and [[explainable-to-ai-4cs]]. Practitioner synthesis arguing
+"good SEO is good GEO"; corroborates the existing SEO-fundamentals-are-the-foundation side of a tracked
+conflict, and adds two new tools (AI Difference Engine, AlsoAsked.com) plus a one-sentence
+brand-positioning formula.
+
+## 2026-08-17 — Lily Ray publishes ChatGPT fan-out query analysis; apparent "ChatGPT 5.6" fan-out-behavior escalation
+[[lilyray-chatgpt-fanout-queries-2026]] · updated [[ai-citation-landscape]] and
+[[geo-content-optimization-tactics]]. Secondary aggregation (undisclosed methodology) reporting
+a sharp jump in ChatGPT fan-out volume (2.17→7.61 queries/prompt) and `site:` operator usage
+(0.3%→23%) tied to an apparent model update, plus a retrieval-vs-citation divergence and a
+quantified decides-before-it-searches citation-rate gap (68.9% vs 2.1%).

@@ -4,6 +4,19 @@ Append-only chronological record of wiki activity. Each entry starts with
 a consistent prefix so the file stays greppable, e.g.
 `grep "^## \[" wiki/log.md | tail -5`.
 
+## [2026-08-20] ingest | "What we can learn from evolving ChatGPT fan-out queries" (Lily Ray)
+[[lilyray-chatgpt-fanout-queries-2026]] — secondary aggregation (undisclosed methodology
+throughout, treat as directional) of ~7 researchers' findings on ChatGPT's evolving fan-out
+behavior. Updated [[ai-citation-landscape]] with a "ChatGPT fan-out escalation and `site:`
+operator targeting" addendum (fan-out volume jump tied to an apparent model update, `site:`
+usage 0.3%→23%, a retrieval-vs-citation divergence, a quantified decides-before-it-searches
+citation rate 68.9% vs 2.1%, and a domain-confusion/phishing-adjacent risk). Updated
+[[geo-content-optimization-tactics]] with a new `site:`-operator/official-domain-signaling
+tactic section (GSC/Bing `site:`-impression monitoring, title-tag/meta clarification,
+crawlable-HTML pricing/specs). No conflicts with existing wiki claims — read as a
+time-series continuation of [[peec-ai-chatgpt-query-fanouts-2026]] and a sharper number on
+[[ahrefs-why-chatgpt-cites-pages-2026]]'s existing Reddit retrieve-not-cite finding.
+
 Format:
 ```
 ## [YYYY-MM-DD] ingest | <source title>
@@ -2136,3 +2149,61 @@ missing/empty tags, no type mismatches, no duplicate index entries. Also verifie
 wiki/sources/ resolve to real files in raw/. An audit of all 5 Conflicting Evidence sections against the
 full source list found the other 7 conflict entries still current, and no new unflagged numeric/directional
 contradictions across the wiki.
+
+## [2026-08-20] ingest | "Fan-out Framework: 5 Steps to Optimize for Fan-out Queries" (Cyrus Shepard / Zyppy)
+[[zyppy-fan-out-framework-2026]] — a named 5-step fan-out discovery-and-optimization workflow
+(new "Fan-out discovery and optimization workflow" section in [[geo-content-optimization-tactics]])
+with named discovery/clustering/measurement tools; added Peek and Gumshoe to
+[[ai-visibility-measurement-methodology]]'s tool landscape.
+
+## [2026-08-20] conflict | AIO/SERP-overlap and rank-1-citation figures — secondhand-citation discrepancies
+[[zyppy-fan-out-framework-2026]] attributes to Ahrefs a 38% AIO-citations-from-top-10 figure, which
+conflicts with the 76% figure this wiki already has from Ahrefs ([[ahrefs-b2b-seo-statistics-2025]])
+for the same metric — logged as an additional unverified data point in the existing open
+AIO↔SERP-overlap spread in [[ai-citation-landscape]] rather than resolved. Separately, it attributes
+to AirOps a 43.2% ChatGPT-rank-1-citation figure, which does not match the 58.4% figure this wiki's
+own AirOps ingest ([[airops-fan-out-effect-2026]]) reports for ChatGPT retrieval rank 1 — flagged as
+an unreconciled discrepancy (possibly a different metric: Google organic rank 1 vs. ChatGPT internal
+retrieval rank 1) in [[ai-citation-landscape]]'s "Retrieval rank as the primary citation gatekeeper"
+section. Neither discrepancy changes existing wiki claims; both are flagged pending a source that
+reconciles them.
+
+## [2026-08-20] ingest | "How SEOs Are Using Common Crawl's Web Graph Data for AI Ranking Signals" (Stephen Burns / Common Crawl)
+[[commoncrawl-web-graph-ai-ranking-signals-2026]] — first-party Common Crawl blog on its Web Graph
+data (Harmonic Centrality, PageRank) as a training-data-representation proxy, plus training-data-share
+figures (64% of analyzed LLMs, 80%+ of GPT-3 tokens per Mozilla Foundation). Added the figures and
+metric definitions to [[how-google-search-works]]'s training-bot note, a new domain-benchmarking
+tactic to [[geo-content-optimization-tactics]] (CC Rank Checker / Web Graph Statistics tools), and a
+secondhand rank-vs-citation-probability data point (46-48%/37%/19-20% at positions 1/2/10) plus a
+32.5%-listicle-citation-share figure to [[ai-citation-landscape]] and [[listicles-in-ai-search]]. No
+conflicts — same direction as, milder magnitude than, existing retrieval-rank findings.
+
+## [2026-08-20] ingest | "Your Inbox Might Be the Next AI Search Signal" (Garrett Sussman / iPullRank)
+[[ipullrank-google-personal-intelligence-experiment-2026]] — a controlled experiment on Google AI Mode's
+opted-in "Personal Intelligence" feature, finding Gmail/Photos content shifts brand recommendations for
+that user (23.9%→66.8% seeded-brand appearance; email >> photo seeding; effect present even for
+zero-web-presence fake brands; category-dependent, weaker in trust-heavy verticals). This is a genuinely
+new visibility layer for this wiki — private, per-user personal-context signals, distinct from every
+existing public-web citation/retrieval/authority finding. Created new concept
+[[personal-context-signals-in-ai-search]]; added an early/unproven "Email and personal-context signals"
+tactic to [[geo-content-optimization-tactics]] and a "personal context management" measurement-layer note
+to [[ai-visibility-measurement-methodology]]. No conflicts with existing wiki claims — the source's own
+"web grounding persists" finding suggests this layers on top of, rather than replaces, the public-web
+citation mechanics already documented.
+
+## [2026-08-20] ingest | "These SEO Strategies Drive 90% of Your AI Visibility" (Cyrus Shepard / Zyppy)
+[[zyppy-seo-strategies-for-ai-search-2026]] — practitioner synthesis piece; mostly restates existing wiki
+mechanisms (fan-out/RRF, third-party authority, technical crawlability) under a three-stage
+eligibility/citation/recommendation framework. Added Shepard as a corroborating practitioner voice on the
+"SEO fundamentals are the foundation" side of [[generative-engine-optimization]]'s existing Conflicting
+Evidence entry (his unmeasured "90%" figure, not a new study). Added two new tools (AI Difference Engine,
+AlsoAsked.com) and a one-sentence brand-positioning formula to [[geo-content-optimization-tactics]],
+cross-linked with [[explainable-to-ai-4cs]]'s four C's. No conflicts.
+
+## [2026-08-24] query | "Write meta tags for /solutions/enterprise-prompt-management-tools/"
+Applied [[writing-meta-tags]] (solution-page guidance: lead with the outcome/audience problem) plus the
+strict `seo-meta-tags` skill spec (Title Case, `| LaunchDarkly` suffix, 65/155-char limits, CTA). Semrush
+US data used to pick the primary keyword: "prompt management" 320/mo KD 34; "prompt management tools"
+170/mo; "prompt versioning" 170/mo; "enterprise prompt management" only 70/mo but trending 0.57 -> 1.00.
+Chose "Enterprise Prompt Management" to capture the head term plus the enterprise modifier the URL
+targets. Delivered 3 title + 3 description variations; nothing new filed to concepts/playbooks.

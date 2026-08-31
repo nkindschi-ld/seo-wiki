@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [aeo, seo]
-updated: 2026-08-03
+updated: 2026-08-20
 ---
 
 # Explainable to AI: The 4 C's
@@ -44,6 +44,11 @@ on AI presence *despite* near-perfect favorability. Being liked is not being sur
    to [[brand-entity-seo-strategy]]'s entity-line standardization and the "Consistency"
    dimension of [[ai-entity-footprint-audit]], and the same discipline the
    [[competitor-citation-displacement]] playbook applies to claims a rival owns.
+   **Independently-arrived-at shorter version (2026-08-20)**: per
+   [[zyppy-seo-strategies-for-ai-search-2026]], a single-sentence template — "[Brand]
+   is a [product] for [audience], especially [use case], because [differentiator]" —
+   covers the same Category/Customer/Contrast ground; see
+   [[geo-content-optimization-tactics]] for the full note.
 
 ## The two-minute self-test
 
