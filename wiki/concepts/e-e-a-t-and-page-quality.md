@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-07-07
+updated: 2026-09-04
 ---
 
 # E-E-A-T and Page Quality
@@ -137,3 +137,10 @@ All three trigger an automatic **Lowest** rating:
   confirmation of this framework: reviews/star ratings correlate with
   classic SERP rankings, and the study explicitly ties this to E-E-A-T
   Trust and cites the Search Quality Evaluator Guidelines by name.
+- [[seo-copywriting]] — the writing-level playbook for producing
+  content that clears this quality bar in practice.
+- [[content-pruning-playbook]] — the remediation path for content that
+  doesn't clear it: improve, consolidate, noindex, or remove.
+- [[geo-content-optimization-tactics]] — how the same
+  experience/expertise/sourcing signals are applied for generative
+  engines.

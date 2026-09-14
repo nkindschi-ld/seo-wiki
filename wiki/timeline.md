@@ -13,6 +13,14 @@ Format:
 
 ---
 
+## 2019-10-01 — SEOptimer publishes "Website Footer SEO Best Practices"
+
+[[seoptimer-website-footer-seo]] · fed [[footer-optimization]].
+Design/UX-led footer guide: seven reasons footers matter, must-have
+elements, the one-generic-CTA and three-section rules, and a
+"simplicity over volume" density stance later contradicted by
+[[growth-memo-show-me-your-footer]].
+
 ## 2020-04-03 — Ahrefs publishes "Anchor Text: A Data-Driven Guide"
 
 [[ahrefs-anchor-text-2020]] · updated
@@ -22,6 +30,14 @@ every backlink anchor-text type (including exact-match) shows
 weak-to-negligible ranking correlation, concludes anchor-text ratios
 shouldn't be deliberately manipulated, and traces the practice's risk
 back to Google's 2012 Penguin update.
+
+## 2020-10-05 — Crawling Mondays publishes "Link Building & Outreach in an SEO Process"
+
+[[crawling-mondays-link-building-outreach-2020]] · updated
+[[link-building]] and [[link-building-outreach-tactics]]. Aleyda Solis
+interviews Carrie Rose (Rise at Seven) and Gisele Navarro (NeoMam Studios)
+on link building/outreach common mistakes and keys to success as
+practiced in 2020.
 
 ## 2021-07-26 — July 2021 link spam update
 
@@ -91,6 +107,16 @@ back to Google's 2012 Penguin update.
 
 [[google-search-status-dashboard-history]]. Duration: 13 days, 2 hours.
 
+## 2023-07-31 — Kevin Indig publishes "Show me your footer, I show you mine"
+
+[[growth-memo-show-me-your-footer]] · created [[footer-optimization]],
+opened a Conflicting Evidence entry on
+[[link-and-anchor-text-best-practices]] and amended [[link-building]].
+Relays John Mueller's statement that Google does **not** discount footer
+links ("we essentially just see them as links on a page"), contradicting
+the 2004 reasonable-surfer placement hierarchy; argues the real
+mechanism is crawl rate, backed by an uncontrolled G2 case.
+
 ## 2023-08-22 — August 2023 core update
 
 [[google-search-status-dashboard-history]]. Duration: 16 days, 3 hours.
@@ -154,6 +180,13 @@ weak.
 
 [[google-search-status-dashboard-history]]. Duration: 14 days, 21 hours.
 
+## 2024-05-23 — HeyDay Marketing publishes "Maximize Your SEO with Effective Footer Optimization"
+
+[[heydaymarketing-footer-optimization]] · fed [[footer-optimization]].
+Additive only on footer schema markup, local-SEO NAP and a maintenance
+cadence; its keyword-placement advice was excluded as self-contradicting
+keyword stuffing.
+
 ## 2024-06-20 — June 2024 spam update
 
 [[google-search-status-dashboard-history]]. Duration: 7 days, 1 hour.
@@ -199,6 +232,15 @@ perplexity.ai without white-box/gradient access.
 
 [[google-search-status-dashboard-history]]. Duration: 23 days, 13 hours.
 
+## 2024-11-19 — Rich Sanger publishes "AI Overview Optimization: Insights from Google's Patent"
+
+[[richsanger-ai-overview-patent-insights]] · updated
+[[geo-content-optimization-tactics]]. Analysis of US patent 11769017B1
+describing a two-stage AI Overview selection mechanism (a draft summary,
+then embedding-distance verification against candidate sources), with
+position-1/2 inclusion-rate data and a related-query pathway that lifts
+inclusion from 46% to 67%. Backfilled during the 2026-09-04 lint.
+
 ## 2024-12-12 — December 2024 core update
 
 [[google-search-status-dashboard-history]]. Duration: 6 days, 4 hours.
@@ -242,6 +284,15 @@ vs-AI-citation conflict. Last updated 2025-12-23.
 six months. An earlier data point than [[ai-traffic-scale-vs-hype]]'s
 later 800M+-weekly-user figure — not a contradiction, a milestone on the
 same growth curve.
+## 2025-03-01 — Semrush publishes "Semrush AI Overviews Study: What 2025 SEO Data Tells Us"
+
+[[semrush-ai-overviews-study-2025]] · updated [[aio-ctr-impact]]. AIO
+prevalence rose from 6.49% of queries to a 24.61% July peak, settling at
+15.69% by November (+155% Q1-to-Q4). AIOs expanded past informational
+intent into commercial (8.15%→18.57%), transactional (1.98%→13.94%), and
+navigational (0.84%→10.33%) queries. Zero-click rate *decreased*
+(33.75%→31.53%) on keywords tracked before and after AIO introduction.
+Backfilled during the 2026-09-04 lint.
 
 ## 2025-03-13 — March 2025 core update
 
@@ -402,6 +453,17 @@ target (see that playbook's Conflicting Evidence section).
 
 [[google-search-status-dashboard-history]]. Duration: 19 hours, 30 minutes.
 
+## 2026-03-25 — SparkToro publishes "New Research: Influence Happens Everywhere"
+
+[[sparktoro-influence-happens-everywhere-2026]] · established
+[[ai-traffic-scale-vs-hype]]. Analysis of the 5,000 most-visited sites
+finds search + social ≈ half of all web visits, Google ≈ 73% of search
+activity, and AI tool visits at roughly 1/1,000th the scale their press
+coverage implies — the wiki's core scale check against AI-traffic hype.
+Also argues influence precedes search, so search converts existing
+demand rather than originating it. Backfilled during the 2026-09-04
+lint.
+
 ## 2026-03-27 — March 2026 core update
 
 [[google-search-status-dashboard-history]]. Duration: 12 days, 4 hours.
@@ -481,6 +543,18 @@ MarTech, US Finance) and engine retrieval strategy.
 
 [[google-search-status-dashboard-history]]. Duration: 11 days, 21 hours.
 
+## 2026-06-15 — Growth Memo publishes "Topics Matter for Third-Party Authority Signals"
+
+[[growth-memo-topics-matter-for-third-party-authority]] · updated
+[[ai-citation-landscape]], [[ai-visibility-correlation-factors]], and
+[[geo-content-optimization-tactics]]. AI source sets are topic-specific
+rather than generic — competitor domains are 33.5% of citations for
+invoicing queries but 7% for business-startup queries — and Authority
+Score shows a 0.65 Pearson correlation with AI mentions across a
+1,000-domain sample, one side of the still-open authority-vs-citation
+conflict. Authority gains are tiered, not linear. Backfilled during the
+2026-09-04 lint.
+
 ## 2026-06-16 — Semrush publishes "How to Optimize for the Agentic Web"
 
 [[semrush-optimize-for-agentic-web]] · established
@@ -516,12 +590,36 @@ checkout readiness for AI shopping agents.
 
 [[google-search-status-dashboard-history]]. Duration: 2 days, 1 hour.
 
+## 2026-06-24 — Similarweb publishes "The Downstream Impact of AI Visibility"
+
+[[similarweb-downstream-impact-of-ai-visibility-2026]] · updated
+[[aio-ctr-impact]] and [[ai-citation-landscape]]. First study in this
+wiki tying AI recommendation to measured downstream traffic: brands
+ChatGPT recommends are 2.5x more likely to get a visit within 7 days
+than a non-recommended competitor. Its measurement finding matters more
+— 55.9% of AI-influenced traffic arrives via search rather than as a
+ChatGPT referral, so standard analytics absorbs AI's influence into
+ordinary branded organic. US desktop only, three verticals,
+correlational. Backfilled during the 2026-09-04 lint.
+
 ## 2026-06-29 — Google publishes official guidance on optimizing for AI Overviews/AI Mode
 
 [[google-ai-optimization-guide]] · updated [[generative-engine-optimization]].
 States SEO fundamentals remain the foundation for AI features and that no
 special AI-only infrastructure (llms.txt, chunking, AI-specific markup) is
 needed.
+
+## 2026-06-29 — Growth Memo publishes "Why Proprietary Data Is Your Most Defensible AI Citation Asset"
+
+[[growth-memo-why-proprietary-data-is-your-most-defensible-asset]] ·
+updated [[geo-content-optimization-tactics]]. Pages with 15+ unique
+figures averaged an information gain score of 62.1 vs. 40.2 for pages
+with minimal original data, and 44.2% of all citations come from the
+first 30% of a page. Owning the data doesn't guarantee the citation —
+aggregators can repackage someone else's research and capture it
+instead. Companion to
+[[growth-memo-why-most-original-data-never-gets-cited]]. Backfilled
+during the 2026-09-04 lint.
 
 ## 2026-06-30 — Peec AI publishes "Why Server Logs Are Crucial for AI Search Strategy"
 
@@ -542,6 +640,15 @@ new "deferred buy" pattern (32.5% of custom builds name their own
 vendor upgrade path in code comments), and PostHog beating dedicated
 competitor LaunchDarkly in Feature Flags (27% vs. 0% primary picks) via
 analytics bundling.
+## 2026-07-02 — Semrush publishes "AI Overviews Are Expanding Across Commercial Intent Search"
+
+[[semrush-ai-overviews-commercial-search-2026]] · updated
+[[aio-ctr-impact]]. Commercial-intent AIOs grew 71% between Nov 2025 and
+Apr 2026 while transactional-intent AIOs fell 5% — a divergence from the
+uniform-growth phase in the 2025 study. AIOs cluster on the highest-CPC
+keywords in nearly every industry, and Google Ads/AIO coexistence on the
+same SERP roughly doubled year over year. Backfilled during the
+2026-09-04 lint.
 
 ## 2026-07-06 — Growth Memo publishes "Why Most Original Data Never Gets Cited"
 
@@ -893,3 +1000,37 @@ brand-positioning formula.
 a sharp jump in ChatGPT fan-out volume (2.17→7.61 queries/prompt) and `site:` operator usage
 (0.3%→23%) tied to an apparent model update, plus a retrieval-vs-citation divergence and a
 quantified decides-before-it-searches citation-rate gap (68.9% vs 2.1%).
+## 2026-07-01 — Spotify publishes "As It Was" (SIGIR '26): LLM-as-judge search evaluation grounded in historical user-behavior data (QRI cards) beats semantic-only judges on alignment with real user preference and live A/B outcomes
+[[spotify-llm-search-eval-behavioral-grounding-2026]] · new concept [[llm-as-judge-behavioral-grounding]]
+
+## 2026-04-05 — Princeton publishes "Commercial Persuasion in AI-Mediated Conversations": LLM chat interfaces nearly triple sponsored-product selection vs. traditional search, mostly via disparaging alternatives; disclosure labels largely ineffective at helping users detect it
+[[princeton-commercial-persuasion-ai-conversations-2026]] · new concept [[ai-mediated-commercial-persuasion]]
+
+## 2026-06-04 — WebKnoGraph paper published: open-source GNN framework for evaluating internal-linking interventions before deployment, finding automatic link selection trades semantic coherence for authority gain
+[[webknograph-gnn-internal-linking-2026]] · updated [[link-and-anchor-text-best-practices]]
+
+## 2025-09-17 — "When Content is Goliath and Algorithm is David" published: large-scale study finds Google AI Overview citation preference driven by content perplexity and source-set semantic homogeneity, intrinsic to the underlying LLM rather than platform-specific engineering
+[[goliath-david-generative-search-perplexity-2025]] · updated [[ai-citation-landscape]] and [[geo-content-optimization-tactics]]
+
+## 2026-04-29 — "From Citation Selection to Citation Absorption" published: measurement framework across ChatGPT/Google AI Overview/Perplexity shows citation breadth and depth diverge sharply by platform, and identifies structural/evidence-genre drivers of how deeply a citation is absorbed into an answer
+[[citation-selection-vs-absorption-geo-framework-2026]] · updated [[ai-citation-landscape]] and [[geo-content-optimization-tactics]]
+
+## 2026-07-19 — "Do Generative AI Assistants Respect robots.txt?" published: controlled experiment finds Claude/Mistral comply with robots.txt while DeepSeek/Gemini/Grok/Qwen do not, and identifies generic-user-agent attribution gaps and access/answer divergence
+[[ai-assistants-robots-txt-compliance-2026]] · updated [[robots-txt-strategy]]
+
+## 2026-07 — First large-scale citation study of Chinese-language generative search engines (DeepSeek, Doubao, Tencent Yuanbao, Qwen) published, finding a 39.3% silent-citation rate and 8.3% brand-exposure rate from citation pool to visible answer
+[[chinese-generative-search-citation-study-2026]] · updated [[ai-citation-landscape]]
+## 2026-05-13 — "Measuring Google AI Overviews" published (arXiv:2605.14021)
+
+[[arxiv-measuring-google-ai-overviews-2026]] · created
+[[ai-overview-grounding-and-fidelity]]; updated
+[[ai-citation-landscape]], [[aio-ctr-impact]] and
+[[geo-content-optimization-tactics]]. First large-scale independent
+academic audit of Google AI Overviews: 55,393 trending queries and
+7,583 AIOs observed Mar 13-Apr 21 2026, finding 13.7% activation
+(64.7% on question-form queries), AIO-cited domains more credible than
+co-displayed organic results (PC1 0.732 vs 0.645) with less UGC (14.2%
+vs 41.4%), 29.8% of cited domains absent from the first page, 11.03%
+of claims unsupported by their own cited sources, and 50.63% of cited
+pages running visible ads against only 2.16% of AIO SERPs carrying
+Google's own.

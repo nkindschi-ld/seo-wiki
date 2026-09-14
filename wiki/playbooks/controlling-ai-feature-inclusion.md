@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-07-23
+updated: 2026-09-04
 ---
 
 # Controlling AI Feature Inclusion (Google Search)
@@ -63,3 +63,10 @@ gradual and gated on sufficient AI-feature impressions.
   crawlers (GPTBot, ChatGPT-User, Claude-Web, etc.) *aren't
   accidentally* blocked in robots.txt, for sites that want inclusion
   rather than exclusion.
+- [[generative-engine-optimization]] — the parent concept, and the
+  opposite strategic default: most of this wiki is about *getting*
+  included in generative answers, whereas this playbook covers the
+  cases where you deliberately don't want to be.
+- [[robots-txt-strategy]] — the crawl-control-vs-indexing-control
+  distinction that determines which directive actually achieves your
+  goal here.

@@ -141,6 +141,34 @@ same LLM product can move across depending on mode:
    pages close to real time. Optimize with agent-friendly pages (clean
    HTML/schema) and monitor bot traffic directly, since indexing lag
    isn't the bottleneck here the way it is in tier 1-2.
+## Two distinct influence mechanisms: training-data co-occurrence vs. retrieval-stage citation
+
+Per [[malte-landwehr-llmo-geo-aio-guide]] — an early (Jan 2024) framing
+worth distinguishing from the citation-visibility mechanics above:
+
+- **Co-occurrence / training-data influence**: strategically pairing a
+  brand with target keywords/topics on authoritative sites so that a
+  model's *training data* links them together, shaping brand
+  associations in static pre-trained models even with no retrieval
+  step involved. Illustrated by the "Tesla whistle" example — enough
+  media co-occurrence of "Tesla" and "whistle" from a PR stunt caused
+  ChatGPT's autocomplete to associate the two terms. This targets the
+  same **static pre-trained-data LLM** category described above
+  (optimize for brand mentions, not links; changes only when the
+  training set updates).
+- **Citation-stage visibility** (the GEO paper's mechanism, and most of
+  this page): given a source is already retrieved by a RAG system, how
+  much does the generated answer actually cite/use it. Applies to the
+  **search-augmented** and **reasoning-with-search** categories above.
+
+Target authoritative sites for co-occurrence building: heavily-
+moderated community sites (Wikipedia, Reddit, Quora), database
+platforms (Crunchbase, Yelp, IMDB), major editorial outlets (NYT,
+Bloomberg, Reuters, Forbes), and Google's Knowledge Graph source list
+(~63k sites) — overlaps heavily with [[brand-entity-seo-strategy]]'s
+own Knowledge-Graph-data-source list, reinforcing that brand-entity
+work and GEO co-occurrence work are largely the same underlying effort
+viewed from two angles.
 
 ## Why traditional SEO doesn't transfer
 
@@ -396,6 +424,9 @@ gated on sites having sufficient AI-feature impressions.
   AI-Overview distinction and LLM taxonomy above; also has practical
   tactics in [[geo-content-optimization-tactics]]'s LLM-chat-specific
   section.
+- [[malte-landwehr-llmo-geo-aio-guide]] — the co-occurrence/training-
+  data-influence mechanism above, and the authoritative-source target
+  list for building it.
 - [[ai-traffic-scale-vs-hype]] — a scale check on this whole domain: as
   of early-2026 clickstream data, standalone AI tools remain a tiny
   fraction of overall search/social traffic, so the tactics in this

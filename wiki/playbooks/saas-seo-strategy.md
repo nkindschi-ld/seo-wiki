@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-07-11
+updated: 2026-09-04
 ---
 
 Why / when to use this: SaaS/software companies need a different SEO
@@ -222,6 +222,16 @@ rank:
 - [ ] Evaluated whether a learn hub, marketplace-format page template, or tool/calculator fits your product category
 - [ ] Mega menu paths that describe the same product/feature link to one destination page, not duplicates
 - [ ] Each content silo has 10-30+ posts before being treated as a topical-authority source
+
+## See also
+
+- [[search-intent-and-needs-met]] — the parent concept behind the
+  ToFu/MoFu/BoFu funnel mapping above: each tier is an intent stage,
+  and page-type choice follows from intent, not keyword volume.
+- [[content-marketing-strategy]] — the broader content-program concept
+  this vertical playbook specializes.
+- [[enterprise-seo-strategy]] — the scale-up path once a SaaS SEO
+  program outgrows a single team.
 
 See [[semrush-saas-seo]], [[gofishdigital-seo-for-saas]],
 [[sej-advanced-saas-seo-strategies]], and

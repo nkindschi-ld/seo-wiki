@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-07-11
+updated: 2026-09-10
 ---
 
 # Link and Anchor Text Best Practices
@@ -132,12 +132,15 @@ disproportionate value and are worth high priority:
   linking — strict silos that forbid inter-topic links sacrifice
   authority distribution and relevance. Layer topic clusters (pillar
   pages reciprocally linked to subtopic pages) on top.
-- **Link placement ("reasonable surfer" model)**: link value correlates
-  with click likelihood, so place priority links accordingly —
-  in-content/editorial links (highest) > navigation/breadcrumbs
-  (medium, structurally useful but algorithmically discounted) >
-  footer/deep sidebar links (lowest). Put your most important links
-  early in the content, above-the-fold when possible.
+- **Link placement ("reasonable surfer" model)** — *contested, see
+  Conflicting Evidence*: link value is often said to correlate with
+  click likelihood, giving in-content/editorial links (highest) >
+  navigation/breadcrumbs (medium) > footer/deep sidebar links (lowest).
+  Google's John Mueller has since said Google does *not* differentiate
+  by placement. Practical guidance either way is unchanged: put your
+  most important links early in the content and above the fold, since
+  that's better for readers regardless — but don't treat footer links
+  as worthless (see [[footer-optimization]]).
 - **Prioritize high-value pages**: identify pages that represent core
   business value (key products, cornerstone content) and link to them
   prominently and often.
@@ -178,6 +181,8 @@ disproportionate value and are worth high priority:
   the new pillar. Best suited to tutorial-style content with distinct,
   separable search intents per section — not every long-form page
   benefits from splitting. See [[samuelschmitt-topic-cluster-case-study]].
+  For the full build-from-scratch process (not just the split-an-
+  existing-page path), see [[topic-cluster-strategy]].
 - **Pagination**: use real `<a href>` elements, never JS-only buttons or
   `onclick` handlers (crawlers struggle to execute JS reliably — see
   §1). Each paginated page should canonicalize to itself, never to page
@@ -199,6 +204,37 @@ disproportionate value and are worth high priority:
 3. **Find new internal-link opportunities**: keyword/topic-overlap
    analysis between existing pages can surface non-obvious, contextually
    relevant linking opportunities to important pages.
+
+### Pre-deployment evaluation of internal-link interventions
+
+Before publishing a batch of new internal links, it's possible to
+evaluate the proposed changes against a multi-objective score instead
+of relying on manual judgment alone or waiting for a live A/B test to
+reveal the effect:
+
+- Model the site as a directed link graph, embedded within its larger
+  host/link-ecosystem context (not evaluated in isolation) — authority
+  propagation from a batch of new links interacts with the site's
+  existing external-link environment.
+- Score each candidate batch of links jointly across at least: authority
+  yield (marginal gain per link), authority volatility (how stable the
+  predicted effect is), the down/up ratio (are you concentrating
+  authority gains by draining it from other pages, or genuinely growing
+  it), and semantic-coherence change (topical relevance between newly
+  linked pages) — no single metric is sufficient on its own.
+- **Expect a real tradeoff, not a free win:** research on this method
+  found automated link-candidate selection produces stronger authority
+  redistribution but at a semantic-coherence cost, while human/expert
+  selection better preserves topical coherence — and *every* tested
+  intervention, including expert-selected ones, produced some negative
+  coherence change. Adding links beyond a site's original architecture
+  has an inherent cost; the question is how much you're willing to pay
+  for how much authority gain.
+- Treat this as pre-deployment triage, not a replacement for editorial
+  review — the framework this is drawn from explicitly excludes
+  behavioral signals (clicks, impressions, crawl frequency) and hasn't
+  been validated against live ranking/traffic outcomes.
+- Full methodology: [[webknograph-gnn-internal-linking-2026]].
 
 ## 5. External linking
 
@@ -226,8 +262,10 @@ disproportionate value and are worth high priority:
       orphan pages).
 - [ ] Site structure keeps important pages within ~3 clicks of the
       homepage; breadcrumbs present.
-- [ ] Priority links placed early/in-content, not buried in footer/deep
-      sidebar.
+- [ ] Priority links placed early/in-content (reader-first; placement
+      weighting itself is contested — see Conflicting Evidence).
+- [ ] Footer is not utility-links-only and doesn't merely duplicate the
+      top nav — see [[footer-optimization]].
 - [ ] Pagination uses real `<a href>` links, each page self-canonicalized.
 - [ ] Internal links are dofollow except login/admin/duplicate-filter
       URLs.
@@ -255,8 +293,41 @@ disproportionate value and are worth high priority:
     reader, including well beyond 5 links on longer/more comprehensive
     pages.
 
+- **Claim**: Google discounts boilerplate links (footer, sidebar,
+  navigation) relative to in-content editorial links.
+  - Supported by: the **reasonable surfer** model — a Google patent
+    **filed in 2004** that weights links by click likelihood — as
+    relayed by [[ahrefs-internal-links-for-seo]] (2026-03-10) and
+    [[yoast-internal-linking-for-seo]] (2025-11-12), and used as a link
+    *quality* criterion in [[link-building]] via [[ahrefs-link-building]].
+  - Contradicted by: **John Mueller**, quoted in
+    [[growth-memo-show-me-your-footer]] (2023-07-31) — "We don't really
+    differentiate there… It's not the case that we would say, Oh, like
+    links in a footer have less weight or are not as useful… we
+    essentially just see them as links on a page," and "whether they're
+    in the header or in the footer or the sidebar or the main content,
+    that doesn't really change anything for us."
+  - **Current best guess (unresolved)**: lean toward Mueller for
+    *internal* links, on the wiki's standing preference for official
+    Google guidance over third-party SEO blogs (the same principle that
+    resolved the link-count conflict above), and because the
+    reasonable-surfer patent is from 2004 — Indig notes Google
+    registered a **User-Sensitive PageRank** patent in 2016 that folds
+    user behavior and trust into link weights, superseding the simple
+    click-likelihood story. Two caveats keep this open: (1) Mueller is
+    describing how Google *treats links it finds*, which is not a claim
+    that a footer link produces the same practical outcome as an
+    in-content one; (2) the placement hierarchy is still sound advice
+    for *acquired backlinks* (see [[link-building]]), where an editorial
+    in-content placement genuinely signals more than a sitewide footer
+    link. The practical recommendation is unchanged — lead with
+    in-content links because readers use them — but "footer links don't
+    count" should not be stated as fact.
+
 ## See also
 
+- [[webknograph-gnn-internal-linking-2026]] — the pre-deployment
+  evaluation methodology and authority-vs-coherence tradeoff above.
 - [[how-google-search-works]] — links are how Google discovers URLs in
   the first place (crawling stage).
 - [[traditional-seo-ranking-factors]] — backlinks as a classic ranking
@@ -267,3 +338,11 @@ disproportionate value and are worth high priority:
   for AI/generative search systems, not just classic Google Search.
 - [[ahrefs-anchor-text-2020]] — the backlink anchor-text correlation
   data and Penguin history above.
+- [[topic-cluster-strategy]] — the dedicated cluster-build playbook
+  (discovery, pillar/subpage creation, cluster-level measurement) this
+  page's "when to split" subsection feeds into.
+- [[footer-optimization]] — the footer as a dedicated sitewide internal
+  link surface, and the footer-density conflict.
+- [[broken-link-building]] and [[digital-pr-strategy]] — external
+  link-earning tactics that complement this page's internal-linking and
+  link-recovery focus.

@@ -77,3 +77,6 @@ https://ahrefs.com/blog/internal-links-for-seo/
   accessibility, and an orphan-page/broken-link audit workflow.
 - Logged a `conflict` entry in [[link-and-anchor-text-best-practices]]
   wiki/log.md regarding "ideal number of links."
+- See also [[webknograph-gnn-internal-linking-2026]] for a
+  pre-deployment evaluation methodology that complements this source's
+  heuristic-based guidance.

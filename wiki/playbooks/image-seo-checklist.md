@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-07-11
+updated: 2026-09-04
 ---
 
 ## File type selection
@@ -115,6 +115,16 @@ a site's images or launching an image-heavy page.
 - [ ] Browser caching / expiration headers set
 - [ ] CDN in use via CNAME (not bare CDN domain links)
 - [ ] Checked Site Explorer for direct image-file backlinks to recover
+
+## See also
+
+- [[how-google-search-works]] — the parent concept: images have to be
+  discovered, crawled, and indexed through the same pipeline as pages,
+  which is why the discoverability items above come first.
+- [[traditional-seo-ranking-factors]] — where image/page-speed and
+  media signals sit among classic ranking factors.
+- [[technical-seo-audit-checklist]] — the broader audit this checklist
+  is the image-specific section of.
 
 See [[google-images-seo]] and [[ahrefs-image-seo]] for the full source
 writeups.

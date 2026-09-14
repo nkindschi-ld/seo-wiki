@@ -1,12 +1,12 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-07-11
+updated: 2026-09-10
 ---
 
 # XML Sitemap Optimization Checklist
 
-Ensure your sitemaps maximize crawl efficiency by including only pages that drive SEO value and excluding waste. Sitemaps drive ~20% of URL discovery; optimizing their content directly impacts crawl budget allocation to your most important pages.
+Per [[oncrawl-xml-sitemap-optimization]]. Ensure your sitemaps maximize crawl efficiency by including only pages that drive SEO value and excluding waste. Sitemaps drive ~20% of URL discovery; optimizing their content directly impacts crawl budget allocation to your most important pages.
 
 **When to use:** During technical SEO audits, site restructures, or before major URL cleanup efforts. Run this monthly to catch crawl-budget waste from orphaned or noindexed URLs making it into sitemaps.
 
@@ -67,6 +67,8 @@ Per Google's own analysis, sitemaps drive ~20% of URL discovery. The other 80% c
 
 ## Related pages
 
+- [[oncrawl-xml-sitemap-optimization]] — the source this checklist is
+  built from.
 - [[google-sitemaps-overview]] — Strategic role of sitemaps, metadata types, when to create
 - [[technical-seo-audit-checklist]] — Broader crawl/index/serve audit; sitemaps are one subsection
 - [[how-google-search-works]] — Crawling stage and crawl budget mechanics

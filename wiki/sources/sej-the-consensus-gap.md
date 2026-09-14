@@ -80,3 +80,8 @@ https://www.searchenginejournal.com/the-consensus-gap/574534/
   [[geo-content-optimization-tactics]].
 - No new conflicts — this source strengthens an existing wiki finding
   rather than contradicting anything.
+- See also [[citation-selection-vs-absorption-geo-framework-2026]] for
+  a complementary measurement framework: this source's
+  presence/portability/concentration metrics track *whether and where*
+  a source appears; that one tracks *how much a given citation shapes
+  a single answer*.

@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-07-11
+updated: 2026-09-10
 ---
 
 # Robots.txt Audit Checklist
@@ -113,6 +113,10 @@ Robots.txt is a crawl-management tool, not an indexing-control tool. Audit your 
 
 ## Related pages
 
+- [[ai-assistants-robots-txt-compliance-2026]] — empirical evidence
+  that several AI assistants (DeepSeek, Gemini, Grok, Qwen) don't
+  reliably respect robots.txt disallow rules, and that generic
+  user-agents can make assistant-specific rules unenforceable.
 - [[robots-txt-strategy]] — What robots.txt is, what it's NOT, misconceptions, syntax, directives, user-agents
 - [[technical-seo-audit-checklist]] — Broader crawl/index/serve audit; robots.txt is one section
 - [[how-google-search-works]] — Crawl stage and how robots.txt fits in the pipeline
