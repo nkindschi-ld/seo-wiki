@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-09-04
+updated: 2026-09-17
 ---
 
 # PDF SEO Optimization
@@ -66,6 +66,36 @@ see [[lead-magnet-checklist]] for the opt-in/conversion side.
   noindex mechanics overlap with [[technical-seo-audit-checklist]] —
   this page covers the PDF-specific application of both.
 
+## PDFs in AI search: a dedicated but tier-gated retrieval path (2026-09-17)
+
+ChatGPT's leaked engine registry
+([[konitzny-chatgpt-retrieval-leak-engine-list-2026]],
+[[chatgpt-vertical-retrieval-engines]]) shows PDFs are **not** retrieved from the
+general web pool — they have their own engines:
+
+- **`labrador-web-pdf`** and **`system2-web-pdf`** for general web PDFs.
+- **`labrador-knowledge-legal-pdf`** and
+  **`labrador-knowledge-medical-pdf`** — legal and medical are the only two
+  verticals with paired text + PDF engines, reflecting how much authoritative
+  YMYL material (statutes, filings, clinical guidelines) is PDF-shaped.
+
+Two practical consequences:
+
+1. **A text layer is an AI-retrieval prerequisite, not just a Google one.** The
+   searchable-text requirement in the checklist above gates both.
+2. **The web-PDF path appears only at the `system2` (deeper-reasoning) tier** —
+   the faster `system1` tier has no PDF engine at all. So a PDF may be
+   unreachable in a quick ChatGPT answer and retrievable in a thinking-mode one.
+   **Never let a PDF be the sole representation of a claim you want cited** —
+   publish an HTML version (or an HTML summary with the key data in markup) of
+   any report you want to appear in AI answers.
+
+*Caveat: single unverified practitioner source with no call-frequency data. Read
+as a structural signal that PDF format is a routing decision, not as a measured
+citation rate.*
+
 ## Sources
 [[digitalchakra-optimise-pdf-files-for-seo]] — single-source playbook,
 no conflicting claims found elsewhere in the wiki.
+[[konitzny-chatgpt-retrieval-leak-engine-list-2026]] — the AI-retrieval
+section above; unverified leak, structural signal only.

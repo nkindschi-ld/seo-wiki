@@ -1022,7 +1022,7 @@ quantified decides-before-it-searches citation-rate gap (68.9% vs 2.1%).
 [[chinese-generative-search-citation-study-2026]] · updated [[ai-citation-landscape]]
 ## 2026-05-13 — "Measuring Google AI Overviews" published (arXiv:2605.14021)
 
-[[arxiv-measuring-google-ai-overviews-2026]] · created
+[[xu-measuring-google-ai-overviews-2026]] · created
 [[ai-overview-grounding-and-fidelity]]; updated
 [[ai-citation-landscape]], [[aio-ctr-impact]] and
 [[geo-content-optimization-tactics]]. First large-scale independent
@@ -1034,3 +1034,24 @@ vs 41.4%), 29.8% of cited domains absent from the first page, 11.03%
 of claims unsupported by their own cited sources, and 50.63% of cited
 pages running visible ads against only 2.16% of AIO SERPs carrying
 Google's own.
+
+## 2026-09-17 — ChatGPT's internal retrieval engine registry published from an SSE leak
+[[konitzny-chatgpt-retrieval-leak-engine-list-2026]] · created
+[[chatgpt-vertical-retrieval-engines]]; updated
+[[ai-search-reranking-pipeline]], [[ai-citation-landscape]],
+[[geo-content-optimization-tactics]] and [[pdf-seo-optimization]].
+David Konitzny (Peec AI) published the full enumeration of **69 named search
+engines** extracted from a ChatGPT server-sent-events leak found by Metehan
+Yesilyurt, revealing that ChatGPT dispatches fan-out sub-queries across a
+registry of specialized engines rather than running one web search: an internal
+`labrador` family (~47 engines) with dedicated paths for Wikipedia, arXiv, STEM,
+Reddit, news (as separate 1-day/7-day/all-time indexes), legal and medical
+(text + PDF each), finance, local/places, web-PDF, web-YouTube and images;
+four external web/news backends side by side (Bing, SerpAPI, Microsoft
+`mai_grounding` with a `mai-news-beta` tag, and an unidentified `fortis`);
+Yelp and Foursquare as the only business sources with no Google Business Profile
+path; `bing_query` as the dominant query rewriter even for OpenAI's own internal
+indexes; and unequal system1/system2 coverage in which Reddit, web-PDF and
+web-YouTube are reachable only at the deeper-reasoning tier. A configuration
+enumeration with no call-frequency data, not a measured study.
+

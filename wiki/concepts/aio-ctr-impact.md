@@ -319,7 +319,7 @@ doesn't fully eliminate selection bias between exposed and non-exposed
 populations.
 ## What triggers an AIO: question form and query length
 
-Per [[arxiv-measuring-google-ai-overviews-2026]], an academic audit of
+Per [[xu-measuring-google-ai-overviews-2026]], an academic audit of
 55,393 **trending** queries (Mar–Apr 2026) — a different query
 population from the brand/commercial corpora behind the prevalence
 numbers above, so read the contrasts rather than the absolute rate:
@@ -350,7 +350,7 @@ trending-query corpus that is 51.4% Sports. The ordering — questions
 
 ## Supply side: who is paying for AIO content, and who keeps the ads
 
-[[arxiv-measuring-google-ai-overviews-2026]] measures the economics
+[[xu-measuring-google-ai-overviews-2026]] measures the economics
 from the publisher side rather than the click side:
 
 - **50.63% of AIO-cited pages (30,994 of 61,212) display visible ads**

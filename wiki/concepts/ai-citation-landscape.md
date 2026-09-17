@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-09-10
+updated: 2026-09-17
 ---
 
 # AI Citation Landscape
@@ -1103,7 +1103,7 @@ said.
 
 ## AIO source selection, measured against the first page as control
 
-Per [[arxiv-measuring-google-ai-overviews-2026]] — the only source in
+Per [[xu-measuring-google-ai-overviews-2026]] — the only source in
 this wiki that compares AIO citations against the *co-displayed
 first-page results for the same query*, which turns several
 widely-repeated AIO characterizations on their head. 7,583 AIOs,
@@ -1161,6 +1161,43 @@ exclude a page from AIO-citation monitoring. As the authors put it,
 "publishers whose content informs an AIO are not necessarily the same
 publishers whose pages users would encounter by scrolling past it."
 
+## ChatGPT's retrieval backend is plural, not just Bing (2026-09-17 addendum)
+
+The practitioner shorthand "ChatGPT search is Bing-powered" understates the
+surface. A leaked engine registry
+([[konitzny-chatgpt-retrieval-leak-engine-list-2026]]) shows **four distinct
+external web/news backends operating side by side**, alongside ~47 internal
+`labrador` engines:
+
+| Backend | Covers | Note |
+|---|---|---|
+| `bing` | webpages, news, images | the assumed-sole backend |
+| `serpapi_auto_web` / `_news` / `_image` | webpages, news, images | SerpAPI is a commercial **Google**-SERP scraping API |
+| `mai_grounding` / `mai_grounding_news` | webpages, news | Microsoft MAI grounding; news variant tagged `mai-news-beta` |
+| `fortis` / `fortis_barebone` | webpages, news, business | unidentified |
+
+Two consequences for how citation sources are read:
+
+- **Google-only or Bing-only visibility both leave a retrieval path open.** A
+  page indexed in Google but weak in Bing can still reach ChatGPT via SerpAPI,
+  and vice versa. Attributing a ChatGPT citation to "Bing ranking" is
+  unsupported without knowing which engine fired.
+- **Local/business queries route to Yelp and Foursquare**, with no Google
+  Business Profile path in the registry — a different provider dependency than
+  the Google Maps reliance documented below for AI Overviews under "Local
+  queries lean on Google Maps, not articles." Different engine, different
+  provider; not a conflict.
+
+Also relevant to this page's Reddit findings: Reddit has **two dedicated
+retrieval engines** in the registry, yet is cited at 1.93% and makes up 67.8% of
+non-cited retrieved URLs. A dedicated retrieval path evidences retrieval volume,
+not citation value — see the caution on
+[[chatgpt-vertical-retrieval-engines]].
+
+**Rigor caveat:** single-practitioner unverified leak, no call-frequency data;
+an enumerated config can contain engines that never fire. Structural map, not a
+traffic profile.
+
 ## Conflicting Evidence
 
 - **Claim**: whether AI engines (Perplexity specifically) cite LinkedIn
@@ -1195,7 +1232,7 @@ publishers whose pages users would encounter by scrolling past it."
     (see "AI Overview citation composition" above), the basis for this
     wiki's "ranking well is close to a prerequisite for AI citation"
     framing.
-  - Contradicted by: [[arxiv-measuring-google-ai-overviews-2026]]
+  - Contradicted by: [[xu-measuring-google-ai-overviews-2026]]
     (2026-05-13) — measured per-AIO domain overlap of **41.4% at
     top-10** and 70.2% across the *entire* first page, with 29.8% of
     cited domains appearing nowhere on the first page at all. Even the
@@ -1336,7 +1373,7 @@ publishers whose pages users would encounter by scrolling past it."
   semantic relevance to the query as written — behavioral/engagement
   signals from similar prior queries plausibly factor in too.
 - [[ai-overview-grounding-and-fidelity]] — the companion half of
-  [[arxiv-measuring-google-ai-overviews-2026]]: once a source is cited,
+  [[xu-measuring-google-ai-overviews-2026]]: once a source is cited,
   whether the AIO's claims are actually supported by it (~11% are not).
 - [[growth-memo-topics-matter-for-third-party-authority]] — the
   topic-vs-competitor-domain-share data point cited above, plus tiered

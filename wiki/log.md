@@ -2603,7 +2603,7 @@ stale `updated:` frontmatter. Findings and fixes:
 First independent academic AIO audit in the wiki (55,393 trending
 queries, 7,583 AIOs, 61,212 cited URLs, 98,020 verified claims,
 Mar-Apr 2026). New source page
-[[arxiv-measuring-google-ai-overviews-2026]] and new concept
+`arxiv-measuring-google-ai-overviews-2026` and new concept
 [[ai-overview-grounding-and-fidelity]]. Updated
 [[ai-citation-landscape]] (new AIO-vs-first-page source-selection
 section: long-tail breadth, PC1 credibility gap, 14.2% vs 41.4% UGC,
@@ -2644,7 +2644,120 @@ by keeping both sides' new sections and collapsing the duplicated
 Montgomery, *Measuring Google AI Overviews*, arXiv, 2026-05-13) exists
 under two slugs: [[xu-measuring-google-ai-overviews-2026]] (ingested
 2026-08-06 from the PDF) and
-[[arxiv-measuring-google-ai-overviews-2026]] (ingested 2026-09-10 from a
+`arxiv-measuring-google-ai-overviews-2026` (ingested 2026-09-10 from a
 markdown extraction, longer writeup). Concept pages now cite both slugs
 interchangeably. Needs consolidation to one slug with the other's unique
 detail folded in — not done here, awaiting go-ahead.
+
+## [2026-09-17] ingest | The Complete List: Every Search Engine Hidden Inside ChatGPT's Retrieval Leak (David Konitzny, LinkedIn)
+
+Ingested an enumeration of **69 named ChatGPT retrieval engines** extracted
+from a leaked server-sent-events config (leak originally found by Metehan
+Yesilyurt). Raw capture:
+`raw/articles/konitzny-chatgpt-retrieval-leak-engine-list-2026.md`. Source page:
+[[konitzny-chatgpt-retrieval-leak-engine-list-2026]].
+
+**New concept page:** [[chatgpt-vertical-retrieval-engines]] — the engine map
+(internal `labrador` family vs. four external backends), vertical engines per
+content type, news freshness as separate 1d/7d/all engines, the `bing_query`
+rewriter layer, system1-vs-system2 unequal coverage, and open questions
+(`labrador-synthetic`, `fortis`, `aixiv`).
+
+**Updated:** [[ai-search-reranking-pipeline]] (renumbered the pipeline to insert
+an **engine-selection** substage before hybrid retrieval, plus a new
+never-routed-to-your-engine failure mode in the diagnostic framework),
+[[ai-citation-landscape]] ("ChatGPT's retrieval backend is plural, not just
+Bing" addendum), [[geo-content-optimization-tactics]] ("Vertical retrieval-path
+eligibility" tactics), [[pdf-seo-optimization]] (dedicated but system2-gated
+`web-pdf` path), [[wiki/index.md]], [[wiki/timeline.md]].
+
+**No conflicts logged.** The source extends rather than contradicts existing
+pages; the wiki carried no claim that ChatGPT's backend was Bing-only.
+
+**Caution written instead of a conflict entry** (per user direction): the
+source's top comment infers Reddit's high value from its dedicated retrieval
+engines, which sits against [[ahrefs-why-chatgpt-cites-pages-2026]]'s 1.93%
+Reddit citation rate / 67.8%-of-non-cited-URLs and the ~99% discard figure in
+[[lilyray-chatgpt-fanout-queries-2026]]. Recorded as a caution on
+[[chatgpt-vertical-retrieval-engines]] — a reader inference, not a claim
+Konitzny makes, and not a source-vs-source contradiction.
+
+**Gap surfaced, deliberately not filled** (per user direction): Yelp/Foursquare
+listing accuracy as the local/business AI-visibility lever, with no Google
+Business Profile path in the registry. No local playbook exists in this wiki;
+one unverified source is not a sufficient basis to build one. Noted on the
+concept page and as a single actionable bullet in
+[[geo-content-optimization-tactics]].
+
+**Rigor caveat carried on every page touched:** configuration dump, not a study
+— no call frequency per engine (a commenter asked; unanswered), single
+practitioner, unverified leak, engine semantics inferred from names, and the
+`mai-news-beta` tag shows the registry was mid-rollout. Structural map, not a
+traffic profile.
+
+## [2026-09-17] lint | Consolidated the duplicate *Measuring Google AI Overviews* source pages
+
+Resolved the open finding logged in the 2026-09-16 merge entry: Xu, Iqbal &
+Montgomery, *Measuring Google AI Overviews* (arXiv:2605.14021v1, 2026-05-13)
+existed as **two source pages** — `xu-measuring-google-ai-overviews-2026`
+(ingested 2026-08-06 from the PDF) and
+`arxiv-measuring-google-ai-overviews-2026` (ingested 2026-09-10 from a longer
+HTML/markdown extraction). Concept pages had been citing both slugs
+interchangeably, sometimes within the same page.
+
+**Kept:** [[xu-measuring-google-ai-overviews-2026]] — the author-name slug
+matches this wiki's convention for academic papers
+([[entity-oriented-search-balog-2018]], [[xiong-et-al-search-engines-meet-llms-2024]],
+[[vardasbi-et-al-as-it-was-llm-search-evaluation-2026]],
+[[geo-generative-engine-optimization-aggarwal-2023]]), and it was the earlier
+ingest.
+
+**Retired:** `arxiv-measuring-google-ai-overviews-2026` (page deleted).
+
+**Unique detail folded in from the retired page** (the 2026-09-10 writeup was
+the fuller one, so most of this is net-new to the surviving page): median 8
+refs/AIO; the citation-breadth finding (top-10 hosts 29.7% of AIO citations vs.
+49.6% of first-page, 56.3% of hosts cited exactly once); PC1 significant in 14
+of 19 categories with no reversal, plus the authors' "directly contradicts prior
+work" framing; four platforms = 96.5% of AIO UGC; off-page refs being *higher*
+quality (PC1 0.758 vs 0.724, UGC 3.4% vs 18.5%) and 28.5% off-page at URL level;
+per-interrogative activation (`how` 84.3%, `why` 73.4%, `did` 39.8%); health
+*not* suppressed (26.6%) so the sensitive-topic caution is selective; activation
+↔ fidelity statistical independence (p=0.192); grounding distribution (median
+93.33%, 41.9% perfect, 2.74% under half, 0.85% none); the Climate 48.23%
+artifact and the 85.9–94.8% normalized band; per-category ad rates; the
+2.16%/0.51% Google-sponsored-ad figures; corpus composition (Sports 51.4%,
+Entertainment 14.9%); the Grok 4.1 verifier identity; and the logged conflict
+against [[ahrefs-b2b-seo-statistics-2025]]'s 76%-from-top-10 claim.
+
+**Unique detail retained from the surviving page:** claim-extraction F1 90.1%;
+fidelity independent of source quality (r≈0.045); lowest-fidelity categories
+(Autos/Sports/Jobs ~77–82%); the authors' "inherent to generative AI at its
+current state" framing; and the imported downstream figures (Agarwal & Sen ~38%
+click reduction / ~33% more zero-click, Wikipedia −15%, Stereogum −70% ad
+revenue, The Planet D −90% traffic).
+
+**Links repointed** (13 wikilinks across 5 live pages):
+[[ai-citation-landscape]] (3, including the `Contradicted by:` line in its
+Conflicting Evidence section), [[aio-ctr-impact]] (2),
+[[ai-overview-grounding-and-fidelity]] (2, including its `Primary source:`
+line), [[geo-content-optimization-tactics]] (2), [[wiki/timeline.md]] (1), and
+[[wiki/index.md]] (2 entries merged into 1).
+
+**Append-only files handled without rewriting history:** the two historical
+mentions of the retired slug in earlier `log.md` entries were converted from
+wikilinks to code spans (`arxiv-measuring-google-ai-overviews-2026`), preserving
+the original wording while removing links that would now dangle. The
+`timeline.md` entry for this paper's publication was repointed to the surviving
+slug — a pointer repair, not a change to the recorded event.
+
+**Raw files:** both retained, per the never-edit-`raw/` rule —
+`raw/studies/xu-measuring-google-ai-overviews-2026.pdf` (+ its `.md`
+extraction) and `raw/studies/arxiv-measuring-google-ai-overviews-2026.md`. The
+surviving page's `origin:` names the PDF and its body documents both captures,
+so the retired slug's provenance is still traceable.
+
+**Verified:** no broken wikilinks wiki-wide (excluding the known
+`[[source-slug]]`/`[[concept-slug]]` template placeholders in the format blocks
+of this file and `timeline.md`); one index entry for the paper; no orphan.
+

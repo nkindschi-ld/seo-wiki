@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-09-10
+updated: 2026-09-17
 ---
 
 
@@ -1646,7 +1646,7 @@ this specific 7x figure as unverified rather than corroborated.
 
 
 Two independent activation signals from
-[[arxiv-measuring-google-ai-overviews-2026]] (55,393 trending queries,
+[[xu-measuring-google-ai-overviews-2026]] (55,393 trending queries,
 Mar–Apr 2026) sharpen how to apply the table above:
 
 - **Question phrasing is the single strongest activation lever
@@ -1677,7 +1677,7 @@ reasonable starting heuristic, not a measured optimum.
 ## Verify how you're represented, not just whether you're cited
 
 Per [[ai-overview-grounding-and-fidelity]]
-([[arxiv-measuring-google-ai-overviews-2026]]), **~11% of AI Overview
+([[xu-measuring-google-ai-overviews-2026]]), **~11% of AI Overview
 claims are not supported by the sources the AIO credits** — 6.98%
 mention nothing in any cited source, 2.66% are directly contradicted
 by a cited source. A citation next to a sentence is not evidence the
@@ -1873,6 +1873,50 @@ Tier 1 list blindly:
 | Cite Sources | Factual/statement content, Law & Government |
 | Quotation Addition | People & Society, Explanation, History |
 | Statistics Addition | Law & Government, Debate, Opinion |
+
+## Vertical retrieval-path eligibility (2026-09-17)
+
+**Why/when:** ChatGPT routes fan-out sub-queries to ~69 *specialized* engines
+before any relevance scoring happens
+([[chatgpt-vertical-retrieval-engines]], from
+[[konitzny-chatgpt-retrieval-leak-engine-list-2026]]). Content format and topic
+determine *which index gets searched at all* — a retrieval-eligibility question
+that precedes every ranking tactic on this page. Use this when you have assets
+in non-HTML formats, or when a whole content type seems invisible in AI answers
+despite good HTML-page performance.
+
+- **Treat format as a retrieval surface, not a delivery choice.** Dedicated
+  engines exist for **PDFs** (`labrador-web-pdf`), **YouTube**
+  (`labrador-web-youtube`), **images**, **Wikipedia**, **arXiv/literature**, and
+  **STEM**. A report published only as a gated PDF, or a topic covered only in
+  video, competes in its own pool rather than the general web pool — sometimes an
+  easier path, sometimes an invisible one.
+- **Know which paths are reasoning-tier-gated.** Reddit, web-PDF, and web-YouTube
+  engines exist only at the **system2** (deeper-reasoning) tier, not system1. If
+  your only asset for a topic is a PDF or a video, fast-mode answers likely
+  cannot reach it. **Publish an HTML equivalent of anything important** —
+  don't let a PDF or video be the sole representation of a claim you want cited.
+- **Legal and medical are the only verticals with paired text + PDF engines.**
+  In YMYL topics, PDF-shaped authoritative material (statutes, filings, clinical
+  guidelines) has a first-class path. Citing and linking such primary sources
+  aligns with how the retrieval layer is organized.
+- **Freshness is path selection, not a score.** `news-1d`, `news-7d`, and
+  `news-all` are *separate engines*. A query routed to the 24-hour index will
+  never see your week-old piece, however authoritative. For genuinely
+  time-sensitive topics, publication *latency* — not just recency — decides
+  eligibility. Complements "Freshness by vertical" above.
+- **For local/business visibility, audit Yelp and Foursquare listings.** They are
+  the registry's only external business sources (`result_types: null`, no query
+  rewriter — i.e. structured lookups where **listing accuracy**, not content
+  optimization, is the lever), plus internal `labrador-local` → `places`. No
+  Google Business Profile path appears. Confirm name, address, category, and
+  hours are correct and consistent across both. *(This wiki has no local-AI
+  playbook yet; this is the one actionable item extractable from a single
+  unverified source.)*
+- **Don't chase individual engine names.** The registry lists capabilities with
+  **no call-frequency data**, and enumerated configs routinely include engines
+  that never fire. Optimize for the *structural* insight (format and freshness
+  are routing decisions) rather than targeting `labrador-stem` specifically.
 
 ## Checklist for a page you want cited by AI answer engines
 

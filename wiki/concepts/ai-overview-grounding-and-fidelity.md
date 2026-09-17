@@ -15,7 +15,7 @@ covers what happens to your content *after* it is cited: whether the
 AIO represents it faithfully, and what that means for a publisher whose
 name is attached to a claim.
 
-Primary source: [[arxiv-measuring-google-ai-overviews-2026]] — 98,020
+Primary source: [[xu-measuring-google-ai-overviews-2026]] — 98,020
 atomic claims extracted from 7,583 AIOs and verified against the full
 text of every reference the AIO itself cites (Mar–Apr 2026, 55,393
 trending queries).
@@ -158,7 +158,7 @@ problem, not a retrieval problem.
 
 ## See also
 
-- [[arxiv-measuring-google-ai-overviews-2026]] — the source, including
+- [[xu-measuring-google-ai-overviews-2026]] — the source, including
   activation, source-selection and publisher-economics findings filed
   elsewhere.
 - [[ai-citation-landscape]] — the source-selection half of the same
