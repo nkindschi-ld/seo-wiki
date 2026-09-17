@@ -159,6 +159,8 @@ reranker mechanics justify:
 
 ## See also
 
+- [[geo-diagnostic-checklist]] — the page-level triage playbook that
+  operationalizes this failure-stage diagnostic into per-page checks.
 - [[chatgpt-vertical-retrieval-engines]] — the engine-selection substage added
   above: which index the hybrid retrieval actually runs against, and why a
   dedicated retrieval path is not evidence of citation value.

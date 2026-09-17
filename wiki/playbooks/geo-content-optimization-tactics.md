@@ -13,7 +13,10 @@ ChatGPT search, etc.), as opposed to classic keyword-ranking SEO. See
 [[generative-engine-optimization]] for the underlying concept. For
 classic organic-SERP ranking tactics specifically, see
 [[classic-seo-ranking-factors]] instead — the two overlap in places but
-are grounded in different correlation studies.
+are grounded in different correlation studies. If a specific page
+already isn't getting cited and you're not sure why, run
+[[geo-diagnostic-checklist]] first to identify which layer is failing
+before picking a tactic below.
 
 Ranked by measured visibility improvement
 ([[geo-generative-engine-optimization-aggarwal-2023|source]]), from best

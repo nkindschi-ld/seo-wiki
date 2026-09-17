@@ -221,5 +221,7 @@ retrieval; low value as evidence of *how much* any single path matters.
 - [[ai-citation-landscape]] — citation outcomes by source type, including the
   Reddit retrieve-heavy/cite-rarely pattern.
 - [[geo-content-optimization-tactics]] — vertical-path and freshness tactics.
+- [[geo-diagnostic-checklist]] — page-level triage; this page supplies its
+  check 0 (routing), which precedes all six content-side checks.
 - [[pdf-seo-optimization]] — the dedicated `web-pdf` retrieval path.
 - [[generative-engine-optimization]] — umbrella concept.

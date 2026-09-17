@@ -1035,6 +1035,10 @@ of claims unsupported by their own cited sources, and 50.63% of cited
 pages running visible ads against only 2.16% of AIO SERPs carrying
 Google's own.
 
+## 2026-09-14 — "Why Your Content Isn't Getting Cited: A GEO Diagnostic Checklist" published (Lumar)
+
+[[lumar-geo-diagnostic-checklist]] · created [[geo-diagnostic-checklist]]
+
 ## 2026-09-17 — ChatGPT's internal retrieval engine registry published from an SSE leak
 [[konitzny-chatgpt-retrieval-leak-engine-list-2026]] · created
 [[chatgpt-vertical-retrieval-engines]]; updated
@@ -1054,4 +1058,3 @@ path; `bing_query` as the dominant query rewriter even for OpenAI's own internal
 indexes; and unequal system1/system2 coverage in which Reddit, web-PDF and
 web-YouTube are reachable only at the deeper-reasoning tier. A configuration
 enumeration with no call-frequency data, not a measured study.
-

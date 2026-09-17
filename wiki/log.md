@@ -2649,6 +2649,19 @@ markdown extraction, longer writeup). Concept pages now cite both slugs
 interchangeably. Needs consolidation to one slug with the other's unique
 detail folded in — not done here, awaiting go-ahead.
 
+## [2026-09-14] ingest | Why Your Content Isn't Getting Cited: A GEO Diagnostic Checklist (Lumar)
+
+New playbook [[geo-diagnostic-checklist]] — a six-check triage
+framework (candidate eligibility, aboutness signals, chunk
+retrievability, standalone passage context, authority constraints,
+problem-solution alignment) for diagnosing why a specific page isn't
+getting cited before applying [[geo-content-optimization-tactics]].
+New source page [[lumar-geo-diagnostic-checklist]]; no original data
+or studies, restates existing retrieval-eligibility-vs-citation-stage
+framing already in [[generative-engine-optimization]] — no conflicts.
+Linked from [[generative-engine-optimization]] and
+[[geo-content-optimization-tactics]].
+
 ## [2026-09-17] ingest | The Complete List: Every Search Engine Hidden Inside ChatGPT's Retrieval Leak (David Konitzny, LinkedIn)
 
 Ingested an enumeration of **69 named ChatGPT retrieval engines** extracted
@@ -2760,4 +2773,48 @@ so the retired slug's provenance is still traceable.
 **Verified:** no broken wikilinks wiki-wide (excluding the known
 `[[source-slug]]`/`[[concept-slug]]` template placeholders in the format blocks
 of this file and `timeline.md`); one index entry for the paper; no orphan.
+
+## [2026-09-17] lint | Merged upstream `origin/main` (Lumar GEO checklist) and cross-checked it against the engine-registry ingest
+
+Folded in the 2 upstream commits this branch was missing (Lumar GEO diagnostic
+checklist ingest, PR #8). **5 conflicts, all resolved by union or
+later-date**, none by discarding a side:
+
+- `wiki/index.md` (2) — kept the local, richer [[geo-content-optimization-tactics]]
+  blurb and added upstream's new [[geo-diagnostic-checklist]] entry. **Second
+  conflict was the important one:** upstream still carried an index entry for
+  `arxiv-measuring-google-ai-overviews-2026`, the slug retired earlier today.
+  Taking upstream's side wholesale would have **resurrected a link to a deleted
+  page**; took only the [[lumar-geo-diagnostic-checklist]] line.
+- `wiki/log.md` — union, with upstream's 2026-09-14 Lumar entry inserted before
+  today's entries so dates stay ascending.
+- `wiki/timeline.md` — union, 2026-09-14 Lumar event before the 2026-09-17
+  engine-registry event.
+- [[generative-engine-optimization]] and [[geo-content-optimization-tactics]] —
+  `updated:` frontmatter only; both sides had edited the pages, so both took
+  2026-09-17.
+
+**Cross-check outcome: complements, no conflict.** [[geo-diagnostic-checklist]]
+is a page-level triage framework whose six checks are all *content-side*
+(aboutness, chunk retrievability, standalone passage context, authority). None of
+them asks whether the content sits in a **format or vertical the engine routes
+to at all** — the engine-selection failure mode added today from
+[[konitzny-chatgpt-retrieval-leak-engine-list-2026]], which happens *upstream of
+retrieval*. A page can pass all six checks and still never enter the candidate
+pool.
+
+**Gap closed:** added an attributed **check 0 (retrieval-path routing)** to
+[[geo-diagnostic-checklist]], flagged as not from the Lumar source and carrying
+that source's unverified-single-practitioner caveat — format/HTML-equivalent
+coverage, the system2-gated PDF and YouTube paths, Yelp/Foursquare listings for
+local queries, and publishing inside the news recency window. Cross-linked in
+both directions with [[chatgpt-vertical-retrieval-engines]] and
+[[ai-search-reranking-pipeline]], whose failure-stage diagnostic this playbook
+operationalizes per page.
+
+**Note on overlap already present upstream:** Lumar's checks 3 and 4 map onto
+the "retrieved but loses the rerank" stage and its check 5 onto authority as a
+retrieval-eligibility gate, both of which [[ai-search-reranking-pipeline]] and
+[[generative-engine-optimization]] already covered. Upstream had linked those
+correctly; no duplication introduced.
 
