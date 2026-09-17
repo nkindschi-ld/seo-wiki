@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-08-06
+updated: 2026-09-10
 ---
 
 # Agentic Web Optimization
@@ -130,6 +130,10 @@ traffic.
 
 ## See also
 
+- [[ai-mediated-commercial-persuasion]] — a risk factor for this
+  domain: AI agents mediating purchase/recommendation decisions can be
+  steered toward sponsored options via disparagement of alternatives,
+  largely undetected even with disclosure labels.
 - [[generative-engine-optimization]] — the citation-focused sibling
   domain; this concept's layers 1-3 substantially overlap with it.
 - [[ai-coding-agent-tool-selection]] — the coding-agent sibling domain

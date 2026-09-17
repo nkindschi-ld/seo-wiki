@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo, seo]
-updated: 2026-08-12
+updated: 2026-09-17
 ---
 
 # AI Search Retrieval Pipeline & Rerankers
@@ -24,12 +24,19 @@ AI search runs as **distinct stages**, each a separate failure point:
 1. **Query planning / fanout** — the engine splits the user question into
    multiple sub-searches (see [[peec-ai-chatgpt-query-fanouts-2026]] for the
    fanout data and injected terms).
-2. **Retrieval** — **hybrid**: keyword matching (**BM25**,
+2. **Engine selection** — before any relevance scoring, the engine picks
+   *which index* to query. ChatGPT dispatches across a registry of ~69 named
+   vertical engines (Wikipedia, arXiv, Reddit, news-by-recency-window, legal,
+   medical, finance, local, PDF, YouTube, images) plus multiple external
+   backends (Bing, SerpAPI, Microsoft MAI grounding) — see
+   [[chatgpt-vertical-retrieval-engines]]. Content format and topic are a
+   **routing** decision here, not just a ranking signal later.
+3. **Retrieval** — **hybrid**: keyword matching (**BM25**,
    [[lexical-ranking-tf-idf-bm25]]) + vector/embedding search, run in parallel
    and merged via **Reciprocal Rank Fusion (RRF)**.
-3. **Reranking** — a neural model **re-scores** the retrieved candidate passages
+4. **Reranking** — a neural model **re-scores** the retrieved candidate passages
    against the query, producing the ordering that actually matters.
-4. **Generation** — the model writes the answer and picks citations from the
+5. **Generation** — the model writes the answer and picks citations from the
    top-reranked passages.
 
 The practical upshot: "getting retrieved" and "getting cited" are different
@@ -112,6 +119,10 @@ Because the pipeline is staged, a visibility problem has a *locatable* cause:
 - **Not retrieved at all** → indexing, coverage, authority, or freshness
   problem (fix crawlability/retrieval eligibility — see
   [[how-google-search-works]]).
+- **Never routed to your content's engine** → an *engine-selection* failure that
+  precedes retrieval entirely. A PDF or video asset unreachable at the user's
+  reasoning tier, or a business absent from Yelp/Foursquare, loses before BM25
+  runs. See [[chatgpt-vertical-retrieval-engines]].
 - **Retrieved but losing the rerank** → answer-shape or passage-relevance
   problem (fix the passage: answer-first, self-contained).
 - **Strong passage but not cited** → source-quality, source-diversity, or
@@ -148,6 +159,11 @@ reranker mechanics justify:
 
 ## See also
 
+- [[geo-diagnostic-checklist]] — the page-level triage playbook that
+  operationalizes this failure-stage diagnostic into per-page checks.
+- [[chatgpt-vertical-retrieval-engines]] — the engine-selection substage added
+  above: which index the hybrid retrieval actually runs against, and why a
+  dedicated retrieval path is not evidence of citation value.
 - [[peec-ai-chatgpt-query-fanouts-2026]] — the query-planning/fanout stage that
   feeds retrieval, and the RRF mechanism named here.
 - [[lexical-ranking-tf-idf-bm25]] — the BM25 half of hybrid retrieval that

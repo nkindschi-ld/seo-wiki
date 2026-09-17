@@ -2207,3 +2207,614 @@ US data used to pick the primary keyword: "prompt management" 320/mo KD 34; "pro
 170/mo; "prompt versioning" 170/mo; "enterprise prompt management" only 70/mo but trending 0.57 -> 1.00.
 Chose "Enterprise Prompt Management" to capture the head term plus the enterprise modifier the URL
 targets. Delivered 3 title + 3 description variations; nothing new filed to concepts/playbooks.
+## [2026-09-04] ingest | 15 sources: topic clusters, broken link building, digital PR, brand awareness, LLMO/GEO/AIO, SEO reporting, content marketing, SEO copywriting, keyword research, SEO competitive analysis
+
+User handed 18 URLs; 3 were already in the wiki
+([[sel-brand-entity-seo-5-step-framework]], [[iloveseo-brand-seo-and-ai]],
+[[wix-generative-engine-optimization]]) and were skipped as duplicates.
+Ingested the remaining 15:
+
+- Topic clusters (Semrush, Surfer SEO, Sitebulb) → new playbook
+  [[topic-cluster-strategy]], cross-linked from
+  [[link-and-anchor-text-best-practices]] (which already had a
+  topic-cluster subsection tied to the Schmitt case study) and
+  [[keyword-mapping-and-cannibalization]] (topic/pillar-first variant).
+- Broken link building (Semrush, Ahrefs) → new playbook
+  [[broken-link-building]].
+- Digital PR (Semrush) → new playbook [[digital-pr-strategy]].
+- SEO for brand awareness (Semrush) → extended existing
+  [[brand-entity-seo-strategy]] with a lighter-weight, pre-authority
+  "brand awareness via content SEO" path (long-tail keyword clustering
+  + branded-search-traffic measurement) alongside the existing
+  machine-legibility/Knowledge-Graph framework.
+- LLMO/GEO/AIO guide (Malte Landwehr, LinkedIn, Jan 2024) → extended
+  [[generative-engine-optimization]] with a co-occurrence/training-data-
+  influence mechanism distinct from citation-stage RAG visibility, and
+  extended [[geo-content-optimization-tactics]] with an explicit
+  LLM-crawler robots.txt-blocking check.
+- SEO reporting, SEO copywriting, keyword research (2026 update), SEO
+  competitive analysis (all Semrush) → four new playbooks:
+  [[seo-reporting]], [[seo-copywriting]], [[keyword-research]] (cross-
+  linked with [[keyword-mapping-and-cannibalization]] as the
+  discovery-before-mapping step), [[seo-competitive-analysis]].
+- Semrush Academy course pages (Content Marketing, SEO Essentials) →
+  filed as curriculum/reference source pages, no new tactical claims;
+  used to justify a new thin connective concept page
+  [[content-marketing-strategy]] tying the new and existing content
+  playbooks together.
+- Crawling Mondays YouTube video (Aleyda Solis) → source page filed as
+  a placeholder. Content was not retrievable: YouTube's page returned
+  only navigation chrome, oEmbed gave title/channel only, the Sitebulb
+  recap of this exact episode 404'd, and Wayback Machine access was
+  unavailable this session. No takeaways attributed to it.
+
+No real-world-dated events for the timeline — all 15 are evergreen
+guides/courses, consistent with the 2026-07-11 batch's precedent for
+this source type. No conflicts found with existing wiki claims.
+
+## [2026-09-04] ingest | Link building: Moz beginner's guide, Ahrefs link building guide, Pitchbox link prospecting hacks, Crawling Mondays outreach video (2020)
+Ingested 4 sources on external link building/outreach — a genuinely new
+topic area not previously covered (existing [[link-and-anchor-text-best-practices]]
+covers link markup/anchor text/internal linking, not backlink acquisition).
+Created [[link-building]] (concept: four ways links get built, five link
+quality metrics, realistic outreach benchmarks) and
+[[link-building-outreach-tactics]] (playbook: prospect qualification,
+Skyscraper 2.0/guest-posting/resource-page prospecting, outreach keys to
+success, common mistakes). No conflicts with existing pages — the four
+sources are mutually consistent. Note: the YouTube video's transcript
+could not be retrieved (YouTube's transcript API rejected the request in
+this session's sandboxed browser; timedtext endpoint returned empty) —
+that source was ingested at the chapter/description level only, flagged
+in its source page and raw file for future re-fetch if deeper detail is
+needed.
+
+## [2026-09-04] ingest | Lead magnet checklists (LiveAgent, Ivyforms) and PDF SEO optimization (Digital Chakra)
+Ingested 3 sources — new topic area, no prior lead-magnet or PDF-SEO
+coverage in the wiki. Created [[lead-magnet-checklist]] (playbook:
+strategy/content/format/delivery/landing-page/follow-up/tracking,
+merging LiveAgent's process-stage checklist with Ivyforms'
+benchmark-tiered checklist — no conflicts between the two, just
+different depth/focus) and [[pdf-seo-optimization]] (playbook: 11-point
+PDF-specific SEO checklist plus indexability/ranking-vs-HTML technical
+constraints). Cross-linked into [[content-marketing-strategy]],
+[[image-seo-checklist]], [[technical-seo-audit-checklist]], and
+[[robots-txt-strategy]]. Noted LiveAgent's "add chat button" item as a
+vendor plug rather than a general best practice. No real-world-dated
+events for the timeline (evergreen guides). No conflicts with existing
+wiki claims.
+
+## [2026-09-04] lint | Full-wiki lint: structure clean; 8 playbooks missing concept backlinks, 7 dated research sources missing timeline entries
+Scope: 17 concepts, 26 playbooks, 86 sources, 89 raw files.
+
+Clean (no action needed):
+- **Broken links** — every `[[wikilink]]` target resolves. The only
+  unmatched targets are `[[source-slug]]`/`[[concept-slug]]` in
+  timeline.md's format documentation (template placeholders, as noted
+  in the 2026-07-11 lint).
+- **Index coverage** — all 129 pages are listed in index.md; index.md
+  lists no page that doesn't exist.
+- **Frontmatter** — `type`/`tags`/`updated` present on every concept
+  and playbook; `type`/`tags`/`date_ingested`/`origin` present on every
+  source page.
+- **Raw ↔ source integrity** — every `origin:` path resolves to a real
+  file under `raw/`, and every file in `raw/` is referenced by exactly
+  one source page. No orphaned raw material, no dangling origins.
+- **Open conflicts re-checked** — the four unresolved Conflicting
+  Evidence sections (content-age/freshness in
+  [[ai-citation-landscape]], authority-vs-citation in
+  [[ai-visibility-correlation-factors]], traditional-SEO-vs-GEO in
+  [[generative-engine-optimization]], internal-link-count in
+  [[link-and-anchor-text-best-practices]]) were tested against the 20
+  sources ingested on 2026-09-04. None of those sources carries
+  freshness, content-age, or authority-correlation data, so no conflict
+  is newly resolvable and none needed reopening.
+
+Findings (reported, not yet fixed):
+1. **8 playbooks link sideways but never up to a concept page**, which
+   CLAUDE.md's playbook schema requires ("links back to the concept(s)
+   it belongs to"): [[broken-link-building]],
+   [[content-pruning-playbook]], [[controlling-ai-feature-inclusion]],
+   [[enterprise-seo-strategy]], [[image-seo-checklist]],
+   [[keyword-mapping-and-cannibalization]], [[saas-seo-strategy]],
+   [[seo-competitive-analysis]]. All are well cross-linked to sibling
+   playbooks and sources — only the upward link to the concept layer is
+   missing.
+2. **2 concepts link to no playbook**: [[e-e-a-t-and-page-quality]] and
+   [[google-algorithm-update-history]]. Both have obvious downstream
+   playbooks ([[seo-copywriting]]/[[content-pruning-playbook]] and
+   [[classic-seo-ranking-factors]] respectively) that they don't point
+   at.
+3. **7 dated research/analysis sources missing from timeline.md**,
+   inconsistent with directly comparable peers that do have entries
+   (e.g. [[ahrefs-why-chatgpt-cites-pages-2026]],
+   [[growth-memo-why-most-original-data-never-gets-cited]],
+   [[peec-ai-listicle-rank-effect-2026]]):
+   [[semrush-ai-overviews-study-2025]] (2025-03-01),
+   [[sparktoro-influence-happens-everywhere-2026]] (2026-03-25),
+   [[growth-memo-topics-matter-for-third-party-authority]] (2026-06-15),
+   [[similarweb-downstream-impact-of-ai-visibility-2026]] (2026-06-24),
+   [[growth-memo-why-proprietary-data-is-your-most-defensible-asset]]
+   (2026-06-29), [[semrush-ai-overviews-commercial-search-2026]]
+   (2026-07-02), and [[richsanger-ai-overview-patent-insights]]
+   (2024-11-19). The evergreen how-to guides correctly stay off the
+   timeline per the 2026-07-11 event-vs-activity ruling; these seven are
+   studies/reports/patent analysis, i.e. events by that same ruling.
+4. **[[robots-txt-strategy]]'s Conflicting Evidence section doesn't use
+   the schema format** — it's a prose paragraph about practitioner
+   folklore vs. Google's stance, with no Claim / Supported by /
+   Contradicted by / Current best guess structure and no source
+   citations on either side. It's also not really a source conflict;
+   arguably it should be a "Common misconception" section instead.
+5. **1 orphan: [[crawlingmondays-strategical-content-optimization]]** —
+   no inbound links except index.md. This is intentional and documented
+   on the page itself: the video's content could not be retrieved, so it
+   was filed as a placeholder with no citable claims. Flagged for
+   visibility, not as a defect — leave it until a transcript is
+   available.
+
+Fixes applied (same day, user go-ahead):
+- **Finding 1 & 2 — cross-reference layer repaired.** Added concept
+  backlinks to all 8 playbooks (creating a `## See also` section on the
+  4 that had none: [[content-pruning-playbook]],
+  [[enterprise-seo-strategy]], [[image-seo-checklist]],
+  [[saas-seo-strategy]]), and playbook links to
+  [[e-e-a-t-and-page-quality]] and [[google-algorithm-update-history]].
+  ~20 new cross-references; each names *why* the pages relate rather
+  than just listing a slug. `updated:` bumped to 2026-09-04 on all 10.
+  Every playbook now links to at least one concept and every concept to
+  at least one playbook.
+- **Finding 3 — 7 timeline entries backfilled** in chronological
+  position, each marked "Backfilled during the 2026-09-04 lint" so the
+  append-only convention stays auditable:
+  [[richsanger-ai-overview-patent-insights]] (2024-11-19),
+  [[semrush-ai-overviews-study-2025]] (2025-03-01),
+  [[sparktoro-influence-happens-everywhere-2026]] (2026-03-25),
+  [[growth-memo-topics-matter-for-third-party-authority]] (2026-06-15),
+  [[similarweb-downstream-impact-of-ai-visibility-2026]] (2026-06-24),
+  [[growth-memo-why-proprietary-data-is-your-most-defensible-asset]]
+  (2026-06-29), [[semrush-ai-overviews-commercial-search-2026]]
+  (2026-07-02). Timeline verified in date order end to end (77 entries).
+- **Finding 4 — [[robots-txt-strategy]] restructured.** The off-schema
+  "Conflicting Evidence" section is gone; its content is now a
+  "The 'quick fix for duplicate content' version of this mistake"
+  subsection folded into the page's existing "Critical misconception"
+  section, with both sides cited ([[google-robots-txt-intro]],
+  [[ahrefs-robots-txt-guide]]) and the mechanism spelled out — blocking
+  in robots.txt prevents Google from ever seeing the `noindex` that
+  would have worked. Added an explicit note that this page carries no
+  Conflicting Evidence section *because* the disagreement is official-
+  guidance-vs-folklore, not source-vs-source, so a future lint doesn't
+  re-flag it as a missing section.
+- **Bonus fix — internal contradiction on the same page.** The
+  misconception section claimed Google "can still crawl and index"
+  a robots.txt-disallowed URL, contradicting the rest of the page (and
+  the mechanism it's explaining). Corrected to: Google can still index
+  the URL from external links without crawling the page.
+
+Not fixed, by decision:
+- [[crawlingmondays-strategical-content-optimization]] stays orphaned.
+  It's a documented placeholder for a video whose content couldn't be
+  retrieved; linking it from a concept/playbook would imply it supports
+  claims it can't. Revisit if a transcript becomes available.
+
+Post-fix verification: no broken links, no orphans, index.md complete,
+frontmatter complete, raw ↔ source mapping 1:1, timeline chronologically
+ordered.
+
+## [2026-09-06] ingest | Footer SEO — three sources (Growth Memo, SEOptimer, HeyDay Marketing)
+
+Ingested as a set, since all three cover the same narrow topic (sitewide
+footer optimization) at very different quality levels:
+
+- [[growth-memo-show-me-your-footer]] (Kevin Indig, 2023-07-31) —
+  substantive; the only one with a named Google statement, a first-party
+  case, and third-party UX research.
+- [[seoptimer-website-footer-seo]] (Jay Kang, 2019-10-01) — design/UX
+  led, no citations, but the best material on footer *elements* and CTA
+  discipline.
+- [[heydaymarketing-footer-optimization]] (2024-05-23) — agency
+  marketing post, no data; retained for two ideas the others miss
+  (footer schema markup, local-SEO NAP) plus a maintenance cadence.
+
+Created:
+- [[footer-optimization]] — new playbook consolidating all three, led by
+  Indig's honest "low impact, but not no impact" framing and the crawl-
+  rate (not ranking-weight) mechanism.
+
+Updated:
+- [[link-and-anchor-text-best-practices]] — reasonable-surfer placement
+  bullet and audit-checklist item softened to mark placement weighting
+  as contested; added a footer-link cross-reference and See also entry.
+- [[link-building]] — Placement quality-metric bullet now distinguishes
+  acquired backlinks (hierarchy holds) from internal links (contested).
+- `wiki/index.md`, `wiki/timeline.md` (3 dated entries: 2019-10-01,
+  2023-07-31, 2024-05-23).
+
+Deliberately excluded: HeyDay's advice to seed commercial keywords
+("SEO company," "SEO agency") into footer copy. It is footer keyword
+stuffing and contradicts the same article's own anti-stuffing warning
+two sentences earlier. Recorded as an anti-pattern in
+[[footer-optimization]] with the reasoning, so a future lint doesn't
+re-add it as a "missing" tactic.
+
+## [2026-09-06] conflict | Footer/boilerplate link weight — Mueller vs. the reasonable-surfer model
+
+[[growth-memo-show-me-your-footer]] quotes John Mueller saying Google
+does *not* discount footer links ("whether they're in the header or in
+the footer or the sidebar or the main content, that doesn't really
+change anything for us"). This contradicts the reasonable-surfer
+placement hierarchy the wiki carried unqualified in
+[[link-and-anchor-text-best-practices]] and [[link-building]], sourced
+from [[ahrefs-internal-links-for-seo]], [[yoast-internal-linking-for-seo]]
+and [[ahrefs-link-building]].
+
+Logged as **unresolved**, leaning Mueller for internal links (standing
+preference for official Google guidance over third-party SEO blogs; the
+reasonable-surfer patent dates to 2004 and Google filed User-Sensitive
+PageRank in 2016). Two caveats keep it open: Mueller describes how
+Google *treats links it finds*, not practical equivalence of outcomes;
+and the hierarchy remains sound for *acquired backlinks*, where an
+editorial placement signals endorsement a sitewide footer link doesn't.
+Recorded in full on [[link-and-anchor-text-best-practices]].
+
+## [2026-09-06] conflict | Footer link density — "fat but not obese" vs. "simplicity first"
+
+[[growth-memo-show-me-your-footer]] says there's no downside to a large
+footer if PageRank/CheiRank stay balanced and disputes that big footers
+are bad UX. [[seoptimer-website-footer-seo]] and
+[[heydaymarketing-footer-optimization]] both argue for restraint, the
+latter citing link-equity dilution.
+
+Logged as **unresolved**, leaning Indig — consistent with the wiki's
+existing no-numeric-cap resolution on internal link counts, and because
+the opposing sources offer no data and reuse the simplified
+PageRank-dilution argument the wiki already declined. Best guess: the
+binding constraint is organization/scannability, not link count.
+Recorded on [[footer-optimization]].
+
+## [2026-09-10] ingest | Spotify — "As It Was: Aligning LLM Search Evaluation with Historical User Preferences" (SIGIR '26)
+Ingested arXiv:2607.01040. New concept page
+[[llm-as-judge-behavioral-grounding]] on grounding LLM-as-judge search
+evaluation in historical user-behavior data (QRI cards) rather than
+semantic reasoning alone — +91% relative correlation gain on
+judge-disagreement cases, better live-A/B sign-alignment (36.8% vs
+30.6%). No conflicts with existing wiki claims; cross-linked from
+[[ai-citation-landscape]] and [[geo-content-optimization-tactics]] as
+evaluation-methodology background, not a citation tactic.
+
+## [2026-09-10] ingest | Salvi, Cuevas, Horta Ribeiro (Princeton) — "Commercial Persuasion in AI-Mediated Conversations"
+Ingested arXiv:2604.04263. New concept page
+[[ai-mediated-commercial-persuasion]]: LLM chat interfaces nearly
+triple sponsored-product selection vs. traditional search (61.2% vs
+22.4%), driven mainly by disparaging non-sponsored alternatives rather
+than promoting sponsors; "Sponsored" labels + warnings only raise
+detection to 35.1%. No conflicts with existing wiki claims — a new
+risk axis (active suppression via language, not omission). Cross-
+linked from [[ai-citation-landscape]], [[agentic-web-optimization]],
+and [[brand-entity-seo-strategy]].
+
+## [2026-09-10] ingest | Gjorgjevska, Mirceva, Mirchev — "WebKnoGraph: GNN-Powered Internal Linking"
+Ingested arXiv:2606.06106. Added a pre-deployment evaluation
+subsection to [[link-and-anchor-text-best-practices]] §4: GraphSAGE-
+based candidate link scoring across authority yield/volatility/
+down-up-ratio and semantic-coherence change, tested on a 1,841-page
+production crawl. Core finding: automatic link selection maximizes
+authority redistribution at a semantic-coherence cost; expert-assisted
+selection preserves coherence better but every tested intervention
+still showed negative coherence change. No conflicts with existing
+link-count/reasonable-surfer guidance — a complementary evaluation
+method, not a competing tactic. Cross-linked from
+[[ahrefs-internal-links-for-seo]], [[yoast-internal-linking-for-seo]],
+and [[topic-cluster-strategy]].
+
+## [2026-09-10] ingest | Ma, Qin, Xu, Tan — "When Content is Goliath and Algorithm is David"
+Ingested arXiv:2509.14436. Added a "Perplexity and semantic
+homogeneity as a citation mechanism" subsection to
+[[ai-citation-landscape]] and a "Reduce perplexity and front-load core
+claims" tactic to [[geo-content-optimization-tactics]]. Key findings:
+lower-perplexity content is cited more (47%→56% at -1 SD perplexity),
+cited source sets are more semantically homogeneous than conventional
+SERPs, the preference is intrinsic to the LLM (reproduced via Gemini's
+RAG API, not Google-specific), positional bias favors document-opening
+content, and LLM-based content polishing counterintuitively increases
+citation diversity rather than homogenizing it. No conflicts with
+existing wiki claims — complementary to the existing semantic-
+relevance/cosine-similarity and retrieval-rank findings, not competing
+with them. Cross-linked from [[seo-copywriting]]'s inverted-pyramid
+guidance.
+
+## [2026-09-10] ingest | Zhang, He, Yao — "From Citation Selection to Citation Absorption"
+Ingested arXiv:2604.25707v2. Added a "Citation selection vs.
+absorption" subsection to [[ai-citation-landscape]] and an "Optimize
+for absorption, not just citation count" tactic to
+[[geo-content-optimization-tactics]]. Key findings: citation breadth
+and depth diverge sharply by platform (Perplexity broad-shallow: 16.35
+sources/answer at 0.0646 influence; ChatGPT narrow-deep: 6.88 sources
+at 0.2713 influence); high-influence pages are structurally denser
+(11.4x words, 12.5x headings, 8.94x list density); evidence genre
+(definitions +57%, comparisons +55%, code +77%) drives absorption more
+than Q&A formatting alone (which showed a -5.74% effect without real
+evidence density); news is cited often but absorbed weakly vs.
+encyclopedic content. No conflicts — a complementary measurement axis
+to [[sej-the-consensus-gap]]'s presence/portability/concentration
+framework, cross-linked there.
+
+## [2026-09-10] ingest | Lopez-Fonseca, Rodriguez, Bechtold, Del Alamo — "Do Generative AI Assistants Respect robots.txt?"
+Ingested arXiv:2607.14447. Added an "Empirical AI-assistant compliance
+data" subsection to [[robots-txt-strategy]]: Claude/Mistral respected
+robots.txt in controlled tests; DeepSeek/Gemini/Grok/Qwen did not.
+Generic user-agents block assistant-specific targeting; access and
+visible-answer behavior frequently diverge (Copilot accessed
+everything but answered correctly on nothing; ChatGPT sometimes
+answered without accessing); Grok showed 173+ post-window accesses and
+48-52x expected per-trial request volume. No conflicts — quantifies an
+existing wiki limitation ("not all crawlers respect robots.txt...AI
+crawlers"). Cross-linked from [[robots-txt-audit-checklist]].
+
+## [2026-09-10] ingest | Zhen, Liu, Zhang, Niu — "What Do Chinese-Language Generative Search Engines Cite and Surface?"
+Ingested arXiv:2607.15771 (PDF, 49pp). Added a "Chinese-language
+generative search engines" subsection to [[ai-citation-landscape]] —
+first coverage of DeepSeek/Doubao/Tencent Yuanbao/Qwen in this wiki.
+Key findings: third-party-content-dominant source ecosystem parallels
+English-language engines; a classic SEO composite score was not the
+leading predictor of citation absorption in any model; 39.3% of listed
+citations are "silent" (never used inline); only 8.3% of pool brands
+reach the visible answer; freshness half-life ~39/68 days by query
+timeliness (directionally corroborates
+[[airops-fan-out-effect-2026]]); App/Web interfaces of the same
+platform return meaningfully different source sets (domain overlap
+0.19-0.51). No conflicts — new market, corroborating where it overlaps
+conceptually. Cross-linked to
+[[citation-selection-vs-absorption-geo-framework-2026]].
+
+## [2026-09-10] lint | cross-reference and metadata check
+Scanned for broken wikilinks, orphan pages, index.md completeness, and
+stale `updated:` frontmatter. Findings and fixes:
+- No broken wikilinks (all 141 unique link targets resolve to real
+  pages).
+- index.md is complete (all 143 pages listed, no dangling entries).
+- Orphan pages (no inbound links): 2 found.
+  - [[oncrawl-xml-sitemap-optimization]] — its "What this updates" note
+    claimed it fed [[xml-sitemap-optimization-checklist]], but that
+    playbook never linked back. Fixed: added citation + Related-pages
+    link.
+  - [[crawlingmondays-strategical-content-optimization]] — left as-is;
+    it's a deliberate placeholder for a source whose content couldn't
+    be retrieved, so no page should cite it yet.
+- Stale `updated:` frontmatter: 9 concept/playbook pages were edited in
+  today's 5 source ingests but their frontmatter date wasn't bumped.
+  Fixed: [[agentic-web-optimization]], [[ai-citation-landscape]],
+  [[robots-txt-strategy]], [[brand-entity-seo-strategy]],
+  [[geo-content-optimization-tactics]],
+  [[link-and-anchor-text-best-practices]],
+  [[robots-txt-audit-checklist]], [[seo-copywriting]],
+  [[topic-cluster-strategy]], and [[xml-sitemap-optimization-checklist]]
+  (found via the orphan fix above) all now show `updated: 2026-09-10`.
+- Reviewed all 5 open Conflicting Evidence sections (content-freshness
+  in [[ai-citation-landscape]], authority-correlation in
+  [[ai-visibility-correlation-factors]], footer-link-density in
+  [[footer-optimization]], the SEO-obsolescence question in
+  [[generative-engine-optimization]], and the reasonable-surfer-vs-
+  Mueller footer question in
+  [[link-and-anchor-text-best-practices]]) — none resolved by today's
+  new sources; left open as-is.
+## [2026-09-10] ingest | Measuring Google AI Overviews (Xu, Iqbal & Montgomery, arXiv:2605.14021)
+
+First independent academic AIO audit in the wiki (55,393 trending
+queries, 7,583 AIOs, 61,212 cited URLs, 98,020 verified claims,
+Mar-Apr 2026). New source page
+`arxiv-measuring-google-ai-overviews-2026` and new concept
+[[ai-overview-grounding-and-fidelity]]. Updated
+[[ai-citation-landscape]] (new AIO-vs-first-page source-selection
+section: long-tail breadth, PC1 credibility gap, 14.2% vs 41.4% UGC,
+29.8% off-page citations), [[aio-ctr-impact]] (activation by question
+form/query length; supply-side ad-dependence economics), and
+[[geo-content-optimization-tactics]] (activation levers plus a new
+"verify how you're represented" audit checklist).
+
+## [2026-09-10] conflict | AIO citation vs. top-10 ranking - 76% (Ahrefs) vs. 41.4% domain overlap (arXiv)
+
+Logged on [[ai-citation-landscape]]. Ahrefs B2B stat says 76% of AIO
+citations come from Google's own top 10; the arXiv audit measures
+41.4% per-AIO domain overlap at top-10 and 70.2% across the full first
+page, with 29.8% of cited domains appearing nowhere on it. Partly a
+unit-of-analysis difference (citation-weighted vs. per-AIO domain
+average) and partly a corpus difference (B2B vs. trending). Leaning
+toward treating 76% as an upper bound that doesn't generalize across
+query mixes; flagged unresolved.
+
+## [2026-09-14] lint | Merged the GitHub `origin` history into the local wiki (12 conflicts)
+
+Pulled `origin/main` (nealkindschi/seo-wiki), which had diverged from the
+local branch: 16 commits upstream, 10 local. Resolved 12 merge conflicts
+by union/reconciliation rather than taking either side — `log.md`,
+`timeline.md` and `wiki/index.md` merged as unions (with the overlapping
+`index.md` entries for [[ai-citation-landscape]],
+[[robots-txt-strategy]], [[geo-content-optimization-tactics]],
+[[link-and-anchor-text-best-practices]],
+[[optimizing-for-coding-agent-recommendations]] and
+[[technical-seo-audit-checklist]] rewritten to carry both sides' detail),
+and section-level conflicts on [[ai-citation-landscape]],
+[[aio-ctr-impact]], [[generative-engine-optimization]],
+[[robots-txt-strategy]] and [[geo-content-optimization-tactics]] resolved
+by keeping both sides' new sections and collapsing the duplicated
+`## Conflicting Evidence` headings into one. No claims dropped.
+
+**Open finding — duplicate source page.** The same paper (Xu, Iqbal &
+Montgomery, *Measuring Google AI Overviews*, arXiv, 2026-05-13) exists
+under two slugs: [[xu-measuring-google-ai-overviews-2026]] (ingested
+2026-08-06 from the PDF) and
+`arxiv-measuring-google-ai-overviews-2026` (ingested 2026-09-10 from a
+markdown extraction, longer writeup). Concept pages now cite both slugs
+interchangeably. Needs consolidation to one slug with the other's unique
+detail folded in — not done here, awaiting go-ahead.
+
+## [2026-09-14] ingest | Why Your Content Isn't Getting Cited: A GEO Diagnostic Checklist (Lumar)
+
+New playbook [[geo-diagnostic-checklist]] — a six-check triage
+framework (candidate eligibility, aboutness signals, chunk
+retrievability, standalone passage context, authority constraints,
+problem-solution alignment) for diagnosing why a specific page isn't
+getting cited before applying [[geo-content-optimization-tactics]].
+New source page [[lumar-geo-diagnostic-checklist]]; no original data
+or studies, restates existing retrieval-eligibility-vs-citation-stage
+framing already in [[generative-engine-optimization]] — no conflicts.
+Linked from [[generative-engine-optimization]] and
+[[geo-content-optimization-tactics]].
+
+## [2026-09-17] ingest | The Complete List: Every Search Engine Hidden Inside ChatGPT's Retrieval Leak (David Konitzny, LinkedIn)
+
+Ingested an enumeration of **69 named ChatGPT retrieval engines** extracted
+from a leaked server-sent-events config (leak originally found by Metehan
+Yesilyurt). Raw capture:
+`raw/articles/konitzny-chatgpt-retrieval-leak-engine-list-2026.md`. Source page:
+[[konitzny-chatgpt-retrieval-leak-engine-list-2026]].
+
+**New concept page:** [[chatgpt-vertical-retrieval-engines]] — the engine map
+(internal `labrador` family vs. four external backends), vertical engines per
+content type, news freshness as separate 1d/7d/all engines, the `bing_query`
+rewriter layer, system1-vs-system2 unequal coverage, and open questions
+(`labrador-synthetic`, `fortis`, `aixiv`).
+
+**Updated:** [[ai-search-reranking-pipeline]] (renumbered the pipeline to insert
+an **engine-selection** substage before hybrid retrieval, plus a new
+never-routed-to-your-engine failure mode in the diagnostic framework),
+[[ai-citation-landscape]] ("ChatGPT's retrieval backend is plural, not just
+Bing" addendum), [[geo-content-optimization-tactics]] ("Vertical retrieval-path
+eligibility" tactics), [[pdf-seo-optimization]] (dedicated but system2-gated
+`web-pdf` path), [[wiki/index.md]], [[wiki/timeline.md]].
+
+**No conflicts logged.** The source extends rather than contradicts existing
+pages; the wiki carried no claim that ChatGPT's backend was Bing-only.
+
+**Caution written instead of a conflict entry** (per user direction): the
+source's top comment infers Reddit's high value from its dedicated retrieval
+engines, which sits against [[ahrefs-why-chatgpt-cites-pages-2026]]'s 1.93%
+Reddit citation rate / 67.8%-of-non-cited-URLs and the ~99% discard figure in
+[[lilyray-chatgpt-fanout-queries-2026]]. Recorded as a caution on
+[[chatgpt-vertical-retrieval-engines]] — a reader inference, not a claim
+Konitzny makes, and not a source-vs-source contradiction.
+
+**Gap surfaced, deliberately not filled** (per user direction): Yelp/Foursquare
+listing accuracy as the local/business AI-visibility lever, with no Google
+Business Profile path in the registry. No local playbook exists in this wiki;
+one unverified source is not a sufficient basis to build one. Noted on the
+concept page and as a single actionable bullet in
+[[geo-content-optimization-tactics]].
+
+**Rigor caveat carried on every page touched:** configuration dump, not a study
+— no call frequency per engine (a commenter asked; unanswered), single
+practitioner, unverified leak, engine semantics inferred from names, and the
+`mai-news-beta` tag shows the registry was mid-rollout. Structural map, not a
+traffic profile.
+
+## [2026-09-17] lint | Consolidated the duplicate *Measuring Google AI Overviews* source pages
+
+Resolved the open finding logged in the 2026-09-16 merge entry: Xu, Iqbal &
+Montgomery, *Measuring Google AI Overviews* (arXiv:2605.14021v1, 2026-05-13)
+existed as **two source pages** — `xu-measuring-google-ai-overviews-2026`
+(ingested 2026-08-06 from the PDF) and
+`arxiv-measuring-google-ai-overviews-2026` (ingested 2026-09-10 from a longer
+HTML/markdown extraction). Concept pages had been citing both slugs
+interchangeably, sometimes within the same page.
+
+**Kept:** [[xu-measuring-google-ai-overviews-2026]] — the author-name slug
+matches this wiki's convention for academic papers
+([[entity-oriented-search-balog-2018]], [[xiong-et-al-search-engines-meet-llms-2024]],
+[[vardasbi-et-al-as-it-was-llm-search-evaluation-2026]],
+[[geo-generative-engine-optimization-aggarwal-2023]]), and it was the earlier
+ingest.
+
+**Retired:** `arxiv-measuring-google-ai-overviews-2026` (page deleted).
+
+**Unique detail folded in from the retired page** (the 2026-09-10 writeup was
+the fuller one, so most of this is net-new to the surviving page): median 8
+refs/AIO; the citation-breadth finding (top-10 hosts 29.7% of AIO citations vs.
+49.6% of first-page, 56.3% of hosts cited exactly once); PC1 significant in 14
+of 19 categories with no reversal, plus the authors' "directly contradicts prior
+work" framing; four platforms = 96.5% of AIO UGC; off-page refs being *higher*
+quality (PC1 0.758 vs 0.724, UGC 3.4% vs 18.5%) and 28.5% off-page at URL level;
+per-interrogative activation (`how` 84.3%, `why` 73.4%, `did` 39.8%); health
+*not* suppressed (26.6%) so the sensitive-topic caution is selective; activation
+↔ fidelity statistical independence (p=0.192); grounding distribution (median
+93.33%, 41.9% perfect, 2.74% under half, 0.85% none); the Climate 48.23%
+artifact and the 85.9–94.8% normalized band; per-category ad rates; the
+2.16%/0.51% Google-sponsored-ad figures; corpus composition (Sports 51.4%,
+Entertainment 14.9%); the Grok 4.1 verifier identity; and the logged conflict
+against [[ahrefs-b2b-seo-statistics-2025]]'s 76%-from-top-10 claim.
+
+**Unique detail retained from the surviving page:** claim-extraction F1 90.1%;
+fidelity independent of source quality (r≈0.045); lowest-fidelity categories
+(Autos/Sports/Jobs ~77–82%); the authors' "inherent to generative AI at its
+current state" framing; and the imported downstream figures (Agarwal & Sen ~38%
+click reduction / ~33% more zero-click, Wikipedia −15%, Stereogum −70% ad
+revenue, The Planet D −90% traffic).
+
+**Links repointed** (13 wikilinks across 5 live pages):
+[[ai-citation-landscape]] (3, including the `Contradicted by:` line in its
+Conflicting Evidence section), [[aio-ctr-impact]] (2),
+[[ai-overview-grounding-and-fidelity]] (2, including its `Primary source:`
+line), [[geo-content-optimization-tactics]] (2), [[wiki/timeline.md]] (1), and
+[[wiki/index.md]] (2 entries merged into 1).
+
+**Append-only files handled without rewriting history:** the two historical
+mentions of the retired slug in earlier `log.md` entries were converted from
+wikilinks to code spans (`arxiv-measuring-google-ai-overviews-2026`), preserving
+the original wording while removing links that would now dangle. The
+`timeline.md` entry for this paper's publication was repointed to the surviving
+slug — a pointer repair, not a change to the recorded event.
+
+**Raw files:** both retained, per the never-edit-`raw/` rule —
+`raw/studies/xu-measuring-google-ai-overviews-2026.pdf` (+ its `.md`
+extraction) and `raw/studies/arxiv-measuring-google-ai-overviews-2026.md`. The
+surviving page's `origin:` names the PDF and its body documents both captures,
+so the retired slug's provenance is still traceable.
+
+**Verified:** no broken wikilinks wiki-wide (excluding the known
+`[[source-slug]]`/`[[concept-slug]]` template placeholders in the format blocks
+of this file and `timeline.md`); one index entry for the paper; no orphan.
+
+## [2026-09-17] lint | Merged upstream `origin/main` (Lumar GEO checklist) and cross-checked it against the engine-registry ingest
+
+Folded in the 2 upstream commits this branch was missing (Lumar GEO diagnostic
+checklist ingest, PR #8). **5 conflicts, all resolved by union or
+later-date**, none by discarding a side:
+
+- `wiki/index.md` (2) — kept the local, richer [[geo-content-optimization-tactics]]
+  blurb and added upstream's new [[geo-diagnostic-checklist]] entry. **Second
+  conflict was the important one:** upstream still carried an index entry for
+  `arxiv-measuring-google-ai-overviews-2026`, the slug retired earlier today.
+  Taking upstream's side wholesale would have **resurrected a link to a deleted
+  page**; took only the [[lumar-geo-diagnostic-checklist]] line.
+- `wiki/log.md` — union, with upstream's 2026-09-14 Lumar entry inserted before
+  today's entries so dates stay ascending.
+- `wiki/timeline.md` — union, 2026-09-14 Lumar event before the 2026-09-17
+  engine-registry event.
+- [[generative-engine-optimization]] and [[geo-content-optimization-tactics]] —
+  `updated:` frontmatter only; both sides had edited the pages, so both took
+  2026-09-17.
+
+**Cross-check outcome: complements, no conflict.** [[geo-diagnostic-checklist]]
+is a page-level triage framework whose six checks are all *content-side*
+(aboutness, chunk retrievability, standalone passage context, authority). None of
+them asks whether the content sits in a **format or vertical the engine routes
+to at all** — the engine-selection failure mode added today from
+[[konitzny-chatgpt-retrieval-leak-engine-list-2026]], which happens *upstream of
+retrieval*. A page can pass all six checks and still never enter the candidate
+pool.
+
+**Gap closed:** added an attributed **check 0 (retrieval-path routing)** to
+[[geo-diagnostic-checklist]], flagged as not from the Lumar source and carrying
+that source's unverified-single-practitioner caveat — format/HTML-equivalent
+coverage, the system2-gated PDF and YouTube paths, Yelp/Foursquare listings for
+local queries, and publishing inside the news recency window. Cross-linked in
+both directions with [[chatgpt-vertical-retrieval-engines]] and
+[[ai-search-reranking-pipeline]], whose failure-stage diagnostic this playbook
+operationalizes per page.
+
+**Note on overlap already present upstream:** Lumar's checks 3 and 4 map onto
+the "retrieved but loses the rerank" stage and its check 5 onto authority as a
+retrieval-eligibility gate, both of which [[ai-search-reranking-pipeline]] and
+[[generative-engine-optimization]] already covered. Upstream had linked those
+correctly; no duplication introduced.
+

@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo]
-updated: 2026-08-17
+updated: 2026-09-10
 ---
 
 # Robots.txt Strategy: What It Is, What It Isn't
@@ -192,11 +192,29 @@ Each subdomain has its own root; robots.txt doesn't cascade.
 ## Critical misconception: robots.txt does NOT prevent indexing
 
 **This is the #1 robots.txt mistake.** Even if a URL is blocked in robots.txt:
-- Google can still crawl and index it if another website links to it
+- Google can still index it if another website links to it (it indexes
+  the URL without crawling the page)
 - It may appear in search results (though "without a description," since Google can't access the page)
 - It wastes your robots.txt directive
 
 Example: You block `/admin/` in robots.txt. Another site links to `/admin/user123`. Google may still index that URL—robots.txt has no authority over incoming links.
+
+### The "quick fix for duplicate content" version of this mistake
+
+A widely repeated practitioner shortcut is to disallow duplicate or
+thin pages in robots.txt to keep them out of the index. It's half
+right: it does save crawl budget, which is a real benefit. It does not
+control indexing, and it makes the situation worse — because Google
+never fetches a disallowed page, it never sees a `noindex` on it, so
+the block *prevents* the directive that would have worked. Per
+[[google-robots-txt-intro]] (official) and [[ahrefs-robots-txt-guide]]
+(which lists this among the common implementation mistakes), the rule
+is: robots.txt for crawl management, `noindex` for indexing control,
+and never both on the same URL.
+
+This page carries no **Conflicting Evidence** section because no source
+in this wiki argues the opposite — the disagreement is between official
+guidance and folklore, not between sources.
 
 ### For actual indexing prevention, use:
 1. **`noindex` meta tag** — Most reliable for HTML pages
@@ -225,6 +243,39 @@ Example: You block `/admin/` in robots.txt. Another site links to `/admin/user12
 4. **No security value**: Google treats it as advisory only, not a security boundary
 5. **Crawler still sees directives**: Googlebot still accesses robots.txt to read your rules (it's not hidden from crawlers)
 
+## Empirical AI-assistant compliance data
+
+Per [[ai-assistants-robots-txt-compliance-2026]] (controlled experiment,
+10 AI assistants, HMAC-validated test pages, 200 trials) — hard data
+behind limitation #1 above ("not all crawlers respect robots.txt...
+AI crawlers"):
+
+- **Compliance is assistant-specific, not a given.** Claude and Mistral
+  respected robots.txt allow/disallow rules as expected in this test.
+  DeepSeek, Gemini, Grok, and Qwen accessed disallowed pages regardless
+  of the robots.txt rule.
+- **Some assistants can't be targeted even if you wanted to.** Several
+  exposed generic browser user-agents (Chrome/Safari strings) instead
+  of an identifiable bot signature, making assistant-specific
+  allow/disallow rules technically impossible to write — you can't
+  target what your server logs can't distinguish.
+- **What an assistant answers doesn't tell you what it accessed.**
+  Copilot accessed all test pages in this study but returned no correct
+  answers from them; ChatGPT sometimes answered without accessing
+  allowed content at all. Don't infer crawl/access behavior from
+  citation or answer behavior.
+- **Access can continue well outside a visible interaction window** —
+  Grok generated 173+ additional accesses to test pages in the weeks
+  after the initial test, at 48-52x the expected per-trial request
+  rate to a single page, a distinct load pattern from traditional
+  crawling.
+- Practical implication: treat robots.txt as one control among several
+  (see "For actual indexing prevention" above), not as a reliable
+  content-governance boundary against AI assistants specifically — a
+  real risk of AI overview/agent access exists even for explicitly
+  disallowed content, and it isn't reliably auditable from server logs
+  alone when the assistant uses a generic user-agent.
+
 ## Conflicting Evidence
 
 - **Claim**: `Disallow`-ing a URL in robots.txt is a valid "quick fix" for
@@ -250,6 +301,8 @@ Example: You block `/admin/` in robots.txt. Another site links to `/admin/user12
 
 ## Related pages
 
+- [[ai-assistants-robots-txt-compliance-2026]] — the per-assistant
+  compliance data and attribution/access findings above.
 - [[robots-txt-audit-checklist]] — Operational audit checklist with syntax rules, dangerous mistakes, GSC monitoring
 - [[technical-seo-audit-checklist]] — Broader crawl/index/serve audit; robots.txt is one section
 - [[how-google-search-works]] — Crawl stage and crawl budget allocation

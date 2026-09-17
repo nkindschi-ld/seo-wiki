@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-07-11
+updated: 2026-09-04
 ---
 
 Why / when to use this: as a site accumulates content, some pages stop
@@ -110,6 +110,19 @@ Analytics, BuzzSumo (social performance).
 - [ ] Cannibalized pairs cross-checked against [[keyword-mapping-and-cannibalization]]
 - [ ] Removal batches bucketed by severity, staged with 1-3 week monitoring gaps
 - [ ] Every removed/merged URL with traffic or backlinks has a 301 redirect
+
+## See also
+
+- [[how-google-search-works]] — the crawl/index/serve pipeline pruning
+  is ultimately managing: index bloat and wasted crawl budget are the
+  problems this playbook exists to fix.
+- [[e-e-a-t-and-page-quality]] — the quality framework behind "is this
+  page worth keeping?"; low-quality pages dragging on a site's overall
+  assessment is the strategic case for pruning.
+- [[keyword-mapping-and-cannibalization]] — the cannibalization
+  diagnosis that feeds consolidation decisions here.
+- [[technical-seo-audit-checklist]] — where index-bloat symptoms
+  usually surface first.
 
 See [[conductor-content-pruning]] and [[semrush-content-pruning]] for
 the full source writeups.

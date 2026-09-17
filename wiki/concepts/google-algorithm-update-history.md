@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo]
-updated: 2026-07-07
+updated: 2026-09-04
 ---
 
 # Google Algorithm Update History
@@ -70,3 +70,8 @@ claim.
   are presumably built on.
 - `wiki/timeline.md` — the full chronological event list this concept
   synthesizes.
+- [[classic-seo-ranking-factors]] — the tactic-level playbook these
+  updates repeatedly rewarded or penalized; useful for reading any
+  given update against what it actually changed in practice.
+- [[content-pruning-playbook]] — the standard remediation after a core
+  update hits a site with a large low-quality content footprint.

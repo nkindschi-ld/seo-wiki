@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-08-06
+updated: 2026-09-10
 ---
 
 # AIO Impact on Google CTR
@@ -317,6 +317,62 @@ not a conversion/purchase study; not a randomized experiment — the
 backward-placebo design controls for each user's own baseline but
 doesn't fully eliminate selection bias between exposed and non-exposed
 populations.
+## What triggers an AIO: question form and query length
+
+Per [[xu-measuring-google-ai-overviews-2026]], an academic audit of
+55,393 **trending** queries (Mar–Apr 2026) — a different query
+population from the brand/commercial corpora behind the prevalence
+numbers above, so read the contrasts rather than the absolute rate:
+
+- **Question-form queries activate AIOs at 64.7% vs. 9.5% for
+  non-question queries — 6.8x.** Open-ended explanatory interrogatives
+  are strongest (`how` 84.3%, `why` 73.4%); closed-form lookups weakest
+  (`who` 47.9%, `did` 39.8%) but still 4–5x non-question queries.
+- **Query length amplifies activation independently of phrasing.**
+  Restricting to non-question queries only, activation climbs from
+  **9.9% at one word to 38.7% at six or more words** — length is not
+  merely a proxy for asking a question.
+- Category spread is 13x: Beauty & Fashion 3.5%, Travel & Transport
+  8.7%, Sports 9.8%, Entertainment 16.3%, Business & Finance 26.2%,
+  Health 26.6%, Science 39.9%, Hobbies & Leisure 46.1%.
+- **Sensitive-topic suppression is selective, not blanket**: Politics
+  (7.5%) and Law & Government (9.6%) run below average, but Health
+  (26.6%) runs well above it.
+- AIO activation spikes around major public events (Oscars, NCAA
+  tournament, Artemis II launch drove 1.3–2.2x mean query volume) —
+  exposure concentrates exactly when information demand peaks.
+
+Directionally this corroborates the query-format data from
+[[seerinteractive-aio-ctr-impact-2026-update]] above (question-format
+85.9%, single-word 27.3%) at lower absolute levels, consistent with a
+trending-query corpus that is 51.4% Sports. The ordering — questions
+≫ non-questions, long ≫ short — replicates across both.
+
+## Supply side: who is paying for AIO content, and who keeps the ads
+
+[[xu-measuring-google-ai-overviews-2026]] measures the economics
+from the publisher side rather than the click side:
+
+- **50.63% of AIO-cited pages (30,994 of 61,212) display visible ads**
+  — more than half the pages whose content makes AIO synthesis
+  possible run ad-supported models that depend on the page views AIOs
+  intercept. A conservative floor: the 14.2% of references pointing to
+  social/video platforms were not crawled and are counted as ad-free,
+  and affiliate/subscription/lead-gen monetization is invisible to the
+  method entirely.
+- By category: Hobbies & Leisure 63.14%, Sports 60.19%, Entertainment
+  55.50%, Science 41.85%, Business & Finance 39.97%, Law & Government
+  29.47%, Health 27.77%.
+- **Only 2.16% of AIO-bearing SERPs display Google sponsored ads, and
+  just 0.51% place them above the AIO.** The authors' conclusion:
+  "AIOs restructure the page in a way that preserves Google's ad
+  capture while reducing click-throughs to publishers."
+
+This is the supply-side complement to the demand-side CTR data above:
+the click compression documented by
+[[seerinteractive-aio-ctr-impact-2026-update]] lands on a citation
+pool where the majority of pages are monetized per-pageview, while
+Google's own paid inventory on those SERPs is largely undisturbed.
 
 ## Caveats
 
@@ -409,6 +465,9 @@ floors, not predictions.
 - [[geo-content-optimization-tactics]] — actionable query-format risk
   guidance and the impressions-vs-clicks measurement checklist drawn
   from this source.
+- [[ai-overview-grounding-and-fidelity]] — whether AIO claims are
+  actually supported by the pages they cite (~11% are not), the
+  accuracy counterpart to this page's economics.
 - [[optimizing-for-the-agentic-web]] — the source of the AI-referred-
   visitor conversion-value stat above, plus a fuller measurement
   framework for AI-driven traffic and conversions.

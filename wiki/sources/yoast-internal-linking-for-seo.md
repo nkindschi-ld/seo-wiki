@@ -67,3 +67,6 @@ https://yoast.com/internal-linking-for-seo-why-and-how/
 - No change to the playbook's anchor-text guidance (see nuance above).
 - No numeric-link-count conflict — this source is silent on link count,
   consistent with the wiki's current Google-aligned position.
+- See also [[webknograph-gnn-internal-linking-2026]] for a
+  pre-deployment evaluation methodology that complements this source's
+  heuristic-based guidance.

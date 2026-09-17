@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-08-03
+updated: 2026-09-04
 ---
 
 Why / when to use this: before investing in content or internal linking,
@@ -132,6 +132,22 @@ conversion than top-of-funnel awareness terms, and typically lower CPC than BOFU
 Rank tracking: Semrush, Ahrefs, SEOmonitor. Analytics: Google Analytics,
 Google Search Console. Keyword research/clustering: Ahrefs, Semrush.
 Technical audit: Screaming Frog.
+
+## See also
+
+- [[keyword-research]] — run *before* this playbook to discover and
+  prioritize which keywords belong on the map in the first place
+  (including AI-era discovery methods like query fan-out and first-
+  party-data mining); this playbook assumes the list already exists and
+  focuses on page assignment/cannibalization.
+- [[topic-cluster-strategy]] — the pillar/subpage structural pattern
+  the "topic/pillar-first variant" above is drawn from.
+- [[seo-competitive-analysis]] — competitor keyword-gap analysis that
+  can surface additional map entries.
+- [[search-intent-and-needs-met]] — the parent concept: mapping is
+  fundamentally an intent-matching exercise, and most cannibalization
+  is two pages competing to serve the same intent.
+
 
 See [[riseatseven-keyword-mapping-guide]] and [[semrush-keyword-mapping]]
 for the full source writeups.
