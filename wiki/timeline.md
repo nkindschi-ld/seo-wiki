@@ -1058,3 +1058,15 @@ path; `bing_query` as the dominant query rewriter even for OpenAI's own internal
 indexes; and unequal system1/system2 coverage in which Reddit, web-PDF and
 web-YouTube are reachable only at the deeper-reasoning tier. A configuration
 enumeration with no call-frequency data, not a measured study.
+
+## 2010 — Facebook introduces the Open Graph protocol (`og:` meta tags) to standardize link previews
+[[stream-open-graph-protocol-glossary]] · [[open-graph-protocol]]
+
+## 2022-09-12 — Search Atlas publishes "Open Graph Tags: Implementation & Best Practices" (Manick Bhan; updated 2026-01-26)
+[[searchatlas-open-graph-tags-best-practices]] · [[open-graph-protocol]]
+
+## 2024-02-17 — OpenGraph.io publishes "Open Graph Tags vs Schema for SEO" (Emir Zecovic)
+[[opengraph-io-og-tags-vs-schema]] · [[open-graph-protocol]]
+
+## 2026-08-24 — Siteimprove publishes "Does Open Graph Matter for AI Search Visibility?" (Stephen Jeske; argues no direct effect, no data)
+[[siteimprove-open-graph-ai-search-visibility-2026]] · [[open-graph-protocol]]

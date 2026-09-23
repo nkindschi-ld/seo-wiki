@@ -39,7 +39,8 @@ share of domains with the issue on at least one page.)
   been valid HTML5 since 2014 and Google has stated this isn't a
   problem; a missing H1 is a minor issue, not a critical one.
 - **Open Graph tags are a social/CTR lever, not an SEO ranking
-  factor** — matters only for pages that get shared.
+  factor** — matters only for pages that get shared. Now cross-cited on
+  [[open-graph-protocol]].
 - Recommends an **impact-effort prioritization matrix**, explicitly
   noting the right call is sometimes to fix nothing if the cost
   outweighs the benefit.

@@ -2818,3 +2818,48 @@ retrieval-eligibility gate, both of which [[ai-search-reranking-pipeline]] and
 [[generative-engine-optimization]] already covered. Upstream had linked those
 correctly; no duplication introduced.
 
+
+## [2026-09-23] query | "Show me sources on llms.txt files"
+
+Surveyed all 7 sources touching `llms.txt`. Four argue against it:
+[[google-ai-optimization-guide]] (official, explicit "doesn't help" for AI
+Overviews/AI Mode), [[otterly-ai-keyword-research-2026]] (no measurable
+citation lift), [[evilmartians-which-ai-reads-your-site-2026]] (~660 fetches /
+two months, only ~37 from named AI assistants — clients don't even request the
+file), and [[ahrefs-beginner-guide-technical-seo]] ("currently ineffective").
+Two recommend it with no evidence cited: [[sel-ai-optimization-content-for-search-and-agents]]
+and [[superlines-geo-guide]], both predating the negative tests. One nuance:
+[[c-seo-bench-2025]]'s "LLM Guidance" tactic (an `llms.txt`-*style* summary
+prepended to the document, not a separate file) was the best performer by AUC
+against third-party engines, though small in absolute terms and significant in
+only 2 of 6 domains.
+
+No new pages filed — [[geo-content-optimization-tactics]] and
+[[technical-seo-audit-checklist]] §5 already carry this synthesis, including the
+content-negotiation alternative that did work.
+
+## [2026-09-23] ingest | Open Graph tags: Stream glossary, Siteimprove, Search Atlas, OpenGraph.io
+
+Four vendor pages on Open Graph, ingested together as one topic:
+[[stream-open-graph-protocol-glossary]] (undated),
+[[siteimprove-open-graph-ai-search-visibility-2026]] (2026-08-24),
+[[searchatlas-open-graph-tags-best-practices]] (2022, updated 2026-01-26),
+[[opengraph-io-og-tags-vs-schema]] (2024-02-17; client-rendered, captured
+through the browser). None has original data. New concept page
+[[open-graph-protocol]] with a tag reference, OG vs. meta vs. schema table,
+AI-visibility section and implementation checklist. The user chose a checklist
+inside the concept page over a separate playbook. Added cross-links from
+[[writing-meta-tags]] (new "Social preview tags" section),
+[[technical-seo-audit-checklist]] §4 and [[ahrefs-site-audit-study-2023]].
+Siteimprove's "OG has no AI-search effect" claim is recorded as asserted, not
+measured. That matches the wiki's existing no-evidence pattern for
+[[meta-keywords-tag]] and `llms.txt`.
+
+## [2026-09-23] conflict | Open Graph — "social signals help rankings" (Stream) vs. "not a ranking factor" (Search Atlas, Ahrefs)
+
+Best guess: not a ranking factor; Stream is undated and gives no evidence.
+Also logged on [[open-graph-protocol]]: conflicting `og:title`/`og:description`
+length and image-size specs (Stream vs. Search Atlas). Resolved pragmatically:
+reuse the ~60/~155-char meta budgets and a 1.91:1 image of at least 1200×630.
+Also noted but unresolved: Siteimprove's "schema = meaning layer for AI" claim
+vs. [[traditional-seo-ranking-factors]]' weak schema correlation.

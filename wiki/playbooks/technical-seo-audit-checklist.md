@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-08-06
+updated: 2026-09-23
 ---
 
 ## Priority Framework
@@ -158,7 +158,9 @@ audit workflow). Quick-reference for this audit:
     either.
   - **Open Graph tags are a social/CTR lever, not an SEO ranking
     factor** — only worth completing for pages that actually get
-    shared on social platforms.
+    shared on social platforms. Tag reference, OG-vs-schema split and
+    template checklist: [[open-graph-protocol]] (no evidence OG affects
+    AI-search retrieval or citation either).
   - **General framework**: use an impact-effort matrix rather than
     fixing issues in order of how common they are — prevalence in an
     audit tool indicates commonality, not priority. Sometimes the
