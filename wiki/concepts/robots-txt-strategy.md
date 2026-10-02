@@ -303,6 +303,7 @@ AI crawlers"):
 
 - [[ai-assistants-robots-txt-compliance-2026]] — the per-assistant
   compliance data and attribution/access findings above.
+- [[llms-txt]] — the often-confused sibling file: `llms.txt` suggests what's worth fetching, robots.txt controls access; it's not a substitute
 - [[robots-txt-audit-checklist]] — Operational audit checklist with syntax rules, dangerous mistakes, GSC monitoring
 - [[technical-seo-audit-checklist]] — Broader crawl/index/serve audit; robots.txt is one section
 - [[how-google-search-works]] — Crawl stage and crawl budget allocation

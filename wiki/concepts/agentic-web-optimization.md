@@ -142,6 +142,8 @@ traffic.
   its own ecommerce/agentic-commerce readiness section.
 - [[optimizing-for-the-agentic-web]] — actionable tactics and
   measurement framework drawn from this concept.
+- [[llms-txt]] — the curated agent-routing file, pitched by vendors as
+  business-to-agent infrastructure (evidence limited to dev docs)
 - [[docs-over-mcp]] — the docs-specific application of the protocol
   layer (MCP): serving documentation as an agent-callable tool.
 - [[accessibility-tree-audit-for-ai-agents]] — the audit playbook for the

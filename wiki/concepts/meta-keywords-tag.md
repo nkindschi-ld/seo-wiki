@@ -65,6 +65,8 @@ ones is safe and won't affect rankings or AI visibility.
 ## Related
 
 - [[writing-meta-tags]] — the meta tags that *do* matter
+- [[llms-txt]] — Google's John Mueller compared `llms.txt` to this tag;
+  it's in the same no-evidence bucket for AI search
 - [[traditional-seo-ranking-factors]] — Schema/keyword-matching signals
   measured weak even where they exist
 - [[generative-engine-optimization]], [[ai-citation-landscape]] — why AI

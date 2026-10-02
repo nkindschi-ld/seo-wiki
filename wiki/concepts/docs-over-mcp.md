@@ -137,6 +137,8 @@ treat it as an addition on top of clean public docs, not a substitute.
 
 - [[agentic-web-optimization]] — MCP as the protocol layer; this is the
   docs-specific application.
+- [[llms-txt]] — the passive, file-based alternative for docs (a curated
+  link map an agent reads, which LangChain's `mcpdoc` exposes over MCP).
 - [[optimizing-for-coding-agent-recommendations]] — a docs-MCP server
   as a vendor tactic to become the agent's default pick.
 - [[ai-coding-agent-tool-selection]] — the broader "be the agent's pick"

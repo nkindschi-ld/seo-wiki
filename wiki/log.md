@@ -2863,3 +2863,213 @@ length and image-size specs (Stream vs. Search Atlas). Resolved pragmatically:
 reuse the ~60/~155-char meta budgets and a 1.91:1 image of at least 1200×630.
 Also noted but unresolved: Siteimprove's "schema = meaning layer for AI" claim
 vs. [[traditional-seo-ranking-factors]]' weak schema correlation.
+
+## [2026-09-24] query | "tell me about any data around quora"
+No dedicated Quora source or concept page. Hard data comes from 4 sources: Profound (AIO 1.5% share), Semrush LinkedIn study (0.435 semantic similarity), Muck Rack (Gemini leans on Quora), SE Ranking via Derivatex (Reddit/Quora ~4x, secondhand). Everything else is advice with no numbers. Gap flagged.
+
+## [2026-10-02] ingest | llms.txt: llmstxt.org spec v2 + changelog, Limy, Crawloria, Rankability
+
+Five URLs, four source pages (the spec and its changelog share one):
+[[llmstxt-org-proposal-v2-2026]] (primary; v1 2024-09-03, v2 2026-08),
+[[limy-llms-txt-2026-full-guide]] (2026-05-12; vendor with a 515M-event
+dataset), [[crawloria-llms-txt-best-practices-2026]] (2026-06-06; careful
+vendor guide, no data), and [[rankability-llms-txt-best-practices]] (undated,
+captured 2026-04; low rigor, ingested with a caveat at the user's choice).
+New concept page [[llms-txt]] pulls together evidence that was spread across
+five pages (8 sources plus the spec). It has the v2 spec reference, a v1→v2
+table, "what it's not," an evidence table, the coding-agent/docs case, and an
+implementation checklist inside the page (the user chose this over a
+separate playbook, matching [[open-graph-protocol]]).
+
+Main points:
+- Limy's 408-of-515M is a third traffic-side null result. Its filter
+  includes Google-Extended, which is a robots.txt token rather than a user
+  agent, and leaves out user-triggered fetchers, so it can't test the
+  coding-agent case it argues for.
+- v2's link relations resemble the `<link>` hint that got zero fetches in
+  [[evilmartians-which-ai-reads-your-site-2026]].
+
+Cross-links added from [[geo-content-optimization-tactics]] (Limy null
+result), [[technical-seo-audit-checklist]] §5 (v2 link relations, untested),
+[[open-graph-protocol]], [[meta-keywords-tag]], [[robots-txt-strategy]],
+[[docs-over-mcp]] and [[agentic-web-optimization]].
+
+## [2026-10-02] conflict | llms.txt — AI-visibility benefit (Rankability, Superlines, SEL) vs. Google, Otterly, Evil Martians, Limy
+
+Best guess: no AI-search visibility effect. The pro side is all assertion;
+the con side includes official guidance, an experiment and two traffic
+datasets. Narrowly unresolved: there's still no large controlled
+citation-lift test on non-Google engines. Logged on [[llms-txt]].
+
+## [2026-10-02] conflict | llms.txt — spec-conformance claims: root-only/`.well-known` placement, required elements, `## Optional` semantics
+
+Rankability and Limy say the file must be at the root (Limy also allows a
+`.well-known` mirror), and Rankability says the blockquote and contact info
+are required. The spec ([[llmstxt-org-proposal-v2-2026]]) allows subpaths,
+rejects `.well-known`, and requires only the H1. Limy's (2026-05) claim that
+`## Optional` has a meaning agents act on is superseded by v2 (2026-08).
+Resolved in the spec's favor, since it's the primary source.
+
+## [2026-10-02] conflict | llms.txt — "coding agents fetch it routinely" (spec author, Limy) vs. ~37 named-AI fetches in two months (Evil Martians)
+
+Both "routinely" claims are unmeasured. Evil Martians logged an agency site,
+not library docs, so the two don't directly contradict each other. Best
+guess: plausible on docs sites only. Unresolved until someone publishes
+docs-site logs. Also flagged as untested: v2's
+`rel="alternate"`/`rel="describedby"` links.
+
+## [2026-10-02] query | "Check the LaunchDarkly llms.txt draft against spec v2"
+
+Read-only check of the uncommitted repo-root `llms.txt` (not edited). Format
+fully matches [[llmstxt-org-proposal-v2-2026]]: H1, blockquote, prose before
+the first H2, 7 H2 file lists, 84 unique `- [title](url)` items. Live checks:
+83/84 links return 200. The Paramount case study 308-redirects to
+`/customer-stories/`. 17 items have no description (6 competitor comparisons
+and 11 in Optional). `launchdarkly.com/llms.txt` currently 404s (not shipped
+yet). `/docs/llms.txt` is live but ~200KB with boilerplate category
+descriptions and no blockquote. Docs `.md` pages serve `text/markdown`.
+Marketing pages don't do content negotiation and have no `Link:`/`rel`
+discovery hints. Not filed as a page; see [[llms-txt]] checklist.
+
+## [2026-10-02] query | "Generate an llms.txt from the 'Copy of launchdarkly.com' sheet tab"
+
+Built `drafts/launchdarkly/llms.txt` from the 54 URLs in the sheet's ordered
+tab (*Pages for inclusion on LLMs.txt file*; read via Glean, which doesn't
+return tab names, so the tab with Order/Section columns was used), applying
+the [[llms-txt]] checklist:
+- Sheet section order, with the format from [[llmstxt-org-proposal-v2-2026]].
+- Factual descriptions taken from each page's live content (meta
+  descriptions were often boilerplate).
+- Docs links pointed at their `.md` versions.
+- Pricing tiers with numbers, which go stale and need upkeep.
+
+It passes the format check: one H1, a blockquote, 9 H2 sections, and 54
+unique link-first items, all with descriptions. Live check: 51 return 200.
+Support (302→`/hc`, 403 to non-browser clients), Academy (403) and Trust
+(301 to Vanta) are reachable by people but likely not by agents. Flagged for
+the user:
+- The two legal URLs are different documents: Developer/Foundation terms
+  vs. Starter/Pro, which look like legacy plans.
+- Changelog and Careers render their content client-side.
+
+## [2026-10-02] ingest | What AI agents really think about your pricing (Profound / Growth Unhinged)
+
+Source 1 of 4 in a batch (three Profound posts plus a markdown-for-LLMs
+paper). The user checked first which ones were already ingested: "The
+Shortlist Is the New Shelf" and "The AI Mention Effect" were; these four
+weren't. Source page [[tryprofound-ai-pricing-visibility-2026]]
+(2026-09-03; ~7,600 pricing-prompt responses, Cloud 100, 6 engines,
+data from 2026-07-29 to 08-10). New playbook [[ai-pricing-visibility-audit]],
+at the user's choice over folding it into
+[[geo-content-optimization-tactics]]. It has the 10-step checklist, the
+five-part "pricing answer stack," the four bot-readability failure modes
+with a curl test, and the llms.txt step marked unproven, as the source
+itself says.
+
+Supporting citations added to [[ai-citation-landscape]] (new "Pricing
+queries" addendum, plus the "third-party matters" side of the open
+review-platform conflict, which stays unresolved),
+[[ai-shortlist-effect]] (pricing-accuracy lever),
+[[geo-content-optimization-tactics]] and the JS-rendering item in
+[[technical-seo-audit-checklist]]. No new conflict: Reddit being cited
+directly in 18.6% of pricing runs, against its "retrieved, rarely
+attributed" profile, was treated as query-type dependence and noted, not
+logged. Caveats recorded: vendor study, one prompt template, n=1
+self-reported SSR before/after, two-week window. The downloadable
+"AI pricing visibility audit" Claude skill linked from the post was not
+fetched.
+
+## [2026-10-02] ingest | Where do inaccurate AI claims come from? (Profound)
+
+Source 2 of 4. Source page [[tryprofound-where-inaccurate-ai-claims-come-from]]
+(2026-08-17; Profound FactCheck, 158K+ claims, Apr–Aug 2026). Three charts
+were downloaded to `raw/assets/` and their values written into the raw
+file; per-topic values are approximate, read off the bars. The user chose
+to extend existing pages rather than start an `ai-brand-claim-accuracy`
+concept page (revisit if more accuracy sources arrive). New sections and
+notes:
+- a "Factual accuracy across engines and source types" addendum in
+  [[ai-citation-landscape]]
+- a "Grounding ≠ factual accuracy" paragraph in
+  [[ai-overview-grounding-and-fidelity]]
+- error-source tracing and "audit your own pages first" in step 8 of
+  [[ai-pricing-visibility-audit]], plus accuracy evidence in its baseline
+- a stale-facts check and error-tracing checklist item in
+  [[ai-entity-footprint-audit]]
+- a cross-link from [[tryprofound-ai-pricing-visibility-2026]], whose
+  unsupported "pricing is most-wrong" line this source backs up
+
+No conflict logged. Xu's "source quality is independent of fidelity"
+(r≈0.045) looks like it contradicts "source type predicts inaccuracy,"
+but the two measure grounding vs. factual accuracy, and domain
+credibility vs. source type. Recorded as complementary on both pages.
+Caveats: vendor data from its own customers, verdict method undisclosed,
+sample units that don't line up across figures.
+
+## [2026-10-02] ingest | Where do AI citations come from? (Profound)
+
+Source 3 of 4. Source page [[tryprofound-where-ai-citations-come-from]]
+(2026-07-30; 11.84B citations, 8 engines, 7,542 customer categories in
+29 industries, Apr 16–Jul 16, 2026). It's a different post from
+[[tryprofound-ai-platform-citation-patterns]]. Four charts were
+downloaded to `raw/assets/`, with values written into the raw file (most
+per-engine bars are unlabeled, so those are approximate). Recorded
+mismatches between text and charts: marketing 72% vs. 76%, "Software"
+listed twice on the earned-share chart, fintech median 15% vs. about
+21.5%.
+
+Changes:
+- [[ai-citation-landscape]]: new "Citation mix by industry and engine"
+  addendum with an industry table and the owned (2–6%) vs. other-company
+  split; corroboration added to the Claude section; a pointer from the
+  Muck Rack "earned media dominates" section; and a new Conflicting
+  Evidence entry (see conflict entry below).
+- [[geo-content-optimization-tactics]]: new "Benchmark your citation mix
+  against your industry median" section, including the SaaS reading:
+  about 73% of software citations are other companies' sites.
+- [[ai-entity-footprint-audit]]: step 5 now weights third-party
+  validation by industry mix.
+
+## [2026-10-02] conflict | AI citation source mix — Muck Rack "earned ~84%, owned + paid ~16%" vs. Profound "~57% brand sites"
+
+[[muckrack-generative-pulse-ai-reading-may-2026]] vs.
+[[tryprofound-where-ai-citations-come-from]]. Best guess: taxonomy.
+Profound's "brand" covers any company's site, and the owner's own site
+is only 2–6%; Muck Rack files "third-party corporate content" under
+earned. On a common basis, both say your own site is a small share.
+Still unreconciled: how big the editorial/journalism share really is,
+and how it varies by industry. Surfaced to the user during ingest and
+recorded as unresolved, leaning reconcilable, in [[ai-citation-landscape]].
+
+## [2026-10-02] ingest | Does Markdown Increase LLM Bot Traffic? A Randomized Controlled Experiment (Punturo)
+
+Source 4 of 4. The PDF was hosted on HubSpot; the original is saved at
+`raw/studies/punturo-markdown-llm-bot-traffic-rct-2026.pdf`, with the
+text extracted to `.md` via pypdf (poppler isn't installed). Source page:
+[[punturo-markdown-llm-bot-traffic-rct-2026]] (Feb 2026; 380 pages, 6
+sites, Jan 19–Feb 8, 2026). It's the wiki's first randomized test of a
+"Markdown for AI" tactic. Result: no significant change in bot visits
+(CUPED +13.9%, CI [−11.2%, +46.8%]; minimum detectable effect ~41%).
+
+Supporting citations added to:
+- [[llms-txt]]: the null result for Markdown page versions, the
+  coding-agent gap, a checklist warning against user-agent sniffing, and
+  the Sources list.
+- [[technical-seo-audit-checklist]]: the content-negotiation item, with
+  the user-agent vs. `Accept`-header distinction.
+- [[geo-content-optimization-tactics]]: the "Also don't bother" null
+  results.
+- [[ai-pricing-visibility-audit]]: step 10 is now further qualified.
+
+No conflict logged; no wiki page claims a measured Markdown lift. Noted
+design limits:
+- crawl volume, not citations
+- a bot can't know the format before fetching, so any effect must come
+  through re-crawl behavior
+- no coding agents in the bot set
+- affiliation not stated, not peer-reviewed
+
+Batch complete. The four sources this session were
+[[tryprofound-ai-pricing-visibility-2026]],
+[[tryprofound-where-inaccurate-ai-claims-come-from]],
+[[tryprofound-where-ai-citations-come-from]] and this one.

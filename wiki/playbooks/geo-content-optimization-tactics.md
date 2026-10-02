@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-09-17
+updated: 2026-10-02
 ---
 
 
@@ -624,6 +624,19 @@ Per [[google-ai-optimization-guide]], Google explicitly says these do
   don't bother with decorative "point the AI here" markup either. The
   mechanism that *did* deliver Markdown was HTTP content negotiation (see
   [[technical-seo-audit-checklist]] §5), not any special file or hint.
+  **Third traffic-side null result (2026-10-02)**: per
+  [[limy-llms-txt-2026-full-guide]], a 515M-event bot-traffic dataset
+  across a vendor's client brands had only **408** requests for
+  `/llms.txt` in ~90 days. The filter covered search and training crawlers
+  only, so it can't speak to coding agents. The spec itself (v2,
+  2026-08), the coding-agent/docs case, and an implementation checklist
+  for docs sites now live on [[llms-txt]].
+  **Serving Markdown pages instead of HTML is also null so far
+  (2026-10-02).** [[punturo-markdown-llm-bot-traffic-rct-2026]], the
+  wiki's first randomized test of a "Markdown for AI" tactic (380 pages,
+  6 sites, 20 days), found no significant lift in LLM bot visits. The
+  CUPED-adjusted lift was +13.9%, CI [−11.2%, +46.8%]. It measured crawl
+  volume, not citations, and had no coding agents in the bot set.
 - "Chunking" content into unnaturally small pieces for AI to parse.
 - Obsessing over structured data specifically for AI purposes (still fine
   to use for general SEO, just not an AI-visibility requirement).
@@ -830,6 +843,49 @@ can beat five separate playbooks:
   other (a win on one plausibly transfers), but Gemini overlaps *more*
   with ChatGPT (39%) than with either Google surface (27-34%) — Gemini
   needs its own strategy, not a "just optimize for Google" shortcut.
+
+## Benchmark your citation mix against your industry median (2026-10-02)
+
+Per [[tryprofound-where-ai-citations-come-from]] (11.84B citations, 8
+engines, 29 industries; vendor data). The right weighting of brand vs.
+earned vs. social depends heavily on industry, so set targets against
+your industry, not a global average.
+
+1. **Measure your own mix.** For your tracked prompts, bucket every
+   citation as:
+   - your own site
+   - other companies' sites (competitors, partners, integrations)
+   - earned (editorial, institutional, PR wire)
+   - social/UGC
+
+   Do it per engine, because the mixes differ (see below).
+2. **Compare with the industry median.** Median earned share runs from
+   about 59–61% (pharma, government) to 11–12% (software, marketing).
+   Social runs from about 5% (pharma) to about 17% (fashion). A 30%
+   earned share is far behind in pharma but well ahead in software.
+   Within one industry, the 25th and 75th percentiles can differ by up
+   to 43 points, so the median is a baseline, not a ceiling.
+3. **Invest where the gap and the engine overlap:**
+   - **Social/UGC** pays off on Google surfaces (AI Overviews 15.3%,
+     AI Mode 14.4%; fashion on AI Overviews about 25%). It barely
+     registers on Copilot (about 3.5%), Claude (about 4%) or Gemini
+     (about 4.5%).
+   - **Earned media** matters most for ChatGPT (30%) and least for AI
+     Overviews (17%).
+4. **For SaaS/B2B, prioritize other companies' sites.** In software,
+   about 73% of citations are other companies' sites, vs. 6% for your
+   own and 12% earned. Integration-partner docs, marketplace listings,
+   competitor comparison pages and adjacent vendors' content describing
+   you are the biggest single layer. This is the "commercial &
+   editorial" layer above, measured for one vertical. Make sure those
+   pages describe you accurately and consistently; see
+   [[tryprofound-where-inaccurate-ai-claims-come-from]] for how often
+   competitor sites get facts wrong (4.68%).
+
+Caveat: the numbers come from Profound customer categories with
+LLM-assigned industry labels. The "brand vs. earned" headline conflicts
+with Muck Rack's on the surface, but that is likely taxonomy (see
+Conflicting Evidence in [[ai-citation-landscape]]).
 
 ## Five-component intent framework and AI-reuse formatting
 
@@ -1388,7 +1444,11 @@ options, not what gets cited on the open web:
 - **Keep pricing current everywhere a model might source it.** Stale or
   wrong pricing measurably hurt selection odds; this is an ongoing
   accuracy-maintenance task (across your own site and any third-party
-  pages a model might cite), not a one-time content edit.
+  pages a model might cite), not a one-time content edit. For a
+  dedicated audit (baseline prompt, the five-part "pricing answer
+  stack," bot-readability checks, off-site consensus via Vendr, Reddit
+  and G2), see [[ai-pricing-visibility-audit]], per
+  [[tryprofound-ai-pricing-visibility-2026]].
 - **Disclose downsides plainly instead of omitting or spinning them.**
   Trade-offs stated directly increased user trust in the comparison and
   correlated with being *selected*, not rejected — counterintuitive

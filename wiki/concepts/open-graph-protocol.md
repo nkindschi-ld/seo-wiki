@@ -74,7 +74,7 @@ three, and they should agree with each other (see the checklist).
   has four stages (retrieval → ranking → summarization → preview
   generation) and that OG only touches the last. The argument is
   plausible but comes with **no tests or data**. That puts OG in the same
-  evidence bucket as [[meta-keywords-tag]] and `llms.txt` (see
+  evidence bucket as [[meta-keywords-tag]] and [[llms-txt]] (see also
   [[geo-content-optimization-tactics]]): nobody has shown AI engines use
   it for selection. The head-level elements that *do* matter for AI
   retrieval are crawl access, canonicals, `<title>`, and structured data

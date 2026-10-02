@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-09-10
+updated: 2026-10-02
 ---
 
 # AI Overview Grounding & Claim Fidelity
@@ -125,6 +125,20 @@ higher-quality sources into the citation pool — which is what most of
 synthesis on top of them more faithful. Grounding is a generation
 problem, not a retrieval problem.
 
+**Grounding ≠ factual accuracy.** This page measures whether a claim is
+supported by its cited source. A claim can be perfectly grounded in a
+stale or wrong page. That second failure mode is measured across 7
+engines by [[tryprofound-where-inaccurate-ai-claims-come-from]]
+(Profound FactCheck, 158K+ claims judged against brands' records; vendor
+data). There, source *type* does matter: claims citing competitor sites
+were wrong 4.68% of the time and earned media 4.62%, vs. 2.40% for the
+brand's own site. Google AI Overviews' inaccuracy rate was 5.0%. This
+doesn't contradict the source-quality null above, which is about
+domain credibility vs. grounding. Taken together, the two say AI
+answers both repeat errors in their sources and add errors of their
+own. For brands, that means fixing sources (stale owned pages,
+brand-specific earned-media errors) addresses only the first kind.
+
 ## Why this matters for SEO/AEO practice
 
 1. **Citation ≠ accurate representation.** Track what the AIO *says*
@@ -166,3 +180,6 @@ problem, not a retrieval problem.
 - [[aio-ctr-impact]] — the economics half.
 - [[generative-engine-optimization]] — the tactics discipline this
   page sets an accuracy boundary on.
+- [[tryprofound-where-inaccurate-ai-claims-come-from]] — cross-engine
+  factual accuracy (true vs. brand records) rather than grounding,
+  broken down by source type, topic and model.

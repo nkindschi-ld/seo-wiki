@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-07-22
+updated: 2026-10-02
 ---
 
 # The AI Shortlist Effect
@@ -108,7 +108,13 @@ that table is the AEO equivalent of owning a featured snippet," and
 3. **Accurate, current pricing** — stale or wrong pricing measurably
    hurt selection odds; models don't always have current pricing, so
    this is a live accuracy-maintenance task, not a one-time content
-   edit.
+   edit. **Corroborated at scale** by
+   [[tryprofound-ai-pricing-visibility-2026]] (2026-09-03, ~7,600
+   pricing-prompt responses, Cloud 100, 6 engines). Owned pricing pages
+   were the first citation in only 12% of answers, and one company drew
+   negative pricing language in 72 of 76 responses. Where no public
+   price existed, engines invented ranges from Reddit (a 24x spread for
+   one product). How to fix it: [[ai-pricing-visibility-audit]].
 4. **Disclosed downsides** — trade-offs stated plainly (rather than
    omitted or spun) increased user trust in the comparison and
    correlated with selection rather than hurting it, consistent with

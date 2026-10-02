@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-09-23
+updated: 2026-10-02
 ---
 
 ## Priority Framework
@@ -197,12 +197,29 @@ audit workflow). Quick-reference for this audit:
   study: dedicated `.md` routes saw only modest adoption (~15% of agent
   traffic, mostly coding agents), `llms.txt` was barely fetched (~660
   fetches / two months, ~37 from named AI assistants), and a hidden
-  `<link>` "AI hint" got zero attributable fetches. **But don't
+  `<link>` "AI hint" got zero attributable fetches. (The `llms.txt` spec's
+  v2, August 2026, now formalizes a similar hint: `rel="alternate"
+  type="text/markdown"` plus `rel="describedby"`, as `<link>` or an HTTP
+  `Link:` header. It's untested; see [[llms-txt]].) **But don't
   over-optimize for Markdown**: the dominant client by far — ChatGPT-User
   at ~73% of all agent traffic — took HTML almost exclusively (0.1%
   Markdown), so **rendered HTML quality is still the primary target** and
   content negotiation is an additive win for the coding-agent slice, not
-  a replacement. (Format preference here is about which representation the
+  a replacement. **Randomized-test confirmation (2026-10-02):**
+  [[punturo-markdown-llm-bot-traffic-rct-2026]] (380 pages, 6 sites, 20
+  days) force-served Markdown to LLM bots and found no significant
+  change in bot visits. The CUPED-adjusted lift was +13.9%, CI
+  [−11.2%, +46.8%], so lifts above about 41% are ruled out.
+  ChatGPT-User, again about 73% of traffic, trended positive but not
+  significantly. Two points of method matter:
+  - That test chose the format by **sniffing the user agent**, not by
+    reading the `Accept` header. Serving bots different content from
+    humans is a different practice, with its own search risk; Google
+    and Bing don't recommend separate bot-only Markdown pages.
+    Content negotiation, by contrast, answers what the client asked
+    for.
+  - It included no coding agents, so the Claude Code case is
+    untested. (Format preference here is about which representation the
   agent *requests*, distinct from whether it executes JavaScript — see the
   JS-rendering item below.)
 - **Analyze server logs for AI bot activity**, per
@@ -249,6 +266,14 @@ audit workflow). Quick-reference for this audit:
     rendered static HTML on first fetch rather than a JS shell — modern
     frameworks (e.g. Next.js) support on-demand regeneration so this
     doesn't require sacrificing content freshness for crawlability.
+    **Measured on one page type** per
+    [[tryprofound-ai-pricing-visibility-2026]]: 20 of 77 Cloud 100
+    public pricing pages weren't fully readable by bots, and 10 hid 40%
+    or more of their body content. The causes were client-side
+    rendering, interactive tabs and sliders, robots.txt blocks and
+    iframes. Profound's own SSR fix was followed by a 13%
+    week-over-week rise in citation-bot traffic (n=1, self-reported).
+    Pricing-specific checks: [[ai-pricing-visibility-audit]].
   - **Crawl efficiency/waste**: Per [[vercel-rise-of-the-ai-crawler]],
     AI crawlers are markedly less efficient at navigating sites than
     Googlebot — ChatGPT and Claude hit 404s on ~35% of requests

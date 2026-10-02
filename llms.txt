@@ -1,0 +1,110 @@
+# LaunchDarkly
+
+> LaunchDarkly is a runtime control platform for software and AI agents. Teams use it to release code behind feature flags, roll out changes progressively, run experiments, observe releases, and control AI agent behavior in production without redeploying.
+
+Product documentation, SDK references, and tutorials have their own index at https://launchdarkly.com/docs/llms.txt. Any docs page is available as Markdown by appending `.md` to its URL. The REST API reference is at https://launchdarkly.com/docs/api.
+
+## Platform
+
+- [Platform overview](https://launchdarkly.com/how-it-works/platform/): How LaunchDarkly works as a runtime control layer for code and agents in production.
+- [Platform architecture](https://launchdarkly.com/how-it-works/platform-architecture/): Flag delivery architecture, performance, security, and resilience.
+- [CodeControl](https://launchdarkly.com/platform/code-control/): Guardrails, progressive rollouts, and automated rollback for AI-generated and human-written code.
+- [AgentControl](https://launchdarkly.com/platform/agent-control/): Configure, monitor, and steer AI agents, prompts, and models in production.
+- [Feature flags](https://launchdarkly.com/how-it-works/feature-flags/): Targeting, safe releases, and automatic recovery with feature flags.
+- [Experimentation](https://launchdarkly.com/how-it-works/experimentation/): Measure the impact of releases with experiments built on feature flags.
+- [Observability](https://launchdarkly.com/how-it-works/observability/): Release-aware observability for errors, sessions, logs, and traces.
+- [Agent integrations](https://launchdarkly.com/how-it-works/agent-integrations/): Using LaunchDarkly from coding agents such as Claude Code and Cursor.
+- [What is feature management?](https://launchdarkly.com/feature-management/): Definition and benefits of feature management.
+- [SDKs](https://launchdarkly.com/features/sdk/): Supported client-side, server-side, mobile, and edge SDKs.
+- [Integrations](https://launchdarkly.com/integrations/): Integrations with observability, CI/CD, collaboration, and data tools.
+- [Pricing](https://launchdarkly.com/pricing/): Plans and pricing for flags, experimentation, observability, and agent control.
+- [Security and trust](https://launchdarkly.com/security/): Security program, compliance certifications, and privacy practices.
+
+## Solutions
+
+- [Release AI-built code](https://launchdarkly.com/solutions/release-ai-built-code/): Controlling AI-generated code in production with guardrails and automated rollouts.
+- [Control AI agents](https://launchdarkly.com/solutions/control-ai-agents/): AI agent governance, monitoring, and correction in production.
+- [Optimize AI performance](https://launchdarkly.com/solutions/optimize-ai-performance/): Comparing models and tuning agent cost and quality.
+- [AI observability](https://launchdarkly.com/solutions/ai-observability-platform/): Monitoring agents and models, and fixing them without redeploying.
+- [Enterprise prompt management](https://launchdarkly.com/solutions/enterprise-prompt-management-tools/): Versioning, governing, and A/B testing prompts across model providers.
+- [Run experiments](https://launchdarkly.com/solutions/run-experiments/): Experimenting on AI and product changes in production.
+- [Self-healing systems](https://launchdarkly.com/solutions/self-heal-systems/): Automatically detecting and remediating bad releases.
+- [Technology migrations](https://launchdarkly.com/use-cases/migration/): Using flags to de-risk database, cloud, and service migrations.
+- [EU AI Act governance](https://launchdarkly.com/eu-ai-act-governance/): Audit trails, approvals, and fast correction for AI Act readiness.
+
+## Industries and teams
+
+- [Financial services](https://launchdarkly.com/solutions/financial-services/): Feature management and experimentation for banking, payments, and insurance.
+- [Healthcare](https://launchdarkly.com/solutions/healthcare/): Feature management for payers, providers, and healthcare technology.
+- [Government](https://launchdarkly.com/government/): Feature management for U.S. federal, state, and local agencies.
+- [Retail and ecommerce](https://launchdarkly.com/solutions/retail-ecommerce/): Feature management and experimentation for retail brands.
+- [Media and entertainment](https://launchdarkly.com/solutions/media-entertainment/): Releases and experimentation for streaming and media companies.
+- [High tech](https://launchdarkly.com/solutions/high-tech/): Feature management for software and technology companies.
+- [Developers](https://launchdarkly.com/persona/development-teams/): Deployment velocity and reliability for development teams.
+- [DevOps and SRE](https://launchdarkly.com/persona/devops-site-reliability-engineer-teams/): Reducing production risk and automating rollback.
+- [AI engineers](https://launchdarkly.com/persona/ai-engineers/): Configuring, benchmarking, releasing, and observing agents.
+- [Product managers](https://launchdarkly.com/persona/product-managers/): Releasing, experimenting, and measuring impact.
+- [Data scientists](https://launchdarkly.com/persona/data-scientists/): Statistical methods and metric governance for experimentation.
+
+## Comparisons
+
+- [LaunchDarkly compared](https://launchdarkly.com/compare/): Index of competitor comparisons.
+- [LaunchDarkly vs. Optimizely](https://launchdarkly.com/compare/launchdarkly-vs-optimizely/)
+- [LaunchDarkly vs. Statsig](https://launchdarkly.com/compare/launchdarkly-vs-statsig/)
+- [LaunchDarkly vs. Unleash](https://launchdarkly.com/compare/launchdarkly-vs-unleash/)
+- [LaunchDarkly vs. Harness](https://launchdarkly.com/compare/launchdarkly-vs-harness/)
+- [LaunchDarkly vs. Datadog](https://launchdarkly.com/compare/launchdarkly-vs-datadog/)
+- [LaunchDarkly vs. Firebase Remote Config](https://launchdarkly.com/compare/launchdarkly-vs-firebase-remote-config/)
+- [Build vs. buy](https://launchdarkly.com/build-vs-buy/): Comparing LaunchDarkly with homegrown feature flag systems.
+
+## Customer stories
+
+- [All customer stories](https://launchdarkly.com/customer-stories/): Index of customer case studies.
+- [General Motors](https://launchdarkly.com/case-studies/general-motors/): Using feature flags to manage mobile app complexity.
+- [Hulu](https://launchdarkly.com/case-studies/hulu/): Launching a major UI update to 39 million customers.
+- [Paramount](https://launchdarkly.com/case-studies/paramount/): Improving developer productivity with feature management.
+- [Autodesk](https://launchdarkly.com/case-studies/autodesk/): Moving from 6-8 week to weekly mobile releases.
+- [Ally Financial](https://launchdarkly.com/case-studies/ally-financial/): Modernizing software delivery in financial services.
+- [HP](https://launchdarkly.com/case-studies/hp/): Standardizing and scaling releases.
+- [Gamma](https://launchdarkly.com/case-studies/gamma/): Warehouse-native experiments for AI features.
+- [Poka](https://launchdarkly.com/case-studies/poka/): Going flag-first for releases and AI innovation.
+
+## Guides and concepts
+
+- [Feature flags for beginners](https://launchdarkly.com/guides/feature-flags-for-beginners/): What feature flags are, how they help, and when to use them.
+- [Feature flags 101](https://launchdarkly.com/blog/what-are-feature-flags/): Use cases, benefits, and best practices.
+- [30 feature flagging best practices](https://launchdarkly.com/guides/30-feature-flagging-best-practices-mega-guide/): Short-term and permanent flags, release management, operational flags, and experimentation.
+- [Progressive delivery](https://launchdarkly.com/guides/progressive-delivery/): What progressive delivery is and how it differs from continuous delivery.
+- [Release management guide](https://launchdarkly.com/blog/release-management-guide/): Modern release management practices.
+- [Canary releases](https://launchdarkly.com/blog/what-is-a-canary-release/): How canary releases work.
+- [Blue-green deployments](https://launchdarkly.com/blog/blue-green-deployments-a-definition-and-introductory/): Definition and introductory guide.
+- [Dark launching](https://launchdarkly.com/blog/guide-to-dark-launching/): How to dark launch with feature flags.
+- [Kill switches](https://launchdarkly.com/blog/what-is-a-kill-switch-software-development/): What a kill switch is in software development.
+- [Feature flags vs. feature branching](https://launchdarkly.com/blog/feature-flags-vs-feature-branching/): How the two approaches differ and work together.
+- [CI vs. continuous delivery vs. continuous deployment](https://launchdarkly.com/blog/continuous-integration-vs-delivery-deployment/): Differences between the three practices.
+- [LLM evaluation](https://launchdarkly.com/blog/llm-evaluation/): Evaluating models offline and in production.
+- [LLM observability](https://launchdarkly.com/blog/llm-observability/): Monitoring and improving LLM applications.
+- [Prompt versioning and management](https://launchdarkly.com/blog/prompt-versioning-and-management/): Tracking and governing prompt changes.
+- [Prompt engineering best practices](https://launchdarkly.com/blog/prompt-engineering-best-practices/): Techniques and examples.
+- [The feature management buyer's guide](https://launchdarkly.com/guides/the-feature-management-buyers-guide/): How to evaluate feature management platforms.
+- [The Control Gap Report: AI-generated code](https://launchdarkly.com/guides/the-ai-control-gap-report/): Research on runtime control for AI-generated code.
+- [The practical guide to AI observability](https://launchdarkly.com/guides/the-practical-guide-to-ai-observability/): Why observability matters for AI systems, and where it falls short.
+- [5 KPIs for controlling agents at runtime](https://launchdarkly.com/guides/5-kpis-for-controlling-agents-at-runtime/): Metrics for agent containment and control.
+- [Forrester Total Economic Impact of LaunchDarkly](https://launchdarkly.com/guides/forrester-tei-report-2026/): Commissioned ROI study.
+
+## Optional
+
+- [Changelog](https://launchdarkly.com/changelog/): Recent product updates.
+- [Introducing AgentControl](https://launchdarkly.com/blog/introducing-agentcontrol/): AgentControl launch announcement.
+- [Sample size calculator](https://launchdarkly.com/sample-size-calculator/): Experiment sample size calculator.
+- [Feature flags for JavaScript](https://launchdarkly.com/feature-flags-javascript/)
+- [Feature flags for Python](https://launchdarkly.com/feature-flags-python/)
+- [Feature flags for React](https://launchdarkly.com/feature-flags-react/)
+- [Feature flags for Node.js](https://launchdarkly.com/feature-flags-node-js/)
+- [Feature flags for Ruby](https://launchdarkly.com/feature-flags-ruby/)
+- [Service level agreement](https://launchdarkly.com/policies/service-level-agreement/)
+- [Support terms](https://launchdarkly.com/policies/support-policy/)
+- [SDK end-of-life policy](https://launchdarkly.com/policies/end-of-life-policy/)
+- [Subprocessors](https://launchdarkly.com/policies/subprocessors/)
+- [Privacy policy](https://launchdarkly.com/policies/privacy/)
+- [About LaunchDarkly](https://launchdarkly.com/about-us/)

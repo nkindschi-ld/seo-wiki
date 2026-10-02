@@ -1070,3 +1070,30 @@ enumeration with no call-frequency data, not a measured study.
 
 ## 2026-08-24 — Siteimprove publishes "Does Open Graph Matter for AI Search Visibility?" (Stephen Jeske; argues no direct effect, no data)
 [[siteimprove-open-graph-ai-search-visibility-2026]] · [[open-graph-protocol]]
+
+## 2024-09-03 — Jeremy Howard (Answer.AI) proposes `/llms.txt`, a curated Markdown map of a site for LLMs, plus `.md` versions of pages
+[[llmstxt-org-proposal-v2-2026]] · [[llms-txt]]
+
+## 2025-07 — Google's Gary Illyes says Google doesn't support `llms.txt` and isn't planning to; John Mueller likens it to the keywords meta tag (reported secondhand)
+[[limy-llms-txt-2026-full-guide]] · [[llms-txt]] · [[meta-keywords-tag]]
+
+## 2026-05-12 — Limy publishes "LLMs.txt in 2026: The Full Guide" (Yahel Oren): 408 `/llms.txt` requests out of ~515M AI-bot events in ~90 days; reframes the file as business-to-agent infrastructure
+[[limy-llms-txt-2026-full-guide]] · [[llms-txt]]
+
+## 2026-06-06 — Crawloria publishes "llms.txt Best Practices: 2026 Practical Guide" (Max Tsygankov; vendor, no original data)
+[[crawloria-llms-txt-best-practices-2026]] · [[llms-txt]]
+
+## 2026-08 — `llms.txt` v2 published: subpath coverage defined (most-specific file wins), `page.md` allowed, `rel="alternate"`/`rel="describedby"` discovery links added, context-expansion tooling and `## Optional`'s mechanical meaning removed
+[[llmstxt-org-proposal-v2-2026]] · updated [[llms-txt]]; supersedes [[limy-llms-txt-2026-full-guide]]'s `## Optional` claim
+
+## 2026-09-03 — Profound / Growth Unhinged publish "What AI agents really think about your pricing": owned pricing pages first-cited in only 12% of ~7,600 AI pricing answers (Cloud 100, 6 engines, data from 2026-07-29 to 08-10); Vendr, Reddit and G2 dominate
+[[tryprofound-ai-pricing-visibility-2026]] · updated [[ai-citation-landscape]], [[ai-shortlist-effect]]; new [[ai-pricing-visibility-audit]]
+
+## 2026-08-17 — Profound publishes "Where do inaccurate AI claims come from?" (FactCheck, 158K+ claims, Apr–Aug 2026): pricing & billing is 12% of claims but 24% of errors; engine inaccuracy ranges from 4.3% (ChatGPT, Perplexity) to 6.8% (Copilot)
+[[tryprofound-where-inaccurate-ai-claims-come-from]] · updated [[ai-citation-landscape]], [[ai-overview-grounding-and-fidelity]], [[ai-pricing-visibility-audit]]
+
+## 2026-07-30 — Profound publishes "Where do AI citations come from?" (11.84B citations, 8 engines, Apr 16–Jul 16, 2026): about 57% of citations go to company sites, but the category owner's own site is only 2–6%; earned share ranges from 59% (pharma) to about 11% (software, marketing) by industry
+[[tryprofound-where-ai-citations-come-from]] · updated [[ai-citation-landscape]] (new conflict with [[muckrack-generative-pulse-ai-reading-may-2026]]), [[geo-content-optimization-tactics]]
+
+## 2026-02-20 — Punturo publishes "Does Markdown Increase LLM Bot Traffic?", a randomized test of serving Markdown to LLM bots (380 pages, 6 sites, Jan 19–Feb 8, 2026): no significant crawl lift (CUPED +13.9%, CI −11% to +47%)
+[[punturo-markdown-llm-bot-traffic-rct-2026]] · updated [[llms-txt]], [[technical-seo-audit-checklist]]
