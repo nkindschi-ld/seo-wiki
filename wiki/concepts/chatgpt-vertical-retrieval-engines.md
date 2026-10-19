@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-09-17
+updated: 2026-10-14
 ---
 
 # ChatGPT's Vertical Retrieval Engines
@@ -190,6 +190,14 @@ stages later. Don't infer value from the existence of a path.
   `aixiv` and the `literature_search_query` rewriter. Possibly an AI-paper index
   or a typo preserved in config.
 - **`labrador-images-nocache`** — a cache-bypassing image path; trigger unknown.
+- **Is the SerpAPI path exposed to SERP poisoning?** Since 2026-09-13 Google
+  has been serving some scraped requests complete-looking SERPs with most
+  results swapped, often toward Reddit, Facebook and LinkedIn
+  ([[serp-poisoning]], [[nozzle-poisoned-google-serps-2026]]). Nozzle frames
+  this as a response to AI scraping and grounding. If `serpapi_auto_*`
+  requests are affected, Google-sourced candidates reaching ChatGPT's
+  reranker would be partly fake. **Hypothesis only — not tested by any
+  source.**
 - **Call frequency by engine is unknown.** A commenter asked this directly and
   it is unanswered. The registry is a *capability list*, not a distribution.
 
@@ -225,3 +233,5 @@ retrieval; low value as evidence of *how much* any single path matters.
   check 0 (routing), which precedes all six content-side checks.
 - [[pdf-seo-optimization]] — the dedicated `web-pdf` retrieval path.
 - [[generative-engine-optimization]] — umbrella concept.
+- [[serp-poisoning]] — Google's poisoning of scraped SERPs, which may reach
+  the SerpAPI path.

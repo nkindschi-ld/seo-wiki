@@ -1109,3 +1109,12 @@ enumeration with no call-frequency data, not a measured study.
 
 ## 2026-09-02 — Lumar publishes "Authority in GEO: It's A Filter, Not a Score" (GEO series part 5): query-class authority enforcement, from a hard gate for YMYL to minimal for opinion
 [[lumar-authority-filter-not-score]] · new [[authority-in-generative-search]]; updated [[geo-diagnostic-checklist]], [[e-e-a-t-and-page-quality]]
+
+## 2026-09-13 — Requests from rank trackers to Google start failing in bulk; SERP collection volume drops for two weeks
+[[nozzle-poisoned-google-serps-2026]] · new [[serp-poisoning]]
+
+## 2026-09-20 — Google begins serving poisoned SERPs (complete-looking pages with most usual sites swapped) to scraped requests; peaks at 25–27% of SERPs Sep 27–29, then about 5–11% a day from Oct 1
+[[nozzle-poisoned-google-serps-2026]] · new [[serp-poisoning]]; updated [[google-algorithm-update-history]], [[seo-reporting]]
+
+## 2026-10-10 — Nozzle Research publishes "Poisoned Google SERPs" (27.5M SERPs, 49 countries, data Aug 20–Oct 9, 2026): 8.0% of SERPs poisoned since Sep 13 vs 0.17% baseline; tracked sites miss the top 10 on 58.6% of them
+[[nozzle-poisoned-google-serps-2026]] · new [[serp-poisoning]]; updated [[ai-visibility-measurement-methodology]], [[chatgpt-vertical-retrieval-engines]]

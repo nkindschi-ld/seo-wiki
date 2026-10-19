@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo]
-updated: 2026-09-04
+updated: 2026-10-14
 ---
 
 # Google Algorithm Update History
@@ -60,6 +60,13 @@ claim.
   ranking systems, consistent with [[e-e-a-t-and-page-quality]]'s
   framing of "helpful, people-first content" as an ongoing quality
   standard rather than a one-time update to react to.
+- **Not all tracked volatility is an update.** Since 2026-09-13, Google
+  has been serving some rank-tracker requests poisoned SERPs (swapped
+  results on a normal-looking page), peaking at 25–27% of SERPs on
+  Sep 27–29 per [[nozzle-poisoned-google-serps-2026]]. That's a data
+  collection problem, not a ranking change, and it isn't on the Search
+  Status Dashboard. Third-party volatility indexes built on scraped SERPs
+  from that period will overstate volatility. See [[serp-poisoning]].
 - Check `wiki/timeline.md` directly for the full dated list, and
   re-ingest this source periodically since it's a live page that grows
   over time.
@@ -70,6 +77,8 @@ claim.
   are presumably built on.
 - `wiki/timeline.md` — the full chronological event list this concept
   synthesizes.
+- [[serp-poisoning]] — fake volatility from scraped-SERP poisoning, to
+  tell apart from real updates.
 - [[classic-seo-ranking-factors]] — the tactic-level playbook these
   updates repeatedly rewarded or penalized; useful for reading any
   given update against what it actually changed in practice.

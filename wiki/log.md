@@ -3167,3 +3167,18 @@ spec query. Treat the "hard preference" row as engine-dependent (strongest on
 ChatGPT). Recorded in [[authority-in-generative-search]] Conflicting Evidence.
 Found while filing, after the ingest discussion, so it's surfaced in the
 wrap-up summary.
+
+## [2026-10-14] ingest | Nozzle Research — "Poisoned Google SERPs"
+
+[[nozzle-poisoned-google-serps-2026]] (raw/studies/nozzle-poisoned-google-serps-2026.md).
+27.5M SERPs, 49 countries: since 2026-09-13 Google has served some
+rank-tracker requests complete-looking SERPs with most usual sites swapped
+(8.0% vs 0.17% baseline; peak 25–27% Sep 27–29). New concept
+[[serp-poisoning]]. Added a "before reporting a ranking drop" check to
+[[seo-reporting]], a scraped-AIO-data caveat to
+[[ai-visibility-measurement-methodology]], a SerpAPI-exposure open question
+to [[chatgpt-vertical-retrieval-engines]] (hypothesis, untested), and a
+"volatility that isn't an update" note to [[google-algorithm-update-history]].
+No conflicts: no existing source uses scraped Google data from after
+Sep 13. Added an ingest rule to flag future studies that do. Screenshots
+not downloaded (user's choice).
