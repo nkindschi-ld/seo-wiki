@@ -3073,3 +3073,97 @@ Batch complete. The four sources this session were
 [[tryprofound-ai-pricing-visibility-2026]],
 [[tryprofound-where-inaccurate-ai-claims-come-from]],
 [[tryprofound-where-ai-citations-come-from]] and this one.
+
+## [2026-10-05] ingest | Candidate Page Selection: The Stage SEO Tools Don't Measure (Lumar)
+
+Source 1 of 4, a batch of Lumar GEO series parts 2–5, each a deep-dive on one
+check from [[lumar-geo-diagnostic-checklist]]. The HTML was fetched with
+curl, and the article body was taken from `.entry-content` and saved to
+`raw/articles/lumar-candidate-page-selection.md`. Source page:
+[[lumar-candidate-page-selection]] (2026-08-12). It's a vendor framework
+with no data. The series builds toward Lumar's GEO-analytics pitch, so read
+"SEO tools can't measure this" with that in mind.
+
+Updated [[ai-search-reranking-pipeline]] with a new "Candidate page
+selection" section (page-level gate inside the retrieval stage, plus the
+diagnostic bullet) and check 1 of [[geo-diagnostic-checklist]] (lexical
+alignment of title and H1, query-dependent freshness, the precision and
+specialist-source example).
+
+## [2026-10-05] ingest | Semantic Relevance Isn't One Metric — It Has Three Jobs (Lumar)
+
+Source 2 of 4. Source page: [[lumar-semantic-relevance-three-jobs]]
+(2026-08-21). The three-jobs table (page aboutness → passage answer match →
+citation-safe self-containment) went onto [[ai-search-reranking-pipeline]],
+where it sharpens the existing "don't trust one relevance score" advice from
+[[peec-ai-rerankers-geo-aeo-2026]]. It also supports the multi-topic conflict
+below.
+
+## [2026-10-05] ingest | Chunkability: Why Some Content Gets Cited, and Most Doesn't (Lumar)
+
+Source 3 of 4. Source page: [[lumar-chunkability]] (2026-08-24). New concept
+page [[chunkability]] brings together the four pillars and the chunk-level
+guidance that was spread across [[geo-content-optimization-tactics]] (Fraggle
+section, now cross-linked), [[ai-search-reranking-pipeline]] and checks 3–4
+of [[geo-diagnostic-checklist]] (now listing the low-chunkability patterns).
+The live page has a stray duplicated fragment ("to work independently.");
+it's kept verbatim in raw.
+
+No conflict logged. Google's "no requirement to break your content into tiny
+pieces" ([[google-ai-optimization-guide]]) rejects fragmentation, and Lumar
+rejects it too. Recorded on [[chunkability]] as a reconciled apparent
+contradiction, pointing to the unreconciled page-focus question below.
+
+## [2026-10-05] ingest | Authority in GEO: It's A Filter, Not a Score (Lumar)
+
+Source 4 of 4. Source page: [[lumar-authority-filter-not-score]]
+(2026-09-02). New concept page [[authority-in-generative-search]] with the
+query-class table and Lumar's self-rated signal confidence, each checked
+against wiki evidence:
+
+- `site:` gating to `.gov` and brand domains
+  ([[lilyray-chatgpt-fanout-queries-2026]])
+- the author-schema null result
+  ([[otterly-ai-keyword-research-2026]])
+- near-zero engagement correlation and the named-author dominance
+  ([[otterly-linkedin-ai-citations-study-2026]])
+- YMYL fidelity, with the Autos caveat ([[ai-citation-landscape]])
+
+Check 5 of [[geo-diagnostic-checklist]] gained the table and a "choose where
+to compete" step. Cross-links were added from
+[[generative-engine-optimization]] and [[e-e-a-t-and-page-quality]], and a
+series-context note was added to [[lumar-geo-diagnostic-checklist]].
+
+Treated as a nuance, not logged as a conflict: Lumar's "brand popularity
+says little" vs. Ahrefs' strong correlation between branded mentions and AI
+*mentions* ([[ai-visibility-correlation-factors]]). They measure different
+outcomes.
+
+Batch complete. Four sources: [[lumar-candidate-page-selection]],
+[[lumar-semantic-relevance-three-jobs]], [[lumar-chunkability]] and
+[[lumar-authority-filter-not-score]].
+
+## [2026-10-05] conflict | Candidate selection — "multi-topic pages are weaker candidates" (Lumar) vs. "Google handles multiple topics on a page" (Google)
+
+[[lumar-candidate-page-selection]] and [[lumar-semantic-relevance-three-jobs]]
+(vendor, no data) vs. [[google-ai-optimization-guide]] (official, 2026-06).
+There's partial support for focus from [[airops-fan-out-effect-2026]]
+(26–50% subtopic coverage beats 100%), but that measures breadth within one
+topic. Best guess: unresolved. Google's claim is about extracting from a
+multi-topic page, not candidate selection, and it covers Google's own
+systems. Leaning: keep one primary topic per page, but don't split working
+pages purely for Google AI surfaces. Recorded in [[ai-search-reranking-pipeline]]
+Conflicting Evidence and surfaced to the user during ingest.
+
+## [2026-10-05] conflict | Authority — "official sources dominate spec/first-party queries" (Lumar) vs. owned pricing pages first-cited in only 12% (Profound)
+
+[[lumar-authority-filter-not-score]] (no data) and ChatGPT `site:` targeting
+of brand domains ([[lilyray-chatgpt-fanout-queries-2026]]) vs.
+[[tryprofound-ai-pricing-visibility-2026]] (~7,600 responses, 6 engines:
+owned pages present in 46%, first in 12%, while Vendr, Reddit and G2
+dominate; ChatGPT 38% owned-first). Best guess: unresolved, leaning
+query-class nuance. Pricing invites user-reported sources and isn't a pure
+spec query. Treat the "hard preference" row as engine-dependent (strongest on
+ChatGPT). Recorded in [[authority-in-generative-search]] Conflicting Evidence.
+Found while filing, after the ingest discussion, so it's surfaced in the
+wrap-up summary.

@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-09-04
+updated: 2026-10-05
 ---
 
 # E-E-A-T and Page Quality
@@ -120,6 +120,10 @@ All three trigger an automatic **Lowest** rating:
 
 ## See also
 
+- [[authority-in-generative-search]] — how YMYL-scaled trust shows up in AI
+  search: authority as a query-dependent filter (a hard gate for YMYL),
+  source provenance as the strongest signal, and E-E-A-T as a way of thinking
+  rather than a formula.
 - [[how-google-search-works]] — the technical crawl/index/serve pipeline
   a page must pass through before Page Quality/E-E-A-T assessment is even
   relevant; a page that isn't crawled or indexed never gets rated at all.

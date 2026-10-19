@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-09-17
+updated: 2026-10-05
 ---
 
 # GEO Diagnostic Checklist
@@ -45,11 +45,26 @@ measured ranking factor.)*
 - [ ] Can you describe the page's primary topic in one sentence?
 - [ ] Does the title reflect the topic and match query intent?
 - [ ] Does the page stay focused, or does it drift into loosely related
-      subjects?
+      subjects? *(Disputed for Google surfaces, see below.)*
+- [ ] Do the title, H1 and headings contain the query's key terms, exactly
+      or nearly? Lexical matching still feeds candidate selection
+      ([[lumar-candidate-page-selection]]).
+- [ ] Does freshness matter for this query class? News and product updates
+      favor recent sources, while evergreen topics tolerate age.
+- [ ] Is this a query where precision favors a specialist or official
+      source? ("How oil changes work" vs. "Honda Civic oil drain torque.")
+      If so, see check 5 before investing.
 
 Meeting basic indexing/snippet eligibility (see
 [[how-google-search-works]]) doesn't guarantee generative AI inclusion
 on its own — it's necessary but not sufficient.
+
+Candidate selection is a page-level gate *before* passages are scored. Rank
+tracking can't see it, since a page can rank and never enter the pool. See
+the candidate-selection section of [[ai-search-reranking-pipeline]]. Whether
+multi-topic pages are really weaker candidates is an open conflict: Google
+says its systems handle several topics on a page. See that page's
+Conflicting Evidence section.
 
 ## 2. Clear aboutness signals
 
@@ -75,6 +90,19 @@ not whole pages — see the chunk-level ("Fraggle") optimization section
 of [[geo-content-optimization-tactics]] for the retrieval mechanics
 this check is diagnosing against.
 
+Checks 3–4 together cover the four pillars of [[chunkability]]: topical
+cohesion and boundary clarity (check 3), answer density and self-contained
+meaning (check 4). Patterns to look for:
+
+- [ ] A long introduction delays the answer.
+- [ ] Several FAQ questions or topics are grouped into one section.
+- [ ] Steps or instructions are split across several headings.
+- [ ] A table depends on explanation elsewhere on the page.
+
+Fix with targeted edits, not rewrites: split multi-topic sections, move key
+facts into the passage that needs them, and build each section around one
+question.
+
 ## 4. Standalone passage context
 
 - [ ] Can individual passages be understood independently, out of
@@ -84,6 +112,8 @@ this check is diagnosing against.
 - [ ] Do passages include the entities, units, and constraints needed
       to stand alone (not just "it costs $50" but "the Model X costs
       $50/month")?
+- [ ] Are there "as mentioned above" or "see the previous section" cross
+      references that a lifted passage would lose?
 
 ## 5. Authority constraints
 
@@ -97,6 +127,31 @@ Authority acts as **a filter, not a score** — its influence varies by
 query type rather than uniformly boosting every page. This matches
 [[generative-engine-optimization]]'s "authority as retrieval-eligibility
 gate, not citation-stage ranking factor" framing.
+
+Classify the query first ([[authority-in-generative-search]], from
+[[lumar-authority-filter-not-score]]; Lumar's "observed behavior," with no
+data):
+
+| Query type | Authority role |
+|---|---|
+| Medical / legal / mechanical (YMYL) | Hard gate: non-authoritative pages often excluded |
+| Technical specs (manufacturer topics) | Hard preference: official sources dominate *(disputed for pricing queries)* |
+| General educational | Strong filter: boosts but doesn't exclude |
+| Exploratory / lifestyle | Soft filter: relevance dominates |
+| Opinion / creative | Minimal |
+
+- [ ] **Choose where to compete.** If the query is a hard-gate head term
+      already well served by official or institutional sources, structure
+      and relevance work probably won't get you past the filter. Redirect
+      the effort to niche or operational queries where authoritative
+      coverage has a gap, where precision and chunkability decide the
+      outcome.
+- [ ] For your own product's docs and spec queries, is the official page
+      the clearest, most self-contained answer? First-party provenance is
+      the strongest authority signal, so don't waste it on a weak passage.
+- [ ] Don't spend on low-confidence signals first: author/`reviewedBy`
+      schema and engagement metrics are rated low by Lumar and have null
+      results elsewhere in the wiki.
 
 ## 6. Problem-solution alignment
 
@@ -133,3 +188,11 @@ failure mode rather than assuming a single fix cascades to fix all six.
   engine-selection layer that precedes every content-side check here.
 - [[ai-search-reranking-pipeline]] — the five-stage model these checks map onto;
   its failure-stage diagnostic is the concept-level version of this playbook.
+- [[chunkability]] — the concept behind checks 3–4: the four pillars and
+  low-chunkability patterns.
+- [[authority-in-generative-search]] — the concept behind check 5: the
+  query-class table, signal confidence and authority-gap strategy.
+- Lumar GEO series deep-dives behind checks 1–5:
+  [[lumar-candidate-page-selection]],
+  [[lumar-semantic-relevance-three-jobs]], [[lumar-chunkability]],
+  [[lumar-authority-filter-not-score]].

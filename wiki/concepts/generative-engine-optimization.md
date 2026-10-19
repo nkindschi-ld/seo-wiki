@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-09-17
+updated: 2026-10-05
 ---
 
 # Generative Engine Optimization (GEO / AEO)
@@ -432,6 +432,13 @@ gated on sites having sufficient AI-feature impressions.
   aboutness, chunkability, standalone context, authority, problem-fix
   alignment) before applying the tactics in
   [[geo-content-optimization-tactics]].
+- [[chunkability]] — the passage-level "can this chunk stand alone?"
+  property behind citation-stage visibility, and how it fits with Google's
+  "no need to chunk" guidance.
+- [[authority-in-generative-search]] — the "authority as a filter, not a
+  score" model, enforced by query class (hard gate for YMYL, minimal for
+  opinion). This is the detailed version of the retrieval-eligibility-gate
+  framing above.
 - [[ai-traffic-scale-vs-hype]] — a scale check on this whole domain: as
   of early-2026 clickstream data, standalone AI tools remain a tiny
   fraction of overall search/social traffic, so the tactics in this

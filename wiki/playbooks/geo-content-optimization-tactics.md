@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-10-02
+updated: 2026-10-05
 ---
 
 
@@ -287,7 +287,10 @@ Overviews' RAG pipeline retrieves and cites specific text chunks
   Identify which specific paragraph or section is likely to be
   retrieved for a target query, and make *that* chunk clear, complete,
   and self-contained — a great page with one weak target section can
-  still fail to get cited.
+  still fail to get cited. **The full rubric now lives on [[chunkability]]**
+  (2026-10-05, from [[lumar-chunkability]]): topical cohesion, boundary
+  clarity, answer density and self-contained meaning, plus the common
+  low-chunkability patterns and targeted fixes.
 - **Score chunk relevance before publishing**, using tools like
   MarketBrew's AI Overviews Visualizer, Orbitwise, SurferSEO, or
   MarketMuse. Target 80%+ similarity to currently-surfaced

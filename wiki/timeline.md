@@ -1097,3 +1097,15 @@ enumeration with no call-frequency data, not a measured study.
 
 ## 2026-02-20 — Punturo publishes "Does Markdown Increase LLM Bot Traffic?", a randomized test of serving Markdown to LLM bots (380 pages, 6 sites, Jan 19–Feb 8, 2026): no significant crawl lift (CUPED +13.9%, CI −11% to +47%)
 [[punturo-markdown-llm-bot-traffic-rct-2026]] · updated [[llms-txt]], [[technical-seo-audit-checklist]]
+
+## 2026-08-12 — Lumar publishes "Candidate Page Selection" (GEO series part 2): page-level candidate selection framed as an eligibility gate before passage scoring, which rank tracking can't see
+[[lumar-candidate-page-selection]] · updated [[ai-search-reranking-pipeline]], [[geo-diagnostic-checklist]]
+
+## 2026-08-21 — Lumar publishes "Semantic Relevance Isn't One Metric — It Has Three Jobs" (GEO series part 3): page aboutness → passage answer match → citation-safe self-containment
+[[lumar-semantic-relevance-three-jobs]] · updated [[ai-search-reranking-pipeline]]
+
+## 2026-08-24 — Lumar publishes "Chunkability" (GEO series part 4): four pillars of passage self-sufficiency (topical cohesion, boundary clarity, answer density, self-contained meaning)
+[[lumar-chunkability]] · new [[chunkability]]; updated [[geo-diagnostic-checklist]], [[geo-content-optimization-tactics]]
+
+## 2026-09-02 — Lumar publishes "Authority in GEO: It's A Filter, Not a Score" (GEO series part 5): query-class authority enforcement, from a hard gate for YMYL to minimal for opinion
+[[lumar-authority-filter-not-score]] · new [[authority-in-generative-search]]; updated [[geo-diagnostic-checklist]], [[e-e-a-t-and-page-quality]]
