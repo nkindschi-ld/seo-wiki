@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-07-22
+updated: 2026-10-19
 ---
 
 # AI Coding Agent Tool Selection
@@ -204,3 +204,6 @@ vendor-facing tactics.
   how a repo owner instructs the agent's *behavior* inside their own
   repo (commands, boundaries, style), rather than which third-party
   tool/library the agent picks.
+- [[github-repository-seo]]: the human-search side of devtool
+  discovery (GitHub search, topic pages, Google). Repo code and examples
+  also feed the training data behind agent picks.

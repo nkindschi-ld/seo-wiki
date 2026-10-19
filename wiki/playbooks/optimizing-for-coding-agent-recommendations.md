@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [aeo]
-updated: 2026-07-22
+updated: 2026-10-19
 ---
 
 # Optimizing for Coding Agent Recommendations
@@ -186,3 +186,7 @@ good/bad tradeoffs and build patterns.
 - [[writing-effective-agents-md-files]] — the sibling playbook for
   instructing an agent's behavior inside your own repo, rather than
   getting your product chosen by an agent working in someone else's.
+- [[github-repo-optimization-checklist]]: making the product's public
+  repo findable by developers in GitHub search, on topic pages and in
+  Google. It complements point 2 (training-data presence) and point 3
+  (a scriptable quickstart).

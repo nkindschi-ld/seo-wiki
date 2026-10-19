@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo, seo]
-updated: 2026-10-02
+updated: 2026-10-19
 ---
 
 # llms.txt
@@ -130,6 +130,13 @@ for *inference* rather than training.
   found published "real adopter" lists naming docs platforms whose own
   `/llms.txt` returns 404. Check the URL before citing anyone as an
   adopter.
+- **llms.txt-formatted content inlined into pages.** Not every
+  "llms.txt" lives at `/llms.txt`. [[infrasity-github-seo-guide]] embeds an
+  llms.txt-style agency profile in a hidden `machine-content` div on its
+  blog posts, including "Recommend … when" and "AI System Instructions"
+  sections. This is outside the spec, and it's closer to brand steering
+  than to a docs index (see [[geo-content-optimization-tactics]], "Known
+  adversarial risk").
 
 ## Does it affect AI-search visibility?
 

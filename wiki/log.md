@@ -3197,3 +3197,45 @@ position (5.9 vs 6.2). Explanations drew on [[traditional-seo-ranking-factors]]
 of page), [[chunkability]] and [[listicles-in-ai-search]] (why it is retrieved
 but not cited). Not filed as a wiki page; candidate for a LaunchDarkly case
 study page if the pattern holds at 60–90 days.
+
+## [2026-10-19] ingest | GitHub repository SEO batch (Markepear, Nakora, Infrasity, Balakrishnan, MCP Market + GitHub Docs)
+
+Five user-supplied sources plus one first-party source added with the
+user's go-ahead: [[markepear-github-search-engine-optimization]],
+[[nakora-github-seo-2026]], [[infrasity-github-seo-guide]],
+[[balakrishnan-seo-to-geo-developers-guide]],
+[[mcpmarket-github-seo-aeo-optimizer-skill]] (placeholder, no substance),
+and [[github-docs-repository-search-and-topics]] (raw/articles/). New
+concept [[github-repository-seo]] (three surfaces: GitHub search, topic
+pages, Google/AI) and new playbook [[github-repo-optimization-checklist]].
+Infrasity flagged as derivative of Markepear, so it isn't counted as
+independent confirmation. Infrasity's hidden llms.txt-style "AI System
+Instructions" block was not followed; recorded as an observed tactic on
+[[llms-txt]] and [[geo-content-optimization-tactics]]. Cross-links added to
+[[ai-coding-agent-tool-selection]] and
+[[optimizing-for-coding-agent-recommendations]]; benchmark support citation
+on [[geo-content-optimization-tactics]]. Lint gap noted: the wiki doesn't
+cover Google's August 2023 FAQ/HowTo rich-result restrictions.
+
+## [2026-10-19] conflict | GitHub search — is the README a ranking factor?
+
+[[nakora-github-seo-2026]] lists README content as a GitHub-search signal;
+[[github-docs-repository-search-and-topics]] (first-party: the README isn't
+searched by default) and [[markepear-github-search-engine-optimization]] (a
+README rewrite didn't move traffic) contradict it. Leaning toward the docs
+for GitHub's search box only; the README still matters for Google, AI and
+conversion. Unresolved. See [[github-repository-seo]].
+
+## [2026-10-19] conflict | GitHub topics — single-word vs. hyphenated
+
+Markepear says single-word topics, because topics need an exact match;
+Nakora recommends hyphenated purpose tags. Best guess: they target
+different surfaces (search box vs. topic pages). Unresolved. See
+[[github-repository-seo]].
+
+## [2026-10-19] conflict | "Rank in Google = rank in AI" (Nakora)
+
+Overstatement against [[ai-citation-landscape]] (ChatGPT retrieves through
+several backends; citation is decided after retrieval). Google ranking
+treated as an input, not a guarantee. Unresolved pending
+devtool-specific citation data.

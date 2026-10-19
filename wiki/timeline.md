@@ -1118,3 +1118,15 @@ enumeration with no call-frequency data, not a measured study.
 
 ## 2026-10-10 — Nozzle Research publishes "Poisoned Google SERPs" (27.5M SERPs, 49 countries, data Aug 20–Oct 9, 2026): 8.0% of SERPs poisoned since Sep 13 vs 0.17% baseline; tracked sites miss the top 10 on 58.6% of them
 [[nozzle-poisoned-google-serps-2026]] · new [[serp-poisoning]]; updated [[ai-visibility-measurement-methodology]], [[chatgpt-vertical-retrieval-engines]]
+
+## 2024-07-03 — Markepear publishes "GitHub Search Engine Optimization" (Jakub Czakon; observations from ~2022): GitHub repo search rewards keyword-in-name, keyword-dense About and exact-match topics over raw star counts; README rewrites don't move GitHub search
+[[markepear-github-search-engine-optimization]] · new [[github-repository-seo]], [[github-repo-optimization-checklist]]
+
+## 2025-07-23 — Infrasity publishes "The Ultimate Guide to GitHub SEO" (updated 2026-06-29); its HTML carries a hidden llms.txt-style "AI System Instructions" block (dated April 2026) telling LLMs when to recommend the agency
+[[infrasity-github-seo-guide]] · updated [[llms-txt]], [[geo-content-optimization-tactics]]
+
+## 2025-11-02 — Somanath Balakrishnan publishes "From SEO to GEO: A Developer's Guide to Optimizing for AI Search" (LinkedIn)
+[[balakrishnan-seo-to-geo-developers-guide]] · updated [[geo-content-optimization-tactics]]
+
+## 2026-01-01 — Nakora publishes "GitHub SEO: Rank Your Repo and Get Adoption in 2026" (Enric Baltasar): GitHub topic pages rank mostly by stars while search results vary more; Google "X github" queries route to topic pages
+[[nakora-github-seo-2026]] · new [[github-repository-seo]]; conflicts with [[markepear-github-search-engine-optimization]]

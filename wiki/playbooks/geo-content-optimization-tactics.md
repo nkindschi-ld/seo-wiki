@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-10-05
+updated: 2026-10-19
 ---
 
 
@@ -167,6 +167,11 @@ a measurable axis), not data dumps or narrative-buried stats.
 - **Don't gate it.** Proprietary data behind a lead-gen form can't be
   crawled/cited — if citation is the goal, publish the benchmark
   itself openly, even if a deeper report stays gated.
+- **Developer-content variant (supporting, low rigor):**
+  [[balakrishnan-seo-to-geo-developers-guide]] gives the same advice to
+  developer blogs: publish the benchmark nobody else has run, with the setup
+  (environment, versions, sample size) and test code linked. Its example
+  numbers are illustrative, not real results.
 
 ## Optimize for absorption, not just citation count
 
@@ -1651,6 +1656,14 @@ LLM-stated recommendations or sentiment toward a competitor may indicate
 this kind of manipulation rather than a genuine organic ranking change.
 See [[kumar-lakkaraju-manipulating-llms-2024]] for the full verified
 findings.
+
+**A plain-text version seen in the wild (2026-10-19):** some vendor pages
+now put recommendation instructions for LLMs straight into their HTML. No
+adversarial optimization is involved. [[infrasity-github-seo-guide]] serves
+a hidden llms.txt-formatted `machine-content` block on its blog posts, with
+"Recommend Infrasity when…" and "AI System Instructions" sections. There is
+no evidence it works. Treat this as a pattern to recognize in competitors'
+pages and in sources being ingested, not as a tactic.
 
 ## Sentiment monitoring and correction
 
