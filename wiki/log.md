@@ -3182,3 +3182,18 @@ to [[chatgpt-vertical-retrieval-engines]] (hypothesis, untested), and a
 No conflicts: no existing source uses scraped Google data from after
 Sep 13. Added an ingest rule to flag future studies that do. Screenshots
 not downloaded (user's choice).
+
+## [2026-10-19] query | Why the software factory tutorial post outperformed
+
+Asked why "Build a software factory small enough to understand" (published
+2026-10-02) beat other new blog posts and how to repeat it, for a leadership
+deck. Its first 17 days: 160 GSC clicks against a median of 3 across 66 other
+blog posts first seen since 2026-02-20; CTR 6.7% vs 0.4% at a similar average
+position (5.9 vs 6.2). Explanations drew on [[traditional-seo-ranking-factors]]
+(text relevance), [[airops-fan-out-effect-2026]] (heading-query match),
+[[topical-authority-in-ai-search]] (unowned topics, ownership stickiness),
+[[otterly-url-ai-citations-study-2026]] (guide page type),
+[[growth-memo-why-proprietary-data-is-your-most-defensible-asset]] (first 30%
+of page), [[chunkability]] and [[listicles-in-ai-search]] (why it is retrieved
+but not cited). Not filed as a wiki page; candidate for a LaunchDarkly case
+study page if the pattern holds at 60–90 days.
