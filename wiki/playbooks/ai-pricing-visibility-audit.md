@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [aeo, seo]
-updated: 2026-10-02
+updated: 2026-11-04
 ---
 
 # AI Pricing Visibility Audit
@@ -164,6 +164,28 @@ other, not one page:
     agent clients (see [[evilmartians-which-ai-reads-your-site-2026]]).
     Do it for docs-heavy pricing and billing pages, but don't expect it
     to fix citation position.
+11. **Treat pricing schema as a consistency layer, not a fix.** Mark up
+    plans as `Offer`s that mirror the visible prices exactly, generated
+    from the same pricing source. Don't expect markup to carry a price
+    that isn't visible: in two small layer tests, a price present only
+    in JSON-LD was returned by 0 of 5 AI systems and in 0 of 9 runs, and
+    when markup and visible text disagreed, answers used the visible
+    price ([[coreaex-saas-pricing-schema-2026]]). Type choice and the
+    enterprise / no-rating rules are in [[saas-pricing-page-checklist]];
+    the evidence is in [[structured-data-and-ai-search]].
+
+**When an answer gets a price wrong, diagnose before you fix.** Don't
+start by adding schema. Find the first layer where the current fact
+stops being available ([[coreaex-saas-pricing-schema-2026]]):
+
+- absent from the page;
+- present but inaccessible (JS, tabs, robots, iframes: step 3);
+- contradicted elsewhere on your own site;
+- stale in a cache or index;
+- ambiguous between plans, currencies or units;
+- transformed in the answer itself.
+
+More than one can be true at once.
 
 ## Quick-reference checklist
 
@@ -190,6 +212,11 @@ other, not one page:
 - [ ] Visible update dates; upcoming price changes shown in advance
 - [ ] (Optional, unproven) llms.txt / Markdown versions / copy-for-LLM
       control on pricing and billing docs
+- [ ] Pricing schema (if used) mirrors visible prices exactly, from one
+      source; no fact lives only in markup; no placeholder 0 on custom
+      tiers
+- [ ] Each wrong answer diagnosed by layer (absent / inaccessible /
+      contradicted / stale / ambiguous / transformed) before fixing
 
 ## Limits of the evidence
 
@@ -206,6 +233,11 @@ other, not one page:
 
 ## Related
 
+- [[saas-pricing-page-checklist]] — the on-page half: layout, query
+  targeting, unit/overage copy, crawlability and the schema model for
+  `/pricing` itself.
+- [[structured-data-and-ai-search]] — what schema does and doesn't do
+  for AI answers.
 - [[ai-shortlist-effect]] — why pricing accuracy changes purchase
   decisions, not just visibility.
 - [[ai-citation-landscape]] — pricing-page citation rates, review

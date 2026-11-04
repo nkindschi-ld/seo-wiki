@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo, seo]
-updated: 2026-10-19
+updated: 2026-11-04
 ---
 
 # llms.txt
@@ -137,6 +137,10 @@ for *inference* rather than training.
   sections. This is outside the spec, and it's closer to brand steering
   than to a docs index (see [[geo-content-optimization-tactics]], "Known
   adversarial risk").
+- **Markdown-only extras.** [[withgauge-serve-markdown-to-ai-agents-2026]]
+  ends its Markdown version with a promo code block that its HTML page
+  doesn't have. It contradicts nothing on the HTML page, so it's mild, but
+  it's commercial text only agents see. Diff your own HTML and Markdown.
 
 ## Does it affect AI-search visibility?
 
@@ -195,7 +199,17 @@ writing code.
   Copilot, Windsurf, Cline and Aider "all look for" it, and that
   LangChain's `mcpdoc` MCP server exposes `llms.txt` files as a `fetch_docs`
   tool ([[limy-llms-txt-2026-full-guide]]). The AI labs publish their own.
-- **Against / unmeasured:** neither claim comes with data. Limy's own
+- **First measured data, secondhand:** a Mintlify benchmark of 2,400
+  agent runs across 20 docs sites, as reported by
+  [[withgauge-serve-markdown-to-ai-agents-2026]] (Mintlify's post isn't
+  ingested). On HTML-only sites, agents hit **2.23 missing pages per
+  task**, mostly by guessing `.md` URLs. A link to `llms.txt` on each page
+  cut that to **0.11** (about 90% fewer), matching the effect of inlining
+  the whole file on every page at a fraction of the context. This measures
+  navigation errors during a task, not citations. Gauge also says that on
+  well-set-up sites `llms.txt` is often the second file an agent requests,
+  but gives no counts.
+- **Against / unmeasured:** the spec and Limy claims come with no data. Limy's own
   dataset can't test it, because it filtered for search and training
   crawlers, not the user-triggered fetchers coding agents use. In the one
   first-party log study that does split out coding agents
@@ -206,8 +220,9 @@ writing code.
   ([[punturo-markdown-llm-bot-traffic-rct-2026]]) doesn't settle it
   either: it tracked search and assistant bots (ChatGPT-User, ClaudeBot,
   PerplexityBot and others) but no coding agents.
-- **Read:** plausible for docs, unproven. If you run developer docs, ship
-  it, since it's nearly free. Then check your own logs (see the checklist)
+- **Read:** plausible for docs, with one secondhand benchmark now behind
+  it. If you run developer docs, ship it and link it from every page,
+  since it's nearly free. Then check your own logs (see the checklist)
   before claiming it does anything. Where the agent has your MCP server,
   [[docs-over-mcp]] is the stronger channel. For the wider "be the agent's
   pick" goal, see [[optimizing-for-coding-agent-recommendations]] and
@@ -261,14 +276,21 @@ writing code.
 - **Claim**: coding agents fetch `llms.txt` routinely.
   - Supported by: [[llmstxt-org-proposal-v2-2026]] (spec author, 2026-08),
     [[limy-llms-txt-2026-full-guide]] (2026-05). Both asserted without data.
+    Also [[withgauge-serve-markdown-to-ai-agents-2026]] (2026-08-10):
+    Mintlify's 2,400-run, 20-docs-site benchmark (secondhand) found that
+    linking `llms.txt` from each page cut missing pages per task from 2.23
+    to 0.11, so agents do use it *when a page points to it*; plus Gauge's
+    own uncounted "often the second file requested" observation.
   - In tension with: [[evilmartians-which-ai-reads-your-site-2026]]
     (2026-07). Only ~37 named-AI-assistant fetches in two months, and the
     coding agent there used content negotiation instead.
   - **Current best guess**: probably true *on library and API docs sites*,
-    which is where the claim is made, and not true on general sites. The
-    two don't directly contradict each other, because they measure
-    different site types. Unresolved until someone publishes docs-site
-    logs.
+    especially when every page links to the file, and not true on general
+    sites. The two don't directly contradict each other, because they
+    measure different site types. Leaning more firmly toward "true on docs
+    sites" since the Mintlify numbers, but still unresolved: the benchmark
+    is a vendor's own test, read here secondhand, and no independent
+    docs-site logs are published.
 - **Claim (new, untested)**: v2's link relations (`rel="alternate"
   type="text/markdown"`, `rel="describedby"`) help agents discover Markdown
   copies and the covering `llms.txt`.
@@ -277,10 +299,18 @@ writing code.
     A `<link>` tag pointing at a Markdown variant got **zero** attributable
     fetches across 268K agent requests. That test was run before v2 and may
     not have used these exact `rel` values.
+  - Also recommended by: [[withgauge-serve-markdown-to-ai-agents-2026]]
+    (2026-08-10), which lists a `Link:` header and a `<link>` tag as two of
+    its three discovery methods (with `llms.txt`) and ships both, but
+    gives no data on whether agents follow either. It never mentions
+    `Accept`-header content negotiation, though its own server does it.
   - **Current best guess**: don't expect agents to follow them yet. The
     `Link:` header version is cheap to add at the CDN, so it's fine to
     ship alongside content negotiation, but log-check it before reporting
-    any effect.
+    any effect. Evil Martians' zero-fetch log result outweighs a vendor
+    recommendation without data; the one hint with measured effect is a
+    *visible* link to `llms.txt` (Mintlify, via Gauge), not a `<head>`
+    hint. Unresolved.
 
 ## Implementation checklist
 
@@ -325,6 +355,15 @@ Content:
       `/docs/`), with a short root file pointing to them. The most specific
       file wins.
 - [ ] Check every named adopter or third-party URL before linking.
+- [ ] Link to `/llms.txt` from every docs HTML page and every `.md` page,
+      so an agent that lands anywhere finds the map. This is the step
+      with measured effect (Mintlify, secondhand, via
+      [[withgauge-serve-markdown-to-ai-agents-2026]]).
+- [ ] Put a short version note at the top of each docs page and its `.md`
+      copy: current version and release date, exact install command (no
+      `$`), removed/renamed APIs and their replacements, official product
+      name, canonical URL and update date. See
+      [[optimizing-for-coding-agent-recommendations]] point 12.
 
 Serving:
 
@@ -346,6 +385,11 @@ Serving:
       different from what humans get is the practice Google and Bing
       advise against, and a randomized test of it found no significant
       lift in bot visits ([[punturo-markdown-llm-bot-traffic-rct-2026]]).
+- [ ] Keep facts identical across HTML and Markdown. The format can
+      change; the facts can't. Markdown may add detail the HTML UI already
+      shows, but no claims, offers or "recommend us" instructions that a
+      human visitor can't see
+      ([[withgauge-serve-markdown-to-ai-agents-2026]]).
 
 Test and maintain:
 
@@ -360,8 +404,10 @@ Test and maintain:
       `.md` files and any `Link:`-advertised URLs, **segmented by user
       agent**. Include user-triggered fetchers (`ChatGPT-User`,
       `Claude-User`, coding-agent UAs), not just crawlers (GPTBot,
-      ClaudeBot). Note that `Google-Extended` is a robots.txt control token,
-      not a user agent, so it never shows up in logs. See
+      ClaudeBot). Count failed requests for `.md` URLs before launch (a
+      demand signal) and after (should fall toward zero)
+      ([[withgauge-serve-markdown-to-ai-agents-2026]]). Note that
+      `Google-Extended` is a robots.txt control token, not a user agent, so it never shows up in logs. See
       [[evilmartians-which-ai-reads-your-site-2026]] and
       [[ai-visibility-measurement-methodology]].
 
@@ -382,6 +428,10 @@ Test and maintain:
 - [[punturo-markdown-llm-bot-traffic-rct-2026]]: randomized test of
   serving Markdown pages to LLM bots; no significant crawl lift, and no
   coding agents in the bot set
+- [[withgauge-serve-markdown-to-ai-agents-2026]]: Mintlify's 2,400-run
+  docs-site benchmark (secondhand; missing pages per task 2.23 → 0.11 with
+  a per-page `llms.txt` link), the version note, the format-not-facts
+  cloaking line (vendor how-to)
 - [[google-ai-optimization-guide]]: Google says it doesn't help AI
   Overviews/AI Mode
 - [[c-seo-bench-2025]]: the "LLM Guidance" in-page summary tactic (not

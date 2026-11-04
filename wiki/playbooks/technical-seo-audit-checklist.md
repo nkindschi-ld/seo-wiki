@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-10-02
+updated: 2026-11-04
 ---
 
 ## Priority Framework
@@ -128,6 +128,15 @@ audit workflow). Quick-reference for this audit:
   must also be visible on the page itself; validate markup rather than
   assuming it's correct. Applies to AI Overviews/AI Mode eligibility as
   much as classic rich results.
+- **Schema is not an AI-citation lever, and FAQ rich results are gone**
+  (2026-11-04, [[structured-data-and-ai-search]]). Matched studies found
+  no general citation lift from adding JSON-LD; a fact present only in
+  markup wasn't returned by AI systems in two small tests. FAQ rich
+  results have been limited to authoritative government/health sites
+  since August 2023, and FAQ left Google's structured-data gallery by
+  2026-06-15. Audit for parity (markup = visible text, from one source)
+  and for named-feature eligibility; validators check syntax, not truth.
+  Pricing pages: [[saas-pricing-page-checklist]].
 - **Page experience for AI-referred visitors**, per
   [[google-succeeding-in-ai-search-2025-05]] — cluttered layout,
   difficulty distinguishing main content from surrounding page
@@ -219,7 +228,17 @@ audit workflow). Quick-reference for this audit:
     Content negotiation, by contrast, answers what the client asked
     for.
   - It included no coding agents, so the Claude Code case is
-    untested. (Format preference here is about which representation the
+    untested.
+  - **Check demand and parity.** Before launch, count failed requests
+    for `.md` URLs in your logs: agents guess them (a Mintlify benchmark
+    of 2,400 runs on 20 docs sites logged 2.23 missing pages per task on
+    HTML-only sites, secondhand via
+    [[withgauge-serve-markdown-to-ai-agents-2026]]). After launch that
+    count should fall toward zero. Diff the HTML and Markdown versions:
+    the format can change, the facts can't, and nothing (offers,
+    "recommend us" text) should appear only in the Markdown. On docs
+    sites, link `/llms.txt` from every page ([[llms-txt]]).
+    (Format preference here is about which representation the
   agent *requests*, distinct from whether it executes JavaScript — see the
   JS-rendering item below.)
 - **Analyze server logs for AI bot activity**, per

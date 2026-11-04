@@ -1130,3 +1130,33 @@ enumeration with no call-frequency data, not a measured study.
 
 ## 2026-01-01 — Nakora publishes "GitHub SEO: Rank Your Repo and Get Adoption in 2026" (Enric Baltasar): GitHub topic pages rank mostly by stars while search results vary more; Google "X github" queries route to topic pages
 [[nakora-github-seo-2026]] · new [[github-repository-seo]]; conflicts with [[markepear-github-search-engine-optimization]]
+
+## 2026-08-10 — Gauge publishes "How and Why You Should Serve Markdown Pages to Agents" (Ethan Finkel; updated 2026-08-14): cites a Mintlify benchmark (2,400 agent runs, 20 docs sites) where a per-page `llms.txt` link cut missing pages per task from 2.23 to 0.11
+[[withgauge-serve-markdown-to-ai-agents-2026]] · updated [[llms-txt]], [[optimizing-for-coding-agent-recommendations]], [[technical-seo-audit-checklist]]
+
+## 2023-08 — Google limits FAQ rich results to well-known, authoritative government and health websites (alongside reducing HowTo rich results)
+[[storylane-saas-pricing-page-design-2026]] · new [[structured-data-and-ai-search]]
+
+## 2025-10-23 — Technotize publishes "Pricing Page SEO for B2B SaaS: The Four-Zone Architecture" (Rizwan Khan; updated 2026-08-24)
+[[technotize-pricing-page-seo-b2b-saas-2026]] · new [[saas-pricing-page-checklist]]
+
+## 2025-10-30 — searchVIU tests which page layer AI systems read prices from: a JSON-LD-only price is returned by none of ChatGPT, Claude, Gemini, Perplexity, Google AI Mode (published 2025-12-02; secondhand)
+[[coreaex-saas-pricing-schema-2026]] · new [[structured-data-and-ai-search]]
+
+## 2026-02-12 — Marshal working paper: schema markup alone doesn't predict AI citation (OR 0.678, p = .296); Google rank does; attribute-rich Product/Review schema the exception (secondhand)
+[[coreaex-saas-pricing-schema-2026]] · new [[structured-data-and-ai-search]]; contests [[airops-fan-out-effect-2026]]
+
+## 2026-05-11 — Ahrefs publishes matched study of 1,885 pages adding JSON-LD: no significant AI Mode/ChatGPT citation lift, unexplained −4.6% in AI Overviews (secondhand)
+[[coreaex-saas-pricing-schema-2026]] · new [[structured-data-and-ai-search]]; contests [[otterly-how-to-optimize-content-for-ai-search-2026]], [[airops-fan-out-effect-2026]]
+
+## 2026-06-15 — Google's structured-data search gallery update no longer lists FAQ; Product and Software app remain (FAQPage stays a valid Schema.org type)
+[[coreaex-saas-pricing-schema-2026]] · new [[structured-data-and-ai-search]]; updated [[technical-seo-audit-checklist]]
+
+## 2026-08-29 — CoreAEX publishes "Schema for SaaS Pricing Pages: What It Establishes and What It Doesn't" (Zarko Zivkovic); its 2026-08-30 test finds a JSON-LD-only price reproduced in 0 of 9 runs, visible text winning every conflict
+[[coreaex-saas-pricing-schema-2026]] · new [[structured-data-and-ai-search]], [[saas-pricing-page-checklist]]; updated [[ai-pricing-visibility-audit]]
+
+## 2026-10-01 — Storylane publishes "SaaS Pricing Page Design: Patterns and Examples" (Madhav Bhandari)
+[[storylane-saas-pricing-page-design-2026]] · new [[saas-pricing-page-checklist]]
+
+## 2026-10-15 — Schematic publishes "6 Effective SaaS Pricing Page Examples and Why They Work" (Ryan Echternacht)
+[[schematic-saas-pricing-page-examples-2026]] · new [[saas-pricing-page-checklist]]

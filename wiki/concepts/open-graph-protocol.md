@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-09-23
+updated: 2026-11-04
 ---
 
 
@@ -118,6 +118,12 @@ three, and they should agree with each other (see the checklist).
     aid, not a ranking lever. Its specific AI-citation effect isn't
     established by these sources. Noted here only as context for the OG
     comparison; not resolved.
+  - *Update 2026-11-04:* now tracked on its own page,
+    [[structured-data-and-ai-search]]. Newer evidence there (matched
+    Ahrefs study, two small layer tests via
+    [[coreaex-saas-pricing-schema-2026]]) leans against schema as an AI
+    "meaning layer" for facts not also visible on the page. Still
+    flagged unresolved.
 
 ## Implementation checklist
 

@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [aeo]
-updated: 2026-08-06
+updated: 2026-11-04
 ---
 
 # Optimizing for the Agentic Web
@@ -31,6 +31,12 @@ Layer 1 (technical SEO foundations) is covered by
   FAQ schema (question-answer pairs), Organization schema (entity
   clarity) — reinforces what the plain-language content already says,
   machine-readably.
+  - *Caveat (2026-11-04):* "reinforces" is the operative word. Small
+    layer tests found AI systems didn't return a price that existed only
+    in JSON-LD, and visible text won when the two disagreed, so every
+    fact in the markup must also be visible. FAQ rich results are gone
+    for non-government/health sites. See [[structured-data-and-ai-search]]
+    and [[saas-pricing-page-checklist]].
 
 ## Layer 3: Keep off-site presence consistent
 

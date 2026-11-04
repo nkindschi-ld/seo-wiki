@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-09-04
+updated: 2026-11-04
 ---
 
 Why / when to use this: SaaS/software companies need a different SEO
@@ -225,6 +225,9 @@ rank:
 
 ## See also
 
+- [[saas-pricing-page-checklist]] — the BoFu `/pricing` page itself:
+  layout, pricing query types, comparison-page linking, unit and
+  overage copy, schema model.
 - [[search-intent-and-needs-met]] — the parent concept behind the
   ToFu/MoFu/BoFu funnel mapping above: each tier is an intent stage,
   and page-type choice follows from intent, not keyword volume.

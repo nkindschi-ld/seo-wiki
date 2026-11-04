@@ -3239,3 +3239,192 @@ Overstatement against [[ai-citation-landscape]] (ChatGPT retrieves through
 several backends; citation is decided after retrieval). Google ranking
 treated as an input, not a guarantee. Unresolved pending
 devtool-specific citation data.
+
+## [2026-10-22] query | "Should Open Graph tags be the same as the meta title and meta description?"
+
+Answered from [[open-graph-protocol]] (implementation checklist: `og:title`
+agrees with `<title>`/H1, can be punchier) and [[writing-meta-tags]] (Social
+preview tags section: same message, same ~60/~155 length budgets). Answer:
+same topic and promise, not necessarily identical wording — drop the brand
+suffix from `og:title` (`og:site_name` carries it) and write
+`og:description` for a feed reader rather than a searcher. No ingested
+source tests identical vs. tailored OG copy; this is practice, not evidence.
+Noted from outside the wiki (not yet sourced): Google's title-link
+documentation lists `og:title` among the inputs it may use to generate a
+title link, a reason to keep it consistent with `<title>`.
+
+## [2026-10-23] query | "Is there any data on how often users click on the first link in content compared to others?"
+
+Gap: no ingested source measures click-through by link position within
+body content. Closest coverage is the reasonable-surfer placement
+hierarchy (in-content > nav > footer) in [[link-and-anchor-text-best-practices]]
+and [[link-building]], which is a 2004 Google patent's weighting model, not
+user click data, and is contested by Mueller in
+[[growth-memo-show-me-your-footer]]. Pointed the user to outside
+candidates for ingest (not yet sourced): Dimitrov et al., "What Makes a
+Link Successful on Wikipedia?" (WWW 2017) and Lamprecht et al. (2017) on
+Wikipedia clickstream data, which find links near the top of an article
+get clicked disproportionately; and Nielsen Norman Group eye-tracking and
+scroll research on attention concentrating near the top of the page.
+
+## [2026-10-27] query | "How should we prioritize the keywords we track — volume, ease, and proximity to commercial interest?"
+Drafted a Slack reply to the CMO on finalizing the tracked-keyword set.
+Drew on [[keyword-research]] (conversion potential as a prioritization
+dimension alongside volume and attainability; real-world demand signals
+justify zero-volume terms) and the ToFu/MoFu/BoFu framing in
+[[saas-seo-strategy]]. Not filed as a new page: the answer is a short
+application of existing playbook guidance.
+
+## [2026-10-27] query | "What are some best practices for pricing pages for SaaS products?"
+Answered from [[ai-pricing-visibility-audit]] (the pricing answer stack,
+bot-readability failure modes, concrete entry point, billing mechanics,
+freshness), [[ai-shortlist-effect]] (accurate pricing and "best for X" as
+selection levers), [[optimizing-for-the-agentic-web]] (no pricing in
+images, Product schema), [[saas-seo-strategy]] and
+[[keyword-mapping-and-cannibalization]] (BoFu placement, MoFu → pricing
+internal links), and [[ai-citation-landscape]] (pricing pages are a weak
+citation page type, −21% per Otterly). Gap noted: the wiki has no
+conversion/CRO sources on pricing-page design (tier count, anchoring,
+annual/monthly toggles, plan comparison UX). Not filed as a new page: the
+answer is mostly covered by the existing playbook.
+
+## [2026-10-27] query | "Test https://launchdarkly.com/pricing/ against the pricing-page best practices"
+Audited the live LaunchDarkly pricing page against
+[[ai-pricing-visibility-audit]]. Passes: prices and billing-unit
+definitions are in the server HTML for GPTBot/ClaudeBot/PerplexityBot,
+no iframes, robots.txt allows /pricing/, free entry point and overage
+behavior stated. Fails: no FAQ section, no JSON-LD of any kind, no link
+from the pricing page to the existing billing docs (calculating-billing,
+service-connections), no visible last-updated date, observability
+overage rates missing, and two internal contradictions (client-side MAU
+$8.33 on the plan card vs. $10 in the comparison table; "SSO and SAML
+are included on every plan" vs. the table showing SSO/SAML only on
+Enterprise). Docs link to a pricing-page observability calculator anchor
+that no longer exists. The AI-answer baseline (step 1) and off-site
+consistency (step 8) were not tested. Not filed as a wiki page: it's an
+audit of one site, not general knowledge.
+
+## [2026-10-27] query | "What schema types should be included for pricing pages? (e.g. launchdarkly.com/pricing/)"
+
+Answered from [[ai-pricing-visibility-audit]], [[technical-seo-audit-checklist]]
+(keep product schema accurate), [[optimizing-for-the-agentic-web]] and the
+schema-writer skill's type-selection rules, checked against the live page.
+The page still emits no JSON-LD at all, not even the site template's
+Organization/WebSite/BreadcrumbList, so the skill classifies it
+`page_type: unknown`. Recommended: page-specific WebPage, BreadcrumbList,
+the shared `#software` SoftwareApplication with `offers` (Developer $0;
+Foundation as UnitPriceSpecifications per service connection, per 1K
+client-side MAU and per 1K AI runs; Enterprise as a priceless "custom
+pricing" Offer), and FAQPage only once pricing FAQs are on the page. Skip
+aggregateRating/review (third-party G2 ratings), so no Software App rich
+result is possible; Offer markup is a comprehension aid only. The
+skill's "never add offers" rule is scoped to pages with no visible
+price, so it doesn't apply here. The $8.33-vs-$10 MAU contradiction
+must be fixed before any price goes into markup. Not filed as a wiki
+page yet.
+
+## [2026-10-27] query | "What is the primary reason for adding schema to a pricing page?"
+
+Follow-up to the pricing-page schema query. Answer: machine-readable
+disambiguation of plans, prices, units and billing periods, the details
+AI engines get wrong most (pricing is 12% of claims but 24% of errors per
+[[tryprofound-where-inaccurate-ai-claims-come-from]]). It isn't for
+rankings or rich results, and no wiki source shows that schema itself
+improves AI pricing accuracy or citations. Visible, server-rendered
+content remains the bigger lever ([[ai-pricing-visibility-audit]]).
+
+## [2026-10-27] query | "Can crawlers read the collapsed accordions on https://launchdarkly.com/pricing/?"
+
+Fetched the page as Googlebot and GPTBot (identical 356 KB responses).
+The only accordions are the 12 "Compare all features" categories
+(Platform open by default, the other 11 collapsed) and the "Break it
+down" price toggle (open by default). All rows of every collapsed
+category are in the server HTML, hidden by CSS only, so non-JS AI
+crawlers and Googlebot both get the text, per the click-to-load failure
+mode in [[ai-pricing-visibility-audit]]. Caveat: the matrix is `<div>`s,
+not a `<table>`, and 148 of its cells are checkmark images with
+`alt="Checkmark"`, so a text extractor sees the feature name but loses
+which plan (Developer/Foundation/Enterprise) includes it. Suggested
+fix: a semantic `<table>` with `<th>` column headers, or per-cell
+"Included on Foundation" text/alt. Not filed as a wiki page.
+
+## [2026-11-04] ingest | Gauge — "How and Why You Should Serve Markdown Pages to Agents" (Ethan Finkel, 2026-08-10)
+
+Vendor how-to, captured as Markdown via `Accept: text/markdown` (the site
+also sends `Link:` rel=alternate/describedby headers). New source page
+[[withgauge-serve-markdown-to-ai-agents-2026]]. Updated [[llms-txt]]
+(Mintlify 2,400-run docs benchmark, secondhand: 2.23 → 0.11 missing pages
+per task with a per-page `llms.txt` link; version-note, link-from-every-page
+and HTML/Markdown parity checklist items; Markdown-only promo noted under
+Adoption), [[optimizing-for-coding-agent-recommendations]] (new point 12,
+version note; Endor Labs 49%-vulnerable-dependencies stat, secondhand),
+[[technical-seo-audit-checklist]] §5 (failed-`.md`-request and parity
+checks). Its "500M bot events" citation (aeo.press → answer.cloud) is
+unverified and may overlap Limy's dataset. Follow-up: ingest Mintlify's
+benchmark post directly.
+
+## [2026-11-04] conflict | llms-txt — `<link>`/`Link:` Markdown discovery hints
+
+[[withgauge-serve-markdown-to-ai-agents-2026]] recommends a `<link
+rel="alternate" type="text/markdown">` tag and `Link:` header as discovery
+methods (no data); [[evilmartians-which-ai-reads-your-site-2026]] logged zero
+fetches from a `<link>` hint across 268K agent requests. Best guess: ship
+the cheap header but don't expect effect; the measured lever is a visible
+per-page `llms.txt` link. Also strengthened (not resolved) the "coding
+agents fetch llms.txt" entry toward "true on docs sites." Both unresolved.
+
+## [2026-11-04] query | "What does the wiki say about using JSON schema for pricing pages?"
+No dedicated coverage: [[ai-pricing-visibility-audit]] and its sources never mention schema. Answer synthesized from general Product-schema advice ([[optimizing-for-the-agentic-web]], [[technical-seo-audit-checklist]]), schema-for-AI evidence in [[geo-content-optimization-tactics]] (AirOps +6.5pp correlation, Otterly FAQ-schema +350%, Ahrefs "not a direct LLM lever") and the pricing playbook. Gap flagged: no source tests Offer/Product schema on SaaS pricing pages.
+
+## [2026-11-04] ingest | SaaS pricing page + schema batch (CoreAEX, Technotize, 12AM Agency, Schematic, Storylane)
+
+Five URLs captured to `raw/articles/` via curl + stdlib HTML conversion.
+Four filed as source pages: [[coreaex-saas-pricing-schema-2026]] (high
+rigor; the hub), [[technotize-pricing-page-seo-b2b-saas-2026]] (low;
+frameworks only), [[schematic-saas-pricing-page-examples-2026]] (vendor
+CRO, tangential), [[storylane-saas-pricing-page-design-2026]] (careful
+vendor guide). **12AM Agency skipped by agreement**: raw kept at
+`raw/articles/12amagency-schema-markup-for-saas-2026.md`, no source page,
+no claims drawn (local-SEO agency, three unedited "ACTION REQUIRED:
+Create page" placeholders, unsourced CTR/carousel/dwell-time claims,
+recommends FAQ snippets Google no longer shows).
+
+New [[structured-data-and-ai-search]] concept (the wiki had no schema
+hub despite ~12 pages mentioning it) and new [[saas-pricing-page-checklist]]
+playbook, which also files the 2026-10-27 launchdarkly.com/pricing schema
+query as a worked example. Updated [[ai-pricing-visibility-audit]] (step
+11 schema-as-consistency-layer; layered wrong-price diagnosis; checklist),
+[[geo-content-optimization-tactics]] (AirOps +6.5pp and Otterly FAQ +350%
+marked contested), [[writer-checklist-blog-posts]] (FAQ-schema "boost"
+claim softened), [[optimizing-for-the-agentic-web]] (Product/FAQ schema
+caveat), [[technical-seo-audit-checklist]] (schema-not-a-citation-lever,
+FAQ rich results gone), [[open-graph-protocol]] (meaning-layer conflict
+pointed to new hub), [[saas-seo-strategy]] (See also).
+
+Verified during ingest: Google's structured-data search gallery (page
+updated 2026-10-16) links no FAQ page; Product, product-snippet,
+merchant-listing and software-app remain. Follow-ups: ingest the Ahrefs
+schema study, searchVIU's layer test and CoreAEX's "which layer does an
+AI answer read a price from" page directly (all currently secondhand).
+
+## [2026-11-04] conflict | structured-data-and-ai-search — FAQ schema citation lift
+
+[[otterly-how-to-optimize-content-for-ai-search-2026]] (+350%, no control
+described) and [[technotize-pricing-page-seo-b2b-saas-2026]] (asserted) vs.
+Ahrefs and Marshal via [[coreaex-saas-pricing-schema-2026]] (no general
+schema citation effect). Best guess: FAQ content is the lever, markup
+unproven. Unresolved.
+
+## [2026-11-04] conflict | structured-data-and-ai-search — JSON-LD citation advantage
+
+[[airops-fan-out-effect-2026]] (+6.5pp, observational) vs. Ahrefs'
+matched before/after (no lift on adding JSON-LD; correlation attributed
+to site quality). Best guess: confound, not effect; untested for pages
+with no prior AI visibility. Unresolved.
+
+## [2026-11-04] conflict | structured-data-and-ai-search — AI engines read Offer/price schema
+
+[[technotize-pricing-page-seo-b2b-saas-2026]] (asserted) vs. searchVIU and
+CoreAEX layer tests (JSON-LD-only price returned 0/5 and 0/9; visible text
+wins conflicts). Best guess: never rely on markup for a fact that isn't
+visible. Tiny samples; unresolved.

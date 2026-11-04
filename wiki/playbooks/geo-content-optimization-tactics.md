@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-10-19
+updated: 2026-11-04
 ---
 
 
@@ -482,6 +482,11 @@ Per [[airops-fan-out-effect-2026]]:
 - **Add JSON-LD schema markup**: +6.5pp citation advantage overall.
   Strongest types: MedicalWebPage (47%), BreadcrumbList (46.2%),
   FAQPage (45.6%).
+  - *Contested (2026-11-04):* this is observational. Ahrefs' matched
+    before/after study (via [[coreaex-saas-pricing-schema-2026]]) found
+    no lift when pages *added* JSON-LD and attributed the raw
+    correlation to site quality. See the Conflicting Evidence on
+    [[structured-data-and-ai-search]].
 - **Write at a college reading level** (Flesch-Kincaid 16-17): 35.9%
   citation, outperforming both simpler and more academic writing.
 
@@ -932,6 +937,11 @@ schema produced a 350% increase in AI citations (2,379 vs. 529) on the
 pages tested. One experiment, not independently replicated in this
 wiki yet, but a concrete number behind the generic "add FAQPage schema"
 advice already in the checklist above.
+*Contested (2026-11-04):* the experiment describes no control or
+isolation of the markup from the FAQ content, and matched studies found
+no general schema citation effect. The FAQ content is the more likely
+lever; add FAQPage as a mirror of visible Q&A without promising a lift.
+See [[structured-data-and-ai-search]].
 
 ## Measuring AI visibility as sustained topical authority
 

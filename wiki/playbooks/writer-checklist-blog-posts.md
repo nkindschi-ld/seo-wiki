@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-07-24
+updated: 2026-11-04
 ---
 
 # Writer's SEO Checklist: Blog Posts
@@ -54,9 +54,11 @@ proof, and make it easy to lift out.
   measurably more likely to be cited.*
 - **Add a short FAQ** (2–4 common follow-up questions with direct answers)
   at the end where it fits. *Why: FAQ sections map cleanly to how people
-  ask AI tools follow-ups, and are among the most-cited formats. (Ask the
-  web team to add FAQ schema, a behind-the-scenes tag that boosts this
-  further.)*
+  ask AI tools follow-ups, and are among the most-cited formats. (The
+  web team can add FAQ schema that mirrors the visible questions, but
+  don't count on it for a boost: its separate effect on AI citations is
+  unproven, and Google no longer shows FAQ rich results for most sites.
+  See [[structured-data-and-ai-search]].)*
 
 ## Credibility and links
 
