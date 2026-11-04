@@ -1,6 +1,6 @@
 ---
 type: source
-tags: [aeo, geo]
+tags: [aeo]
 date_published: 2026-07-29
 date_ingested: 2026-07-30
 origin: raw/reports/victorious-q2-2026-quarterly-search-report.md

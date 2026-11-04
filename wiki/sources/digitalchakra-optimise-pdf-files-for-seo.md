@@ -1,7 +1,7 @@
 ---
 type: source
 tags: [seo]
-date_published:
+date_published: 2023-09-12
 date_ingested: 2026-09-04
 origin: raw/articles/digitalchakra-optimise-pdf-files-for-seo.md
 ---

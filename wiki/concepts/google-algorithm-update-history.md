@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo]
-updated: 2026-10-26
+updated: 2026-11-04
 ---
 
 # Google Algorithm Update History
@@ -10,8 +10,9 @@ A taxonomy and timeline of Google's named search ranking updates and
 incidents, based on
 [[google-search-status-dashboard-history]] (a live Google status page,
 snapshotted 2026-07-07 covering July 2021–June 2026, re-checked
-2026-10-26 for the 2026 list below). Full chronological list through
-June 2026 lives in `wiki/timeline.md`; this page synthesizes the patterns.
+2026-10-26 for the 2026 list below). Full chronological list lives in
+`wiki/timeline.md` (the August and September 2026 spam updates were
+backfilled there on 2026-11-04); this page synthesizes the patterns.
 
 ## 2026 updates
 

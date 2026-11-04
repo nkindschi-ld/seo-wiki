@@ -112,7 +112,7 @@ retrieve-not-cite finding with a newer (if unverified) number.
 - [[geo-content-optimization-tactics]] — added a "`site:` operator
   targeting and official-domain signaling" tactic section with the GSC/
   Bing monitoring and title-tag/meta clarification recommendations.
-- [[wiki/timeline.md]] — logged the apparent ChatGPT 5.6 fan-out-behavior
+- [[timeline]] — logged the apparent ChatGPT 5.6 fan-out-behavior
   shift.
 
 No conflicts.

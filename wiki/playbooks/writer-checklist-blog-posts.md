@@ -112,7 +112,8 @@ for the evidence, caveats, and the tactics that didn't make this list.
 - **Your "one new thing" (information gain)** —
   [[growth-memo-why-most-original-data-never-gets-cited]]
 - **FAQ sections / FAQ schema citation lift** —
-  [[otterly-how-to-optimize-content-for-ai-search-2026]]
+  [[otterly-how-to-optimize-content-for-ai-search-2026]]; contested by
+  matched studies, see [[structured-data-and-ai-search]]
 - **Question-form headings, answer-shape alignment** —
   [[ai-search-reranking-pipeline]]
 - **Set the URL once; don't change it later** —

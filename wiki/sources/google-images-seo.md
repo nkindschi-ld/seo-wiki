@@ -1,6 +1,7 @@
 ---
 type: source
 tags: [seo]
+date_published: 2026-03-02  # living doc; page "Last updated" date, checked 2026-11-04
 date_ingested: 2026-07-11
 origin: raw/articles/google-images-seo.md
 ---

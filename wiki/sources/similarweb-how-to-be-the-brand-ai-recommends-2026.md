@@ -1,6 +1,7 @@
 ---
 type: source
 tags: [seo, aeo]
+date_published: unknown  # undated PDF; data runs to 2026-04
 date_ingested: 2026-07-07
 origin: raw/reports/similarweb-how-to-be-the-brand-ai-recommends-2026.md
 ---

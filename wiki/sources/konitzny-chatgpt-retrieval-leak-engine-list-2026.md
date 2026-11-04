@@ -130,6 +130,6 @@ unverified source is not a sufficient basis to build one — noted on
   eligibility tactics.
 - [[pdf-seo-optimization]] — confirmed a dedicated `web-pdf` retrieval path,
   reachable only at the system2 reasoning tier.
-- [[wiki/timeline.md]] — logged the 2026-09-17 publication of the engine registry.
+- [[timeline]] — logged the 2026-09-17 publication of the engine registry.
 
 No conflicts logged.

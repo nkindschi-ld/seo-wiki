@@ -1,7 +1,7 @@
 ---
 type: source
 tags: [seo]
-date_published:
+date_published: 2025-12-10  # living doc; page "Last updated" date, checked 2026-11-04
 date_ingested: 2026-07-07
 origin: raw/articles/google-links-crawlable.md
 ---

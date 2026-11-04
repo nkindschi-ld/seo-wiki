@@ -1,7 +1,7 @@
 ---
 type: source
 tags: [seo]
-date_published:
+date_published: 2021-03-22
 date_ingested: 2026-09-04
 origin: raw/articles/moz-beginners-guide-to-link-building.md
 ---

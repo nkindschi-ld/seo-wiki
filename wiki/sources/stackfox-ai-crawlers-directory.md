@@ -1,7 +1,7 @@
 ---
 type: source
 tags: [seo, aeo]
-date_published:
+date_published: unknown  # undated live directory
 date_ingested: 2026-07-23
 origin: raw/articles/stackfox-ai-crawlers-directory.md
 ---

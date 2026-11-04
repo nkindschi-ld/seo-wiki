@@ -1160,3 +1160,9 @@ enumeration with no call-frequency data, not a measured study.
 
 ## 2026-10-15 — Schematic publishes "6 Effective SaaS Pricing Page Examples and Why They Work" (Ryan Echternacht)
 [[schematic-saas-pricing-page-examples-2026]] · new [[saas-pricing-page-checklist]]
+
+## 2026-08-18 — August 2026 spam update (Aug 18–21; "a normal spam update", no narrower target named)
+[[google-search-status-dashboard-history]] · [[google-algorithm-update-history]]. Duration: 2 days, 16 hours. Backfilled during the 2026-11-04 lint.
+
+## 2026-09-24 — September 2026 spam update (Sep 24–Oct 8; longest 2026 spam update at ~14 days)
+[[google-search-status-dashboard-history]] · [[google-algorithm-update-history]]. Duration: 13 days, 16 hours. Backfilled during the 2026-11-04 lint.

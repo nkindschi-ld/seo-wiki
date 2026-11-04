@@ -3428,3 +3428,101 @@ with no prior AI visibility. Unresolved.
 CoreAEX layer tests (JSON-LD-only price returned 0/5 and 0/9; visible text
 wins conflicts). Best guess: never rely on markup for a fact that isn't
 visible. Tiny samples; unresolved.
+
+## [2026-11-04] lint | Full-wiki lint: structure clean; 2 path-style links, 2 Google updates missing from timeline, unfiled Mintlify benchmark, 3 missing concept pages
+Scope: 39 concepts, 41 playbooks, 191 sources, 215 raw files.
+
+Clean (no action needed):
+- **Broken links**: every real `[[wikilink]]` resolves, apart from
+  finding 1. Unmatched targets in log.md/timeline.md are the format
+  templates (`[[source-slug]]`, `[[concept-slug]]`, `[[wikilink]]`).
+- **Index coverage**: all 271 pages listed; no dangling entries.
+- **Orphans**: only [[crawlingmondays-strategical-content-optimization]],
+  the documented placeholder (unchanged since 2026-09-04).
+- **Playbook → concept links**: every playbook links to at least one
+  concept.
+- **Raw ↔ source**: every `origin:` resolves. Raw files without an
+  `origin:` are all accounted for (PDF text companions, secondary
+  captures cited in a source body, the 2026-09-17 AIO consolidation
+  leftover, and the 12AM file kept raw-only by agreement), except
+  finding 3.
+- **Open conflicts**: 32 Conflicting Evidence claims across 14 pages.
+  None is newly resolvable by today's sources. Marshal's "Google rank
+  dominates citation" (via [[coreaex-saas-pricing-schema-2026]]) bears on
+  the ranking-dependence entry in [[ai-citation-landscape]], but it's
+  ChatGPT/Gemini, not AIO, and secondhand, so that entry stays open.
+
+Findings (reported, not yet fixed):
+1. **Path-style links**: `[[wiki/timeline.md]]` in
+   [[konitzny-chatgpt-retrieval-leak-engine-list-2026]] and
+   [[lilyray-chatgpt-fanout-queries-2026]]; should be `[[timeline]]`.
+2. **Timeline missing 2 Google updates**: the August 2026 spam update
+   (Aug 18–21) and September 2026 spam update (Sep 24–Oct 8) are in
+   [[google-algorithm-update-history]]'s 2026 table but not in
+   timeline.md.
+3. **Mintlify benchmark captured but not filed**:
+   `raw/studies/mintlify-llms-txt-agent-benchmark-2026.md` and
+   `mintlify-url-discovery-bench-results-2026.md` (+2 assets) have no
+   source page. [[llms-txt]] cites the numbers secondhand through
+   [[withgauge-serve-markdown-to-ai-agents-2026]].
+4. **Off-schema tags**: `geo` on [[topical-authority-in-ai-search]],
+   [[geosurge-model-memory-predicts-search-2026]],
+   [[semrush-chatgpt-topic-authority-study]],
+   [[victorious-q2-2026-quarterly-search-report]] (schema allows
+   `seo`/`aeo`).
+5. **17 sources lack a usable `date_published`** (13 missing, 4
+   `unknown`), including two Similarweb reports in `raw/reports/` that
+   are dated research but can't be timelined without a date.
+6. **Outdated advice**: [[geo-content-optimization-tactics]] checklist
+   still lists HowTo schema (HowTo rich results dropped in 2023);
+   [[writer-checklist-blog-posts]]'s credibility list cites only Otterly
+   for FAQ-schema lift (should add [[structured-data-and-ai-search]]);
+   [[brand-entity-seo-strategy]] says "SGE/Bard/AI Overviews".
+7. **Concept with no playbook link**:
+   [[competitive-search-herding-and-diversification]].
+8. **Concepts mentioned without their own page**: query fan-out (268
+   mentions across 18 concept/playbook pages, mostly inside
+   [[ai-citation-landscape]]), content freshness (24 pages, plus an open
+   conflict), and Reddit/UGC in AI search (17 pages).
+9. **Oversized pages**: [[geo-content-optimization-tactics]] (2,031
+   lines) and [[ai-citation-landscape]] (1,607 lines, 31 sections).
+   Split candidates, with the listicles split (2026-07-08) as precedent.
+   A fan-out page would come out of ai-citation-landscape.
+
+Not a finding: 30 pages were last committed after their `updated:`
+date. Spot checks show commit lag (edits dated correctly, committed
+days later), so this check isn't reliable from git history.
+
+Fixes applied (same day, user go-ahead), findings 1–7:
+- **1.** `[[wiki/timeline.md]]` → `[[timeline]]` in
+  [[konitzny-chatgpt-retrieval-leak-engine-list-2026]] and
+  [[lilyray-chatgpt-fanout-queries-2026]].
+- **2.** August and September 2026 spam updates appended to timeline.md,
+  each marked "Backfilled during the 2026-11-04 lint".
+  [[google-algorithm-update-history]]'s "timeline covers through June
+  2026" line updated.
+- **4.** `geo` tag replaced with `aeo` on the four pages.
+- **5.** Dates found on the live pages and filled in for 7 sources:
+  [[ahrefs-link-building]] 2023-10-09,
+  [[digitalchakra-optimise-pdf-files-for-seo]] 2023-09-12,
+  [[ivyforms-lead-magnet-checklist]] 2026-03-03,
+  [[pitchbox-link-prospecting-hacks]] 2020-04-20,
+  [[moz-beginners-guide-link-building]] 2021-03-22,
+  [[google-images-seo]] 2026-03-02 and [[google-links-crawlable]]
+  2025-12-10 (both Google "Last updated" dates on living docs).
+  Six more were set to `unknown` with a YAML comment saying why: the
+  LiveAgent JSON-LD date is a 0001-01-01 placeholder; StackFox, the Bing
+  and Google report help pages and both Similarweb PDFs carry no date.
+  The four earlier `unknown`s stay. None of the newly dated pages is a
+  study, so none goes on the timeline (evergreen ruling, 2026-07-11).
+  That also takes the two Similarweb PDFs (playbooks, not studies) off
+  the timeline-gap list.
+- **6.** [[geo-content-optimization-tactics]] checklist no longer
+  suggests HowTo for rich results; [[writer-checklist-blog-posts]]
+  credibility list adds [[structured-data-and-ai-search]];
+  [[brand-entity-seo-strategy]] gives current names for "SGE/Bard".
+- **7.** [[competitive-search-herding-and-diversification]] now links to
+  [[competitor-citation-displacement]] and [[seo-competitive-analysis]].
+
+Still open: findings 3 (Mintlify ingest), 8 (missing concept pages) and
+9 (oversized pages).

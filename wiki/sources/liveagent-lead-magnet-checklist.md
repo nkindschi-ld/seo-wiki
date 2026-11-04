@@ -1,7 +1,7 @@
 ---
 type: source
 tags: [seo]
-date_published:
+date_published: unknown  # page JSON-LD carries a 0001-01-01 placeholder
 date_ingested: 2026-09-04
 origin: raw/articles/liveagent-lead-magnet-checklist.md
 ---

@@ -1,7 +1,7 @@
 ---
 type: source
 tags: [seo, aeo]
-date_published:
+date_published: unknown  # undated help page
 date_ingested: 2026-07-23
 origin: raw/articles/google-generative-ai-performance-report.md
 ---

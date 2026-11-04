@@ -927,7 +927,10 @@ and cite):
 - [ ] Short, atomic paragraphs — one idea per block
 - [ ] Predictable templates the model recognizes (definitions,
       comparisons, FAQs, steps)
-- [ ] Schema markup where relevant (FAQPage, HowTo, Article)
+- [ ] Schema markup where relevant (Article, BreadcrumbList; FAQPage
+      only mirroring visible Q&A). Skip HowTo for rich results: Google
+      dropped HowTo rich results in 2023 and FAQ rich results for most
+      sites ([[structured-data-and-ai-search]])
 - [ ] Explicit, consistent entity naming throughout
 
 **FAQ schema citation lift (concrete number)**: per

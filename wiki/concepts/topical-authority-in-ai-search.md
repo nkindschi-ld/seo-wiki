@@ -1,7 +1,7 @@
 ---
 type: concept
-tags: [aeo, geo]
-updated: 2026-08-06
+tags: [aeo]
+updated: 2026-11-04
 ---
 
 # Topical Authority in AI Search

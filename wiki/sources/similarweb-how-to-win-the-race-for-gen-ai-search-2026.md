@@ -1,6 +1,7 @@
 ---
 type: source
 tags: [seo, aeo]
+date_published: unknown  # undated PDF
 date_ingested: 2026-07-07
 origin: raw/reports/similarweb-how-to-win-the-race-for-gen-ai-search-2026.md
 ---
