@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-10-14
+updated: 2026-11-06
 ---
 
 # ChatGPT's Vertical Retrieval Engines
@@ -235,3 +235,4 @@ retrieval; low value as evidence of *how much* any single path matters.
 - [[generative-engine-optimization]] — umbrella concept.
 - [[serp-poisoning]] — Google's poisoning of scraped SERPs, which may reach
   the SerpAPI path.
+- [[query-fanout]] — how prompts are split into the sub-queries these engines receive.

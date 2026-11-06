@@ -1861,6 +1861,8 @@ sentence came from your page.
       the authority of your content raises citation odds, not the odds
       of being quoted faithfully.
 
+See [[parametric-memory-vs-grounding]] for why a brand can be described from training memory (uncited, frozen at the cutoff) rather than from your current pages.
+
 ## Measurement checklist: don't panic on CTR alone
 
 Per [[aio-ctr-impact]], a falling CTR on AIO-cited queries can be a

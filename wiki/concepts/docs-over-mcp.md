@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo, seo]
-updated: 2026-08-06
+updated: 2026-11-06
 ---
 
 <!-- updated 2026-08-06: added MCP server discoverability section from mcp-focus-server-retrieval-2026 -->
@@ -147,3 +147,4 @@ treat it as an addition on top of clean public docs, not a substitute.
   (internal-docs focus; rigor caveat applies).
 - [[mcp-focus-server-retrieval-2026]] — SIGIR '26 source for the MCP
   server discoverability / retrievability section.
+- [[agent-experience-ax]] — measured cost of agents not being able to read a site; registries (ARD) as the next "find" layer

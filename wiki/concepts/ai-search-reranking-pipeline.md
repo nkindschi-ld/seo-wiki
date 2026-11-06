@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo, seo]
-updated: 2026-10-05
+updated: 2026-11-06
 ---
 
 # AI Search Retrieval Pipeline & Rerankers
@@ -251,3 +251,5 @@ reranker mechanics justify:
 - [[lumar-candidate-page-selection]] and
   [[lumar-semantic-relevance-three-jobs]] — sources for the candidate-selection
   section and the three-jobs table.
+- [[query-fanout]] — overview of stage 1 (query planning/fanout): Google's confirmation, injected terms, and the textless-fanout research.
+- [[grounding-snippets]] — what survives after reranking: sentence-level extracts from a ~2,000-word per-query budget, split by rank.

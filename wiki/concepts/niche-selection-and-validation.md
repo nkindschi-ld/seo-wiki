@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-10-25
+updated: 2026-11-06
 ---
 
 # Niche Selection and Validation
@@ -86,3 +86,4 @@ are unverified here.
 - [[topic-cluster-strategy]] — structuring a niche's content.
 - [[ai-visibility-content-gap-audit]] — finding gaps once the niche is
   live.
+- [[topical-authority-in-ai-search]] — measured topic-ownership data (1,094 ChatGPT categories) behind the "few dominant AI brands = less attractive" screen

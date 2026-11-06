@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-10-14
+updated: 2026-11-06
 ---
 
 # AI Visibility Measurement Methodology
@@ -115,3 +115,4 @@ Understanding *why* to measure AI visibility:
 - [[wholewhale-ai-brand-footprint-measurement]] — The source introducing the AI Brand Footprint metric and reverse-engineering formula
 - [[google-generative-ai-performance-report]] — Google's own native impression-tracking tool for AI Overviews/AI Mode, partially closing the measurement gap for Google's AI surfaces
 - [[bing-ai-performance-report]] — Bing's own native citation-tracking tool for Copilot/Bing AI summaries, including the Intents/Topics/Citation Share/Compare preview capabilities
+- [[ai-answer-volatility]] — how much AI answers churn run to run and day to day; why presence over a ~2-week window beats single-run snapshots

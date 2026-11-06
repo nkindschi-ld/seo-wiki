@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-11-04
+updated: 2026-11-06
 ---
 
 # Writer's SEO Checklist: Blog Posts
@@ -129,3 +129,4 @@ for the evidence, caveats, and the tactics that didn't make this list.
   meta descriptions
 - [[geo-content-optimization-tactics]] — the full, evidence-cited tactic
   list this checklist simplifies
+- [[seo-copywriting]] — drafting-stage tactics, including the house rule that the H1 never repeats the title tag

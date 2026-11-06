@@ -118,3 +118,4 @@ DEJAN's SEO reading ([[dejan-generative-self-retrieval-2026]]):
   readability.
 - [[grounding-snippets]] and [[query-fanout]] — the retrieval side in
   detail.
+- [[topical-authority-in-ai-search]] — "Memory is the upstream input": remembered brands get live-searched 3.2× more often ([[geosurge-model-memory-predicts-search-2026]]).

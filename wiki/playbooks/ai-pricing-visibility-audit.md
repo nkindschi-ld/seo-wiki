@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [aeo, seo]
-updated: 2026-11-04
+updated: 2026-11-06
 ---
 
 # AI Pricing Visibility Audit
@@ -77,6 +77,7 @@ other, not one page:
    - any wrong numbers
 
    Running it daily for a week smooths out run-to-run variation (see
+   [[ai-answer-volatility]] for how large it is, and
    [[ai-visibility-measurement-methodology]]).
 2. **Build three sources of truth:** `/pricing`, billing docs and
    FAQs, all linking to each other. If exact pricing isn't public, say
@@ -250,3 +251,5 @@ More than one can be true at once.
   (how AI describes your brand overall).
 - [[competitor-citation-displacement]] — when a competitor's pricing
   story is the one being cited.
+- [[ai-answer-volatility]] — sizes the run-to-run variation the step-1 baseline is meant to smooth; first-citation position is noisier than presence
+- [[agent-experience-ax]] — readable own pages raise pricing accuracy and recommendation strength in agent answers

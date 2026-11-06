@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [aeo, seo]
-updated: 2026-10-25
+updated: 2026-11-06
 ---
 
 # AI Visibility Four-Layer Diagnostic
@@ -88,3 +88,5 @@ an experiment.
 
 - [[ai-visibility-content-gap-audit]], [[geo-content-optimization-tactics]],
   [[agentic-web-optimization]], [[brand-entity-seo-strategy]].
+- [[ai-entity-footprint-audit]] — the fuller Clarity-layer audit (six dimensions, owned/third-party error tracing)
+- [[explainable-to-ai-4cs]] — a fast Clarity/Trust self-test

@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [aeo, seo]
-updated: 2026-08-03
+updated: 2026-11-06
 ---
 
 # Competitor Citation Displacement
@@ -105,6 +105,7 @@ these as the "how," and treat the framework as the diagnostic wrapper around the
 - **Displacement is competitive and can be a zero-sum race.** Per [[c-seo-bench-2025]],
   content tactics erode toward zero as competitors adopt the same ones — an early
   displacement win may not persist once the target notices and rebuilds.
+- **Single-run position checks are noisy.** Per [[ai-answer-volatility]], day-to-day citation churn is large and position is noisier than presence — track presence over a window rather than reading weekly position moves as signal.
 
 ## Checklist
 

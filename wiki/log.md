@@ -3629,3 +3629,35 @@ Eight dejan.ai posts (Content Optimization Engine, Grounding Snippets, Generativ
 
 [[geo-generative-engine-optimization-aggarwal-2023]] ranks Statistics Addition and Cite Sources in the top tier; [[dejan-content-optimization-engine-2026]] finds "Proof" edits (stats, citations, awards, endorsements) win about half as often as framing in LLM re-ranking. Leaning: different measurements (citation-stage share vs. re-ranking between rivals), so fix framing and alignment first and test both. Unresolved; logged on [[generative-engine-optimization]].
 
+
+## [2026-11-06] lint | Merge parallel wiki (origin/main): 14 conflicted files reconciled, 41 cross-side links added
+
+Merged nealkindschi/seo-wiki `origin/main` (14 commits since the
+2026-09-14 split) into the local branch: 24 sources, 8 concepts
+([[agent-experience-ax]], [[ai-answer-volatility]],
+[[ai-mode-response-markup]], [[glossary-pages-for-seo]],
+[[grounding-snippets]], [[niche-selection-and-validation]],
+[[parametric-memory-vs-grounding]], [[query-fanout]]) and 5 playbooks
+([[ai-visibility-content-gap-audit]], [[ai-visibility-four-layer-diagnostic]],
+[[editorial-link-integration]], [[glossary-page-build-checklist]],
+[[niche-validation-playbook]]), plus the title-tag-≠-H1 house rule in
+[[seo-copywriting]]. All 14 conflicted files resolved as unions (merge
+commit lists each). No source was ingested on both sides; no slug
+collisions.
+
+Cross-side review (each side had never seen the other's new pages):
+added 41 links in both directions, mainly wiring the new fan-out,
+grounding, volatility, AX and niche/glossary hubs into the local
+retrieval-pipeline, measurement, pricing-audit and meta-tag pages.
+Also cross-linked the DEJAN statistics conflict on
+[[generative-engine-optimization]] to [[c-seo-bench-2025]].
+
+Structural lint after merge: 0 broken links, 0 index gaps, 0
+relative-path links. One orphan,
+[[crawlingmondays-strategical-content-optimization]], predates the
+merge on both sides.
+
+Open: 7 cross-side conflicts surfaced to the user for approval
+before filing (citation churn magnitude, tracking cadence, ChatGPT
+retrieved-to-cited ratio, fan-out count over time, fan-out
+observability, meta description length, thin templated pages).

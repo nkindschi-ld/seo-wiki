@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-10-08
+updated: 2026-11-06
 ---
 
 # AI Overview Grounding & Claim Fidelity
@@ -193,3 +193,4 @@ pages the system can actually read. See [[agent-experience-ax]].
 - [[tryprofound-where-inaccurate-ai-claims-come-from]] — cross-engine
   factual accuracy (true vs. brand records) rather than grounding,
   broken down by source type, topic and model.
+- [[parametric-memory-vs-grounding]] — a candidate mechanism for "Omitted" claims: the model mixes recalled (sometimes hallucinated) facts into grounded answers.

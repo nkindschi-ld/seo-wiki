@@ -76,3 +76,4 @@ contradicts it.
 - [[entity-oriented-search-fundamentals]] — entity typing background.
 - [[query-fanout]], [[grounding-snippets]] — the retrieval steps before
   rendering.
+- [[structured-data-and-ai-search]] — no AI-citation lift from schema, and facts that exist only in markup aren't extracted; put the "required attributes" in visible text.

@@ -501,6 +501,7 @@ gated on sites having sufficient AI-feature impressions.
   downweights confidence in the Tier 1-3 tactics above and shows
   retrieval-rank/traditional-SEO dominates content tactics for the
   citation-rank outcome; see the Conflicting Evidence section above.
+- [[query-fanout]] — how AI search splits a prompt into sub-queries, and why that vocabulary never reaches Search Console.
 
 ## Open questions
 

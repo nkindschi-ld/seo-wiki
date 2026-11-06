@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo, seo]
-updated: 2026-10-08
+updated: 2026-11-06
 ---
 
 # Agent Experience (AX)
@@ -163,3 +163,6 @@ the crawlability floor.
   not agent-ready.
 - [[ai-coding-agent-tool-selection]] — a sibling agent-choice domain
   (coding agents picking tools).
+- [[docs-over-mcp]] — the MCP-server discoverability problem behind the ARD registry / connectors-first shift
+- [[accessibility-tree-audit-for-ai-agents]] — the concrete read/act-layer audit for making a site agent-ready
+- [[ai-pricing-visibility-audit]] — pricing is where own-site reading pays most (60% vs 37% accuracy); that playbook is the fix

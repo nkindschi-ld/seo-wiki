@@ -82,3 +82,5 @@ taxonomy ([[dejan-fanout-vectors-2026]]).
 - [[listicles-in-ai-search]] — why "best of" fanout injection favours
   listicles.
 - [[generative-engine-optimization]] — the broader discipline.
+- [[ai-search-reranking-pipeline]] — the staged pipeline fanout feeds (engine selection → hybrid retrieval → rerank → generation).
+- [[chatgpt-vertical-retrieval-engines]] — where ChatGPT's sub-queries go: ~69 engines, each with a query rewriter.

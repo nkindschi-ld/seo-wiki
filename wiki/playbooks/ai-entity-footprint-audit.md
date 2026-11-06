@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [aeo, seo]
-updated: 2026-10-02
+updated: 2026-11-06
 ---
 
 # AI Entity Footprint Audit
@@ -28,6 +28,8 @@ For the **competitor-facing** counterpart — diagnosing why AI cites a *rival*
 instead of you and how to displace them at the artifact level — see
 [[competitor-citation-displacement]]. This audit looks inward (does AI understand
 *us*?); that playbook looks outward (what does the *competitor* own that we don't?).
+
+To triage *which* layer is failing (discoverability, clarity, authority, trust) before running this audit, see [[ai-visibility-four-layer-diagnostic]].
 
 ## The six dimensions
 

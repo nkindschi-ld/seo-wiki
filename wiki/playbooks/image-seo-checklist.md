@@ -144,3 +144,4 @@ a site's images or launching an image-heavy page.
 
 See [[google-images-seo]] and [[ahrefs-image-seo]] for the full source
 writeups.
+- [[accessibility-tree-audit-for-ai-agents]] — the agent-facing alt-text rules (empty alt on decorative images, spatial context on meaningful ones)

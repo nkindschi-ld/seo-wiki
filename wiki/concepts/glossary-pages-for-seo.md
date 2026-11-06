@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-11-02
+updated: 2026-11-06
 ---
 
 A glossary is a set of definitions for the terms of a site's subject
@@ -115,3 +115,4 @@ cannibalization ([[keyword-mapping-and-cannibalization]]).
 - [[glossary-page-build-checklist]]
 - [[topic-cluster-strategy]] · [[content-marketing-strategy]] ·
   [[keyword-research]]
+- [[structured-data-and-ai-search]] — the FAQ rich-result restriction and why schema shows no measured AI-citation lift, so DefinedTerm is for clarity, not citations

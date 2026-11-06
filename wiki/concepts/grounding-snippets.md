@@ -85,3 +85,9 @@ a non-existent paper while describing its own grounding.
 - Think in modular blocks; the winning unit is the sentence.
 
 Tactics are filed in [[geo-content-optimization-tactics]].
+
+## See also
+
+- [[chunkability]] — the same passage-level principle one level coarser; self-contained sentences survive extraction.
+- [[ai-search-reranking-pipeline]] — the rerank stage DEJAN's cross-encoder replication models; snippets are what survives it.
+- [[query-fanout]] — the sub-queries each snippet budget is spent against.

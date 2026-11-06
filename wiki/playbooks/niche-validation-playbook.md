@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-10-25
+updated: 2026-11-06
 ---
 
 # Niche Validation Playbook
@@ -41,6 +41,7 @@ competitor steps and [[keyword-research]] for first-party data mining.
 - [ ] AI check: which sources do AI Overviews and assistants cite for
       niche prompts? Thin or outdated sources = opening; a few dominant
       brands = lower attractiveness ([[surnex-finding-a-niche]]).
+- [ ] If one brand already holds a clear AI-mention lead in the niche, weigh how sticky that is: clear owners held #1 in 90.4% of month-over-month checks ([[topical-authority-in-ai-search]]).
 
 ## 4. Four-week research sprint
 

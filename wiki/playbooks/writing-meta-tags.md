@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-09-23
+updated: 2026-11-06
 ---
 
 
@@ -96,6 +96,7 @@ Make it a compelling headline. Curiosity + specificity beat keywords here.
 - [ ] Description reads like a sentence, under ~155 chars, with a reason to click
 - [ ] No stuffing, no defaults, no blanks
 - [ ] Title matches the search intent the page targets
+- [ ] H1 worded differently from the title tag (house rule in [[seo-copywriting]])
 
 ## Social preview tags (Open Graph)
 

@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-11-04
+updated: 2026-11-06
 ---
 
 # Structured Data (Schema.org) and AI Search
@@ -154,6 +154,7 @@ validity or eligibility and report it as citation.
 - [[entity-oriented-search-fundamentals]] — why entity markup exists.
 - [[geo-content-optimization-tactics]] — where the AirOps and Otterly
   numbers are used.
+- [[ai-mode-response-markup]] — unverified catalogue of AI Mode's internal rendering tags and per-entity "required attributes".
 
 ## Sources
 

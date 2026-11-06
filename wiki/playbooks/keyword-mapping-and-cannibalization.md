@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-09-04
+updated: 2026-11-06
 ---
 
 Why / when to use this: before investing in content or internal linking,
@@ -97,6 +97,8 @@ prompt/model optimization feature should target "prompt optimization,"
 product name) — keep the product name as an entity mentioned throughout
 the page, not the primary target keyword, and revisit the seed keyword
 once/if the feature name itself starts accruing volume.
+
+Before dropping a near-zero-volume seed, check Search Console impressions: tool volume undercounts real demand ([[dejan-stealthy-queries-2026]]).
 
 ## Map keywords to funnel stage (ToFu/MoFu/BoFu)
 

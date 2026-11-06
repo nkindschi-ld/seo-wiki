@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-11-04
+updated: 2026-11-06
 ---
 
 Why / when to use this: SaaS/software companies need a different SEO
@@ -239,3 +239,4 @@ rank:
 See [[semrush-saas-seo]], [[gofishdigital-seo-for-saas]],
 [[sej-advanced-saas-seo-strategies]], and
 [[sej-seo-software-businesses]] for the full source writeups.
+- [[glossary-pages-for-seo]] — a glossary as a learn-hub variant, with the scaled thin-page risk that also applies to marketplace templates

@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-11-04
+updated: 2026-11-06
 ---
 
 Why / when to use this: apply at the drafting stage, once a page is
@@ -96,3 +96,4 @@ relevant keywords, and hold the reader's attention once they arrive.
   craft-level guidance supports.
 
 See [[semrush-seo-copywriting]] for the full source writeup.
+- [[writing-meta-tags]] — title/description length rules, good-vs-bad examples, and the house 65/155 spec

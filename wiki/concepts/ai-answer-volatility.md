@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-11-02
+updated: 2026-11-06
 ---
 
 # AI Answer Volatility
@@ -56,6 +56,8 @@ Applied in [[ai-visibility-content-gap-audit]] and [[seo-reporting]].
 Related: [[generative-engine-optimization]],
 [[ai-coding-agent-tool-selection]] (category-level stability of agent
 picks).
+
+See [[ai-visibility-measurement-methodology]] for the native GSC/Bing reports and traffic-based estimates this volatility data should be read against.
 
 ## Conflicting Evidence
 

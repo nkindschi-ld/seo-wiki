@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo, seo]
-updated: 2026-10-05
+updated: 2026-11-06
 ---
 
 # Chunkability
@@ -136,3 +136,4 @@ section of [[geo-content-optimization-tactics]].
   documentation served to agents ("bad chunking is worse than a good page").
 - [[lexical-ranking-tf-idf-bm25]] — length normalization, the lexical-side
   reason a focused passage can outscore a longer one.
+- [[grounding-snippets]] — measured evidence that extraction works sentence by sentence and favours the opening; self-contained sentences survive.
