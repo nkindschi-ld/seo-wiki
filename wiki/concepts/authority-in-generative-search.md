@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo, seo]
-updated: 2026-10-05
+updated: 2026-11-06
 ---
 
 # Authority in Generative Search
@@ -131,7 +131,11 @@ out-cite marketing pages (see the reference-beats-transactional pattern in
   sources "dominate" (a hard preference).
   - Supported by: [[lumar-authority-filter-not-score]] (2026-09-02, no
     data); ChatGPT `site:`-targeting of brand domains for specs and pricing
-    ([[lilyray-chatgpt-fanout-queries-2026]], 2026-08, directional).
+    ([[lilyray-chatgpt-fanout-queries-2026]], 2026-08, directional); and
+    [[ora-ax-is-the-new-aeo-2026]] (2026-10-08) — on agent-ready sites 78%
+    of the answer came from the business's own pages, and ChatGPT's
+    `site:` searches of official sites rose to 23–24% of background
+    searches after Aug 8, 2026.
   - Partly contradicted by: [[tryprofound-ai-pricing-visibility-2026]]
     (2026-09-03, ~7,600 responses, Cloud 100, 6 engines). Owned pricing
     pages appear in 46% of pricing answers but are the **first** citation in
@@ -141,7 +145,9 @@ out-cite marketing pages (see the reference-beats-transactional pattern in
   isn't a pure spec query, because it invites user-reported "real cost"
   sources, so it may sit nearer the "general educational" row than the
   "technical specs" row. Being *present* is also a weaker test than being
-  *dominant*. Even so, the only measured data on a first-party factual query
+  *dominant*, and "first citation" is itself a noisy test — even a
+  persistent leading domain is cited first on under half of days
+  ([[detailed-ai-volatility-2026]]). Even so, the only measured data on a first-party factual query
   class shows official sources failing to dominate on most engines, so treat
   Lumar's "hard preference" row as engine-dependent (strongest on ChatGPT)
   until there's measured data on true spec queries.

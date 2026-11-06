@@ -61,7 +61,23 @@ See [[ai-visibility-measurement-methodology]] for the native GSC/Bing reports an
 
 ## Conflicting Evidence
 
-None yet. Only one dedicated volatility study in the wiki; the video
-share figure (~8–14% of AIO citations) is a different metric and period
-from the single-video-platform 10.6% on [[ai-citation-landscape]], so
-it is noted, not treated as a conflict.
+- **Claim**: a weekly single-run tracking prompt is enough to watch
+  citation *position* move on targeted queries.
+  - Supported by: [[competitor-citation-displacement]] (step 7 and its
+    checklist; DerivateX vendor framework, no data, page updated
+    2026-08-03).
+  - Contradicted by: [[detailed-ai-volatility-2026]] (2026-09-23) —
+    position is noisier than presence: even the leading domain was
+    cited first on only 43% (ChatGPT) / 28% (AIO) of days, and leaders
+    flip between fortnights on about half of prompts.
+  - **Current best guess**: follow Detailed — track **presence rate over
+    at least ~14 days of daily runs**, and treat week-to-week position
+    changes as noise unless they persist. The 14-day window is itself an
+    inference from a 28-day study. Flagged **unresolved**. (Filed during
+    the 2026-11-06 wiki merge.)
+- **Size of citation churn** vs. the older 40-60%-per-month figure: see
+  Conflicting Evidence on [[ai-citation-landscape]].
+
+Not a conflict: the video share figure (~8–14% of AIO citations) is a
+different metric and period from the single-video-platform 10.6% on
+[[ai-citation-landscape]].

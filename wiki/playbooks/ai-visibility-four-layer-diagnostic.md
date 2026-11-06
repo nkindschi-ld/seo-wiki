@@ -76,7 +76,10 @@ appearances were citations without the brand being named. See
 - Conflating citations, mentions, and recommendations.
 - Treating schema or llms.txt as citation switches — Google says it
   doesn't use AI-specific files; no published evidence they raise
-  citations.
+  citations. Corroborated in this wiki: [[llms-txt]] (null results
+  across independent tests) and [[structured-data-and-ai-search]] (a
+  price present only in JSON-LD was returned in 0 of 9 runs,
+  [[coreaex-saas-pricing-schema-2026]]).
 - Making content worse for people through machine-first formatting.
 
 **Strategic vs. experimental filter:** a tactic that would still improve

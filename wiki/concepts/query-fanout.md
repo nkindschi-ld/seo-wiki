@@ -28,7 +28,8 @@ were first filed; this page summarises and links to them.
   runs over the existing index rather than a separate ranking system
   ([[google-ai-optimization-guide]]).
 - **Volume and injected wording vary by engine** — Perplexity ~1.4
-  sub-queries per prompt, ChatGPT ~2.1, Grok ~6.8; ChatGPT injects
+  sub-queries per prompt, ChatGPT ~2.1 (April 2026 baseline — later
+  reported at 7.61, see Conflicting Evidence), Grok ~6.8; ChatGPT injects
   "best", "top", "comparison", "reviews" and the current year even when
   the user didn't. Results are merged with Reciprocal Rank Fusion, so
   content surfacing across several sub-queries wins. Full detail in
@@ -42,7 +43,8 @@ were first filed; this page summarises and links to them.
 ## Fanout is invisible in your analytics
 
 - Sub-queries are written by the assistant and **never reach Search
-  Console**, so the vocabulary that decides retrieval is missing from
+  Console** as such (Bing exposes a generalized view — see Conflicting
+  Evidence), so the vocabulary that decides retrieval is missing from
   analytics as well as from the page ([[dejan-new-tail-keyword-research]]).
 - **Implicit queries** — searches formed from on-device context such as a
   photo, screenshot, or open page — have no typed wording at all.
@@ -72,6 +74,34 @@ taxonomy ([[dejan-fanout-vectors-2026]]).
   their input.
 - **Status**: speculative — a direction to watch, not a reason to change
   tactics now.
+
+## Conflicting Evidence
+
+- **Claim**: ChatGPT issues ~2.1 sub-queries per prompt.
+  - Supported by: [[peec-ai-chatgpt-query-fanouts-2026]] (published
+    2026-07-07, April 2026 data).
+  - Contradicted by: [[lilyray-chatgpt-fanout-queries-2026]]
+    (2026-08-17) — average fan-out queries per prompt rose from 2.17 to
+    7.61, alongside `site:` use rising from 0.3% to 23% (also on
+    [[ai-citation-landscape]]).
+  - **Current best guess**: a change over time, not incompatible
+    measurements. Read 2.1 as the April 2026 baseline and 7.61 as the
+    later, **directional** figure (secondary writeup, undisclosed
+    method). Flagged **unresolved** until a primary dataset confirms it.
+- **Claim**: fan-out sub-queries are invisible in your analytics.
+  - Supported by: [[dejan-new-tail-keyword-research]] (2026-07-27) —
+    they "never reach Search Console".
+  - Contradicted by: [[bing-ai-performance-report]] (first-party
+    Microsoft help page, undated) — exposes generalized "grounding
+    queries" behind Copilot citations; and the `site:`-impressions
+    monitoring tactic in [[geo-content-optimization-tactics]]
+    ([[lilyray-chatgpt-fanout-queries-2026]], 2026-08-17).
+  - **Current best guess**: **mostly invisible** — Google Search Console
+    doesn't show fan-out queries as such; Bing's grounding queries are a
+    partial, generalized view (the first-party source is the strongest
+    evidence here). The Search Console `site:` tactic is an untested
+    hypothesis. Flagged **unresolved**. (Both filed during the
+    2026-11-06 wiki merge.)
 
 ## See also
 

@@ -147,6 +147,10 @@ The reranker scores **passages**, so:
 - **Strong pages can contain weak passages**, and **weaker-authority pages can
   contain the single clearest extractable answer** and win the citation.
 - **Page-level metrics alone cannot explain citation outcomes.**
+- **Measured at the sentence level**: [[dejan-grounding-snippets-2026]]
+  finds query-focused sentence scoring (replicated with a `deberta-v3-large`
+  cross-encoder), with the #1 source taking the largest share of a fixed
+  snippet budget — see [[grounding-snippets]].
 
 This is the retrieval-mechanics grounding for the wiki's chunk-level "Fraggle"
 guidance ([[ipullrank-optimize-for-sge]], and the "focus over comprehensiveness"

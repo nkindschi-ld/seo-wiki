@@ -3661,3 +3661,47 @@ Open: 7 cross-side conflicts surfaced to the user for approval
 before filing (citation churn magnitude, tracking cadence, ChatGPT
 retrieved-to-cited ratio, fan-out count over time, fan-out
 observability, meta description length, thin templated pages).
+
+## [2026-11-06] conflict | ai-citation-landscape — how fast cited sources churn (40-60%/month vs 50-75%/day)
+Unsourced SEL 40-60% monthly figure vs [[detailed-ai-volatility-2026]]'s
+next-day re-citation data. Best guess: Detailed is operative; older
+figure likely counts domains. Filed on [[ai-citation-landscape]].
+
+## [2026-11-06] conflict | ai-answer-volatility — weekly single-run position tracking vs presence over ~14 days
+[[competitor-citation-displacement]]'s weekly position check vs
+Detailed's "position is noisier than presence". Best guess: track
+presence over ~14 days of daily runs. Filed on [[ai-answer-volatility]];
+contested notes added to the playbook.
+
+## [2026-11-06] conflict | grounding-snippets — ChatGPT retrieved-to-cited ratio (~20:1 vs ~50%)
+DEJAN's ~20:1 vs Ahrefs (1.4M prompts) ~50% and AirOps by-position
+rates. Best guess: definition difference; use ~50%. Filed on
+[[grounding-snippets]].
+
+## [2026-11-06] conflict | query-fanout — ChatGPT sub-queries per prompt (2.1 vs 7.61)
+April 2026 Peec baseline vs later Lily Ray-reported 7.61. Best guess:
+change over time; 7.61 directional. Filed on [[query-fanout]].
+
+## [2026-11-06] conflict | query-fanout — whether fan-out queries are observable
+"Never reach Search Console" vs Bing's generalized grounding queries and
+the `site:`-impressions tactic. Best guess: mostly invisible; GSC
+`site:` tactic untested. Filed on [[query-fanout]]; caveat added to
+[[geo-content-optimization-tactics]].
+
+## [2026-11-06] conflict | seo-copywriting — meta description length (~120 vs 155)
+2023 Semrush ~120 vs [[writing-meta-tags]] and the house 155/65 spec.
+Best guess: 155/65 for LaunchDarkly pages. Filed on [[seo-copywriting]].
+
+## [2026-11-06] conflict | glossary-pages-for-seo — thin templated pages at scale
+2020 SEJ marketplace-template advice vs Google's Scaled Content Abuse
+policy. Best guess: newer policy wins; templates need unique substance.
+Filed on [[glossary-pages-for-seo]]; caveat added to [[saas-seo-strategy]].
+
+All seven approved by the user and flagged unresolved. Same pass added
+12 verified supporting citations across [[authority-in-generative-search]],
+[[agent-experience-ax]], [[topical-authority-in-ai-search]],
+[[ai-visibility-four-layer-diagnostic]], [[ai-shortlist-effect]],
+[[niche-selection-and-validation]], [[link-building]],
+[[parametric-memory-vs-grounding]] and [[ai-search-reranking-pipeline]].
+Two proposed citations dropped because the sources didn't clearly
+support them.

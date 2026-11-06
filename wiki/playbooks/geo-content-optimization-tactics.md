@@ -1352,7 +1352,8 @@ domains rather than open web search:
   Bing Webmaster Tools — a concrete way to detect whether ChatGPT (via
   Bing-index-backed retrieval) is issuing `site:`-restricted queries
   against your domain at all, and whether it's targeting the *correct*
-  one.
+  one. *(Untested hypothesis: Search Console doesn't show fan-out queries
+  as such — see Conflicting Evidence on [[query-fanout]].)*
 - **Clarify official-domain status** through title tag and meta
   description language (e.g. explicitly stating "official site" /
   the brand's canonical domain) as a countermeasure to the

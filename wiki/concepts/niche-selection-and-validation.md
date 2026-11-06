@@ -36,7 +36,11 @@ will pay once you rank. The step-by-step version is
   attractive) — per [[surnex-finding-a-niche]]. This is a single-source
   claim; the wiki's citation data ([[ai-citation-landscape]]) supports
   the mechanism (sources concentrate by topic) but nothing here tests
-  the niche-level prediction.
+  the niche-level prediction. Partial test: [[semrush-chatgpt-topic-authority-study]]
+  (1,094 ChatGPT categories) found only 15.2% of categories have a clear
+  owner and owners hold #1 in 90.4% of months — and lower-demand topics
+  have a clear owner *more* often (19% vs 11.3%), so a quiet niche isn't
+  automatically an open one (see [[topical-authority-in-ai-search]]).
 - **Economics vary widely by niche and model.** The Empire Flippers
   data ([[diggity-empire-flippers-affiliate-niches]]) shows affiliate
   sites earning more per backlink than other models, and sharply

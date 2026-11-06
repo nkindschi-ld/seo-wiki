@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-10-02
+updated: 2026-11-06
 ---
 
 # The AI Shortlist Effect
@@ -108,7 +108,9 @@ that table is the AEO equivalent of owning a featured snippet," and
 3. **Accurate, current pricing** — stale or wrong pricing measurably
    hurt selection odds; models don't always have current pricing, so
    this is a live accuracy-maintenance task, not a one-time content
-   edit. **Corroborated at scale** by
+   edit. Agents reading the site itself got pricing right 60% of the
+   time vs 37% from elsewhere ([[ora-ax-is-the-new-aeo-2026]]).
+   **Corroborated at scale** by
    [[tryprofound-ai-pricing-visibility-2026]] (2026-09-03, ~7,600
    pricing-prompt responses, Cloud 100, 6 engines). Owned pricing pages
    were the first citation in only 12% of answers, and one company drew

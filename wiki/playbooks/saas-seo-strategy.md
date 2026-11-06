@@ -114,7 +114,10 @@ relevant once a category gets crowded (SaaS company count grew ~5,000%
   each individual page is thin, but the template compounds into
   thousands of long-tail rankings. Worked examples: Shopify's app
   marketplace (140K+ monthly sessions, 3,500+ top-10 rankings), Zapier's
-  integration directory (65K+ sessions).
+  integration directory (65K+ sessions). *(Caveat, 2026: Google's
+  Scaled Content Abuse policy targets thin near-duplicate template
+  pages — each page needs unique substance. See Conflicting Evidence on
+  [[glossary-pages-for-seo]] and [[e-e-a-t-and-page-quality]].)*
 - **Tools & calculators**: genuinely useful standalone assets that also
   serve as a product gateway — these earn backlinks because they're
   useful in their own right, not through outreach. Worked examples:

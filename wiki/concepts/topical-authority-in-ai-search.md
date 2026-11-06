@@ -81,7 +81,10 @@ with the broader-web volatility figures (40–60% month-to-month
 citation-source churn in
 [[sel-what-is-generative-engine-optimization-geo-2026]]): *source*
 citations churn a lot, but an established *brand owner* of a topic is
-comparatively stable.
+comparatively stable. At the single-prompt level the margins are thin:
+#1 and #2 typically differ by ~2 of 28 days and the leader flips between
+fortnights on about half of prompts ([[detailed-ai-volatility-2026]]),
+consistent with narrow leads churning.
 
 ## Mentions vs. citations are decoupled
 

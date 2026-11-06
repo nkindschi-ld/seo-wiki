@@ -218,7 +218,8 @@ given query churns substantially over short timeframes. Practical
 implication: track citation performance on a recurring cadence rather
 than treating a single snapshot as a durable result, and don't read too
 much into losing (or gaining) a citation in any single month without
-a trend across several.
+a trend across several. *(Magnitude contested by newer daily data — see
+Conflicting Evidence: "How fast cited sources churn".)*
 
 ## Same source-type layers everywhere, different weighting
 
@@ -1530,6 +1531,24 @@ traffic profile.
     any ChatGPT Reddit-share number as time- and panel-specific.
     Flagged as **unresolved**; check the underlying Promptwatch/Qwairy
     and Semrush data before citing a figure.
+
+- **Claim**: 40-60% of cited sources change from one month to the next
+  (the "Cited-source sets are volatile month to month" section above).
+  - Supported by: [[sel-what-is-generative-engine-optimization-geo-2026]]
+    (2026-02-11) — secondary explainer; no stated methodology, and no
+    unit (URLs vs. domains).
+  - Contradicted by: [[detailed-ai-volatility-2026]] (2026-09-23; 28
+    days, 1,300+ prompts, 70k+ responses) — only ~25% (ChatGPT) and ~50%
+    (AI Overviews) of cited *pages* were cited again the **next day**,
+    i.e. 50–75% churn in a single day; exact cited-domain sets repeated
+    only 2.4% / 0.3% of the time. See [[ai-answer-volatility]].
+  - **Current best guess**: treat Detailed as the operative figure —
+    newer, primary, disclosed and far larger. The 40-60% monthly figure
+    is compatible only if it counts *domains* aggregated over a month;
+    read it as an unsourced, unit-unclear figure. Either way the
+    practical lesson is unchanged: measure presence over a window, not
+    snapshots. Flagged **unresolved** pending a source that states its
+    unit. (Filed during the 2026-11-06 wiki merge.)
 
 ## Conflicting Evidence — resolved
 

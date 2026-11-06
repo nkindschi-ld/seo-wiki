@@ -97,6 +97,21 @@ cannibalization ([[keyword-mapping-and-cannibalization]]).
     carry thin-content and cannibalization risk that the per-term
     advocate ignores. Flagged as unresolved.
 
+- **Claim**: thin, templated pages are fine at scale because the template
+  compounds into thousands of long-tail rankings.
+  - Supported by: [[sej-advanced-saas-seo-strategies]] (2020-10-01) via
+    [[saas-seo-strategy]] — marketplace formats where "each individual
+    page is thin, but the template compounds".
+  - Contradicted by: this page's thin-scaled-page risk (2026-11-02) and
+    Google's Scaled Content Abuse policy on [[e-e-a-t-and-page-quality]]
+    — near-duplicate per-entity pages are what the policy targets.
+  - **Current best guess**: the newer position, resting on official
+    Google policy, wins: templates are fine only when each page carries
+    unique, useful substance (real integration details, real
+    definitions). The 2020 traffic examples predate the policy.
+    Flagged **unresolved**; caveat added on [[saas-seo-strategy]].
+    (Filed during the 2026-11-06 wiki merge.)
+
 ## Sources
 
 - [[linkedin-wenstein-strategic-glossary-pages]] — structure options,

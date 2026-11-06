@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo]
-updated: 2026-10-08
+updated: 2026-11-06
 ---
 
 # Link Building
@@ -105,7 +105,10 @@ Per [[ahrefs-link-building]], not all links are worth the same:
     (2026-10-06) — DA/PA-style scores are "made up by a SaaS company,"
     approximate Google's link authority "at best," and cause good links
     to be refused; integration quality is what determines a placed
-    link's value.
+    link's value. Adjacent evidence: [[semrush-chatgpt-topic-authority-study]]
+    found Authority Score predicted AI topic ownership in only 52.5% of
+    categories (near a coin flip) — this speaks to AI visibility, not to
+    a link's ranking value.
   - **Current best guess (unresolved)**: both sides have a point. These
     metrics are vendor proxies, not Google signals (note Ahrefs sells
     one), so don't reject a relevant, well-integrated link on score

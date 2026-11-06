@@ -37,6 +37,8 @@ relevant keywords, and hold the reader's attention once they arrive.
 **On-page structure**
 - Title tag under ~55-60 characters, primary keyword included.
 - Unique meta description under ~120 characters with a clear CTA.
+  *(Contested: newer guidance and the house spec use ~155 — see
+  Conflicting Evidence below.)*
 - Descriptive H1 with proper H2/H3/H4 hierarchy underneath — not just
   visual formatting, an actual outline.
 - Title tag and H1 should never be identical. They cover the same topic,
@@ -74,7 +76,9 @@ relevant keywords, and hold the reader's attention once they arrive.
 - [ ] Primary keyword chosen with intent verified against the SERP.
 - [ ] Content format matches search intent (list/how-to/comparison/
       product page, as appropriate).
-- [ ] Title tag ≤ ~60 chars, meta description ≤ ~120 chars with a CTA.
+- [ ] Title tag ≤ ~60 chars, meta description ≤ ~120 chars with a CTA
+      (≤ 155 / 65 with " | LaunchDarkly" for LaunchDarkly pages — see
+      Conflicting Evidence).
 - [ ] Clear H1 + logical H2/H3 outline; TOC included for longer pieces.
 - [ ] H1 worded differently from the title tag (never an exact match).
 - [ ] Paragraphs lead with the point; jargon explained or removed.
@@ -83,6 +87,23 @@ relevant keywords, and hold the reader's attention once they arrive.
       end.
 - [ ] Content substantial/original enough to be link-worthy, not just
       rank-worthy.
+
+## Conflicting Evidence
+
+- **Claim**: keep meta descriptions under ~120 characters.
+  - Supported by: [[semrush-seo-copywriting]] (2023-01-31) — vendor
+    blog; a cautious mobile-truncation target.
+  - Contradicted by: [[writing-meta-tags]] (updated 2026-09-23) —
+    ~150–155 characters; [[writer-checklist-blog-posts]] — under 155;
+    and LaunchDarkly's house meta spec (155-char description, 65-char
+    title including " | LaunchDarkly").
+  - **Current best guess**: use **155 / 65 for LaunchDarkly pages** —
+    newer, and it's the site owner's own spec. Keep ~120 as an optional
+    tighter target where mobile truncation matters; Google rewrites
+    most descriptions anyway (~63% per [[ahrefs-site-audit-study-2023]]).
+    Title-length guidance (~55–60 here vs. ~50–60, max ~65) differs only
+    slightly and isn't treated as a conflict. Flagged **unresolved**.
+    (Filed during the 2026-11-06 wiki merge.)
 
 ## See also
 

@@ -135,7 +135,10 @@ the crawlability floor.
     off-site citation breadth and brand fame held equal, own-site
     readability alone produced a 1.9× recommendation gap. The authors
     argue off-site tactics "lose leverage each time agents go to the
-    source."
+    source." Also consistent: [[derivatex-4cs-explainable-to-ai-2026]]'s
+    small ChatGPT study (233 recommendations) — 84% of citations came
+    from vendor self-descriptions or niche sites, G2/Capterra zero (see
+    [[explainable-to-ai-4cs]]).
   - **Current best guess**: these mostly measure different things.
     The correlation data measures brand *mentions* in chat answers; ora
     measures *recommendation strength and accuracy* from agents doing

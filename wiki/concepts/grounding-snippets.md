@@ -58,7 +58,8 @@ persists of you is whatever the first snippet captured.
 
 - **Google/Gemini**: near 1:1 received-to-cited; results held as
   ordered `query.result` pairs (~10 per query).
-- **OpenAI/GPT**: widest net, fewest citations (~20:1); sees each result
+- **OpenAI/GPT**: widest net, fewest citations (~20:1 — contested as a
+  rate, see Conflicting Evidence); sees each result
   as a small card (title, URL, 1–3 sentence snippet) and opens fixed
   text windows rather than whole pages.
 - **Anthropic/Claude**: two-pass grounding, most token-hungry, exposes
@@ -85,6 +86,25 @@ a non-existent paper while describing its own grounding.
 - Think in modular blocks; the winning unit is the sentence.
 
 Tactics are filed in [[geo-content-optimization-tactics]].
+
+## Conflicting Evidence
+
+- **Claim**: ChatGPT cites roughly 1 in 20 of the results it receives
+  (~20:1, the "visibility trap").
+  - Supported by: [[dejan-grounding-snippets-2026]] (2026-06-21); the
+    single-query table on [[parametric-memory-vs-grounding]] (39
+    received → 2 cited, n=1).
+  - Contradicted by: [[ahrefs-why-chatgpt-cites-pages-2026]]
+    (2026-04-15, 1.4M prompts) — ChatGPT cites ~50% of retrieved URLs
+    overall; [[airops-fan-out-effect-2026]] (2026-04-13) — 58.4%
+    citation rate at retrieval position 1, 14.2% at position 10.
+  - **Current best guess**: probably a definition difference — DEJAN
+    appears to count every result card in the search payload, Ahrefs
+    counts retrieved URLs. Ahrefs and AirOps are far larger with
+    disclosed designs, so use **~50% as "share of retrieved URLs
+    cited"** and keep 20:1 only as "OpenAI casts the widest net," not as
+    a citation rate. Flagged **unresolved**. (Filed during the
+    2026-11-06 wiki merge.)
 
 ## See also
 

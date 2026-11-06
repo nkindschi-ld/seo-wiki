@@ -29,7 +29,9 @@ routes, and they behave differently for visibility:
   A 7B-parameter model holds roughly 1.75 GB of factual content.
   **Exposure count is the binding constraint** — a fact seen a few times
   is encoded weakly or not at all; one repeated across many sources is
-  recalled reliably.
+  recalled reliably. Consistent at the brand level: brands mentioned on
+  fewer than 2,000 indexed pages were rarely named in answers
+  ([[victorious-q2-2026-quarterly-search-report]]).
 - **Frozen at the knowledge cutoff**: changing it needs fine-tuning,
   further pre-training, or weight editing — none run per query. A model
   can know today's date and still hold a world months or years old.
@@ -80,7 +82,11 @@ DEJAN's SEO reading ([[dejan-generative-self-retrieval-2026]]):
   **internal ranking**: the model surfaces candidate brands from memory,
   weighs them against recalled facts plus whatever grounding sits in
   context, and picks the best-supported. Grounding narrows the field;
-  it doesn't replace this step.
+  it doesn't replace this step. Corroborated: brands named in ChatGPT's
+  *initial* fan-out query were cited 68.9% of the time vs 2.1% for
+  brands only fetched ([[lilyray-chatgpt-fanout-queries-2026]]), and
+  brands in a model's top-10 training memory were live-searched 3.2×
+  more often ([[geosurge-model-memory-predicts-search-2026]]).
 - **Audit the facts, not the verdict.** "Best pick" has no truth value,
   but the attributes a model associates with your product (integrations,
   use cases, features) can be right or fabricated — and fabricated ones
@@ -88,7 +94,9 @@ DEJAN's SEO reading ([[dejan-generative-self-retrieval-2026]]):
   representation-auditing advice in [[geo-content-optimization-tactics]].
 - **Uneven by audience** (inference): reasoning mode depends on
   subscription tier and settings, so the most accurate version of your
-  brand may reach paying users only.
+  brand may reach paying users only. Retrieval also differs by tier:
+  ChatGPT's `system2` path reaches Reddit, web-PDF and YouTube engines
+  that `system1` doesn't ([[chatgpt-vertical-retrieval-engines]]).
 
 ## Implications for SEO/AEO
 
