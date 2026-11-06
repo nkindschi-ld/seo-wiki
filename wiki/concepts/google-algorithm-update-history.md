@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo]
-updated: 2026-09-04
+updated: 2026-11-04
 ---
 
 # Google Algorithm Update History
@@ -9,8 +9,33 @@ updated: 2026-09-04
 A taxonomy and timeline of Google's named search ranking updates and
 incidents, based on
 [[google-search-status-dashboard-history]] (a live Google status page,
-snapshotted 2026-07-07 covering July 2021–June 2026). Full chronological
-list lives in `wiki/timeline.md`; this page synthesizes the patterns.
+snapshotted 2026-07-07 covering July 2021–June 2026, re-checked
+2026-10-26 for the 2026 list below). Full chronological list lives in
+`wiki/timeline.md` (the August and September 2026 spam updates were
+backfilled there on 2026-11-04); this page synthesizes the patterns.
+
+## 2026 updates
+
+Every ranking update on Google's Search Status Dashboard in 2026, as
+checked on 2026-10-26. Times are US/Pacific. No core update has run since
+the May 2026 core update. The dashboard lists nothing after the September
+2026 spam update finished on Oct 8.
+
+| Update | Rollout | Length | What it targeted | Source |
+|---|---|---|---|---|
+| February 2026 Discover update | Feb 5–26 | 21 days, 17 hours | Discover feed, not web search rankings | [Dashboard](https://status.search.google.com/incidents/mYbNTqV1ytDc2fA8hUz4) |
+| March 2026 spam update | Mar 24–25 | 19 hours, 30 minutes | Spam policy violations | [Dashboard](https://status.search.google.com/incidents/VbnSXAH4SmEcxPtx4YSD) |
+| March 2026 core update | Mar 27–Apr 8 | 12 days, 4 hours | Broad core ranking systems | [Dashboard](https://status.search.google.com/incidents/7eTbAa2jWdToLkraZj5y) |
+| May 2026 core update | May 21–Jun 2 | 11 days, 21 hours | Broad core ranking systems | [Dashboard](https://status.search.google.com/incidents/wdAXJk6LRRihEjpzEeWE) |
+| June 2026 spam update | Jun 24–26 | 2 days, 1 hour | Spam policy violations | [Dashboard](https://status.search.google.com/incidents/YUX1peHev5a4fkxLDiUQ) |
+| August 2026 spam update | Aug 18 (09:27)–Aug 21 (01:49) | 2 days, 16 hours | Spam policy violations, all languages and locations. Google called it "a normal spam update" and named no narrower target. | [Dashboard](https://status.search.google.com/incidents/LEubPCm2octf2uMqCFKE), [Google on LinkedIn](https://www.linkedin.com/posts/today-we-released-the-august-2026-spam-update-share-7495517568963891201-qUDS/) |
+| September 2026 spam update | Sep 24 (09:15)–Oct 8 (01:00) | 13 days, 16 hours | Spam policy violations, all languages and locations. Google called it "a normal spam update" and named no narrower target. Google estimated up to two weeks. At almost 14 days, it was the longest 2026 spam update. | [Dashboard](https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu), [Google on X](https://x.com/googlesearchc/status/2103159043347128638) |
+
+Google didn't say either spam update targeted link spam or site
+reputation abuse. Some third-party coverage says "not link spam," but
+that's the writers' reading, not Google's statement. Google's guidance
+for both points to its
+[spam updates documentation](https://developers.google.com/search/docs/appearance/spam-updates).
 
 ## Update types
 
@@ -60,6 +85,13 @@ claim.
   ranking systems, consistent with [[e-e-a-t-and-page-quality]]'s
   framing of "helpful, people-first content" as an ongoing quality
   standard rather than a one-time update to react to.
+- **Not all tracked volatility is an update.** Since 2026-09-13, Google
+  has been serving some rank-tracker requests poisoned SERPs (swapped
+  results on a normal-looking page), peaking at 25–27% of SERPs on
+  Sep 27–29 per [[nozzle-poisoned-google-serps-2026]]. That's a data
+  collection problem, not a ranking change, and it isn't on the Search
+  Status Dashboard. Third-party volatility indexes built on scraped SERPs
+  from that period will overstate volatility. See [[serp-poisoning]].
 - Check `wiki/timeline.md` directly for the full dated list, and
   re-ingest this source periodically since it's a live page that grows
   over time.
@@ -70,6 +102,8 @@ claim.
   are presumably built on.
 - `wiki/timeline.md` — the full chronological event list this concept
   synthesizes.
+- [[serp-poisoning]] — fake volatility from scraped-SERP poisoning, to
+  tell apart from real updates.
 - [[classic-seo-ranking-factors]] — the tactic-level playbook these
   updates repeatedly rewarded or penalized; useful for reading any
   given update against what it actually changed in practice.

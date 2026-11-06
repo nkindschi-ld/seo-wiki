@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-09-10
+updated: 2026-11-04
 ---
 
 > To *diagnose* how well AI already understands the brand this playbook builds
@@ -38,7 +38,8 @@ how-to that operationalizes the four trials above:
    a branded-SERP/knowledge-panel gap analysis: how complete is your
    knowledge panel vs. competitors', which entity-only SERP features
    exist for your key user intents, and how does your brand appear in
-   AI-powered results (SGE/Bard/AI Overviews) for industry-relevant
+   AI-powered results (AI Overviews, AI Mode, Gemini; the source's
+   "SGE/Bard" are the old names) for industry-relevant
    queries. Tools: Google Knowledge Graph Search API, Kalicube's API
    Explorer.
 2. **Define the brand entity bio as a semantic triple**: "Brand Name is

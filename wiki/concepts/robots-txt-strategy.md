@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo]
-updated: 2026-09-10
+updated: 2026-10-08
 ---
 
 # Robots.txt Strategy: What It Is, What It Isn't
@@ -276,6 +276,20 @@ AI crawlers"):
   disallowed content, and it isn't reliably auditable from server logs
   alone when the assistant uses a generic user-agent.
 
+## The cost of blocking AI agents
+
+Per [[ora-ax-is-the-new-aeo-2026]] (37,927 agent runs, 1,056 sites):
+when a buyer's agent is blocked or can't read a site, it almost never
+gives up (~99% still answer). It builds the answer from web search and
+other sites instead. That leads to a 1.9× lower rate of clear
+recommendations and answers 3.7× more likely to omit every asked fact.
+It also costs the agent operator +64% on average per grounded answer.
+Blocking AI *agents* (as distinct from training crawlers) doesn't keep
+you out of the answer. It removes your own pages as the evidence. Weigh
+any AI-user-agent disallow against this, and check that WAF/bot-
+protection rules aren't 403ing agent fetches unintentionally. See
+[[agent-experience-ax]].
+
 ## Conflicting Evidence
 
 - **Claim**: `Disallow`-ing a URL in robots.txt is a valid "quick fix" for
@@ -303,6 +317,7 @@ AI crawlers"):
 
 - [[ai-assistants-robots-txt-compliance-2026]] — the per-assistant
   compliance data and attribution/access findings above.
+- [[llms-txt]] — the often-confused sibling file: `llms.txt` suggests what's worth fetching, robots.txt controls access; it's not a substitute
 - [[robots-txt-audit-checklist]] — Operational audit checklist with syntax rules, dangerous mistakes, GSC monitoring
 - [[technical-seo-audit-checklist]] — Broader crawl/index/serve audit; robots.txt is one section
 - [[how-google-search-works]] — Crawl stage and crawl budget allocation

@@ -1,6 +1,6 @@
 ---
 type: source
-tags: [aeo, geo]
+tags: [aeo]
 date_published: 2026-06-09
 date_ingested: 2026-08-06
 origin: raw/studies/geosurge-model-memory-predicts-search-2026.md

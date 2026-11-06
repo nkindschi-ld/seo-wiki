@@ -1,7 +1,7 @@
 ---
 type: source
 tags: [seo]
-date_published:
+date_published: 2020-04-20
 date_ingested: 2026-09-04
 origin: raw/articles/pitchbox-link-prospecting-hacks.md
 ---

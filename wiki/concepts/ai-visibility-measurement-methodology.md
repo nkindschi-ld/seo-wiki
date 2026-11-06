@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-08-20
+updated: 2026-11-06
 ---
 
 # AI Visibility Measurement Methodology
@@ -87,6 +87,17 @@ Understanding *why* to measure AI visibility:
 
 3. **Measurement Lag** — Both traffic-based methods and tool-based methods (Trakkr, Evertune) necessarily lag behind real-time AI responses. By the time you see traffic or tool reports, the underlying citation landscape may have shifted.
 
+4. **Scraped Google data may be poisoned (since 2026-09-13)** — Per
+   [[nozzle-poisoned-google-serps-2026]], Google has been serving some
+   automated collectors complete-looking SERPs with swapped results
+   ([[serp-poisoning]]). On poisoned SERPs, AI Overviews appear less often
+   (34.9% vs 54.2% baseline) and keep only 42.3% of the previous SERP's
+   cited sources (vs 68.8%). Any tool or study that measures AI Overview
+   presence or citations by scraping Google after that date can
+   understate AI Overview prevalence and overstate citation churn, unless
+   it filters poisoned pages. Single vendor source; treat as a caveat to
+   check, not a correction to apply.
+
 ## Related Measurement Frameworks
 
 - **Personal context management** ([[personal-context-signals-in-ai-search]], 2026-08-20) — A proposed third measurement/strategy layer alongside public web presence and AI retrieval optimization: whether a brand appears in a *specific user's* personalized AI Mode results via opted-in Gmail/Photos signals. Standard citation-tracking tools (Trakkr, Evertune, etc.) can't see this layer at all, since it's private and per-user rather than a public, poolable citation. Single-source, early-evidence finding — not yet a validated measurement practice.
@@ -98,8 +109,10 @@ Understanding *why* to measure AI visibility:
 
 - [[ai-visibility-correlation-factors]] — Which brand/SEO metrics correlate with being cited (not how to measure it)
 - [[ai-citation-landscape]] — Empirical patterns in what AI systems cite (sources, media types, freshness)
+- [[serp-poisoning]] — Data-quality caveat for scraped Google SERP and AI Overview data since 2026-09-13
 - [[personal-context-signals-in-ai-search]] — the personal-context-management layer these standard measurement tools can't see
 - [[geo-content-optimization-tactics]] — Actionable tactics to improve AI visibility (once you can measure it)
 - [[wholewhale-ai-brand-footprint-measurement]] — The source introducing the AI Brand Footprint metric and reverse-engineering formula
 - [[google-generative-ai-performance-report]] — Google's own native impression-tracking tool for AI Overviews/AI Mode, partially closing the measurement gap for Google's AI surfaces
 - [[bing-ai-performance-report]] — Bing's own native citation-tracking tool for Copilot/Bing AI summaries, including the Intents/Topics/Citation Share/Compare preview capabilities
+- [[ai-answer-volatility]] — how much AI answers churn run to run and day to day; why presence over a ~2-week window beats single-run snapshots

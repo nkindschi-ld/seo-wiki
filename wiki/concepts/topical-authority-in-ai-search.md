@@ -1,7 +1,7 @@
 ---
 type: concept
-tags: [aeo, geo]
-updated: 2026-08-06
+tags: [aeo]
+updated: 2026-11-06
 ---
 
 # Topical Authority in AI Search
@@ -81,7 +81,10 @@ with the broader-web volatility figures (40–60% month-to-month
 citation-source churn in
 [[sel-what-is-generative-engine-optimization-geo-2026]]): *source*
 citations churn a lot, but an established *brand owner* of a topic is
-comparatively stable.
+comparatively stable. At the single-prompt level the margins are thin:
+#1 and #2 typically differ by ~2 of 28 days and the leader flips between
+fortnights on about half of prompts ([[detailed-ai-volatility-2026]]),
+consistent with narrow leads churning.
 
 ## Mentions vs. citations are decoupled
 
@@ -160,3 +163,6 @@ push for a ≥5-point mention-share margin to reach the durable-owner moat.
 - [[geosurge-model-memory-predicts-search-2026]] — the training-memory →
   live-search mechanism upstream of mention/ownership (3.2× search-rate
   gap for remembered brands).
+- [[ai-answer-volatility]] — per-prompt daily view: thin #1/#2 margins, leader flips between fortnights on ~half of prompts
+- [[niche-selection-and-validation]] — applies the inverse-demand paradox when choosing which niche to enter
+- [[parametric-memory-vs-grounding]] — the mechanism under "memory is upstream": exposure-count encoding and the model's internal ranking of candidates.

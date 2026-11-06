@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-09-17
+updated: 2026-11-06
 ---
 
 
@@ -57,6 +57,44 @@ over these content tactics when the two compete for effort.**
 **Best combination tested:** Fluency Optimization + Statistics Addition
 together outperformed any single tactic by 5.5%+. If you can only pick
 one pairing, use this one.
+
+> **Contested (2026-11):** DEJAN's 2,249-experiment LLM re-ranking
+> study found the opposite of Tier 1 for credentials — statistics and
+> study citations, .gov/.edu citations, awards, and expert endorsements
+> were among the *least* effective edits. See the next section and the
+> Conflicting Evidence entry on [[generative-engine-optimization]].
+
+## Framing and query alignment beat credentials (LLM re-ranker win rates)
+
+Per [[dejan-content-optimization-engine-2026]] (2,249 experiments, 113
+client sites, an LLM ranker judging each one-change edit against the
+page's real competitors; vendor data, not public). Share of tested
+ideas that produced a real rank gain:
+
+| Idea family | Win rate | Strongest single levers | Win rate |
+|---|---|---|---|
+| Framing (list, definition, how-to angle) | 31.4% | "Best of" / top-N framing | 38.4% |
+| Alignment (query words and intent) | 26.2% | "What is" / definition framing | 36.7% |
+| Architecture (opening line, sentence length, formatting) | 25.4% | Clear category definitions | 33.3% |
+| Style (voice, readability) | 25.2% | Short, concise sentences | 33.1% |
+| Substance (facts, entities, numbers) | 25.1% | How-to / step-by-step framing | 30.9% |
+| Proof (awards, endorsements, citations) | **15.4%** | Matching query intent | 27.7% |
+
+Weakest single levers: awards/certifications 13.1%, expert endorsements
+14.8%, scale signals 15.6%, statistics and study citations 18.2%,
+.gov/.edu citations 18.9%, adding more raw numbers 20.7%.
+
+How to use it:
+
+- **Fix framing and query match first.** Decide whether the page should
+  be a list, a definition, or a how-to for the target query, and make
+  the opening line answer it directly. "Best of" framing also matches
+  the dominant fanout injection pattern ([[listicles-in-ai-search]]).
+- **Keep credentials for humans and E-E-A-T**, but don't expect them to
+  tip an LLM choosing between comparable pages.
+- **Test every edit in context.** For Gemini, the two strongest positive
+  factors also appeared on the negative list — a lever can help one
+  competitive set and hurt another. ~3 of 4 edits did nothing or hurt.
 
 ## Pick winnable topics, then defend the 5-point moat
 
@@ -167,6 +205,11 @@ a measurable axis), not data dumps or narrative-buried stats.
 - **Don't gate it.** Proprietary data behind a lead-gen form can't be
   crawled/cited — if citation is the goal, publish the benchmark
   itself openly, even if a deeper report stays gated.
+- **Developer-content variant (supporting, low rigor):**
+  [[balakrishnan-seo-to-geo-developers-guide]] gives the same advice to
+  developer blogs: publish the benchmark nobody else has run, with the setup
+  (environment, versions, sample size) and test code linked. Its example
+  numbers are illustrative, not real results.
 
 ## Optimize for absorption, not just citation count
 
@@ -287,7 +330,10 @@ Overviews' RAG pipeline retrieves and cites specific text chunks
   Identify which specific paragraph or section is likely to be
   retrieved for a target query, and make *that* chunk clear, complete,
   and self-contained — a great page with one weak target section can
-  still fail to get cited.
+  still fail to get cited. **The full rubric now lives on [[chunkability]]**
+  (2026-10-05, from [[lumar-chunkability]]): topical cohesion, boundary
+  clarity, answer density and self-contained meaning, plus the common
+  low-chunkability patterns and targeted fixes.
 - **Score chunk relevance before publishing**, using tools like
   MarketBrew's AI Overviews Visualizer, Orbitwise, SurferSEO, or
   MarketMuse. Target 80%+ similarity to currently-surfaced
@@ -474,6 +520,11 @@ Per [[airops-fan-out-effect-2026]]:
 - **Add JSON-LD schema markup**: +6.5pp citation advantage overall.
   Strongest types: MedicalWebPage (47%), BreadcrumbList (46.2%),
   FAQPage (45.6%).
+  - *Contested (2026-11-04):* this is observational. Ahrefs' matched
+    before/after study (via [[coreaex-saas-pricing-schema-2026]]) found
+    no lift when pages *added* JSON-LD and attributed the raw
+    correlation to site quality. See the Conflicting Evidence on
+    [[structured-data-and-ai-search]].
 - **Write at a college reading level** (Flesch-Kincaid 16-17): 35.9%
   citation, outperforming both simpler and more academic writing.
 
@@ -507,6 +558,31 @@ from the structural/schema findings above:
   citability using a RAG pipeline built on the same/similar model
   family before publishing, rather than waiting to observe live AI
   Overview behavior.
+
+## Write for sentence-level extraction (grounding snippets)
+
+Per [[dejan-grounding-snippets-2026]] (7,060 queries, 883,262 snippets;
+directional) — the mechanism under the front-loading and
+focus-over-comprehensiveness findings above. See [[grounding-snippets]].
+
+- **Each query gets ~2,000 words of grounding, split by rank** (#1 ≈
+  28%, #5 ≈ 13%). Length doesn't buy more share: coverage drops from
+  ~61% (<1,000 words) to ~13% (3,000+), and selection plateaus near
+  540 words. Make the page dense, not long.
+- **Opening paragraphs are extracted almost wholesale** — put the
+  answer, the category definition, and key facts there.
+- **Write sentences that stand alone.** Extraction is per sentence and
+  stitched with ellipses, so pronouns and "as mentioned above" lose
+  their meaning.
+- **Keep core service info, process steps, pricing, and examples in the
+  main text** — those survive. Navigation, boilerplate, promos, and
+  verbatim testimonials get dropped.
+- **Strip structural noise** (inline TOCs, repeated headers, stray
+  markers) from the main content; it gets scored like sentences.
+- **Cover the fanout angles** a question splits into, since each
+  sub-query extracts separately ([[query-fanout]]).
+- Check what actually gets pulled with a grounding-snippet tool (e.g.
+  DEJAN's free snippets.dejan.ai) rather than guessing.
 
 ## Freshness by vertical
 
@@ -624,6 +700,19 @@ Per [[google-ai-optimization-guide]], Google explicitly says these do
   don't bother with decorative "point the AI here" markup either. The
   mechanism that *did* deliver Markdown was HTTP content negotiation (see
   [[technical-seo-audit-checklist]] §5), not any special file or hint.
+  **Third traffic-side null result (2026-10-02)**: per
+  [[limy-llms-txt-2026-full-guide]], a 515M-event bot-traffic dataset
+  across a vendor's client brands had only **408** requests for
+  `/llms.txt` in ~90 days. The filter covered search and training crawlers
+  only, so it can't speak to coding agents. The spec itself (v2,
+  2026-08), the coding-agent/docs case, and an implementation checklist
+  for docs sites now live on [[llms-txt]].
+  **Serving Markdown pages instead of HTML is also null so far
+  (2026-10-02).** [[punturo-markdown-llm-bot-traffic-rct-2026]], the
+  wiki's first randomized test of a "Markdown for AI" tactic (380 pages,
+  6 sites, 20 days), found no significant lift in LLM bot visits. The
+  CUPED-adjusted lift was +13.9%, CI [−11.2%, +46.8%]. It measured crawl
+  volume, not citations, and had no coding agents in the bot set.
 - "Chunking" content into unnaturally small pieces for AI to parse.
 - Obsessing over structured data specifically for AI purposes (still fine
   to use for general SEO, just not an AI-visibility requirement).
@@ -831,6 +920,49 @@ can beat five separate playbooks:
   with ChatGPT (39%) than with either Google surface (27-34%) — Gemini
   needs its own strategy, not a "just optimize for Google" shortcut.
 
+## Benchmark your citation mix against your industry median (2026-10-02)
+
+Per [[tryprofound-where-ai-citations-come-from]] (11.84B citations, 8
+engines, 29 industries; vendor data). The right weighting of brand vs.
+earned vs. social depends heavily on industry, so set targets against
+your industry, not a global average.
+
+1. **Measure your own mix.** For your tracked prompts, bucket every
+   citation as:
+   - your own site
+   - other companies' sites (competitors, partners, integrations)
+   - earned (editorial, institutional, PR wire)
+   - social/UGC
+
+   Do it per engine, because the mixes differ (see below).
+2. **Compare with the industry median.** Median earned share runs from
+   about 59–61% (pharma, government) to 11–12% (software, marketing).
+   Social runs from about 5% (pharma) to about 17% (fashion). A 30%
+   earned share is far behind in pharma but well ahead in software.
+   Within one industry, the 25th and 75th percentiles can differ by up
+   to 43 points, so the median is a baseline, not a ceiling.
+3. **Invest where the gap and the engine overlap:**
+   - **Social/UGC** pays off on Google surfaces (AI Overviews 15.3%,
+     AI Mode 14.4%; fashion on AI Overviews about 25%). It barely
+     registers on Copilot (about 3.5%), Claude (about 4%) or Gemini
+     (about 4.5%).
+   - **Earned media** matters most for ChatGPT (30%) and least for AI
+     Overviews (17%).
+4. **For SaaS/B2B, prioritize other companies' sites.** In software,
+   about 73% of citations are other companies' sites, vs. 6% for your
+   own and 12% earned. Integration-partner docs, marketplace listings,
+   competitor comparison pages and adjacent vendors' content describing
+   you are the biggest single layer. This is the "commercial &
+   editorial" layer above, measured for one vertical. Make sure those
+   pages describe you accurately and consistently; see
+   [[tryprofound-where-inaccurate-ai-claims-come-from]] for how often
+   competitor sites get facts wrong (4.68%).
+
+Caveat: the numbers come from Profound customer categories with
+LLM-assigned industry labels. The "brand vs. earned" headline conflicts
+with Muck Rack's on the surface, but that is likely taxonomy (see
+Conflicting Evidence in [[ai-citation-landscape]]).
+
 ## Five-component intent framework and AI-reuse formatting
 
 Per [[similarweb-how-to-win-the-race-for-gen-ai-search-2026]] — a more
@@ -858,7 +990,10 @@ and cite):
 - [ ] Short, atomic paragraphs — one idea per block
 - [ ] Predictable templates the model recognizes (definitions,
       comparisons, FAQs, steps)
-- [ ] Schema markup where relevant (FAQPage, HowTo, Article)
+- [ ] Schema markup where relevant (Article, BreadcrumbList; FAQPage
+      only mirroring visible Q&A). Skip HowTo for rich results: Google
+      dropped HowTo rich results in 2023 and FAQ rich results for most
+      sites ([[structured-data-and-ai-search]])
 - [ ] Explicit, consistent entity naming throughout
 
 **FAQ schema citation lift (concrete number)**: per
@@ -868,6 +1003,11 @@ schema produced a 350% increase in AI citations (2,379 vs. 529) on the
 pages tested. One experiment, not independently replicated in this
 wiki yet, but a concrete number behind the generic "add FAQPage schema"
 advice already in the checklist above.
+*Contested (2026-11-04):* the experiment describes no control or
+isolation of the markup from the FAQ content, and matched studies found
+no general schema citation effect. The FAQ content is the more likely
+lever; add FAQPage as a mirror of visible Q&A without promising a lift.
+See [[structured-data-and-ai-search]].
 
 ## Measuring AI visibility as sustained topical authority
 
@@ -1212,7 +1352,8 @@ domains rather than open web search:
   Bing Webmaster Tools — a concrete way to detect whether ChatGPT (via
   Bing-index-backed retrieval) is issuing `site:`-restricted queries
   against your domain at all, and whether it's targeting the *correct*
-  one.
+  one. *(Untested hypothesis: Search Console doesn't show fan-out queries
+  as such — see Conflicting Evidence on [[query-fanout]].)*
 - **Clarify official-domain status** through title tag and meta
   description language (e.g. explicitly stating "official site" /
   the brand's canonical domain) as a countermeasure to the
@@ -1388,7 +1529,11 @@ options, not what gets cited on the open web:
 - **Keep pricing current everywhere a model might source it.** Stale or
   wrong pricing measurably hurt selection odds; this is an ongoing
   accuracy-maintenance task (across your own site and any third-party
-  pages a model might cite), not a one-time content edit.
+  pages a model might cite), not a one-time content edit. For a
+  dedicated audit (baseline prompt, the five-part "pricing answer
+  stack," bot-readability checks, off-site consensus via Vendr, Reddit
+  and G2), see [[ai-pricing-visibility-audit]], per
+  [[tryprofound-ai-pricing-visibility-2026]].
 - **Disclose downsides plainly instead of omitting or spinning them.**
   Trade-offs stated directly increased user trust in the comparison and
   correlated with being *selected*, not rejected — counterintuitive
@@ -1589,6 +1734,14 @@ this kind of manipulation rather than a genuine organic ranking change.
 See [[kumar-lakkaraju-manipulating-llms-2024]] for the full verified
 findings.
 
+**A plain-text version seen in the wild (2026-10-19):** some vendor pages
+now put recommendation instructions for LLMs straight into their HTML. No
+adversarial optimization is involved. [[infrasity-github-seo-guide]] serves
+a hidden llms.txt-formatted `machine-content` block on its blog posts, with
+"Recommend Infrasity when…" and "AI System Instructions" sections. There is
+no evidence it works. Treat this as a pattern to recognize in competitors'
+pages and in sources being ingested, not as a tactic.
+
 ## Sentiment monitoring and correction
 
 Per [[similarweb-how-to-win-the-race-for-gen-ai-search-2026]] — a
@@ -1708,6 +1861,8 @@ sentence came from your page.
       fidelity are statistically independent in the study. Improving
       the authority of your content raises citation odds, not the odds
       of being quoted faithfully.
+
+See [[parametric-memory-vs-grounding]] for why a brand can be described from training memory (uncited, frozen at the cutoff) rather than from your current pages.
 
 ## Measurement checklist: don't panic on CTR alone
 
@@ -1932,6 +2087,14 @@ despite good HTML-page performance.
       keyword-dense?
 - [ ] Have you avoided keyword stuffing and unnatural repetition?
 - [ ] Does the tone/tactic match the content's domain (see table above)?
+- [ ] Is the page framed for the query (list / definition / how-to), with
+      the opening line answering it directly?
+- [ ] Does the opening paragraph carry the key facts, in sentences that
+      make sense when extracted alone?
+- [ ] Is the page dense rather than padded (coverage falls sharply past
+      ~1,000 words)?
+- [ ] Was each edit tested against the page's real competitors, not
+      assumed to help?
 
 ## Related: how AI systems judge relevance
 

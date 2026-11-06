@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-09-17
+updated: 2026-11-06
 ---
 
 # AI Citation Landscape
@@ -23,6 +23,14 @@ overall; earned media broadly (journalism, academic/research, government/
 NGO, encyclopedic, social, third-party corporate content) accounts for
 ~84%, with owned + paid content making up the remaining ~16%.
 
+**Apparent contradiction (2026-10-02):**
+[[tryprofound-where-ai-citations-come-from]] (11.84B citations, 8
+engines) reports that about 57% of citations are "brand" sites. It
+counts every company's site as brand, though; the category owner's own
+site is only 2–6%. That is probably a taxonomy difference rather than a
+behavioral one. See Conflicting Evidence below and "Citation mix by
+industry and engine."
+
 ## Providers are three separate information environments
 
 ChatGPT, Claude, and Gemini cite very differently, both in *how often*
@@ -40,6 +48,12 @@ and *how much*, and pull from largely non-overlapping sources:
   and long-tail sources — sharply different from the ChatGPT/Gemini/
   Perplexity mix dominated by third-party reviews/forums. Social media is
   nearly absent (0.9%, almost entirely LinkedIn; Reddit 0%).
+  **Corroborated (2026-10-02)** by
+  [[tryprofound-where-ai-citations-come-from]] at much larger scale:
+  Claude's median mix is about 66% brand sites and about 4% social,
+  the second-highest brand share after Gemini (69%). Profound points to
+  data access as a cause: ChatGPT has Reddit licensing, Anthropic
+  doesn't.
 
 Cross-provider overlap in top cited domains is minimal — Wikipedia is
 the only domain that appears near the top for all three. Among
@@ -87,6 +101,12 @@ pages 2.0 (+5%), news 1.7 (-11%), product/service 1.6 (-16%), pricing
 different metrics (cross-engine portability vs. raw citation count),
 same content-type ranking — reference/explanatory content consistently
 outperforms transactional content.
+
+**Over time, not just across engines:** citation sets also churn day to
+day within one engine. Only ~25% of ChatGPT's cited pages (~50% for AI
+Overviews) are cited again the next day, but the content-type mix
+(articles ≈60%) barely moves ([[detailed-ai-volatility-2026]]). Measure
+presence over a window; see [[ai-answer-volatility]].
 
 ## Citation selection vs. absorption
 
@@ -198,7 +218,8 @@ given query churns substantially over short timeframes. Practical
 implication: track citation performance on a recurring cadence rather
 than treating a single snapshot as a durable result, and don't read too
 much into losing (or gaining) a citation in any single month without
-a trend across several.
+a trend across several. *(Magnitude contested by newer daily data — see
+Conflicting Evidence: "How fast cited sources churn".)*
 
 ## Same source-type layers everywhere, different weighting
 
@@ -361,6 +382,24 @@ rarely cited" from [[ahrefs-why-chatgpt-cites-pages-2026]]:
   sustain. This is tractable for content teams as an active-community
   strategy.
 
+**Time-sensitivity note (Aug 2026)**: Reddit figures in this page
+predate a measured shift. Per [[ora-ax-is-the-new-aeo-2026]] (citing
+Promptwatch and Qwairy), from **Aug 8, 2026** `site:` queries rose from
+~0% to 23–24% of ChatGPT's background searches, aimed at official
+sites. Reddit's share of ChatGPT Search citations fell from 3.83% to
+0.52% (~86%) within a week, partly recovering to ~1.5%. Treat
+pre-August-2026 ChatGPT source-mix data, Reddit's especially, as
+possibly dated. The broader lesson from the authors is that any
+off-site channel can vanish in one update. See [[agent-experience-ax]].
+
+**Second Reddit data point (Semrush, Oct 2026)**: per
+[[semrush-ai-search-strategy-4-layers]], Reddit's share of ChatGPT
+*responses* fell from close to 60% in early August 2025 to roughly 10%
+by mid-September 2025, after which it stabilized alongside Wikipedia as
+one of ChatGPT's two most-cited domains. This is a different year,
+metric, and level from the figures above; see the Reddit entry under
+Conflicting Evidence.
+
 ## The Axios anomaly
 
 Journalism citations are spread across 20,000+ distinct outlets with no
@@ -389,6 +428,51 @@ press-release citations (1.16% of Industry Trend responses vs. 0.09% for
 How To). Journalism citation rate also varies by sector: highest in
 Media/Entertainment (36%) and Finance/Insurance (32%), lowest in
 Education and Industrial/Manufacturing (~19% each).
+
+### Citation mix by industry and engine (2026-10-02 addendum)
+
+Per [[tryprofound-where-ai-citations-come-from]]. The data is 11.84B
+citations from 8 engines, Apr–Jul 2026, with medians taken over 7,542
+Profound customer categories in 29 industries. Every cited domain is
+bucketed as brand (*any* company's own site), earned (editorial,
+institutional, PR wire) or social/UGC.
+
+- **Company sites are the biggest bucket, but rarely your own.** About
+  57% of citations go to brand sites overall. Brand is the largest
+  bucket in 24 of 29 industries. The category owner's own site is only
+  2–6% in every industry charted; the rest is other companies.
+- **Median brand / earned / social share by industry** (owned share in
+  parentheses):
+
+  | Industry | Brand (owned) | Earned | Social |
+  |---|---|---|---|
+  | Software | 79% (6%) | 12% | 13% |
+  | Marketing | 76% (5%) | 11% | 12% |
+  | Tech (AI & Data) | 76% (6%) | 14% | 13% |
+  | Bank & Financial | 62% (5%) | 33% | 8% |
+  | Retail | 60% (5%) | 26% | 15% |
+  | Travel & Hospitality | 59% (5%) | 27% | 15% |
+  | Fashion | 52% (2%) | 31% | 17% |
+  | CPG | 50% (2%) | 34% | 14% |
+  | Pharma | 39% (5%) | 59% | 5% |
+
+  Earned share by industry runs from about 61% (government) to about
+  11% (marketing). Within one industry, the 25th and 75th percentile
+  companies can differ by up to 43 points.
+- **By engine:** brand share runs from 47% (ChatGPT) to 69% (Gemini).
+  Earned share runs from 30% (ChatGPT) to 17% (AI Overviews). Social
+  share is 15.3% for AI Overviews and 14.4% for AI Mode, vs. about
+  3.5% for Copilot. In consumer industries, AI Overviews' social share
+  is 5–15x Copilot's (fashion 25.2% vs. 1.7%). This matches the engine
+  "sourcing personalities" above.
+- **Practical reading for SaaS/B2B:** about 73% of software citations
+  are other companies' sites: competitors, integration partners,
+  adjacent vendors. Getting described accurately on *their* docs,
+  integration pages and comparison pages is a larger lever than your
+  own site (6%) or press (12%).
+- Caveats: vendor and customer sample; industry labels assigned by an
+  LLM; some numbers differ between the text and charts (see the source
+  page).
 
 ## Citations vs. brand mentions
 
@@ -492,6 +576,16 @@ distinct, and self-citation is a losing game — mentionability is earned
 through third-party footprint (see [[ai-visibility-correlation-factors]]
 and [[geo-content-optimization-tactics]]'s third-party-authority
 tactics).
+
+**Citations without names (Semrush, Oct 2026)**: per
+[[semrush-ai-search-strategy-4-layers]], in a study of 3,981 brand
+appearances across ChatGPT, Google AI Overviews, Gemini, and AI Mode,
+62% were citations where the answer never named the brand; ChatGPT
+cited brands in 87% of its appearances but named them in only 20.7%.
+This is consistent with the citation/mention split above and means
+mention-only tracking undercounts source influence (and citation-only
+tracking undercounts recommendation). Vendor-reported; methodology not
+visible in the secondary writeup.
 
 ## Citation-slot concentration (unsourced, directional)
 
@@ -706,6 +800,9 @@ at a linguistic level, not just a topical one:
   citable content rather than narrowing it to a few "ideal" sources.
 
 ## Query fanout mechanics
+
+(Overview, invisibility in analytics, and Google's textless-fanout
+research now live on [[query-fanout]]; engine-level data stays here.)
 
 Per [[peec-ai-chatgpt-query-fanouts-2026]] (5M query fanouts across
 ChatGPT/Perplexity/Grok, April 2026) — explains the mechanism behind
@@ -993,6 +1090,31 @@ list" finding above — it isn't just industry-relative, it can shift
 topic-by-topic within one category, so a source map has to be built per
 topic, not assumed to carry over from an adjacent one.
 
+### Pricing queries (2026-10-02 addendum)
+
+Per [[tryprofound-ai-pricing-visibility-2026]] (~7,600 responses to
+"Evaluate [Company] on pricing" for the Cloud 100 across 6 engines,
+July–Aug 2026; vendor study), pricing is a clear example of a topic
+with its own source mix:
+
+- **Owned pricing pages are present but rarely first.** They appear in
+  46% of responses and are the first citation in 12%. This adds a
+  *position* dimension to the page-type finding above (pricing pages
+  −21% in raw citation count). ChatGPT puts the owned page first 38% of
+  the time, consistent with its `site:` targeting of brand domains for
+  pricing queries (see the fan-out addendum above). The Google engines
+  usually bury it.
+- **Three outside domains dominate:** Vendr 18.7% of runs, Reddit
+  18.6%, G2 15.9%. Reddit being a *direct* citation this often is
+  notable given its "retrieved constantly, rarely attributed" profile
+  elsewhere on this page. Pricing prompts apparently draw on
+  user-reported real costs. Treated as query-type dependence, not a
+  conflict.
+- **Billing docs can out-cite the pricing page.** Plaid's docs were
+  cited in 70% of answers vs. 64% for its pricing page, which fits the
+  reference-beats-transactional pattern above.
+- The full remediation playbook is [[ai-pricing-visibility-audit]].
+
 ## Local queries lean on Google Maps, not articles
 
 For "best of" local queries (best hotels, restaurants, services),
@@ -1100,6 +1222,38 @@ This is distinct from the "citation-without-recommendation" decoupling
 citations-vs-mentions split above: here the citation *exists and points
 to you*, but the sentence it supports misstates or omits what your page
 said.
+
+### Factual accuracy across engines and source types (2026-10-02 addendum)
+
+Per [[tryprofound-where-inaccurate-ai-claims-come-from]] (Profound
+FactCheck, 158K+ claims, Apr–Aug 2026; vendor data from its own
+customers, and the method for deciding verdicts isn't described). This
+measures something different from the grounding numbers above. Xu asks
+whether a claim is supported by the page it cites. Profound asks whether
+the claim is true according to the brand's records, so a faithful
+summary of a stale page still counts as an error. It's the first
+cross-engine accuracy data in the wiki:
+
+- **Source type matters for accuracy.** Claims citing competitor sites
+  were inaccurate 4.68% of the time, earned media 4.62%, social 3.45%
+  and the brand's own site 2.40%. Even so, 54% of brands had at least
+  one error traced to their own site. This doesn't contradict Xu's
+  source-quality ≈ fidelity null (r≈0.045), which concerns grounding
+  and domain credibility, not factual accuracy and source type.
+- **Earned-media errors are a long tail.** The top 100 domains account
+  for only 40% of them, and a typical affected brand's errors come from
+  about 4 sites, often unique to it. Correcting them means finding your
+  own problem domains; a shared list won't do it.
+- **Pricing and billing is the most error-prone topic:** 12% of claims
+  but 24% of inaccuracies. The earned-media rate on pricing is about
+  12%, vs. about 5% for the brand's own site. See
+  [[ai-pricing-visibility-audit]].
+- **Inaccuracy rate by engine:** Copilot 6.8%, Claude 5.7%, Gemini
+  5.5%, AI Mode 5.2%, AI Overviews 5.0%, ChatGPT 4.3%, Perplexity 4.3%.
+  ChatGPT and Claude overlap on only 12.5% of returned claims and 11%
+  of inaccurate ones. That's the claim-level counterpart of the "three
+  separate information environments" finding above, so accuracy has to
+  be monitored engine by engine.
 
 ## AIO source selection, measured against the first page as control
 
@@ -1298,7 +1452,11 @@ traffic profile.
     category-research *citations* went to third-party domains; mentions
     correlate with referring-domains 0.49 / third-party-mentions 0.45);
     and [[derivatex-two-googles-one-query-aio-vs-serp-2026]] (review
-    sites 5.0% of AIO citations — low but nonzero).
+    sites 5.0% of AIO citations — low but nonzero); and
+    [[tryprofound-ai-pricing-visibility-2026]] (2026-09-03; G2 cited in
+    15.9% and Vendr in 18.7% of ~7,600 pricing-prompt responses across 6
+    engines — pricing prompts only, so it supports the mention/citation
+    side without testing DerivateX's recommendation-wording claim).
   - Contradicted by: [[derivatex-4cs-explainable-to-ai-2026]]'s
     "Authority Inversion" study (233 ChatGPT recommendations, 40
     categories) — 84% of citations came from vendor self-descriptions or
@@ -1320,6 +1478,77 @@ traffic profile.
     legible per [[explainable-to-ai-4cs]] (recommendation-wording side).
     Don't drop review-platform work on the strength of one small
     ChatGPT-only study.
+
+- **Claim**: earned media dominates AI citations, at about 84%, with
+  owned plus paid at about 16%.
+  - Supported by: [[muckrack-generative-pulse-ai-reading-may-2026]]
+    (25M+ citations, May 2026). Its "earned" bucket includes
+    journalism, academic, government/NGO, encyclopedic, social *and
+    third-party corporate content*.
+  - Contradicted by: [[tryprofound-where-ai-citations-come-from]]
+    (2026-07-30; 11.84B citations, 8 engines, Apr–Jul 2026). It reports
+    about 57% of citations as "brand" sites, the largest bucket in 24
+    of 29 industries, with earned as low as 11–12% for software and
+    marketing.
+  - **Current best guess**: mostly a taxonomy difference, not a
+    behavioral one.
+    - Profound's "brand" covers *any* company's site, and the category
+      owner's own site is only 2–6%. Muck Rack files other companies'
+      sites under earned ("third-party corporate content").
+    - Re-bucketed on a common basis, the two agree on the point that
+      matters: your own site is a small share (2–6% vs. ≤16% owned +
+      paid), and most citations come from sites you don't control.
+    - What's still unreconciled is how big journalism and editorial
+      coverage really is, and whether that differs by industry, since
+      Muck Rack doesn't break out industry the same way.
+
+    Flagged **unresolved, leaning reconcilable**. Practical takeaway
+    until resolved: don't read "57% brand" as "optimize your own site."
+    Read it as "other companies' sites are a major citation layer."
+    Treat earned media's weight as industry-dependent (see "Citation
+    mix by industry and engine").
+
+- **Claim**: Reddit's share of ChatGPT citations/responses collapsed
+  in a single platform change, and the pre-change source mix is dated.
+  - Supported by: [[ora-ax-is-the-new-aeo-2026]] (citing Promptwatch
+    and Qwairy) — Reddit's share of ChatGPT Search citations fell from
+    3.83% to 0.52% within a week from **Aug 8, 2026**, partly
+    recovering to ~1.5%.
+  - Also reported: [[semrush-ai-search-strategy-4-layers]]
+    (2026-10-23) — Reddit's share of ChatGPT *responses* fell from
+    ~60% (early Aug) to ~10% (mid-Sept) in **2025**, stabilizing beside
+    Wikipedia.
+  - Not consistent with: the order-of-magnitude levels. A 3.83%
+    citation share and a ~60% response share can't describe the same
+    quantity, and the two events are dated a year apart. They may be
+    two separate ChatGPT changes, different metrics (share of
+    citations vs. share of responses that cite Reddit), different
+    query panels, or one of the dates may be misreported.
+  - **Current best guess**: both show a sharp, platform-driven Reddit
+    drop in ChatGPT, which supports the shared lesson that off-site
+    channels can vanish in one update. The specific magnitudes and
+    dates are not reconcilable from these secondary writeups; treat
+    any ChatGPT Reddit-share number as time- and panel-specific.
+    Flagged as **unresolved**; check the underlying Promptwatch/Qwairy
+    and Semrush data before citing a figure.
+
+- **Claim**: 40-60% of cited sources change from one month to the next
+  (the "Cited-source sets are volatile month to month" section above).
+  - Supported by: [[sel-what-is-generative-engine-optimization-geo-2026]]
+    (2026-02-11) — secondary explainer; no stated methodology, and no
+    unit (URLs vs. domains).
+  - Contradicted by: [[detailed-ai-volatility-2026]] (2026-09-23; 28
+    days, 1,300+ prompts, 70k+ responses) — only ~25% (ChatGPT) and ~50%
+    (AI Overviews) of cited *pages* were cited again the **next day**,
+    i.e. 50–75% churn in a single day; exact cited-domain sets repeated
+    only 2.4% / 0.3% of the time. See [[ai-answer-volatility]].
+  - **Current best guess**: treat Detailed as the operative figure —
+    newer, primary, disclosed and far larger. The 40-60% monthly figure
+    is compatible only if it counts *domains* aggregated over a month;
+    read it as an unsourced, unit-unclear figure. Either way the
+    practical lesson is unchanged: measure presence over a window, not
+    snapshots. Flagged **unresolved** pending a source that states its
+    unit. (Filed during the 2026-11-06 wiki merge.)
 
 ## Conflicting Evidence — resolved
 
@@ -1355,6 +1584,10 @@ traffic profile.
 
 - [[sel-what-is-generative-engine-optimization-geo-2026]] — the source
   for the 40-60% month-to-month citation volatility figure above.
+- [[parametric-memory-vs-grounding]] — the memory-vs-retrieval split
+  that determines whether a brand appears uncited (from weights) or
+  cited (via grounding), plus a single-query Google/OpenAI/Anthropic
+  received-vs-cited funnel comparison.
 - [[chinese-generative-search-citation-study-2026]] — the
   Chinese-language generative-search citation data above, including
   the silent-citation, brand-exposure, and cross-interface findings.
@@ -1456,3 +1689,6 @@ traffic profile.
   provenance figures in [[how-google-search-works]] and the Harmonic
   Centrality/PageRank domain-benchmarking tactic in
   [[geo-content-optimization-tactics]].
+- [[semrush-ai-search-strategy-4-layers]] — the 62% citations-without-
+  names data, second Reddit-decline data point, and the diagnostic
+  playbook [[ai-visibility-four-layer-diagnostic]].

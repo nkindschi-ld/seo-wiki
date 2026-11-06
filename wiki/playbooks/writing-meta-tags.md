@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-08-06
+updated: 2026-11-06
 ---
 
 
@@ -17,6 +17,8 @@ underlying ranking/CTR evidence. For the deprecated
 `<meta name="keywords">` tag (skip it), see [[meta-keywords-tag]]. For the
 rest of the pre-publish checklist a writer needs (structure, sourcing,
 author bio, URL, refresh cadence), see [[writer-checklist-blog-posts]].
+For the social-preview tags (`og:title`, `og:image`, etc.), see
+[[open-graph-protocol]].
 
 ## What they are
 
@@ -94,6 +96,18 @@ Make it a compelling headline. Curiosity + specificity beat keywords here.
 - [ ] Description reads like a sentence, under ~155 chars, with a reason to click
 - [ ] No stuffing, no defaults, no blanks
 - [ ] Title matches the search intent the page targets
+- [ ] H1 worded differently from the title tag (house rule in [[seo-copywriting]])
+
+## Social preview tags (Open Graph)
+
+Title and description control the **search** snippet. A separate set of
+`og:` tags controls the **share card** people see on LinkedIn, Slack,
+Facebook and X. They aren't a ranking factor, and there's no evidence
+they affect AI citation. Still, any page people share should have
+`og:title`, `og:description`, `og:image` and `og:url`, and `og:title`
+should say the same thing as the title tag. The same length budgets
+work: ~60 characters for the title and ~155 for the description. Full
+tag reference and checklist: [[open-graph-protocol]].
 
 ## Notes on the examples
 

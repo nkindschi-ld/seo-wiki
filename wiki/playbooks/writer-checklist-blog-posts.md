@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-07-24
+updated: 2026-11-06
 ---
 
 # Writer's SEO Checklist: Blog Posts
@@ -54,9 +54,11 @@ proof, and make it easy to lift out.
   measurably more likely to be cited.*
 - **Add a short FAQ** (2–4 common follow-up questions with direct answers)
   at the end where it fits. *Why: FAQ sections map cleanly to how people
-  ask AI tools follow-ups, and are among the most-cited formats. (Ask the
-  web team to add FAQ schema, a behind-the-scenes tag that boosts this
-  further.)*
+  ask AI tools follow-ups, and are among the most-cited formats. (The
+  web team can add FAQ schema that mirrors the visible questions, but
+  don't count on it for a boost: its separate effect on AI citations is
+  unproven, and Google no longer shows FAQ rich results for most sites.
+  See [[structured-data-and-ai-search]].)*
 
 ## Credibility and links
 
@@ -110,7 +112,8 @@ for the evidence, caveats, and the tactics that didn't make this list.
 - **Your "one new thing" (information gain)** —
   [[growth-memo-why-most-original-data-never-gets-cited]]
 - **FAQ sections / FAQ schema citation lift** —
-  [[otterly-how-to-optimize-content-for-ai-search-2026]]
+  [[otterly-how-to-optimize-content-for-ai-search-2026]]; contested by
+  matched studies, see [[structured-data-and-ai-search]]
 - **Question-form headings, answer-shape alignment** —
   [[ai-search-reranking-pipeline]]
 - **Set the URL once; don't change it later** —
@@ -126,3 +129,4 @@ for the evidence, caveats, and the tactics that didn't make this list.
   meta descriptions
 - [[geo-content-optimization-tactics]] — the full, evidence-cited tactic
   list this checklist simplifies
+- [[seo-copywriting]] — drafting-stage tactics, including the house rule that the H1 never repeats the title tag

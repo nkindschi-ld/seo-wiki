@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-08-20
+updated: 2026-11-06
 ---
 
 # Personal Context Signals in AI Search
@@ -103,3 +103,4 @@ in this wiki.
   personal-context-management measurement layer is noted.
 - [[geo-content-optimization-tactics]] — the actionable email/personal-
   context tactic section.
+- [[parametric-memory-vs-grounding]] — the other inputs sitting beside personal context in the model's window: recalled memory and grounding snippets.

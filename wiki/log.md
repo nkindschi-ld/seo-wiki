@@ -2818,3 +2818,890 @@ retrieval-eligibility gate, both of which [[ai-search-reranking-pipeline]] and
 [[generative-engine-optimization]] already covered. Upstream had linked those
 correctly; no duplication introduced.
 
+## [2026-09-23] query | "Show me sources on llms.txt files"
+
+Surveyed all 7 sources touching `llms.txt`. Four argue against it:
+[[google-ai-optimization-guide]] (official, explicit "doesn't help" for AI
+Overviews/AI Mode), [[otterly-ai-keyword-research-2026]] (no measurable
+citation lift), [[evilmartians-which-ai-reads-your-site-2026]] (~660 fetches /
+two months, only ~37 from named AI assistants — clients don't even request the
+file), and [[ahrefs-beginner-guide-technical-seo]] ("currently ineffective").
+Two recommend it with no evidence cited: [[sel-ai-optimization-content-for-search-and-agents]]
+and [[superlines-geo-guide]], both predating the negative tests. One nuance:
+[[c-seo-bench-2025]]'s "LLM Guidance" tactic (an `llms.txt`-*style* summary
+prepended to the document, not a separate file) was the best performer by AUC
+against third-party engines, though small in absolute terms and significant in
+only 2 of 6 domains.
+
+No new pages filed — [[geo-content-optimization-tactics]] and
+[[technical-seo-audit-checklist]] §5 already carry this synthesis, including the
+content-negotiation alternative that did work.
+
+## [2026-09-23] ingest | Open Graph tags: Stream glossary, Siteimprove, Search Atlas, OpenGraph.io
+
+Four vendor pages on Open Graph, ingested together as one topic:
+[[stream-open-graph-protocol-glossary]] (undated),
+[[siteimprove-open-graph-ai-search-visibility-2026]] (2026-08-24),
+[[searchatlas-open-graph-tags-best-practices]] (2022, updated 2026-01-26),
+[[opengraph-io-og-tags-vs-schema]] (2024-02-17; client-rendered, captured
+through the browser). None has original data. New concept page
+[[open-graph-protocol]] with a tag reference, OG vs. meta vs. schema table,
+AI-visibility section and implementation checklist. The user chose a checklist
+inside the concept page over a separate playbook. Added cross-links from
+[[writing-meta-tags]] (new "Social preview tags" section),
+[[technical-seo-audit-checklist]] §4 and [[ahrefs-site-audit-study-2023]].
+Siteimprove's "OG has no AI-search effect" claim is recorded as asserted, not
+measured. That matches the wiki's existing no-evidence pattern for
+[[meta-keywords-tag]] and `llms.txt`.
+
+## [2026-09-23] conflict | Open Graph — "social signals help rankings" (Stream) vs. "not a ranking factor" (Search Atlas, Ahrefs)
+
+Best guess: not a ranking factor; Stream is undated and gives no evidence.
+Also logged on [[open-graph-protocol]]: conflicting `og:title`/`og:description`
+length and image-size specs (Stream vs. Search Atlas). Resolved pragmatically:
+reuse the ~60/~155-char meta budgets and a 1.91:1 image of at least 1200×630.
+Also noted but unresolved: Siteimprove's "schema = meaning layer for AI" claim
+vs. [[traditional-seo-ranking-factors]]' weak schema correlation.
+
+## [2026-09-24] query | "tell me about any data around quora"
+No dedicated Quora source or concept page. Hard data comes from 4 sources: Profound (AIO 1.5% share), Semrush LinkedIn study (0.435 semantic similarity), Muck Rack (Gemini leans on Quora), SE Ranking via Derivatex (Reddit/Quora ~4x, secondhand). Everything else is advice with no numbers. Gap flagged.
+
+## [2026-10-02] ingest | llms.txt: llmstxt.org spec v2 + changelog, Limy, Crawloria, Rankability
+
+Five URLs, four source pages (the spec and its changelog share one):
+[[llmstxt-org-proposal-v2-2026]] (primary; v1 2024-09-03, v2 2026-08),
+[[limy-llms-txt-2026-full-guide]] (2026-05-12; vendor with a 515M-event
+dataset), [[crawloria-llms-txt-best-practices-2026]] (2026-06-06; careful
+vendor guide, no data), and [[rankability-llms-txt-best-practices]] (undated,
+captured 2026-04; low rigor, ingested with a caveat at the user's choice).
+New concept page [[llms-txt]] pulls together evidence that was spread across
+five pages (8 sources plus the spec). It has the v2 spec reference, a v1→v2
+table, "what it's not," an evidence table, the coding-agent/docs case, and an
+implementation checklist inside the page (the user chose this over a
+separate playbook, matching [[open-graph-protocol]]).
+
+Main points:
+- Limy's 408-of-515M is a third traffic-side null result. Its filter
+  includes Google-Extended, which is a robots.txt token rather than a user
+  agent, and leaves out user-triggered fetchers, so it can't test the
+  coding-agent case it argues for.
+- v2's link relations resemble the `<link>` hint that got zero fetches in
+  [[evilmartians-which-ai-reads-your-site-2026]].
+
+Cross-links added from [[geo-content-optimization-tactics]] (Limy null
+result), [[technical-seo-audit-checklist]] §5 (v2 link relations, untested),
+[[open-graph-protocol]], [[meta-keywords-tag]], [[robots-txt-strategy]],
+[[docs-over-mcp]] and [[agentic-web-optimization]].
+
+## [2026-10-02] conflict | llms.txt — AI-visibility benefit (Rankability, Superlines, SEL) vs. Google, Otterly, Evil Martians, Limy
+
+Best guess: no AI-search visibility effect. The pro side is all assertion;
+the con side includes official guidance, an experiment and two traffic
+datasets. Narrowly unresolved: there's still no large controlled
+citation-lift test on non-Google engines. Logged on [[llms-txt]].
+
+## [2026-10-02] conflict | llms.txt — spec-conformance claims: root-only/`.well-known` placement, required elements, `## Optional` semantics
+
+Rankability and Limy say the file must be at the root (Limy also allows a
+`.well-known` mirror), and Rankability says the blockquote and contact info
+are required. The spec ([[llmstxt-org-proposal-v2-2026]]) allows subpaths,
+rejects `.well-known`, and requires only the H1. Limy's (2026-05) claim that
+`## Optional` has a meaning agents act on is superseded by v2 (2026-08).
+Resolved in the spec's favor, since it's the primary source.
+
+## [2026-10-02] conflict | llms.txt — "coding agents fetch it routinely" (spec author, Limy) vs. ~37 named-AI fetches in two months (Evil Martians)
+
+Both "routinely" claims are unmeasured. Evil Martians logged an agency site,
+not library docs, so the two don't directly contradict each other. Best
+guess: plausible on docs sites only. Unresolved until someone publishes
+docs-site logs. Also flagged as untested: v2's
+`rel="alternate"`/`rel="describedby"` links.
+
+## [2026-10-02] query | "Check the LaunchDarkly llms.txt draft against spec v2"
+
+Read-only check of the uncommitted repo-root `llms.txt` (not edited). Format
+fully matches [[llmstxt-org-proposal-v2-2026]]: H1, blockquote, prose before
+the first H2, 7 H2 file lists, 84 unique `- [title](url)` items. Live checks:
+83/84 links return 200. The Paramount case study 308-redirects to
+`/customer-stories/`. 17 items have no description (6 competitor comparisons
+and 11 in Optional). `launchdarkly.com/llms.txt` currently 404s (not shipped
+yet). `/docs/llms.txt` is live but ~200KB with boilerplate category
+descriptions and no blockquote. Docs `.md` pages serve `text/markdown`.
+Marketing pages don't do content negotiation and have no `Link:`/`rel`
+discovery hints. Not filed as a page; see [[llms-txt]] checklist.
+
+## [2026-10-02] query | "Generate an llms.txt from the 'Copy of launchdarkly.com' sheet tab"
+
+Built `drafts/launchdarkly/llms.txt` from the 54 URLs in the sheet's ordered
+tab (*Pages for inclusion on LLMs.txt file*; read via Glean, which doesn't
+return tab names, so the tab with Order/Section columns was used), applying
+the [[llms-txt]] checklist:
+- Sheet section order, with the format from [[llmstxt-org-proposal-v2-2026]].
+- Factual descriptions taken from each page's live content (meta
+  descriptions were often boilerplate).
+- Docs links pointed at their `.md` versions.
+- Pricing tiers with numbers, which go stale and need upkeep.
+
+It passes the format check: one H1, a blockquote, 9 H2 sections, and 54
+unique link-first items, all with descriptions. Live check: 51 return 200.
+Support (302→`/hc`, 403 to non-browser clients), Academy (403) and Trust
+(301 to Vanta) are reachable by people but likely not by agents. Flagged for
+the user:
+- The two legal URLs are different documents: Developer/Foundation terms
+  vs. Starter/Pro, which look like legacy plans.
+- Changelog and Careers render their content client-side.
+
+## [2026-10-02] ingest | What AI agents really think about your pricing (Profound / Growth Unhinged)
+
+Source 1 of 4 in a batch (three Profound posts plus a markdown-for-LLMs
+paper). The user checked first which ones were already ingested: "The
+Shortlist Is the New Shelf" and "The AI Mention Effect" were; these four
+weren't. Source page [[tryprofound-ai-pricing-visibility-2026]]
+(2026-09-03; ~7,600 pricing-prompt responses, Cloud 100, 6 engines,
+data from 2026-07-29 to 08-10). New playbook [[ai-pricing-visibility-audit]],
+at the user's choice over folding it into
+[[geo-content-optimization-tactics]]. It has the 10-step checklist, the
+five-part "pricing answer stack," the four bot-readability failure modes
+with a curl test, and the llms.txt step marked unproven, as the source
+itself says.
+
+Supporting citations added to [[ai-citation-landscape]] (new "Pricing
+queries" addendum, plus the "third-party matters" side of the open
+review-platform conflict, which stays unresolved),
+[[ai-shortlist-effect]] (pricing-accuracy lever),
+[[geo-content-optimization-tactics]] and the JS-rendering item in
+[[technical-seo-audit-checklist]]. No new conflict: Reddit being cited
+directly in 18.6% of pricing runs, against its "retrieved, rarely
+attributed" profile, was treated as query-type dependence and noted, not
+logged. Caveats recorded: vendor study, one prompt template, n=1
+self-reported SSR before/after, two-week window. The downloadable
+"AI pricing visibility audit" Claude skill linked from the post was not
+fetched.
+
+## [2026-10-02] ingest | Where do inaccurate AI claims come from? (Profound)
+
+Source 2 of 4. Source page [[tryprofound-where-inaccurate-ai-claims-come-from]]
+(2026-08-17; Profound FactCheck, 158K+ claims, Apr–Aug 2026). Three charts
+were downloaded to `raw/assets/` and their values written into the raw
+file; per-topic values are approximate, read off the bars. The user chose
+to extend existing pages rather than start an `ai-brand-claim-accuracy`
+concept page (revisit if more accuracy sources arrive). New sections and
+notes:
+- a "Factual accuracy across engines and source types" addendum in
+  [[ai-citation-landscape]]
+- a "Grounding ≠ factual accuracy" paragraph in
+  [[ai-overview-grounding-and-fidelity]]
+- error-source tracing and "audit your own pages first" in step 8 of
+  [[ai-pricing-visibility-audit]], plus accuracy evidence in its baseline
+- a stale-facts check and error-tracing checklist item in
+  [[ai-entity-footprint-audit]]
+- a cross-link from [[tryprofound-ai-pricing-visibility-2026]], whose
+  unsupported "pricing is most-wrong" line this source backs up
+
+No conflict logged. Xu's "source quality is independent of fidelity"
+(r≈0.045) looks like it contradicts "source type predicts inaccuracy,"
+but the two measure grounding vs. factual accuracy, and domain
+credibility vs. source type. Recorded as complementary on both pages.
+Caveats: vendor data from its own customers, verdict method undisclosed,
+sample units that don't line up across figures.
+
+## [2026-10-02] ingest | Where do AI citations come from? (Profound)
+
+Source 3 of 4. Source page [[tryprofound-where-ai-citations-come-from]]
+(2026-07-30; 11.84B citations, 8 engines, 7,542 customer categories in
+29 industries, Apr 16–Jul 16, 2026). It's a different post from
+[[tryprofound-ai-platform-citation-patterns]]. Four charts were
+downloaded to `raw/assets/`, with values written into the raw file (most
+per-engine bars are unlabeled, so those are approximate). Recorded
+mismatches between text and charts: marketing 72% vs. 76%, "Software"
+listed twice on the earned-share chart, fintech median 15% vs. about
+21.5%.
+
+Changes:
+- [[ai-citation-landscape]]: new "Citation mix by industry and engine"
+  addendum with an industry table and the owned (2–6%) vs. other-company
+  split; corroboration added to the Claude section; a pointer from the
+  Muck Rack "earned media dominates" section; and a new Conflicting
+  Evidence entry (see conflict entry below).
+- [[geo-content-optimization-tactics]]: new "Benchmark your citation mix
+  against your industry median" section, including the SaaS reading:
+  about 73% of software citations are other companies' sites.
+- [[ai-entity-footprint-audit]]: step 5 now weights third-party
+  validation by industry mix.
+
+## [2026-10-02] conflict | AI citation source mix — Muck Rack "earned ~84%, owned + paid ~16%" vs. Profound "~57% brand sites"
+
+[[muckrack-generative-pulse-ai-reading-may-2026]] vs.
+[[tryprofound-where-ai-citations-come-from]]. Best guess: taxonomy.
+Profound's "brand" covers any company's site, and the owner's own site
+is only 2–6%; Muck Rack files "third-party corporate content" under
+earned. On a common basis, both say your own site is a small share.
+Still unreconciled: how big the editorial/journalism share really is,
+and how it varies by industry. Surfaced to the user during ingest and
+recorded as unresolved, leaning reconcilable, in [[ai-citation-landscape]].
+
+## [2026-10-02] ingest | Does Markdown Increase LLM Bot Traffic? A Randomized Controlled Experiment (Punturo)
+
+Source 4 of 4. The PDF was hosted on HubSpot; the original is saved at
+`raw/studies/punturo-markdown-llm-bot-traffic-rct-2026.pdf`, with the
+text extracted to `.md` via pypdf (poppler isn't installed). Source page:
+[[punturo-markdown-llm-bot-traffic-rct-2026]] (Feb 2026; 380 pages, 6
+sites, Jan 19–Feb 8, 2026). It's the wiki's first randomized test of a
+"Markdown for AI" tactic. Result: no significant change in bot visits
+(CUPED +13.9%, CI [−11.2%, +46.8%]; minimum detectable effect ~41%).
+
+Supporting citations added to:
+- [[llms-txt]]: the null result for Markdown page versions, the
+  coding-agent gap, a checklist warning against user-agent sniffing, and
+  the Sources list.
+- [[technical-seo-audit-checklist]]: the content-negotiation item, with
+  the user-agent vs. `Accept`-header distinction.
+- [[geo-content-optimization-tactics]]: the "Also don't bother" null
+  results.
+- [[ai-pricing-visibility-audit]]: step 10 is now further qualified.
+
+No conflict logged; no wiki page claims a measured Markdown lift. Noted
+design limits:
+- crawl volume, not citations
+- a bot can't know the format before fetching, so any effect must come
+  through re-crawl behavior
+- no coding agents in the bot set
+- affiliation not stated, not peer-reviewed
+
+Batch complete. The four sources this session were
+[[tryprofound-ai-pricing-visibility-2026]],
+[[tryprofound-where-inaccurate-ai-claims-come-from]],
+[[tryprofound-where-ai-citations-come-from]] and this one.
+
+## [2026-10-05] ingest | Candidate Page Selection: The Stage SEO Tools Don't Measure (Lumar)
+
+Source 1 of 4, a batch of Lumar GEO series parts 2–5, each a deep-dive on one
+check from [[lumar-geo-diagnostic-checklist]]. The HTML was fetched with
+curl, and the article body was taken from `.entry-content` and saved to
+`raw/articles/lumar-candidate-page-selection.md`. Source page:
+[[lumar-candidate-page-selection]] (2026-08-12). It's a vendor framework
+with no data. The series builds toward Lumar's GEO-analytics pitch, so read
+"SEO tools can't measure this" with that in mind.
+
+Updated [[ai-search-reranking-pipeline]] with a new "Candidate page
+selection" section (page-level gate inside the retrieval stage, plus the
+diagnostic bullet) and check 1 of [[geo-diagnostic-checklist]] (lexical
+alignment of title and H1, query-dependent freshness, the precision and
+specialist-source example).
+
+## [2026-10-05] ingest | Semantic Relevance Isn't One Metric — It Has Three Jobs (Lumar)
+
+Source 2 of 4. Source page: [[lumar-semantic-relevance-three-jobs]]
+(2026-08-21). The three-jobs table (page aboutness → passage answer match →
+citation-safe self-containment) went onto [[ai-search-reranking-pipeline]],
+where it sharpens the existing "don't trust one relevance score" advice from
+[[peec-ai-rerankers-geo-aeo-2026]]. It also supports the multi-topic conflict
+below.
+
+## [2026-10-05] ingest | Chunkability: Why Some Content Gets Cited, and Most Doesn't (Lumar)
+
+Source 3 of 4. Source page: [[lumar-chunkability]] (2026-08-24). New concept
+page [[chunkability]] brings together the four pillars and the chunk-level
+guidance that was spread across [[geo-content-optimization-tactics]] (Fraggle
+section, now cross-linked), [[ai-search-reranking-pipeline]] and checks 3–4
+of [[geo-diagnostic-checklist]] (now listing the low-chunkability patterns).
+The live page has a stray duplicated fragment ("to work independently.");
+it's kept verbatim in raw.
+
+No conflict logged. Google's "no requirement to break your content into tiny
+pieces" ([[google-ai-optimization-guide]]) rejects fragmentation, and Lumar
+rejects it too. Recorded on [[chunkability]] as a reconciled apparent
+contradiction, pointing to the unreconciled page-focus question below.
+
+## [2026-10-05] ingest | Authority in GEO: It's A Filter, Not a Score (Lumar)
+
+Source 4 of 4. Source page: [[lumar-authority-filter-not-score]]
+(2026-09-02). New concept page [[authority-in-generative-search]] with the
+query-class table and Lumar's self-rated signal confidence, each checked
+against wiki evidence:
+
+- `site:` gating to `.gov` and brand domains
+  ([[lilyray-chatgpt-fanout-queries-2026]])
+- the author-schema null result
+  ([[otterly-ai-keyword-research-2026]])
+- near-zero engagement correlation and the named-author dominance
+  ([[otterly-linkedin-ai-citations-study-2026]])
+- YMYL fidelity, with the Autos caveat ([[ai-citation-landscape]])
+
+Check 5 of [[geo-diagnostic-checklist]] gained the table and a "choose where
+to compete" step. Cross-links were added from
+[[generative-engine-optimization]] and [[e-e-a-t-and-page-quality]], and a
+series-context note was added to [[lumar-geo-diagnostic-checklist]].
+
+Treated as a nuance, not logged as a conflict: Lumar's "brand popularity
+says little" vs. Ahrefs' strong correlation between branded mentions and AI
+*mentions* ([[ai-visibility-correlation-factors]]). They measure different
+outcomes.
+
+Batch complete. Four sources: [[lumar-candidate-page-selection]],
+[[lumar-semantic-relevance-three-jobs]], [[lumar-chunkability]] and
+[[lumar-authority-filter-not-score]].
+
+## [2026-10-05] conflict | Candidate selection — "multi-topic pages are weaker candidates" (Lumar) vs. "Google handles multiple topics on a page" (Google)
+
+[[lumar-candidate-page-selection]] and [[lumar-semantic-relevance-three-jobs]]
+(vendor, no data) vs. [[google-ai-optimization-guide]] (official, 2026-06).
+There's partial support for focus from [[airops-fan-out-effect-2026]]
+(26–50% subtopic coverage beats 100%), but that measures breadth within one
+topic. Best guess: unresolved. Google's claim is about extracting from a
+multi-topic page, not candidate selection, and it covers Google's own
+systems. Leaning: keep one primary topic per page, but don't split working
+pages purely for Google AI surfaces. Recorded in [[ai-search-reranking-pipeline]]
+Conflicting Evidence and surfaced to the user during ingest.
+
+## [2026-10-05] conflict | Authority — "official sources dominate spec/first-party queries" (Lumar) vs. owned pricing pages first-cited in only 12% (Profound)
+
+[[lumar-authority-filter-not-score]] (no data) and ChatGPT `site:` targeting
+of brand domains ([[lilyray-chatgpt-fanout-queries-2026]]) vs.
+[[tryprofound-ai-pricing-visibility-2026]] (~7,600 responses, 6 engines:
+owned pages present in 46%, first in 12%, while Vendr, Reddit and G2
+dominate; ChatGPT 38% owned-first). Best guess: unresolved, leaning
+query-class nuance. Pricing invites user-reported sources and isn't a pure
+spec query. Treat the "hard preference" row as engine-dependent (strongest on
+ChatGPT). Recorded in [[authority-in-generative-search]] Conflicting Evidence.
+Found while filing, after the ingest discussion, so it's surfaced in the
+wrap-up summary.
+
+## [2026-10-08] ingest | AX is the New AEO (ora research, arXiv:2609.34951)
+
+Vendor-run but matched-pair study: 37,927 agent journeys across 1,056
+business sites on four Claude/GPT harnesses. Agent-ready sites get
+clear recommendations 1.9× as often (20% vs 11%, up to 2.6× by stack).
+Training knowledge supplies only 7–10% of answers. Blocked agents still
+answer ~99% of the time, from web search (12% → 25% of the answer),
+with 3.7× more answers omitting every asked fact. Cost per grounded
+answer is +64%. Documents ChatGPT's Aug 8 2026 shift to `site:`
+queries on official sites and the ~86% Reddit-citation drop. New
+source page [[ora-ax-is-the-new-aeo-2026]] and new concept
+[[agent-experience-ax]]. Updated [[agentic-web-optimization]]
+(AX evidence, ARD/connector registries, Conflicting Evidence),
+[[optimizing-for-the-agentic-web]] (new "Unblock and verify" section),
+[[ai-visibility-correlation-factors]], [[generative-engine-optimization]],
+[[ai-citation-landscape]] (pre-Aug-2026 Reddit data time-sensitivity
+note), [[ai-overview-grounding-and-fidelity]] (cross-surface omission
+corroboration), and [[robots-txt-strategy]] (cost of blocking agents).
+
+## [2026-10-08] conflict | Off-site presence vs. own-site agent readability as the main AI-visibility lever
+
+Logged on [[agent-experience-ax]], [[ai-visibility-correlation-factors]],
+and [[agentic-web-optimization]]. Ahrefs correlation data ranks off-site
+mentions (YouTube, branded web mentions) as the top AI-visibility
+factors, and Semrush's agentic-web stack treats off-site presence as a
+core layer. ora finds that with off-site citation breadth matched,
+own-site readability alone drives a 1.9× recommendation gap, and argues
+the off-site-seeding arbitrage is closing. Leaning: they measure
+different outcomes (mentions vs. recommendation strength/accuracy in
+agent research), so both matter. Weight own-site readability higher for
+agent-researched commercial queries. Single vendor study; flagged
+unresolved.
+
+## [2026-10-08] ingest | Link Building & Outreach for AI Search (DEJAN, Dan Petrovic)
+
+Created [[dejan-link-building-outreach-ai-search]] (source),
+[[editorial-link-integration]] (playbook), and
+[[parametric-memory-vs-grounding]] (concept). Updated [[link-building]],
+[[link-building-outreach-tactics]], [[link-and-anchor-text-best-practices]]
+(10–20 organic links/page as further support for the no-cap resolution),
+and [[ai-citation-landscape]] (see-also). Raw saved to
+raw/articles/dejan-link-building-outreach-ai-search.md with six images in
+raw/assets/dejan-outreach-*.png; interactive widgets not captured.
+Source is partly promotional and its models/funnel numbers are
+proprietary or n=1, flagged as such on every page.
+
+## [2026-10-08] conflict | Link authority metrics — DEJAN dismisses DR/DA as vendor proxies
+
+[[dejan-link-building-outreach-ai-search]] calls DA/PA-style metrics
+made-up approximations that cause good links to be refused, contra
+[[ahrefs-link-building]] and [[pitchbox-link-prospecting-hacks]].
+Leaning: use as a coarse filter, not a gate. Unresolved; logged on
+[[link-building]].
+
+## [2026-10-08] conflict | Outreach-link value — "most outreach links are ignored or a small negative"
+
+[[dejan-link-building-outreach-ai-search]] claims poorly integrated
+outreach links are detected and devalued, contra the productive-at-~5%
+framing in [[ahrefs-link-building]]. Leaning: rate vs. value are
+different measures; DEJAN's claim is unmeasured but aligns with Google's
+link-spam stance. Integration quality decides. Unresolved; logged on
+[[link-building]].
+
+## [2026-10-14] ingest | Nozzle Research — "Poisoned Google SERPs"
+
+[[nozzle-poisoned-google-serps-2026]] (raw/studies/nozzle-poisoned-google-serps-2026.md).
+27.5M SERPs, 49 countries: since 2026-09-13 Google has served some
+rank-tracker requests complete-looking SERPs with most usual sites swapped
+(8.0% vs 0.17% baseline; peak 25–27% Sep 27–29). New concept
+[[serp-poisoning]]. Added a "before reporting a ranking drop" check to
+[[seo-reporting]], a scraped-AIO-data caveat to
+[[ai-visibility-measurement-methodology]], a SerpAPI-exposure open question
+to [[chatgpt-vertical-retrieval-engines]] (hypothesis, untested), and a
+"volatility that isn't an update" note to [[google-algorithm-update-history]].
+No conflicts: no existing source uses scraped Google data from after
+Sep 13. Added an ingest rule to flag future studies that do. Screenshots
+not downloaded (user's choice).
+
+## [2026-10-19] query | Why the software factory tutorial post outperformed
+
+Asked why "Build a software factory small enough to understand" (published
+2026-10-02) beat other new blog posts and how to repeat it, for a leadership
+deck. Its first 17 days: 160 GSC clicks against a median of 3 across 66 other
+blog posts first seen since 2026-02-20; CTR 6.7% vs 0.4% at a similar average
+position (5.9 vs 6.2). Explanations drew on [[traditional-seo-ranking-factors]]
+(text relevance), [[airops-fan-out-effect-2026]] (heading-query match),
+[[topical-authority-in-ai-search]] (unowned topics, ownership stickiness),
+[[otterly-url-ai-citations-study-2026]] (guide page type),
+[[growth-memo-why-proprietary-data-is-your-most-defensible-asset]] (first 30%
+of page), [[chunkability]] and [[listicles-in-ai-search]] (why it is retrieved
+but not cited). Not filed as a wiki page; candidate for a LaunchDarkly case
+study page if the pattern holds at 60–90 days.
+
+## [2026-10-19] ingest | GitHub repository SEO batch (Markepear, Nakora, Infrasity, Balakrishnan, MCP Market + GitHub Docs)
+
+Five user-supplied sources plus one first-party source added with the
+user's go-ahead: [[markepear-github-search-engine-optimization]],
+[[nakora-github-seo-2026]], [[infrasity-github-seo-guide]],
+[[balakrishnan-seo-to-geo-developers-guide]],
+[[mcpmarket-github-seo-aeo-optimizer-skill]] (placeholder, no substance),
+and [[github-docs-repository-search-and-topics]] (raw/articles/). New
+concept [[github-repository-seo]] (three surfaces: GitHub search, topic
+pages, Google/AI) and new playbook [[github-repo-optimization-checklist]].
+Infrasity flagged as derivative of Markepear, so it isn't counted as
+independent confirmation. Infrasity's hidden llms.txt-style "AI System
+Instructions" block was not followed; recorded as an observed tactic on
+[[llms-txt]] and [[geo-content-optimization-tactics]]. Cross-links added to
+[[ai-coding-agent-tool-selection]] and
+[[optimizing-for-coding-agent-recommendations]]; benchmark support citation
+on [[geo-content-optimization-tactics]]. Lint gap noted: the wiki doesn't
+cover Google's August 2023 FAQ/HowTo rich-result restrictions.
+
+## [2026-10-19] conflict | GitHub search — is the README a ranking factor?
+
+[[nakora-github-seo-2026]] lists README content as a GitHub-search signal;
+[[github-docs-repository-search-and-topics]] (first-party: the README isn't
+searched by default) and [[markepear-github-search-engine-optimization]] (a
+README rewrite didn't move traffic) contradict it. Leaning toward the docs
+for GitHub's search box only; the README still matters for Google, AI and
+conversion. Unresolved. See [[github-repository-seo]].
+
+## [2026-10-19] conflict | GitHub topics — single-word vs. hyphenated
+
+Markepear says single-word topics, because topics need an exact match;
+Nakora recommends hyphenated purpose tags. Best guess: they target
+different surfaces (search box vs. topic pages). Unresolved. See
+[[github-repository-seo]].
+
+## [2026-10-19] conflict | "Rank in Google = rank in AI" (Nakora)
+
+Overstatement against [[ai-citation-landscape]] (ChatGPT retrieves through
+several backends; citation is decided after retrieval). Google ranking
+treated as an input, not a guarantee. Unresolved pending
+devtool-specific citation data.
+
+## [2026-10-22] query | "Should Open Graph tags be the same as the meta title and meta description?"
+
+Answered from [[open-graph-protocol]] (implementation checklist: `og:title`
+agrees with `<title>`/H1, can be punchier) and [[writing-meta-tags]] (Social
+preview tags section: same message, same ~60/~155 length budgets). Answer:
+same topic and promise, not necessarily identical wording — drop the brand
+suffix from `og:title` (`og:site_name` carries it) and write
+`og:description` for a feed reader rather than a searcher. No ingested
+source tests identical vs. tailored OG copy; this is practice, not evidence.
+Noted from outside the wiki (not yet sourced): Google's title-link
+documentation lists `og:title` among the inputs it may use to generate a
+title link, a reason to keep it consistent with `<title>`.
+
+## [2026-10-23] query | "Is there any data on how often users click on the first link in content compared to others?"
+
+Gap: no ingested source measures click-through by link position within
+body content. Closest coverage is the reasonable-surfer placement
+hierarchy (in-content > nav > footer) in [[link-and-anchor-text-best-practices]]
+and [[link-building]], which is a 2004 Google patent's weighting model, not
+user click data, and is contested by Mueller in
+[[growth-memo-show-me-your-footer]]. Pointed the user to outside
+candidates for ingest (not yet sourced): Dimitrov et al., "What Makes a
+Link Successful on Wikipedia?" (WWW 2017) and Lamprecht et al. (2017) on
+Wikipedia clickstream data, which find links near the top of an article
+get clicked disproportionately; and Nielsen Norman Group eye-tracking and
+scroll research on attention concentrating near the top of the page.
+
+## [2026-10-25] ingest | Niche research & AI-visibility batch (7 sources)
+
+Semrush niche-driven SEO, Semrush niche keyword research, Surnex "Finding a Niche", HubSpot niche markets, Diggity/Empire Flippers affiliate niches, HubSpot AI content gaps, Semrush "AI search strategy: 4 layers". Created [[niche-selection-and-validation]], [[niche-validation-playbook]], [[ai-visibility-content-gap-audit]], [[ai-visibility-four-layer-diagnostic]]; updated [[keyword-research]], [[geo-diagnostic-checklist]], [[ai-citation-landscape]], [[content-marketing-strategy]], [[agentic-web-optimization]]. Raw files are fetch-tool paraphrases. Search Engine Watch hyphens/underscores URL guidance returned HTTP 403 and was not ingested (deferred).
+
+## [2026-10-25] conflict | Reddit's decline in ChatGPT — two incompatible data points
+
+[[semrush-ai-search-strategy-4-layers]] reports Reddit's share of ChatGPT responses falling ~60% to ~10% (Aug-Sept 2025); [[ora-ax-is-the-new-aeo-2026]] reports a 3.83% to 0.52% citation-share drop from Aug 8, 2026. Different years, metrics, and levels. Both support "platform change can erase a channel"; magnitudes unreconciled. Unresolved; logged on [[ai-citation-landscape]].
+
+## [2026-10-25] conflict | Niche selection — passion-first vs. demand-first
+
+[[hubspot-niche-market]] starts from passions and skills; [[surnex-finding-a-niche]] says passion doesn't validate demand. Leaning: ordering difference, not true opposition; demand-first screen, passion as tiebreaker. Unresolved; logged on [[niche-selection-and-validation]].
+
+## [2026-10-27] query | "How should we prioritize the keywords we track — volume, ease, and proximity to commercial interest?"
+Drafted a Slack reply to the CMO on finalizing the tracked-keyword set.
+Drew on [[keyword-research]] (conversion potential as a prioritization
+dimension alongside volume and attainability; real-world demand signals
+justify zero-volume terms) and the ToFu/MoFu/BoFu framing in
+[[saas-seo-strategy]]. Not filed as a new page: the answer is a short
+application of existing playbook guidance.
+
+## [2026-10-27] query | "What are some best practices for pricing pages for SaaS products?"
+Answered from [[ai-pricing-visibility-audit]] (the pricing answer stack,
+bot-readability failure modes, concrete entry point, billing mechanics,
+freshness), [[ai-shortlist-effect]] (accurate pricing and "best for X" as
+selection levers), [[optimizing-for-the-agentic-web]] (no pricing in
+images, Product schema), [[saas-seo-strategy]] and
+[[keyword-mapping-and-cannibalization]] (BoFu placement, MoFu → pricing
+internal links), and [[ai-citation-landscape]] (pricing pages are a weak
+citation page type, −21% per Otterly). Gap noted: the wiki has no
+conversion/CRO sources on pricing-page design (tier count, anchoring,
+annual/monthly toggles, plan comparison UX). Not filed as a new page: the
+answer is mostly covered by the existing playbook.
+
+## [2026-10-27] query | "Test https://launchdarkly.com/pricing/ against the pricing-page best practices"
+Audited the live LaunchDarkly pricing page against
+[[ai-pricing-visibility-audit]]. Passes: prices and billing-unit
+definitions are in the server HTML for GPTBot/ClaudeBot/PerplexityBot,
+no iframes, robots.txt allows /pricing/, free entry point and overage
+behavior stated. Fails: no FAQ section, no JSON-LD of any kind, no link
+from the pricing page to the existing billing docs (calculating-billing,
+service-connections), no visible last-updated date, observability
+overage rates missing, and two internal contradictions (client-side MAU
+$8.33 on the plan card vs. $10 in the comparison table; "SSO and SAML
+are included on every plan" vs. the table showing SSO/SAML only on
+Enterprise). Docs link to a pricing-page observability calculator anchor
+that no longer exists. The AI-answer baseline (step 1) and off-site
+consistency (step 8) were not tested. Not filed as a wiki page: it's an
+audit of one site, not general knowledge.
+
+## [2026-10-27] query | "What schema types should be included for pricing pages? (e.g. launchdarkly.com/pricing/)"
+
+Answered from [[ai-pricing-visibility-audit]], [[technical-seo-audit-checklist]]
+(keep product schema accurate), [[optimizing-for-the-agentic-web]] and the
+schema-writer skill's type-selection rules, checked against the live page.
+The page still emits no JSON-LD at all, not even the site template's
+Organization/WebSite/BreadcrumbList, so the skill classifies it
+`page_type: unknown`. Recommended: page-specific WebPage, BreadcrumbList,
+the shared `#software` SoftwareApplication with `offers` (Developer $0;
+Foundation as UnitPriceSpecifications per service connection, per 1K
+client-side MAU and per 1K AI runs; Enterprise as a priceless "custom
+pricing" Offer), and FAQPage only once pricing FAQs are on the page. Skip
+aggregateRating/review (third-party G2 ratings), so no Software App rich
+result is possible; Offer markup is a comprehension aid only. The
+skill's "never add offers" rule is scoped to pages with no visible
+price, so it doesn't apply here. The $8.33-vs-$10 MAU contradiction
+must be fixed before any price goes into markup. Not filed as a wiki
+page yet.
+
+## [2026-10-27] query | "What is the primary reason for adding schema to a pricing page?"
+
+Follow-up to the pricing-page schema query. Answer: machine-readable
+disambiguation of plans, prices, units and billing periods, the details
+AI engines get wrong most (pricing is 12% of claims but 24% of errors per
+[[tryprofound-where-inaccurate-ai-claims-come-from]]). It isn't for
+rankings or rich results, and no wiki source shows that schema itself
+improves AI pricing accuracy or citations. Visible, server-rendered
+content remains the bigger lever ([[ai-pricing-visibility-audit]]).
+
+## [2026-10-27] query | "Can crawlers read the collapsed accordions on https://launchdarkly.com/pricing/?"
+
+Fetched the page as Googlebot and GPTBot (identical 356 KB responses).
+The only accordions are the 12 "Compare all features" categories
+(Platform open by default, the other 11 collapsed) and the "Break it
+down" price toggle (open by default). All rows of every collapsed
+category are in the server HTML, hidden by CSS only, so non-JS AI
+crawlers and Googlebot both get the text, per the click-to-load failure
+mode in [[ai-pricing-visibility-audit]]. Caveat: the matrix is `<div>`s,
+not a `<table>`, and 148 of its cells are checkmark images with
+`alt="Checkmark"`, so a text extractor sees the feature name but loses
+which plan (Developer/Foundation/Enterprise) includes it. Suggested
+fix: a semantic `<table>` with `<th>` column headers, or per-cell
+"Included on Foundation" text/alt. Not filed as a wiki page.
+
+## [2026-11-02] ingest | Glossary-page SEO batch (3 sources)
+
+Wenstein Beyond Digital "From Zero to Hero: Boosting SEO with Strategic Glossary Pages" (LinkedIn), SEO My Clicks "How to Write a Glossary Page That Ranks for Hundreds of Keywords", Airfleet "Why Every Website Needs a Glossary". Created [[glossary-pages-for-seo]], [[glossary-page-build-checklist]], and three source pages; cross-linked from [[topic-cluster-strategy]], [[entity-based-seo-implementation]], [[content-marketing-strategy]]. All three are practitioner/agency blogs with no measured data. Raw files are fetch-tool paraphrases. Added an unsourced caveat (general knowledge) that FAQ rich results have been restricted since Aug 2023, against Airfleet's FAQ-schema case study.
+
+## [2026-11-02] conflict | Glossary architecture — one URL per term vs. single topic-clustered hub
+
+[[linkedin-wenstein-strategic-glossary-pages]] calls per-term pages best for SEO; [[seomyclicks-glossary-page-seo-2026]] argues for one semantic-hub page and [[airfleet-why-websites-need-glossaries]] for an A–Z/accordion page split by topic at scale. No side has data. Leaning: per-term URL only for terms with their own demand and substantive content, otherwise anchored hub entries (thin/scaled-content and cannibalization risk). Unresolved; logged on [[glossary-pages-for-seo]].
+
+## [2026-11-02] ingest | Goodspeed "SEO Glossary Pages: How They Win Long-Tail Rankings and Links"
+
+Promotional Framer-template article (referral link, consulting CTAs), no data or schema. Agrees with existing [[glossary-pages-for-seo]] consensus; added non-SEO benefits (support deflection, terminology alignment) there, and visuals, CMS data model, and guest-post promotion to [[glossary-page-build-checklist]]. No conflicts. Publish date ambiguous (byline 2024-03-13, header 2026-10-30); used byline. Raw file is a fetch-tool paraphrase.
+
+## [2026-11-02] ingest | Detailed "How Volatile Are AI Responses?"
+
+Glen Allsopp's 28-day study of 1,300+ commercial prompts in ChatGPT and Google AI Overviews (70k+ responses). Created [[ai-answer-volatility]] and [[detailed-ai-volatility-2026]]; added window-based measurement guidance to [[ai-visibility-content-gap-audit]] and [[seo-reporting]], and a day-to-day citation-churn note to [[ai-citation-landscape]]. No conflicts: AIO video share (14%→8%) is a different metric and period from the existing single-video-platform 10.6% figure. Raw file is a fetch-tool paraphrase; trailing chart image data was not extractable.
+
+## [2026-11-04] ingest | Gauge — "How and Why You Should Serve Markdown Pages to Agents" (Ethan Finkel, 2026-08-10)
+
+Vendor how-to, captured as Markdown via `Accept: text/markdown` (the site
+also sends `Link:` rel=alternate/describedby headers). New source page
+[[withgauge-serve-markdown-to-ai-agents-2026]]. Updated [[llms-txt]]
+(Mintlify 2,400-run docs benchmark, secondhand: 2.23 → 0.11 missing pages
+per task with a per-page `llms.txt` link; version-note, link-from-every-page
+and HTML/Markdown parity checklist items; Markdown-only promo noted under
+Adoption), [[optimizing-for-coding-agent-recommendations]] (new point 12,
+version note; Endor Labs 49%-vulnerable-dependencies stat, secondhand),
+[[technical-seo-audit-checklist]] §5 (failed-`.md`-request and parity
+checks). Its "500M bot events" citation (aeo.press → answer.cloud) is
+unverified and may overlap Limy's dataset. Follow-up: ingest Mintlify's
+benchmark post directly.
+
+## [2026-11-04] conflict | llms-txt — `<link>`/`Link:` Markdown discovery hints
+
+[[withgauge-serve-markdown-to-ai-agents-2026]] recommends a `<link
+rel="alternate" type="text/markdown">` tag and `Link:` header as discovery
+methods (no data); [[evilmartians-which-ai-reads-your-site-2026]] logged zero
+fetches from a `<link>` hint across 268K agent requests. Best guess: ship
+the cheap header but don't expect effect; the measured lever is a visible
+per-page `llms.txt` link. Also strengthened (not resolved) the "coding
+agents fetch llms.txt" entry toward "true on docs sites." Both unresolved.
+
+## [2026-11-04] query | "What does the wiki say about using JSON schema for pricing pages?"
+No dedicated coverage: [[ai-pricing-visibility-audit]] and its sources never mention schema. Answer synthesized from general Product-schema advice ([[optimizing-for-the-agentic-web]], [[technical-seo-audit-checklist]]), schema-for-AI evidence in [[geo-content-optimization-tactics]] (AirOps +6.5pp correlation, Otterly FAQ-schema +350%, Ahrefs "not a direct LLM lever") and the pricing playbook. Gap flagged: no source tests Offer/Product schema on SaaS pricing pages.
+
+## [2026-11-04] ingest | SaaS pricing page + schema batch (CoreAEX, Technotize, 12AM Agency, Schematic, Storylane)
+
+Five URLs captured to `raw/articles/` via curl + stdlib HTML conversion.
+Four filed as source pages: [[coreaex-saas-pricing-schema-2026]] (high
+rigor; the hub), [[technotize-pricing-page-seo-b2b-saas-2026]] (low;
+frameworks only), [[schematic-saas-pricing-page-examples-2026]] (vendor
+CRO, tangential), [[storylane-saas-pricing-page-design-2026]] (careful
+vendor guide). **12AM Agency skipped by agreement**: raw kept at
+`raw/articles/12amagency-schema-markup-for-saas-2026.md`, no source page,
+no claims drawn (local-SEO agency, three unedited "ACTION REQUIRED:
+Create page" placeholders, unsourced CTR/carousel/dwell-time claims,
+recommends FAQ snippets Google no longer shows).
+
+New [[structured-data-and-ai-search]] concept (the wiki had no schema
+hub despite ~12 pages mentioning it) and new [[saas-pricing-page-checklist]]
+playbook, which also files the 2026-10-27 launchdarkly.com/pricing schema
+query as a worked example. Updated [[ai-pricing-visibility-audit]] (step
+11 schema-as-consistency-layer; layered wrong-price diagnosis; checklist),
+[[geo-content-optimization-tactics]] (AirOps +6.5pp and Otterly FAQ +350%
+marked contested), [[writer-checklist-blog-posts]] (FAQ-schema "boost"
+claim softened), [[optimizing-for-the-agentic-web]] (Product/FAQ schema
+caveat), [[technical-seo-audit-checklist]] (schema-not-a-citation-lever,
+FAQ rich results gone), [[open-graph-protocol]] (meaning-layer conflict
+pointed to new hub), [[saas-seo-strategy]] (See also).
+
+Verified during ingest: Google's structured-data search gallery (page
+updated 2026-10-16) links no FAQ page; Product, product-snippet,
+merchant-listing and software-app remain. Follow-ups: ingest the Ahrefs
+schema study, searchVIU's layer test and CoreAEX's "which layer does an
+AI answer read a price from" page directly (all currently secondhand).
+
+## [2026-11-04] conflict | structured-data-and-ai-search — FAQ schema citation lift
+
+[[otterly-how-to-optimize-content-for-ai-search-2026]] (+350%, no control
+described) and [[technotize-pricing-page-seo-b2b-saas-2026]] (asserted) vs.
+Ahrefs and Marshal via [[coreaex-saas-pricing-schema-2026]] (no general
+schema citation effect). Best guess: FAQ content is the lever, markup
+unproven. Unresolved.
+
+## [2026-11-04] conflict | structured-data-and-ai-search — JSON-LD citation advantage
+
+[[airops-fan-out-effect-2026]] (+6.5pp, observational) vs. Ahrefs'
+matched before/after (no lift on adding JSON-LD; correlation attributed
+to site quality). Best guess: confound, not effect; untested for pages
+with no prior AI visibility. Unresolved.
+
+## [2026-11-04] conflict | structured-data-and-ai-search — AI engines read Offer/price schema
+
+[[technotize-pricing-page-seo-b2b-saas-2026]] (asserted) vs. searchVIU and
+CoreAEX layer tests (JSON-LD-only price returned 0/5 and 0/9; visible text
+wins conflicts). Best guess: never rely on markup for a fact that isn't
+visible. Tiny samples; unresolved.
+
+## [2026-11-04] lint | Full-wiki lint: structure clean; 2 path-style links, 2 Google updates missing from timeline, unfiled Mintlify benchmark, 3 missing concept pages
+Scope: 39 concepts, 41 playbooks, 191 sources, 215 raw files.
+
+Clean (no action needed):
+- **Broken links**: every real `[[wikilink]]` resolves, apart from
+  finding 1. Unmatched targets in log.md/timeline.md are the format
+  templates (`[[source-slug]]`, `[[concept-slug]]`, `[[wikilink]]`).
+- **Index coverage**: all 271 pages listed; no dangling entries.
+- **Orphans**: only [[crawlingmondays-strategical-content-optimization]],
+  the documented placeholder (unchanged since 2026-09-04).
+- **Playbook → concept links**: every playbook links to at least one
+  concept.
+- **Raw ↔ source**: every `origin:` resolves. Raw files without an
+  `origin:` are all accounted for (PDF text companions, secondary
+  captures cited in a source body, the 2026-09-17 AIO consolidation
+  leftover, and the 12AM file kept raw-only by agreement), except
+  finding 3.
+- **Open conflicts**: 32 Conflicting Evidence claims across 14 pages.
+  None is newly resolvable by today's sources. Marshal's "Google rank
+  dominates citation" (via [[coreaex-saas-pricing-schema-2026]]) bears on
+  the ranking-dependence entry in [[ai-citation-landscape]], but it's
+  ChatGPT/Gemini, not AIO, and secondhand, so that entry stays open.
+
+Findings (reported, not yet fixed):
+1. **Path-style links**: `[[wiki/timeline.md]]` in
+   [[konitzny-chatgpt-retrieval-leak-engine-list-2026]] and
+   [[lilyray-chatgpt-fanout-queries-2026]]; should be `[[timeline]]`.
+2. **Timeline missing 2 Google updates**: the August 2026 spam update
+   (Aug 18–21) and September 2026 spam update (Sep 24–Oct 8) are in
+   [[google-algorithm-update-history]]'s 2026 table but not in
+   timeline.md.
+3. **Mintlify benchmark captured but not filed**:
+   `raw/studies/mintlify-llms-txt-agent-benchmark-2026.md` and
+   `mintlify-url-discovery-bench-results-2026.md` (+2 assets) have no
+   source page. [[llms-txt]] cites the numbers secondhand through
+   [[withgauge-serve-markdown-to-ai-agents-2026]].
+4. **Off-schema tags**: `geo` on [[topical-authority-in-ai-search]],
+   [[geosurge-model-memory-predicts-search-2026]],
+   [[semrush-chatgpt-topic-authority-study]],
+   [[victorious-q2-2026-quarterly-search-report]] (schema allows
+   `seo`/`aeo`).
+5. **17 sources lack a usable `date_published`** (13 missing, 4
+   `unknown`), including two Similarweb reports in `raw/reports/` that
+   are dated research but can't be timelined without a date.
+6. **Outdated advice**: [[geo-content-optimization-tactics]] checklist
+   still lists HowTo schema (HowTo rich results dropped in 2023);
+   [[writer-checklist-blog-posts]]'s credibility list cites only Otterly
+   for FAQ-schema lift (should add [[structured-data-and-ai-search]]);
+   [[brand-entity-seo-strategy]] says "SGE/Bard/AI Overviews".
+7. **Concept with no playbook link**:
+   [[competitive-search-herding-and-diversification]].
+8. **Concepts mentioned without their own page**: query fan-out (268
+   mentions across 18 concept/playbook pages, mostly inside
+   [[ai-citation-landscape]]), content freshness (24 pages, plus an open
+   conflict), and Reddit/UGC in AI search (17 pages).
+9. **Oversized pages**: [[geo-content-optimization-tactics]] (2,031
+   lines) and [[ai-citation-landscape]] (1,607 lines, 31 sections).
+   Split candidates, with the listicles split (2026-07-08) as precedent.
+   A fan-out page would come out of ai-citation-landscape.
+
+Not a finding: 30 pages were last committed after their `updated:`
+date. Spot checks show commit lag (edits dated correctly, committed
+days later), so this check isn't reliable from git history.
+
+Fixes applied (same day, user go-ahead), findings 1–7:
+- **1.** `[[wiki/timeline.md]]` → `[[timeline]]` in
+  [[konitzny-chatgpt-retrieval-leak-engine-list-2026]] and
+  [[lilyray-chatgpt-fanout-queries-2026]].
+- **2.** August and September 2026 spam updates appended to timeline.md,
+  each marked "Backfilled during the 2026-11-04 lint".
+  [[google-algorithm-update-history]]'s "timeline covers through June
+  2026" line updated.
+- **4.** `geo` tag replaced with `aeo` on the four pages.
+- **5.** Dates found on the live pages and filled in for 7 sources:
+  [[ahrefs-link-building]] 2023-10-09,
+  [[digitalchakra-optimise-pdf-files-for-seo]] 2023-09-12,
+  [[ivyforms-lead-magnet-checklist]] 2026-03-03,
+  [[pitchbox-link-prospecting-hacks]] 2020-04-20,
+  [[moz-beginners-guide-link-building]] 2021-03-22,
+  [[google-images-seo]] 2026-03-02 and [[google-links-crawlable]]
+  2025-12-10 (both Google "Last updated" dates on living docs).
+  Six more were set to `unknown` with a YAML comment saying why: the
+  LiveAgent JSON-LD date is a 0001-01-01 placeholder; StackFox, the Bing
+  and Google report help pages and both Similarweb PDFs carry no date.
+  The four earlier `unknown`s stay. None of the newly dated pages is a
+  study, so none goes on the timeline (evergreen ruling, 2026-07-11).
+  That also takes the two Similarweb PDFs (playbooks, not studies) off
+  the timeline-gap list.
+- **6.** [[geo-content-optimization-tactics]] checklist no longer
+  suggests HowTo for rich results; [[writer-checklist-blog-posts]]
+  credibility list adds [[structured-data-and-ai-search]];
+  [[brand-entity-seo-strategy]] gives current names for "SGE/Bard".
+- **7.** [[competitive-search-herding-and-diversification]] now links to
+  [[competitor-citation-displacement]] and [[seo-competitive-analysis]].
+
+Still open: findings 3 (Mintlify ingest), 8 (missing concept pages) and
+9 (oversized pages).
+
+## [2026-11-04] update | Title tag and H1 should never be identical
+
+At the user's direction, added a house rule to [[seo-copywriting]] (tactic and checklist item): the title tag and H1 must differ, with the title tag treated as the more important one to optimize. No ingested source backs it yet, so it is marked as a house rule; ingest a supporting source when one turns up. The SEO Command Center crawl now flags `title_matches_h1` against this page.
+
+## [2026-11-06] ingest | DEJAN AI multi-topic batch (10 sources)
+
+Eight dejan.ai posts (Content Optimization Engine, Grounding Snippets, Generative Self-Retrieval, Fanout Vectors, AI Mode Tags, Google Store alt text, Stealthy Queries, New Tail), the Google Research paper "Thinking to Recall" (arXiv 2603.09906), and the interactive "Textless Query Fan-Out" explainer linked from Fanout Vectors. Created [[query-fanout]], [[grounding-snippets]], [[ai-mode-response-markup]] and ten source pages. Updated [[parametric-memory-vs-grounding]] (generative self-retrieval), [[geo-content-optimization-tactics]] (LLM re-ranker win rates, extraction-ready writing, checklist), [[generative-engine-optimization]] (conflict), [[listicles-in-ai-search]], [[ai-citation-landscape]] (pointer to the new fanout page), [[image-seo-checklist]] (image-match alt audit), [[keyword-research]] (zero-volume and new-tail queries). Caveats: most numbers are DEJAN vendor data with private datasets; AI Mode Tags is unverified and partly LLM-written, filed as low confidence; New Tail is a 2016 post republished with a 2026 section; the explainer is a JS-rendered page saved as HTML plus a captured summary. Downloaded 20 post images to `raw/assets/dejan/`. Grounding-snippet length findings agree with the existing 500–2,000-word sweet spot.
+
+## [2026-11-06] conflict | Statistics and citations as GEO levers
+
+[[geo-generative-engine-optimization-aggarwal-2023]] ranks Statistics Addition and Cite Sources in the top tier; [[dejan-content-optimization-engine-2026]] finds "Proof" edits (stats, citations, awards, endorsements) win about half as often as framing in LLM re-ranking. Leaning: different measurements (citation-stage share vs. re-ranking between rivals), so fix framing and alignment first and test both. Unresolved; logged on [[generative-engine-optimization]].
+
+
+## [2026-11-06] lint | Merge parallel wiki (origin/main): 14 conflicted files reconciled, 41 cross-side links added
+
+Merged nealkindschi/seo-wiki `origin/main` (14 commits since the
+2026-09-14 split) into the local branch: 24 sources, 8 concepts
+([[agent-experience-ax]], [[ai-answer-volatility]],
+[[ai-mode-response-markup]], [[glossary-pages-for-seo]],
+[[grounding-snippets]], [[niche-selection-and-validation]],
+[[parametric-memory-vs-grounding]], [[query-fanout]]) and 5 playbooks
+([[ai-visibility-content-gap-audit]], [[ai-visibility-four-layer-diagnostic]],
+[[editorial-link-integration]], [[glossary-page-build-checklist]],
+[[niche-validation-playbook]]), plus the title-tag-≠-H1 house rule in
+[[seo-copywriting]]. All 14 conflicted files resolved as unions (merge
+commit lists each). No source was ingested on both sides; no slug
+collisions.
+
+Cross-side review (each side had never seen the other's new pages):
+added 41 links in both directions, mainly wiring the new fan-out,
+grounding, volatility, AX and niche/glossary hubs into the local
+retrieval-pipeline, measurement, pricing-audit and meta-tag pages.
+Also cross-linked the DEJAN statistics conflict on
+[[generative-engine-optimization]] to [[c-seo-bench-2025]].
+
+Structural lint after merge: 0 broken links, 0 index gaps, 0
+relative-path links. One orphan,
+[[crawlingmondays-strategical-content-optimization]], predates the
+merge on both sides.
+
+Open: 7 cross-side conflicts surfaced to the user for approval
+before filing (citation churn magnitude, tracking cadence, ChatGPT
+retrieved-to-cited ratio, fan-out count over time, fan-out
+observability, meta description length, thin templated pages).
+
+## [2026-11-06] conflict | ai-citation-landscape — how fast cited sources churn (40-60%/month vs 50-75%/day)
+Unsourced SEL 40-60% monthly figure vs [[detailed-ai-volatility-2026]]'s
+next-day re-citation data. Best guess: Detailed is operative; older
+figure likely counts domains. Filed on [[ai-citation-landscape]].
+
+## [2026-11-06] conflict | ai-answer-volatility — weekly single-run position tracking vs presence over ~14 days
+[[competitor-citation-displacement]]'s weekly position check vs
+Detailed's "position is noisier than presence". Best guess: track
+presence over ~14 days of daily runs. Filed on [[ai-answer-volatility]];
+contested notes added to the playbook.
+
+## [2026-11-06] conflict | grounding-snippets — ChatGPT retrieved-to-cited ratio (~20:1 vs ~50%)
+DEJAN's ~20:1 vs Ahrefs (1.4M prompts) ~50% and AirOps by-position
+rates. Best guess: definition difference; use ~50%. Filed on
+[[grounding-snippets]].
+
+## [2026-11-06] conflict | query-fanout — ChatGPT sub-queries per prompt (2.1 vs 7.61)
+April 2026 Peec baseline vs later Lily Ray-reported 7.61. Best guess:
+change over time; 7.61 directional. Filed on [[query-fanout]].
+
+## [2026-11-06] conflict | query-fanout — whether fan-out queries are observable
+"Never reach Search Console" vs Bing's generalized grounding queries and
+the `site:`-impressions tactic. Best guess: mostly invisible; GSC
+`site:` tactic untested. Filed on [[query-fanout]]; caveat added to
+[[geo-content-optimization-tactics]].
+
+## [2026-11-06] conflict | seo-copywriting — meta description length (~120 vs 155)
+2023 Semrush ~120 vs [[writing-meta-tags]] and the house 155/65 spec.
+Best guess: 155/65 for LaunchDarkly pages. Filed on [[seo-copywriting]].
+
+## [2026-11-06] conflict | glossary-pages-for-seo — thin templated pages at scale
+2020 SEJ marketplace-template advice vs Google's Scaled Content Abuse
+policy. Best guess: newer policy wins; templates need unique substance.
+Filed on [[glossary-pages-for-seo]]; caveat added to [[saas-seo-strategy]].
+
+All seven approved by the user and flagged unresolved. Same pass added
+12 verified supporting citations across [[authority-in-generative-search]],
+[[agent-experience-ax]], [[topical-authority-in-ai-search]],
+[[ai-visibility-four-layer-diagnostic]], [[ai-shortlist-effect]],
+[[niche-selection-and-validation]], [[link-building]],
+[[parametric-memory-vs-grounding]] and [[ai-search-reranking-pipeline]].
+Two proposed citations dropped because the sources didn't clearly
+support them.

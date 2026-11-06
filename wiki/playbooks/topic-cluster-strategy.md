@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-09-10
+updated: 2026-11-02
 ---
 
 Why / when to use this: apply when planning a new content area from
@@ -155,6 +155,9 @@ internal-linking/site-structure decision.
   are built to satisfy.
 - [[content-marketing-strategy]] — broader content-planning context
   clusters fit into.
+- [[glossary-pages-for-seo]] / [[glossary-page-build-checklist]] — a
+  glossary as a definition-intent cluster layer that links into pillars
+  and subpages.
 
 See [[semrush-topic-clusters]], [[surferseo-topic-clusters]], and
 [[sitebulb-topic-clusters]] for the full source writeups.

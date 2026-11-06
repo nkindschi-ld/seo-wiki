@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-08-20
+updated: 2026-11-06
 ---
 
 # Listicles in AI Search
@@ -27,7 +27,14 @@ among its most-injected terms. Listicle framing structurally matches
 what the engine is actually searching for — the mechanism behind
 listicles' outsized share of AI answer results. (See
 [[ai-citation-landscape]]'s "Query fanout mechanics" section for the
-full fanout data.)
+full fanout data, and [[query-fanout]] for the mechanism overall.)
+
+The same preference shows up at the ranking step. In
+[[dejan-content-optimization-engine-2026]]'s 2,249 LLM re-ranking
+experiments, reframing a page as a "best of" / top-N list was the single
+most effective edit tested (38.4% win rate, vs. 15.4% for adding
+credentials). So listicle framing helps twice: once in what fanout
+retrieves, and again when the model orders comparable pages.
 
 **A second, complementary mechanism — answer-shape alignment at the
 reranker.** Per [[peec-ai-rerankers-geo-aeo-2026]] (see

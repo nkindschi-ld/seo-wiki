@@ -35,6 +35,15 @@ statistics — a framework piece, leaning on
    consistent with this wiki's existing framing in
    [[generative-engine-optimization]].
 
+## Series context (added 2026-10-05)
+
+This checklist (2026-09-14) comes after four deep-dives in the same Lumar GEO
+series, each expanding one check:
+[[lumar-candidate-page-selection]] (check 1),
+[[lumar-semantic-relevance-three-jobs]] (checks 1–4),
+[[lumar-chunkability]] (checks 3–4) and
+[[lumar-authority-filter-not-score]] (check 5).
+
 ## What this updated
 
 - New playbook [[geo-diagnostic-checklist]] (this source's primary

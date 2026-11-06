@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" role="img" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<title>Generative self-retrieval shown as the model ranking candidates it recalls from its own memory</title>
+<desc>A query enters the model. Inside, facts stream from parametric memory to a set of candidates. Each candidate's score bar fills with the supporting evidence it accumulates, and the highest-scoring candidate is ranked first and returned as the recommendation.</desc>
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+<style>
+.fill{transform-box:fill-box;transform-origin:0 50%}
+.fillA{animation:fillA 9s ease-in-out infinite}
+.fillB{animation:fillB 9s ease-in-out infinite}
+.fillC{animation:fillC 9s ease-in-out infinite}
+.fillD{animation:fillD 9s ease-in-out infinite}
+@keyframes fillA{0%{transform:scaleX(0)}50%{transform:scaleX(.55)}88%{transform:scaleX(.55)}100%{transform:scaleX(0)}}
+@keyframes fillB{0%{transform:scaleX(0)}50%{transform:scaleX(.88)}88%{transform:scaleX(.88)}100%{transform:scaleX(0)}}
+@keyframes fillC{0%{transform:scaleX(0)}50%{transform:scaleX(.40)}88%{transform:scaleX(.40)}100%{transform:scaleX(0)}}
+@keyframes fillD{0%{transform:scaleX(0)}50%{transform:scaleX(.68)}88%{transform:scaleX(.68)}100%{transform:scaleX(0)}}
+.winner{opacity:0;animation:winShow 9s ease-in-out infinite}
+@keyframes winShow{0%{opacity:0}50%{opacity:0}57%{opacity:1}88%{opacity:1}100%{opacity:0}}
+.winring{animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{stroke-opacity:.5}50%{stroke-opacity:1}}
+.mdot{opacity:.7;animation:tw 2.6s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.3}50%{opacity:.9}}
+.token{opacity:0}
+.tok1{animation:t1 1.8s linear infinite}
+.tok2{animation:t2 1.8s linear infinite .36s}
+.tok3{animation:t3 1.8s linear infinite .72s}
+.tok4{animation:t4 1.8s linear infinite 1.08s}
+.tok5{animation:t5 1.8s linear infinite 1.44s}
+@keyframes t1{0%{transform:translate(0,0);opacity:0}12%{opacity:1}82%{opacity:.9}100%{transform:translate(328px,-38px);opacity:0}}
+@keyframes t2{0%{transform:translate(0,0);opacity:0}12%{opacity:1}82%{opacity:.9}100%{transform:translate(292px,32px);opacity:0}}
+@keyframes t3{0%{transform:translate(0,0);opacity:0}12%{opacity:1}82%{opacity:.9}100%{transform:translate(286px,26px);opacity:0}}
+@keyframes t4{0%{transform:translate(0,0);opacity:0}12%{opacity:1}82%{opacity:.9}100%{transform:translate(310px,22px);opacity:0}}
+@keyframes t5{0%{transform:translate(0,0);opacity:0}12%{opacity:1}82%{opacity:.9}100%{transform:translate(354px,-74px);opacity:0}}
+@media (prefers-reduced-motion: reduce){
+.fillA{animation:none;transform:scaleX(.55)}
+.fillB{animation:none;transform:scaleX(.88)}
+.fillC{animation:none;transform:scaleX(.40)}
+.fillD{animation:none;transform:scaleX(.68)}
+.winner{animation:none;opacity:1}
+.winring{animation:none;stroke-opacity:1}
+.mdot{animation:none;opacity:.7}
+.token{animation:none;opacity:0}
+}
+</style>
+</defs>
+
+<rect x="210" y="28" width="300" height="44" rx="22" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="1"/>
+<text x="360" y="56" text-anchor="middle" font-size="14" fill="#2C2C2A">best CRM for a small team</text>
+<line x1="360" y1="72" x2="360" y2="90" stroke="#888780" stroke-width="1.5" marker-end="url(#ah)"/>
+
+<rect x="40" y="90" width="640" height="314" rx="16" fill="none" stroke="#B4B2A9" stroke-width="1" stroke-dasharray="6 6"/>
+<text x="58" y="114" font-size="12" fill="#5F5E5A">inside the model</text>
+
+<rect x="70" y="138" width="180" height="240" rx="12" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+<text x="160" y="164" text-anchor="middle" font-size="13" fill="#3C3489">parametric memory</text>
+<circle class="mdot" cx="104" cy="200" r="4" fill="#7F77DD"/>
+<circle class="mdot" cx="152" cy="214" r="4" fill="#7F77DD" style="animation-delay:.3s"/>
+<circle class="mdot" cx="206" cy="200" r="4" fill="#7F77DD" style="animation-delay:.6s"/>
+<circle class="mdot" cx="120" cy="256" r="4" fill="#7F77DD" style="animation-delay:.9s"/>
+<circle class="mdot" cx="182" cy="262" r="4" fill="#7F77DD" style="animation-delay:1.2s"/>
+<circle class="mdot" cx="226" cy="244" r="4" fill="#7F77DD" style="animation-delay:1.5s"/>
+<circle class="mdot" cx="138" cy="306" r="4" fill="#7F77DD" style="animation-delay:1.8s"/>
+<circle class="mdot" cx="198" cy="322" r="4" fill="#7F77DD" style="animation-delay:2.1s"/>
+<circle class="mdot" cx="112" cy="352" r="4" fill="#7F77DD" style="animation-delay:.4s"/>
+<circle class="mdot" cx="170" cy="360" r="4" fill="#7F77DD" style="animation-delay:1s"/>
+
+<rect x="300" y="159" width="90" height="34" rx="8" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="1"/>
+<text x="345" y="181" text-anchor="middle" font-size="13" fill="#444441">Option A</text>
+<rect x="404" y="169" width="220" height="14" rx="7" fill="#F3F1EA" stroke="#D3D1C7" stroke-width=".5"/>
+<rect class="fill fillA" x="404" y="169" width="220" height="14" rx="7" fill="#1D9E75"/>
+
+<rect x="300" y="215" width="90" height="34" rx="8" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="1"/>
+<text x="345" y="237" text-anchor="middle" font-size="13" fill="#444441">Option B</text>
+<rect x="404" y="225" width="220" height="14" rx="7" fill="#F3F1EA" stroke="#D3D1C7" stroke-width=".5"/>
+<rect class="fill fillB" x="404" y="225" width="220" height="14" rx="7" fill="#1D9E75"/>
+
+<rect x="300" y="271" width="90" height="34" rx="8" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="1"/>
+<text x="345" y="293" text-anchor="middle" font-size="13" fill="#444441">Option C</text>
+<rect x="404" y="281" width="220" height="14" rx="7" fill="#F3F1EA" stroke="#D3D1C7" stroke-width=".5"/>
+<rect class="fill fillC" x="404" y="281" width="220" height="14" rx="7" fill="#1D9E75"/>
+
+<rect x="300" y="327" width="90" height="34" rx="8" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="1"/>
+<text x="345" y="349" text-anchor="middle" font-size="13" fill="#444441">Option D</text>
+<rect x="404" y="337" width="220" height="14" rx="7" fill="#F3F1EA" stroke="#D3D1C7" stroke-width=".5"/>
+<rect class="fill fillD" x="404" y="337" width="220" height="14" rx="7" fill="#1D9E75"/>
+
+<circle class="token tok1" cx="152" cy="214" r="4" fill="#1D9E75"/>
+<circle class="token tok2" cx="206" cy="200" r="4" fill="#1D9E75"/>
+<circle class="token tok3" cx="182" cy="262" r="4" fill="#1D9E75"/>
+<circle class="token tok4" cx="198" cy="322" r="4" fill="#1D9E75"/>
+<circle class="token tok5" cx="138" cy="306" r="4" fill="#1D9E75"/>
+
+<g class="winner">
+<rect class="winring" x="294" y="206" width="336" height="52" rx="12" fill="none" stroke="#3B6D11" stroke-width="2"/>
+<circle cx="650" cy="232" r="13" fill="#3B6D11"/>
+<text x="650" y="237" text-anchor="middle" font-size="13" font-weight="500" fill="#FFFFFF">1</text>
+</g>
+</svg>

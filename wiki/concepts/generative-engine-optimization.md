@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-09-17
+updated: 2026-11-06
 ---
 
 # Generative Engine Optimization (GEO / AEO)
@@ -170,6 +170,15 @@ own Knowledge-Graph-data-source list, reinforcing that brand-entity
 work and GEO co-occurrence work are largely the same underlying effort
 viewed from two angles.
 
+**Shrinking slice (2026 update)**: per [[ora-ax-is-the-new-aeo-2026]],
+training knowledge supplies only 7–10% of a finished answer in current
+agent models (vs ~50% for gpt-4.1). So the co-occurrence mechanism
+targets a shrinking share of what agents actually say, at least for
+fresh-information questions (pricing, setup, comparisons). Stable facts
+still come from memory. Ora argues the off-site-seeding arbitrage is
+closing; that is in unresolved tension with off-site correlation data;
+see [[agent-experience-ax]] and [[ai-visibility-correlation-factors]].
+
 ## Why traditional SEO doesn't transfer
 
 Traditional search engines rank by keyword matching plus authority
@@ -307,7 +316,37 @@ gated on sites having sufficient AI-feature impressions.
     third-party generative engines tested in that paper (GPT-3.5-based,
     Perplexity.ai) did is untested as of this wiki's current sources.
 
-## Conflicting Evidence — do the Tier 1-3 content tactics actually move citation outcomes?
+- **Claim**: Adding statistics and citations to credible sources is
+  among the most effective ways to raise a page's AI visibility.
+  - Supported by: [[geo-generative-engine-optimization-aggarwal-2023]]
+    (2023-11) — Statistics Addition and Cite Sources ranked in the top
+    tier (+37% live on Perplexity for statistics; up to +115% for a
+    rank-5 site with citations).
+  - Contradicted by: [[dejan-content-optimization-engine-2026]]
+    (2026-07-08) — across 2,249 one-edit experiments judged by an LLM
+    re-ranker, the "Proof" family (awards, endorsements, citations) won
+    15.4% of the time, about half the rate of framing (31.4%);
+    statistics and study citations 18.2%, .gov/.edu citations 18.9%,
+    more raw numbers 20.7%.
+  - Also contradicted by: [[c-seo-bench-2025]] (NeurIPS 2025) —
+    Statistics Addition was significantly *negative* in a majority of
+    tested settings for the citation-rank outcome (see the C-SEO Bench
+    sub-section below). Cross-linked during the 2026-11-06 wiki merge.
+- **Current best guess**: probably **different measurements**, not a
+  clean contradiction. Aggarwal measured how much of a generated answer
+  is attributed to a source already in the set (citation-stage share);
+  DEJAN measured an LLM choosing an order between comparable competing
+  pages (a re-ranking preference). Both can be true: stats and citations
+  may increase how much of your page is used once you're in, while
+  framing and query alignment decide whether you're picked over a rival.
+  DEJAN is newer, larger, and closer to how 2026 engines work, but it's
+  vendor data with no public dataset; Aggarwal is peer-reviewed but uses
+  2023-era engines. Practical stance until resolved: fix framing and
+  query alignment first, keep statistics and sourcing where they're
+  genuinely useful, and test both rather than assuming either. Flagged
+  as **unresolved**.
+
+### Do the Tier 1-3 content tactics actually move citation outcomes?
 
 - **Claim**: Content-level tactics (Quotation Addition, Statistics
   Addition, Cite Sources, Fluency Optimization, etc.) meaningfully
@@ -432,6 +471,13 @@ gated on sites having sufficient AI-feature impressions.
   aboutness, chunkability, standalone context, authority, problem-fix
   alignment) before applying the tactics in
   [[geo-content-optimization-tactics]].
+- [[chunkability]] — the passage-level "can this chunk stand alone?"
+  property behind citation-stage visibility, and how it fits with Google's
+  "no need to chunk" guidance.
+- [[authority-in-generative-search]] — the "authority as a filter, not a
+  score" model, enforced by query class (hard gate for YMYL, minimal for
+  opinion). This is the detailed version of the retrieval-eligibility-gate
+  framing above.
 - [[ai-traffic-scale-vs-hype]] — a scale check on this whole domain: as
   of early-2026 clickstream data, standalone AI tools remain a tiny
   fraction of overall search/social traffic, so the tactics in this
@@ -455,6 +501,7 @@ gated on sites having sufficient AI-feature impressions.
   downweights confidence in the Tier 1-3 tactics above and shows
   retrieval-rank/traditional-SEO dominates content tactics for the
   citation-rank outcome; see the Conflicting Evidence section above.
+- [[query-fanout]] — how AI search splits a prompt into sub-queries, and why that vocabulary never reaches Search Console.
 
 ## Open questions
 

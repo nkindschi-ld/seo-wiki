@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-07-22
+updated: 2026-11-04
 ---
 
 # Competitive Search: Herding and Diversification
@@ -107,3 +107,9 @@ pulled on further.
 - [[ai-citation-landscape]], [[listicles-in-ai-search]] — the GEO/AEO
   citation-concentration observations this page's countermeasure
   hypothesis speaks to.
+- [[competitor-citation-displacement]] — the playbook where herding
+  matters in practice: when displacing a cited competitor, this page
+  argues for differentiated content over copying the winner's format.
+- [[seo-competitive-analysis]] — the classic competitor-research
+  playbook; read its "do what ranks" outputs with the herding effect in
+  mind.

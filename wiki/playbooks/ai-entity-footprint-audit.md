@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [aeo, seo]
-updated: 2026-08-03
+updated: 2026-11-06
 ---
 
 # AI Entity Footprint Audit
@@ -28,6 +28,8 @@ For the **competitor-facing** counterpart — diagnosing why AI cites a *rival*
 instead of you and how to displace them at the artifact level — see
 [[competitor-citation-displacement]]. This audit looks inward (does AI understand
 *us*?); that playbook looks outward (what does the *competitor* own that we don't?).
+
+To triage *which* layer is failing (discoverability, clarity, authority, trust) before running this audit, see [[ai-visibility-four-layer-diagnostic]].
 
 ## The six dimensions
 
@@ -84,13 +86,25 @@ validation).
 2. **Website review.** Do the homepage, About page, service pages, and
    structured data clearly communicate identity and differentiation? (Cross-ref
    the `Organization`-schema and entity-home work in
-   [[brand-entity-seo-strategy]].)
+   [[brand-entity-seo-strategy]].) Also check owned pages for **stale facts**,
+   especially pricing, eligibility and terms. Per
+   [[tryprofound-where-inaccurate-ai-claims-come-from]], 54% of brands had at
+   least one AI error traced to their *own* site, and pricing and billing is
+   the most error-prone topic (pricing-specific workflow:
+   [[ai-pricing-visibility-audit]]).
 3. **Google Business Profile comparison.** Check consistency between the site
    and GBP — same services, same specializations, same wording where it counts.
 4. **Customer analysis.** Find recurring themes in reviews — what customers
    *actually* recognize you for (feeds the Specialization dimension).
 5. **Third-party validation.** Search for independent evidence: press, podcast
-   appearances, certifications, awards (feeds Evidence).
+   appearances, certifications, awards (feeds Evidence). Weight this by your
+   industry's citation mix. Per [[tryprofound-where-ai-citations-come-from]],
+   earned media is about 59% of citations in pharma but about 12% in
+   software, where other companies' sites (partners, integrations,
+   competitors) are about 73%. For SaaS, check how partner and integration
+   pages describe you, not just press coverage. Benchmarking method:
+   [[geo-content-optimization-tactics]] ("Benchmark your citation mix
+   against your industry median").
 6. **Holistic evaluation.** Step back: does the total evidence answer the
    fundamental questions of identity, differentiation, trustworthiness, and
    uniqueness? Gaps here are the audit's output.
@@ -116,6 +130,11 @@ The framework is constant; the evidence sources differ:
 - [ ] Recurring review themes extracted (Specialization signal)
 - [ ] Independent third-party validation inventoried (Evidence signal)
 - [ ] Cross-source contradictions flagged (Consistency signal)
+- [ ] Each factually wrong AI claim traced to the page it cites. Fix owned
+      pages first, then do outreach to the few earned-media sites behind your
+      brand's errors (usually unique to you, so don't rely on a generic list).
+      Track each engine separately; ChatGPT and Claude share only ~11% of
+      their errors.
 - [ ] Gaps translated into an action list feeding [[brand-entity-seo-strategy]]
 
 See [[sel-ai-entity-footprint-audit]] for the source writeup.

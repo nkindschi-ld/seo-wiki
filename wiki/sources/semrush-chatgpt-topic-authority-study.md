@@ -1,6 +1,6 @@
 ---
 type: source
-tags: [aeo, geo]
+tags: [aeo]
 date_published: 2026-07-20
 date_ingested: 2026-07-30
 origin: raw/articles/semrush-chatgpt-topic-authority-study-2026.md

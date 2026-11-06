@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-09-04
+updated: 2026-11-06
 ---
 
 Why / when to use this: SaaS/software companies need a different SEO
@@ -114,7 +114,10 @@ relevant once a category gets crowded (SaaS company count grew ~5,000%
   each individual page is thin, but the template compounds into
   thousands of long-tail rankings. Worked examples: Shopify's app
   marketplace (140K+ monthly sessions, 3,500+ top-10 rankings), Zapier's
-  integration directory (65K+ sessions).
+  integration directory (65K+ sessions). *(Caveat, 2026: Google's
+  Scaled Content Abuse policy targets thin near-duplicate template
+  pages — each page needs unique substance. See Conflicting Evidence on
+  [[glossary-pages-for-seo]] and [[e-e-a-t-and-page-quality]].)*
 - **Tools & calculators**: genuinely useful standalone assets that also
   serve as a product gateway — these earn backlinks because they're
   useful in their own right, not through outreach. Worked examples:
@@ -225,6 +228,9 @@ rank:
 
 ## See also
 
+- [[saas-pricing-page-checklist]] — the BoFu `/pricing` page itself:
+  layout, pricing query types, comparison-page linking, unit and
+  overage copy, schema model.
 - [[search-intent-and-needs-met]] — the parent concept behind the
   ToFu/MoFu/BoFu funnel mapping above: each tier is an intent stage,
   and page-type choice follows from intent, not keyword volume.
@@ -236,3 +242,4 @@ rank:
 See [[semrush-saas-seo]], [[gofishdigital-seo-for-saas]],
 [[sej-advanced-saas-seo-strategies]], and
 [[sej-seo-software-businesses]] for the full source writeups.
+- [[glossary-pages-for-seo]] — a glossary as a learn-hub variant, with the scaled thin-page risk that also applies to marketplace templates

@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [aeo]
-updated: 2026-07-22
+updated: 2026-11-04
 ---
 
 # Optimizing for Coding Agent Recommendations
@@ -167,12 +167,44 @@ installed benefit), and judge it by whether the agent can retrieve the
 *right chunk* and act on it immediately. See [[docs-over-mcp]] for the
 good/bad tradeoffs and build patterns.
 
+## 12. Put a version note at the top of every docs page
+
+An agent never sees what your "Install" button resolves to, so it falls
+back to whatever version it learned in training. Endor Labs found that
+49% of dependency versions AI coding agents imported had known
+vulnerabilities, mostly old versions from training data (secondhand, via
+[[withgauge-serve-markdown-to-ai-agents-2026]]). A stale version means a
+broken build or a security warning, which costs you the pick even when
+the agent chose you. Near the top of each docs page, and of its Markdown
+copy, state:
+
+- [ ] Current version and release date.
+- [ ] The exact install command, ready to copy (no `$` prompt, no `\`
+      line continuations).
+- [ ] Removed or renamed APIs, each with its replacement, so the agent
+      stops writing code that no longer works.
+- [ ] The official product name you want the agent to repeat.
+- [ ] A link to your docs map (`/llms.txt`). A Mintlify benchmark cited by
+      the same source found a per-page link cut agents' missing-page
+      errors per task from 2.23 to 0.11 (see [[llms-txt]]).
+- [ ] Canonical URL and update date, even on pages that document no
+      package, so the agent can judge freshness.
+
+Keep the facts identical to the HTML page; Markdown may change format,
+not claims. Start with the pages agents request most in your logs, which
+may not be your top human pages. Pairs with points 2 (stale training data)
+and 3 (an unattended getting-started path).
+
 ## See also
 
 - [[ai-coding-agent-tool-selection]] — the underlying concept and study
   data this playbook is built on.
 - [[docs-over-mcp]] — serving documentation as an agent-callable tool
   (expanded form of point 11).
+- [[llms-txt]] — the docs map and Markdown page versions the version note
+  (point 12) sits alongside.
+- [[withgauge-serve-markdown-to-ai-agents-2026]] — source of the
+  version-note tactic (point 12).
 - [[generative-engine-optimization]] — the broader GEO/AEO discipline;
   this playbook is its coding-agent-specific, tool-vendor-facing
   counterpart to [[geo-content-optimization-tactics]].
@@ -186,3 +218,7 @@ good/bad tradeoffs and build patterns.
 - [[writing-effective-agents-md-files]] — the sibling playbook for
   instructing an agent's behavior inside your own repo, rather than
   getting your product chosen by an agent working in someone else's.
+- [[github-repo-optimization-checklist]]: making the product's public
+  repo findable by developers in GitHub search, on topic pages and in
+  Google. It complements point 2 (training-data presence) and point 3
+  (a scriptable quickstart).
