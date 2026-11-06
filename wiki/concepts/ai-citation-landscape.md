@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-10-02
+updated: 2026-11-06
 ---
 
 # AI Citation Landscape
@@ -101,6 +101,12 @@ pages 2.0 (+5%), news 1.7 (-11%), product/service 1.6 (-16%), pricing
 different metrics (cross-engine portability vs. raw citation count),
 same content-type ranking — reference/explanatory content consistently
 outperforms transactional content.
+
+**Over time, not just across engines:** citation sets also churn day to
+day within one engine. Only ~25% of ChatGPT's cited pages (~50% for AI
+Overviews) are cited again the next day, but the content-type mix
+(articles ≈60%) barely moves ([[detailed-ai-volatility-2026]]). Measure
+presence over a window; see [[ai-answer-volatility]].
 
 ## Citation selection vs. absorption
 
@@ -375,6 +381,24 @@ rarely cited" from [[ahrefs-why-chatgpt-cites-pages-2026]]:
   sustain. This is tractable for content teams as an active-community
   strategy.
 
+**Time-sensitivity note (Aug 2026)**: Reddit figures in this page
+predate a measured shift. Per [[ora-ax-is-the-new-aeo-2026]] (citing
+Promptwatch and Qwairy), from **Aug 8, 2026** `site:` queries rose from
+~0% to 23–24% of ChatGPT's background searches, aimed at official
+sites. Reddit's share of ChatGPT Search citations fell from 3.83% to
+0.52% (~86%) within a week, partly recovering to ~1.5%. Treat
+pre-August-2026 ChatGPT source-mix data, Reddit's especially, as
+possibly dated. The broader lesson from the authors is that any
+off-site channel can vanish in one update. See [[agent-experience-ax]].
+
+**Second Reddit data point (Semrush, Oct 2026)**: per
+[[semrush-ai-search-strategy-4-layers]], Reddit's share of ChatGPT
+*responses* fell from close to 60% in early August 2025 to roughly 10%
+by mid-September 2025, after which it stabilized alongside Wikipedia as
+one of ChatGPT's two most-cited domains. This is a different year,
+metric, and level from the figures above; see the Reddit entry under
+Conflicting Evidence.
+
 ## The Axios anomaly
 
 Journalism citations are spread across 20,000+ distinct outlets with no
@@ -551,6 +575,16 @@ distinct, and self-citation is a losing game — mentionability is earned
 through third-party footprint (see [[ai-visibility-correlation-factors]]
 and [[geo-content-optimization-tactics]]'s third-party-authority
 tactics).
+
+**Citations without names (Semrush, Oct 2026)**: per
+[[semrush-ai-search-strategy-4-layers]], in a study of 3,981 brand
+appearances across ChatGPT, Google AI Overviews, Gemini, and AI Mode,
+62% were citations where the answer never named the brand; ChatGPT
+cited brands in 87% of its appearances but named them in only 20.7%.
+This is consistent with the citation/mention split above and means
+mention-only tracking undercounts source influence (and citation-only
+tracking undercounts recommendation). Vendor-reported; methodology not
+visible in the secondary writeup.
 
 ## Citation-slot concentration (unsourced, directional)
 
@@ -765,6 +799,9 @@ at a linguistic level, not just a topical one:
   citable content rather than narrowing it to a few "ideal" sources.
 
 ## Query fanout mechanics
+
+(Overview, invisibility in analytics, and Google's textless-fanout
+research now live on [[query-fanout]]; engine-level data stays here.)
 
 Per [[peec-ai-chatgpt-query-fanouts-2026]] (5M query fanouts across
 ChatGPT/Perplexity/Grok, April 2026) — explains the mechanism behind
@@ -1470,6 +1507,30 @@ traffic profile.
     Treat earned media's weight as industry-dependent (see "Citation
     mix by industry and engine").
 
+- **Claim**: Reddit's share of ChatGPT citations/responses collapsed
+  in a single platform change, and the pre-change source mix is dated.
+  - Supported by: [[ora-ax-is-the-new-aeo-2026]] (citing Promptwatch
+    and Qwairy) — Reddit's share of ChatGPT Search citations fell from
+    3.83% to 0.52% within a week from **Aug 8, 2026**, partly
+    recovering to ~1.5%.
+  - Also reported: [[semrush-ai-search-strategy-4-layers]]
+    (2026-10-23) — Reddit's share of ChatGPT *responses* fell from
+    ~60% (early Aug) to ~10% (mid-Sept) in **2025**, stabilizing beside
+    Wikipedia.
+  - Not consistent with: the order-of-magnitude levels. A 3.83%
+    citation share and a ~60% response share can't describe the same
+    quantity, and the two events are dated a year apart. They may be
+    two separate ChatGPT changes, different metrics (share of
+    citations vs. share of responses that cite Reddit), different
+    query panels, or one of the dates may be misreported.
+  - **Current best guess**: both show a sharp, platform-driven Reddit
+    drop in ChatGPT, which supports the shared lesson that off-site
+    channels can vanish in one update. The specific magnitudes and
+    dates are not reconcilable from these secondary writeups; treat
+    any ChatGPT Reddit-share number as time- and panel-specific.
+    Flagged as **unresolved**; check the underlying Promptwatch/Qwairy
+    and Semrush data before citing a figure.
+
 ## Conflicting Evidence — resolved
 
 - **Claim**: The three major AI answer surfaces operate as largely
@@ -1504,6 +1565,10 @@ traffic profile.
 
 - [[sel-what-is-generative-engine-optimization-geo-2026]] — the source
   for the 40-60% month-to-month citation volatility figure above.
+- [[parametric-memory-vs-grounding]] — the memory-vs-retrieval split
+  that determines whether a brand appears uncited (from weights) or
+  cited (via grounding), plus a single-query Google/OpenAI/Anthropic
+  received-vs-cited funnel comparison.
 - [[chinese-generative-search-citation-study-2026]] — the
   Chinese-language generative-search citation data above, including
   the silent-citation, brand-exposure, and cross-interface findings.
@@ -1605,3 +1670,6 @@ traffic profile.
   provenance figures in [[how-google-search-works]] and the Harmonic
   Centrality/PageRank domain-benchmarking tactic in
   [[geo-content-optimization-tactics]].
+- [[semrush-ai-search-strategy-4-layers]] — the 62% citations-without-
+  names data, second Reddit-decline data point, and the diagnostic
+  playbook [[ai-visibility-four-layer-diagnostic]].

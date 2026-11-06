@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-09-10
+updated: 2026-11-04
 ---
 
 Why / when to use this: apply at the drafting stage, once a page is
@@ -39,6 +39,12 @@ relevant keywords, and hold the reader's attention once they arrive.
 - Unique meta description under ~120 characters with a clear CTA.
 - Descriptive H1 with proper H2/H3/H4 hierarchy underneath — not just
   visual formatting, an actual outline.
+- Title tag and H1 should never be identical. They cover the same topic,
+  but the title tag carries more optimization weight: write it first,
+  keyword-led and sized for the SERP, then phrase the H1 differently
+  (for example a fuller or more conversational version) rather than
+  repeating it. *House rule set by the site owner (2026-11-04), not yet
+  backed by an ingested source.*
 - Table of contents for longer pieces — doubles as a structural
   self-check: if you can't write a clean, specific TOC, the draft's
   structure likely needs work.
@@ -70,6 +76,7 @@ relevant keywords, and hold the reader's attention once they arrive.
       product page, as appropriate).
 - [ ] Title tag ≤ ~60 chars, meta description ≤ ~120 chars with a CTA.
 - [ ] Clear H1 + logical H2/H3 outline; TOC included for longer pieces.
+- [ ] H1 worded differently from the title tag (never an exact match).
 - [ ] Paragraphs lead with the point; jargon explained or removed.
 - [ ] At least one genuinely informative visual included.
 - [ ] CTAs placed where a reader would naturally act, not just at the

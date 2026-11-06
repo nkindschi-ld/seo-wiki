@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-10-02
+updated: 2026-10-08
 ---
 
 # AI Overview Grounding & Claim Fidelity
@@ -159,6 +159,16 @@ brand-specific earned-media errors) addresses only the first kind.
    the consensus-gap dynamics in [[ai-citation-landscape]].
 4. **Don't build monitoring on a crawl-later pipeline** for anything
    with live data (pricing, availability, weather, scores, stock).
+
+**Cross-surface corroboration**: [[ora-ax-is-the-new-aeo-2026]] finds
+the same omission-dominant pattern on AI *agent* harnesses (Claude and
+GPT stacks doing buyer research), not just AI Overviews. Wrong facts
+stay rare (4–6%), but answers built from off-site evidence are 3.7×
+more likely to contain *none* of the asked facts. "Never mentioned"
+rises from 29% to 45% when the agent can't read the business's own
+site. Omission looks like the general failure mode of grounded
+generation, and the fix is the same: state the facts literally on
+pages the system can actually read. See [[agent-experience-ax]].
 
 ## Open questions
 

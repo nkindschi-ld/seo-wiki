@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-10-14
+updated: 2026-11-02
 ---
 
 Why / when to use this: use when setting up or refreshing recurring
@@ -106,6 +106,10 @@ period.
 - [ ] Any ranking drop was checked against the keyword's multi-week
       history and Search Console before reporting (rules out
       [[serp-poisoning]]).
+- [ ] AI visibility is reported as presence/share over a period (per
+      engine), not single-run screenshots or "ranked #1 in ChatGPT".
+      Exact AI answers almost never repeat day to day; leaders do
+      persist ([[ai-answer-volatility]]).
 - [ ] Report ends with recommended next actions, not only problems.
 - [ ] Cadence is fixed and consistent across reporting periods.
 - [ ] Automated/scheduled delivery set up if this is a recurring
@@ -115,6 +119,8 @@ period.
 
 - [[generative-engine-optimization]] and [[ai-visibility-correlation-factors]]
   — background on what AI Visibility metrics actually measure.
+- [[ai-answer-volatility]] — why AI visibility needs window-based
+  measurement.
 - [[seo-competitive-analysis]] — competitor benchmarking data that can
   feed into the same report.
 - [[keyword-mapping-and-cannibalization]] — the keyword-ranking data

@@ -1039,6 +1039,167 @@ Google's own.
 
 [[lumar-geo-diagnostic-checklist]] · created [[geo-diagnostic-checklist]]
 
+## 2010 — Facebook introduces the Open Graph protocol (`og:` meta tags) to standardize link previews
+[[stream-open-graph-protocol-glossary]] · [[open-graph-protocol]]
+
+## 2022-09-12 — Search Atlas publishes "Open Graph Tags: Implementation & Best Practices" (Manick Bhan; updated 2026-01-26)
+[[searchatlas-open-graph-tags-best-practices]] · [[open-graph-protocol]]
+
+## 2023-08 — Google limits FAQ rich results to well-known, authoritative government and health websites (alongside reducing HowTo rich results)
+[[storylane-saas-pricing-page-design-2026]] · new [[structured-data-and-ai-search]]
+
+## 2023-11-28 — Wenstein Beyond Digital publishes "Boosting SEO with Strategic Glossary Pages" (favors one page per term, DefinedTerm schema)
+
+[[linkedin-wenstein-strategic-glossary-pages]] · created [[glossary-pages-for-seo]]
+
+## 2024-02-17 — OpenGraph.io publishes "Open Graph Tags vs Schema for SEO" (Emir Zecovic)
+[[opengraph-io-og-tags-vs-schema]] · [[open-graph-protocol]]
+
+## 2024-03-13 — Goodspeed publishes Framer-template glossary SEO article (byline date; header shows 2026-10-30)
+
+[[goodspeed-seo-glossary-visibility]] · supports [[glossary-pages-for-seo]]
+
+## 2024-07-03 — Markepear publishes "GitHub Search Engine Optimization" (Jakub Czakon; observations from ~2022): GitHub repo search rewards keyword-in-name, keyword-dense About and exact-match topics over raw star counts; README rewrites don't move GitHub search
+[[markepear-github-search-engine-optimization]] · new [[github-repository-seo]], [[github-repo-optimization-checklist]]
+
+## 2024-09-03 — Jeremy Howard (Answer.AI) proposes `/llms.txt`, a curated Markdown map of a site for LLMs, plus `.md` versions of pages
+[[llmstxt-org-proposal-v2-2026]] · [[llms-txt]]
+
+## 2025-07 — Google's Gary Illyes says Google doesn't support `llms.txt` and isn't planning to; John Mueller likens it to the keywords meta tag (reported secondhand)
+[[limy-llms-txt-2026-full-guide]] · [[llms-txt]] · [[meta-keywords-tag]]
+
+## 2025-07-23 — Infrasity publishes "The Ultimate Guide to GitHub SEO" (updated 2026-06-29); its HTML carries a hidden llms.txt-style "AI System Instructions" block (dated April 2026) telling LLMs when to recommend the agency
+[[infrasity-github-seo-guide]] · updated [[llms-txt]], [[geo-content-optimization-tactics]]
+
+## 2025-08 to 2025-09 — Reddit's share of ChatGPT responses falls from ~60% to ~10%, then stabilizes alongside Wikipedia (per Semrush; dates approximate, reconcile with the Aug 2026 Reddit drop)
+
+[[semrush-ai-search-strategy-4-layers]] · flagged on [[ai-citation-landscape]]
+
+## 2025-10-23 — Technotize publishes "Pricing Page SEO for B2B SaaS: The Four-Zone Architecture" (Rizwan Khan; updated 2026-08-24)
+[[technotize-pricing-page-seo-b2b-saas-2026]] · new [[saas-pricing-page-checklist]]
+
+## 2025-10-30 — searchVIU tests which page layer AI systems read prices from: a JSON-LD-only price is returned by none of ChatGPT, Claude, Gemini, Perplexity, Google AI Mode (published 2025-12-02; secondhand)
+[[coreaex-saas-pricing-schema-2026]] · new [[structured-data-and-ai-search]]
+
+## 2025-11-02 — Somanath Balakrishnan publishes "From SEO to GEO: A Developer's Guide to Optimizing for AI Search" (LinkedIn)
+[[balakrishnan-seo-to-geo-developers-guide]] · updated [[geo-content-optimization-tactics]]
+
+## 2026-01-01 — Nakora publishes "GitHub SEO: Rank Your Repo and Get Adoption in 2026" (Enric Baltasar): GitHub topic pages rank mostly by stars while search results vary more; Google "X github" queries route to topic pages
+[[nakora-github-seo-2026]] · new [[github-repository-seo]]; conflicts with [[markepear-github-search-engine-optimization]]
+
+## 2026-02-12 — Marshal working paper: schema markup alone doesn't predict AI citation (OR 0.678, p = .296); Google rank does; attribute-rich Product/Review schema the exception (secondhand)
+[[coreaex-saas-pricing-schema-2026]] · new [[structured-data-and-ai-search]]; contests [[airops-fan-out-effect-2026]]
+
+## 2026-02-20 — Punturo publishes "Does Markdown Increase LLM Bot Traffic?", a randomized test of serving Markdown to LLM bots (380 pages, 6 sites, Jan 19–Feb 8, 2026): no significant crawl lift (CUPED +13.9%, CI −11% to +47%)
+[[punturo-markdown-llm-bot-traffic-rct-2026]] · updated [[llms-txt]], [[technical-seo-audit-checklist]]
+
+## 2026-03 — Google Research / UIUC publish R4T-Diffusion (arXiv 2603.06397): fanout sub-queries generated as vectors by a small diffusion model, ~20× faster than LLM text fanout (research only, not web search)
+
+[[dejan-textless-query-fanout-explainer-2026]] · created [[query-fanout]]
+
+## 2026-03-10 — Google Research et al. publish "Thinking to Recall": reasoning expands LLM parametric recall through factual priming (generative self-retrieval), and hallucinated intermediate facts raise wrong-answer rates
+
+[[gekhman-thinking-to-recall-2026]] · updated [[parametric-memory-vs-grounding]]
+
+## 2026-03-18 — HubSpot updates "Niche Markets" guide (passion-first niche finder)
+
+[[hubspot-niche-market]] · created [[niche-selection-and-validation]]
+
+## 2026-05-11 — Ahrefs publishes matched study of 1,885 pages adding JSON-LD: no significant AI Mode/ChatGPT citation lift, unexplained −4.6% in AI Overviews (secondhand)
+[[coreaex-saas-pricing-schema-2026]] · new [[structured-data-and-ai-search]]; contests [[otterly-how-to-optimize-content-for-ai-search-2026]], [[airops-fan-out-effect-2026]]
+
+## 2026-05-12 — Limy publishes "LLMs.txt in 2026: The Full Guide" (Yahel Oren): 408 `/llms.txt` requests out of ~515M AI-bot events in ~90 days; reframes the file as business-to-agent infrastructure
+[[limy-llms-txt-2026-full-guide]] · [[llms-txt]]
+
+## 2026-05-19 — SEO My Clicks publishes glossary-as-semantic-hub guide
+
+[[seomyclicks-glossary-page-seo-2026]] · conflicts with per-term structure on [[glossary-pages-for-seo]]
+
+## 2026-06 — Microsoft, Google and Hugging Face (with GitHub, Snowflake and others) publish draft Agentic Resource Discovery (ARD) spec: agents search a registry for tools, MCP servers and other agents before calling anything
+
+[[ora-ax-is-the-new-aeo-2026]] · updated [[agentic-web-optimization]]
+
+## 2026-06-06 — Crawloria publishes "llms.txt Best Practices: 2026 Practical Guide" (Max Tsygankov; vendor, no original data)
+[[crawloria-llms-txt-best-practices-2026]] · [[llms-txt]]
+
+## 2026-06-15 — Google's structured-data search gallery update no longer lists FAQ; Product and Software app remain (FAQPage stays a valid Schema.org type)
+[[coreaex-saas-pricing-schema-2026]] · new [[structured-data-and-ai-search]]; updated [[technical-seo-audit-checklist]]
+
+## 2026-06-21 — DEJAN publishes "Grounding Snippets" (7,060-query analysis of AI grounding extraction)
+
+[[dejan-grounding-snippets-2026]] · created [[grounding-snippets]]
+
+## 2026-06-27 — DEJAN publishes "Generative Self-Retrieval"
+
+[[dejan-generative-self-retrieval-2026]] · updated [[parametric-memory-vs-grounding]]
+
+## 2026-07-03 — Surnex publishes "Finding a Niche": demand-first framework with AI-search discoverability checks
+
+[[surnex-finding-a-niche]] · created [[niche-validation-playbook]]
+
+## 2026-07-08 — DEJAN publishes Content Optimization Engine insights (2,249 LLM re-ranking experiments; framing beats credentials)
+
+[[dejan-content-optimization-engine-2026]] · conflict on [[generative-engine-optimization]]
+
+## 2026-07-09 — OpenAI migrates ChatGPT's app directory to a plugin directory
+
+[[ora-ax-is-the-new-aeo-2026]] · updated [[agent-experience-ax]]
+
+## 2026-07-14 — Airfleet updates "Why Every Website Needs a Glossary"
+
+[[airfleet-why-websites-need-glossaries]] · created [[glossary-page-build-checklist]]
+
+## 2026-07-27 — DEJAN republishes "Advanced New Tail Keyword Research" (originally 2016) with an AI-search section
+
+[[dejan-new-tail-keyword-research]] · updated [[keyword-research]]
+
+## 2026-07-30 — Profound publishes "Where do AI citations come from?" (11.84B citations, 8 engines, Apr 16–Jul 16, 2026): about 57% of citations go to company sites, but the category owner's own site is only 2–6%; earned share ranges from 59% (pharma) to about 11% (software, marketing) by industry
+[[tryprofound-where-ai-citations-come-from]] · updated [[ai-citation-landscape]] (new conflict with [[muckrack-generative-pulse-ai-reading-may-2026]]), [[geo-content-optimization-tactics]]
+
+## 2026-08 — `llms.txt` v2 published: subpath coverage defined (most-specific file wins), `page.md` allowed, `rel="alternate"`/`rel="describedby"` discovery links added, context-expansion tooling and `## Optional`'s mechanical meaning removed
+[[llmstxt-org-proposal-v2-2026]] · updated [[llms-txt]]; supersedes [[limy-llms-txt-2026-full-guide]]'s `## Optional` claim
+
+## 2026-08-08 — ChatGPT `site:` queries jump from ~0% to 23–24% of background searches, aimed at official sites; Reddit's share of ChatGPT citations falls ~86% within a week (3.83% → 0.52%, Promptwatch), later partly recovering to ~1.5%
+
+[[ora-ax-is-the-new-aeo-2026]] · time-sensitivity note added to [[ai-citation-landscape]]
+
+## 2026-08-10 — Gauge publishes "How and Why You Should Serve Markdown Pages to Agents" (Ethan Finkel; updated 2026-08-14): cites a Mintlify benchmark (2,400 agent runs, 20 docs sites) where a per-page `llms.txt` link cut missing pages per task from 2.23 to 0.11
+[[withgauge-serve-markdown-to-ai-agents-2026]] · updated [[llms-txt]], [[optimizing-for-coding-agent-recommendations]], [[technical-seo-audit-checklist]]
+
+## 2026-08-12 — Lumar publishes "Candidate Page Selection" (GEO series part 2): page-level candidate selection framed as an eligibility gate before passage scoring, which rank tracking can't see
+[[lumar-candidate-page-selection]] · updated [[ai-search-reranking-pipeline]], [[geo-diagnostic-checklist]]
+
+## 2026-08-17 — Profound publishes "Where do inaccurate AI claims come from?" (FactCheck, 158K+ claims, Apr–Aug 2026): pricing & billing is 12% of claims but 24% of errors; engine inaccuracy ranges from 4.3% (ChatGPT, Perplexity) to 6.8% (Copilot)
+[[tryprofound-where-inaccurate-ai-claims-come-from]] · updated [[ai-citation-landscape]], [[ai-overview-grounding-and-fidelity]], [[ai-pricing-visibility-audit]]
+
+## 2026-08-18 — August 2026 spam update (Aug 18–21; "a normal spam update", no narrower target named)
+[[google-search-status-dashboard-history]] · [[google-algorithm-update-history]]. Duration: 2 days, 16 hours. Backfilled during the 2026-11-04 lint.
+
+## 2026-08-21 — Lumar publishes "Semantic Relevance Isn't One Metric — It Has Three Jobs" (GEO series part 3): page aboutness → passage answer match → citation-safe self-containment
+[[lumar-semantic-relevance-three-jobs]] · updated [[ai-search-reranking-pipeline]]
+
+## 2026-08-24 — Siteimprove publishes "Does Open Graph Matter for AI Search Visibility?" (Stephen Jeske; argues no direct effect, no data)
+[[siteimprove-open-graph-ai-search-visibility-2026]] · [[open-graph-protocol]]
+
+## 2026-08-24 — Lumar publishes "Chunkability" (GEO series part 4): four pillars of passage self-sufficiency (topical cohesion, boundary clarity, answer density, self-contained meaning)
+[[lumar-chunkability]] · new [[chunkability]]; updated [[geo-diagnostic-checklist]], [[geo-content-optimization-tactics]]
+
+## 2026-08-29 — CoreAEX publishes "Schema for SaaS Pricing Pages: What It Establishes and What It Doesn't" (Zarko Zivkovic); its 2026-08-30 test finds a JSON-LD-only price reproduced in 0 of 9 runs, visible text winning every conflict
+[[coreaex-saas-pricing-schema-2026]] · new [[structured-data-and-ai-search]], [[saas-pricing-page-checklist]]; updated [[ai-pricing-visibility-audit]]
+
+## 2026-09-02 — Lumar publishes "Authority in GEO: It's A Filter, Not a Score" (GEO series part 5): query-class authority enforcement, from a hard gate for YMYL to minimal for opinion
+[[lumar-authority-filter-not-score]] · new [[authority-in-generative-search]]; updated [[geo-diagnostic-checklist]], [[e-e-a-t-and-page-quality]]
+
+## 2026-09-03 — Profound / Growth Unhinged publish "What AI agents really think about your pricing": owned pricing pages first-cited in only 12% of ~7,600 AI pricing answers (Cloud 100, 6 engines, data from 2026-07-29 to 08-10); Vendr, Reddit and G2 dominate
+[[tryprofound-ai-pricing-visibility-2026]] · updated [[ai-citation-landscape]], [[ai-shortlist-effect]]; new [[ai-pricing-visibility-audit]]
+
+## 2026-09-08 — Meta launches Muse with service connectors (uses APIs first, browser as fallback); Amazon blocks it, Shopify keeps merchants reachable via declared Shop Pay checkout path
+
+[[ora-ax-is-the-new-aeo-2026]] · updated [[agent-experience-ax]]
+
+## 2026-09-13 — Requests from rank trackers to Google start failing in bulk; SERP collection volume drops for two weeks
+[[nozzle-poisoned-google-serps-2026]] · new [[serp-poisoning]]
+
 ## 2026-09-17 — ChatGPT's internal retrieval engine registry published from an SSE leak
 [[konitzny-chatgpt-retrieval-leak-engine-list-2026]] · created
 [[chatgpt-vertical-retrieval-engines]]; updated
@@ -1059,110 +1220,50 @@ indexes; and unequal system1/system2 coverage in which Reddit, web-PDF and
 web-YouTube are reachable only at the deeper-reasoning tier. A configuration
 enumeration with no call-frequency data, not a measured study.
 
-## 2010 — Facebook introduces the Open Graph protocol (`og:` meta tags) to standardize link previews
-[[stream-open-graph-protocol-glossary]] · [[open-graph-protocol]]
-
-## 2022-09-12 — Search Atlas publishes "Open Graph Tags: Implementation & Best Practices" (Manick Bhan; updated 2026-01-26)
-[[searchatlas-open-graph-tags-best-practices]] · [[open-graph-protocol]]
-
-## 2024-02-17 — OpenGraph.io publishes "Open Graph Tags vs Schema for SEO" (Emir Zecovic)
-[[opengraph-io-og-tags-vs-schema]] · [[open-graph-protocol]]
-
-## 2026-08-24 — Siteimprove publishes "Does Open Graph Matter for AI Search Visibility?" (Stephen Jeske; argues no direct effect, no data)
-[[siteimprove-open-graph-ai-search-visibility-2026]] · [[open-graph-protocol]]
-
-## 2024-09-03 — Jeremy Howard (Answer.AI) proposes `/llms.txt`, a curated Markdown map of a site for LLMs, plus `.md` versions of pages
-[[llmstxt-org-proposal-v2-2026]] · [[llms-txt]]
-
-## 2025-07 — Google's Gary Illyes says Google doesn't support `llms.txt` and isn't planning to; John Mueller likens it to the keywords meta tag (reported secondhand)
-[[limy-llms-txt-2026-full-guide]] · [[llms-txt]] · [[meta-keywords-tag]]
-
-## 2026-05-12 — Limy publishes "LLMs.txt in 2026: The Full Guide" (Yahel Oren): 408 `/llms.txt` requests out of ~515M AI-bot events in ~90 days; reframes the file as business-to-agent infrastructure
-[[limy-llms-txt-2026-full-guide]] · [[llms-txt]]
-
-## 2026-06-06 — Crawloria publishes "llms.txt Best Practices: 2026 Practical Guide" (Max Tsygankov; vendor, no original data)
-[[crawloria-llms-txt-best-practices-2026]] · [[llms-txt]]
-
-## 2026-08 — `llms.txt` v2 published: subpath coverage defined (most-specific file wins), `page.md` allowed, `rel="alternate"`/`rel="describedby"` discovery links added, context-expansion tooling and `## Optional`'s mechanical meaning removed
-[[llmstxt-org-proposal-v2-2026]] · updated [[llms-txt]]; supersedes [[limy-llms-txt-2026-full-guide]]'s `## Optional` claim
-
-## 2026-09-03 — Profound / Growth Unhinged publish "What AI agents really think about your pricing": owned pricing pages first-cited in only 12% of ~7,600 AI pricing answers (Cloud 100, 6 engines, data from 2026-07-29 to 08-10); Vendr, Reddit and G2 dominate
-[[tryprofound-ai-pricing-visibility-2026]] · updated [[ai-citation-landscape]], [[ai-shortlist-effect]]; new [[ai-pricing-visibility-audit]]
-
-## 2026-08-17 — Profound publishes "Where do inaccurate AI claims come from?" (FactCheck, 158K+ claims, Apr–Aug 2026): pricing & billing is 12% of claims but 24% of errors; engine inaccuracy ranges from 4.3% (ChatGPT, Perplexity) to 6.8% (Copilot)
-[[tryprofound-where-inaccurate-ai-claims-come-from]] · updated [[ai-citation-landscape]], [[ai-overview-grounding-and-fidelity]], [[ai-pricing-visibility-audit]]
-
-## 2026-07-30 — Profound publishes "Where do AI citations come from?" (11.84B citations, 8 engines, Apr 16–Jul 16, 2026): about 57% of citations go to company sites, but the category owner's own site is only 2–6%; earned share ranges from 59% (pharma) to about 11% (software, marketing) by industry
-[[tryprofound-where-ai-citations-come-from]] · updated [[ai-citation-landscape]] (new conflict with [[muckrack-generative-pulse-ai-reading-may-2026]]), [[geo-content-optimization-tactics]]
-
-## 2026-02-20 — Punturo publishes "Does Markdown Increase LLM Bot Traffic?", a randomized test of serving Markdown to LLM bots (380 pages, 6 sites, Jan 19–Feb 8, 2026): no significant crawl lift (CUPED +13.9%, CI −11% to +47%)
-[[punturo-markdown-llm-bot-traffic-rct-2026]] · updated [[llms-txt]], [[technical-seo-audit-checklist]]
-
-## 2026-08-12 — Lumar publishes "Candidate Page Selection" (GEO series part 2): page-level candidate selection framed as an eligibility gate before passage scoring, which rank tracking can't see
-[[lumar-candidate-page-selection]] · updated [[ai-search-reranking-pipeline]], [[geo-diagnostic-checklist]]
-
-## 2026-08-21 — Lumar publishes "Semantic Relevance Isn't One Metric — It Has Three Jobs" (GEO series part 3): page aboutness → passage answer match → citation-safe self-containment
-[[lumar-semantic-relevance-three-jobs]] · updated [[ai-search-reranking-pipeline]]
-
-## 2026-08-24 — Lumar publishes "Chunkability" (GEO series part 4): four pillars of passage self-sufficiency (topical cohesion, boundary clarity, answer density, self-contained meaning)
-[[lumar-chunkability]] · new [[chunkability]]; updated [[geo-diagnostic-checklist]], [[geo-content-optimization-tactics]]
-
-## 2026-09-02 — Lumar publishes "Authority in GEO: It's A Filter, Not a Score" (GEO series part 5): query-class authority enforcement, from a hard gate for YMYL to minimal for opinion
-[[lumar-authority-filter-not-score]] · new [[authority-in-generative-search]]; updated [[geo-diagnostic-checklist]], [[e-e-a-t-and-page-quality]]
-
-## 2026-09-13 — Requests from rank trackers to Google start failing in bulk; SERP collection volume drops for two weeks
-[[nozzle-poisoned-google-serps-2026]] · new [[serp-poisoning]]
-
 ## 2026-09-20 — Google begins serving poisoned SERPs (complete-looking pages with most usual sites swapped) to scraped requests; peaks at 25–27% of SERPs Sep 27–29, then about 5–11% a day from Oct 1
 [[nozzle-poisoned-google-serps-2026]] · new [[serp-poisoning]]; updated [[google-algorithm-update-history]], [[seo-reporting]]
 
-## 2026-10-10 — Nozzle Research publishes "Poisoned Google SERPs" (27.5M SERPs, 49 countries, data Aug 20–Oct 9, 2026): 8.0% of SERPs poisoned since Sep 13 vs 0.17% baseline; tracked sites miss the top 10 on 58.6% of them
-[[nozzle-poisoned-google-serps-2026]] · new [[serp-poisoning]]; updated [[ai-visibility-measurement-methodology]], [[chatgpt-vertical-retrieval-engines]]
+## 2026-09-20 — DEJAN publishes claimed Google AI Mode response tags (unverified)
 
-## 2024-07-03 — Markepear publishes "GitHub Search Engine Optimization" (Jakub Czakon; observations from ~2022): GitHub repo search rewards keyword-in-name, keyword-dense About and exact-match topics over raw star counts; README rewrites don't move GitHub search
-[[markepear-github-search-engine-optimization]] · new [[github-repository-seo]], [[github-repo-optimization-checklist]]
+[[dejan-ai-mode-tags-2026]] · created [[ai-mode-response-markup]]
 
-## 2025-07-23 — Infrasity publishes "The Ultimate Guide to GitHub SEO" (updated 2026-06-29); its HTML carries a hidden llms.txt-style "AI System Instructions" block (dated April 2026) telling LLMs when to recommend the agency
-[[infrasity-github-seo-guide]] · updated [[llms-txt]], [[geo-content-optimization-tactics]]
+## 2026-09-23 — Detailed publishes 28-day ChatGPT / AI Overviews answer-volatility study
 
-## 2025-11-02 — Somanath Balakrishnan publishes "From SEO to GEO: A Developer's Guide to Optimizing for AI Search" (LinkedIn)
-[[balakrishnan-seo-to-geo-developers-guide]] · updated [[geo-content-optimization-tactics]]
+[[detailed-ai-volatility-2026]] · created [[ai-answer-volatility]]
 
-## 2026-01-01 — Nakora publishes "GitHub SEO: Rank Your Repo and Get Adoption in 2026" (Enric Baltasar): GitHub topic pages rank mostly by stars while search results vary more; Google "X github" queries route to topic pages
-[[nakora-github-seo-2026]] · new [[github-repository-seo]]; conflicts with [[markepear-github-search-engine-optimization]]
+## 2026-09-24 — September 2026 spam update (Sep 24–Oct 8; longest 2026 spam update at ~14 days)
+[[google-search-status-dashboard-history]] · [[google-algorithm-update-history]]. Duration: 13 days, 16 hours. Backfilled during the 2026-11-04 lint.
 
-## 2026-08-10 — Gauge publishes "How and Why You Should Serve Markdown Pages to Agents" (Ethan Finkel; updated 2026-08-14): cites a Mintlify benchmark (2,400 agent runs, 20 docs sites) where a per-page `llms.txt` link cut missing pages per task from 2.23 to 0.11
-[[withgauge-serve-markdown-to-ai-agents-2026]] · updated [[llms-txt]], [[optimizing-for-coding-agent-recommendations]], [[technical-seo-audit-checklist]]
+## 2026-09-24 — DEJAN publishes "Fanout Vectors", a reproduction of Google's vector fanout research
 
-## 2023-08 — Google limits FAQ rich results to well-known, authoritative government and health websites (alongside reducing HowTo rich results)
-[[storylane-saas-pricing-page-design-2026]] · new [[structured-data-and-ai-search]]
-
-## 2025-10-23 — Technotize publishes "Pricing Page SEO for B2B SaaS: The Four-Zone Architecture" (Rizwan Khan; updated 2026-08-24)
-[[technotize-pricing-page-seo-b2b-saas-2026]] · new [[saas-pricing-page-checklist]]
-
-## 2025-10-30 — searchVIU tests which page layer AI systems read prices from: a JSON-LD-only price is returned by none of ChatGPT, Claude, Gemini, Perplexity, Google AI Mode (published 2025-12-02; secondhand)
-[[coreaex-saas-pricing-schema-2026]] · new [[structured-data-and-ai-search]]
-
-## 2026-02-12 — Marshal working paper: schema markup alone doesn't predict AI citation (OR 0.678, p = .296); Google rank does; attribute-rich Product/Review schema the exception (secondhand)
-[[coreaex-saas-pricing-schema-2026]] · new [[structured-data-and-ai-search]]; contests [[airops-fan-out-effect-2026]]
-
-## 2026-05-11 — Ahrefs publishes matched study of 1,885 pages adding JSON-LD: no significant AI Mode/ChatGPT citation lift, unexplained −4.6% in AI Overviews (secondhand)
-[[coreaex-saas-pricing-schema-2026]] · new [[structured-data-and-ai-search]]; contests [[otterly-how-to-optimize-content-for-ai-search-2026]], [[airops-fan-out-effect-2026]]
-
-## 2026-06-15 — Google's structured-data search gallery update no longer lists FAQ; Product and Software app remain (FAQPage stays a valid Schema.org type)
-[[coreaex-saas-pricing-schema-2026]] · new [[structured-data-and-ai-search]]; updated [[technical-seo-audit-checklist]]
-
-## 2026-08-29 — CoreAEX publishes "Schema for SaaS Pricing Pages: What It Establishes and What It Doesn't" (Zarko Zivkovic); its 2026-08-30 test finds a JSON-LD-only price reproduced in 0 of 9 runs, visible text winning every conflict
-[[coreaex-saas-pricing-schema-2026]] · new [[structured-data-and-ai-search]], [[saas-pricing-page-checklist]]; updated [[ai-pricing-visibility-audit]]
+[[dejan-fanout-vectors-2026]] · updated [[query-fanout]]
 
 ## 2026-10-01 — Storylane publishes "SaaS Pricing Page Design: Patterns and Examples" (Madhav Bhandari)
 [[storylane-saas-pricing-page-design-2026]] · new [[saas-pricing-page-checklist]]
 
+## 2026-10-06 — DEJAN (Dan Petrovic) publishes "Link Building & Outreach for AI Search": link-incongruence thesis, four editorial-link rules, adversarial link integration
+
+[[dejan-link-building-outreach-ai-search]] · created [[editorial-link-integration]], [[parametric-memory-vs-grounding]]; updated [[link-building]]
+
+## 2026-10-08 — ora research publishes "AX is the New AEO" (arXiv:2609.34951): agent-ready sites recommended 1.9× more often; training data supplies only 7–10% of agent answers
+
+[[ora-ax-is-the-new-aeo-2026]] · created [[agent-experience-ax]], updated [[agentic-web-optimization]], [[optimizing-for-the-agentic-web]]
+
+## 2026-10-10 — Nozzle Research publishes "Poisoned Google SERPs" (27.5M SERPs, 49 countries, data Aug 20–Oct 9, 2026): 8.0% of SERPs poisoned since Sep 13 vs 0.17% baseline; tracked sites miss the top 10 on 58.6% of them
+[[nozzle-poisoned-google-serps-2026]] · new [[serp-poisoning]]; updated [[ai-visibility-measurement-methodology]], [[chatgpt-vertical-retrieval-engines]]
+
+## 2026-10-12 — DEJAN publishes "Finding High-Value Converting Queries That Mainstream Tools Miss"
+
+[[dejan-stealthy-queries-2026]] · updated [[keyword-research]]
+
 ## 2026-10-15 — Schematic publishes "6 Effective SaaS Pricing Page Examples and Why They Work" (Ryan Echternacht)
 [[schematic-saas-pricing-page-examples-2026]] · new [[saas-pricing-page-checklist]]
 
-## 2026-08-18 — August 2026 spam update (Aug 18–21; "a normal spam update", no narrower target named)
-[[google-search-status-dashboard-history]] · [[google-algorithm-update-history]]. Duration: 2 days, 16 hours. Backfilled during the 2026-11-04 lint.
+## 2026-10-23 — HubSpot publishes AI visibility content-gap guide; Semrush publishes "AI search strategy: 4 layers of brand visibility"
 
-## 2026-09-24 — September 2026 spam update (Sep 24–Oct 8; longest 2026 spam update at ~14 days)
-[[google-search-status-dashboard-history]] · [[google-algorithm-update-history]]. Duration: 13 days, 16 hours. Backfilled during the 2026-11-04 lint.
+[[hubspot-ai-content-gaps]], [[semrush-ai-search-strategy-4-layers]] · created [[ai-visibility-content-gap-audit]], [[ai-visibility-four-layer-diagnostic]]; updated [[ai-citation-landscape]], [[agentic-web-optimization]]
+
+## 2026-10-31 — DEJAN publishes Google Store Pixel Watch 5 alt-text case study
+
+[[dejan-google-store-alt-text-2026]] · updated [[image-seo-checklist]]
+

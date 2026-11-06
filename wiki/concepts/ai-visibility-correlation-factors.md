@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-07-22
+updated: 2026-10-08
 ---
 
 # AI Visibility Correlation Factors
@@ -153,6 +153,28 @@ Lowest-quality penalty target, not just a non-factor.
     strategy either — the Ahrefs/Growth Memo brand-level correlations
     remain the best evidence for that broader claim. These are different
     decisions with different evidence bases.
+
+## Conflicting Evidence — off-site mentions vs. own-site readability
+
+- **Claim**: Off-site brand presence (YouTube mentions, branded web
+  mentions, branded anchors) is the strongest lever for AI visibility.
+  - Supported by: this page's Ahrefs correlation data
+    ([[ahrefs-ai-brand-visibility-correlations]]), where off-site
+    factors top the ranking.
+  - Contradicted by: [[ora-ax-is-the-new-aeo-2026]] (2026-10-08,
+    37,927 agent runs, 1,056 sites). With brand fame, prior model
+    knowledge, *and off-site citation breadth* matched, own-site
+    agent readability alone produced a 1.9× gap in clear
+    recommendations. The authors argue off-site seeding "loses
+    leverage" as agents go to the source.
+- **Current best guess**: the two measure different outcomes.
+  Correlation with *mentions* in chat answers is not the same as
+  *recommendation strength and accuracy* from agents doing live buyer
+  research. Off-site presence likely still governs whether you're
+  surfaced; own-site readability governs how well you're recommended
+  once researched. Ora's is a single vendor-run study with a
+  proprietary readiness score. **Flagged unresolved**; see
+  [[agent-experience-ax]].
 
 ## Conflicting Evidence — resolved
 

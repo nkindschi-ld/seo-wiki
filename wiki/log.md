@@ -2818,7 +2818,6 @@ retrieval-eligibility gate, both of which [[ai-search-reranking-pipeline]] and
 [[generative-engine-optimization]] already covered. Upstream had linked those
 correctly; no duplication introduced.
 
-
 ## [2026-09-23] query | "Show me sources on llms.txt files"
 
 Surveyed all 7 sources touching `llms.txt`. Four argue against it:
@@ -3168,6 +3167,69 @@ ChatGPT). Recorded in [[authority-in-generative-search]] Conflicting Evidence.
 Found while filing, after the ingest discussion, so it's surfaced in the
 wrap-up summary.
 
+## [2026-10-08] ingest | AX is the New AEO (ora research, arXiv:2609.34951)
+
+Vendor-run but matched-pair study: 37,927 agent journeys across 1,056
+business sites on four Claude/GPT harnesses. Agent-ready sites get
+clear recommendations 1.9× as often (20% vs 11%, up to 2.6× by stack).
+Training knowledge supplies only 7–10% of answers. Blocked agents still
+answer ~99% of the time, from web search (12% → 25% of the answer),
+with 3.7× more answers omitting every asked fact. Cost per grounded
+answer is +64%. Documents ChatGPT's Aug 8 2026 shift to `site:`
+queries on official sites and the ~86% Reddit-citation drop. New
+source page [[ora-ax-is-the-new-aeo-2026]] and new concept
+[[agent-experience-ax]]. Updated [[agentic-web-optimization]]
+(AX evidence, ARD/connector registries, Conflicting Evidence),
+[[optimizing-for-the-agentic-web]] (new "Unblock and verify" section),
+[[ai-visibility-correlation-factors]], [[generative-engine-optimization]],
+[[ai-citation-landscape]] (pre-Aug-2026 Reddit data time-sensitivity
+note), [[ai-overview-grounding-and-fidelity]] (cross-surface omission
+corroboration), and [[robots-txt-strategy]] (cost of blocking agents).
+
+## [2026-10-08] conflict | Off-site presence vs. own-site agent readability as the main AI-visibility lever
+
+Logged on [[agent-experience-ax]], [[ai-visibility-correlation-factors]],
+and [[agentic-web-optimization]]. Ahrefs correlation data ranks off-site
+mentions (YouTube, branded web mentions) as the top AI-visibility
+factors, and Semrush's agentic-web stack treats off-site presence as a
+core layer. ora finds that with off-site citation breadth matched,
+own-site readability alone drives a 1.9× recommendation gap, and argues
+the off-site-seeding arbitrage is closing. Leaning: they measure
+different outcomes (mentions vs. recommendation strength/accuracy in
+agent research), so both matter. Weight own-site readability higher for
+agent-researched commercial queries. Single vendor study; flagged
+unresolved.
+
+## [2026-10-08] ingest | Link Building & Outreach for AI Search (DEJAN, Dan Petrovic)
+
+Created [[dejan-link-building-outreach-ai-search]] (source),
+[[editorial-link-integration]] (playbook), and
+[[parametric-memory-vs-grounding]] (concept). Updated [[link-building]],
+[[link-building-outreach-tactics]], [[link-and-anchor-text-best-practices]]
+(10–20 organic links/page as further support for the no-cap resolution),
+and [[ai-citation-landscape]] (see-also). Raw saved to
+raw/articles/dejan-link-building-outreach-ai-search.md with six images in
+raw/assets/dejan-outreach-*.png; interactive widgets not captured.
+Source is partly promotional and its models/funnel numbers are
+proprietary or n=1, flagged as such on every page.
+
+## [2026-10-08] conflict | Link authority metrics — DEJAN dismisses DR/DA as vendor proxies
+
+[[dejan-link-building-outreach-ai-search]] calls DA/PA-style metrics
+made-up approximations that cause good links to be refused, contra
+[[ahrefs-link-building]] and [[pitchbox-link-prospecting-hacks]].
+Leaning: use as a coarse filter, not a gate. Unresolved; logged on
+[[link-building]].
+
+## [2026-10-08] conflict | Outreach-link value — "most outreach links are ignored or a small negative"
+
+[[dejan-link-building-outreach-ai-search]] claims poorly integrated
+outreach links are detected and devalued, contra the productive-at-~5%
+framing in [[ahrefs-link-building]]. Leaning: rate vs. value are
+different measures; DEJAN's claim is unmeasured but aligns with Google's
+link-spam stance. Integration quality decides. Unresolved; logged on
+[[link-building]].
+
 ## [2026-10-14] ingest | Nozzle Research — "Poisoned Google SERPs"
 
 [[nozzle-poisoned-google-serps-2026]] (raw/studies/nozzle-poisoned-google-serps-2026.md).
@@ -3267,6 +3329,18 @@ Wikipedia clickstream data, which find links near the top of an article
 get clicked disproportionately; and Nielsen Norman Group eye-tracking and
 scroll research on attention concentrating near the top of the page.
 
+## [2026-10-25] ingest | Niche research & AI-visibility batch (7 sources)
+
+Semrush niche-driven SEO, Semrush niche keyword research, Surnex "Finding a Niche", HubSpot niche markets, Diggity/Empire Flippers affiliate niches, HubSpot AI content gaps, Semrush "AI search strategy: 4 layers". Created [[niche-selection-and-validation]], [[niche-validation-playbook]], [[ai-visibility-content-gap-audit]], [[ai-visibility-four-layer-diagnostic]]; updated [[keyword-research]], [[geo-diagnostic-checklist]], [[ai-citation-landscape]], [[content-marketing-strategy]], [[agentic-web-optimization]]. Raw files are fetch-tool paraphrases. Search Engine Watch hyphens/underscores URL guidance returned HTTP 403 and was not ingested (deferred).
+
+## [2026-10-25] conflict | Reddit's decline in ChatGPT — two incompatible data points
+
+[[semrush-ai-search-strategy-4-layers]] reports Reddit's share of ChatGPT responses falling ~60% to ~10% (Aug-Sept 2025); [[ora-ax-is-the-new-aeo-2026]] reports a 3.83% to 0.52% citation-share drop from Aug 8, 2026. Different years, metrics, and levels. Both support "platform change can erase a channel"; magnitudes unreconciled. Unresolved; logged on [[ai-citation-landscape]].
+
+## [2026-10-25] conflict | Niche selection — passion-first vs. demand-first
+
+[[hubspot-niche-market]] starts from passions and skills; [[surnex-finding-a-niche]] says passion doesn't validate demand. Leaning: ordering difference, not true opposition; demand-first screen, passion as tiebreaker. Unresolved; logged on [[niche-selection-and-validation]].
+
 ## [2026-10-27] query | "How should we prioritize the keywords we track — volume, ease, and proximity to commercial interest?"
 Drafted a Slack reply to the CMO on finalizing the tracked-keyword set.
 Drew on [[keyword-research]] (conversion potential as a prioritization
@@ -3347,6 +3421,22 @@ not a `<table>`, and 148 of its cells are checkmark images with
 which plan (Developer/Foundation/Enterprise) includes it. Suggested
 fix: a semantic `<table>` with `<th>` column headers, or per-cell
 "Included on Foundation" text/alt. Not filed as a wiki page.
+
+## [2026-11-02] ingest | Glossary-page SEO batch (3 sources)
+
+Wenstein Beyond Digital "From Zero to Hero: Boosting SEO with Strategic Glossary Pages" (LinkedIn), SEO My Clicks "How to Write a Glossary Page That Ranks for Hundreds of Keywords", Airfleet "Why Every Website Needs a Glossary". Created [[glossary-pages-for-seo]], [[glossary-page-build-checklist]], and three source pages; cross-linked from [[topic-cluster-strategy]], [[entity-based-seo-implementation]], [[content-marketing-strategy]]. All three are practitioner/agency blogs with no measured data. Raw files are fetch-tool paraphrases. Added an unsourced caveat (general knowledge) that FAQ rich results have been restricted since Aug 2023, against Airfleet's FAQ-schema case study.
+
+## [2026-11-02] conflict | Glossary architecture — one URL per term vs. single topic-clustered hub
+
+[[linkedin-wenstein-strategic-glossary-pages]] calls per-term pages best for SEO; [[seomyclicks-glossary-page-seo-2026]] argues for one semantic-hub page and [[airfleet-why-websites-need-glossaries]] for an A–Z/accordion page split by topic at scale. No side has data. Leaning: per-term URL only for terms with their own demand and substantive content, otherwise anchored hub entries (thin/scaled-content and cannibalization risk). Unresolved; logged on [[glossary-pages-for-seo]].
+
+## [2026-11-02] ingest | Goodspeed "SEO Glossary Pages: How They Win Long-Tail Rankings and Links"
+
+Promotional Framer-template article (referral link, consulting CTAs), no data or schema. Agrees with existing [[glossary-pages-for-seo]] consensus; added non-SEO benefits (support deflection, terminology alignment) there, and visuals, CMS data model, and guest-post promotion to [[glossary-page-build-checklist]]. No conflicts. Publish date ambiguous (byline 2024-03-13, header 2026-10-30); used byline. Raw file is a fetch-tool paraphrase.
+
+## [2026-11-02] ingest | Detailed "How Volatile Are AI Responses?"
+
+Glen Allsopp's 28-day study of 1,300+ commercial prompts in ChatGPT and Google AI Overviews (70k+ responses). Created [[ai-answer-volatility]] and [[detailed-ai-volatility-2026]]; added window-based measurement guidance to [[ai-visibility-content-gap-audit]] and [[seo-reporting]], and a day-to-day citation-churn note to [[ai-citation-landscape]]. No conflicts: AIO video share (14%→8%) is a different metric and period from the existing single-video-platform 10.6% figure. Raw file is a fetch-tool paraphrase; trailing chart image data was not extractable.
 
 ## [2026-11-04] ingest | Gauge — "How and Why You Should Serve Markdown Pages to Agents" (Ethan Finkel, 2026-08-10)
 
@@ -3526,3 +3616,16 @@ Fixes applied (same day, user go-ahead), findings 1–7:
 
 Still open: findings 3 (Mintlify ingest), 8 (missing concept pages) and
 9 (oversized pages).
+
+## [2026-11-04] update | Title tag and H1 should never be identical
+
+At the user's direction, added a house rule to [[seo-copywriting]] (tactic and checklist item): the title tag and H1 must differ, with the title tag treated as the more important one to optimize. No ingested source backs it yet, so it is marked as a house rule; ingest a supporting source when one turns up. The SEO Command Center crawl now flags `title_matches_h1` against this page.
+
+## [2026-11-06] ingest | DEJAN AI multi-topic batch (10 sources)
+
+Eight dejan.ai posts (Content Optimization Engine, Grounding Snippets, Generative Self-Retrieval, Fanout Vectors, AI Mode Tags, Google Store alt text, Stealthy Queries, New Tail), the Google Research paper "Thinking to Recall" (arXiv 2603.09906), and the interactive "Textless Query Fan-Out" explainer linked from Fanout Vectors. Created [[query-fanout]], [[grounding-snippets]], [[ai-mode-response-markup]] and ten source pages. Updated [[parametric-memory-vs-grounding]] (generative self-retrieval), [[geo-content-optimization-tactics]] (LLM re-ranker win rates, extraction-ready writing, checklist), [[generative-engine-optimization]] (conflict), [[listicles-in-ai-search]], [[ai-citation-landscape]] (pointer to the new fanout page), [[image-seo-checklist]] (image-match alt audit), [[keyword-research]] (zero-volume and new-tail queries). Caveats: most numbers are DEJAN vendor data with private datasets; AI Mode Tags is unverified and partly LLM-written, filed as low confidence; New Tail is a 2016 post republished with a 2026 section; the explainer is a JS-rendered page saved as HTML plus a captured summary. Downloaded 20 post images to `raw/assets/dejan/`. Grounding-snippet length findings agree with the existing 500–2,000-word sweet spot.
+
+## [2026-11-06] conflict | Statistics and citations as GEO levers
+
+[[geo-generative-engine-optimization-aggarwal-2023]] ranks Statistics Addition and Cite Sources in the top tier; [[dejan-content-optimization-engine-2026]] finds "Proof" edits (stats, citations, awards, endorsements) win about half as often as framing in LLM re-ranking. Leaning: different measurements (citation-stage share vs. re-ranking between rivals), so fix framing and alignment first and test both. Unresolved; logged on [[generative-engine-optimization]].
+

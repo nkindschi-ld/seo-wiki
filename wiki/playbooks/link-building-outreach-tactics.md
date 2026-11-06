@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-09-04
+updated: 2026-10-08
 ---
 
 # Link Building Outreach Tactics
@@ -107,6 +107,18 @@ Per [[crawling-mondays-link-building-outreach-2020]]:
   hundreds of hours per month" of manual list-building, not to skip
   qualification.
 
+## After the placement: integration decides the value
+
+Per [[dejan-link-building-outreach-ai-search]], the most common way
+outreach links lose their value is poor integration — a link any
+experienced SEO (or Google) can identify as the one someone wanted
+placed. Publisher requirements like the "1 + 2 rule" (one commercial
+link plus 1–3 authority links) make this worse, not better. Before
+accepting or submitting placed content, run the checks in
+[[editorial-link-integration]]. Note this source contests both the
+DR/DA filtering above and the value of outreach links generally — see
+the Conflicting Evidence section of [[link-building]].
+
 ## Checklist
 
 - [ ] Every prospect passes the five qualification questions before
@@ -123,8 +135,13 @@ Per [[crawling-mondays-link-building-outreach-2020]]:
       referral-traffic fit — not authority alone.
 - [ ] Backlink anchor text is not being engineered/manipulated — see
       [[link-and-anchor-text-best-practices]].
+- [ ] Placed content passes the blind "who wanted the link?" review in
+      [[editorial-link-integration]].
 
 ## See also
+
+- [[editorial-link-integration]] — making the placed link read as
+  editorial once you have the placement.
 
 - [[link-building]] — the conceptual framing: four ways links get built,
   five link quality metrics, realistic success-rate expectations.

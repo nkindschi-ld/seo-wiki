@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-07-11
+updated: 2026-11-02
 ---
 
 # Entity-Based SEO Implementation
@@ -256,3 +256,4 @@ Add "about" schema markup to your pillar and important content pages to explicit
 - [[technical-seo-audit-checklist]] — schema markup audit section
 - [[link-and-anchor-text-best-practices]] — internal linking mechanics
 - [[generative-engine-optimization]] — entity optimization benefits both search and AI
+- [[glossary-page-build-checklist]] — a glossary as a per-term entity layer (`DefinedTerm` schema, term → canonical-page linking)

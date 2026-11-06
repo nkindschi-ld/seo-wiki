@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo]
-updated: 2026-09-06
+updated: 2026-10-08
 ---
 
 # Link Building
@@ -94,7 +94,46 @@ Per [[ahrefs-link-building]], not all links are worth the same:
   tension came up directly in viewer discussion of
   [[crawling-mondays-link-building-outreach-2020]].
 
+## Conflicting Evidence
+
+- **Claim**: third-party authority metrics (DR/DA and similar) are a
+  meaningful measure of link quality and a sensible prospect filter.
+  - Supported by: [[ahrefs-link-building]] (authority as the first of
+    five quality metrics) and [[pitchbox-link-prospecting-hacks]]
+    (metrics standards as qualification question #1).
+  - Contradicted by: [[dejan-link-building-outreach-ai-search]]
+    (2026-10-06) — DA/PA-style scores are "made up by a SaaS company,"
+    approximate Google's link authority "at best," and cause good links
+    to be refused; integration quality is what determines a placed
+    link's value.
+  - **Current best guess (unresolved)**: both sides have a point. These
+    metrics are vendor proxies, not Google signals (note Ahrefs sells
+    one), so don't reject a relevant, well-integrated link on score
+    alone. But DEJAN is a single practitioner selling an alternative
+    tool. Use authority metrics as a coarse filter, not a gate, and
+    weight integration/relevance at least as heavily.
+
+- **Claim**: outreach-acquired links are productive (at a ~5% cold
+  success rate) and worth pursuing at scale.
+  - Supported by: [[ahrefs-link-building]],
+    [[link-building-outreach-tactics]] benchmarks.
+  - Contradicted by: [[dejan-link-building-outreach-ai-search]]
+    (2026-10-06) — "most outreach-based links are ignored, or treated
+    as a small negative signal," because poor integration is
+    detectable by Google's spam team and algorithms.
+  - **Current best guess (unresolved)**: these aren't strictly
+    incompatible — Ahrefs measures placement *rate*, DEJAN asserts
+    placement *value*. DEJAN's claim is unmeasured (no ranking data,
+    proprietary detector with an admitted false positive), but it
+    aligns with Google's long-standing link-spam stance. Treat
+    integration quality as the deciding factor in whether an outreach
+    link is worth having; see [[editorial-link-integration]].
+
 ## See also
+
+- [[editorial-link-integration]] — making a placed link read as
+  editorial: the "who wanted the link?" test, four rules, link-desire
+  placement.
 
 - [[link-building-outreach-tactics]] — the actionable playbook: prospecting
   hacks, outreach process, and common mistakes to avoid.

@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-11-04
+updated: 2026-11-06
 ---
 
 
@@ -57,6 +57,44 @@ over these content tactics when the two compete for effort.**
 **Best combination tested:** Fluency Optimization + Statistics Addition
 together outperformed any single tactic by 5.5%+. If you can only pick
 one pairing, use this one.
+
+> **Contested (2026-11):** DEJAN's 2,249-experiment LLM re-ranking
+> study found the opposite of Tier 1 for credentials — statistics and
+> study citations, .gov/.edu citations, awards, and expert endorsements
+> were among the *least* effective edits. See the next section and the
+> Conflicting Evidence entry on [[generative-engine-optimization]].
+
+## Framing and query alignment beat credentials (LLM re-ranker win rates)
+
+Per [[dejan-content-optimization-engine-2026]] (2,249 experiments, 113
+client sites, an LLM ranker judging each one-change edit against the
+page's real competitors; vendor data, not public). Share of tested
+ideas that produced a real rank gain:
+
+| Idea family | Win rate | Strongest single levers | Win rate |
+|---|---|---|---|
+| Framing (list, definition, how-to angle) | 31.4% | "Best of" / top-N framing | 38.4% |
+| Alignment (query words and intent) | 26.2% | "What is" / definition framing | 36.7% |
+| Architecture (opening line, sentence length, formatting) | 25.4% | Clear category definitions | 33.3% |
+| Style (voice, readability) | 25.2% | Short, concise sentences | 33.1% |
+| Substance (facts, entities, numbers) | 25.1% | How-to / step-by-step framing | 30.9% |
+| Proof (awards, endorsements, citations) | **15.4%** | Matching query intent | 27.7% |
+
+Weakest single levers: awards/certifications 13.1%, expert endorsements
+14.8%, scale signals 15.6%, statistics and study citations 18.2%,
+.gov/.edu citations 18.9%, adding more raw numbers 20.7%.
+
+How to use it:
+
+- **Fix framing and query match first.** Decide whether the page should
+  be a list, a definition, or a how-to for the target query, and make
+  the opening line answer it directly. "Best of" framing also matches
+  the dominant fanout injection pattern ([[listicles-in-ai-search]]).
+- **Keep credentials for humans and E-E-A-T**, but don't expect them to
+  tip an LLM choosing between comparable pages.
+- **Test every edit in context.** For Gemini, the two strongest positive
+  factors also appeared on the negative list — a lever can help one
+  competitive set and hurt another. ~3 of 4 edits did nothing or hurt.
 
 ## Pick winnable topics, then defend the 5-point moat
 
@@ -520,6 +558,31 @@ from the structural/schema findings above:
   citability using a RAG pipeline built on the same/similar model
   family before publishing, rather than waiting to observe live AI
   Overview behavior.
+
+## Write for sentence-level extraction (grounding snippets)
+
+Per [[dejan-grounding-snippets-2026]] (7,060 queries, 883,262 snippets;
+directional) — the mechanism under the front-loading and
+focus-over-comprehensiveness findings above. See [[grounding-snippets]].
+
+- **Each query gets ~2,000 words of grounding, split by rank** (#1 ≈
+  28%, #5 ≈ 13%). Length doesn't buy more share: coverage drops from
+  ~61% (<1,000 words) to ~13% (3,000+), and selection plateaus near
+  540 words. Make the page dense, not long.
+- **Opening paragraphs are extracted almost wholesale** — put the
+  answer, the category definition, and key facts there.
+- **Write sentences that stand alone.** Extraction is per sentence and
+  stitched with ellipses, so pronouns and "as mentioned above" lose
+  their meaning.
+- **Keep core service info, process steps, pricing, and examples in the
+  main text** — those survive. Navigation, boilerplate, promos, and
+  verbatim testimonials get dropped.
+- **Strip structural noise** (inline TOCs, repeated headers, stray
+  markers) from the main content; it gets scored like sentences.
+- **Cover the fanout angles** a question splits into, since each
+  sub-query extracts separately ([[query-fanout]]).
+- Check what actually gets pulled with a grounding-snippet tool (e.g.
+  DEJAN's free snippets.dejan.ai) rather than guessing.
 
 ## Freshness by vertical
 
@@ -2021,6 +2084,14 @@ despite good HTML-page performance.
       keyword-dense?
 - [ ] Have you avoided keyword stuffing and unnatural repetition?
 - [ ] Does the tone/tactic match the content's domain (see table above)?
+- [ ] Is the page framed for the query (list / definition / how-to), with
+      the opening line answering it directly?
+- [ ] Does the opening paragraph carry the key facts, in sentences that
+      make sense when extracted alone?
+- [ ] Is the page dense rather than padded (coverage falls sharply past
+      ~1,000 words)?
+- [ ] Was each edit tested against the page's real competitors, not
+      assumed to help?
 
 ## Related: how AI systems judge relevance
 

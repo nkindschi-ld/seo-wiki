@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-09-04
+updated: 2026-11-06
 ---
 
 ## File type selection
@@ -55,6 +55,20 @@ a site's images or launching an image-heavy page.
   understanding has improved — Google's own Cloud Vision API nailed cat
   photos but confused butter for cheese at 91% confidence, so text
   context still matters. Add captions where they help.
+- **Alt text should describe the image actually shown, not the product
+  copy.** [[dejan-google-store-alt-text-2026]] scored each image against
+  its alt text in Google's multimodal embedding space (a vendor metric
+  measuring alignment, not rankings). On Google Store's own Pixel Watch
+  5 page, 47 of 109 images had no alt, menu images reused nav labels
+  ("Browse all offers"), and placeholders like "Aria Label 2" appeared
+  eight times. An alt describing "a macro shot of two bands" on what was
+  really a collage of people wearing them scored 43%; describing the
+  collage scored 77–87%. Rewriting lifted the page average from 30% to
+  84%. Audit approach: split images into main content vs.
+  menu/icon/decorative, fill missing alts first, rewrite low-match ones,
+  keep brand/model names, and leave truly decorative images with empty
+  alt. Good alts also carry visual-attribute vocabulary that
+  surveys find buyers use ([[dejan-new-tail-keyword-research]]).
 - **Filenames**: short and descriptive (`black-labrador-puppy.jpg`), not
   generic (`IMG_00234.jpg`, `image1.jpg`).
 - **Preferred image declaration**: mark the canonical image for a page
@@ -107,6 +121,8 @@ a site's images or launching an image-heavy page.
 - [ ] Responsive images use `srcset`/`<picture>` with a fallback `src`
 - [ ] Image sitemap submitted (especially for CDN-hosted images)
 - [ ] Every content image has specific, non-keyword-stuffed alt text
+- [ ] Alt text describes what the image actually shows (no nav labels,
+      placeholders, or copy pasted from a different image)
 - [ ] Filenames are descriptive, not generic
 - [ ] Preferred image declared (`primaryImageOfPage` or `og:image`)
 - [ ] Relevant structured data present where applicable

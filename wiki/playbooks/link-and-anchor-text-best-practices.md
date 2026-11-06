@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-09-10
+updated: 2026-10-08
 ---
 
 # Link and Anchor Text Best Practices
@@ -292,6 +292,10 @@ reveal the effect:
     rule to design content around. Link as much as genuinely serves the
     reader, including well beyond 5 links on longer/more comprehensive
     pages.
+  - Further support (2026-10-08): [[dejan-link-building-outreach-ai-search]]
+    (2026-10-06) observes organic content often carries 10–20 links per
+    page versus 2–3 on blog-network posts, and argues sparse linking is
+    itself an inorganic-link signal.
 
 - **Claim**: Google discounts boilerplate links (footer, sidebar,
   navigation) relative to in-content editorial links.
@@ -343,6 +347,8 @@ reveal the effect:
   page's "when to split" subsection feeds into.
 - [[footer-optimization]] — the footer as a dedicated sitewide internal
   link surface, and the footer-density conflict.
+- [[editorial-link-integration]] — the four-rule framework for making
+  placed backlinks and mentions read as editorial.
 - [[broken-link-building]] and [[digital-pr-strategy]] — external
   link-earning tactics that complement this page's internal-linking and
   link-recovery focus.

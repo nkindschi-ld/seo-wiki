@@ -14,6 +14,39 @@ signup or purchase on a user's behalf. Based on
 Layer 1 (technical SEO foundations) is covered by
 [[technical-seo-audit-checklist]] — this playbook picks up from layer 2.
 
+## First: unblock and verify (agent experience)
+
+Before polishing content, confirm a buyer's agent can actually reach
+and read your pages. Per [[ora-ax-is-the-new-aeo-2026]] / [[agent-experience-ax]],
+blocked agents answer anyway from third-party sources. That cuts clear
+recommendations by about half and makes answers 3.7× likelier to omit
+every fact the buyer asked about.
+
+- **Test with real agents.** Ask Claude/ChatGPT-style agents your top
+  buyer questions (pricing, free tier/trial, features, setup,
+  comparisons) and check whether the answer cites *your* pages or
+  aggregators and competitor blogs. Watch for hedges like "the site
+  returned 403," "contact sales for a quote," or vouching via review
+  sites. These are the hedge patterns that grow most when an agent
+  can't read you.
+- **Remove unintended blocks.** Audit robots.txt AI user-agent rules
+  (see [[robots-txt-strategy]]), WAF/bot-protection, CAPTCHA, and
+  rate-limit rules for 403s on agent fetches. Blocking agents is not
+  the same decision as blocking training crawlers.
+- **Publish pricing as readable text on your own site.** Pricing showed
+  the biggest own-site accuracy gain (60% vs 37%) because your site is
+  its only fresh source.
+- **Make setup/onboarding docs findable.** Two-thirds of setup facts
+  never surfaced in the study. Findability, not source, was what
+  moved setup accuracy (31% vs 18%).
+- **Answer the "what can I try for free?" class of question directly**
+  on a crawlable page. In the study's example trace, one site answered
+  from its own docs while a blocked site's journey ended on two
+  competitors' blogs.
+- **Watch the connector/registry layer** (see layer 5 below): if your
+  category's assistants start checking connectors before the web, a
+  registry/plugin listing becomes part of being findable.
+
 ## Layer 2: Make content agent-parseable
 
 - **Write plainly**: state what the product/page does, who it's for,
