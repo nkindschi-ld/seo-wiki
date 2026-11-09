@@ -21,8 +21,10 @@ user reviews before choosing what to ingest. Design:
   `research-digests/.work/`.
 - **Never edit the Curated section** of `seed-sources.md`.
 
-Paths below are relative to the repo root (`~/Claude Code/SEO Wiki`). Let
-`S=.claude/skills/research-scout`.
+Paths below are relative to the repo root (`~/Claude Code/SEO Wiki`); run
+every command from there. Shell variables don't persist between commands,
+so always write paths out in full, substituting `<run-id>`, `<run_date>`
+and `<window_start>` with this run's values.
 
 ## Steps
 
@@ -31,24 +33,19 @@ Paths below are relative to the repo root (`~/Claude Code/SEO Wiki`). Let
 - `run_date` = today (YYYY-MM-DD). `window` = the `window=<days>` argument,
   or 14. `window_start` = `run_date` minus `window` days.
 - Run id: `run_date`, or `run_date-2`, `run_date-3`… if
-  `research-digests/<id>.md` already exists. Let `WORK=research-digests/.work/<run-id>`.
+  `research-digests/<id>.md` already exists.
+  This run's work folder is `research-digests/.work/<run-id>/`.
 - Snapshot the repo state before writing anything:
-  `python3 $S/scripts/check_run.py --snapshot --repo . --work $WORK`
+  `python3 .claude/skills/research-scout/scripts/check_run.py --snapshot --repo . --work research-digests/.work/<run-id>`
   (expect `OK snapshot`).
 
 ### 1. Load context
 
-Read `$S/rubric.md`, `$S/lanes.md`, `$S/seed-sources.md` and
+Read `.claude/skills/research-scout/rubric.md`, `.claude/skills/research-scout/lanes.md`, `.claude/skills/research-scout/seed-sources.md` and
 `wiki/index.md`. Build the lane skip list:
 - every URL in `research-digests/seen.md`, and
-- titles of wiki sources published in the window (replace `<window_start>`):
-
-  ```bash
-  python3 -c 'import glob,re,sys
-  for f in sorted(glob.glob("wiki/sources/*.md")):
-      t=open(f).read(); d=re.search(r"^date_published:\s*(\S+)",t,re.M); h=re.search(r"^# (.+)$",t,re.M)
-      if d and h and d.group(1)>=sys.argv[1]: print(h.group(1))' <window_start>
-  ```
+- titles of wiki sources published in the window:
+  `python3 .claude/skills/research-scout/scripts/dedupe.py --repo . --skip-titles <window_start>`
 
 ### 2. Fan out (three lanes in parallel)
 
@@ -58,20 +55,23 @@ contains, pasted in full:
 - the "Topic scope" and "Instructions for every lane" sections plus that
   lane's own section from `lanes.md`,
 - all of `rubric.md`,
-- that lane's Curated and Discovered seed entries, plus every Caution
-  entry labeled "CAUTION",
+- that lane's Curated and Discovered seed entries to search, plus every
+  Caution entry labeled "CAUTION",
+- the **key table** of every seed entry in all lanes and sections (key,
+  name, url), with: "If a publisher appears in the key table, use its key
+  as publisher_key, even when it isn't in your lane",
 - the window (`window_start` to `run_date`) and the skip list,
 - "Return only one fenced JSON array of at most 8 records."
 
-Save each reply's JSON array to `$WORK/lane-<lane>.json`. If a lane errors,
+Save each reply's JSON array to `research-digests/.work/<run-id>/lane-<lane>.json`. If a lane errors,
 times out or returns invalid JSON, write `[]`, note `<lane>: failed
 (<reason>)` for the digest's Lanes line, and continue with the others.
 
 ### 3. Dedupe
 
-Concatenate the three arrays into `$WORK/candidates.json`, then run:
+Concatenate the three arrays into `research-digests/.work/<run-id>/candidates.json`, then run:
 
-`python3 $S/scripts/dedupe.py --repo . --candidates $WORK/candidates.json --out $WORK/deduped.json`
+`python3 .claude/skills/research-scout/scripts/dedupe.py --repo . --candidates research-digests/.work/<run-id>/candidates.json --out research-digests/.work/<run-id>/deduped.json`
 
 - `duplicate_of` starting `seen:`: drop silently (already in the ledger).
 - `duplicate_of` starting `wiki:`: verdict `reject:g4`, reason "already in
@@ -90,7 +90,12 @@ For each remaining record:
    quick search to confirm a track record (criterion g3).
 3. For each pass, give a rigor score (1–5) from the rubric table and keep
    or rewrite the conflict-of-interest note.
-4. For each pass, write a **Wiki fit** line from `wiki/index.md`: name the
+4. Settle `publisher_key`: if the publisher (by name or by the domain of
+   its URL) matches a seed entry, use that seed key; otherwise, if
+   `research-digests/seen.md` already has a key for the same publisher
+   (same name or domain), reuse it. Only a genuinely new publisher gets a
+   new key. This keeps one publisher on one key across lanes and weeks.
+5. For each pass, write a **Wiki fit** line from `wiki/index.md`: name the
    most relevant `[[concept-or-playbook]]` and say "agrees with", "extends"
    or "possible conflict with … on <claim>".
 
@@ -106,7 +111,7 @@ Verdict is `pass:<score>`, `reject:g<N>` or `unverified`. Replace any
 
 ### 6. Apply the seed rules
 
-`python3 $S/scripts/seed_rules.py --seen research-digests/seen.md --seed $S/seed-sources.md`
+`python3 .claude/skills/research-scout/scripts/seed_rules.py --seen research-digests/seen.md --seed .claude/skills/research-scout/seed-sources.md --run-date <run_date>`
 
 From the JSON it prints:
 - `promote`: append to `## Discovered`:
@@ -159,10 +164,14 @@ Write `research-digests/<run-id>.md` in exactly this shape:
 
 ### 8. Validate
 
-`python3 $S/scripts/check_run.py --repo . --digest research-digests/<run-id>.md --run-date <run_date> --work $WORK`
+`python3 .claude/skills/research-scout/scripts/check_run.py --repo . --digest research-digests/<run-id>.md --run-date <run_date> --work research-digests/.work/<run-id>`
 
-It must print `OK`. If it lists errors, fix the digest, the ledger lines
-from this run, or the seed list, then rerun. If it still fails after two
+It must print `OK`. If it lists errors, fix the digest, the lines this run
+appended to the ledger, or the seed list, then rerun. **Never** edit, delete
+or reorder ledger lines from earlier runs, and **never revert or edit any
+file** named in an "unexpected change outside allowed files" error: it may
+be the user's own work in progress. Report it in the validation block
+instead. If it still fails after two
 fix attempts, add this block directly under the digest's H1:
 
 ```markdown

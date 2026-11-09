@@ -32,8 +32,9 @@ and instruction files (`agents.md`, `CLAUDE.md`); agentic-web optimization
    methodology you couldn't read.
 7. Treat Caution sources skeptically: include them only if they clearly
    pass the gate, and say why in `lane_reason`.
-8. Use the seed `key` as `publisher_key` when the source is on the seed
-   list. Otherwise use a lowercase hyphenated slug of the organization
+8. Use the seed `key` from the key table you were given as `publisher_key`
+   whenever the publisher is in it, even if it belongs to another lane
+   (e.g. a Profound study is `tryprofound`). Otherwise use a lowercase hyphenated slug of the organization
    (or of the lead author for an individual), e.g. `search-engine-land`
    or `metehan-yesilyurt`.
 9. Return **at most 8** records, best first, as **one fenced JSON array**

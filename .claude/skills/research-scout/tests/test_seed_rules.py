@@ -14,6 +14,9 @@ SEED = """# Seed sources
 ### Industry research
 - key: ahrefs | name: Ahrefs | url: https://ahrefs.com/blog/ | note: x
 - key: curatedsite | name: Curated Site | url: https://curated.example | note: x
+- key: tryprofound | name: Profound | url: https://www.tryprofound.com/blog | note: x
+- key: arxiv-cs-ir | name: arXiv cs.IR | url: https://arxiv.org/list/cs.IR/recent | note: x
+- key: chris-long | name: Chris Long | url: https://www.linkedin.com/in/chris-long/ | note: x
 
 ## Discovered
 - key: discoveredlab | name: Discovered Lab | lane: industry | added: 2026-10-01 | evidence: https://d.example/s
@@ -27,8 +30,8 @@ def line(date, verdict, key, url="https://x.example/s", title="T"):
     return f"{date} | {verdict} | {key} | {title} | {url} | r"
 
 
-def run(*lines):
-    return evaluate(parse_ledger("\n".join(lines)), parse_seed(SEED))
+def run(*lines, run_date=None):
+    return evaluate(parse_ledger("\n".join(lines)), parse_seed(SEED), run_date)
 
 
 class SeedRuleTests(unittest.TestCase):
@@ -91,6 +94,31 @@ class SeedRuleTests(unittest.TestCase):
     def test_keys_normalize_across_spellings(self):
         ch = run(line("2026-11-02", "pass:3", "Search Engine Land"), line("2026-11-09", "pass:2", "search-engine-land"))
         self.assertEqual([p[0] for p in ch.promote], ["search-engine-land"])
+
+    def test_old_evidence_does_not_repromote(self):
+        # user deleted a Discovered entry; no new evidence this run → no re-add
+        ch = run(line("2026-11-02", "pass:4", "newlab"), run_date="2026-11-09")
+        self.assertEqual(ch.promote, [])
+
+    def test_old_fails_do_not_recaution(self):
+        ch = run(line("2026-11-02", "reject:g1", "roundupsite"), line("2026-11-09", "reject:g1", "roundupsite"),
+                 run_date="2026-11-16")
+        self.assertEqual(ch.caution, [])
+
+    def test_alias_key_maps_to_seed_by_domain(self):
+        ch = run(line("2026-11-09", "pass:5", "profound", url="https://www.tryprofound.com/blog/new-study"))
+        self.assertEqual(ch.promote, [])
+
+    def test_alias_key_curated_flagged_not_cautioned(self):
+        u = "https://tryprofound.com/blog/roundup"
+        ch = run(line("2026-11-02", "reject:g1", "profound", url=u), line("2026-11-09", "reject:g2", "profound", url=u))
+        self.assertEqual(ch.caution, [])
+        self.assertEqual([f[0] for f in ch.flag_curated], ["tryprofound"])
+
+    def test_hub_domains_do_not_map(self):
+        ch = run(line("2026-11-09", "pass:4", "newlab", url="https://arxiv.org/abs/2611.00001"),
+                 line("2026-11-09", "pass:4", "someone", url="https://www.linkedin.com/posts/someone-study"))
+        self.assertEqual(sorted(p[0] for p in ch.promote), ["newlab", "someone"])
 
 
 if __name__ == "__main__":
