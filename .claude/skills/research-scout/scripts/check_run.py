@@ -1,13 +1,15 @@
 """Validate one research-scout run's outputs.
 
 Before the run:  python3 check_run.py --snapshot --repo <root> --work <work-dir>
-  writes <work-dir>/status-before.txt and <work-dir>/curated-snapshot.md
+  writes status-before.txt, hashes-before.json, seen-before.md and curated-snapshot.md into <work-dir>
 After the run:   python3 check_run.py --repo <root> --digest <path> --run-date YYYY-MM-DD --work <work-dir>
   prints OK (exit 0) or one error per line (exit 1)
 """
 from __future__ import annotations
 
 import argparse
+import hashlib
+import json
 import re
 import subprocess
 import sys
@@ -98,18 +100,22 @@ def check_digest(text: str, run_date: str) -> list[str]:
     return errs
 
 
-def check_ledger_for_run(ledger_text: str, run_date: str, passed: int, rejected: int, unverified: int) -> list[str]:
+def check_ledger_for_run(ledger_text: str, before_text: str, run_date: str,
+                         passed: int, rejected: int, unverified: int) -> list[str]:
+    """seen.md must be append-only; count only the lines this run appended."""
+    if not ledger_text.startswith(before_text.rstrip("\n")):
+        return ["seen.md is append-only, but lines that existed before the run were changed or removed"]
     try:
-        entries = [e for e in parse_ledger(ledger_text) if e.date == run_date]
+        entries = [e for e in parse_ledger(ledger_text[len(before_text.rstrip("\n")):]) if e.date == run_date]
     except ValueError as exc:
-        return [f"seen.md: {exc}"]
+        return [f"seen.md (lines added this run): {exc}"]
     got = (
         sum(e.verdict.startswith("pass:") for e in entries),
         sum(e.verdict.startswith("reject:") for e in entries),
         sum(e.verdict == "unverified" for e in entries),
     )
     if got != (passed, rejected, unverified):
-        return [f"seen.md has pass/reject/unverified {got} for {run_date}, digest says {(passed, rejected, unverified)}"]
+        return [f"seen.md lines added this run have pass/reject/unverified {got}, digest says {(passed, rejected, unverified)}"]
     return []
 
 
@@ -133,14 +139,28 @@ def _paths(status: str) -> dict[str, str]:
     return out
 
 
-def check_git_paths(status_before: str, status_after: str, allowed: list[str]) -> list[str]:
+def check_git_paths(status_before: str, status_after: str, allowed: list[str],
+                    hashes_before: dict | None = None, hashes_after: dict | None = None) -> list[str]:
     before = _paths(status_before)
+    hashes_before = hashes_before or {}
+    hashes_after = hashes_after or {}
     errs = []
     for path, line in _paths(status_after).items():
-        if before.get(path) == line or path in allowed or path.startswith(WORK_PREFIX):
+        if path in allowed or path.startswith(WORK_PREFIX):
             continue
-        errs.append(f"unexpected change outside allowed files: {path}")
+        if before.get(path) == line and hashes_before.get(path) == hashes_after.get(path):
+            continue
+        errs.append(f"unexpected change outside allowed files: {path} "
+                    "(agent edit, or a concurrent edit by the user; never revert it, report it)")
     return errs
+
+
+def file_hashes(repo: Path, status: str) -> dict:
+    out = {}
+    for path in _paths(status):
+        f = repo / path
+        out[path] = hashlib.sha256(f.read_bytes()).hexdigest() if f.is_file() else None
+    return out
 
 
 def git_status(repo: Path) -> str:
@@ -163,7 +183,11 @@ def main(argv=None) -> int:
 
     if args.snapshot:
         work.mkdir(parents=True, exist_ok=True)
-        (work / "status-before.txt").write_text(git_status(repo))
+        status = git_status(repo)
+        (work / "status-before.txt").write_text(status)
+        (work / "hashes-before.json").write_text(json.dumps(file_hashes(repo, status), indent=1))
+        seen = repo / SEEN_PATH
+        (work / "seen-before.md").write_text(seen.read_text() if seen.is_file() else "")
         (work / "curated-snapshot.md").write_text(section_text((repo / SEED_PATH).read_text(), "Curated"))
         print("OK snapshot")
         return 0
@@ -179,10 +203,14 @@ def main(argv=None) -> int:
     errs = check_digest(text, args.run_date)
     counts = header_counts(text)
     if counts:
-        errs += check_ledger_for_run((repo / SEEN_PATH).read_text(), args.run_date, *counts)
+        errs += check_ledger_for_run((repo / SEEN_PATH).read_text(), (work / "seen-before.md").read_text(),
+                                     args.run_date, *counts)
     errs += check_curated_unchanged((repo / SEED_PATH).read_text(), (work / "curated-snapshot.md").read_text())
-    errs += check_git_paths((work / "status-before.txt").read_text(), git_status(repo),
-                            [digest_rel, SEEN_PATH, SEED_PATH])
+    status_before = (work / "status-before.txt").read_text()
+    status_after = git_status(repo)
+    errs += check_git_paths(status_before, status_after, [digest_rel, SEEN_PATH, SEED_PATH],
+                            json.loads((work / "hashes-before.json").read_text()),
+                            file_hashes(repo, status_before))
     if errs:
         print("\n".join(errs))
         return 1
