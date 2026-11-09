@@ -38,7 +38,7 @@ subdomains of this wiki.
 
 ```
 .claude/skills/research-scout/
-  SKILL.md            # orchestrator: load context → lanes → judge → write → commit
+  SKILL.md            # orchestrator: load context → lanes → judge → write (no commit)
   lanes.md            # brief for each of the 3 lane subagents, plus the topic scope
   rubric.md           # hard gate, rigor score, conflict-of-interest note
   seed-sources.md     # trusted publishers/researchers by lane: Curated, Discovered, Caution
