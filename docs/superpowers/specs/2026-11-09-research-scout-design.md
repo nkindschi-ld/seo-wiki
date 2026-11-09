@@ -112,7 +112,11 @@ research-digests/
    and opinion or prediction posts fail.
 2. **Stated methodology.** It states what was measured and how: data
    source, sample size, and study period. Vague sizes ("thousands of
-   queries") fail.
+   queries") fail. *(Loosened 2026-11-09 after the test run:)* when the
+   collection period isn't stated but the data is clearly current, the
+   publish month counts as the period and the rigor score is capped at 3.
+   A controlled lab experiment may treat its pinned model versions as its
+   period.
 3. **Identifiable, credible author.** A named person or organization with
    a track record in the field: earlier published research, a known
    research team, or an academic post. Anonymous content-farm pages fail.

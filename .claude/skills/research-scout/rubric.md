@@ -13,7 +13,17 @@ criterion it fails as `reject:g<N>`.
    and opinion or prediction posts fail.
 2. **Stated methodology (g2).** It states what was measured and how: data
    source, sample size, and study period. Vague sizes ("thousands of
-   queries") fail.
+   queries", "over 130 respondents") fail.
+   - **Study period, loosened:** if the data-collection period isn't
+     stated, the publish month counts as the period when the data is
+     clearly current (e.g. a live tool snapshot, current model versions, a
+     survey of current platform use). Such a study passes g2, but its
+     rigor score is **capped at 3**, and the entry's Method line says
+     "collection period not stated".
+   - A controlled lab experiment that names the exact model versions it
+     tested may treat those versions as its period (no cap).
+   - Data that is old or undated in a way that matters (e.g. no way to
+     tell which model generation produced it) still fails g2.
 3. **Identifiable, credible author (g3).** A named person or organization
    with a track record in the field: earlier published research, a known
    research team, or an academic post. Anonymous content-farm pages fail.

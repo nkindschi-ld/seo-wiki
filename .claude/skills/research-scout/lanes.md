@@ -36,7 +36,11 @@ and instruction files (`agents.md`, `CLAUDE.md`); agentic-web optimization
    whenever the publisher is in it, even if it belongs to another lane
    (e.g. a Profound study is `tryprofound`). Otherwise use a lowercase hyphenated slug of the organization
    (or of the lead author for an individual), e.g. `search-engine-land`
-   or `metehan-yesilyurt`.
+   or `metehan-yesilyurt`. For an academic paper, use the slug of the
+   **lead author's institution** (e.g. `university-of-toronto`), never the
+   venue key (arXiv, ACL Anthology, Semantic Scholar are venues, not
+   publishers). An academic paper whose authors list no institution uses
+   the lead author's surname.
 9. Return **at most 8** records, best first, as **one fenced JSON array**
    and nothing else:
 
