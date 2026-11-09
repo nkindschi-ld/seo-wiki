@@ -41,8 +41,14 @@ Paths below are relative to the repo root (`~/Claude Code/SEO Wiki`). Let
 Read `$S/rubric.md`, `$S/lanes.md`, `$S/seed-sources.md` and
 `wiki/index.md`. Build the lane skip list:
 - every URL in `research-digests/seen.md`, and
-- titles of wiki sources published in the window:
-  `for f in wiki/sources/*.md; do d=$(grep -m1 '^date_published:' "$f" | awk '{print $2}'); [ -n "$d" ] && [ ! "$d" \< "<window_start>" ] && grep -m1 '^# ' "$f"; done`
+- titles of wiki sources published in the window (replace `<window_start>`):
+
+  ```bash
+  python3 -c 'import glob,re,sys
+  for f in sorted(glob.glob("wiki/sources/*.md")):
+      t=open(f).read(); d=re.search(r"^date_published:\s*(\S+)",t,re.M); h=re.search(r"^# (.+)$",t,re.M)
+      if d and h and d.group(1)>=sys.argv[1]: print(h.group(1))' <window_start>
+  ```
 
 ### 2. Fan out (three lanes in parallel)
 
