@@ -61,6 +61,17 @@ scripts in `scripts/` parse these lines).
 - key: gofishdigital | name: Go Fish Digital | url: https://gofishdigital.com/blog/ | note: AI-search experiments
 
 ## Discovered
+- key: university-of-toronto | name: University of Toronto (Nick Koudas group) | lane: academic | added: 2026-11-09 | evidence: https://arxiv.org/abs/2610.15033
+- key: university-of-delaware | name: University of Delaware (Li, Qiao, Gao) | lane: academic | added: 2026-11-09 | evidence: https://arxiv.org/abs/2610.14334
+- key: fudan-university | name: Fudan University (Min Yang security group) | lane: academic | added: 2026-11-09 | evidence: https://arxiv.org/abs/2610.11932
+- key: politecnico-di-milano | name: Politecnico di Milano (Francesco Pierri group) | lane: academic | added: 2026-11-09 | evidence: https://arxiv.org/abs/2609.24407
+- key: northwestern-university | name: Northwestern University (Emőke-Ágnes Horvát group) | lane: academic | added: 2026-11-09 | evidence: https://arxiv.org/abs/2610.39339
+- key: nara-institute-of-science-and-technology | name: Nara Institute of Science and Technology (Kula, Matsumoto SE group) | lane: academic | added: 2026-11-09 | evidence: https://arxiv.org/abs/2611.04367
+- key: north-carolina-state-university | name: North Carolina State University (Wesley Assunção group) | lane: academic | added: 2026-11-09 | evidence: https://arxiv.org/abs/2611.09802
+- key: university-of-windsor | name: University of Windsor (Asaduzzaman, Ngom) | lane: academic | added: 2026-11-09 | evidence: https://arxiv.org/abs/2611.02383
+- key: xi-an-jiaotong-university | name: Xi'an Jiaotong University / NUS (Xiaokui Xiao) | lane: academic | added: 2026-11-09 | evidence: https://arxiv.org/abs/2610.15382
+- key: maastricht-university | name: Maastricht University Law & Tech Lab | lane: academic | added: 2026-11-09 | evidence: https://arxiv.org/abs/2609.18729
+- key: university-of-texas-at-dallas | name: University of Texas at Dallas (Dokyun Lee et al.) | lane: academic | added: 2026-11-09 | evidence: https://arxiv.org/abs/2609.38946
 
 ## Caution
 - key: thedigitalbloom | name: The Digital Bloom | added: 2026-08-03 | reason: "reports" are secondary aggregations of other studies, with a provenance red flag (relabeled Profound's 680M figure as its own)
