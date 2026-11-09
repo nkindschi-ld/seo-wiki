@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-11-06
+updated: 2026-11-09
 ---
 
 Why / when to use this: before investing in content or internal linking,
@@ -81,7 +81,17 @@ same query (see [[link-and-anchor-text-best-practices]]).
   stop competing. This is the same failure mode
   [[entity-based-seo-implementation]] addresses at the entity level:
   one authoritative page per entity/topic, not several splitting
-  authority.
+  authority. When consolidating, use a **301**: per Google, a 302 leaves
+  the old URL in results and passes no signals ([[sej-google-redirects-ranking-signals-2026]]).
+  - ⚠️ **Flagged dissent (low weight):** SEJ's Roger Montti argues in
+    [[sej-google-redirects-ranking-signals-2026]] that cannibalization contradicts how Google works. In his view,
+    Google clusters similar pages, picks one canonical, and consolidates
+    the signals, so "cannibalization" is really thin or non-unique
+    content. This is the author's opinion, not Google's. Google's
+    statements in the piece cover near-duplicate clustering only, not
+    distinct pages competing for one query. No change to this playbook;
+    the practical fixes (consolidate, or differentiate the content) are
+    the same under either framing.
 
 ## New-feature launch content: don't seed-keyword on the product name
 

@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-11-04
+updated: 2026-11-09
 ---
 
 ## Priority Framework
@@ -56,6 +56,18 @@ citation (see [[how-google-search-works]] and
   count of URLs discovered, (3) monitor for errors/warnings, (4) track
   indexation status (crawled, indexed, excluded).
 - **Fix redirect chains** (A→B→C) **and loops** (circular redirects).
+- **Use the right redirect type** ([[sej-google-redirects-ranking-signals-2026]], Google, 2026-11-05):
+  - **301 (or 308)** for permanent moves. It's the only type that tells
+    Google to make the new URL canonical and pass ranking signals to it.
+  - **302 (or 307)** only for genuinely temporary moves. Google keeps the
+    old URL in results and "basically ignores" the new one.
+  - **307/308** when a redirect must keep a form POST and its data intact
+    (e.g. checkout failover). A 302 drops the POST data.
+  - **Server-side HTTP redirects only.** Flag JavaScript and meta-refresh
+    redirects for replacement: the browser has to load and run the page
+    before it moves on.
+  - Audit check: any 302/307 that's been live for a while on a URL that
+    has permanently moved should become a 301.
 - **Fix broken links** — restore or 301-redirect broken internal links;
   update or remove broken external links.
 - **Resolve server errors** — audit for 5xx errors and escalate

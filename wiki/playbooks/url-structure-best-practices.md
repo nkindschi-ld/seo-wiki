@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-08-11
+updated: 2026-11-09
 ---
 
 # URL Structure Best Practices
@@ -10,7 +10,8 @@ updated: 2026-08-11
 architecture, planning a migration, or auditing an existing structure. URL
 architecture is **among the hardest website decisions to reverse** — every URL
 change is a redirect hop that dilutes link equity *even when done correctly* —
-so the goal is to get it durable the first time, not to micro-optimize the
+(⚠️ disputed: Google says a single 301 passes all ranking signals; see
+Conflicting Evidence below) — so the goal is to get it durable the first time, not to micro-optimize the
 strings. Based on [[visively-url-structure-fundamentals]] (Pedro Dias, ex-Google
 Search). The retrieval/canonicalization mechanics behind this live in
 [[how-google-search-works]]; the AI-citation-correlation evidence lives in
@@ -100,7 +101,8 @@ equal** — a file/directory distinction, not a ranking one. The risk is
 redirects (linking to a URL that 301s to the real one) cause three problems:
 
 1. **Waste crawl budget** — the crawler spends a fetch on the redirect.
-2. **Dilute link equity** — each hop decays PageRank.
+2. **Dilute link equity** — each hop decays PageRank. (⚠️ Disputed for
+   single 301s — see Conflicting Evidence. Reasons 1 and 3 stand either way.)
 3. **Slow page loads** — an extra round trip for users.
 
 This is the link-side complement to the canonicalization guidance in
@@ -133,6 +135,27 @@ you from *authoring* internal redirects in the first place.
 - [ ] Product-URL category-path decision made against taxonomy-change frequency.
 - [ ] Migration plan (if any) minimizes redirect hops and avoids chains.
 
+## Conflicting Evidence
+
+- **Claim**: every redirect hop dilutes link equity / PageRank, even a
+  correctly implemented 301.
+  - Supported by: [[visively-url-structure-fundamentals]] (Pedro Dias,
+    ex-Google Search; undated explainer).
+  - Contradicted by: [[sej-google-redirects-ranking-signals-2026]] (2026-11-05). Google's Gary Illyes says that with a
+    301, Google "takes all the ranking signals of the old page and hands them
+    to the new page." Only a 302 withholds signals: it keeps the old URL in
+    results and "basically ignores the new URL."
+  - Not in dispute: redirect *chains* and internal redirects still waste
+    crawl fetches and add a round trip for users, and very long chains can
+    break consolidation to the final URL ([[ahrefs-site-audit-study-2023]]).
+- **Current best guess**: lean toward Google for single 301 hops. It's the
+  official, more recent source, and it speaks directly to signal transfer.
+  Keep the design-for-persistence and no-internal-redirects rules anyway,
+  justified by crawl cost, latency, chain risk, and the chance that a
+  redirect gets dropped in a later migration rather than by equity decay.
+  The SEJ article is a secondhand write-up, so this is **flagged as
+  unresolved**.
+
 ## See also
 
 - [[how-google-search-works]] — canonicalization and the crawl/index/serve
@@ -148,6 +171,8 @@ you from *authoring* internal redirects in the first place.
   mistaken for).
 - [[content-pruning-playbook]] — redirect discipline when removing/consolidating
   pages.
+- [[sej-google-redirects-ranking-signals-2026]] — Google on 301 vs. 302 signal transfer and
+  canonicalization (the counter-evidence above).
 - [[nngroup-url-as-ui-1999]] — Jakob Nielsen's foundational "URL as UI"; the
   primary source for the usability heuristics, the all-lowercase rule, and the
   URL-credibility gaze-time data.
