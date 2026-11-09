@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-08-20
+updated: 2026-11-09
 ---
 
 # How Google Search Works
@@ -73,6 +73,16 @@ images, video) and decides what the page is about. Includes
 picking a representative canonical version, plus collecting signals
 (language, geographic relevance, usability) for later ranking use.
 
+**How redirects feed canonicalization** ([[sej-google-redirects-ranking-signals-2026]], Google's Illyes and
+Prommawin, 2026-11-05): deduplication groups pages with similar main content
+into a cluster, then picks one representative URL. Both 301 and 302
+redirects act as **clustering** signals. Only a 301 (or 308) is a
+**canonicalization** signal that moves the old URL's ranking signals to the
+new one. A 302 (or 307) keeps the old URL as the one shown in results. A
+wrong choice doesn't de-index the content; it only changes which URL
+represents it. Whether redirect hops lose any equity is disputed; see
+[[url-structure-best-practices]]'s Conflicting Evidence.
+
 **Indexing is not guaranteed** even for crawled pages: "not every page
 that Google processes will be indexed." Common causes: low-quality
 content (see [[e-e-a-t-and-page-quality]]'s Page Quality tiers),
@@ -122,5 +132,7 @@ can never become a candidate source for an AI-generated answer either.
   redirects, Core Web Vitals, Schema, and AI/agent crawler access.
 - [[peec-ai-server-logs-ai-search-2026]] — source for the AI bot-type
   taxonomy (training/indexing/retrieval) above.
+- [[sej-google-redirects-ranking-signals-2026]] — Google on how 301/302/307/308 redirects affect
+  clustering and canonical selection.
 - [[lexical-ranking-tf-idf-bm25]] — the TF-IDF/BM25 scoring mechanics
   that run inside the serving/retrieval stage of this pipeline.

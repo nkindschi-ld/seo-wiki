@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-09-04
+updated: 2026-11-09
 ---
 
 Why / when to use this: as a site accumulates content, some pages stop
@@ -85,6 +85,11 @@ rather than splitting. Sloppy or missing redirects are called out
 repeatedly as the actual cause of lasting traffic loss from pruning —
 the pruning decision itself is rarely the problem, the redirect
 execution is.
+
+Use a **301, not a 302**, for merges and removals. Per Google ([[sej-google-redirects-ranking-signals-2026]]), only
+a 301 makes the surviving page canonical and passes the old URL's ranking
+signals to it. A 302 tells Google the move is temporary, so the old URL stays
+in results and the surviving page is largely ignored.
 
 ## Corroborating case study
 

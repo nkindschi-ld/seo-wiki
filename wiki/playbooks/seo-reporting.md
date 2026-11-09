@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-11-02
+updated: 2026-11-09
 ---
 
 Why / when to use this: use when setting up or refreshing recurring
@@ -51,6 +51,36 @@ section in current practice, not optional or experimental.
 Executive summary → traffic overview → AI Visibility data → keyword
 performance → conversions and ROI → backlink analysis → content
 performance → technical health status → recommended actions.
+
+## Post-click journey: show where organic visits convert or drop off
+
+Per [[sej-track-user-journey-ga4-2025]] (practitioner how-to, no data):
+traffic-only reporting stops at Impression → Click. To tie SEO to revenue,
+report the rest of the journey too: Landing → Engagement → Micro-conversion →
+Conversion/Drop-off. That turns "traffic grew" into "we removed friction at
+step X and gained Y conversions."
+
+1. **Build a GA4 Funnel Exploration** (Explore → Funnel exploration) with an
+   **Organic traffic** segment in Segment Comparisons.
+2. **Use an open funnel** if visitors can enter partway, e.g. landing
+   straight on a product page. A closed funnel assumes everyone starts at
+   step 1, which rarely fits organic landings.
+3. **Define steps from custom events** (signup, CTA click, demo request)
+   built in GTM and QA'd before use, not only GA4's default events.
+4. **Break down by device first** (the most common source of friction), then
+   by country. A gender breakdown requires Google Signals.
+5. **Triage drop-offs three ways:** largest absolute user loss, highest
+   percentage drop between steps, and biggest revenue impact. The step
+   closest to conversion often matters more than the highest-volume step.
+6. **Save it as a custom report** (Reports → Library → new Blank collection →
+   topic → drag the exploration in → Save → Publish) so it sits in the left
+   nav and gets checked every period. Use short, descriptive names.
+
+Funnel Exploration measures a path you define. To discover the paths people
+actually take (e.g. what MoFu readers do next), use Path Exploration; see
+[[keyword-mapping-and-cannibalization]]. To see how AI-referred visitors
+behave after the click, build the same funnel on an AI-referral segment
+using the regex in [[seoclarity-track-ai-search-traffic]] (wiki synthesis).
 
 ## Before reporting a ranking drop
 
@@ -103,6 +133,8 @@ period.
       actions.
 - [ ] Each significant metric change has a stated cause, not just a
       number.
+- [ ] Conversions section includes a saved GA4 organic funnel (open
+      funnel, custom-event steps) with the biggest drop-off step named.
 - [ ] Any ranking drop was checked against the keyword's multi-week
       history and Search Console before reporting (rules out
       [[serp-poisoning]]).
@@ -128,6 +160,8 @@ period.
 
 - [[serp-poisoning]] — why scraped rank data since Sep 2026 can show
   fake drops.
+- [[sej-track-user-journey-ga4-2025]] — source for the post-click GA4
+  funnel section.
 
 See [[semrush-seo-report]] for the full source writeup, and
 [[nozzle-poisoned-google-serps-2026]] for the rank-drop check.

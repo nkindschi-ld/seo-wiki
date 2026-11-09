@@ -1267,3 +1267,11 @@ enumeration with no call-frequency data, not a measured study.
 
 [[dejan-google-store-alt-text-2026]] · updated [[image-seo-checklist]]
 
+
+## 2025-12-16 — SEJ publishes GA4 user-journey funnel tracking guide for SEO reporting (Bengu Sarica Dincer)
+
+[[sej-track-user-journey-ga4-2025]] · updated [[seo-reporting]]
+
+## 2026-11-05 — Google's Gary Illyes and Cherry Prommawin explain how 301/302/307/308 redirects affect clustering, canonicalization and ranking signals (reported by SEJ)
+
+[[sej-google-redirects-ranking-signals-2026]] · updated [[how-google-search-works]], [[technical-seo-audit-checklist]]; conflict on [[url-structure-best-practices]]

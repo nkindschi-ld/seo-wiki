@@ -3705,3 +3705,44 @@ All seven approved by the user and flagged unresolved. Same pass added
 [[parametric-memory-vs-grounding]] and [[ai-search-reranking-pipeline]].
 Two proposed citations dropped because the sources didn't clearly
 support them.
+
+## [2026-11-06] query | "Which AI-features keywords relate to LaunchDarkly's offerings?"
+Filtered a 22,859-row Semrush exact-match export ("ai features") down to 67
+LaunchDarkly-relevant keywords (~590/mo), clustered against AgentControl /
+AI Configs / Guarded Rollouts / Experimentation / Observability, plus a
+Semrush check of 46 adjacent head terms. Applied [[keyword-research]]
+(zero-volume, fan-out, click potential), [[keyword-mapping-and-cannibalization]]
+(funnel stage) and [[saas-seo-strategy]] (aggregator SERPs). Output in
+drafts/launchdarkly/ (not filed to wiki).
+Follow-up same day: confirmed each cluster's product mapping against
+LaunchDarkly docs through the LaunchDarkly MCP server (`search-docs`, read-only),
+found that docs now say "AgentControl configs" where Glean still says "AI
+Configs", and added 25 docs-derived keyword ideas checked in Semrush (top new
+target: "agent control plane", 140/mo, KD 24).
+
+## [2026-11-09] ingest | SEJ: Google Explains How Redirects Affect Ranking Signals
+Roger Montti's write-up (2026-11-05) of Google's Gary Illyes and Cherry
+Prommawin on redirects. New [[sej-google-redirects-ranking-signals-2026]].
+Updated [[how-google-search-works]] (how redirects feed clustering vs.
+canonicalization), [[technical-seo-audit-checklist]] (redirect-type
+selection, server-side only), [[content-pruning-playbook]] (301 not 302 for
+merges), [[keyword-mapping-and-cannibalization]] (flagged low-weight dissent:
+the author's "cannibalization is a myth" opinion) and
+[[url-structure-best-practices]] (Conflicting Evidence, below).
+
+## [2026-11-09] conflict | redirect equity — does a correct 301 hop dilute link equity?
+[[url-structure-best-practices]] / [[visively-url-structure-fundamentals]]
+say every redirect hop dilutes link equity even when done correctly.
+[[sej-google-redirects-ranking-signals-2026]] quotes Google's Illyes saying
+a 301 hands *all* ranking signals to the new URL. Best guess: Google is
+right for single 301 hops. Keep the no-internal-redirects and anti-chain
+rules on crawl-cost and latency grounds. Flagged unresolved (secondhand
+write-up); the user approved this handling.
+
+## [2026-11-09] ingest | SEJ: How To Track User Journey In GA4 To Make SEO Wins More Visible
+Bengu Sarica Dincer (Designmodo), 2025-12-16; practitioner how-to, no data.
+New [[sej-track-user-journey-ga4-2025]]. Added a "Post-click journey" section
+and a checklist item to [[seo-reporting]]: GA4 organic Funnel Exploration,
+three-way drop-off triage, saving it as a custom report, and pointers to Path
+Exploration and AI-referral segments. Filed as a section, not a new playbook,
+per the user. No conflicts.
