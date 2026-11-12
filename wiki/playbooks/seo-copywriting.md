@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-11-06
+updated: 2026-11-12
 ---
 
 Why / when to use this: apply at the drafting stage, once a page is
@@ -93,7 +93,7 @@ relevant keywords, and hold the reader's attention once they arrive.
 - **Claim**: keep meta descriptions under ~120 characters.
   - Supported by: [[semrush-seo-copywriting]] (2023-01-31) — vendor
     blog; a cautious mobile-truncation target.
-  - Contradicted by: [[writing-meta-tags]] (updated 2026-09-23) —
+  - Contradicted by: [[writing-meta-tags]] (updated 2026-11-12) —
     ~150–155 characters; [[writer-checklist-blog-posts]] — under 155;
     and LaunchDarkly's house meta spec (155-char description, 65-char
     title including " | LaunchDarkly").
@@ -115,6 +115,7 @@ relevant keywords, and hold the reader's attention once they arrive.
   placed within the copy.
 - [[e-e-a-t-and-page-quality]] — the underlying quality framework this
   craft-level guidance supports.
+- [[writing-meta-tags]] — title/description length rules, good-vs-bad
+  examples, and the house 65/155 spec.
 
 See [[semrush-seo-copywriting]] for the full source writeup.
-- [[writing-meta-tags]] — title/description length rules, good-vs-bad examples, and the house 65/155 spec

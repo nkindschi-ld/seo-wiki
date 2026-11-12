@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-11-06
+updated: 2026-11-12
 ---
 
 # AI Citation Landscape
@@ -521,8 +521,9 @@ directional mechanism, not a measured effect size.
 
 **Practical stakes**: citations drive traffic (per
 [[aio-ctr-impact]]'s citation-premium data); mentions build presence
-even when the user never clicks — relevant given most AI interactions
-end without a click (see [[ai-traffic-scale-vs-hype]]). This "mentions
+even when the user never clicks — relevant given that 92.8% of observed
+ChatGPT purchase-decision tasks ended with no meaningful click to an
+external site (see [[ai-shortlist-effect]]). This "mentions
 build presence" claim now has direct measured backing: per
 [[similarweb-downstream-impact-of-ai-visibility-2026]], brands
 recommended (mentioned) by ChatGPT are 2.5x more likely to receive a
@@ -1021,38 +1022,15 @@ points in it. New, distinctive contributions beyond the overlap number:
   mature third-party "best-of" listicle ecosystems diverge most from
   Google rankings; thin-listicle categories converge on them.
 
-**Rigorous academic corroboration (2026-08-06):** per
-[[xu-measuring-google-ai-overviews-2026]] (Xu, Iqbal & Montgomery / WashU;
-55,393 trending queries, 7,583 AIOs, 61,212 references) — the most
-rigorously-sourced measurement of AIO↔SERP overlap in the wiki, and it
-lands in the same mid-range: only **41.4% of AIO-cited domains appear in
-the query's top-10 organic results** (25.0% at top-5), rising to 70.2%
-across the *full* first page — so **29.8% of AIO-cited domains are
-"off-page,"** absent from the first-page SERP entirely. The authors
-conclude AIO source selection is "a mechanism distinct from Google's
-ranking algorithm." Two further findings sharpen the picture: the
-off-page references are *higher* quality than the on-page ones (PC1
-credibility 0.758 vs 0.724, UGC 3.4% vs 18.5%), and AIO-cited domains
-overall are more credible than the co-displayed first-page results (PC1
-0.732 vs 0.645, p≪0.001) — Google's AIO doesn't just re-rank the SERP, it
-reaches for a distinct, higher-authority, lower-UGC source pool. This is
-independent academic confirmation of the "separate discovery layers"
-reading, at the top-10 level closest to DerivateX's 35% and Otterly's
-54.5% (and far from Ahrefs' 76%/iPullRank's 6.2% ends of the spread).
-
-**AIO suppresses UGC relative to the SERP — not a contradiction of
-"UGC-first engine."** The same source finds AIO's UGC share is **14.2%
-vs 41.4%** on the co-displayed first page (−27.25pp, p<0.001) — AIO cites
-*less* user-generated content than Google's own organic ranking does.
-This sits against BrightEdge's characterization of Google AI Overviews as
-the most UGC-heavy of the five engines ("UGC-first engine," ~17.5-18%
-UGC) — but the two use different baselines and aren't in conflict: AIO
-uses more UGC than *ChatGPT/Gemini/Perplexity* (BrightEdge's cross-engine
-comparison) while still using less UGC than *Google's own first-page
-SERP* (this paper's within-Google comparison). Both can be true. And the
-top-cited-domain data is consistent with the heavy-YouTube finding
-elsewhere on this page — youtube.com is AIO's single most-cited domain
-(5.49%) even as aggregate UGC is suppressed.
+**Rigorous academic corroboration (2026-08-06):** the largest,
+best-documented measurement of this overlap,
+[[xu-measuring-google-ai-overviews-2026]], lands in the same mid-range:
+**41.4% of AIO-cited domains appear in the query's top-10** (25.0% at
+top-5, 70.2% across the full first page), closest to DerivateX's 35% and
+Otterly's 54.5% and far from the Ahrefs 76% / iPullRank 6.2% ends of the
+spread. It independently confirms the "separate discovery layers"
+reading. Full figures (off-page share, credibility, UGC) are in "AIO
+source selection, measured against the first page as control" below.
 
 **Practical implication (reinforces existing guidance):** track AIO
 citations and Google rankings as **separate KPIs** — don't use one as a
@@ -1121,7 +1099,11 @@ For "best of" local queries (best hotels, restaurants, services),
 ChatGPT systematically cites Google Maps search results — 188 citations
 per 1,000 such queries, averaging ~7 map pins per response — rather than
 reviews or editorial content. Claude cited Google Maps only once in the
-entire study.
+entire study. (Source: [[muckrack-generative-pulse-ai-reading-may-2026]].)
+This sits in unresolved tension with the leaked ChatGPT engine registry,
+which shows local queries routing to Yelp and Foursquare with no Google
+path. See the Conflicting Evidence entry on
+[[chatgpt-vertical-retrieval-engines]].
 
 ## Chinese-language generative search engines
 
@@ -1181,47 +1163,16 @@ grounded in retrieval (RAG), not a static trained "understanding."
 
 ## Being cited ≠ being represented accurately (claim fidelity)
 
-A dimension the wiki hadn't measured until now: even when your content is
-cited, the AI may not represent it faithfully. Per
-[[xu-measuring-google-ai-overviews-2026]] (WashU academic audit; 98,020
-atomic claims decomposed from 7,491 Google AI Overviews, verified by a
-human-validated LLM pipeline at 95.6% accuracy), **11.0% of AIO claims
-are *not supported* by the pages they cite** (89.0% Consistent). The
-failure is dominated by **omission (7.0%)** — the AIO drops or overstates
-what the source actually says — rather than outright contradiction
-(Incorrect 2.66%, Ambiguous 1.39%); omission outweighs contradiction
-~2.6:1.
-
-Three findings matter for GEO strategy:
-
-- **Fidelity is independent of source quality** (r≈0.045). Being a
-  high-authority cited source does *not* protect you from being
-  misrepresented — curating better sources doesn't fix the unsupported-
-  claim rate. The authors call unsupported claims "inherent to generative
-  AI at its current state," with a ~5.3% residual floor even under the
-  most generous assumptions (counting all uncrawled-UGC-sourced claims as
-  supported).
-- **Fidelity is highest in YMYL categories** — Health 94.8%, Politics
-  93.7%, Science 91.8% — and lowest in Autos (80.7%), Sports (81.9%), and
-  Jobs & Education (76.9%). Consistent with Google applying more
-  guardrails where errors are most consequential (see
-  [[e-e-a-t-and-page-quality]]'s YMYL framing).
-- **Practical takeaway**: because omission is the dominant failure mode,
-  content that states its key facts *self-containedly and unambiguously*
-  (rather than relying on surrounding context the AIO won't carry over)
-  is less likely to be truncated into an unsupported claim — the same
-  extractability discipline behind [[geo-content-optimization-tactics]]'s
-  chunk-level ("Fraggle") and answer-first guidance, now with an accuracy
-  rationale on top of the citation-rate one. And it's a reason to
-  *monitor how AI surfaces paraphrase you*, not just whether they cite you
-  (see [[similarweb-how-to-win-the-race-for-gen-ai-search-2026]]'s
-  sentiment-monitoring/correction guidance).
-
-This is distinct from the "citation-without-recommendation" decoupling
-(being cited but not recommended) in [[listicles-in-ai-search]] and the
-citations-vs-mentions split above: here the citation *exists and points
-to you*, but the sentence it supports misstates or omits what your page
-said.
+Even when your content is cited, the AI may not represent it faithfully.
+Per [[xu-measuring-google-ai-overviews-2026]], **11.0% of claims in Google
+AI Overviews aren't supported by the pages they cite**, mostly through
+omission rather than contradiction (~2.6:1), and fidelity is independent
+of source quality (r≈0.045). The full breakdown (verdict shares, category
+scores, the real-time-data artifact, practical implications) lives on
+[[ai-overview-grounding-and-fidelity]]. Unlike the
+citation-without-recommendation split in [[listicles-in-ai-search]], here
+the citation exists and points to you, but the sentence it supports
+misstates or omits what your page said.
 
 ### Factual accuracy across engines and source types (2026-10-02 addendum)
 
@@ -1257,11 +1208,14 @@ cross-engine accuracy data in the wiki:
 
 ## AIO source selection, measured against the first page as control
 
-Per [[xu-measuring-google-ai-overviews-2026]] — the only source in
-this wiki that compares AIO citations against the *co-displayed
-first-page results for the same query*, which turns several
-widely-repeated AIO characterizations on their head. 7,583 AIOs,
-61,212 cited URLs, 308,407 first-page URLs, Mar–Apr 2026.
+Per [[xu-measuring-google-ai-overviews-2026]] (Xu, Iqbal & Montgomery /
+WashU) — the largest and most rigorous source in this wiki comparing AIO
+citations against the *co-displayed first-page results for the same
+query* ([[derivatex-two-googles-one-query-aio-vs-serp-2026]] above does a
+smaller top-10 version on 100 B2B queries), and its results turn several
+widely-repeated AIO characterizations on their head. 55,393 trending
+queries, 7,583 AIOs, 61,212 cited URLs, 308,407 first-page URLs,
+Mar–Apr 2026.
 
 **AIO citation is broad where the SERP is concentrated.** The top 10
 hostnames take 29.7% of AIO citations but 49.6% of first-page
@@ -1275,16 +1229,18 @@ concentration findings above ([[ahrefs-b2b-seo-statistics-2025]]'s
 concentration and host-level long-tail breadth are compatible.
 
 **AIO-cited domains are more credible than the organic results
-directly beneath them** — mean PC1 domain-credibility 0.732 vs. 0.645,
-significant in 14 of 19 categories with **no significant reversal in
+directly beneath them** — mean PC1 domain-credibility 0.732 vs. 0.645
+(p≪0.001), significant in 14 of 19 categories with **no significant reversal in
 any category**. The authors note this "directly contradicts prior work
 suggesting that AIOs draw on lower-quality sources than traditional
 results."
 
 **AIOs cite less UGC than the SERP does, in every category**: 14.2% of
-AIO references vs. 41.4% of first-page URLs. Four platforms are 96.5%
-of the AIO UGC share — YouTube 5.49%, Facebook 3.68%, Instagram 3.65%,
-Reddit 0.87%. Category spread is 3x: Climate 9.3% and Health 10.7% at
+AIO references vs. 41.4% of first-page URLs (−27.25pp, p<0.001). Four
+platforms are 96.5% of the AIO UGC share — YouTube 5.49%, Facebook
+3.68%, Instagram 3.65%, Reddit 0.87%. youtube.com is AIO's single
+most-cited domain even as aggregate UGC is suppressed, consistent with
+the heavy-YouTube finding elsewhere on this page. Category spread is 3x: Climate 9.3% and Health 10.7% at
 the low end, Beauty & Fashion 28.9% and Autos & Vehicles 27.4% at the
 high end.
 
@@ -1304,7 +1260,11 @@ the full first page; **29.8% of AIO-cited domains appear nowhere on
 the corresponding first page** (28.5% at URL level). Those off-page
 citations score *higher* on credibility (PC1 0.758 vs. 0.724) and
 carry far less UGC (3.4% vs. 18.5%) than the AIO citations that do
-also rank.
+also rank. The authors conclude AIO source selection is "a mechanism
+distinct from Google's ranking algorithm": AIO doesn't just re-rank the
+SERP, it reaches for a distinct, higher-authority, lower-UGC source
+pool. On the top-10 overlap metric, the 41.4% figure sits in the
+mid-range of the spread discussed under "AIO ↔ SERP divergence" above.
 
 Practical implication: AIO citation and first-page ranking are
 different selection mechanisms operating on the same index, not one
@@ -1337,10 +1297,16 @@ Two consequences for how citation sources are read:
   and vice versa. Attributing a ChatGPT citation to "Bing ranking" is
   unsupported without knowing which engine fired.
 - **Local/business queries route to Yelp and Foursquare**, with no Google
-  Business Profile path in the registry — a different provider dependency than
-  the Google Maps reliance documented below for AI Overviews under "Local
-  queries lean on Google Maps, not articles." Different engine, different
-  provider; not a conflict.
+  Business Profile path in the registry. That conflicts with the Google Maps
+  reliance documented above under "Local queries lean on Google Maps, not
+  articles," which Muck Rack measured in **ChatGPT** (188 Maps citations per
+  1,000 local queries). Same engine, different provider. Unresolved; one
+  possible reconciliation is that Maps results arrive through the SerpAPI
+  Google-SERP backend rather than a dedicated local engine. See the Conflicting
+  Evidence entry on [[chatgpt-vertical-retrieval-engines]].
+  _Corrected 2026-11-12: this bullet previously attributed the Maps reliance
+  to AI Overviews and called it "not a conflict"; the Muck Rack data is about
+  ChatGPT._
 
 Also relevant to this page's Reddit findings: Reddit has **two dedicated
 retrieval engines** in the registry, yet is cited at 1.93% and makes up 67.8% of
@@ -1549,6 +1515,16 @@ traffic profile.
     practical lesson is unchanged: measure presence over a window, not
     snapshots. Flagged **unresolved** pending a source that states its
     unit. (Filed during the 2026-11-06 wiki merge.)
+
+- **Claim**: ChatGPT leans on Google Maps for local "best of" queries.
+  - Supported by: [[muckrack-generative-pulse-ai-reading-may-2026]]
+    (2026-05-01), 188 Maps citations per 1,000 local queries.
+  - Contradicted by: [[konitzny-chatgpt-retrieval-leak-engine-list-2026]]
+    (2026-09-17), whose engine registry routes local queries to Yelp and
+    Foursquare with no Google path.
+  - **Current best guess**: full entry, with a possible SerpAPI
+    reconciliation, on [[chatgpt-vertical-retrieval-engines]]. Flagged
+    **unresolved**. (Filed during the 2026-11-12 lint.)
 
 ## Conflicting Evidence — resolved
 

@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo, seo]
-updated: 2026-11-06
+updated: 2026-11-12
 ---
 
 # Authority in Generative Search
@@ -64,7 +64,7 @@ Lumar's self-rated confidence, with what the wiki's evidence adds:
 | **Source provenance** (official docs, regulators, institutional publishers, manufacturer sources) | Very high | Corroborated: ChatGPT `site:`-targets `.gov` for YMYL and brand domains for specs ([[lilyray-chatgpt-fanout-queries-2026]]) |
 | Consistency with trusted sources; citation overlap | Medium | No direct test in the wiki yet |
 | Topic ownership; historical trust | Medium | Partly measured: leadership is sticky once earned ([[topical-authority-in-ai-search]]) |
-| Author credentials | Lower / medium | Mixed: author **schema** showed no citation lift ([[otterly-ai-keyword-research-2026]]), but named-individual authorship dominates LinkedIn citations, ~92% vs. ~8% ([[otterly-linkedin-ai-citations-study-2026]]) |
+| Author credentials | Lower / medium | Mixed: author **schema** showed no citation lift ([[otterly-ai-keyword-research-2026]]), but on LinkedIn, posts by named individuals earn more citations per URL than company posts, 8.5 vs. 5.5 ([[otterly-linkedin-ai-citations-study-2026]]; the often-quoted ~92%/8% split mostly mirrors their 87.8% share of URLs) |
 | `author` / `reviewedBy` structured data | Lower | Consistent with the author-schema null result above |
 | Engagement metrics | Lower | Corroborated: likes and comments correlate near zero with citation ([[otterly-linkedin-ai-citations-study-2026]]) |
 | Link volume / brand popularity | "Tells us much less" | Mixed. Backlinks and Domain Rating correlate weakly with AI visibility ([[ai-visibility-correlation-factors]]). But branded web mentions correlate strongly with being *mentioned*, a different outcome from being an *eligible cited source* |
@@ -73,8 +73,8 @@ Exact weighting is unknown, and Lumar rates its own confidence in it as low.
 
 ## Corroborating evidence already in the wiki
 
-- **`site:` gating by query type:** ChatGPT's `site:` use in fan-outs rose
-  from 0.3% to 23%. Legal and health queries targeted `.gov` domains
+- **`site:` gating by query type:** ChatGPT's `site:` use in fan-outs
+  ([[query-fanout]]) rose from 0.3% to 23%. Legal and health queries targeted `.gov` domains
   exclusively in some tests, and product spec and pricing queries targeted
   brand domains ([[lilyray-chatgpt-fanout-queries-2026]], filed on
   [[ai-citation-landscape]]). This is the clearest visible mechanism for a

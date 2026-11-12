@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [aeo]
-updated: 2026-11-04
+updated: 2026-11-12
 ---
 
 # Optimizing for the Agentic Web
@@ -149,7 +149,8 @@ services):
 
 - **MCP** (Anthropic, Nov 2024) — the most mature; if you run a SaaS
   product, an MCP server exposing key actions (data pulls, report
-  generation) is the most proven integration point today.
+  generation) is the most proven integration point today. For serving
+  documentation this way, see [[docs-over-mcp]].
 - **WebMCP** (Google/Microsoft, W3C draft Feb 2026) — browser-native
   on-page task execution; not production-ready yet, but track for when
   it matures.
@@ -218,3 +219,11 @@ approximation, not a ground-truth measurement.
 - [[accessibility-tree-audit-for-ai-agents]] — the deep-dive audit
   playbook for the accessibility-tree/ARIA layer (layer 4 at the markup
   level), grounded in OpenAI's Atlas ARIA confirmation and Playwright MCP.
+- [[optimizing-for-coding-agent-recommendations]] — the sibling playbook
+  for developer tools: getting a coding agent to pick your product, not
+  just parse your site.
+- [[docs-over-mcp]] — serving docs as an agent-callable MCP tool (the
+  docs-specific form of the MCP point in layer 5).
+- [[llms-txt]] — the agent-facing site map proposal. Evidence says it
+  doesn't move AI-search visibility; its plausible use is helping coding
+  agents and docs tooling find the right page.

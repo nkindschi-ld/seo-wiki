@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-11-06
+updated: 2026-11-12
 ---
 
 # AI Visibility Measurement Methodology
@@ -50,7 +50,7 @@ Adjust this baseline by intent level when possible — high-intent queries (e.g.
 
 [[wholewhale-ai-brand-footprint-measurement]] reports that "early adopters report conversion rates up to 3x higher than traditional search traffic" from AI referrals. This isn't a direct measurement tool, but a qualitative finding suggesting AI-referred traffic may have outsized downstream value — useful for prioritization but not a substitute for direct measurement.
 
-**Note**: This claim lacks third-party corroboration in the current wiki and should be treated as source-attributed rather than confirmed.
+**Note**: Now directionally corroborated, though not on the same metric. Per [[aio-ctr-impact]], [[semrush-optimize-for-agentic-web]] reports the average AI search visitor is worth 4.4x a traditional organic visitor in *conversion value* (cited second-hand there), and [[similarweb-downstream-impact-of-ai-visibility-2026]] measures AI-influenced visitors engaging roughly 2x harder (12.0 vs. 6.5 pages, 11.8 vs. 5.6 minutes per session). Neither measures conversion *rate*, so the specific "up to 3x" figure is still source-attributed rather than confirmed. _Corrected 2026-11-12: previously said the claim lacked any third-party corroboration in the wiki._
 
 ## Tool Landscape
 
@@ -71,7 +71,7 @@ Understanding *why* to measure AI visibility:
 - **Attention shift**: Over 70% of Gen Z prefer AI assistants for research over traditional search ([[wholewhale-ai-brand-footprint-measurement]]), implying AI impression share is increasing as a traffic source
 - **Authority signal**: AI citations function as algorithmic endorsements positioning organizations as subject-matter experts
 - **Competitive advantage**: Most competitors lack standardized AI-visibility measurement tools, creating an intelligence opportunity for early movers
-- **Scale**: Per [[sparktoro-influence-happens-everywhere-2026]], AI tools remain ~1/1,000th the traffic of search+social by absolute clickstream size, but are growing and consolidating significant media share in specific categories (B2B SaaS, professional services, finance)
+- **Scale**: Per [[sparktoro-influence-happens-everywhere-2026]], AI tool visits are small relative to search and social in clickstream data, measuring "1/1,000th the size of the breathless press coverage" they receive. That figure compares visits to press coverage; it is not a traffic share. See [[ai-traffic-scale-vs-hype]] for the actual traffic ratios. _Corrected 2026-11-12: this bullet previously read the 1/1,000th figure as AI's share of search+social traffic, and said AI was consolidating media share in B2B SaaS, professional services and finance, which the source does not say._
 
 ## Unresolved Tensions
 
@@ -101,7 +101,7 @@ Understanding *why* to measure AI visibility:
 ## Related Measurement Frameworks
 
 - **Personal context management** ([[personal-context-signals-in-ai-search]], 2026-08-20) — A proposed third measurement/strategy layer alongside public web presence and AI retrieval optimization: whether a brand appears in a *specific user's* personalized AI Mode results via opted-in Gmail/Photos signals. Standard citation-tracking tools (Trakkr, Evertune, etc.) can't see this layer at all, since it's private and per-user rather than a public, poolable citation. Single-source, early-evidence finding — not yet a validated measurement practice.
-- **Presence/Portability/Concentration** ([[ai-citation-landscape]]) — A three-layer measurement framework for understanding *sources* cited (presence = whether your domain gets cited; portability = citation frequency across engines; concentration = power-law distribution of citations across your pages)
+- **Presence/Portability/Concentration** ([[ai-citation-landscape]]) — A three-layer measurement framework for understanding *sources* cited (presence = % of tracked prompts where you appear in *any* engine; portability = % of your cited URLs that appear in *all* engines; concentration = % of your citations coming from a single engine). _Corrected 2026-11-12 to match the definitions in [[ai-citation-landscape]], from [[sej-the-consensus-gap]]._
 - **Traffic-to-Purchase Attribution** ([[similarweb-downstream-impact-of-ai-visibility-2026]]) — A 2.5x visit-rate multiplier and 2x engagement (pages/time) for AI-influenced traffic, with a finding that 55.9% of AI-influenced traffic invisibly gets absorbed into search attribution, not counted separately
 - **Citation Economics** ([[aio-ctr-impact]]) — The traffic/CTR/conversion premium for being cited in Google AI Overviews specifically (citation premium quantified, query-format variation documented)
 

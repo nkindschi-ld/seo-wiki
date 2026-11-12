@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-11-06
+updated: 2026-11-12
 ---
 
 
@@ -96,7 +96,7 @@ How to use it:
   factors also appeared on the negative list — a lever can help one
   competitive set and hurt another. ~3 of 4 edits did nothing or hurt.
 
-## Pick winnable topics, then defend the 5-point moat
+## Pick winnable topics, then defend the lead
 
 Per [[semrush-chatgpt-topic-authority-study]] (1,094 ChatGPT categories,
 Jan–Jun 2026) — a portfolio-level prioritization layer above the
@@ -115,10 +115,17 @@ comprehensiveness" above:
 - **Concentrate on 2–3 categories where you already have signal**, not a
   broad spread — pushing one topic past the ownership threshold beats
   thin presence across many.
-- **Aim for a ≥5-percentage-point mention-share margin.** Once a brand
-  becomes a clear owner it holds #1 in 90.4% of month-over-month checks;
-  held leads had a median 2.9-point margin, flipped leads only 1.3
-  points. Reaching the moat first is a compounding, defensible asset.
+- **Aim for clear-owner status, and keep widening the margin.** The
+  study defines a clear owner as the brand with the highest mention share,
+  named in ≥4 of 5 prompts, with a ≥5-percentage-point lead over the
+  runner-up. Clear owners held #1 in 90.4% of month-over-month checks.
+  Among leaders generally, leads that held had a median margin of only
+  2.9 points, and leads that flipped had 1.3 points, so a wider lead is
+  more durable but there is no measured 5-point stability threshold.
+  Reaching ownership first is a compounding, defensible asset.
+  _Corrected 2026-11-12: this bullet previously called 5 points a
+  stability "moat"; 5 points is the study's definition of a clear owner,
+  not a measured threshold._
 - **Optimize for mention share, not just citation share.** They are
   near-decoupled (only 21% of most-cited domains are also the
   most-mentioned brand; correlation -0.229), and mention share is what
@@ -307,9 +314,19 @@ playbook, which mostly concerns Google's AI-Overview/citation behavior.
   navigation/pagination pages the way a ranking crawler might benefit
   from; prioritize crawler access to brand/product/service content
   instead. Known user agents: `OAI-SearchBot`/`ChatGPT-User`/`GPTBot`
-  (ChatGPT), `BingBot` (Copilot), `Google-Extended` (Gemini, inferred),
-  `ClaudeBot` (Claude), `PerplexityBot` (Perplexity) — see
-  [[robots-txt-strategy]] for directive syntax.
+  (ChatGPT), `BingBot` (Copilot), `ClaudeBot`/`Claude-SearchBot`/
+  `Claude-User` (Claude: training / search indexing / user-triggered
+  fetches), `PerplexityBot` (Perplexity). For Gemini, `Google-Extended`
+  is a robots.txt control token, not a crawler: Google crawls with its
+  existing user agents, and the token controls whether that content is
+  used for Gemini training and grounding — see
+  [[robots-txt-strategy]] for directive syntax. _Corrected 2026-11-12:
+  the source listed `Google-Extended` as an inferred Gemini user agent
+  and only `ClaudeBot` for Claude; per
+  [Google's crawler docs](https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers)
+  it has no separate user-agent string, and per
+  [Anthropic's crawler docs](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler)
+  Claude uses three bots._
 - **Go beyond content optimization — engage the platforms directly**:
   publisher content-partnership programs (OpenAI, Perplexity Publisher
   Program), custom GPTs (which also rank on Google and can embed
@@ -1885,9 +1902,13 @@ capture zero-click AI interactions):
 
 - **Set up a GA4 regex filter to isolate AI-tool referral traffic**
   rather than relying on default channel groupings, which often miscount
-  or omit it: `(.*gpt.*|.*chatgpt.*|.*openai.*|.*neeva.*|.*writesonic.*|.*nimble.*|.*outrider.*|.*perplexity.*|.*google.*bard.*|.*bard.*|.*edgeservices.*|.*gemini.*google.*|.*copilot.*)`
-  — undisclosed methodology behind this exact pattern, but it's a
-  reasonable starting filter to adapt as new AI referrer domains emerge.
+  or omit it: `(chatgpt\.com|openai\.com|gpt|perplexity\.ai|claude\.ai|gemini\.google\.com|copilot\.microsoft\.com|edgeservices|writesonic|nimble|outrider)`
+  — undisclosed methodology behind the source's original pattern, but
+  it's a reasonable starting filter to adapt as new AI referrer domains
+  emerge. With GA4's "matches partial regex" the `.*` wrappers aren't
+  needed. _Corrected 2026-11-12: the source's pattern included Neeva
+  (shut down 2023) and Bard (renamed Gemini in 2024) but no `claude.ai`;
+  the version above drops those and adds current AI referrer domains._
   Per [[seoclarity-track-ai-search-traffic]], the UI path to apply a
   filter like this: Reports > Library > "Create Detail Report" off
   Traffic Acquisition, add a Session Source/Medium column, set it as
@@ -1941,10 +1962,14 @@ the layer beneath E-E-A-T:
       `robots.txt`, and not requiring a login to view?
 - [ ] Per [[malte-landwehr-llmo-geo-aio-guide]]: is `robots.txt`
       accidentally blocking LLM-specific crawlers too (GPTBot, CCBot,
-      Google-Extended, Anthropic-ai, omgilibot)? A generic "block all
-      bots except Googlebot" rule silently kills GEO eligibility for
+      ClaudeBot, Claude-SearchBot, Claude-User, omgilibot), or
+      disallowing the `Google-Extended` control token? A generic "block
+      all bots except Googlebot" rule silently kills GEO eligibility for
       every generative engine at once — see [[robots-txt-strategy]]'s
-      per-bot user-agent table.
+      per-bot user-agent table. _Corrected 2026-11-12: the source named
+      "Anthropic-ai", a retired Anthropic agent; current names are from
+      [Anthropic's crawler docs](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler).
+      `Google-Extended` is a robots.txt token, not a crawler._
 - [ ] If content is rendered via JavaScript, does it still appear when
       rendered with a headless/recent Chrome (i.e., does Google actually
       see it after rendering, not just in the raw HTML)?

@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-11-06
+updated: 2026-11-12
 ---
 
 # Writer's SEO Checklist: Blog Posts
@@ -63,8 +63,10 @@ proof, and make it easy to lift out.
 ## Credibility and links
 
 - **Publish under a named author with a real bio,** not "LaunchDarkly
-  Team." *Why: Content from a named, credentialed person gets cited far
-  more than faceless brand posts (~92% vs. ~8% in one study).*
+  Team." *Why: Content from a named, credentialed person tends to get
+  cited more than faceless brand posts. In one LinkedIn study, posts by
+  named people averaged 8.5 AI citations each vs. 5.5 for company pages.
+  That's LinkedIn data, not blog data, so treat it as directional.*
 - **Link to 2–3 related LaunchDarkly pages** using descriptive link text
   (e.g. "feature flag best practices," not "click here"). *Why: Internal
   links help readers and both search and AI understand how our content
@@ -103,10 +105,17 @@ for the evidence, caveats, and the tactics that didn't make this list.
 
 - **Answer-first / 44%-of-citations-from-the-first-30%** —
   [[growth-memo-why-proprietary-data-is-your-most-defensible-asset]]
-- **Named author over brand account (~92% vs. ~8%)** —
-  [[otterly-linkedin-ai-citations-study-2026]]
-- **500–2,000 words, original, educational, consistent cadence** —
-  [[semrush-linkedin-ai-visibility-study-2026]]
+- **Named author over brand account (8.5 vs. 5.5 avg citations per URL;
+  LinkedIn data, not blogs)** — [[otterly-linkedin-ai-citations-study-2026]].
+  _Corrected 2026-11-12: this line previously gave "~92% vs. ~8%". That's
+  named people's share of LinkedIn citations, which mostly tracks their
+  87.8% share of URLs, so it overstated the gap and isn't blog evidence._
+- **500–2,000 words** — [[airops-fan-out-effect-2026]] (web pages;
+  >5,000 words underperforms). _Corrected 2026-11-12: previously credited
+  to the Semrush LinkedIn study, whose matching range is for LinkedIn
+  articles._
+- **Original, educational, consistent cadence** —
+  [[semrush-linkedin-ai-visibility-study-2026]] (LinkedIn data)
 - **Focus beats comprehensive coverage; retrieval rank dominates** —
   [[airops-fan-out-effect-2026]]
 - **Your "one new thing" (information gain)** —

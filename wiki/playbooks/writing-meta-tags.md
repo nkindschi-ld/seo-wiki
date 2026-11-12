@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-11-06
+updated: 2026-11-12
 ---
 
 
@@ -28,7 +28,7 @@ Two snippets of HTML text that don't appear on the page itself:
 - **Meta description** — the gray summary line underneath that headline.
 
 ```html
-<title>Runtime Control Plane for Features & AI | LaunchDarkly</title>
+<title>Runtime Control Layer for the AI Era | LaunchDarkly</title>
 <meta name="description" content="Control what users experience in production without redeploying. Release safely, observe impact in real time, and iterate at AI speed.">
 ```
 
@@ -54,7 +54,7 @@ Two snippets of HTML text that don't appear on the page itself:
 
 | ❌ Bad | Why | ✅ Good |
 |---|---|---|
-| `Home` | Says nothing | `Runtime Control Plane for Features & AI \| LaunchDarkly` |
+| `Home` | Says nothing | `Runtime Control Layer for the AI Era \| LaunchDarkly` |
 | `LaunchDarkly \| Release, Observe, Iterate, AI, Flags...` | Brand first, keyword buried, truncated | `Feature Flag Platform & Progressive Delivery \| LaunchDarkly` |
 | `Best Feature Flag Tool Buy Now Cheap Flags Flags` | Keyword stuffing | `What Is Progressive Delivery? A Beginner's Guide` |
 | `Untitled Page 4` | CMS default | `Guarded Releases: Automated Rollback & Kill Switches` |
@@ -71,13 +71,13 @@ Two snippets of HTML text that don't appear on the page itself:
 
 **Informational — "What is X"**
 Match the question literally. Lead with the answer, promise clarity.
-- Title: `What Is a Runtime Control Plane? Definition & Examples`
-- Desc: `A runtime control plane lets teams change what users experience in production without redeploying. Here's how it works, with examples.`
+- Title: `What Is a Runtime Control Layer? Definition & Examples`
+- Desc: `A runtime control layer lets teams change what users experience in production without redeploying. Here's how it works, with examples.`
 
 **Product pages**
 Name the product + category. Description = value prop + differentiator.
-- Title: `Runtime Control Plane for Features & AI | LaunchDarkly`
-- Desc: `Release, observe, and iterate on every change at runtime — no redeploys. Trusted by 5,500+ teams to ship with 43% fewer incidents. Start free.`
+- Title: `Runtime Control Layer for the AI Era | LaunchDarkly`
+- Desc: `Release, observe, and iterate on every change at runtime — no redeploys. Teams are 48% less likely to have daily incidents than with homegrown tools.`
 
 **Solution pages** (problem/use-case/audience)
 Lead with the outcome or the audience's problem, not the product name.
@@ -111,12 +111,25 @@ tag reference and checklist: [[open-graph-protocol]].
 
 ## Notes on the examples
 
-Examples use LaunchDarkly's current positioning from the March 2026
-Platform Messaging Framework: category **"runtime control plane for
-features and agents,"** tagline **"Move at AI speed. Stay in control,"**
-and the **Release / Observe / Iterate** pillars. Proof stats (43% fewer
-incidents, 5,500+ teams, 99.99% uptime, sub-200ms propagation) are
-CTA fuel drawn from that doc. The `CodeControl` / `AgentControl`
-two-product naming was intentionally left out — it appears only once in
-the framework and isn't yet built out, so leading with it risks
-inconsistency.
+Examples use LaunchDarkly's current positioning (confirmed by the user
+2026-11-12): **"the runtime control layer for the AI era,"** with
+**CodeControl** and **AgentControl** as the two solutions. The
+Nov. 5, 2026 sales deck says "two solutions, one runtime control layer,"
+and the public platform page uses the same "layer" framing. Tagline
+**"Move at AI speed. Stay in control"** and the **Release / Observe /
+Iterate** pillars still apply. Same as [[launchdarkly-ai-visibility-devrel-brief]].
+
+Proof stats (5,500+ teams, 99.99% uptime, sub-200ms propagation) are CTA
+fuel. The incident stat needs care: in The Control Gap Report,
+LaunchDarkly users were **48% less likely than teams on homegrown
+solutions** and **43% less likely than teams on other providers** to have
+production incidents daily or more often (25% of LD users vs. 48%
+homegrown and 44% other providers). These are two different comparisons,
+not two results for the same thing, so always name the comparison group.
+Never shorten it to an unqualified "48% (or 43%) fewer incidents."
+
+*Superseded 2026-11-12:* earlier versions of this page (from the March
+2026 Platform Messaging Framework) used "runtime control plane for
+features and agents," left out the CodeControl/AgentControl naming, and
+gave the stat as "43% fewer incidents." The product description example
+above was rewritten to match.

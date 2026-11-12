@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-09-10
+updated: 2026-11-12
 ---
 
 # AIO Impact on Google CTR
@@ -50,11 +50,14 @@ corroborated.
 **Another undisclosed-methodology figure**: per
 [[vercel-adapting-seo-for-llms]], Google AI Overviews "may reduce clicks
 by up to 34.5%" relative to non-AI search results — no sourcing given.
-Directionally consistent with (roughly in the neighborhood of) this
-page's ~38%-below-no-AIO-baseline finding above, but too vague on
-methodology to treat as independent confirmation of that specific
-number.
-tactics.
+This is a different metric from this page's Seer data, not a near-match
+to it: Seer's -38% applies to *cited brands only*, while uncited pages
+on AIO queries run ~-72% below the no-AIO baseline (~9,445 vs. ~33,500
+clicks per 1M impressions). Vercel's figure doesn't say which pages it
+covers, and it is too vague on methodology to compare with either
+number. _Corrected 2026-11-12: previously described as "in the
+neighborhood of" Seer's -38%, which conflated an unscoped figure with a
+cited-brands-only one._
 
 ## 2025 decline, then a 2026 reversal nobody predicted
 
@@ -168,8 +171,9 @@ data above): Similarweb clickstream data shows visits to AI tools
 (ChatGPT, Gemini, Claude) growing much faster than referral traffic
 *from* those tools to other sites, with the gap widening through
 2025-2026. Directionally consistent with this page's zero-click framing
-and [[ai-traffic-scale-vs-hype]]'s "most AI interactions end without a
-click" theme — AI usage is growing, but the fraction of that usage that
+and [[ai-shortlist-effect]]'s finding that 92.8% of ChatGPT
+purchase-decision tasks end without a meaningful click to an external
+site — AI usage is growing, but the fraction of that usage that
 sends a click elsewhere is not growing at the same rate. Reinforces why
 [[ai-citation-landscape]]'s citations-vs-mentions distinction matters:
 mentions (which don't require a click) may be a more representative
@@ -221,24 +225,41 @@ independent academic look at the *publisher-revenue* side of AIO
 economics that this page had only covered from the CTR direction:
 
 - **50.63% of AIO-cited pages carry visible display advertising** (30,994
-  of 61,212 references) — and that's a conservative floor, since social/
-  video references weren't crawled for ads. So for the majority of cited
-  pages, AIO click-suppression translates directly into lost ad revenue.
-  Ad-supported share is highest in Hobbies & Leisure (63.1%), Sports
-  (60.2%), and Food & Drink (57.9%); lowest in Health/Travel/Autos
-  (~27–28%).
+  of 61,212 references) — and that's a conservative floor: the 14.2% of
+  references pointing to social/video platforms weren't crawled for ads
+  and are counted as ad-free, and affiliate/subscription/lead-gen
+  monetization is invisible to the method entirely. So for the majority
+  of cited pages, AIO click-suppression translates directly into lost ad
+  revenue. Ad-supported share by category: Hobbies & Leisure 63.14%,
+  Sports 60.19%, Food & Drink 57.9%, Entertainment 55.50%, Science
+  41.85%, Business & Finance 39.97%, Law & Government 29.47%, Health
+  27.77%; Travel and Autos are also at the low end (~27–28%).
 - **Google's own ads are largely undisturbed**: only 2.16% of AIO-bearing
-  SERPs carried a Google sponsored ad and none appeared *inside* the AIO
-  container — so the same SERP that suppresses the publisher's organic
-  click leaves Google's ad inventory intact. The authors frame this as an
-  economic **asymmetry** and a content-quality **feedback-loop risk**
-  (sustained traffic loss disincentivizes the very content AIOs synthesize).
-- **Independent corroboration of this page's ~38% figure**: the paper
-  imports (rather than independently measures) downstream click effects,
-  citing Agarwal & Sen (2026) that AIOs reduce organic clicks ~**38%** and
-  raise zero-click searches ~**33%**. The 38% click reduction lands right
-  on this page's own Seer-derived "-38% below a no-AIO baseline" finding
-  above — two unrelated methodologies converging on the same magnitude.
+  SERPs carried a Google sponsored ad, just 0.51% placed them above the
+  AIO, and none appeared *inside* the AIO container — so the same SERP
+  that suppresses the publisher's organic click leaves Google's ad
+  inventory intact. The authors' conclusion: "AIOs restructure the page
+  in a way that preserves Google's ad capture while reducing
+  click-throughs to publishers." They frame this as an economic
+  **asymmetry** and a content-quality **feedback-loop risk** (sustained
+  traffic loss disincentivizes the very content AIOs synthesize).
+- This is the supply-side complement to the demand-side CTR data above:
+  the click compression documented by
+  [[seerinteractive-aio-ctr-impact-2026-update]] lands on a citation
+  pool where the majority of pages are monetized per-pageview.
+- **A second ~38% figure, on a different metric**: the paper imports
+  (rather than independently measures) downstream click effects, citing
+  Agarwal & Sen (2026) that AIOs reduce organic clicks ~**38%** and
+  raise zero-click searches ~**33%**. The number matches this page's
+  Seer-derived "-38% below a no-AIO baseline", but the two measure
+  different things: Agarwal & Sen's 38% is an average across queries,
+  while Seer's -38% is for *cited brands only* (uncited pages run ~-72%).
+  So this is not corroboration of the Seer figure. On Seer's data, an
+  average across cited and uncited pages would fall between -38% and
+  -72%, so the matching number is a coincidence of metrics, not
+  agreement.
+  _Corrected 2026-11-12: previously framed as "two unrelated
+  methodologies converging on the same magnitude."_
   Also cited: Wikipedia traffic −~15% attributable to AIOs (Khosravi &
   Yoganarasimhan 2026), and case losses (Stereogum −70% ad revenue, The
   Planet D −90% traffic). Treat these as second-hand within this source.
@@ -350,29 +371,10 @@ trending-query corpus that is 51.4% Sports. The ordering — questions
 
 ## Supply side: who is paying for AIO content, and who keeps the ads
 
-[[xu-measuring-google-ai-overviews-2026]] measures the economics
-from the publisher side rather than the click side:
-
-- **50.63% of AIO-cited pages (30,994 of 61,212) display visible ads**
-  — more than half the pages whose content makes AIO synthesis
-  possible run ad-supported models that depend on the page views AIOs
-  intercept. A conservative floor: the 14.2% of references pointing to
-  social/video platforms were not crawled and are counted as ad-free,
-  and affiliate/subscription/lead-gen monetization is invisible to the
-  method entirely.
-- By category: Hobbies & Leisure 63.14%, Sports 60.19%, Entertainment
-  55.50%, Science 41.85%, Business & Finance 39.97%, Law & Government
-  29.47%, Health 27.77%.
-- **Only 2.16% of AIO-bearing SERPs display Google sponsored ads, and
-  just 0.51% place them above the AIO.** The authors' conclusion:
-  "AIOs restructure the page in a way that preserves Google's ad
-  capture while reducing click-throughs to publishers."
-
-This is the supply-side complement to the demand-side CTR data above:
-the click compression documented by
-[[seerinteractive-aio-ctr-impact-2026-update]] lands on a citation
-pool where the majority of pages are monetized per-pageview, while
-Google's own paid inventory on those SERPs is largely undisturbed.
+The publisher-side ad findings from
+[[xu-measuring-google-ai-overviews-2026]] (50.63% of cited pages
+ad-supported; only 2.16% of AIO SERPs carry Google ads) are covered in
+the "Publisher economics" section above.
 
 ## Caveats
 
@@ -489,5 +491,5 @@ floors, not predictions.
   AIO-prevalence data point added to the Conflicting Evidence section
   above.
 - [[xu-measuring-google-ai-overviews-2026]] — the WashU academic audit
-  behind the publisher-ad/click-loss economics, the 38%-click-reduction
-  corroboration, and the 13.7% activation data point above.
+  behind the publisher-ad/click-loss economics, the Agarwal & Sen
+  38%-click-reduction figure (a different metric from Seer's), and the 13.7% activation data point above.

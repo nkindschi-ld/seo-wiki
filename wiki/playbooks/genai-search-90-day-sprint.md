@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-07-07
+updated: 2026-11-12
 ---
 
 # 90-Day GEO Sprint
@@ -28,6 +28,11 @@ sources.
   vs. weak topic clusters; identify which competitors dominate each
   topic; create a prioritized list of topics needing deeper coverage.
   **Deliverable:** topic visibility dashboard.
+  **Minimum window (wiki addition, not from the source):** AI answers
+  vary run to run, so one week of samples isn't a baseline. Start daily
+  prompt runs in Week 1 and read the baseline only after 14 days
+  ([[ai-answer-volatility]]); report presence rate per engine, not
+  single-run rank ([[ai-visibility-measurement-methodology]]).
 - **Week 3 — Identify AI-trusted domains**: collect the domains/URLs
   Gen AI cites for your topics; identify repeated sources (authority
   partners); highlight missing brand-mention opportunities; prioritize
@@ -87,10 +92,13 @@ sources.
 - **Week 10 — Evaluate impact**: measure changes in visibility,
   citations, and sentiment; review which topics improved most; identify
   which tactics had the highest ROI; analyze new prompts where the brand
-  now appears.
+  now appears. Compare like-for-like rolling windows (14+ days each)
+  against the Phase 1 baseline, and treat position-1 changes as noise
+  unless they persist ([[ai-answer-volatility]]).
   **Deliverable:** 30-day GEO impact report.
-- **Week 11 — Address persisting weaknesses**: identify remaining topic
-  gaps; target additional authority partners; strengthen entity clarity
+- **Week 11 — Address persisting weaknesses**: diagnose why the
+  weakest topics still miss (see the diagnostic playbooks under See
+  also); identify remaining topic gaps; target additional authority partners; strengthen entity clarity
   for unclear areas; create supplemental intent-aligned content.
   **Deliverable:** updated improvement roadmap.
 - **Week 12 — Systemize the process**: document a repeatable GEO
@@ -108,3 +116,13 @@ sources.
 - [[ai-citation-landscape]] — background on why retrieval rank (Phase 1
   visibility benchmarking, Phase 3 content structuring) is the dominant
   factor this sprint is designed around.
+- [[ai-visibility-measurement-methodology]] — how to measure the Week 2
+  baseline and Week 10 impact: first-party reports, prompt panels, and
+  what the numbers can and can't show.
+- [[ai-answer-volatility]] — why a single run isn't a measurement, and
+  the 14-day minimum baseline.
+- Diagnostic playbooks for Week 5 and Week 11:
+  [[ai-visibility-four-layer-diagnostic]] (brand missing or
+  misdescribed), [[geo-diagnostic-checklist]] (a specific page isn't
+  cited), and [[ai-entity-footprint-audit]] (how AI understands the
+  brand).

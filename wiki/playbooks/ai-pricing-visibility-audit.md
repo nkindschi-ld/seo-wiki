@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [aeo, seo]
-updated: 2026-11-06
+updated: 2026-11-12
 ---
 
 # AI Pricing Visibility Audit
@@ -35,7 +35,8 @@ answers come from.
 - **Engines differ.** ChatGPT cites the owned page first 38% of the
   time. This fits [[lilyray-chatgpt-fanout-queries-2026]]'s finding
   that ChatGPT fan-outs `site:`-target brand domains for pricing
-  queries. Google AI Mode, AI Overviews and Gemini usually bury it.
+  queries (see [[query-fanout]]). Google AI Mode, AI Overviews and
+  Gemini usually bury it.
   Audit each engine separately, not as one "AI".
 - **Outside domains fill the gap:** Vendr (18.7% of runs), Reddit
   (18.6%) and G2 (15.9%). Hiding pricing doesn't stop AI discussing
@@ -65,10 +66,10 @@ other, not one page:
    speculate.
 5. **AI-readable infrastructure for all of the above** (see step 3).
 
-## The audit: 10 steps
+## The audit: 11 steps
 
 1. **Establish a baseline.** Run `Evaluate [Company Name] on pricing`
-   in ChatGPT, Claude and Gemini once a day for a week (add Google AI
+   in ChatGPT, Claude and Gemini once a day for 14 days (add Google AI
    Mode, Copilot and Perplexity if they matter to your buyers). For each
    answer, record:
    - every citation, and whether your own page was **first**, present,
@@ -76,9 +77,12 @@ other, not one page:
    - sentiment (positive / neutral / negative)
    - any wrong numbers
 
-   Running it daily for a week smooths out run-to-run variation (see
+   Running it daily for two weeks smooths out run-to-run variation (see
    [[ai-answer-volatility]] for how large it is, and
    [[ai-visibility-measurement-methodology]]).
+   _Corrected 2026-11-12: the source suggests once a day for a week;
+   [[ai-answer-volatility]] finds 14 days is the usable minimum baseline,
+   so this uses 14._
 2. **Build three sources of truth:** `/pricing`, billing docs and
    FAQs, all linking to each other. If exact pricing isn't public, say
    so explicitly on those pages rather than leaving a gap.
@@ -190,7 +194,7 @@ More than one can be true at once.
 
 ## Quick-reference checklist
 
-- [ ] Baseline run: 1 prompt × 3+ engines × 7 days, with citations
+- [ ] Baseline run: 1 prompt × 3+ engines × 14 days, with citations
       (first/present/absent), sentiment and accuracy logged
 - [ ] Each wrong pricing claim traced to the page it cites (own site,
       competitor, earned, social)

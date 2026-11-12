@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-10-19
+updated: 2026-11-12
 ---
 
 # GitHub Repository SEO
@@ -90,6 +90,10 @@ retrieval path, not a guarantee. ChatGPT's backend includes a SerpAPI
 ([[ai-citation-landscape]], "ChatGPT's retrieval backend is plural"), so
 Google visibility can reach ChatGPT. But citation selection and
 reranking happen after retrieval ([[ai-search-reranking-pipeline]]).
+One caveat: since September 2026 Google has served some automated
+collectors swapped-out results ([[serp-poisoning]]; single-source,
+vendor-reported), so a scraped-Google path may not carry your real
+ranking.
 
 For **coding agents**, a repo and its example code feed the training data
 and code examples that decide which tools agents recommend

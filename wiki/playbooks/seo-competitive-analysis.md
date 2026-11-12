@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-09-04
+updated: 2026-11-12
 ---
 
 Why / when to use this: run periodically (e.g. quarterly) or when
@@ -47,7 +47,7 @@ that playbook's discovery methods).
 6. **Analyze backlinks.** Authority Score/Domain Rating and
    referring-domain trends; backlink gap analysis for sites linking
    competitors but not you; note which content *types* attract the most
-   links.
+   links. Work the gap list with [[link-building-outreach-tactics]].
 7. **Explore off-site presence.** Social posting frequency/engagement;
    Reddit/community `site:` searches for user sentiment, praised
    benefits, and pain points — extends analysis beyond owned-site SEO

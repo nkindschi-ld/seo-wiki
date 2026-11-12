@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-11-06
+updated: 2026-11-12
 ---
 
 Why / when to use this: SaaS/software companies need a different SEO
@@ -155,9 +155,8 @@ granularity matches your planning process.
    keyword research, not after.
 3. **Competitive intelligence**: find competitors' top-performing
    pages and keyword gaps, and run a backlink-gap analysis for link
-   opportunities — same motion as
-   [[keyword-mapping-and-cannibalization]]'s competitive-analysis step,
-   applied to SaaS competitors specifically.
+   opportunities — same motion as [[seo-competitive-analysis]]
+   (its backlink-gap step), applied to SaaS competitors specifically.
 4. **Pain-point keyword research (ToFu)**: target informational
    keywords that describe your personas' actual problems, and build
    educational authority content around them — filter for
@@ -183,8 +182,8 @@ granularity matches your planning process.
    URL structure, meta tags — see [[technical-seo-audit-checklist]] for
    the full technical checklist; this is the SaaS-relevant subset.
 9. **High-quality backlink acquisition**: content marketing, email
-   outreach, broken-link building, PR — see
-   [[enterprise-seo-strategy]]'s link-building section for the
+   outreach ([[link-building-outreach-tactics]]), broken-link building,
+   PR — see [[enterprise-seo-strategy]]'s link-building section for the
    enterprise-scale version of these same tactics. For SaaS
    specifically, **tangential content** (data studies, surveys, maps on
    topics adjacent to but not directly about your product) reliably
@@ -239,7 +238,9 @@ rank:
 - [[enterprise-seo-strategy]] — the scale-up path once a SaaS SEO
   program outgrows a single team.
 
+- [[glossary-pages-for-seo]] — a glossary as a learn-hub variant, with
+  the scaled thin-page risk that also applies to marketplace templates.
+
 See [[semrush-saas-seo]], [[gofishdigital-seo-for-saas]],
 [[sej-advanced-saas-seo-strategies]], and
 [[sej-seo-software-businesses]] for the full source writeups.
-- [[glossary-pages-for-seo]] — a glossary as a learn-hub variant, with the scaled thin-page risk that also applies to marketplace templates

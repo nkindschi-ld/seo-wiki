@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-11-09
+updated: 2026-11-12
 ---
 
 Why / when to use this: use when setting up or refreshing recurring
@@ -32,8 +32,18 @@ section in current practice, not optional or experimental.
 
 - **Google Search Console** (Performance > Search Results) — organic
   clicks, average CTR, page-level export.
+- **GSC Generative AI Performance Report** — impressions from AI
+  Overviews and AI Mode, by page, country, date and device
+  ([[google-generative-ai-performance-report]]). Rolling out gradually,
+  so not every property has it yet.
+- **Bing Webmaster Tools AI Performance Report** — citations (not
+  clicks) in Copilot and Bing AI summaries, with grounding queries and
+  citation share ([[bing-ai-performance-report]]). Don't add its
+  citations to Google's impressions; they're different units.
 - **AI Visibility tooling** — AI Visibility score, brand mentions,
-  citation counts.
+  citation counts for engines with no first-party report (ChatGPT,
+  Claude, Gemini, Perplexity). How to measure these and what the numbers
+  can show: [[ai-visibility-measurement-methodology]].
 - **Google Analytics 4** (Reports > Engagement > Landing page, filtered
   to organic) — conversions.
 - **Organic Traffic Insights** (or equivalent) — de-anonymizes
@@ -151,6 +161,9 @@ period.
 
 - [[generative-engine-optimization]] and [[ai-visibility-correlation-factors]]
   — background on what AI Visibility metrics actually measure.
+- [[ai-visibility-measurement-methodology]] — the first-party Google and
+  Bing AI reports, how to estimate visibility on engines with no native
+  report, and the limits of both.
 - [[ai-answer-volatility]] — why AI visibility needs window-based
   measurement.
 - [[seo-competitive-analysis]] — competitor benchmarking data that can

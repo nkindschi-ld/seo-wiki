@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-07-11
+updated: 2026-11-12
 ---
 
 # Entity-Oriented Search: Fundamentals
@@ -171,3 +171,7 @@ Entity-oriented search *is* a form of semantic search, but semantic search doesn
 - [[how-google-search-works]] — entity linking and entity-based ranking are parallel retrieval processes to traditional term-based ranking
 - [[search-intent-and-needs-met]] — entity queries (queries mentioning or targeting entities) are distinct from document or keyword queries
 - [[geo-content-optimization-tactics]] — entity recognition and comprehensiveness as content tactics
+- [[entity-based-seo-implementation]] — the hands-on playbook for structuring content around entities (entity mapping, `about`/`mentions`/`sameAs` markup, entity-linked internal links)
+- [[brand-entity-seo-strategy]] — applies the same ideas to the brand itself as the entity being built out
+- [[structured-data-and-ai-search]] — how schema markup feeds entity understanding in AI search specifically
+- [[ai-entity-footprint-audit]] — a scored audit of how well AI systems already understand a brand entity

@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo, seo]
-updated: 2026-11-06
+updated: 2026-11-12
 ---
 
 # Query Fanout
@@ -39,6 +39,45 @@ were first filed; this page summarises and links to them.
   covering 26–50% of a query's fanout subtopics were cited more than
   pages covering all of them ([[airops-fan-out-effect-2026]]); see
   [[geo-content-optimization-tactics]].
+
+## `site:` targeting
+
+Some ChatGPT sub-queries are restricted to particular domains with the
+`site:` operator. Its share of fan-outs rose from 0.3% to 23%
+([[lilyray-chatgpt-fanout-queries-2026]], a secondary writeup with
+undisclosed method; filed on [[ai-citation-landscape]]). The targeting
+follows query type:
+
+- **Legal and health** queries targeted `.gov` domains exclusively in some
+  tests. This is the clearest visible hard authority gate; see
+  [[authority-in-generative-search]].
+- **Product spec and pricing** queries targeted brand domains. So the
+  brand's own pages are the source for those facts if a crawler can read
+  them. ChatGPT cites the owned pricing page first 38% of the time, more
+  than other engines ([[ai-pricing-visibility-audit]]).
+
+Whether `site:` fan-outs leave a trace in Search Console is disputed; see
+Conflicting Evidence.
+
+## Optimizing for fanout
+
+[[zyppy-fan-out-framework-2026]] gives the clearest step-by-step process
+in the wiki:
+
+1. Start from a keyword you already rank for (Google top 10–20).
+2. Discover the AI engine's sub-queries for it with a fan-out tool, or
+   Bing's grounding queries ([[bing-ai-performance-report]]).
+3. Merge the resulting subtopics into one prioritized list.
+4. Optimize existing pages or create new ones for those subtopics.
+5. Measure with webmaster tools and AI-visibility trackers
+   ([[ai-visibility-measurement-methodology]]).
+
+Two cautions from the same source. Sub-queries are probabilistic and
+vary across models and even within a session, so treat any discovered
+list as a sample. And don't create a thin page for every subtopic:
+that's the scaled-content pattern Google demotes
+([[e-e-a-t-and-page-quality]]). It agrees with the focus-over-completeness
+finding above.
 
 ## Fanout is invisible in your analytics
 

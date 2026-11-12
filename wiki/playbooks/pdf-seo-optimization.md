@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-09-17
+updated: 2026-11-12
 ---
 
 # PDF SEO Optimization
@@ -60,8 +60,16 @@ see [[lead-magnet-checklist]] for the opt-in/conversion side.
   `X-Robots-Tag: noindex` HTTP header, or use Search Console's URL
   removal tool — see [[robots-txt-strategy]] for why robots.txt itself
   is the wrong tool for this (it blocks crawling, not indexing).
-- Standard Google Analytics does not track PDF downloads — instrument
-  via Google Tag Manager, header code, or a plugin.
+- GA4's enhanced measurement logs a `file_download` event (with
+  `file_extension` = pdf) when a visitor clicks a link to a PDF on your
+  site; check the "File downloads" toggle is on in the web data stream.
+  It can't see visits that land on the PDF directly from search, because
+  no tag runs inside a PDF; use Search Console clicks for those. Use
+  Google Tag Manager or a plugin only for tracking beyond that.
+  _Corrected 2026-11-12: [[digitalchakra-optimise-pdf-files-for-seo]]
+  said standard Google Analytics doesn't track PDF downloads, which
+  predates GA4; see
+  [GA4 enhanced measurement](https://support.google.com/analytics/answer/9216061)._
 - Compression and alt-text overlap with [[image-seo-checklist]]; the
   noindex mechanics overlap with [[technical-seo-audit-checklist]] —
   this page covers the PDF-specific application of both.

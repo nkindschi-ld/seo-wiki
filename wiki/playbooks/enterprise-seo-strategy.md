@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-09-04
+updated: 2026-11-12
 ---
 
 Why / when to use this: at enterprise scale (large teams, global/
@@ -76,9 +76,9 @@ Per [[terakeet-enterprise-seo]]:
 
 ## Off-page: publisher and corporate partnerships
 
-Per [[terakeet-enterprise-seo]] — extends
-[[enterprise-seo-strategy]]'s existing unlinked-mention-recovery/
-redirect-reclamation link building with named partnership categories:
+Per [[terakeet-enterprise-seo]] — extends the unlinked-mention-recovery/
+redirect-reclamation link building in "Enterprise-scale link building"
+below with named partnership categories:
 
 - **Publisher partnerships**: pitch content angles tailored to a
   specific outlet's actual focus (e.g. an innovation angle for CNBC, a
@@ -197,10 +197,15 @@ where one exists but you don't hold it (works best from positions
 
 ## Enterprise-scale link building
 
+General method lives in [[link-building]]; campaign-style PR is in
+[[digital-pr-strategy]]. The tactics below are the enterprise-scale
+versions.
+
 - Recover **unlinked brand mentions** (via a backlink/content-mention
   tool) and request the mention be turned into a link — a repeatable,
   scalable motion rather than one-off outreach.
-- **Redirect 404s that still carry backlinks** — reclaiming this equity
+- **Redirect 404s that still carry backlinks** (the internal version
+  of [[broken-link-building]]) — reclaiming this equity
   matters more than it might seem: roughly two-thirds of links to a
   page disappear over a nine-year period, so link decay is a real,
   ongoing tax on an aging enterprise site if left unmanaged.

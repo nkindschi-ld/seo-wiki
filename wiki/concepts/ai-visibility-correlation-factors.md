@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-10-08
+updated: 2026-11-12
 ---
 
 # AI Visibility Correlation Factors
@@ -238,8 +238,9 @@ Lowest-quality penalty target, not just a non-factor.
     different questions — but a useful caution against treating Authority
     Score as a topic-ownership lever specifically. See
     [[topical-authority-in-ai-search]] for the full topic-ownership
-    findings (distribution, inverse-demand paradox, 5-point stability
-    moat).
+    findings (distribution, inverse-demand paradox, lead stability:
+    90.4% MoM retention, held leads' median margin 2.9 pts vs. 1.3 for
+    flipped).
   - **Additional off-site-footprint evidence (2026-07-30)**: per
     [[victorious-q2-2026-quarterly-search-report]] (175 brands, 8
     platforms, 49,391 citations), the correlates of being *mentioned* in

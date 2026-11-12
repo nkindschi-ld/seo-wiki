@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-07-22
+updated: 2026-11-12
 ---
 
 # AI Traffic Scale vs. the Hype
@@ -42,15 +42,16 @@ larger than measured, not smaller.
 
 **Independent corroboration**: per [[ahrefs-b2b-seo-statistics-2025]],
 Google delivers roughly 345x more traffic than ChatGPT, Gemini, and
-Perplexity combined — a differently-sourced, differently-measured
-ratio that points the same direction as this page's "1/1,000th"
-finding, without being the same statistic (worth citing both rather
-than treating them as duplicate confirmation of one number).
+Perplexity combined. This is the wiki's direct traffic ratio. SparkToro's
+"1/1,000th" compares AI visits to *press coverage*, not to search traffic,
+so the two figures measure different things and point the same way only
+loosely. _Corrected 2026-11-12 lint: an earlier version treated
+"1/1,000th" as a traffic ratio corroborated by the 345x._
 
 **Earlier baseline (Nov 2024)**: per [[semrush-chatgpt-search]], Google
 received roughly **28x more traffic than ChatGPT alone** as of November
 2024 — a much smaller gap than the 345x (Google vs. ChatGPT+Gemini+
-Perplexity combined, later period) and 1/1,000th figures above. Not
+Perplexity combined, later period) above. Not
 necessarily a contradiction: this is an earlier snapshot, a narrower
 comparison (ChatGPT alone, not three tools combined), and traffic
 scale/methodology likely differ across all three sources — but it's a
@@ -74,7 +75,8 @@ as directional): Google AI Overviews/AI Mode ~15 billion daily queries,
 ChatGPT ~2.5 billion, Gemini ~46 million, Microsoft Copilot ~33
 million, DeepSeek ~29 million, Perplexity ~26 million. The ~6x gap
 between Google's AI-surface query volume and ChatGPT's, and the further
-~1,000x gap down to the smaller standalone tools, is broadly consistent
+~54-96x gap from ChatGPT down to the smaller standalone tools (~330-580x
+from Google), is broadly consistent
 with this page's "Google-embedded AI is the bigger competitive stake,
 not standalone tools" argument below — though this specific table's
 sourcing isn't disclosed, so don't treat the precise multiples as
@@ -86,7 +88,7 @@ Per [[sel-what-is-generative-engine-optimization-geo-2026]] — a
 different metric than the clickstream visit-share data above: ChatGPT
 reportedly reaches **800M+ weekly users**, and Google's Gemini app has
 surpassed **750M monthly users**. This doesn't contradict the
-"1/1,000th"/345x findings — a platform can carry a huge absolute user
+345x traffic ratio (or SparkToro's visits-vs-press-coverage gap) — a platform can carry a huge absolute user
 count while still receiving a tiny fraction of the traffic Google
 search does, since the comparison base (all web search+social
 activity) is so much larger. Read the two kinds of number as answering
@@ -110,6 +112,25 @@ ChatGPT driving **~10% of new Vercel signups**, up from 4.8% and 1% six
 months prior — a rare first-party, named-company AI-referral growth
 trajectory (as opposed to aggregate/anonymized traffic-share data), adding
 a second concrete brand-level counterpoint alongside Tally's.
+
+## Attribution caveat: AI referrals are undercounted
+
+Later sources show that referral-based traffic counts understate AI's
+influence, so the visit-share figures on this page measure AI as a
+*direct* traffic channel, not its full effect:
+
+- Per [[similarweb-downstream-impact-of-ai-visibility-2026]] (2026-06),
+  **55.9%** of AI-influenced visits arrived via search (the user gets a
+  recommendation, then searches the brand), and analytics records them
+  as ordinary branded organic search.
+- Per [[tryprofound-ai-mention-effect]] (2026-07), only **~2.5%** of
+  visits that follow an AI mention carry trackable AI-referral
+  parameters; over 97% are untagged.
+
+This doesn't overturn the scale check above: AI tools are still small as
+a direct traffic channel. It means the gap between AI's measured traffic
+and its real influence on visits is larger than referral data shows. See
+[[aio-ctr-impact]] for the fuller write-up of both studies.
 
 ## Influence precedes search — search converts, it doesn't create
 
@@ -182,3 +203,6 @@ search share rather than competing against it.
   case study above.
 - [[otterly-how-to-optimize-content-for-ai-search-2026]] — the
   daily-query-volume-by-engine table above.
+- [[similarweb-downstream-impact-of-ai-visibility-2026]] and
+  [[tryprofound-ai-mention-effect]] — the AI-referral undercounting
+  findings in the attribution caveat above.

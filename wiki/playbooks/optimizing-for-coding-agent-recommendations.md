@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [aeo]
-updated: 2026-11-04
+updated: 2026-11-12
 ---
 
 # Optimizing for Coding Agent Recommendations
@@ -199,6 +199,9 @@ and 3 (an unattended getting-started path).
 
 - [[ai-coding-agent-tool-selection]] — the underlying concept and study
   data this playbook is built on.
+- [[optimizing-for-the-agentic-web]] — the general agent-readiness
+  playbook (unblocking, parseable content, operable interfaces,
+  protocols) that this coding-agent version builds on.
 - [[docs-over-mcp]] — serving documentation as an agent-callable tool
   (expanded form of point 11).
 - [[llms-txt]] — the docs map and Markdown page versions the version note

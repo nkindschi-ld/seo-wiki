@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-11-06
+updated: 2026-11-12
 ---
 
 # Niche Selection and Validation
@@ -25,7 +25,8 @@ will pay once you rank. The step-by-step version is
   lower-difficulty, and higher-intent ([[semrush-niche-driven-seo]],
   [[semrush-niche-keyword-research]]). The same 0-49% difficulty
   heuristic appears in [[semrush-keyword-research-2026]]. Long-tail
-  content also aligns with AI query fan-out (see [[keyword-research]]).
+  content also aligns with AI query fan-out (see [[query-fanout]] and
+  [[keyword-research]]).
 - **Validate demand with action, not traffic.** Email signups,
   add-to-cart, and DMs on a one-page offer with a small paid test beat
   page views or "lots of searches" ([[surnex-finding-a-niche]],

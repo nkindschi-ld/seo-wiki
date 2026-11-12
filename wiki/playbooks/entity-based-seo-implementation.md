@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-11-02
+updated: 2026-11-12
 ---
 
 # Entity-Based SEO Implementation
@@ -163,7 +163,7 @@ Add "about" schema markup to your pillar and important content pages to explicit
 **Three components:**
 1. **Type**: Use schema.org type (Thing, Person, Place, Organization, Product, etc.)
 2. **Name**: Entity name exactly as it appears in Knowledge Graph
-3. **sameAs**: Link to authoritative external entity reference (Wikipedia URL, Wikidata, Freebase, CrunchBase for businesses)
+3. **sameAs**: Link to authoritative external entity reference (Wikipedia URL, Wikidata, CrunchBase for businesses). _Corrected 2026-11-12: [[inlinks-entity-based-seo-guide]] also listed Freebase, which Google shut down in 2016 (its data moved to Wikidata); use Wikidata instead._
 
 **Where to add:**
 - Pillar pages (must-have)
@@ -214,10 +214,12 @@ Add "about" schema markup to your pillar and important content pages to explicit
 
 **Critical insight:** Optimizing for entity-based SEO simultaneously optimizes for AI search systems.
 
-**Why:** AI systems (ChatGPT, Claude, Gemini) don't directly crawl the web. Instead, they:
+**Why:** AI systems (ChatGPT, Claude, Gemini) don't rely only on their own crawls. Alongside their crawlers and user-triggered fetchers (GPTBot/OAI-SearchBot/ChatGPT-User, ClaudeBot/Claude-SearchBot/Claude-User; see [[robots-txt-strategy]]), they:
 1. Query search engine indexes for information about entities
 2. Use APIs to retrieve entity data
 3. Rely on entity recognition in retrieved documents
+
+_Corrected 2026-11-12: this previously said these systems "don't directly crawl the web"; they do run their own crawlers, as the user-agent table in [[robots-txt-strategy]] shows._
 
 **Implication:** Both traditional search and AI search depend on entity recognition. Entity-based content structure makes your pages valuable to both audiences.
 

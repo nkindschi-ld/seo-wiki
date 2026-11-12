@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-11-04
+updated: 2026-11-12
 ---
 
 > To *diagnose* how well AI already understands the brand this playbook builds
@@ -32,7 +32,7 @@ and associations with other named entities via branded queries.
 ## Concrete 5-step build sequence
 
 Per [[sel-brand-entity-seo-5-step-framework]] — a tighter, sequenced
-how-to that operationalizes the four trials above:
+how-to that operationalizes the four trials below:
 
 1. **Secure leadership sponsorship first.** Build the business case with
    a branded-SERP/knowledge-panel gap analysis: how complete is your
@@ -86,8 +86,11 @@ below.
   equivalent).
 - For corporate structures with multiple brands/subsidiaries, use
   hierarchical markup: `parentOrganization` and `subOrganization`.
-- Use `about` and `mention` properties to clarify how entities on the
-  site relate to each other and to the brand entity.
+- Use `about` and `mentions` properties (on the page's `WebPage` /
+  `Article` markup) to clarify how entities on the site relate to each
+  other and to the brand entity. _Corrected 2026-11-12: the source wrote
+  `mention`; the [schema.org property](https://schema.org/mentions) is
+  `mentions`, defined on `CreativeWork`._
 - Treat structured data as **the semantic map of every relationship
   between the entities on your site** — not a one-off technical
   checkbox.
@@ -214,14 +217,13 @@ market share) rather than ranking-only vanity metrics.
 ## Checklist
 
 - [ ] Knowledge Graph presence audited across all listed data sources
-- [ ] `Organization` schema implemented with `sameAs`, hierarchy, and `about`/`mention` where relevant
+- [ ] `Organization` schema implemented with `@id`, a complete `sameAs` list, and hierarchy (`parentOrganization`/`subOrganization`); page markup uses `about`/`mentions` where relevant
 - [ ] Branded-query data (GSC + competitor + product-specific) reviewed for content/nav opportunities
 - [ ] At least one "winning zone" content asset identified or planned per major topic/product line
 - [ ] Amplification plan coordinated with marketing/social/paid, not run as an SEO-only initiative
 - [ ] Brand naming reviewed for monosemanticity (no ambiguous overloaded terms)
 - [ ] Leadership business case built (branded-SERP gap analysis + AI-results check)
 - [ ] Brand entity bio written as a semantic triple and validated (NL API)
-- [ ] `Organization` schema includes `@id` and a complete `sameAs` list
 - [ ] About page URL manually submitted in Google Search Console
 - [ ] Fragmented Knowledge Panel URLs (if any) consolidated via `sameAs`
 

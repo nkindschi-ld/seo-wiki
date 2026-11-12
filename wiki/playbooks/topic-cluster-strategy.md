@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-11-02
+updated: 2026-11-12
 ---
 
 Why / when to use this: apply when planning a new content area from
@@ -151,6 +151,9 @@ internal-linking/site-structure decision.
 - [[generative-engine-optimization]] and [[geo-content-optimization-tactics]]
   — why comprehensive, interlinked coverage also expands AI-citation
   surface area.
+- [[topical-authority-in-ai-search]] — how topic ownership behaves in AI
+  answer engines: how concentrated topics are, which are winnable, and
+  how sticky a lead is once a cluster earns it.
 - [[e-e-a-t-and-page-quality]] — the Google quality framework clusters
   are built to satisfy.
 - [[content-marketing-strategy]] — broader content-planning context

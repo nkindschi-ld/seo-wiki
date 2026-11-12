@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-09-04
+updated: 2026-11-12
 ---
 
 # Controlling AI Feature Inclusion (Google Search)
@@ -23,8 +23,14 @@ guidance), these are the available controls:
    including AI features. Use only if you don't want the page in Search
    at all, not just excluded from AI summaries.
 2. **`robots.txt` disallow** — blocks Googlebot from crawling the page
-   entirely. Also removes it from regular Search results, not just AI
-   features.
+   entirely, so Google can't use its content in regular Search results or
+   AI features. It does **not** remove the page from the index: a
+   disallowed URL can still be indexed (shown without a snippet) if other
+   pages link to it, and Google can't see a `noindex` on a page it can't
+   crawl. To keep a page out of Search, use `noindex` and leave it
+   crawlable. _Corrected 2026-11-12: an earlier version said a disallow
+   removes the page from regular Search results; robots.txt controls
+   crawling, not indexing. See [[robots-txt-strategy]]._
 3. **`nosnippet`** — prevents Google from showing any text/video snippet
    for the page anywhere in Search, including AI features, while the page
    can still be indexed and linked to.
@@ -36,7 +42,8 @@ guidance), these are the available controls:
 ## Checklist
 
 - [ ] Do you want the page out of Search entirely, or just out of
-      AI-generated summaries? (`noindex`/`robots.txt` vs. `nosnippet`)
+      AI-generated summaries? (`noindex` vs. `nosnippet`; a `robots.txt`
+      disallow stops crawling but doesn't guarantee de-indexing)
 - [ ] Is it the whole page or just specific sections that shouldn't be
       quoted? (`nosnippet` vs. `data-nosnippet`)
 - [ ] Would capping snippet length (`max-snippet`) meet your goal instead
@@ -60,7 +67,7 @@ gradual and gated on sufficient AI-feature impressions.
 ## See also
 
 - [[technical-seo-audit-checklist]] — the opposite goal: verifying AI
-  crawlers (GPTBot, ChatGPT-User, Claude-Web, etc.) *aren't
+  crawlers (GPTBot, ChatGPT-User, Claude-SearchBot, Claude-User, etc.) *aren't
   accidentally* blocked in robots.txt, for sites that want inclusion
   rather than exclusion.
 - [[generative-engine-optimization]] — the parent concept, and the

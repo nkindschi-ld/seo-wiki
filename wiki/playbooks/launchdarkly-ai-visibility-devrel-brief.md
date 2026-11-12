@@ -1,13 +1,15 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-07-29
+updated: 2026-11-12
 ---
 
 # LaunchDarkly AI-Visibility DevRel Brief (~15 min)
 
 > **Status: working draft (v2) — owner (Neal) will update.** Reframed
-> around LaunchDarkly's May-2026 repositioning: *the runtime control
+> around LaunchDarkly's May-2026 repositioning (still current as of
+> 2026-11-12: the Nov. 5 sales deck says "two solutions, one runtime
+> control layer"): *the runtime control
 > layer for the AI era* ("Move at AI speed. Stay in control."), two
 > solutions on one platform — **CodeControl** (AI-built code) and
 > **AgentControl** (AI agents in production). Feature flags are the
@@ -114,8 +116,10 @@ DevRel touches all four as a contributor/quality layer.
 **Play 3 — Be citable in chat & AI search (content)**
 - Q&A-format headers, comparison tables (e.g. "Observability vs. Runtime
   Control," "Offline eval vs. runtime control of agents"), and **original
-  data** — the AI Control Gap Report (48% fewer daily prod incidents vs.
-  homegrown) is exactly the unique, citable data LLMs reward
+  data** — The Control Gap Report (LD users were 48% less likely than
+  teams on homegrown solutions, and 43% less likely than those on other
+  providers, to have production incidents daily or more often: 25% vs.
+  48% and 44%) is exactly the unique, citable data LLMs reward
   ([[geo-content-optimization-tactics]]).
 - Own the emerging vocabulary: publish the definitive answers to "what is
   runtime control," "how do I govern AI agents in production" before the
@@ -160,7 +164,7 @@ and agents run on top of — a category where we define the terms
 - [[victorious-q2-2026-quarterly-search-report]] — external cross-vertical
   data behind the "known but rejected" recognition-vs-mention gap.
 - [[topical-authority-in-ai-search]] — why most categories/brands are
-  unowned and how the mention moat works.
+  unowned and how durable a mention lead is.
 - [[ai-coding-agent-tool-selection]] — study data behind the 0%/38% and
   bundling findings.
 - [[geo-content-optimization-tactics]] — content/citation tactics behind

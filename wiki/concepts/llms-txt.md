@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo, seo]
-updated: 2026-11-04
+updated: 2026-11-12
 ---
 
 # llms.txt
@@ -16,9 +16,10 @@ not a standard any search or AI provider has adopted.
 **Current best understanding: `llms.txt` doesn't improve AI-search
 visibility, and the bots that power AI search almost never request it.** Five
 independent lines of evidence agree (Google's official guidance, a citation
-experiment, two server-log studies, and a 515M-event bot-traffic dataset —
-see "Does it affect AI-search visibility?" below). Its plausible job is
-narrower: helping **coding agents and docs tooling** find the right page of a
+experiment, two server-log studies, and a 515M-event bot-traffic dataset),
+and a sixth source, Ahrefs' technical-SEO guide, concurs without data. See
+the six-row table under "Does it affect AI-search visibility?" below. Its
+plausible job is narrower: helping **coding agents and docs tooling** find the right page of a
 software documentation site. Even that rests mostly on assertion rather than
 measurement. It's cheap to ship, so it's a reasonable add-on for a docs site,
 but don't sell it internally as a GEO tactic. For actually delivering
@@ -239,8 +240,12 @@ writing code.
   - Contradicted by: [[google-ai-optimization-guide]] (2026-06, official),
     [[otterly-ai-keyword-research-2026]] (2025 experiment),
     [[evilmartians-which-ai-reads-your-site-2026]] (2026-07, server logs),
-    [[limy-llms-txt-2026-full-guide]] (2026-05, 515M events). These come
-    from Google itself, an experiment, and two traffic datasets.
+    [[limy-llms-txt-2026-full-guide]] (2026-05, 515M events), Semrush's
+    server-log test (late 2025, secondhand via
+    [[crawloria-llms-txt-best-practices-2026]]; not ingested), and
+    [[ahrefs-beginner-guide-technical-seo]] (vendor guide, no data). These
+    come from Google itself, an experiment, two server-log studies, a
+    traffic dataset, and a vendor guide.
   - **Current best guess**: no effect on AI-search visibility. The evidence
     is lopsided, recent, and includes Google's official word. Still
     unresolved in one narrow sense: nobody has tested citation lift on

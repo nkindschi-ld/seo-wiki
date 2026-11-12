@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-11-06
+updated: 2026-11-12
 ---
 
 # ChatGPT's Vertical Retrieval Engines
@@ -128,11 +128,14 @@ plus the internal `labrador-local` returning `places`. `fortis` also returns a
 
 **No Google Business Profile path appears anywhere in the registry.** If that
 holds, local and business-entity visibility inside ChatGPT is mediated by Yelp
-and Foursquare listing accuracy — a different dependency than the Google Maps
-reliance documented for AI Overviews in [[ai-citation-landscape]] ("Local
-queries lean on Google Maps, not articles"). Flagged as a **gap**: the wiki has
-no local-AI-visibility playbook, and this single source isn't a sufficient
-basis to build one.
+and Foursquare listing accuracy. That conflicts with the Google Maps reliance
+documented for **ChatGPT** in [[ai-citation-landscape]] ("Local queries lean on
+Google Maps, not articles"); see Conflicting Evidence below. Flagged as a
+**gap**: the wiki has no local-AI-visibility playbook, and this single source
+isn't a sufficient basis to build one.
+_Corrected 2026-11-12: this paragraph previously said the Maps reliance was
+documented for AI Overviews. The Muck Rack data behind it
+([[muckrack-generative-pulse-ai-reading-may-2026]]) is about ChatGPT._
 
 ## The rewriter layer explains the `site:` operator surge
 
@@ -219,6 +222,26 @@ stages later. Don't infer value from the existence of a path.
 
 **Confidence summary:** high value as a *structural map* of how ChatGPT routes
 retrieval; low value as evidence of *how much* any single path matters.
+
+## Conflicting Evidence
+
+- **Claim**: ChatGPT has no Google path for local/business queries; local
+  retrieval runs on Yelp, Foursquare and `labrador-local`.
+  - Supported by: [[konitzny-chatgpt-retrieval-leak-engine-list-2026]]
+    (2026-09-17), leaked engine registry with no Google Business Profile or
+    Maps engine.
+  - Contradicted by: [[muckrack-generative-pulse-ai-reading-may-2026]]
+    (2026-05-01), which measured ChatGPT citing Google Maps results 188 times
+    per 1,000 local "best of" queries, averaging ~7 map pins per response.
+- **Current best guess**: both may be true. The registry has no dedicated
+  Google local engine, but the `serpapi_auto_*` backend scrapes Google SERPs,
+  and Google SERPs for local queries carry Maps/local-pack results, so Maps
+  citations could arrive through SerpAPI rather than a local engine. That's a
+  hypothesis neither source tests. Recency and method cut both ways: the leak
+  is newer but an unverified config snapshot with no call-frequency data; Muck
+  Rack is older but measures actual citations at scale. Flagged
+  **unresolved**. Until it's settled, local businesses should keep both Google
+  Business Profile and Yelp/Foursquare listings accurate.
 
 ## See also
 

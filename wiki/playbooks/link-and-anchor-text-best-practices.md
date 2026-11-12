@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-10-08
+updated: 2026-11-12
 ---
 
 # Link and Anchor Text Best Practices
@@ -352,3 +352,5 @@ reveal the effect:
 - [[broken-link-building]] and [[digital-pr-strategy]] — external
   link-earning tactics that complement this page's internal-linking and
   link-recovery focus.
+- [[link-building-outreach-tactics]] — outreach and pitching tactics for
+  earning the external links this page's anchor-text guidance applies to.

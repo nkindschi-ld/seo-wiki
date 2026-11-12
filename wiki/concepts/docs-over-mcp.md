@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo, seo]
-updated: 2026-11-06
+updated: 2026-11-12
 ---
 
 <!-- updated 2026-08-06: added MCP server discoverability section from mcp-focus-server-retrieval-2026 -->
@@ -69,7 +69,13 @@ on*: the endpoint is working code, not a citation. Evaluate the
 - **Discoverability / tool-selection competition.** The agent must
   choose your tool over generic web search or a competitor's server;
   vague or overlapping tool descriptions get skipped. This is now a
-  measured IR problem — see "MCP server discoverability" below.
+  measured IR problem — see "MCP server discoverability" below. The
+  field isn't level, either: Claude Code's leaked source (March 2026)
+  hardcodes a 489-tool MCP UI allowlist that gets compact output
+  rendering, and 89 docs hosts preapproved for WebFetch
+  ([[amplifying-claude-code-hardcoded-vendors-2026]]). Check whether
+  your server and docs host are on such lists before comparing your
+  results with a competitor's.
 - **Maintenance surface.** It's software — versioning, auth, uptime,
   rate limits. A broken server mid-task fails harder than a stale page.
 - **Measurement is hard.** No pageview model; you need server-side

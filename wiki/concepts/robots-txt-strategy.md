@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo]
-updated: 2026-10-08
+updated: 2026-11-12
 ---
 
 # Robots.txt Strategy: What It Is, What It Isn't
@@ -44,8 +44,8 @@ block a specific LLM's crawler (per
 |---|---|
 | ChatGPT | `OAI-SearchBot`, `ChatGPT-User`, `GPTBot` |
 | Copilot | `BingBot` |
-| Gemini | `Google-Extended` (inferred — Google hasn't explicitly confirmed this maps to Gemini), `GoogleOther` |
-| Claude | `ClaudeBot` |
+| Gemini | No separate crawler: Google's existing crawlers fetch the content. `Google-Extended` is a robots.txt **control token** with no HTTP user agent of its own; it controls whether that content can be used to train Gemini models and for grounding, and doesn't affect Google Search ([Google crawler overview](https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers)) |
+| Claude | `ClaudeBot` (training), `Claude-SearchBot` (search indexing), `Claude-User` (user-initiated fetches) ([Anthropic crawler docs](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler)) |
 | Perplexity | `PerplexityBot` |
 | Andi | `AndiBot` |
 | Exa | `ExaBot` |
@@ -53,6 +53,15 @@ block a specific LLM's crawler (per
 | You.com | `YouBot` |
 | Firecrawl (agent framework) | `FirecrawlAgent` |
 | Common Crawl (training corpus used by many LLMs) | `CCBot` |
+
+_Corrected 2026-11-12: [[wix-generative-engine-optimization]] listed
+Gemini as `Google-Extended` ("inferred") plus `GoogleOther`, and Claude as
+`ClaudeBot` only. Google documents `Google-Extended` as a control token
+rather than a crawler (see also [[llms-txt]]), and `GoogleOther` as a
+generic crawler used by Google product teams for things like one-off
+R&D crawls, not a Gemini agent. Anthropic documents three bots, so
+blocking `ClaudeBot` opts out of training without affecting Claude's
+search or user-requested fetches._
 
 **Coverage gap**: this table doesn't yet document bots from Meta,
 Amazon, xAI, ByteDance, Cohere, Mistral AI, DeepSeek, Allen Institute
@@ -97,6 +106,8 @@ way to apply this distinction in an actual robots.txt file:
 # Allow AI search/agent crawlers (real-time retrieval — help them cite you)
 User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
 User-agent: PerplexityBot
 User-agent: FirecrawlAgent
 User-agent: AndiBot
@@ -106,8 +117,11 @@ User-agent: YouBot
 Allow: /
 
 # Disallow AI training-data collection bots, if you don't want your
-# content used to train a model (a separate decision from search visibility)
+# content used to train a model (a separate decision from search visibility).
+# Google-Extended is a control token, not a crawler, and also covers Gemini
+# grounding; it doesn't affect Google Search.
 User-agent: GPTBot
+User-agent: ClaudeBot
 User-agent: CCBot
 User-agent: Google-Extended
 Disallow: /
@@ -122,6 +136,11 @@ Disallow: /admin/
 Disallow: /internal/
 Sitemap: https://www.domain.com/sitemap.xml
 ```
+
+_Updated 2026-11-12: the Claude agents (`Claude-SearchBot`, `Claude-User`
+allowed; `ClaudeBot` disallowed) were added to the
+[[sel-ai-optimization-content-for-search-and-agents]] template, per
+[Anthropic's crawler docs](https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler)._
 
 Also watch for **overly aggressive bot-protection services**
 (Cloudflare, AWS WAF) blocking AI crawlers/agents outright at the
@@ -201,27 +220,21 @@ Example: You block `/admin/` in robots.txt. Another site links to `/admin/user12
 
 ### The "quick fix for duplicate content" version of this mistake
 
-A widely repeated practitioner shortcut is to disallow duplicate or
-thin pages in robots.txt to keep them out of the index. It's half
-right: it does save crawl budget, which is a real benefit. It does not
-control indexing, and it makes the situation worse — because Google
-never fetches a disallowed page, it never sees a `noindex` on it, so
-the block *prevents* the directive that would have worked. Per
-[[google-robots-txt-intro]] (official) and [[ahrefs-robots-txt-guide]]
-(which lists this among the common implementation mistakes), the rule
-is: robots.txt for crawl management, `noindex` for indexing control,
-and never both on the same URL.
-
-This page carries no **Conflicting Evidence** section because no source
-in this wiki argues the opposite — the disagreement is between official
-guidance and folklore, not between sources.
+Disallowing duplicate or thin pages to keep them out of the index saves
+crawl budget but doesn't control indexing, and it hides any `noindex` on
+those pages. The rule: robots.txt for crawl management, `noindex` for
+indexing control, never both on the same URL. The claim and its sources
+are recorded in **Conflicting Evidence** below.
 
 ### For actual indexing prevention, use:
 1. **`noindex` meta tag** — Most reliable for HTML pages
 2. **`X-Robots-Tag: noindex` HTTP header** — For PDFs, images, API responses
 3. **Password protection** — Prevents crawling entirely (most secure)
 4. **Content removal** — Delete the page from your server
-5. **HTTPS + robots.txt** — Prevents Googlebot from seeing robots.txt (only for truly private content)
+
+_Corrected 2026-11-12: an earlier version listed "HTTPS + robots.txt" as a
+fifth method. No such mechanism exists: HTTPS doesn't hide robots.txt from
+crawlers, and robots.txt doesn't prevent indexing in any case._
 
 ## What it can do by type
 
@@ -304,7 +317,8 @@ protection rules aren't 403ing agent fetches unintentionally. See
     can still be indexed and appear in results (without a description)
     if it's linked externally, precisely because the crawler never
     fetches the page and so never sees a `noindex`. Independently
-    corroborated by [[ahrefs-robots-txt-guide]].
+    corroborated by [[ahrefs-robots-txt-guide]], which lists it among
+    the common implementation mistakes.
 - **Current best guess**: not a real empirical dispute — a conflation of
   two different goals. Use robots.txt for **crawl management**, and
   `noindex` (meta tag or `X-Robots-Tag` header), password protection, or
