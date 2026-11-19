@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-11-06
+updated: 2026-11-19
 ---
 
 # The AI Shortlist Effect
@@ -163,8 +163,38 @@ doing most of the decision-making work.
 - Correlational, not a randomized controlled purchase experiment —
   visibility and selection are shown to move together, not proven that
   one causes the other.
+- **Consumer sample, not B2B committees**: the purchases are individual
+  consumer choices. See the Conflicting Evidence section below.
+
+## Conflicting Evidence
+
+- **Claim**: AI chat is where purchase shortlists now get formed, so AI
+  share of voice works like retail shelf space.
+  - Supported by: [[tryprofound-shortlist-is-the-new-shelf]]
+    (2026-07-14). 92.8% of tasks never left the chat, and visibility
+    correlated 0.57 with selection, among 56 consumer participants.
+  - Contradicted by: [[6sense-b2b-buyer-experience-report-2026]]
+    (2026-11-02). In 4,607 committee B2B buying journeys of $25K or
+    more, only 26% used LLMs to find vendors, and LLMs ranked last of
+    11 channels for staying current (15.0%). AI tools were a
+    vendor-preference influence for 21.2% in Selection, behind existing
+    knowledge, internal discussion, analysts and review sites. LLM use
+    fell from 94% to 81% year over year, and the winner was on the
+    Day 1 shortlist in 91.7% of journeys, usually based on years of
+    familiarity.
+- **Current best guess**: different kinds of purchase, so they mostly
+  don't overlap. In-chat shortlisting looks strong for individual
+  consumer choices in categories the buyer doesn't know well. For
+  committee B2B buying, AI is a secondary influence used to confirm a
+  choice, and this page's shelf-space framing shouldn't be carried over
+  as-is. Both sources have a commercial interest in their conclusion
+  (Profound sells AI-visibility tracking, 6sense sells intent data).
+  Unresolved; see [[b2b-buyer-journey-and-ai-search]].
 
 ## See also
+
+- [[b2b-buyer-journey-and-ai-search]] — the B2B committee-buying
+  counterpoint: where AI fits when the shortlist forms over years.
 
 - [[ai-visibility-correlation-factors]] — the upstream correlation data
   (what makes a brand appear in AI answers at all); this page covers

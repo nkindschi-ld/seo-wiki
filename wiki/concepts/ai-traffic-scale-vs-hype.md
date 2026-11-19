@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-11-12
+updated: 2026-11-19
 ---
 
 # AI Traffic Scale vs. the Hype
@@ -163,6 +163,19 @@ already-dominant search channel," consistent with
 being Google-AI-Overview-focused rather than third-party-AI-tool-focused
 in this wiki.
 
+## B2B buyer survey: AI used, but a minor influence
+
+[[6sense-b2b-buyer-experience-report-2026]] (2026-11-02, 4,607 B2B
+journeys of $25K or more) looks at the same question from buyers'
+self-reports rather than traffic data. 81% of B2B buyers use LLMs
+somewhere in the journey, down from 94% in 2025. Only 26% use them to
+find new vendors, and LLMs rank last of 11 channels for staying current
+on a category (15.0%, vs. 35.9% for vendor websites). The report sums up
+LLMs as "a tweak, not a revolution." This is survey data from a vendor
+with a stake in the conclusion (6sense sells intent data), but it points
+the same way as the clickstream data above. Detail:
+[[b2b-buyer-journey-and-ai-search]].
+
 ## Relationship to the rest of the wiki
 
 This doesn't contradict any existing wiki claim about AI citation
@@ -179,6 +192,9 @@ being the exception, since they inherit Google's existing dominant
 search share rather than competing against it.
 
 ## See also
+
+- [[b2b-buyer-journey-and-ai-search]] — buyer-survey view of how much
+  AI actually shapes B2B vendor choice.
 
 - [[generative-engine-optimization]] — the tactics this page provides a
   scale caveat for.

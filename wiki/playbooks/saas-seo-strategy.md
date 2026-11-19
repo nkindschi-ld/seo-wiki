@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-11-12
+updated: 2026-11-19
 ---
 
 Why / when to use this: SaaS/software companies need a different SEO
@@ -210,6 +210,30 @@ rank:
   a free-trial CTA within a single page — all three conversion
   mechanisms working together rather than as separate initiatives.
 
+## Content for the whole buying group
+
+Per [[6sense-b2b-buyer-experience-report-2026]] (2026-11-02, committee
+purchases of $25K or more), the B2B winner is usually decided before
+sales contact. The winner was on the Day 1 shortlist in 91.7% of
+journeys, and the pre-contact favorite won 81.5% of the time. Groups
+average ~10 people, and IT is in 69.9% of software purchases. Plan
+content for:
+
+- **Supporting roles, not only the champion**: security/compliance, IT
+  integration, procurement and pricing, and finance/ROI pages. These are
+  the questions the rest of the group brings.
+- **The case for the category as well as the vendor**: 56.4% say
+  agreeing on the category was as hard as picking a vendor, or harder
+  (61.5% for new capabilities). Category explainers, "why X" and
+  build-vs-buy content belong in the plan alongside comparison and
+  alternatives pages.
+- **Ungated, shareable assets**: only 35.2% of buyers fill forms with
+  their real details (see [[lead-magnet-checklist]]).
+- **Clear statements of how the product uses AI**: buyer confidence that
+  they understand how vendors deploy AI fell from 82.5% to 72.7%.
+
+Full analysis: [[b2b-buyer-journey-and-ai-search]].
+
 ## Checklist
 
 - [ ] Goals/KPIs defined beyond raw traffic (conversions, retention, revenue attribution)
@@ -226,6 +250,9 @@ rank:
 - [ ] Each content silo has 10-30+ posts before being treated as a topical-authority source
 
 ## See also
+
+- [[b2b-buyer-journey-and-ai-search]] — how B2B buying groups form
+  shortlists, and where AI fits.
 
 - [[saas-pricing-page-checklist]] — the BoFu `/pricing` page itself:
   layout, pricing query types, comparison-page linking, unit and

@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-11-12
+updated: 2026-11-19
 ---
 
 # AI Visibility Measurement Methodology
@@ -97,6 +97,17 @@ Understanding *why* to measure AI visibility:
    understate AI Overview prevalence and overstate citation churn, unless
    it filters poisoned pages. Single vendor source; treat as a caveat to
    check, not a correction to apply.
+
+5. **Form fills undercount B2B buyers** — Per
+   [[6sense-b2b-buyer-experience-report-2026]], only 35.2% of B2B buyers
+   use their own contact details on a form. 31.6% have a teammate fill
+   it, 19.3% use a personal email, 17.7% use AI tools to avoid the form,
+   and 7.4% skip gated content. The buyer's team starts 82% of first
+   vendor contacts, after the shortlist is already ranked. Any
+   attribution model that credits content or AI visibility through form
+   fills or self-identified leads will undercount it in B2B. Self-reported
+   survey data from a vendor that sells intent data; see
+   [[b2b-buyer-journey-and-ai-search]].
 
 ## Related Measurement Frameworks
 

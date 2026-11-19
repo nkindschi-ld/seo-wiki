@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-09-04
+updated: 2026-11-19
 ---
 
 # Lead Magnet Checklist
@@ -109,6 +109,27 @@ email, is where the ROI is.
   keywords, newsletter swaps, podcast guest appearances.
 - Multi-channel promotion reduces cost-per-lead ~31% vs. single-channel
   (Amra and Elma 2025).
+
+## B2B caveat: gating hides content and identity
+
+The conversion benchmarks above are mostly B2C/creator figures. For
+committee B2B buying, [[6sense-b2b-buyer-experience-report-2026]]
+(2026-11-02) found only 35.2% of buyers use their own contact details on
+a form. 31.6% have a teammate fill it, 19.3% use a personal email, 17.7%
+use AI tools to avoid it, and 7.4% skip gated content. The report
+recommends making buying-group materials "findable, ungated, shareable."
+Before gating B2B content, weigh:
+
+- The lead you capture may not be the buyer, or may be a throwaway
+  address.
+- Gated content can't be read by crawlers or cited by AI engines (see
+  [[b2b-buyer-journey-and-ai-search]]).
+- Content meant to help a buying group agree (ROI, security, comparison,
+  category explainers) loses value if a buyer can't forward it.
+
+A common compromise is to leave the substance ungated and gate a
+convenience (an editable template, a calculator export, a custom
+assessment).
 
 ## Common mistakes to avoid
 - Offer too long or generic instead of solving one specific problem.
