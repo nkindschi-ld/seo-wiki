@@ -1,0 +1,182 @@
+URL,FAQ present,FAQ count,FAQ text (Q / A),FAQPage JSON-LD present,Notes
+https://launchdarkly.com/how-it-works/agent-integrations/,Y,8,"Q: Does LaunchDarkly support agent integrations and workflows?
+A: Yes. LaunchDarkly support agents through MCP (Model Context Protocol), CLI, and IDE integrations, allowing AI assistants to interact with LaunchDarkly directly.
+
+Q: Does LaunchDarkly have an MCP server?
+A: Yes. LaunchDarkly provides an MCP server that enables AI assistants like Claude Code and Cursor to manage feature flags, control releases, and run workflows using natural language.
+
+Q: Can I use LaunchDarkly without leaving my editor or terminal?
+A: Yes. LaunchDarkly can be used entirely from your editor, terminal, or AI assistant. You can manage flags, control rollouts, and run workflows without switching to the LaunchDarkly app.
+
+Q: What can AI agents do with LaunchDarkly?
+A: AI agents can toggle feature flags, control rollout exposure, update targeting rules, automate workflows, and investigate issues using LaunchDarkly tools and skills.
+
+Q: How does LaunchDarkly work with AI-generated code?
+A: LaunchDarkly allows teams to more confidently release AI-generated changes, monitor their impact in real time, and control how those changes behave in production.
+
+Q: What is LaunchDarkly in the context of AI workflows?
+A: LaunchDarkly is a runtime control layer that allows developers and AI agents to manage and control changes in production in real time.
+
+Q: How do I get started using LaunchDarkly with AI?
+A: You can install LaunchDarkly with a single prompt: Onboard me to LaunchDarkly. Start by installing the onboarding skill: `npx skills add launchdarkly/agent-skills --skill onboarding -y`. source-launchdarkly This installs the tools and skills needed to start using LaunchDarkly from your agent workflow.
+
+Q: What tools does LaunchDarkly work with?
+A: LaunchDarkly works with tools like Claude Code, Cursor, VS Code, terminal workflows, 25+ SDKs, and a broad range of CI/CD and observability tools. View our integrations.",N,No FAQPage schema authored
+https://launchdarkly.com/how-it-works/platform-architecture/,Y,12,"Q: What is the Runtime Delivery Network?
+A: The Runtime Delivery Network is the global infrastructure LaunchDarkly runs so you don't have to. It's our purpose-built architecture for runtime control. Every app connects to the nearest point of presence, your changes stream to it in milliseconds, and multiple independent layers of protection help keep flags evaluating even when something goes wrong.
+
+Q: How fast do changes reach my applications?
+A: SDKs initialize from CDN-served state in about 25ms, and changes typically reach SDKs running in streaming mode worldwide in under 200ms. When a release goes wrong, your kill switch reaches every connected app in moments, not on its next poll.
+
+Q: What happens if my application can't reach LaunchDarkly?
+A: Your flags keep evaluating even if your app can't reach LaunchDarkly. Our multi-layer architecture has six safety nets that back each other up, and each failsafe engages and recovers automatically: Multi-region failover: SDKs reconnect to another region automatically. Polling fallback: If streaming is unavailable, SDKs poll from our global CDN until it returns. CDN backup: Cold starts initialize from our global CDN, so a new app instance can boot from a last-known state. Relay Proxy or persistent store: Optionally, your apps can initialize from a local cache you run on your own network. Local copy: Running apps serve flags from memory; mobile apps from the device cache. Code defaults: If nothing is reachable, every flag serves its default as defined in code. When problems happen, your flags keep serving their last known values, and your app keeps running.
+
+Q: Can users see my targeting rules in the browser?
+A: No. End user devices receive only their evaluated flag values—never targeting rules or segment lists—and in JavaScript secure mode stops a user from requesting another user's flags. A user in DevTools sees only their own flag values, never your rules or who else gets what.
+
+Q: Does LaunchDarkly work in regulated or air-gapped environments?
+A: Yes. LaunchDarkly is a dedicated feature management platform with its own FedRAMP authorization, offers an EU instance and HIPAA support for eligible enterprise customers, and Relay Proxy's offline mode supports fully disconnected networks.
+
+Q: Does my backend have to send user data to LaunchDarkly to get a flag decision?
+A: No. Your backend evaluates flags in-process, so it never sends user data to get a decision, and attributes you mark private never appear in analytics events.
+
+Q: Do flag changes reach a browser tab or mobile app that's already open, without a refresh?
+A: Yes. In streaming mode, a change typically reaches open sessions worldwide in under 200 milliseconds, without a poll or a reload.
+
+Q: If flags change while an app is disconnected, does my app redownload the whole configuration when it reconnects?
+A: No. It resumes from where it left off and receives only what changed, saving bandwidth and time. A flaky mobile network, or thousands of apps reconnecting at once after a network blip, doesn't turn into a flood of full downloads.
+
+Q: Can I target audiences with millions of individual users?
+A: Yes. LaunchDarkly targets segments of millions of contexts on server and client SDKs, synced from the analytics and CDP tools you already use, and keeps membership current as your source data changes. Server-side, big segments read from your own store or the Relay Proxy.
+
+Q: Does LaunchDarkly slow my application down at startup or runtime?
+A: No. Startup wait is under your control. Every flag returns the default you set in code, so your app can start without waiting on LaunchDarkly at all. Once running, SDKs evaluate from data already in memory, with no call to LaunchDarkly for each decision.
+
+Q: Does the LaunchDarkly SDK bloat my application's memory?
+A: Not in proportion to your users. Client-side SDKs hold only the current user's evaluated flag values, never your targeting rules. Server-side SDKs hold the rules for the flags their key receives, and you can filter a key's payload down to just the flags a service needs, so memory tracks what each service uses, not your whole flag catalog.
+
+Q: Do flag changes need a restart or redeploy?
+A: No. Changes stream to running apps. Turning off a broken feature reaches running processes in moments, with no restart and no trip through your deploy pipeline.",N,No FAQPage schema authored
+https://launchdarkly.com/how-it-works/platform/,Y,8,"Q: What is runtime control?
+A: AI is generating and changing software faster than teams can validate it before release. Traditional workflows only allow control before deployment, and release practices remain largely manual: Engineers still configure controls, manage rollouts, and respond when things go wrong for each change. That creates more release toil and makes it harder to apply consistent safeguards. Runtime control lets teams manage behavior after deployment so they can help safely adapt to real-world conditions in real time.
+
+Q: Why do teams need runtime control?
+A: AI is generating and changing software faster than teams can validate it before release. Traditional workflows only allow control before deployment. Runtime control lets teams manage behavior after deployment so they can help safely adapt to real-world conditions in real time.
+
+Q: How is LaunchDarkly more than feature flags?
+A: Feature flags are the foundation—they let you control how code is released. LaunchDarkly extends this into a full runtime control platform. In addition to release control, it provides real-time visibility into how changes behave and the ability to take action instantly in production. This means you’re not just controlling releases; you’re continuously controlling, monitoring, and optimizing both code and AI systems after they’re deployed. For code, Release Autopilot automates the work of releasing. It classifies each change by risk, flags the ones that warrant control, rolls them out, rolls them back if something goes wrong, and cleans up afterward—so engineers don’t have to manually set up flags, coordinate rollouts, or clean up.
+
+Q: What does “control at runtime” mean?
+A: Control at runtime means making changes to how systems behave while they are running in production—without redeploying code. This includes controlling exposure, adjusting behavior, and responding to issues instantly based on real-time data.
+
+Q: How does LaunchDarkly support AI use cases?
+A: LaunchDarkly controls both the AI-generated code you ship and the AI agents you run in production. For code, Release Autopilot classifies each change by risk, flags the ones that warrant control, releases them progressively, and rolls back when configured performance thresholds are breached—or notifies your team instead. For agents, LaunchDarkly lets teams control how AI agents behave in production. You can manage prompts and models, monitor behavior in real time, and adjust outputs instantly—without redeploying—so you can help safely iterate on AI systems using real user data.
+
+Q: How is LaunchDarkly different from AI evaluation or observability tools?
+A: AI evaluation and observability tools help you understand what’s happening. LaunchDarkly lets you take action on it. Instead of just monitoring or analyzing behavior , you can instantly adjust prompts, routing, and system behavior in production—without redeploying—so you can respond to real-world conditions as they happen. For code changes, Release Autopilot connects measurement directly to action: When observability signals a degradation, it can pause or roll back the change automatically, limiting its impact in production without a redeploy.
+
+Q: Can I use LaunchDarkly without AI?
+A: Yes. LaunchDarkly is widely used for feature management, experimentation, and release safety across traditional applications. AI support extends these capabilities to modern AI-driven systems.
+
+Q: What can I control at runtime with LaunchDarkly?
+A: You can control how code and AI agents behave in production, including feature releases, user targeting, prompts, model behavior, and system responses, so you can adapt instantly based on real-time conditions.",N,Answers to Q1 and Q2 are identical; Q1 shows the Q2 answer; No FAQPage schema authored
+https://launchdarkly.com/solutions/ai-agent-governance/,Y,7,"Q: What is AI agent governance?
+A: AI agent governance controls what AI agents are allowed to do in production, who can change their behavior, and how those changes are reviewed and recorded. This means access control, approval workflows, policy enforcement at runtime, and an audit trail.
+
+Q: How is AI agent governance different from general AI governance?
+A: AI governance is usually organizational: model risk policy, review boards, documentation, and standards. Agent governance is operational. It covers the controls that apply to a running agent, including who can change its prompts and models, which behavior each audience gets, and how quickly you can stop it.
+
+Q: Why do AI agents need governance that traditional software doesn't?
+A: Agents act autonomously, and their behavior changes with prompts and models. A small configuration change can shift what an agent does in production, so the governance layer has to sit at runtime rather than in code review.
+
+Q: How does LaunchDarkly control who can change agent behavior?
+A: AgentControl uses the same access model as the rest of the platform. You scope permissions by project, environment, and resource, require approvals on production changes, and keep a record of every action in the audit log.
+
+Q: Can LaunchDarkly enforce different rules for different users or regions?
+A: Yes. Targeting rules let you serve different agent configurations depending on geography, entitlement, customer tier, or any other context attribute. This lets agents behave differently where regulations or contracts require it.
+
+Q: How fast can we stop an agent that's behaving badly?
+A: Within seconds. You can revert to a previous configuration, disable a variation, or cut traffic to an agent without a redeployment. Guarded rollouts can also trigger rollback automatically when a metric threshold is breached.
+
+Q: Can we use LaunchDarkly alongside our existing AI governance tooling?
+A: Yes. LaunchDarkly is the runtime control and enforcement layer. It works alongside your model risk documentation, evaluation frameworks , and policy tooling by giving you a way to apply (and help prove) those policies where your agents actually run.",N,No FAQPage schema authored
+https://launchdarkly.com/solutions/ai-evaluation/,Y,5,"Q: What are AI evaluations?
+A: AI evaluations score how well an AI model or system performs against defined criteria. Offline evaluation scores a candidate prerelease against a fixed dataset. Online evaluation scores live production responses continuously on traffic the test set didn’t contain. Both matter, but they measure different things.
+
+Q: Why are AI evaluations important?
+A: AI behavior is probabilistic, so the same prompt can return different answers, and the model behind it can change without notice. Evaluation is how you compare candidates fairly before release and help uncover quality issues before your users do.
+
+Q: When should you evaluate your AI systems?
+A: Evaluate your AI systems before release to decide which model, prompt, and parameter combinations to try. After release, you’ll want to continuously track your AI systems because prerelease configurations can degrade on real user phrasing. Your AI systems are also worth evaluating after any retraining or provider model changes.
+
+Q: Why are traditional evaluation methods insufficient for agentic AI systems?
+A: Traditional testing assumes a correct output you can match against, but there’s not always a binary answer. Agents produce open-ended responses, call tools, and take multi-step paths where several answers may be correct. They also change with prompts and models, so a change can reach production without passing through code review. Evaluating them requires judging different metrics , like faithfulness, relevance, and task completion. You also need to measure against live traffic rather than only fixed datasets.
+
+Q: Does the LaunchDarkly platform provide insights on optimizing costs for AI agents?
+A: Yes. AI Insights gives you a project-level view of token usage, latency, error rates, satisfaction, and evaluation scores across configs, models, and providers. You can compare cost against quality per variation, spot regressions after an update, and identify which configurations drive spend.",N,No FAQPage schema authored
+https://launchdarkly.com/solutions/ai-observability-platform/,Y,8,"Q: What is AI observability?
+A: Monitoring what AI applications are doing in production: AI outputs, inputs, model behavior, latency, model usage, and quality metrics. For agents, that extends to decision traces, tool calls, and how behavior shifts across model versions or prompt changes.
+
+Q: How is AI observability different from traditional application observability?
+A: Traditional observability covers infrastructure health: latency, error rates, uptime. AI observability adds model-specific signals like output quality, token costs, and hallucination rates, and requires correlating those signals to AI-specific variables like model version and prompt variation.
+
+Q: What should an AI observability platform track?
+A: Latency, error rates, custom metrics, and token usage per model and endpoint. Beyond that, model quality metrics, cost per inference, and agent trace data including tool calls and decision paths. The most useful platforms tie all of that back to the specific release or config change that caused a shift. That release-level context makes root cause analysis faster. For agents, see our guide to AI agent monitoring .
+
+Q: Does LaunchDarkly work with multiple AI providers?
+A: Yes. AgentControl manages multiple models across providers and prompt configuration outside your codebase, so you can work with OpenAI, Anthropic, Mistral, Amazon Bedrock, Azure OpenAI, or other providers and switch between them at runtime without a redeploy.
+
+Q: How does LaunchDarkly help with tracking model drift and performance degradation?
+A: Guarded Releases monitor AI performance metrics during progressive rollouts and trigger automatic rollbacks if thresholds are breached. You can also track metric trends across model versions and flag states over time to catch gradual degradation instead of simply acute failures.
+
+Q: Can I use LaunchDarkly alongside my existing observability stack?
+A: Yes. LaunchDarkly adds release-level context and runtime controls on top of your existing logging, tracing, and APM tools. Most teams can run it alongside their current AI stack. The difference is having the ability to act on your observability data without a deployment.
+
+Q: What's the difference between AI observability and AI runtime control?
+A: Observability is visibility: knowing what your AI systems are doing and why. Runtime control is the ability to change that behavior in production without redeploying. LaunchDarkly connects both so you can observe a problem and fix it from the same platform.
+
+Q: How is LaunchDarkly different from LLM-specific observability tools?
+A: LLM observability tools focus on tracing and evaluation during AI development and early production. LaunchDarkly is the production control layer: progressive rollouts, automatic guardrails, runtime configuration, and rollback within milliseconds. Most teams can use both, and LaunchDarkly is built to work alongside your existing tracing and eval tooling.",N,"Valid FAQPage JSON-LD is in the Prismic schema field and matches all visible questions, but the template does not output it on the page"
+https://launchdarkly.com/solutions/enterprise-prompt-management-tools/,Y,8,"Q: What is prompt management?
+A: Prompt management means managing the prompts that drive your AI features as versioned, governed resources instead of hard-coded strings. That covers editing, versioning, testing, rolling out, and monitoring prompts across environments and models.
+
+Q: How do prompt management tools save time for businesses?
+A: They take prompt changes out of the deploy cycle. Instead of opening a PR and waiting on CI/CD for every tweak, teams update prompts at runtime, which turns day-long iteration loops into seconds.
+
+Q: How does LaunchDarkly simplify prompt management?
+A: AgentControl stores prompts, instructions, and model settings outside your application code. You edit them in LaunchDarkly, version every change, and roll them out or back without redeploying.
+
+Q: Can LaunchDarkly handle model prompt management processes for large teams?
+A: Yes. Role-based access, approval workflows, and audit logs let large teams control who can change what, with a full record of every change. Reusable snippets keep prompt content consistent across teams and configs.
+
+Q: Can LaunchDarkly manage prompts across multiple LLM models?
+A: Yes. AgentControl works with OpenAI, Anthropic, Amazon Bedrock, Azure OpenAI, open source, and custom models. You can manage prompts per model and switch providers at runtime without a redeploy.
+
+Q: Can I track prompt performance with LaunchDarkly?
+A: Yes. You can track token usage, latency, error rates, and cost per call in real time. You can also run experiments across prompt variations and evaluate outputs with built-in judges.
+
+Q: Can nontechnical team members edit prompts using LaunchDarkly?
+A: Yes. A no-code editor and role-based access let PMs, designers, and other nonengineers edit and test prompts inside guardrails, without touching application code.
+
+Q: How do I choose the right prompt management tool?
+A: Look for runtime updates without redeploys, version history and rollback, governance like access control and audit logs, multi-model support, and built-in monitoring and experimentation. For enterprise use, governance and multi-model support typically matter most.",N,"Valid FAQPage JSON-LD is in the Prismic schema field and matches all visible questions, but the template does not output it on the page"
+https://launchdarkly.com/how-it-works/experimentation/,N,0,,N/A,
+https://launchdarkly.com/how-it-works/feature-flags/,N,0,,N/A,
+https://launchdarkly.com/how-it-works/observability/,N,0,,N/A,
+https://launchdarkly.com/how-it-works/release-autopilot/,N,0,,N/A,
+https://launchdarkly.com/persona/ai-engineers/,N,0,,N/A,
+https://launchdarkly.com/persona/data-scientists/,N,0,,N/A,
+https://launchdarkly.com/persona/development-teams/,N,0,,N/A,
+https://launchdarkly.com/persona/devops-site-reliability-engineer-teams/,N,0,,N/A,
+https://launchdarkly.com/persona/product-managers/,N,0,,N/A,
+https://launchdarkly.com/solutions/,N,0,,N/A,
+https://launchdarkly.com/solutions/control-ai-agents/,N,0,,N/A,
+https://launchdarkly.com/solutions/experimentation-and-feature-management/,N,0,,N/A,
+https://launchdarkly.com/solutions/financial-services/,N,0,,N/A,
+https://launchdarkly.com/solutions/healthcare/,N,0,,N/A,
+https://launchdarkly.com/solutions/launchdarkly-aws/,N,0,,N/A,
+https://launchdarkly.com/solutions/optimize-ai-performance/,N,0,,N/A,
+https://launchdarkly.com/solutions/release-ai-built-code/,N,0,,N/A,
+https://launchdarkly.com/solutions/retail-ecommerce/,N,0,,N/A,
+https://launchdarkly.com/solutions/run-experiments/,N,0,,N/A,
+https://launchdarkly.com/solutions/self-heal-systems/,N,0,,N/A,

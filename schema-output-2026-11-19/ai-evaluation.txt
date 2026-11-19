@@ -1,0 +1,120 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://launchdarkly.com/solutions/ai-evaluation/#webpage",
+      "url": "https://launchdarkly.com/solutions/ai-evaluation/",
+      "name": "AI Evaluation Platform for Agents | LaunchDarkly",
+      "description": "AI evaluation tools score agents offline before release and on live traffic after. See how LaunchDarkly turns evaluation into runtime action.",
+      "isPartOf": {
+        "@id": "https://launchdarkly.com/#website"
+      },
+      "about": [
+        {
+          "@id": "https://launchdarkly.com/#software"
+        },
+        {
+          "@type": "Thing",
+          "name": "AI agent",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q132451509",
+            "https://en.wikipedia.org/wiki/AI_agent"
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "Thing",
+          "name": "observability",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q132744177"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "benchmark",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q816747",
+            "https://en.wikipedia.org/wiki/Benchmark_(computing)"
+          ]
+        }
+      ],
+      "mainEntity": {
+        "@id": "https://launchdarkly.com/solutions/ai-evaluation/#faq"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://launchdarkly.com/#software",
+      "name": "LaunchDarkly",
+      "applicationCategory": "DeveloperApplication",
+      "publisher": {
+        "@id": "https://launchdarkly.com/#organization"
+      },
+      "sameAs": [
+        "https://www.g2.com/products/launchdarkly/reviews",
+        "https://www.trustradius.com/products/launchdarkly",
+        "https://www.peerspot.com/products/launchdarkly-reviews"
+      ],
+      "featureList": [
+        "Reusable datasets",
+        "Side-by-side comparison",
+        "Custom criteria",
+        "Trace-level visibility",
+        "Continuous scoring",
+        "Per-variation attribution",
+        "Adjustable sampling",
+        "Guarded Releases"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://launchdarkly.com/solutions/ai-evaluation/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are AI evaluations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI evaluations score how well an AI model or system performs against defined criteria. Offline evaluation scores a candidate prerelease against a fixed dataset. Online evaluation scores live production responses continuously on traffic the test set didn’t contain. Both matter, but they measure different things."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are AI evaluations important?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI behavior is probabilistic, so the same prompt can return different answers, and the model behind it can change without notice. Evaluation is how you compare candidates fairly before release and help uncover quality issues before your users do."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should you evaluate your AI systems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Evaluate your AI systems before release to decide which model, prompt, and parameter combinations to try. After release, you’ll want to continuously track your AI systems because prerelease configurations can degrade on real user phrasing. Your AI systems are also worth evaluating after any retraining or provider model changes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are traditional evaluation methods insufficient for agentic AI systems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Traditional testing assumes a correct output you can match against, but there’s not always a binary answer. Agents produce open-ended responses, call tools, and take multi-step paths where several answers may be correct. They also change with prompts and models, so a change can reach production without passing through code review. Evaluating them requires judging different metrics, like faithfulness, relevance, and task completion. You also need to measure against live traffic rather than only fixed datasets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the LaunchDarkly platform provide insights on optimizing costs for AI agents?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. AI Insights gives you a project-level view of token usage, latency, error rates, satisfaction, and evaluation scores across configs, models, and providers. You can compare cost against quality per variation, spot regressions after an update, and identify which configurations drive spend."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>

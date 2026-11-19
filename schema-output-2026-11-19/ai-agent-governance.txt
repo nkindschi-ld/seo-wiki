@@ -1,0 +1,145 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://launchdarkly.com/solutions/ai-agent-governance/#webpage",
+      "url": "https://launchdarkly.com/solutions/ai-agent-governance/",
+      "name": "AI Agent Governance Platform | LaunchDarkly",
+      "description": "An AI agent governance platform controls who changes agent behavior and enforces policy at runtime. See how LaunchDarkly governs agents in production.",
+      "isPartOf": {
+        "@id": "https://launchdarkly.com/#website"
+      },
+      "about": [
+        {
+          "@id": "https://launchdarkly.com/#software"
+        },
+        {
+          "@type": "Thing",
+          "name": "AI governance",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q130610796",
+            "https://en.wikipedia.org/wiki/AI_governance"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "AI agent",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q132451509",
+            "https://en.wikipedia.org/wiki/AI_agent"
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "Thing",
+          "name": "separation of duties",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q1474665",
+            "https://en.wikipedia.org/wiki/Separation_of_duties"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "audit trail",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q1047174",
+            "https://en.wikipedia.org/wiki/Audit_trail"
+          ]
+        }
+      ],
+      "mainEntity": {
+        "@id": "https://launchdarkly.com/solutions/ai-agent-governance/#faq"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://launchdarkly.com/#software",
+      "name": "LaunchDarkly",
+      "applicationCategory": "DeveloperApplication",
+      "publisher": {
+        "@id": "https://launchdarkly.com/#organization"
+      },
+      "sameAs": [
+        "https://www.g2.com/products/launchdarkly/reviews",
+        "https://www.trustradius.com/products/launchdarkly",
+        "https://www.peerspot.com/products/launchdarkly-reviews"
+      ],
+      "featureList": [
+        "Targeted configurations",
+        "Runtime guardrails",
+        "Role-based access",
+        "Approval workflows",
+        "Full audit log",
+        "Version history",
+        "Instant rollback",
+        "Behavior monitoring"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://launchdarkly.com/solutions/ai-agent-governance/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is AI agent governance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI agent governance controls what AI agents are allowed to do in production, who can change their behavior, and how those changes are reviewed and recorded. This means access control, approval workflows, policy enforcement at runtime, and an audit trail."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is AI agent governance different from general AI governance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI governance is usually organizational: model risk policy, review boards, documentation, and standards. Agent governance is operational. It covers the controls that apply to a running agent, including who can change its prompts and models, which behavior each audience gets, and how quickly you can stop it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do AI agents need governance that traditional software doesn't?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Agents act autonomously, and their behavior changes with prompts and models. A small configuration change can shift what an agent does in production, so the governance layer has to sit at runtime rather than in code review."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does LaunchDarkly control who can change agent behavior?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AgentControl uses the same access model as the rest of the platform. You scope permissions by project, environment, and resource, require approvals on production changes, and keep a record of every action in the audit log."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can LaunchDarkly enforce different rules for different users or regions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Targeting rules let you serve different agent configurations depending on geography, entitlement, customer tier, or any other context attribute. This lets agents behave differently where regulations or contracts require it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast can we stop an agent that's behaving badly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Within seconds. You can revert to a previous configuration, disable a variation, or cut traffic to an agent without a redeployment. Guarded rollouts can also trigger rollback automatically when a metric threshold is breached."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we use LaunchDarkly alongside our existing AI governance tooling?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. LaunchDarkly is the runtime control and enforcement layer. It works alongside your model risk documentation, evaluation frameworks, and policy tooling by giving you a way to apply (and help prove) those policies where your agents actually run."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>

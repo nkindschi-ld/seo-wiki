@@ -3857,3 +3857,10 @@ serving Markdown to agents, content freshness, Reddit/UGC); the Mintlify
 benchmark; oversized-page splits; the 64 pages with no H1. Open
 verification items: the Xu category range (18 of 19 inside 85.9-94.8%?)
 against the PDF.
+
+## [2026-11-18] query | "Best practices for using content negotiation to serve AI agents Markdown instead of HTML"
+Answered from [[technical-seo-audit-checklist]] §5, [[llms-txt]] (implementation checklist + Conflicting Evidence), [[evilmartians-which-ai-reads-your-site-2026]], [[punturo-markdown-llm-bot-traffic-rct-2026]], [[withgauge-serve-markdown-to-ai-agents-2026]]. Gap noted: wiki has no guidance on `Vary: Accept` / CDN caching or q-value handling (general HTTP practice, not sourced). Reinforces lint finding that "serving Markdown to agents" lacks its own playbook page; offered to file the answer as one.
+
+## [2026-11-19] query | "Write schema (incl. FAQPage) for platform-architecture, agent-integrations, platform, ai-agent-governance, ai-evaluation"
+Used [[structured-data-and-ai-search]] (FAQPage only as a mirror of visible Q&A; no citation lift promised) via the schema-writer skill. All 5 graphs pass validate.py. Output in `schema-output-2026-11-19/`. Flagged: the Prismic `schema` field isn't rendered by the marketing template (seen on two pages), and /how-it-works/platform/ FAQ Q1 shows Q2's answer.
+
