@@ -12,6 +12,12 @@ carry evidence instead of general SEO folklore. That's the whole point: when
 someone asks "does X work?", the useful answer is what the evidence says,
 how strong it is, and where it disagrees.
 
+Most people asking are not SEO specialists: writers, PMs, marketers who
+want to know what to do. So the default answer is short and plain, and the
+full evidence breakdown is there on request (see "Pick the depth" below).
+Do the careful reading either way; the depth setting changes only how much
+of it goes into the reply.
+
 {{BUILD_INFO}}
 
 ## What's in `references/`
@@ -51,24 +57,72 @@ how strong it is, and where it disagrees.
    headings first (`bash scripts/page.sh slug | grep -n '^#'`), then read
    the sections that match the question, plus any Conflicting Evidence or
    checklist section.
-4. **Answer with the evidence.** Lead with the direct answer, then the
-   support. Name the studies behind key claims and how strong they are
-   (study size, vendor data vs. independent, official Google statement vs.
-   practitioner opinion), since the wiki tracks that and readers need it to
-   judge a claim. If the evidence is about a different engine or context
-   than the one asked about (Google data for a ChatGPT question, say), say
-   so rather than letting it stand in silently.
-5. **Surface disagreement.** If a page has a Conflicting Evidence section
-   that touches the question, say so and give the current best guess the
-   page records. Don't flatten an open question into a confident answer.
-6. **Cite.** List the wiki pages you used by title (from `page-map.md`),
-   and give the original source URL from the Citation line when the reader
-   will want to check or quote it. Pages carry an `updated:` date and
-   sources a `date_published:`; mention dates when recency matters (AI
-   search changes fast, and older findings may be superseded).
+4. **Weigh it before you write.** Note how strong the support is (study
+   size, vendor data vs. independent, official Google statement vs.
+   practitioner opinion), whether a Conflicting Evidence section touches
+   the question, and whether the evidence is about a different engine or
+   context than the one asked about (Google data for a ChatGPT question,
+   say). Both answer depths depend on this; they differ only in how much
+   of it they show.
+5. **Pick the depth and write the answer** (next section).
 
-For "give me a checklist / how do I do X" requests, start from the matching
-playbook and adapt it to the reader's situation rather than pasting it.
+## Pick the depth
+
+**Deep** when any of these hold:
+- the arguments start with `deep` (e.g. `/seo-wiki deep does llms.txt work?`);
+- the person asks for the evidence, the studies, the research, sources,
+  methodology, "the full breakdown", or how strong a claim is;
+- your own instructions or preferences say to always answer this skill in
+  deep mode.
+
+**Short** otherwise. That's the default.
+
+### Short answer (default)
+
+Write for a smart reader who doesn't work in SEO. Aim for about 150 words;
+go a little over only when the question really needs it.
+
+1. **The answer**, in 2–4 plain sentences. No unexplained jargon: say "the
+   AI summary at the top of Google results" the first time rather than
+   just "AIO", and skip acronyms the reader doesn't need.
+2. **What to do**, as 2–4 bullets, if the question has a practical side.
+3. **How sure we are**, in a few words: "well supported", "mixed
+   evidence", "mostly practitioner opinion", "only one vendor study". If
+   sources disagree, or the evidence is about a different engine than the
+   one asked about, one sentence says so. Don't dress an open question up
+   as settled just because the answer is short.
+4. **Sources**: 1–3 links, the wiki page titles or original URLs the
+   reader is most likely to want. No study-by-study rundown.
+5. **One closing line** offering more: "Want the full evidence breakdown?"
+
+Leave out study sizes, methods, vendor-vs-independent notes and page
+dates unless one of them changes the answer (for example, a finding that
+is old enough to be superseded).
+
+### Deep answer
+
+For SEO practitioners and anyone who wants to check the reasoning.
+
+- Lead with the direct answer, then the support. Name the studies behind
+  key claims and how strong they are (study size, vendor data vs.
+  independent, official Google statement vs. practitioner opinion).
+- If the evidence is about a different engine or context than the one
+  asked about, say so rather than letting it stand in silently.
+- If a page has a Conflicting Evidence section that touches the question,
+  lay out the disagreement and give the current best guess the page
+  records.
+- List the wiki pages you used by title (from `page-map.md`) and give the
+  original source URL from the Citation line for claims the reader may
+  want to check or quote. Pages carry an `updated:` date and sources a
+  `date_published:`; mention dates when recency matters (AI search changes
+  fast, and older findings may be superseded).
+
+### Checklists and how-tos
+
+For "give me a checklist / how do I do X" requests, start from the
+matching playbook and adapt it to the reader's situation rather than
+pasting it. In short mode, give the 5–7 steps that matter most and offer
+the full playbook; in deep mode, give the adapted playbook in full.
 
 ## When the wiki doesn't cover it
 
@@ -78,7 +132,8 @@ An index grep with a few synonyms plus one full-text search
 the topic, say plainly that the wiki doesn't cover it, then answer from
 general knowledge and label that part as not from the wiki, so the reader
 knows which parts are backed by the research. If the wiki has something
-closely related, mention it briefly at the end.
+closely related, mention it briefly at the end. The same short/deep
+choice applies to that answer.
 
 ## Things to keep in mind
 

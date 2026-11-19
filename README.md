@@ -190,6 +190,15 @@ claude.ai's 200-file limit). It leaves out `raw/`, `drafts/`, `research-digests/
 `wiki/log.md` and `CLAUDE.md`. The skill's instructions live in
 `share/seo-wiki/SKILL.md`.
 
+By default the skill gives a short, plain-language answer for readers who
+don't work in SEO. For the full evidence breakdown (studies, strength of
+evidence, conflicting findings), start the request with `deep`
+(`/seo-wiki deep does llms.txt work?`) or ask for the evidence. To get deep
+answers every time, add a line to your own instructions: "When I use the
+seo-wiki skill, always answer in deep mode." In Claude Code that goes in
+`~/.claude/CLAUDE.md`; in claude.ai and Claude Desktop, in
+Settings → Profile preferences.
+
 **First time:**
 
 1. Build the zip: `./scripts/build-shared-skill.sh` (writes `dist/seo-wiki.zip`).
