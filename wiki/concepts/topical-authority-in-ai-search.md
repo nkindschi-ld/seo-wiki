@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-11-06
+updated: 2026-11-12
 ---
 
 # Topical Authority in AI Search
@@ -64,7 +64,7 @@ consistent with AirOps' "focus beats comprehensive coverage" finding in
 [[airops-fan-out-effect-2026]] and the 2–3-category concentration advice
 below.
 
-## Leadership is sticky once earned (the 5-point moat)
+## Leadership is sticky once earned
 
 Once a brand becomes a clear owner, the position is durable: owners held
 #1 in **90.4%** of month-over-month comparisons. The margin is what
@@ -73,10 +73,16 @@ matters —
 - Topics where the leader **held**: median lead **2.9 points**.
 - Topics where the leader **flipped**: median lead **1.3 points**.
 
-So roughly a **5-percentage-point mention-share margin** is the
-stability threshold; narrower leads churn month to month. This makes
-early topic ownership a compounding, defensible asset — reaching the
-moat first is worth more than incremental gains once contested. Contrast
+So wider leads are more durable, but even leads that held were
+narrow: the median was under 3 points. The study reports no measured
+stability threshold. Its 5-point figure is part of the *definition* of
+a clear owner (≥5-point lead over the runner-up, plus ≥4 of 5
+prompts), not a margin above which leads stop flipping. This still
+makes early topic ownership a compounding, defensible asset — reaching
+ownership first is worth more than incremental gains once contested.
+_Corrected 2026-11-12: this section previously called ~5 points the
+stability threshold, misreading the owner definition in
+[[semrush-chatgpt-topic-authority-study]]._ Contrast
 with the broader-web volatility figures (40–60% month-to-month
 citation-source churn in
 [[sel-what-is-generative-engine-optimization-geo-2026]]): *source*
@@ -140,7 +146,8 @@ See [[geo-content-optimization-tactics]] and
 compete at the **topical-cluster** level, not per prompt; pick **2–3
 categories where you already have signal** rather than spreading thin;
 prefer winnable lower-demand subtopics over contested head terms; and
-push for a ≥5-point mention-share margin to reach the durable-owner moat.
+push past the clear-owner bar (≥5-point mention-share lead in ≥4 of 5
+prompts) and keep widening the margin, since narrower leads flip more often.
 
 ## See also
 

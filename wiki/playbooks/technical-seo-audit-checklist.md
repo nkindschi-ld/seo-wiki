@@ -1,17 +1,8 @@
 ---
 type: playbook
 tags: [seo, aeo]
-updated: 2026-11-09
+updated: 2026-11-12
 ---
-
-## Priority Framework
-
-Per [[ahrefs-beginner-guide-technical-seo]], not all technical work is
-equally valuable: content and links typically provide better returns than
-technical optimization for most sites. Focus on **high-impact projects**
-(indexing, link recovery) before medium-priority work (Core Web Vitals,
-hreflang). The checklist below is tiered accordingly.
-
 
 # Technical SEO Audit Checklist
 
@@ -22,6 +13,14 @@ prerequisite for both classic search ranking and AI-generated-answer
 citation (see [[how-google-search-works]] and
 [[generative-engine-optimization]]'s "retrieval eligibility"). Based on
 [[semrush-technical-seo-checklist]] and [[google-search-fundamentals-get-started]].
+
+## Priority Framework
+
+Per [[ahrefs-beginner-guide-technical-seo]], not all technical work is
+equally valuable: content and links typically provide better returns than
+technical optimization for most sites. Focus on **high-impact projects**
+(indexing, link recovery) before medium-priority work (Core Web Vitals,
+hreflang). The checklist below is tiered accordingly.
 
 ## 1. Crawling and indexing
 
@@ -43,7 +42,9 @@ citation (see [[how-google-search-works]] and
   gets added to the index). Use robots.txt strategically to block
   duplicate, temporary, or low-priority pages to preserve crawl budget.
   Don't rely on robots.txt to prevent indexing — use the `noindex` meta
-  tag or login requirements instead.
+  tag or login requirements instead. For the line-by-line audit, see
+  [[robots-txt-audit-checklist]]; for the crawl-vs-index reasoning and
+  AI user agents, see [[robots-txt-strategy]].
 - **Submit a sitemap** (especially important if content changes
   frequently or pages aren't easily discoverable through internal links).
   Per [[google-sitemaps-overview]], create sitemaps if your site has 500+
@@ -54,7 +55,8 @@ citation (see [[how-google-search-works]] and
   discovery tool, not an indexing guarantee. In Search Console, verify:
   (1) sitemap is submitted and processed, (2) GSC Sitemaps report shows
   count of URLs discovered, (3) monitor for errors/warnings, (4) track
-  indexation status (crawled, indexed, excluded).
+  indexation status (crawled, indexed, excluded). To audit what belongs
+  in the sitemap, see [[xml-sitemap-optimization-checklist]].
 - **Fix redirect chains** (A→B→C) **and loops** (circular redirects).
 - **Use the right redirect type** ([[sej-google-redirects-ranking-signals-2026]], Google, 2026-11-05):
   - **301 (or 308)** for permanent moves. It's the only type that tells
@@ -113,8 +115,9 @@ See [[link-and-anchor-text-best-practices]] for the full internal-
 linking playbook (site structure, anchor text, cornerstone content,
 audit workflow). Quick-reference for this audit:
 
-- [ ] Pyramid site structure, every important page within ~3-4 clicks
-      of the homepage.
+- [ ] Pyramid site structure, every important page within ~3 clicks
+      of the homepage (Semrush's checklist allows 3-4; see
+      [[link-and-anchor-text-best-practices]]).
 - [ ] Breadcrumbs present and accurate.
 - [ ] No orphan pages (zero inbound internal links).
 - [ ] Descriptive anchor text, not "click here"/"read more."
@@ -419,6 +422,12 @@ audit workflow). Quick-reference for this audit:
   indexing.
 - [[how-google-search-works]] — the crawl/index/serve pipeline this
   checklist's crawling/indexing section is auditing against.
+- [[robots-txt-audit-checklist]] — the detailed robots.txt audit behind
+  §1's robots.txt item.
+- [[robots-txt-strategy]] — crawl control vs. indexing control, and the
+  AI user-agent allow/disallow template.
+- [[xml-sitemap-optimization-checklist]] — what to include in and
+  exclude from sitemaps, behind §1's sitemap item.
 - [[link-and-anchor-text-best-practices]] — full internal-linking
   playbook referenced in §3.
 - [[image-seo-checklist]] — image-specific technical requirements

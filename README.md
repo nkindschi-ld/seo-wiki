@@ -177,6 +177,44 @@ The `wiki/` folder is a complete Obsidian vault. When you open it:
 - **Search**: Full-text search across all pages
 - **Optional plugins**: Install [Dataview](https://blacksmithgu.github.io/obsidian-dataview/) to query frontmatter metadata (not required)
 
+## Sharing the wiki as a skill
+
+Teammates without GitHub use the wiki through the `seo-wiki` skill on
+claude.ai, which works in claude.ai chat, Claude Desktop and Claude Code.
+The skill holds a snapshot of the wiki pages, so refresh it after you
+update the wiki.
+
+The snapshot includes concept, playbook and source pages, the index and
+the timeline (source pages bundled by first letter to stay under
+claude.ai's 200-file limit). It leaves out `raw/`, `drafts/`, `research-digests/`,
+`wiki/log.md` and `CLAUDE.md`. The skill's instructions live in
+`share/seo-wiki/SKILL.md`.
+
+By default the skill gives a short, plain-language answer for readers who
+don't work in SEO. For the full evidence breakdown (studies, strength of
+evidence, conflicting findings), start the request with `deep`
+(`/seo-wiki deep does llms.txt work?`) or ask for the evidence. To get deep
+answers every time, add a line to your own instructions: "When I use the
+seo-wiki skill, always answer in deep mode." In Claude Code that goes in
+`~/.claude/CLAUDE.md`; in claude.ai and Claude Desktop, in
+Settings → Profile preferences.
+
+**First time:**
+
+1. Build the zip: `./scripts/build-shared-skill.sh` (writes `dist/seo-wiki.zip`).
+2. On claude.ai, upload `dist/seo-wiki.zip` in your Skills settings.
+3. Share the skill with teammates or a group. They add it once.
+
+**After each wiki update:**
+
+1. Run `./scripts/build-shared-skill.sh` again.
+2. Upload the new zip as an update to the existing `seo-wiki` skill.
+   People you've shared it with get the new version the next time they
+   use it.
+
+The build date and wiki commit are stamped into the skill, so Claude can
+tell readers how current the snapshot is. `dist/` is ignored by git.
+
 ## Tags
 
 Pages are tagged `[seo]`, `[aeo]`, or `[seo, aeo]` to indicate scope:

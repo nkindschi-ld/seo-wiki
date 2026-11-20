@@ -1,8 +1,15 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-11-06
+updated: 2026-11-12
 ---
+
+Why / when to use this: image search (Google Images tab, Discover, and
+image results embedded in text SERPs) is a distinct discovery/ranking
+surface with its own technical requirements — use this alongside
+[[technical-seo-audit-checklist]] (general crawlability) and
+[[xml-sitemap-optimization-checklist]] (sitemap strategy) when auditing
+a site's images or launching an image-heavy page.
 
 ## File type selection
 
@@ -13,13 +20,6 @@ updated: 2026-11-06
   loss; minify and enable GZIP compression (verify with
   checkgzipcompression.com).
 - **WebP/AVIF**: superior compression on supporting browsers.
-
-Why / when to use this: image search (Google Images tab, Discover, and
-image results embedded in text SERPs) is a distinct discovery/ranking
-surface with its own technical requirements — use this alongside
-[[technical-seo-audit-checklist]] (general crawlability) and
-[[xml-sitemap-optimization-checklist]] (sitemap strategy) when auditing
-a site's images or launching an image-heavy page.
 
 ## Markup requirements
 
@@ -36,8 +36,11 @@ a site's images or launching an image-heavy page.
 - Submit an **image sitemap** to surface images Google might not
   otherwise crawl, including images served from a separate CDN domain
   (see [[xml-sitemap-optimization-checklist]] for general sitemap
-  hygiene). Use the `<image:loc>`, `<image:title>`, and
-  `<image:caption>` tags; Yoast SEO auto-generates these for WordPress.
+  hygiene). Use `<image:image>` with `<image:loc>`; Yoast SEO
+  auto-generates image sitemaps for WordPress. _Corrected 2026-11-12:
+  the sources recommended `<image:title>` and `<image:caption>`, which
+  Google deprecated in 2022 and no longer uses; see
+  [Google's image sitemap docs](https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps)._
 - Position images near the text they're relevant to, on a page
   topically aligned with the image subject — context is part of how
   Google's computer-vision + page-context system understands the image.
@@ -141,7 +144,7 @@ a site's images or launching an image-heavy page.
   media signals sit among classic ranking factors.
 - [[technical-seo-audit-checklist]] — the broader audit this checklist
   is the image-specific section of.
+- [[accessibility-tree-audit-for-ai-agents]] — the agent-facing alt-text rules (empty alt on decorative images, spatial context on meaningful ones)
 
 See [[google-images-seo]] and [[ahrefs-image-seo]] for the full source
 writeups.
-- [[accessibility-tree-audit-for-ai-agents]] — the agent-facing alt-text rules (empty alt on decorative images, spatial context on meaningful ones)

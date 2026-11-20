@@ -1,0 +1,166 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://launchdarkly.com/how-it-works/agent-integrations/#webpage",
+      "url": "https://launchdarkly.com/how-it-works/agent-integrations/",
+      "name": "Agent Integrations: MCP, CLI \u0026 Agent Skills | LaunchDarkly",
+      "description": "Use the LaunchDarkly MCP server, CLI, and Agent Skills in Claude Code, Cursor, and Copilot to manage flags and AI agents. Get started for free.",
+      "isPartOf": {
+        "@id": "https://launchdarkly.com/#website"
+      },
+      "about": [
+        {
+          "@id": "https://launchdarkly.com/#software"
+        },
+        {
+          "@type": "Thing",
+          "name": "Model Context Protocol",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q133436854",
+            "https://en.wikipedia.org/wiki/Model_Context_Protocol"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "AI agent",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q132451509",
+            "https://en.wikipedia.org/wiki/AI_agent"
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "Thing",
+          "name": "Claude Code",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q138457287",
+            "https://en.wikipedia.org/wiki/Claude_Code"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "Cursor",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q131980386",
+            "https://en.wikipedia.org/wiki/Cursor_(code_editor)"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "VS Code",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q19841877",
+            "https://en.wikipedia.org/wiki/Visual_Studio_Code"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "CI/CD",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q28136854",
+            "https://en.wikipedia.org/wiki/CI/CD"
+          ]
+        }
+      ],
+      "mainEntity": {
+        "@id": "https://launchdarkly.com/how-it-works/agent-integrations/#faq"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://launchdarkly.com/#software",
+      "name": "LaunchDarkly",
+      "applicationCategory": "DeveloperApplication",
+      "publisher": {
+        "@id": "https://launchdarkly.com/#organization"
+      },
+      "sameAs": [
+        "https://www.g2.com/products/launchdarkly/reviews",
+        "https://www.trustradius.com/products/launchdarkly",
+        "https://www.peerspot.com/products/launchdarkly-reviews"
+      ],
+      "featureList": [
+        "MCP server",
+        "CLI",
+        "IDE integration",
+        "Agent Skills",
+        "Release Autopilot"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://launchdarkly.com/how-it-works/agent-integrations/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does LaunchDarkly support agent integrations and workflows?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. LaunchDarkly support agents through MCP (Model Context Protocol), CLI, and IDE integrations, allowing AI assistants to interact with LaunchDarkly directly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does LaunchDarkly have an MCP server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. LaunchDarkly provides an MCP server that enables AI assistants like Claude Code and Cursor to manage feature flags, control releases, and run workflows using natural language."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use LaunchDarkly without leaving my editor or terminal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. LaunchDarkly can be used entirely from your editor, terminal, or AI assistant. You can manage flags, control rollouts, and run workflows without switching to the LaunchDarkly app."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What can AI agents do with LaunchDarkly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI agents can toggle feature flags, control rollout exposure, update targeting rules, automate workflows, and investigate issues using LaunchDarkly tools and skills."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does LaunchDarkly work with AI-generated code?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LaunchDarkly allows teams to more confidently release AI-generated changes, monitor their impact in real time, and control how those changes behave in production."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is LaunchDarkly in the context of AI workflows?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LaunchDarkly is a runtime control layer that allows developers and AI agents to manage and control changes in production in real time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get started using LaunchDarkly with AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can install LaunchDarkly with a single prompt: Onboard me to LaunchDarkly. Start by installing the onboarding skill: `npx skills add launchdarkly/agent-skills --skill onboarding -y`. source-launchdarkly This installs the tools and skills needed to start using LaunchDarkly from your agent workflow."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What tools does LaunchDarkly work with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LaunchDarkly works with tools like Claude Code, Cursor, VS Code, terminal workflows, 25+ SDKs, and a broad range of CI/CD and observability tools. View our integrations."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>

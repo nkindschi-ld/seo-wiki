@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-09-10
+updated: 2026-11-12
 ---
 
 # XML Sitemap Optimization Checklist
@@ -32,7 +32,7 @@ Per [[oncrawl-xml-sitemap-optimization]]. Ensure your sitemaps maximize crawl ef
 ### 4. Exclude canonicalized URLs
 - [ ] Don't sitemap pages with `rel="canonical"` pointing elsewhere
 - [ ] Sitemap only the canonical version of URL clusters
-- [ ] Remove self-referential canonicals or redirect chains
+- [ ] Include only URLs whose canonical is self-referential (the page canonicalizes to itself); remove URLs that sit in redirect chains. _Corrected 2026-11-12: an earlier version said to remove self-referential canonicals, which contradicts the item above._
 - [ ] Let Google discover alternate versions via link-following; sitemaps should point to canonical targets only
 
 ### 5. Follow XML protocol

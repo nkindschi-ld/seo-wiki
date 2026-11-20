@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [aeo]
-updated: 2026-11-06
+updated: 2026-11-12
 ---
 
 # AI Overview Grounding & Claim Fidelity
@@ -16,9 +16,16 @@ AIO represents it faithfully, and what that means for a publisher whose
 name is attached to a claim.
 
 Primary source: [[xu-measuring-google-ai-overviews-2026]] — 98,020
-atomic claims extracted from 7,583 AIOs and verified against the full
-text of every reference the AIO itself cites (Mar–Apr 2026, 55,393
-trending queries).
+atomic claims extracted from the 7,491 verifiable AIOs (of 7,583
+collected) and verified against the full text of every reference the
+AIO itself cites by a human-validated LLM pipeline (95.6% weighted
+accuracy). Mar–Apr 2026, 55,393 trending queries.
+
+This is a different failure from the "citation-without-recommendation"
+decoupling in [[listicles-in-ai-search]] (cited but not recommended) and
+the citations-vs-mentions split in [[ai-citation-landscape]]: here the
+citation *exists and points to you*, but the sentence it supports
+misstates or omits what your page said.
 
 ## The headline: ~89% grounded, ~11% not
 
@@ -79,6 +86,10 @@ which is consistent with Google applying stricter grounding under its
 YMYL (Your Money or Your Life) content policy — the same policy family
 behind [[e-e-a-t-and-page-quality]].
 
+At the raw (pre-normalization) low end: Jobs & Education 76.85%, Autos
+80.65%, Sports 81.85%, with Climate at 48.23% as an artifact (next
+section).
+
 After normalizing out real-time sub-populations (see next section),
 **18 of 19 categories sit inside an 85.9%–94.8% band**. The residual
 gradient tracks how much authoritative editorial text exists on a topic:
@@ -96,8 +107,10 @@ Omitted or Incorrect even though Google was accurate at generation time.
 
 The same pattern appears at smaller scale in Jobs & Education (school
 closures), Technology (weather), and Shopping (trending products).
-Normalizing them out: Technology 76.9% → 89.41%, Shopping → 85.90%,
-Jobs & Education → 87.71%.
+Normalizing them out: Jobs & Education 76.9% → 87.71%, Technology →
+89.41%, Shopping → 85.90%.
+_Corrected 2026-11-12: the 76.9% raw score was previously attached to
+Technology; the source notes assign 76.85% to Jobs & Education._
 
 **Generalizable lesson for anyone auditing AI answers**: any
 verification pipeline that re-crawls sources after the fact will
@@ -111,7 +124,7 @@ Two null results that matter more than they look:
 - **Activation rate ↔ fidelity: independent** (p = 0.192). A category
   where AIOs rarely appear is not a category where the AIOs that do
   appear are safer.
-- **Source quality ↔ fidelity: largely independent.** AIO-cited domains
+- **Source quality ↔ fidelity: largely independent** (r ≈ 0.045). AIO-cited domains
   are measurably *more* credible than the co-displayed organic results
   (mean PC1 0.732 vs. 0.645 — see
   [[ai-citation-landscape]]), and it doesn't reduce the unsupported-claim
@@ -143,15 +156,19 @@ brand-specific earned-media errors) addresses only the first kind.
 
 1. **Citation ≠ accurate representation.** Track what the AIO *says*
    about you, not just whether it links you. See the sentiment-and-
-   correction workflow in [[geo-content-optimization-tactics]].
+   correction workflow in [[geo-content-optimization-tactics]] and the
+   sentiment-monitoring guidance in
+   [[similarweb-how-to-win-the-race-for-gen-ai-search-2026]].
 2. **Unambiguous, literally-stated facts are the defensible unit.**
    The Vague (4.36%) and Ambiguous (1.39%) labels are both failures of
    source text, not of the model: Vague means the claim was inferable
    but not literally stated, Ambiguous means two cited sources
    disagreed. Content that states facts explicitly and in one place is
    less likely to be paraphrased into either bucket — which is the
-   grounding-side argument for the chunk-level structuring tactics in
-   [[geo-content-optimization-tactics]].
+   grounding-side argument for the chunk-level ("Fraggle") and
+   answer-first tactics in [[geo-content-optimization-tactics]]. State
+   key facts self-containedly, without relying on surrounding context
+   the AIO won't carry over.
 3. **Conflicting with your own category's consensus is risky.** The
    Ambiguous label fires when cited sources contradict each other; a
    page that disagrees with the rest of the citation pool can end up

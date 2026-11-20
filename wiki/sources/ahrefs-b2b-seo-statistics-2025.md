@@ -55,6 +55,11 @@ its original source in the raw file.)
   option — reinforces why early-stage visibility (getting on the
   shortlist at all, well before a formal RFP) matters more than
   late-funnel conversion tactics in B2B specifically.
+  _Update 2026-11-19: these figures appear to come second-hand from
+  6sense's earlier Buyer Experience reports. The primary 2026 edition is
+  now filed as [[6sense-b2b-buyer-experience-report-2026]] (81.5% of
+  pre-contact favorites win, ~10-person groups, 10.3-month cycles) and
+  synthesized in [[b2b-buyer-journey-and-ai-search]]._
 
 ## What this updated
 

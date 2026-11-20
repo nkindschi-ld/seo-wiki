@@ -38,8 +38,11 @@ alternatives, use case, purchase). Spans **220K+ domains, 50K+ brands,
   directional win-rates, **not** correlation coefficients.)
 - **Leadership is sticky once earned.** Clear owners held #1 in **90.4%**
   of month-over-month comparisons. Held leads had a median margin of
-  **2.9 points**; flipped leads a median of **1.3 points** — a ~5-point
-  margin is roughly the stability threshold.
+  **2.9 points**; flipped leads a median of **1.3 points**, so wider
+  leads hold more often. The study reports no stability threshold; its
+  5-point figure is the owner *definition* above. _Corrected 2026-11-12:
+  this bullet previously called ~5 points "roughly the stability
+  threshold", which the source doesn't say._
 - **Mentions ≠ citations.** Only **21%** of the most-cited domains in a
   category were also the most-mentioned brand; the two correlate
   *slightly negatively* (**-0.229**). (The related **74%**-of-users-pick-

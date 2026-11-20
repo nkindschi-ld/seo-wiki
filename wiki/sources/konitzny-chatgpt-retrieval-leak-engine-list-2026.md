@@ -109,9 +109,13 @@ existing empirical findings: it supplies the engine-selection stage that
 explains *why* the `site:` operators and fan-out escalation in
 [[lilyray-chatgpt-fanout-queries-2026]] look the way they do. The multi-backend
 finding is new territory rather than a contradiction — the wiki carried no page
-asserting a Bing-only ChatGPT backend. The Yelp/Foursquare local finding sits
-beside, not against, the Google Maps reliance documented for AI Overviews in
-[[ai-citation-landscape]] (different engine, different provider).
+asserting a Bing-only ChatGPT backend. The Yelp/Foursquare local finding does
+**conflict** with the Google Maps reliance documented for ChatGPT in
+[[ai-citation-landscape]] (Muck Rack: 188 Maps citations per 1,000 local
+queries). Same engine, different provider. Logged as unresolved on
+[[chatgpt-vertical-retrieval-engines]], with a possible SerpAPI reconciliation.
+_Corrected 2026-11-12: this paragraph previously called the Maps data AI
+Overviews data and the finding "not against" it._
 
 **Gap surfaced, not filled:** local/business AI visibility via Yelp and
 Foursquare listing accuracy is actionable and has no playbook in this wiki. One

@@ -1,0 +1,175 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://launchdarkly.com/how-it-works/platform-architecture/#webpage",
+      "url": "https://launchdarkly.com/how-it-works/platform-architecture/",
+      "name": "LaunchDarkly Architecture: SDKs \u0026 Streaming | LaunchDarkly",
+      "description": "See how LaunchDarkly's architecture works: SDKs in your app runtime and server-sent event streaming that delivers flag changes everywhere within 200ms.",
+      "isPartOf": {
+        "@id": "https://launchdarkly.com/#website"
+      },
+      "about": [
+        {
+          "@id": "https://launchdarkly.com/#software"
+        },
+        {
+          "@type": "Thing",
+          "name": "CDN",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q72588",
+            "https://en.wikipedia.org/wiki/Content_delivery_network"
+          ]
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "Thing",
+          "name": "SDK",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q467707",
+            "https://en.wikipedia.org/wiki/Software_development_kit"
+          ]
+        },
+        {
+          "@type": "Thing",
+          "name": "FedRAMP",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q21070748",
+            "https://en.wikipedia.org/wiki/FedRAMP"
+          ]
+        }
+      ],
+      "mainEntity": {
+        "@id": "https://launchdarkly.com/how-it-works/platform-architecture/#faq"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://launchdarkly.com/#software",
+      "name": "LaunchDarkly",
+      "applicationCategory": "DeveloperApplication",
+      "publisher": {
+        "@id": "https://launchdarkly.com/#organization"
+      },
+      "sameAs": [
+        "https://www.g2.com/products/launchdarkly/reviews",
+        "https://www.trustradius.com/products/launchdarkly",
+        "https://www.peerspot.com/products/launchdarkly-reviews"
+      ],
+      "featureList": [
+        "Multi-region failover",
+        "Polling fallback",
+        "CDN backup",
+        "Relay Proxy",
+        "Private attributes",
+        "Automated rollbacks"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://launchdarkly.com/how-it-works/platform-architecture/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Runtime Delivery Network?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Runtime Delivery Network is the global infrastructure LaunchDarkly runs so you don't have to. It's our purpose-built architecture for runtime control. Every app connects to the nearest point of presence, your changes stream to it in milliseconds, and multiple independent layers of protection help keep flags evaluating even when something goes wrong."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast do changes reach my applications?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SDKs initialize from CDN-served state in about 25ms, and changes typically reach SDKs running in streaming mode worldwide in under 200ms. When a release goes wrong, your kill switch reaches every connected app in moments, not on its next poll."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if my application can't reach LaunchDarkly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your flags keep evaluating even if your app can't reach LaunchDarkly. Our multi-layer architecture has six safety nets that back each other up, and each failsafe engages and recovers automatically: Multi-region failover: SDKs reconnect to another region automatically. Polling fallback: If streaming is unavailable, SDKs poll from our global CDN until it returns. CDN backup: Cold starts initialize from our global CDN, so a new app instance can boot from a last-known state. Relay Proxy or persistent store: Optionally, your apps can initialize from a local cache you run on your own network. Local copy: Running apps serve flags from memory; mobile apps from the device cache. Code defaults: If nothing is reachable, every flag serves its default as defined in code. When problems happen, your flags keep serving their last known values, and your app keeps running."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can users see my targeting rules in the browser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. End user devices receive only their evaluated flag values—never targeting rules or segment lists—and in JavaScript secure mode stops a user from requesting another user's flags. A user in DevTools sees only their own flag values, never your rules or who else gets what."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does LaunchDarkly work in regulated or air-gapped environments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. LaunchDarkly is a dedicated feature management platform with its own FedRAMP authorization, offers an EU instance and HIPAA support for eligible enterprise customers, and Relay Proxy's offline mode supports fully disconnected networks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does my backend have to send user data to LaunchDarkly to get a flag decision?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Your backend evaluates flags in-process, so it never sends user data to get a decision, and attributes you mark private never appear in analytics events."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do flag changes reach a browser tab or mobile app that's already open, without a refresh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. In streaming mode, a change typically reaches open sessions worldwide in under 200 milliseconds, without a poll or a reload."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "If flags change while an app is disconnected, does my app redownload the whole configuration when it reconnects?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It resumes from where it left off and receives only what changed, saving bandwidth and time. A flaky mobile network, or thousands of apps reconnecting at once after a network blip, doesn't turn into a flood of full downloads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I target audiences with millions of individual users?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. LaunchDarkly targets segments of millions of contexts on server and client SDKs, synced from the analytics and CDP tools you already use, and keeps membership current as your source data changes. Server-side, big segments read from your own store or the Relay Proxy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does LaunchDarkly slow my application down at startup or runtime?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Startup wait is under your control. Every flag returns the default you set in code, so your app can start without waiting on LaunchDarkly at all. Once running, SDKs evaluate from data already in memory, with no call to LaunchDarkly for each decision."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the LaunchDarkly SDK bloat my application's memory?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not in proportion to your users. Client-side SDKs hold only the current user's evaluated flag values, never your targeting rules. Server-side SDKs hold the rules for the flags their key receives, and you can filter a key's payload down to just the flags a service needs, so memory tracks what each service uses, not your whole flag catalog."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do flag changes need a restart or redeploy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Changes stream to running apps. Turning off a broken feature reaches running processes in moments, with no restart and no trip through your deploy pipeline."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>

@@ -72,6 +72,7 @@ scripts in `scripts/` parse these lines).
 - key: xi-an-jiaotong-university | name: Xi'an Jiaotong University / NUS (Xiaokui Xiao) | lane: academic | added: 2026-11-09 | evidence: https://arxiv.org/abs/2610.15382
 - key: maastricht-university | name: Maastricht University Law & Tech Lab | lane: academic | added: 2026-11-09 | evidence: https://arxiv.org/abs/2609.18729
 - key: university-of-texas-at-dallas | name: University of Texas at Dallas (Dokyun Lee et al.) | lane: academic | added: 2026-11-09 | evidence: https://arxiv.org/abs/2609.38946
+- key: indian-institute-of-science | name: Indian Institute of Science, Bangalore (Kriplani, Wang) | lane: academic | added: 2026-11-16 | evidence: https://arxiv.org/abs/2611.04005
 
 ## Caution
 - key: thedigitalbloom | name: The Digital Bloom | added: 2026-08-03 | reason: "reports" are secondary aggregations of other studies, with a provenance red flag (relabeled Profound's 680M figure as its own)

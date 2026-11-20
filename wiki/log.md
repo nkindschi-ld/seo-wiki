@@ -3746,3 +3746,126 @@ and a checklist item to [[seo-reporting]]: GA4 organic Funnel Exploration,
 three-way drop-off triage, saving it as a custom report, and pointers to Path
 Exploration and AI-referral segments. Filed as a section, not a new playbook,
 per the user. No conflicts.
+
+## [2026-11-10] query | "Write meta tags for 42 launchdarkly.com pages (Google Sheet), using GSC data"
+Used [[writing-meta-tags]] and the `seo-meta-tags` skill. All 42 pages served
+the same sitewide fallback meta description. Wrote a unique title and
+description for each, using 90-day GSC queries (useful for about 20 pages with
+500+ impressions) and Semrush volume checks. Output was delivered as a CSV
+outside the wiki, so no wiki page was filed. No conflicts.
+
+## [2026-11-12] lint | Full-wiki lint: structure clean; 78 content findings (8 risky-advice groups, misread stats, 11 unrecorded/tipped conflicts, merge leftovers, 2 missing concept pages)
+Scope: 47 concepts, 46 playbooks, 217 sources. First full lint since
+2026-11-04, covering the 11-06 parallel-wiki merge and 26 new sources.
+Full findings with line numbers: `docs/lint/2026-11-12-lint.md`.
+
+- **Structure clean**: no broken links, orphans (except the documented
+  placeholder), index gaps or frontmatter errors. One dated study,
+  [[diggity-empire-flippers-affiliate-niches]], is missing from the
+  timeline. 64 pages have no H1 title.
+- **Risky advice**: [[robots-txt-audit-checklist]] (robots.txt + noindex,
+  block JS, crawl-budget inversion, retired GSC tools),
+  [[xml-sitemap-optimization-checklist]] (remove self-canonicals),
+  [[controlling-ai-feature-inclusion]] and [[robots-txt-strategy]]
+  (robots.txt "removes from Search", HTTPS item, Google-Extended as a user
+  agent, missing Claude-SearchBot/Claude-User), and retired crawler names.
+- **Misread data**: the 5-point "stability threshold" in
+  [[topical-authority-in-ai-search]] is the source's ownership definition,
+  not a finding. The Google Maps local-citation data is attributed to AI
+  Overviews on three pages; it's ChatGPT, which makes the leak's Yelp/
+  Foursquare finding an unrecorded conflict.
+- **Conflicts to record or update**: word-count targets vs. density
+  evidence; stats/quotes tactics vs. C-SEO Bench; the 2024 static-LLM
+  taxonomy; DerivateX missing from the ranking-prerequisite CE; Nozzle's
+  54.2% AIO prevalence; ora corroborating the August 2026 fan-out shift;
+  99.99% vs. 2-6% owned citations; distribute vs. concentrate placements.
+- **Missing pages**: YouTube in AI search, and serving Markdown / content
+  negotiation, plus content freshness and Reddit/UGC (still open from
+  11-04).
+- **Needs the user**: which LaunchDarkly messaging is current
+  ("runtime control layer" + CodeControl/AgentControl vs. "runtime control
+  plane"; 48% vs. 43% fewer incidents).
+
+Reported, not yet fixed.
+
+## [2026-11-12] conflict | ChatGPT local results — Google Maps (Muck Rack) vs. Yelp/Foursquare-only registry (Konitzny leak)
+Found during the 2026-11-12 lint. [[ai-citation-landscape]] had attributed
+Muck Rack's Google Maps local-citation data (188 per 1,000 local queries)
+to AI Overviews and called the leak "not a conflict". It's ChatGPT data,
+so it contradicts the leaked registry's Yelp/Foursquare-only local path.
+Recorded as unresolved on [[chatgpt-vertical-retrieval-engines]], with a
+pointer from [[ai-citation-landscape]]. Possible reconciliation (not tested
+by either source): Maps results arrive through the SerpAPI Google-SERP
+backend.
+
+## [2026-11-12] lint | Fixes applied: risky advice, misread data, merge leftovers, missing links (groups A, B, D, E)
+User go-ahead for groups A, B, D and E of `docs/lint/2026-11-12-lint.md`.
+45 pages changed. Each correction carries an inline "_Corrected
+2026-11-12_" note, and claims from cited sources keep their citations.
+Items resting on outside knowledge were checked against official docs
+(Google Search Central, Search Console and GA help, schema.org,
+Anthropic's crawler article), and those URLs are cited inline.
+
+- **Risky advice**: [[robots-txt-audit-checklist]] rewritten
+  (noindex-only for UGC, pagination and render resources kept crawlable,
+  crawl budget framed as a large-site concern, 403 note fixed, current
+  GSC report names, duplicates merged). Also fixed
+  [[xml-sitemap-optimization-checklist]], [[controlling-ai-feature-inclusion]]
+  and [[robots-txt-strategy]] (HTTPS item removed; Google-Extended as a
+  control token; Claude-SearchBot/Claude-User added, with an
+  allow-search/block-training template), plus current crawler names in
+  [[geo-content-optimization-tactics]]. On [[entity-based-seo-implementation]],
+  "AI doesn't crawl" and Freebase are gone. `mentions` replaces `mention`,
+  image-sitemap title/caption tags are removed, and the GA4 AI-referrer
+  regex and the PDF-download tracking line are updated.
+- **Misread data**: the 5-point "stability threshold" is reworded as
+  median margins (2.9 vs. 1.3 pts) on [[topical-authority-in-ai-search]],
+  [[geo-content-optimization-tactics]], [[semrush-chatgpt-topic-authority-study]]
+  and [[ai-visibility-correlation-factors]]. Also fixed: the Google Maps
+  attribution (see conflict above); the portability/concentration
+  definitions; SparkToro's 1/1,000th as a press-coverage ratio, not a
+  traffic share; Seer vs. Agarwal & Sen as different metrics; ~54-96x,
+  not ~1,000x; the Xu counts (7,491 verifiable; 76.85% is Jobs &
+  Education); four sources on [[glossary-pages-for-seo]]; the
+  [[llms-txt]] evidence count; an 11-step audit with a 14-day baseline on
+  [[ai-pricing-visibility-audit]]; and the LinkedIn stats on
+  [[writer-checklist-blog-posts]] and [[authority-in-generative-search]].
+- **LaunchDarkly positioning (user-provided)**: the current umbrella is
+  "runtime control layer for the AI era" with CodeControl and
+  AgentControl as the two solutions (Nov. 5, 2026 sales deck: "two
+  solutions, one runtime control layer"; the public platform page uses the
+  same framing). [[writing-meta-tags]] examples and notes are updated, and
+  the March "control plane" framing is marked superseded. The incident stat
+  always names its comparison group: 48% less likely than homegrown and
+  43% less likely than other providers to have daily-or-more production
+  incidents (25% vs. 48% / 44%). Applied on [[writing-meta-tags]] and
+  [[launchdarkly-ai-visibility-devrel-brief]].
+- **Merge leftovers**: Xu duplicates consolidated on [[ai-citation-landscape]]
+  (claim fidelity now lives on [[ai-overview-grounding-and-fidelity]]),
+  [[aio-ctr-impact]]'s duplicate ads section merged, the contradictory
+  "no CE section" sentence removed from [[robots-txt-strategy]], and
+  ordering/stray bullets fixed on six playbooks.
+- **Links**: [[query-fanout]] gains `site:` targeting and Zyppy's
+  workflow. Link-building, measurement, robots/sitemap, agentic-web and
+  entity cross-links were added across about 20 pages.
+- **Timeline**: backfilled [[diggity-empire-flippers-affiliate-niches]].
+- **Index**: summaries updated for 12 pages.
+
+Not done (group C, waiting on discussion): superseded claims and
+unrecorded conflicts #19-29; missing pages #42-44 (YouTube in AI search,
+serving Markdown to agents, content freshness, Reddit/UGC); the Mintlify
+benchmark; oversized-page splits; the 64 pages with no H1. Open
+verification items: the Xu category range (18 of 19 inside 85.9-94.8%?)
+against the PDF.
+
+## [2026-11-18] query | "Best practices for using content negotiation to serve AI agents Markdown instead of HTML"
+Answered from [[technical-seo-audit-checklist]] §5, [[llms-txt]] (implementation checklist + Conflicting Evidence), [[evilmartians-which-ai-reads-your-site-2026]], [[punturo-markdown-llm-bot-traffic-rct-2026]], [[withgauge-serve-markdown-to-ai-agents-2026]]. Gap noted: wiki has no guidance on `Vary: Accept` / CDN caching or q-value handling (general HTTP practice, not sourced). Reinforces lint finding that "serving Markdown to agents" lacks its own playbook page; offered to file the answer as one.
+
+## [2026-11-19] query | "Write schema (incl. FAQPage) for platform-architecture, agent-integrations, platform, ai-agent-governance, ai-evaluation"
+Used [[structured-data-and-ai-search]] (FAQPage only as a mirror of visible Q&A; no citation lift promised) via the schema-writer skill. All 5 graphs pass validate.py. Output in `schema-output-2026-11-19/`. Flagged: the Prismic `schema` field isn't rendered by the marketing template (seen on two pages), and /how-it-works/platform/ FAQ Q1 shows Q2's answer.
+
+## [2026-11-19] ingest | 6sense — 2026 B2B Buyer Experience Report: The Secret Life of B2B Buyers
+Raw: `raw/reports/6sense-b2b-buyer-experience-report-2026.md`. The direct download returned a 403, so the raw file is the user-supplied page markdown plus a WebFetch read of the expanded Methods section. Release date 2026-11-02 comes from press coverage, not the page. Created [[6sense-b2b-buyer-experience-report-2026]] and [[b2b-buyer-journey-and-ai-search]]. Updated [[ai-shortlist-effect]] (Conflicting Evidence), [[ai-traffic-scale-vs-hype]] (B2B survey section), [[ai-visibility-measurement-methodology]] (tension #5, form-fill evasion), [[lead-magnet-checklist]] (B2B gating caveat), [[saas-seo-strategy]] (content for the whole buying group) and [[ahrefs-b2b-seo-statistics-2025]] (likely primary-source note). Rigor: large survey (4,607 journeys) with corrected tests, but self-reported recall, panel not named, and 6sense has a stake in the "LLMs are a tweak" framing.
+
+## [2026-11-19] conflict | AI shortlisting in B2B — consumer in-chat data vs. B2B committee-buying data
+[[tryprofound-shortlist-is-the-new-shelf]] (consumer, n=56: 92.8% of purchase tasks never leave ChatGPT) vs. [[6sense-b2b-buyer-experience-report-2026]] (B2B, $25K or more: 26% use LLMs for vendor discovery; LLMs last of 11 channels; use fell from 94% to 81%). Current best guess: the two describe different purchase types and mostly don't overlap. Unresolved; recorded on [[ai-shortlist-effect]] and [[b2b-buyer-journey-and-ai-search]].

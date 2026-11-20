@@ -1,7 +1,7 @@
 ---
 type: playbook
 tags: [seo]
-updated: 2026-09-04
+updated: 2026-11-12
 ---
 
 Why / when to use this: use when the goal is brand visibility and
@@ -87,6 +87,12 @@ alone).
 
 ## See also
 
+- [[link-building]] — the parent concept: where digital PR sits among
+  link-earning approaches.
+- [[link-building-outreach-tactics]] — prospecting, pitch templates and
+  follow-up mechanics that also apply to journalist outreach.
+- [[editorial-link-integration]] — how a placed link should sit inside
+  the host article once a pitch lands.
 - [[broken-link-building]] — an alternative, more mechanical
   link-earning tactic to run alongside PR.
 - [[brand-entity-seo-strategy]] — digital PR coverage as a

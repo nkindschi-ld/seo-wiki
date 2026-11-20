@@ -1,7 +1,7 @@
 ---
 type: concept
 tags: [seo, aeo]
-updated: 2026-11-06
+updated: 2026-11-12
 ---
 
 A glossary is a set of definitions for the terms of a site's subject
@@ -21,7 +21,7 @@ consensus practice, not measured effect.
 
 ## Why glossaries are claimed to work
 
-All three sources agree on these mechanisms:
+All four sources agree on these mechanisms:
 
 - **Long-tail / definition-intent coverage.** Each term is a
   "what is X" query, usually low-competition. This is the "Know Simple"
@@ -72,7 +72,7 @@ All three sources agree on these mechanisms:
 
 A one-URL-per-term glossary with templated, near-duplicate, or
 AI-mass-produced definitions is exactly what the Scaled Content Abuse
-policy targets ([[e-e-a-t-and-page-quality]]). None of the three
+policy targets ([[e-e-a-t-and-page-quality]]). None of the four
 sources mention this. If you build per-term pages, each one needs real
 substance: an example, context, and links. Otherwise consolidate
 ([[content-pruning-playbook]]). Per-term pages that compete with

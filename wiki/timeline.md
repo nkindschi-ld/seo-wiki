@@ -1275,3 +1275,11 @@ enumeration with no call-frequency data, not a measured study.
 ## 2026-11-05 — Google's Gary Illyes and Cherry Prommawin explain how 301/302/307/308 redirects affect clustering, canonicalization and ranking signals (reported by SEJ)
 
 [[sej-google-redirects-ranking-signals-2026]] · updated [[how-google-search-works]], [[technical-seo-audit-checklist]]; conflict on [[url-structure-best-practices]]
+
+## 2025-08-06 — Diggity Marketing publishes Empire Flippers niche data (300+ sold affiliate/display/Amazon sites; weak evidence, see caveats)
+
+[[diggity-empire-flippers-affiliate-niches]] · updated [[niche-selection-and-validation]], [[content-marketing-strategy]], [[niche-validation-playbook]] · Backfilled during the 2026-11-12 lint
+
+## 2026-11-02 — 6sense releases its 2026 B2B Buyer Experience Report (4,607 journeys): pre-contact favorite wins 81.5%, B2B LLM use falls from 94% to 81%, and only 26% use LLMs to find vendors
+
+[[6sense-b2b-buyer-experience-report-2026]] · new [[b2b-buyer-journey-and-ai-search]]; conflict on [[ai-shortlist-effect]]
